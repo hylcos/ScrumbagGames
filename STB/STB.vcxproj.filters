@@ -40,4 +40,8 @@
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Documentation\ClassDiagram.simp" />
+    <None Include="Documentation\Game Sequence.xlsx" />
+  </ItemGroup>
 </Project>
