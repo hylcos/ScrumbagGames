@@ -16,6 +16,9 @@
     <Filter Include="Resource Files\Images">
       <UniqueIdentifier>{a8afcb1a-6f96-46f9-bcba-04529b28faa5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\Images\Sprites">
+      <UniqueIdentifier>{3118b0b8-4e70-40c8-9f7a-d7c430f9a518}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -36,10 +39,5 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="..\Logo.png">
-      <Filter>Resource Files\Images</Filter>
-    </Image>
   </ItemGroup>
 </Project>
