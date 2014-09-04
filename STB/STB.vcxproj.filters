@@ -44,4 +44,9 @@
     <None Include="Documentation\ClassDiagram.simp" />
     <None Include="Documentation\Game Sequence.xlsx" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
 </Project>

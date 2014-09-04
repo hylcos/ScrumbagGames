@@ -98,6 +98,9 @@
     <None Include="Documentation\ClassDiagram.simp" />
     <None Include="Documentation\Game Sequence.xlsx" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Images\Logo.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
