@@ -1,0 +1,70 @@
+Shoot The Bully© 
+ScrumBag Games
+
+-Game
+	-Controls
+		-WSAD (Move)
+		-Mouse (Direction the weapon is pointed at)
+		-Left Click / Left Pressed (Normal Guns)
+		-Right Click (Grenade etc.)
+		-E (Melee Attack)
+		
+	-Story
+		- The story goes about a boy who is getting bullied in school
+		- At one night he feels so much anger that he tries to hurt him self
+		- While trying this he entered a state of coma
+		- While in the coma he begins to dream
+		- At the start of the dream he sits (on a cloud/ in hell) on the ground
+		- While sitting on the ground he sees a bully from school coming out on the fog
+		- He sees the bully running to him. The Boy sees this and picks of a gun of the ground
+		- He shoots him 
+		- In this coma he is trying to kill his bully's to gain confidence
+		- And try to interfere with the bully's in real life
+		
+	-Game-play
+		- Different Waves with different enemy's
+		- Get Money for killing enemy's
+		- With this money you can upgrade your gun or buy a new one
+		- Melee Attack
+		- Weapons
+			- Knife
+			- Samurai Sword 
+			- Baseball Bat
+			- Guns
+				-Pistol (the Begin weapon)
+				-Sub Machine
+				-Assault Rifle 
+				-Shotgun
+				-Sniper
+				-RPG
+				-Upgrades
+					- Fire Rate
+					- Reload Speed
+					- Damage
+					- Accuracy 
+					
+			- Attachments
+				-Fire Launcher
+				-(Chainsaw)
+				-
+			-Other
+				-Grenades
+				-Power-ups
+					-Speed
+					-BAB (Big Ass Bomb) (Which if picked up kills every enemy on the screen)OR(Let's you complete the round in one time)
+					-Health
+				-C4
+				
+	-Map
+		-The Map setting is in a kind of dream world (Which can be a dark world or can be a cloudy world)
+		-Large map Which is divided in Rows and Columns
+		-With 4 places where enemy's can spawn
+		
+	-Rules
+		- Good Guy
+			- 
+		- Enemies
+			- The are running at you. So the don't have guns they will only hurt you while hitting you with their fist
+			- Every round the enemy's get a little bit more health and a little bit more power when they hit you
+			
+		
