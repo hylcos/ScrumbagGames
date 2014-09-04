@@ -58,7 +58,7 @@
           </authors>
           <description />
           <creation-date>09/04/2014 13:46:40</creation-date>
-          <change-date>09/04/2014 21:49:02</change-date>
+          <change-date>09/04/2014 21:50:16</change-date>
           <revision-count>0</revision-count>
           <version />
         </meta>
@@ -461,28 +461,6 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di586354539439468625" cid="REL001" type="relationship" name="1..1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/04/2014 21:48:53">
-            <stereotypes />
-            <tagged-values />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <relation from="di526625443895690782" to="di790644668841754776">
-              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
-            </relation>
-          </item>
-          <item id="di657142415332284149" cid="REL002" type="relationship" name="1..1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/04/2014 21:49:02">
-            <stereotypes />
-            <tagged-values />
-            <associated-diagrams />
-            <owned-items />
-            <style class="default" />
-            <relation from="di526625443895690782" to="di478268596728869014">
-              <start-role id="" name="" navigability="" association-type="association" visibility="private" />
-              <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
-            </relation>
-          </item>
         </abstract-items>
         <layer name="Default" visible="true" enabled="true" locked="false">
           <item id="di441450995384257575" iid="2586bc7ca646422c8f46f6c107c39824" creation-date="09/04/2014 14:33:29" order-index="6" type="entity">
@@ -661,26 +639,6 @@
               </points>
             </layout>
             <relation from="di553262700236299672" from-iid="814378864f684eef8f9d6f3e61a00154" to="di776148760169724548" to-iid="32ce8f9996634cbda9004bd29ab86ba6" />
-            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
-          </item>
-          <item id="di586354539439468625" iid="a468334661454838923edf8c480baea0" creation-date="09/04/2014 21:48:53" order-index="30" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="440" y1="762" x2="286" y2="671" start-border-pos="0.0152280680338542" end-border-pos="0.46479200280231">
-              <points>
-                <point x="440" y="762" />
-                <point x="286" y="671" />
-              </points>
-            </layout>
-            <relation from="di526625443895690782" from-iid="1d3961e707c04f15bd294843179c072e" to="di790644668841754776" to-iid="648594f3bc8f4844a7e0411fce7545f1" />
-            <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
-          </item>
-          <item id="di657142415332284149" iid="f8c61124fc214daca07f9e7516c9df1c" creation-date="09/04/2014 21:49:02" order-index="31" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" name-position="10,-10" auto-path="" x1="623" y1="762" x2="745" y2="678" start-border-pos="0.218397691514757" end-border-pos="0.770620727539063">
-              <points>
-                <point x="623" y="762" />
-                <point x="745" y="678" />
-              </points>
-            </layout>
-            <relation from="di526625443895690782" from-iid="1d3961e707c04f15bd294843179c072e" to="di478268596728869014" to-iid="afb525cfcdc843f987856431245fc361" />
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
         </layer>
