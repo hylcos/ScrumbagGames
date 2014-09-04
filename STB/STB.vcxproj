@@ -84,17 +84,27 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="InputController.h" />
+    <ClInclude Include="LevelController.h" />
+    <ClInclude Include="SoundController.h" />
     <ClInclude Include="src\GameController.h" />
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
+    <ClInclude Include="UpdateController.h" />
+    <ClInclude Include="ViewController.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="InputController.cpp" />
+    <ClCompile Include="LevelController.cpp" />
+    <ClCompile Include="SoundController.cpp" />
     <ClCompile Include="src\GameController.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="UpdateController.cpp" />
+    <ClCompile Include="ViewController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Documentation\ClassDiagram.simp" />
