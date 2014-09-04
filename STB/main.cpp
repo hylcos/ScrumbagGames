@@ -4,9 +4,8 @@
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()
 {
-	printf("yolo");
 	return 0;
 }
 
