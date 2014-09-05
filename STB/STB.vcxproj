@@ -111,6 +111,7 @@
   <ItemGroup>
     <None Include="Documentation\ClassDiagram.simp" />
     <None Include="Documentation\Game Sequence.xlsx" />
+    <None Include="Resources\Sounds\intro.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Logo.png" />

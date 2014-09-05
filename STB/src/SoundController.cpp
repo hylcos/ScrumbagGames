@@ -2,7 +2,7 @@
 #include "SoundController.h"
 
 #include "GameController.h"
-#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <process.h>
 
 void SoundController::run(){
@@ -22,4 +22,9 @@ void runThreadSoundController(void *){
 
 void SoundController::startThread(){
 	_beginthread(runThreadSoundController, 0, (void*)0);
+}
+
+void SoundController::playMusic(){
+	bgMusic.openFromFile("Resources/Sounds/intro.ogg");
+	bgMusic.play();
 }

@@ -1,4 +1,5 @@
 #pragma once
+#include <SFML/Audio.hpp>
 class SoundController
 {
 public:
@@ -24,6 +25,10 @@ public:
 	void SoundController::run();
 	//------END OF SINGLETON------//
 
+	//play selected music
+	//
+	//Call this to start playing the selected music.
+	void playMusic();
 private:
 	//------SINGLETON-----//
 	SoundController() {}
@@ -32,6 +37,8 @@ private:
 	//------END OF SINGLETON------//
 
 	void SoundController::step();
+
+	sf::Music bgMusic;
 };
 
 
