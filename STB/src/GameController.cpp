@@ -6,9 +6,10 @@ void GameController::stop(){
 	stopping = true;
 }
 
-void GameController::start(){
+int GameController::start(){
 
 	while (!stopping){
 		sf::sleep(sf::seconds(1));
 	}
+	return 0;
 }

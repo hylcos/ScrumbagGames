@@ -9,7 +9,7 @@ public:
 		return instance;
 	}
 
-	void GameController::start();
+	int GameController::start();
 	void GameController::stop();
 private:
 	//Singleton creation

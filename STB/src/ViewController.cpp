@@ -5,28 +5,32 @@
 #include <process.h>
 #include "GameController.h"
 
-void runThread(void *){
-	ViewController::getInstance().run();
-}
-
 void ViewController::run(){
 	sf::RenderWindow window{ sf::VideoMode{ 640, 480 }, "STB" };
+	puts("Window opened");
 
 	sf::Event event;
-	window.clear();
-	window.display();
 	while (window.isOpen()){
+		step(window);
 		while (window.pollEvent(event)){
-			puts("Event");
 			if (event.type == sf::Event::Closed){
 				window.close();
-				puts("Stopping");
+				puts("Window closed");
 				GameController::getInstance().stop();
 				break;
 			}
 		}
 		sf::sleep(sf::milliseconds(20));
 	}
+}
+
+void ViewController::step(sf::RenderWindow & window){
+	window.clear();
+	window.display();
+}
+
+void runThread(void *){
+	ViewController::getInstance().run();
 }
 
 void ViewController::startThread(){
