@@ -31,6 +31,6 @@ private:
 	GameController() {}
 	GameController(GameController const&); // Don't Implement.
 	void operator=(GameController const&); // Don't implement
-	bool stopping = true;
+	bool stopping = false;
 };
 

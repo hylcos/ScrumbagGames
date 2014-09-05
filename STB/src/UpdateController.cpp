@@ -6,7 +6,7 @@
 #include <process.h>
 
 void UpdateController::run(){
-	puts("InputController started");
+	puts("UpdateController started");
 
 	while (GameController::getInstance().isRunning()){
 		step();
@@ -16,10 +16,10 @@ void UpdateController::run(){
 void UpdateController::step(){
 }
 
-void runThread(void *){
+void runThreadUpdateController(void *){
 	UpdateController::getInstance().run();
 }
 
 void UpdateController::startThread(){
-	_beginthread(runThread, 0, (void*)0);
+	_beginthread(runThreadUpdateController, 0, (void*)0);
 }

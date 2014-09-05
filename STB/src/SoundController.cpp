@@ -6,7 +6,7 @@
 #include <process.h>
 
 void SoundController::run(){
-	puts("InputController started");
+	puts("SoundController started");
 
 	while (GameController::getInstance().isRunning()){
 		step();
@@ -16,10 +16,10 @@ void SoundController::run(){
 void SoundController::step(){
 }
 
-void runThread(void *){
+void runThreadSoundController(void *){
 	SoundController::getInstance().run();
 }
 
 void SoundController::startThread(){
-	_beginthread(runThread, 0, (void*)0);
+	_beginthread(runThreadSoundController, 0, (void*)0);
 }

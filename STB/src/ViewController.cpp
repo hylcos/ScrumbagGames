@@ -6,7 +6,7 @@
 
 void ViewController::run(){
 	sf::RenderWindow window{ sf::VideoMode{ 640, 480 }, "STB" };
-	puts("Window opened");
+	puts("Window opened\nViewController started");
 
 	sf::Event event;
 	while (window.isOpen()){
@@ -28,10 +28,10 @@ void ViewController::step(sf::RenderWindow & window){
 	window.display();
 }
 
-void runThread(void *){
+void runThreadViewController(void *){
 	ViewController::getInstance().run();
 }
 
 void ViewController::startThread(){
-	_beginthread(runThread, 0, (void*)0);
+	_beginthread(runThreadViewController, 0, (void*)0);
 }

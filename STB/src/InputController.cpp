@@ -16,10 +16,10 @@ void InputController::run(){
 void InputController::step(){
 }
 
-void runThread(void *){
+void runThreadInputController(void *){
 	InputController::getInstance().run();
 }
 
 void InputController::startThread(){
-	_beginthread(runThread, 0, (void*)0);
+	_beginthread(runThreadInputController, 0, (void*)0);
 }
