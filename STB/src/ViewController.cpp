@@ -1,7 +1,6 @@
 #include "stdafx.h"
 #include "ViewController.h"
 #include <SFML/Graphics.hpp>
-#include <Windows.h>
 #include <process.h>
 #include "GameController.h"
 

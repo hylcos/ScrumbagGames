@@ -7,9 +7,13 @@ void GameController::stop(){
 }
 
 int GameController::start(){
-
+	stopping = false;
 	while (!stopping){
 		sf::sleep(sf::seconds(1));
 	}
 	return 0;
+}
+
+bool GameController::isRunning(){
+	return !stopping;
 }

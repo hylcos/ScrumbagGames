@@ -3,6 +3,7 @@
 class ViewController
 {
 public:
+	//------SINGLETON-----//
 	//getInstance returns the instance of ViewController. Used to call most functions.
 	//
 	//getInstance is used to return the instance of ViewController. This is used to prevent multiple instances of this controller to be made. 
@@ -22,11 +23,14 @@ public:
 	//
 	//run is the function that actually does everything the ViewController has to do. Do not call this, instead use startThread()!
 	void ViewController::run();
+	//------END OF SINGLETON------//
+
 private:
-	//Singleton creation
+	//------SINGLETON-----//
 	ViewController() {}
 	ViewController(ViewController const&); // Don't Implement.
 	void operator=(ViewController const&); // Don't implement.
+	//------END OF SINGLETON------//
 
 	void ViewController::step(sf::RenderWindow & window);
 };
