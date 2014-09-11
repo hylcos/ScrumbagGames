@@ -2,6 +2,8 @@
 #include "GameController.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include <list>
+#include "gameObjects/GameObject.h"
 
 GameController::GameController(SoundController & soundController) :
 soundController{ soundController }
@@ -20,6 +22,11 @@ void GameController::start(){
 
 void GameController::step(){
 	checkWindow();
+
+	for (int i = gameObjects.size() - 1; i >= 0; i--){
+
+	}
+
 	window.clear(sf::Color::White);
 
 	window.display();

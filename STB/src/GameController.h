@@ -1,7 +1,8 @@
 #pragma once
 #include "SoundController.h"
 #include <SFML/Graphics.hpp>
-#include <ctime>
+#include <list>
+#include "gameObjects/GameObject.h"
 
 class GameController
 {
@@ -23,6 +24,8 @@ public:
 private:
 	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
 	void checkWindow();
+
+	std::list< GameController > gameObjects;
 
 	float fps = 5000.0f;
 	int frames = 0;
