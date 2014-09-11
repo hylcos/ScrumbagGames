@@ -1,5 +1,6 @@
 #pragma once
 #include "SoundController.h"
+#include <SFML/Graphics.hpp>
 class GameController
 {
 public:
@@ -18,6 +19,9 @@ public:
 	~GameController();
 
 private:
+	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
+	void checkWindow();
+
 	SoundController & soundController;
 	void step();
 	bool stopping = false;
