@@ -1,6 +1,8 @@
 #pragma once
 #include "SoundController.h"
 #include <SFML/Graphics.hpp>
+#include <ctime>
+
 class GameController
 {
 public:
@@ -21,6 +23,10 @@ public:
 private:
 	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
 	void checkWindow();
+
+	float fps = 5000.0f;
+	int frames = 0;
+	clock_t nextClock;
 
 	SoundController & soundController;
 	void step();

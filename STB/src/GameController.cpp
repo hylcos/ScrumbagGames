@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "GameController.h"
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 GameController::GameController(SoundController & soundController) :
 soundController{ soundController }
@@ -19,6 +20,18 @@ void GameController::start(){
 
 void GameController::step(){
 	checkWindow();
+	window.clear(sf::Color::White);
+
+	window.display();
+
+	frames++;
+
+	if (clock() > nextClock){
+		nextClock = clock() + CLOCKS_PER_SEC/10;
+		fps = fps / 10 * 9 + (float)frames;
+		std::cout << fps << "\n";
+		frames = 0;
+	}
 }
 
 void GameController::checkWindow(){
