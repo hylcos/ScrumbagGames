@@ -37,16 +37,7 @@
     <ClInclude Include="src\InputController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\LevelController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\SoundController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\UpdateController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\ViewController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\GameObject.h">
@@ -66,16 +57,7 @@
     <ClCompile Include="src\InputController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\LevelController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SoundController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\UpdateController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\ViewController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\GameObject.cpp">

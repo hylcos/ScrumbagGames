@@ -3,28 +3,20 @@
 
 #include "GameController.h"
 #include <SFML/Audio.hpp>
-#include <process.h>
+#include <iostream>
 
-void SoundController::run(){
-	puts("SoundController started");
-
-	while (GameController::getInstance().isRunning()){
-		step();
-	}
+SoundController::SoundController(){
 }
 
 void SoundController::step(){
 }
 
-void runThreadSoundController(void *){
-	SoundController::getInstance().run();
-}
-
-void SoundController::startThread(){
-	_beginthread(runThreadSoundController, 0, (void*)0);
-}
-
 void SoundController::playMusic(){
+	std::cout << "Play music";
 	bgMusic.openFromFile("Resources/Sounds/intro.ogg");
 	bgMusic.play();
+}
+
+SoundController::~SoundController(){
+
 }

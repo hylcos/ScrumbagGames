@@ -3,20 +3,18 @@
 
 #include "stdafx.h"
 #include <SFML/Graphics.hpp>
-#include "ViewController.h"
 #include "GameController.h"
 #include "SoundController.h"
-#include "UpdateController.h"
-#include "LevelController.h"
 #include "InputController.h"
 
 int main()
 {
-	ViewController::getInstance().startThread();
-	SoundController::getInstance().startThread();
-	UpdateController::getInstance().startThread();
-	LevelController::getInstance().startThread();
-	InputController::getInstance().startThread();
+	GameController gameController;
 
-	return GameController::getInstance().start();
+	SoundController soundController;
+	soundController.playMusic();
+
+	gameController.start();
+
+	return 0;
 }

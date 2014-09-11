@@ -1,21 +1,22 @@
 #include "stdafx.h"
 #include "GameController.h"
+//#include "LevelController.h"
 #include <SFML/Graphics.hpp>
-#include "SoundController.h"
+
+GameController::GameController(){};
 
 void GameController::stop(){
 	stopping = true;
 }
 
-int GameController::start(){
-	SoundController::getInstance().playMusic();
-
+void GameController::start(){
 	while (!stopping){
-		sf::sleep(sf::seconds(1));
+		step();
 	}
-	return 0;
 }
 
-bool GameController::isRunning(){
-	return !stopping;
+void GameController::step(){
+
 }
+
+GameController::~GameController(){};
