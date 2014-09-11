@@ -12,7 +12,7 @@ void GameController::stop(){
 }
 
 void GameController::start(){
-	soundController.playMusic("Resources/Sounds/intro.ogg");
+	soundController.playMusic(soundController.INTRO);
 	while (!stopping){
 		step();
 	}

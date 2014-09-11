@@ -5,7 +5,7 @@ class SoundController
 public:
 	SoundController();
 
-	const char* musicFiles{"Resources/Sounds/intro.ogg"};
+	const char* INTRO = "Resources/Sounds/intro.ogg";
 
 	//play selected music
 	//
