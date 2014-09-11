@@ -11,9 +11,9 @@ SoundController::SoundController(){
 void SoundController::step(){
 }
 
-void SoundController::playMusic(){
+void SoundController::playMusic(const char* file){
 	std::cout << "Play music";
-	bgMusic.openFromFile("Resources/Sounds/intro.ogg");
+	bgMusic.openFromFile(file);
 	bgMusic.play();
 }
 

@@ -12,7 +12,7 @@ int main()
 	GameController gameController;
 
 	SoundController soundController;
-	soundController.playMusic();
+	soundController.playMusic("Resources/Sounds/intro.ogg");
 
 	gameController.start();
 

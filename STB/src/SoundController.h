@@ -8,7 +8,7 @@ public:
 	//play selected music
 	//
 	//Call this to start playing the selected music.
-	void SoundController::playMusic();
+	void SoundController::playMusic(const char* file);
 
 	//step for the controller
 	//
