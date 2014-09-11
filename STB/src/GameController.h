@@ -1,9 +1,9 @@
 #pragma once
-//#include "LevelController.h"
+#include "SoundController.h"
 class GameController
 {
 public:
-	GameController();
+	GameController(SoundController & soundController);
 	//start (run) the game
 	//
 	//Call this function to start running the game.
@@ -18,6 +18,7 @@ public:
 	~GameController();
 
 private:
+	SoundController & soundController;
 	void step();
 	bool stopping = false;
 };

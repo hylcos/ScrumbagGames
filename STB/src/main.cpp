@@ -9,10 +9,8 @@
 
 int main()
 {
-	GameController gameController;
-
 	SoundController soundController;
-	soundController.playMusic("Resources/Sounds/intro.ogg");
+	GameController gameController{ soundController };
 
 	gameController.start();
 
