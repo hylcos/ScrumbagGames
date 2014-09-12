@@ -23,11 +23,21 @@ void GameController::start(){
 void GameController::step(){
 	checkWindow();
 
-	for (int i = gameObjects.size() - 1; i >= 0; i--){
+	float speedModifier = 60 / fps;
 
+	for (GameObject obj : gameObjects){
+		obj.update(speedModifier);
+	}
+
+	for (GameObject obj : gameObjects){
+		obj.move(speedModifier);
 	}
 
 	window.clear(sf::Color::White);
+
+	for (GameObject obj : gameObjects){
+		obj.draw(window);
+	}
 
 	window.display();
 
