@@ -6,9 +6,11 @@
 #include "GameController.h"
 #include "SoundController.h"
 #include "InputController.h"
+#include <Windows.h>
 
 int main()
 {
+	ShowWindow(GetConsoleWindow(), SW_HIDE); // Hide the console
 	SoundController soundController;
 	GameController gameController{ soundController };
 
