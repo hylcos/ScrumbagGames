@@ -84,6 +84,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Level.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
     <ClInclude Include="src\InputController.h" />
     <ClInclude Include="src\SoundController.h" />
@@ -92,6 +93,7 @@
     <ClInclude Include="src\targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Level.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\InputController.cpp" />
     <ClCompile Include="src\SoundController.cpp" />

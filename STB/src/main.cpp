@@ -5,7 +5,6 @@
 #include <SFML/Graphics.hpp>
 #include "GameController.h"
 #include "SoundController.h"
-#include "InputController.h"
 #include <Windows.h>
 
 int main()
