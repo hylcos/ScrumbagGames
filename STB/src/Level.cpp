@@ -6,7 +6,13 @@ Level::Level()
 {
 }
 
-void Level::startLevel(){
+Level::Initializer::Initializer(char randomness) :
+randomness{ randomness }
+{
+
+}
+
+void Level::startLevel(Level::Initializer initializer){
 
 }
 

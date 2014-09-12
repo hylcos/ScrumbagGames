@@ -16,6 +16,7 @@ void GameController::stop(){
 
 void GameController::start(){
 	soundController.playMusic(soundController.INTRO);
+	level.startLevel(level.LEVEL_ONE);
 	while (!stopping){
 		step();
 	}

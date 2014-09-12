@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <list>
 #include "gameObjects/GameObject.h"
+#include "Level.h"
 
 class GameController
 {
@@ -32,6 +33,8 @@ private:
 	clock_t nextClock;
 
 	SoundController & soundController;
+	Level level;
+
 	void step();
 	bool stopping = false;
 };

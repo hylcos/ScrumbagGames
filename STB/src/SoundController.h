@@ -4,6 +4,7 @@ class SoundController
 {
 public:
 	SoundController();
+	
 	const char* INTRO = "Resources/Sounds/intro.ogg";
 
 	//play selected music
