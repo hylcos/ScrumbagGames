@@ -10,7 +10,10 @@
 
 int main()
 {
-	//ShowWindow(GetConsoleWindow(), SW_HIDE); // Hide the console
+#ifndef DEBUG//Defined in GameController.h
+	ShowWindow(GetConsoleWindow(), SW_HIDE); // Hide the console
+#endif
+
 	Level level;
 	SoundController soundController;
 	GameController gameController{ soundController, level };

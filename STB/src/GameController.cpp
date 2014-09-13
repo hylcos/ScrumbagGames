@@ -1,14 +1,16 @@
 #include "stdafx.h"
 #include "GameController.h"
 #include <SFML/Graphics.hpp>
-#include <iostream>
 #include "gameObjects/GameObject.h"
 #include "Level.h"
-#include "gameObjects/Circle.h"
+
+#ifdef DEBUG//Defined in GameController.h
+#include <iostream>
+#endif
 
 GameController::GameController(SoundController & soundController, Level & level) :
 soundController{ soundController },
-level{level}
+level{ level }
 {}
 
 void GameController::stop(){
@@ -61,9 +63,13 @@ void GameController::step(){
 	frames++;
 
 	if (clock() > nextClock){
-		nextClock = clock() + CLOCKS_PER_SEC/10;
+		nextClock = clock() + CLOCKS_PER_SEC / 10;
 		fps = fps / 10 * 9 + (float)frames;
+
+#ifdef DEBUG//Defined in GameController.h
 		std::cout << fps << "\n";
+#endif
+
 		frames = 0;
 	}
 }

@@ -5,6 +5,8 @@
 #include "gameObjects/GameObject.h"
 #include "Level.h"
 
+#define DEBUG
+
 class Level;
 
 class GameController
