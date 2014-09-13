@@ -50,7 +50,7 @@ void GameController::step(){
 		obj->move(speedModifier);
 	}
 
-	window.clear(sf::Color{50,50,50});
+	window.clear(sf::Color::White);
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
