@@ -20,7 +20,10 @@ void GameController::addObject(GameObject * object){
 }
 
 void GameController::removeObject(GameObject * object){
-	object->~GameObject();
+	if (object == nullptr){
+		return;
+	}
+	delete object;
 	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
 	if (position != gameObjects.end()) // == vector.end() means the element was not found
 		gameObjects.erase(position);
