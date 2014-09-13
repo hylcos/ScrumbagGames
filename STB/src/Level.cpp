@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Level.h"
-#include "gameObjects/circle.h"
+#include "gameObjects/Logo.h"
 
 
 Level::Level()
@@ -13,7 +13,7 @@ randomness{ randomness }
 }
 
 void Level::startLevel(Level::Initializer initializer, GameController * gameController){
-	//gameController->addObject(new Circle());
+	gameController->addObject(new Logo());
 }
 
 Level::~Level()

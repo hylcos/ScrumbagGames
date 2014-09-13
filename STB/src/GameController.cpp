@@ -40,15 +40,6 @@ void GameController::start(){
 void GameController::step(){
 	checkWindow();
 
-	GameObject* last = nullptr;
-	for (GameObject* obj : gameObjects){
-		last = obj;
-	}
-
-	removeObject(last);
-
-	addObject(new Circle());
-
 	float speedModifier = 60 / fps;
 
 	for (GameObject* obj : gameObjects){
@@ -59,7 +50,7 @@ void GameController::step(){
 		obj->move(speedModifier);
 	}
 
-	window.clear(sf::Color::White);
+	window.clear(sf::Color{50,50,50});
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
