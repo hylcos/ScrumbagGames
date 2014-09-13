@@ -9,6 +9,6 @@ public:
 	virtual void GameObject::move(float speedModifier);
 	virtual void GameObject::draw(sf::RenderWindow & window) const;
 
-	~GameObject();
+	virtual ~GameObject();
 };
 

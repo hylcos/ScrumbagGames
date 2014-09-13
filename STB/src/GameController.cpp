@@ -2,21 +2,33 @@
 #include "GameController.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-#include <list>
 #include "gameObjects/GameObject.h"
 #include "Level.h"
+#include "gameObjects/Circle.h"
 
-GameController::GameController(SoundController & soundController) :
-soundController{ soundController }
+GameController::GameController(SoundController & soundController, Level & level) :
+soundController{ soundController },
+level{level}
 {}
 
 void GameController::stop(){
 	stopping = true;
 }
 
+void GameController::addObject(GameObject * object){
+	gameObjects.push_back(object);
+}
+
+void GameController::removeObject(GameObject * object){
+	object->~GameObject();
+	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
+	if (position != gameObjects.end()) // == vector.end() means the element was not found
+		gameObjects.erase(position);
+}
+
 void GameController::start(){
 	soundController.playMusic(soundController.INTRO);
-	level.startLevel(level.LEVEL_ONE);
+	level.startLevel(level.LEVEL_ONE, this);
 	while (!stopping){
 		step();
 	}
@@ -25,20 +37,29 @@ void GameController::start(){
 void GameController::step(){
 	checkWindow();
 
-	float speedModifier = 60 / fps;
-
-	for (GameObject obj : gameObjects){
-		obj.update(speedModifier);
+	GameObject* last = nullptr;
+	for (GameObject* obj : gameObjects){
+		last = obj;
 	}
 
-	for (GameObject obj : gameObjects){
-		obj.move(speedModifier);
+	removeObject(last);
+
+	addObject(new Circle());
+
+	float speedModifier = 60 / fps;
+
+	for (GameObject* obj : gameObjects){
+		obj->update(speedModifier);
+	}
+
+	for (GameObject* obj : gameObjects){
+		obj->move(speedModifier);
 	}
 
 	window.clear(sf::Color::White);
 
-	for (GameObject obj : gameObjects){
-		obj.draw(window);
+	for (GameObject* obj : gameObjects){
+		obj->draw(window);
 	}
 
 	window.display();
@@ -67,4 +88,8 @@ void GameController::checkWindow(){
 	}
 }
 
-GameController::~GameController(){};
+GameController::~GameController(){
+	for (GameObject* obj : gameObjects){
+		obj->~GameObject();
+	}
+};
