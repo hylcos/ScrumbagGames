@@ -2,15 +2,15 @@
 #include "GameController.h"
 #include <SFML/Graphics.hpp>
 #include "gameObjects/GameObject.h"
-#include "Level.h"
+#include "LevelController.h"
 
 #ifdef DEBUG//Defined in GameController.h
 #include <iostream>
 #endif
 
-GameController::GameController(SoundController & soundController, Level & level) :
+GameController::GameController(SoundController & soundController, LevelController & levelController) :
 soundController{ soundController },
-level{ level }
+levelController{ levelController }
 {}
 
 void GameController::stop(){
@@ -33,7 +33,7 @@ void GameController::removeObject(GameObject * object){
 
 void GameController::start(){
 	soundController.playMusic(soundController.INTRO);
-	level.startLevel(level.LEVEL_ONE, this);
+	levelController.startLevel(levelController.LEVEL_ONE, this);
 	while (!stopping){
 		step();
 	}

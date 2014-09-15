@@ -6,7 +6,7 @@
 #include "GameController.h"
 #include "SoundController.h"
 #include <Windows.h>
-#include "Level.h"
+#include "LevelController.h"
 
 int main()
 {
@@ -14,9 +14,9 @@ int main()
 	ShowWindow(GetConsoleWindow(), SW_HIDE); // Hide the console
 #endif
 
-	Level level;
+	LevelController LevelController;
 	SoundController soundController;
-	GameController gameController{ soundController, level };
+	GameController gameController{ soundController, LevelController };
 
 	gameController.start();
 	return 0;

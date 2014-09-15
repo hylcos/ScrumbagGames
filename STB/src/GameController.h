@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <list>
 #include "gameObjects/GameObject.h"
-#include "Level.h"
+#include "LevelController.h"
 
 #define DEBUG
 
@@ -12,7 +12,7 @@ class Level;
 class GameController
 {
 public:
-	GameController(SoundController & soundController, Level & level);
+	GameController(SoundController & soundController, LevelController & levelController);
 	//start (run) the game
 	//
 	//Call this function to start running the game.
@@ -47,7 +47,7 @@ private:
 	clock_t nextClock;
 
 	SoundController & soundController;
-	Level & level;
+	LevelController & levelController;
 
 	void step();
 	bool stopping = false;
