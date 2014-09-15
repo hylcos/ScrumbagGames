@@ -13,7 +13,7 @@ randomness{ randomness }
 }
 
 void LevelController::startLevel(LevelController::Initializer initializer, GameController * gameController){
-	gameController->addObject(new Logo());
+	gameController->addObject(new Logo(*this));
 }
 
 LevelController::~LevelController()
