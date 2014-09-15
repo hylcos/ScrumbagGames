@@ -6,7 +6,7 @@ class Logo :
 	public GameObject
 {
 public:
-	Logo();
+	Logo(LevelController & levelController) : GameObject(levelController){};
 
 	void Logo::draw(sf::RenderWindow & window) const override;
 

@@ -2,8 +2,8 @@
 #include "Circle.h"
 
 
-Circle::Circle()
-{
+Circle::Circle(LevelController & levelController) : GameObject(levelController){
+
 }
 
 void Circle::draw(sf::RenderWindow & window) const{

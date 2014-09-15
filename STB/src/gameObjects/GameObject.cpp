@@ -1,8 +1,10 @@
 #include "../stdafx.h"
 #include "GameObject.h"
+#include "..\LevelController.h"
 
 
-GameObject::GameObject()
+GameObject::GameObject(LevelController & levelController):
+levelController{levelController}
 {
 }
 

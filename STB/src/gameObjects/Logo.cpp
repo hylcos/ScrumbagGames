@@ -3,7 +3,7 @@
 #include <SFML\Graphics.hpp>
 
 
-Logo::Logo()
+Logo::Logo(LevelController & levelController) : GameObject(levelController)
 {
 	Logo::texture.loadFromFile("Resources/Images/Logo.png");
 	Logo::logo.setTexture(texture, true);
