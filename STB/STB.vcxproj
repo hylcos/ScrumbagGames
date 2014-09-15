@@ -97,9 +97,9 @@
   <ItemGroup>
     <ClCompile Include="src\gameObjects\Logo.cpp" />
     <ClCompile Include="src\gameObjects\Circle.cpp" />
+    <ClCompile Include="src\Level.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\InputController.cpp" />
-    <ClCompile Include="src\Level.cpp" />
     <ClCompile Include="src\SoundController.cpp" />
     <ClCompile Include="src\GameController.cpp" />
     <ClCompile Include="src\main.cpp" />
