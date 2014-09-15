@@ -2,7 +2,6 @@
 #include "LevelController.h"
 #include "gameObjects/Logo.h"
 
-
 LevelController::LevelController()
 {
 }
