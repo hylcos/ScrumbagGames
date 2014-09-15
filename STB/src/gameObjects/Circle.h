@@ -5,7 +5,7 @@ class Circle :
 	public GameObject
 {
 public:
-	Circle(LevelController & levelController) : GameObject(levelController){};
+	Circle();
 
 	void Circle::draw(sf::RenderWindow & window) const override;
 
