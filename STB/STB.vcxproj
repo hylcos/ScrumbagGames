@@ -86,7 +86,7 @@
   <ItemGroup>
     <ClInclude Include="src\gameObjects\Logo.h" />
     <ClInclude Include="src\gameObjects\Circle.h" />
-    <ClInclude Include="src\LevelController.h" />
+    <ClInclude Include="src\Level.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
     <ClInclude Include="src\InputController.h" />
     <ClInclude Include="src\SoundController.h" />
@@ -97,7 +97,7 @@
   <ItemGroup>
     <ClCompile Include="src\gameObjects\Logo.cpp" />
     <ClCompile Include="src\gameObjects\Circle.cpp" />
-    <ClCompile Include="src\LevelController.cpp" />
+    <ClCompile Include="src\Level.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\InputController.cpp" />
     <ClCompile Include="src\SoundController.cpp" />
