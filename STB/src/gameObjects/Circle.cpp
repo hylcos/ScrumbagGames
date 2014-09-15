@@ -1,6 +1,6 @@
 #include "../stdafx.h"
 #include "Circle.h"
-
+#include "GameObject.h"
 
 Circle::Circle(LevelController & levelController) : GameObject(levelController){
 
