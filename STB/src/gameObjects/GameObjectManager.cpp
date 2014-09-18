@@ -7,7 +7,7 @@ GameObjectManager::GameObjectManager()
 {
 }
 
-static GameObject * createObjectFromName(std::string string){
+GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Circle"){
 		return new Circle();
 	}

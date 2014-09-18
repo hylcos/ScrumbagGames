@@ -33,7 +33,7 @@ void GameController::removeObject(GameObject * object){
 
 void GameController::start(){
 	soundController.playMusic(soundController.INTRO);
-	levelController.startLevel(levelController.LEVEL_ONE, this);
+	levelController.startLevel(levelController.LEVEL_ONE, *this);
 	while (!stopping){
 		step();
 	}

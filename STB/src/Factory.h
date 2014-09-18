@@ -1,5 +1,6 @@
 #pragma once
 
+#include "gameObjects\GameObjectManager.h"
 #include "gameObjects\GameObject.h"
 #include "gameObjects\Circle.h"
 #include "GameController.h"
@@ -10,6 +11,8 @@
 #include <iostream>
 
 std::ifstream & operator>>(std::ifstream & input, sf::Vector2f & rhs);
+
+class GameController;
 class Factory
 {
 public:
@@ -17,5 +20,7 @@ public:
 	void Factory::loadLevel(std::string file, GameController & gameController);
 	GameObject * Factory::screen_object_read(std::ifstream & input);
 	~Factory();
+private:
+	GameObjectManager gameObjectManager;
 };
 

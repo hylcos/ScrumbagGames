@@ -12,6 +12,7 @@
 
 Factory::Factory()
 {
+	gameObjectManager = GameObjectManager{};
 }
 
 std::ifstream & operator>>(std::ifstream & input, sf::Vector2f & rhs){
@@ -41,7 +42,9 @@ GameObject * Factory::screen_object_read(std::ifstream & input){
 	sf::Vector2f position;
 	std::string name;
 	input >> position >> name;
-	GameObject * gameObject = GameObjectManager::createObjectFromName(name);
+	GameObject * gameObject = gameObjectManager.createObjectFromName(name);
+	gameObject->setPosition(position);
+	return gameObject;
 }
 
 

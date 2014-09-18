@@ -8,6 +8,7 @@ class Logo :
 public:
 	Logo();
 
+	void Logo::update(float speedModifier) override;
 	void Logo::draw(sf::RenderWindow & window) const override;
 
 	~Logo();

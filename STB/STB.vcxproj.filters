@@ -23,6 +23,7 @@
   <ItemGroup>
     <Text Include="ReadMe.txt" />
     <Text Include="Idea.txt" />
+    <Text Include="src\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GameController.h">

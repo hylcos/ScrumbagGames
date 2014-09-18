@@ -10,7 +10,7 @@ class GameObjectManager
 public:
 	GameObjectManager();
 
-	static GameObject * createObjectFromName(std::string string);
+	GameObject * GameObjectManager::createObjectFromName(std::string string);
 
 	~GameObjectManager();
 };
