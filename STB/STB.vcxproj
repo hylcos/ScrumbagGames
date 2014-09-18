@@ -82,7 +82,7 @@
   <ItemGroup>
     <Text Include="Idea.txt" />
     <Text Include="ReadMe.txt" />
-    <Text Include="src\Levels\init.level" />
+    <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />

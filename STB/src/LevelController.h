@@ -18,7 +18,7 @@ public:
 
 	void LevelController::startLevel(LevelController::Initializer initializer, GameController & gameController);
 
-	LevelController::Initializer LEVEL_ONE{ (char)100, "Levels/init.level" };
+	LevelController::Initializer LEVEL_ONE{ (char)100, "Resources/Levels/init.level" };
 
 	~LevelController();
 
