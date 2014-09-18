@@ -1,7 +1,6 @@
 #pragma once
 #include "SoundController.h"
 #include <SFML/Graphics.hpp>
-#include <list>
 #include "gameObjects/GameObject.h"
 #include "LevelController.h"
 
