@@ -2,7 +2,6 @@
 #include "Factory.h"
 #include "gameObjects\GameObjectManager.h"
 #include "gameObjects\GameObject.h"
-#include "gameObjects\Circle.h"
 #include "GameController.h"
 #include "Exception.h"
 
