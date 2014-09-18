@@ -39,6 +39,14 @@ public:
 
 private:
 
+	sf::Texture background;
+	sf::Texture backgroundOverlay;
+
+	sf::Sprite backgroundSprite;
+	sf::Sprite backgroundSpriteOverlay;
+
+	sf::Uint8 terrorLevel = 255;
+
 	std::vector< GameObject* > gameObjects;
 	
 };

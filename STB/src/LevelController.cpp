@@ -5,7 +5,11 @@
 
 LevelController::LevelController()
 {
-	
+	background.loadFromFile("Resources/Images/Background.jpg");
+	backgroundOverlay.loadFromFile("Resources/Images/BackgroundOverlay.jpg");
+
+	backgroundSprite.setTexture(background,true);
+	backgroundSpriteOverlay.setTexture(backgroundOverlay,true);
 }
 
 LevelController::Initializer::Initializer(char randomness, std::string name) :
@@ -15,7 +19,6 @@ randomness{ randomness }
 }
 
 void LevelController::startLevel(LevelController::Initializer initializer){
-	//gameController->addObject(new Logo());
 	Factory factory;
 	factory.loadLevel(initializer.name, *this);
 }
@@ -32,6 +35,11 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	}
 
 	window.clear(sf::Color::White);
+
+	window.draw(backgroundSprite);
+	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
+	window.draw(backgroundSpriteOverlay);
+
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
