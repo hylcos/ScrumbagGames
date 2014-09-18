@@ -110,5 +110,11 @@
     <Image Include="Resources\Images\Logo.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Background.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\BackgroundOverlay.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
