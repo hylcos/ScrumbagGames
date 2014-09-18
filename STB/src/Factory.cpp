@@ -2,7 +2,7 @@
 #include "Factory.h"
 #include "gameObjects\GameObjectManager.h"
 #include "gameObjects\GameObject.h"
-#include "GameController.h"
+#include "LevelController.h"
 #include "Exception.h"
 
 #include <exception>
@@ -47,13 +47,13 @@ GameObject * Factory::screen_object_read(std::ifstream & input){
 }
 
 
-void Factory::loadLevel(std::string file, GameController & gameController)
+void Factory::loadLevel(std::string file, LevelController & levelController)
 {
 	int i = 0;
 	std::ifstream input(file);
 	try {
 		for (;;){
-			gameController.addObject(screen_object_read(input));
+			levelController.addObject(screen_object_read(input));
 			i++;
 		}
 	}
