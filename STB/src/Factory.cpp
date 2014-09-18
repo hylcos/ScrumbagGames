@@ -1,8 +1,10 @@
 #include "stdafx.h"
 #include "Factory.h"
+#include "gameObjects\GameObjectManager.h"
 #include "gameObjects\GameObject.h"
 #include "gameObjects\Circle.h"
 #include "GameController.h"
+#include "Exception.h"
 
 #include <exception>
 #include <fstream>
@@ -39,30 +41,7 @@ GameObject * Factory::screen_object_read(std::ifstream & input){
 	sf::Vector2f position;
 	std::string name;
 	input >> position >> name;
-	if (name == "CIRCLE"){
-		sf::Color color;
-		float randomness;
-		input >> randomness;
-
-		return new Circle{ position, randomness };
-	}/*
-	else if (name == "RECTANGLE"){
-		sf::Color color;
-		float size;
-		input >> color >> size;
-
-		return new rectangle{ position, (int)size, color
-		};
-	}*/
-	/*else if (name == "IMAGE"){
-		std::string name;
-		input >> name;
-		return new image(position, name);
-	}*/
-	else if (name == ""){
-		throw endOfFile();
-	}
-	throw unknownObject(name);
+	GameObject * gameObject = GameObjectManager::createObjectFromName(name);
 }
 
 

@@ -3,6 +3,7 @@
 #include "gameObjects\GameObject.h"
 #include "gameObjects\Circle.h"
 #include "GameController.h"
+#include "Exception.h"
 
 #include <exception>
 #include <fstream>

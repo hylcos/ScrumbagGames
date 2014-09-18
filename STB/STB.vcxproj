@@ -84,6 +84,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\GameObjectManager.h" />
     <ClInclude Include="src\Exception.h" />
     <ClInclude Include="src\Factory.h" />
     <ClInclude Include="src\gameObjects\Logo.h" />
@@ -97,6 +98,7 @@
     <ClInclude Include="src\targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
     <ClCompile Include="src\Exception.cpp" />
     <ClCompile Include="src\Factory.cpp" />
     <ClCompile Include="src\gameObjects\Logo.cpp" />
