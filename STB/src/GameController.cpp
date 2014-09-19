@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GameController.h"
+#include "SoundController.h"
 #include <SFML/Graphics.hpp>
 #include "gameObjects/GameObject.h"
 #include "LevelController.h"

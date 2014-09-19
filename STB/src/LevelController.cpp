@@ -1,7 +1,9 @@
 #include "stdafx.h"
+#include "GameController.h"
 #include "LevelController.h"
-#include "gameObjects/Logo.h"
 #include "Factory.h"
+
+#include <SFML\Graphics.hpp>
 
 LevelController::LevelController()
 {
