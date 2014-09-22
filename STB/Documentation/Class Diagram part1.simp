@@ -70,10 +70,6 @@
         <value>26</value>
       </counter>
       <counter>
-        <item-type stereotype="" type="AbstractElementGroup" />
-        <value>294</value>
-      </counter>
-      <counter>
         <item-type stereotype="" type="UmlClass" />
         <value>27</value>
       </counter>
@@ -88,6 +84,10 @@
       <counter>
         <item-type stereotype="" type="UmlRealization" />
         <value>2</value>
+      </counter>
+      <counter>
+        <item-type stereotype="" type="AbstractElementGroup" />
+        <value>25</value>
       </counter>
     </entity-ids>
     <diagrams>
@@ -1194,7 +1194,7 @@
           <version />
         </meta>
         <abstract-items>
-          <item id="di216801123552336628" cid="C001" type="class" name="SoundController" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 11:59:50">
+          <item id="di216801123552336628" cid="C001" type="class" name="SoundController" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 11:59:50">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1218,7 +1218,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di409742526355822997" cid="C002" type="class" name="Logo" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:17">
+          <item id="di409742526355822997" cid="C002" type="class" name="Logo" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:17">
             <stereotypes />
             <documentation>
               <text>
@@ -1258,12 +1258,10 @@
               </operation>
             </operations>
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di904918031938124882" cid="C003" type="class" name="LevelController" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:23">
+          <item id="di904918031938124882" cid="C003" type="class" name="LevelController" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:23">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1284,7 +1282,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di730470283605553135" cid="C006" type="class" name="InputController" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:31">
+          <item id="di730470283605553135" cid="C006" type="class" name="InputController" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:31">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1299,7 +1297,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di166500428816797635" cid="C014" type="class" name="GameObject" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:37">
+          <item id="di166500428816797635" cid="C014" type="class" name="GameObject" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:37">
             <stereotypes />
             <documentation>
               <text>
@@ -1350,12 +1348,10 @@
               </operation>
             </operations>
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di292512748578027575" cid="C015" type="class" name="GameController" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:45">
+          <item id="di292512748578027575" cid="C015" type="class" name="GameController" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:00:45">
             <stereotypes />
             <documentation>
               <text>
@@ -1428,12 +1424,10 @@
               </operation>
             </operations>
             <template-parameters>
-              <source-codes>
-                <source-code language="ActionScript" />
-              </source-codes>
+              <source-codes />
             </template-parameters>
           </item>
-          <item id="di523643725564938836" cid="C016" type="class" name="Circle" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:01:13">
+          <item id="di523643725564938836" cid="C016" type="class" name="Circle" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:01:13">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1451,7 +1445,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di695976887464081387" cid="REL003" type="relationship" name="1...*" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:04:06">
+          <item id="di695976887464081387" cid="REL003" type="relationship" name="1...*" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:04:06">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1461,7 +1455,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di863701549229437248" cid="DEP001" type="dependency" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:05:15">
+          <item id="di863701549229437248" cid="DEP001" type="dependency" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:05:15">
             <stereotypes>
               <stereotype name="use" />
             </stereotypes>
@@ -1469,7 +1463,7 @@
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di136727540219065267" cid="REL006" type="relationship" name="1...1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:05:33">
+          <item id="di136727540219065267" cid="REL006" type="relationship" name="1...1" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:05:33">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1479,7 +1473,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di864364549852038785" cid="DEP002" type="dependency" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:05:52">
+          <item id="di864364549852038785" cid="DEP002" type="dependency" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:05:52">
             <stereotypes>
               <stereotype name="use" />
             </stereotypes>
@@ -1487,7 +1481,7 @@
             <owned-items />
             <style class="default" />
           </item>
-          <item id="di453040987587030163" cid="REL009" type="relationship" name="1...1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:06:27">
+          <item id="di453040987587030163" cid="REL009" type="relationship" name="1...1" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:06:27">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1497,7 +1491,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di472784734255167965" cid="C017" type="class" name="Factory" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:13:21">
+          <item id="di472784734255167965" cid="C017" type="class" name="Factory" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:13:21">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1531,7 +1525,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di885082020523309559" cid="REL010" type="relationship" name="1...1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:13:53">
+          <item id="di885082020523309559" cid="REL010" type="relationship" name="1...1" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:13:53">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1541,7 +1535,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di849783788881399654" cid="REL023" type="relationship" name="1...*" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:20:26">
+          <item id="di849783788881399654" cid="REL023" type="relationship" name="1...*" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:20:26">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1551,7 +1545,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di136143942795506756" cid="C021" type="class" name="GameObjectManager" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:18:35">
+          <item id="di136143942795506756" cid="C021" type="class" name="GameObjectManager" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:18:35">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1569,7 +1563,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di953485213482694545" cid="REL014" type="relationship" name="1..1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:19:45">
+          <item id="di953485213482694545" cid="REL014" type="relationship" name="1..1" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:19:45">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1579,7 +1573,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di300784820742857747" cid="REL022" type="relationship" name="1...*" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:20:08">
+          <item id="di300784820742857747" cid="REL022" type="relationship" name="1...*" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:20:08">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1589,7 +1583,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di271062537543778642" cid="C022" type="class" name="Exception" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:21:41">
+          <item id="di271062537543778642" cid="C022" type="class" name="Exception" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:21:41">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1613,7 +1607,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di337527335834012279" cid="REL024" type="relationship" name="1...1" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:22:18">
+          <item id="di337527335834012279" cid="REL024" type="relationship" name="1...1" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:22:18">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1623,7 +1617,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di879425216967999207" cid="REL025" type="relationship" name="1...*" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 13:31:54">
+          <item id="di879425216967999207" cid="REL025" type="relationship" name="1...*" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 13:31:54">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1633,7 +1627,7 @@
               <end-role id="" name="" navigability="yes" association-type="association" visibility="private" />
             </relation>
           </item>
-          <item id="di493082967387017745" cid="C025" type="class" name="Initializer" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:39:59">
+          <item id="di493082967387017745" cid="C025" type="class" name="Initializer" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:39:59">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1653,7 +1647,7 @@
               <source-codes />
             </template-parameters>
           </item>
-          <item id="di532137402943048024" cid="GNR003" type="generalization" name="" style-class="" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:39:59">
+          <item id="di532137402943048024" cid="GNR003" type="generalization" name="" style-class="default" is-abstract="false" is-root="false" is-leaf="false" is-active="false" creation-date="09/18/2014 12:39:59">
             <stereotypes />
             <associated-diagrams />
             <owned-items />
@@ -1684,7 +1678,7 @@
             <class />
           </item>
           <item id="di730470283605553135" iid="62638c32242a494d95c56e15d9ca6fed" creation-date="09/18/2014 12:00:31" order-index="3" type="entity">
-            <layout ax="1268" ay="1019" awidth="289" aheight="104" x="1268" y="1019" width="289" height="104" angle="0" />
+            <layout ax="1268" ay="1175.5" awidth="289" aheight="104" x="1268" y="1175.5" width="289" height="104" angle="0" />
             <class />
           </item>
           <item id="di166500428816797635" iid="cbfaba0cf97d40ec93ab6fcffba22bd2" creation-date="09/18/2014 12:00:37" order-index="4" type="entity">
@@ -1753,14 +1747,14 @@
             <role-positions start-role="25,15" end-role="25,-15" start-multiplicity="25,-15" end-multiplicity="25,15" />
           </item>
           <item id="di271062537543778642" iid="01bfa30e7e694db095ec99f02ef45fca" creation-date="09/18/2014 12:21:41" order-index="19" type="entity">
-            <layout ax="1268" ay="867" awidth="289" aheight="87" x="1268" y="867" width="289" height="87" angle="0" />
+            <layout ax="1268" ay="1002" awidth="289" aheight="87" x="1268" y="1002" width="289" height="87" angle="0" />
             <class />
           </item>
           <item id="di337527335834012279" iid="e9460b9338164b1f97b3abca3755cef1" creation-date="09/18/2014 12:22:18" order-index="20" type="relation">
-            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="1649" y1="1002" x2="1525" y2="954" start-border-pos="0.0128718721693841" end-border-pos="0.527271943933823">
+            <layout line-style="oblique" lock-start-point="false" lock-end-point="false" lock-to-fields="false" name-position="10,-10" auto-path="" x1="1632" y1="1055" x2="1557" y2="1052" start-border-pos="0.890622477886105" end-border-pos="0.393443491267062">
               <points>
-                <point x="1649" y="1002" />
-                <point x="1525" y="954" />
+                <point x="1632" y="1055" />
+                <point x="1557" y="1052" />
               </points>
             </layout>
             <relation from="di472784734255167965" from-iid="ed20766c753148b7be6a59d222da6c10" to="di271062537543778642" to-iid="01bfa30e7e694db095ec99f02ef45fca" />
