@@ -126,6 +126,8 @@
     <Image Include="Resources\Images\Background.jpg" />
     <Image Include="Resources\Images\BackgroundOverlay.jpg" />
     <Image Include="Resources\Images\Logo.png" />
+    <Image Include="Resources\Images\Sprites\Crosshair.png" />
+    <Image Include="Resources\Images\Sprites\PlayButton.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

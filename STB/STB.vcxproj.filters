@@ -118,5 +118,11 @@
     <Image Include="Resources\Images\Logo.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Sprites\Crosshair.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\PlayButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
