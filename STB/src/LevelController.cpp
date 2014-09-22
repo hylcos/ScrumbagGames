@@ -12,6 +12,9 @@ LevelController::LevelController()
 
 	backgroundSprite.setTexture(background,true);
 	backgroundSpriteOverlay.setTexture(backgroundOverlay,true);
+
+	mainView.setSize(sf::Vector2f(640, 480));
+	mainView.setCenter(320,240);
 }
 
 LevelController::Initializer::Initializer(char randomness, std::string name) :
@@ -42,12 +45,22 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
 	window.draw(backgroundSpriteOverlay);
 
+	window.setView(mainView);
+	moveMainView(0.64f*speedModifier,0.48f*speedModifier);
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
 
 	window.display();
+}
+
+void LevelController::moveMainView(float x, float y){
+	setMainView(mainView.getCenter().x + x, mainView.getCenter().y + y);
+}
+
+void LevelController::setMainView(float x, float y){
+	mainView.setCenter(std::min(std::max(x, 320.0f), 1280.0f - 320.0f), std::min(std::max(y, 240.0f), 960.0f - 240.0f));
 }
 
 void LevelController::addObject(GameObject * object){

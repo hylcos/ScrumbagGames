@@ -32,11 +32,18 @@ public:
 	//This function will remove a GameObject under the control of the GameController, and DESTROY the GameObject in question.
 	void LevelController::removeObject(GameObject * object);
 
+	//Move the main view
+	void LevelController::moveMainView(float x, float y);
+
+	//Set the main view position
+	void LevelController::setMainView(float x, float y);
+
 	void LevelController::step(float fps, sf::RenderWindow & window);
 
 	~LevelController();
 
 private:
+	sf::View mainView;
 
 	sf::Texture background;
 	sf::Texture backgroundOverlay;
