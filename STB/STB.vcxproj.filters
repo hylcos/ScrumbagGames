@@ -107,6 +107,8 @@
     <None Include="Documentation\ClassDiagram.simp" />
     <None Include="Documentation\High-Concept-Document-Verbetering.doc" />
     <None Include="Documentation\Class Diagram part1.simp" />
+    <None Include="Resources\Images\GameLogo.pdn" />
+    <None Include="Resources\Images\Sprites\PlayButton.pdn" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">
@@ -122,6 +124,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\Sprites\PlayButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\GameLogo.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
