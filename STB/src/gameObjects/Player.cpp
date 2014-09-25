@@ -2,10 +2,10 @@
 #include "Player.h"
 #include "../TextureManager.h"
 struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
-	{ sf::Keyboard::Left, -1.0, 0.0 },
-	{ sf::Keyboard::Right, 1.0, 0.0 },
-	{ sf::Keyboard::Up, 0.0, -1.0 },
-	{ sf::Keyboard::Down, 0.0, 1.0 }
+	{ sf::Keyboard::A, -1.0, 0.0 },
+	{ sf::Keyboard::D, 1.0, 0.0 },
+	{ sf::Keyboard::W, 0.0, -1.0 },
+	{ sf::Keyboard::S, 0.0, 1.0 }
 };
 
 Player::Player():
@@ -18,6 +18,7 @@ void Player::update(float speedModifier) {
 	curSprite = *Animation::getCurrentAnimation();
 	curSprite.setPosition(position);
 }
+
 void Player::move(float speedModifier){
 	sf::Vector2f newPos{ 0, 0 };
 	for (auto & action : actions){
