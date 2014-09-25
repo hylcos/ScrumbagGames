@@ -30,7 +30,9 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 
 void LevelController::step(float fps, sf::RenderWindow & window){
 	float speedModifier = 60 / fps;
-
+	std::cout
+		<< speedModifier
+		<< "\n";
 	for (GameObject* obj : gameObjects){
 		obj->update(speedModifier);
 	}
