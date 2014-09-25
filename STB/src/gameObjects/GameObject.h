@@ -14,6 +14,7 @@ public:
 	//virtual sf::Sprite GameObject::getCurrentAnimation()const;
 	void GameObject::setPosition(sf::Vector2f position);
 	sf::Vector2f GameObject::getPosition();
+	virtual void GameObject::setRotation(float rotate);
 
 	virtual ~GameObject();
 protected:
