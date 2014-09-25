@@ -4,6 +4,8 @@
 #include "Logo.h"
 #include "Player.h"
 #include <string>
+#include "Table.h"
+#include "Bench.h"
 
 class GameObjectManager
 {
