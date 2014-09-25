@@ -14,4 +14,5 @@ public:
 private:
 	sf::Uint8 state;
 	sf::Texture * tex;
+	sf::Sprite table;
 	};

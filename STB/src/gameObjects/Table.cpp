@@ -6,15 +6,12 @@
 Table::Table()
 {
 	tex = TextureManager::getTexture("table.png");
+	table.setTexture(*tex);
 }
 
 void Table::draw(sf::RenderWindow & window) const{
 
-	//tab = TextureManager::getTexture("table.png");
-	//loadFromFile("texture.png");
-	//sf::Sprite sprite;
-	//sprite.setTexture(*tab);
-	//window.draw(sprite);
+	window.draw(table);
 }
 
 
