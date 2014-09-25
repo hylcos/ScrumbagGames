@@ -11,9 +11,11 @@ Bench::Bench()
 void Bench::update(float speedmodifer){
 	bench.setPosition(position);
 }
+
 void Bench::setRotation(float rotate){
 	bench.rotate(rotate);
 }
+
 void Bench::draw(sf::RenderWindow & window) const{
 	window.draw(bench);
 }
