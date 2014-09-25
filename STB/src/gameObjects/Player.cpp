@@ -1,11 +1,12 @@
 #include "../stdafx.h"
 #include "Player.h"
 #include "../TextureManager.h"
-struct { sf::Keyboard::Key key; float x; float y; float rotation; } actions[] = {
-	{ sf::Keyboard::A, -1.0, 0.0,270.0 },
-	{ sf::Keyboard::D, 1.0, 0.0,90.0 },
-	{ sf::Keyboard::W, 0.0, -1.0,0.0 },
-	{ sf::Keyboard::S, 0.0, 1.0,180.0}
+
+struct { sf::Keyboard::Key key; float x; float y;} actions[] = {
+	{ sf::Keyboard::A, -1.0, 0.0 },
+	{ sf::Keyboard::D, 1.0, 0.0 },
+	{ sf::Keyboard::W, 0.0, -1.0 },
+	{ sf::Keyboard::S, 0.0, 1.0}
 };
 
 Player::Player():
@@ -33,11 +34,11 @@ void Player::move(float speedModifier){
 		if (sf::Keyboard::isKeyPressed(action.key)){
 			newPos.x += action.x;
 			newPos.y += action.y;
-			rotation = action.rotation;
 		}
 	}
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		float dir = atan2(newPos.y, newPos.x);
+		rotation = dir * 180 / 3.14159265358979323846f + 90;
 		position.x += cos(dir) * speedModifier;
 		position.y += sin(dir) * speedModifier;
 		toNext += speedModifier;
