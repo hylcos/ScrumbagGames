@@ -10,7 +10,7 @@ public:
 	void Animation::next() override;
 	void Animation::update(float speedModifier) override;
 	void Animation::draw(sf::RenderWindow & window) const override;
-	sf::Sprite Animation::getCurrentAnimation() const ;
+	sf::Sprite *  Animation::getCurrentAnimation()  ;
 	~Animation();
 private:
 	sf::Texture  tex[8];

@@ -6,7 +6,7 @@ class Player : public Animation
 
 private:
 	
-
+	sf::Sprite curSprite;
 
 public:
 	sf::Texture tex1, tex2, tex3;

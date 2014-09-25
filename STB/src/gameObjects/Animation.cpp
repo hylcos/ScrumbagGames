@@ -14,7 +14,8 @@ void Animation::setTextures(sf::Texture & tex1, sf::Texture & tex2, sf::Texture 
 	tex[5] = tex6;
 	tex[6] = tex7;
 	tex[7] = tex8;
-
+	current = 0;
+	curSprite.setTexture(tex[current]);
 }
 void Animation::next(){
 	current++;
@@ -26,8 +27,8 @@ void Animation::update(float speedModifier) {
 	curSprite.setPosition(position);
 }
 void Animation::draw(sf::RenderWindow & window) const {}
-sf::Sprite Animation::getCurrentAnimation() const{
-	return curSprite;
+sf::Sprite * Animation::getCurrentAnimation() {
+	return &curSprite;
 }
 Animation::~Animation()
 {
