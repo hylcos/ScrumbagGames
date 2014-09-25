@@ -11,16 +11,16 @@ struct { sf::Keyboard::Key key; float x; float y; float rotation; } actions[] = 
 Player::Player():
 Animation{}
 {
-	Animation::setTextures(*TextureManager::getInstance().getTexture("/Sprites/Players/Player-1.png"), 
-		*TextureManager::getInstance().getTexture("/Sprites/Players/Player-2.png"),
-		*TextureManager::getInstance().getTexture("/Sprites/Players/Player-3.png"),
-		*TextureManager::getInstance().getTexture("/Sprites/Players/Player-4.png"));
+	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"), 
+		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
 }
 
 void Player::update(float speedModifier) {
 	curSprite = *Animation::getCurrentAnimation();
 	curSprite.setPosition(position);
-	
+	curSprite.setRotation(rotation);
 	if (toNext >= 10){
 		Animation::next();
 		toNext -= 10;
@@ -33,6 +33,7 @@ void Player::move(float speedModifier){
 		if (sf::Keyboard::isKeyPressed(action.key)){
 			newPos.x += action.x;
 			newPos.y += action.y;
+			rotation = action.rotation;
 		}
 	}
 	if (newPos != sf::Vector2f{ 0, 0 }){
