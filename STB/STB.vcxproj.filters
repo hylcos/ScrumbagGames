@@ -68,7 +68,13 @@
     <ClInclude Include="src\gameObjects\Animation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\TextureManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\Table.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\Bench.h">
@@ -118,10 +124,16 @@
     <ClCompile Include="src\gameObjects\Animation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\TextureManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\Bench.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -151,9 +163,6 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\GameLogo.png">
-      <Filter>Resource Files</Filter>
-    </Image>
-    <Image Include="Resources\Images\Sprites\Bench.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
