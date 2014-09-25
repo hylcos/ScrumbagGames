@@ -26,6 +26,14 @@ randomness{ randomness }
 void LevelController::startLevel(LevelController::Initializer initializer){
 	Factory factory;
 	factory.loadLevel(initializer.name, *this);
+	player = nullptr;
+	for (GameObject* obj : gameObjects){
+		Player* v = dynamic_cast<Player*>(obj);
+		if (v != 0) {
+			player = v;
+		}
+	}
+
 }
 
 void LevelController::step(float fps, sf::RenderWindow & window){
@@ -48,7 +56,9 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.draw(backgroundSpriteOverlay);
 
 	window.setView(mainView);
-	moveMainView(0.64f*speedModifier, 0.48f*speedModifier);
+	if (player != nullptr){
+		setMainView(player->getPosition().x, player->getPosition().y);
+	}
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);

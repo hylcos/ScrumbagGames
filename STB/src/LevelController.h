@@ -1,7 +1,7 @@
 #pragma once
 #include "GameController.h"
 #include "Factory.h"
-
+#include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
 
 class GameController;
@@ -55,4 +55,5 @@ private:
 
 	std::vector< GameObject* > gameObjects;
 	
+	Player * player = nullptr;
 };
