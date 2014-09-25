@@ -12,7 +12,7 @@ public:
 	sf::Texture tex1, tex2, tex3;
 	Player();
 	~Player();
-
+	void Player::move(float speedModifier) override;
 	void Player::update(float speedModifier) override;
 	void Player::draw(sf::RenderWindow & window) const override;
 	

@@ -26,6 +26,10 @@ void Animation::next(){
 void Animation::update(float speedModifier) {
 	curSprite.setPosition(position);
 }
+
+void Animation::move(float speedModifier){
+
+}
 void Animation::draw(sf::RenderWindow & window) const {}
 sf::Sprite * Animation::getCurrentAnimation() {
 	return &curSprite;
