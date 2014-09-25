@@ -14,7 +14,7 @@ public:
 
 private:
 	float rotate;
-	sf::Texture pic;
+	sf::Texture * pic;
 	sf::Sprite bench;
 };
 
