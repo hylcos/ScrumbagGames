@@ -15,6 +15,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Logo"){
 		return new Logo();
 	}
+	if (string == "Player"){
+		return new Player();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

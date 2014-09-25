@@ -85,6 +85,8 @@
     <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Animation.h" />
+    <ClInclude Include="src\gameObjects\Player.h" />
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />
     <ClInclude Include="src\Exception.h" />
     <ClInclude Include="src\Factory.h" />
@@ -99,6 +101,8 @@
     <ClInclude Include="src\targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Animation.cpp" />
+    <ClCompile Include="src\gameObjects\Player.cpp" />
     <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
     <ClCompile Include="src\Exception.cpp" />
     <ClCompile Include="src\Factory.cpp" />

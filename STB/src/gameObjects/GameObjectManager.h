@@ -2,7 +2,7 @@
 #include "GameObject.h"
 #include "Circle.h"
 #include "Logo.h"
-
+#include "Player.h"
 #include <string>
 
 class GameObjectManager
