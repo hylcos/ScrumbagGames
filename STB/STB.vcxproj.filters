@@ -109,6 +109,7 @@
     <None Include="Documentation\Class Diagram part1.simp" />
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
+    <None Include="Documentation\SFML Game Development.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">

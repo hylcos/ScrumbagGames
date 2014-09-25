@@ -120,6 +120,7 @@
     <None Include="Documentation\ClassDiagram.simp" />
     <None Include="Documentation\Game Sequence.xlsx" />
     <None Include="Documentation\High-Concept-Document-Verbetering.doc" />
+    <None Include="Documentation\SFML Game Development.pdf" />
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
     <None Include="Resources\Sounds\intro.ogg" />
