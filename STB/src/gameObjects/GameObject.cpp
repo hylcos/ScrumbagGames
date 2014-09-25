@@ -15,7 +15,9 @@ position{pos}
 void GameObject::update(float speedModifier){
 
 }
+void GameObject::next(){
 
+}
 void GameObject::setPosition(sf::Vector2f position){
 	GameObject::position.x = position.x;
 	GameObject::position.y = position.y;
