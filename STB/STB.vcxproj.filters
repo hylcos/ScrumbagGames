@@ -168,5 +168,11 @@
     <Image Include="Resources\Images\Sprites\Player-2.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Sprites\Players\Player-1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Players\Player-2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

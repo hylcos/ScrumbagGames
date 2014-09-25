@@ -11,7 +11,7 @@ struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
 Player::Player():
 Animation{}
 {
-	Animation::setTextures(*TextureManager::getInstance().getTexture("/Sprites/Player-1.png"), *TextureManager::getInstance().getTexture("/Sprites/Player-2.png"));
+	Animation::setTextures(*TextureManager::getInstance().getTexture("/Sprites/Players/Player-1.png"), *TextureManager::getInstance().getTexture("/Sprites/Players/Player-2.png"));
 }
 
 void Player::update(float speedModifier) {

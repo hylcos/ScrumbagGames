@@ -144,6 +144,8 @@
     <Image Include="Resources\Images\Sprites\PlayButton.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />
+    <Image Include="Resources\Images\Sprites\Players\Player-1.png" />
+    <Image Include="Resources\Images\Sprites\Players\Player-2.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
