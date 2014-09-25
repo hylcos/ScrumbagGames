@@ -104,10 +104,29 @@
   <ItemGroup>
     <None Include="Documentation\Game Sequence.xlsx" />
     <None Include="Resources\Sounds\intro.ogg" />
-    <None Include="Documentation\ClassDiagram.simp" />
+    <None Include="Documentation\High-Concept-Document-Verbetering.doc" />
+    <None Include="Documentation\Class Diagram part1.simp" />
+    <None Include="Resources\Images\GameLogo.pdn" />
+    <None Include="Resources\Images\Sprites\PlayButton.pdn" />
+    <None Include="Documentation\SFML Game Development.pdf" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Resources\Images\Background.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\BackgroundOverlay.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
     <Image Include="Resources\Images\Logo.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Crosshair.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\PlayButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\GameLogo.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -2,6 +2,8 @@
 class InputController
 {
 public:
-	void InputController::step();
+	InputController();
+	//void InputController::step();
+	~InputController();
 };
 

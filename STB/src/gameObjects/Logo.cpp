@@ -1,7 +1,6 @@
 #include "..\stdafx.h"
 #include "Logo.h"
 #include <SFML\Graphics.hpp>
-#include "../LevelController.h"
 
 
 Logo::Logo()

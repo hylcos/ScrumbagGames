@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "GameController.h"
+#include "SoundController.h"
 #include <SFML/Graphics.hpp>
 #include "gameObjects/GameObject.h"
 #include "LevelController.h"
@@ -17,23 +18,9 @@ void GameController::stop(){
 	stopping = true;
 }
 
-void GameController::addObject(GameObject * object){
-	gameObjects.push_back(object);
-}
-
-void GameController::removeObject(GameObject * object){
-	if (object == nullptr){
-		return;
-	}
-	delete object;
-	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
-	if (position != gameObjects.end()) // == vector.end() means the element was not found
-		gameObjects.erase(position);
-}
-
 void GameController::start(){
 	soundController.playMusic(soundController.INTRO);
-	levelController.startLevel(levelController.LEVEL_ONE, *this);
+	levelController.startLevel(levelController.LEVEL_ONE);
 	while (!stopping){
 		step();
 	}
@@ -42,23 +29,7 @@ void GameController::start(){
 void GameController::step(){
 	checkWindow();
 
-	float speedModifier = 60 / fps;
-
-	for (GameObject* obj : gameObjects){
-		obj->update(speedModifier);
-	}
-
-	for (GameObject* obj : gameObjects){
-		obj->move(speedModifier);
-	}
-
-	window.clear(sf::Color::White);
-
-	for (GameObject* obj : gameObjects){
-		obj->draw(window);
-	}
-
-	window.display();
+	levelController.step(fps, window);
 
 	frames++;
 
@@ -89,7 +60,4 @@ void GameController::checkWindow(){
 }
 
 GameController::~GameController(){
-	for (GameObject* obj : gameObjects){
-		obj->~GameObject();
-	}
 };
