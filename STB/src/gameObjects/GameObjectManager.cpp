@@ -18,6 +18,12 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Player"){
 		return new Player();
 	}
+	if (string == "Bench"){
+		return new Bench();
+	}
+	if (string == "Table"){
+		return new Table();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}
