@@ -14,8 +14,8 @@ public:
 	sf::Vector2f GameObject::getPosition();
 
 	virtual ~GameObject();
+	bool needsRedraw = true;
 protected:
 	sf::Vector2f position;
-	bool needsRedraw;
 };
 

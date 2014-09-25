@@ -49,7 +49,9 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	moveMainView(0.64f*speedModifier,0.48f*speedModifier);
 
 	for (GameObject* obj : gameObjects){
-		obj->draw(window);
+		if (obj->needsRedraw){
+			obj->draw(window);
+		}
 	}
 
 	window.display();
