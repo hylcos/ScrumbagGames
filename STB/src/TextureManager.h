@@ -8,7 +8,7 @@ class TextureManager
 public:
 	TextureManager();
 	static sf::Texture getTexture(std::string name);
-	static 
+	static std::map < std::string, sf::Texture > map;
 	~TextureManager();
 };
 
