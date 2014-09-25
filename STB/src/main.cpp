@@ -10,6 +10,7 @@
 
 int main()
 {
+	srand((unsigned int)time(NULL));
 #ifndef DEBUG//Defined in GameController.h
 	ShowWindow(GetConsoleWindow(), SW_HIDE); // Hide the console
 #endif

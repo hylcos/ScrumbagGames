@@ -16,6 +16,8 @@ public:
 	sf::Vector2f GameObject::getPosition();
 	virtual void GameObject::setRotation(float rotate);
 
+	void GameObject::setRandomness(sf::Uint8 terrorLevel);
+
 	virtual ~GameObject();
 protected:
 	sf::Vector2f position;

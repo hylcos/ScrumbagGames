@@ -28,6 +28,7 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 	factory.loadLevel(initializer.name, *this);
 	player = nullptr;
 	for (GameObject* obj : gameObjects){
+		obj->setRandomness(terrorLevel);
 		Player* v = dynamic_cast<Player*>(obj);
 		if (v != 0) {
 			player = v;
