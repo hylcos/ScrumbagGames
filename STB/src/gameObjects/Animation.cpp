@@ -20,9 +20,11 @@ void Animation::next(){
 	current++;
 	if ( & tex[current]  ==  & NUL )
 		current = 0;
-	curSprite.setTexture = tex[current];
+	curSprite.setTexture(tex[current]);
 }
-void Animation::update(float speedModifier) {}
+void Animation::update(float speedModifier) {
+	curSprite.setPosition(position);
+}
 void Animation::draw(sf::RenderWindow & window) const {}
 sf::Sprite Animation::getCurrentAnimation() const{
 	return curSprite;
