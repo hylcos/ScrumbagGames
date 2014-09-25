@@ -104,7 +104,6 @@
   <ItemGroup>
     <None Include="Documentation\Game Sequence.xlsx" />
     <None Include="Resources\Sounds\intro.ogg" />
-    <None Include="Documentation\ClassDiagram.simp" />
     <None Include="Documentation\High-Concept-Document-Verbetering.doc" />
     <None Include="Documentation\Class Diagram part1.simp" />
     <None Include="Resources\Images\GameLogo.pdn" />

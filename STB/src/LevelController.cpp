@@ -39,7 +39,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 		obj->move(speedModifier);
 	}
 
-	window.clear(sf::Color::White);
+	//window.clear(sf::Color::White);
 
 	window.draw(backgroundSprite);
 	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
