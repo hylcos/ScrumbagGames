@@ -5,6 +5,7 @@
 Bench::Bench()
 {
 	pic = TextureManager::getInstance().getTexture("/Sprites/Bench.png");
+	bench.setOrigin(63, 12);
 	bench.setTexture(*pic);
 }
 
