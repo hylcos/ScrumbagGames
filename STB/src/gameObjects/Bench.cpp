@@ -1,11 +1,11 @@
 #include "../stdafx.h"
 #include "Bench.h"
 #include "GameObject.h"
-
+#include "../TextureManager.h"
 Bench::Bench()
 {
-	pic.loadFromFile("Resources/Images/Bench.png");
-	bench.setTexture(pic);
+	pic = TextureManager::getTexture("Bench.png");
+	bench.setTexture(*pic);
 }
 
 void Bench::update(float speedmodifer){
