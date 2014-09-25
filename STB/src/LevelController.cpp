@@ -10,11 +10,11 @@ LevelController::LevelController()
 	background.loadFromFile("Resources/Images/Background.jpg");
 	backgroundOverlay.loadFromFile("Resources/Images/BackgroundOverlay.jpg");
 
-	backgroundSprite.setTexture(background,true);
-	backgroundSpriteOverlay.setTexture(backgroundOverlay,true);
+	backgroundSprite.setTexture(background, true);
+	backgroundSpriteOverlay.setTexture(backgroundOverlay, true);
 
 	mainView.setSize(sf::Vector2f(640, 480));
-	mainView.setCenter(320,240);
+	mainView.setCenter(320, 240);
 }
 
 LevelController::Initializer::Initializer(char randomness, std::string name) :
@@ -46,12 +46,10 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.draw(backgroundSpriteOverlay);
 
 	window.setView(mainView);
-	moveMainView(0.64f*speedModifier,0.48f*speedModifier);
+	moveMainView(0.64f*speedModifier, 0.48f*speedModifier);
 
 	for (GameObject* obj : gameObjects){
-		if (obj->needsRedraw){
-			obj->draw(window);
-		}
+		obj->draw(window);
 	}
 
 	window.display();
