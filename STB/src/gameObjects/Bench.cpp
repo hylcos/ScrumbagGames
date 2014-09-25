@@ -4,7 +4,7 @@
 #include "../TextureManager.h"
 Bench::Bench()
 {
-	pic = TextureManager::getTexture("Bench.png");
+	pic = TextureManager::getInstance().getTexture("Bench.png");
 	bench.setTexture(*pic);
 }
 

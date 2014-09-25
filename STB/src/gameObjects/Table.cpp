@@ -5,7 +5,7 @@
 
 Table::Table()
 {
-	tex = TextureManager::getTexture("table.png");
+	tex = TextureManager::getInstance().getTexture("table.png");
 	table.setTexture(*tex);
 }
 
