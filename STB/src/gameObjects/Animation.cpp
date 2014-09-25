@@ -15,11 +15,13 @@ void Animation::setTextures(sf::Texture & tex1, sf::Texture & tex2, sf::Texture 
 	tex[6] = tex7;
 	tex[7] = tex8;
 	current = 0;
+//	curSprite.setOrigin(tex1.getSize().x,tex1.getSize().y);
 	curSprite.setTexture(tex[current]);
+	
 }
 void Animation::next(){
 	current++;
-	if ( & tex[current]  ==  & NUL )
+	if (tex[current].getSize().x == 0 || current == 8)
 		current = 0;
 	curSprite.setTexture(tex[current]);
 }
