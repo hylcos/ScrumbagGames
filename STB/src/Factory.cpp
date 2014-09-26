@@ -50,8 +50,10 @@ GameObject * Factory::screen_object_read(std::ifstream & input){
 void Factory::loadLevel(std::string file, LevelController & levelController)
 {
 	int i = 0;
+	int settings = 0;
 	std::ifstream input(file);
 	try {
+		input >> settings;
 		for (;;){
 			levelController.addObject(screen_object_read(input));
 			i++;
@@ -59,7 +61,7 @@ void Factory::loadLevel(std::string file, LevelController & levelController)
 	}
 	catch (endOfFile){
 		std::cout << i;
-		std::cout << " objects loaded\n";
+		std::cout << " objects loaded\nLevel settings:" << settings <<'\n';
 	}
 	catch (std::exception & problem){
 		std::cout << problem.what();
