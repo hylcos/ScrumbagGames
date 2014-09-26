@@ -26,7 +26,7 @@ randomness{ randomness }
 void LevelController::startLevel(LevelController::Initializer initializer){
 	Factory factory;
 	int settings = factory.loadLevel(initializer.name, *this);
-	terrorLevel = settings & 253;
+	terrorLevel = settings & 255;
 	bool random = ((settings & factory.random) == factory.random);
 	player = nullptr;
 	for (GameObject* obj : gameObjects){
