@@ -28,6 +28,10 @@ void Player::update(float speedModifier) {
 	}
 }
 
+void Player::setRotation(float rotation){
+	Player::rotation = rotation;
+}
+
 void Player::move(float speedModifier){
 	sf::Vector2f newPos{ 0, 0 };
 	for (auto & action : actions){
@@ -38,13 +42,14 @@ void Player::move(float speedModifier){
 	}
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		float dir = atan2(newPos.y, newPos.x);
-		rotation = dir * 180 / 3.14159265358979323846f + 90;
+		//rotation = dir * 180 / 3.14159265358979323846f + 90;
 		position.x += cos(dir) * speedModifier;
 		position.y += sin(dir) * speedModifier;
 		toNext += speedModifier;
 	}
 	
 }
+
 void Player::draw(sf::RenderWindow & window) const {
 	
 	window.draw(curSprite);

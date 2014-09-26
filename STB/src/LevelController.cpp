@@ -56,6 +56,9 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.setView(mainView);
 	if (player != nullptr){
 		setMainView(player->getPosition().x, player->getPosition().y);
+		sf::Vector2f pos = sf::Vector2f(sf::Mouse::getPosition(window)) -sf::Vector2f(window.getSize().x / 2.0f, window.getSize().y / 2.0f) + mainView.getCenter() - player->getPosition();
+		std::cout << pos.x << "|" << pos.y << " - " << player->getPosition().x << "|" << player->getPosition().y << '\n';
+		player->setRotation(atan2(pos.y,pos.x) * 180 / 3.14159265358979323846f + 90);
 	}
 
 	for (GameObject* obj : gameObjects){

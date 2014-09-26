@@ -1,6 +1,6 @@
 #pragma once
 #include "Animation.h"
-#include "SFML\Graphics.hpp"
+#include <SFML\Graphics.hpp>
 class Player : public Animation
 {
 
@@ -16,6 +16,7 @@ public:
 	void Player::move(float speedModifier) override;
 	void Player::update(float speedModifier) override;
 	void Player::draw(sf::RenderWindow & window) const override;
+	void Player::setRotation(float rotation) override;
 	
 };
 
