@@ -5,9 +5,19 @@
 
 Table::Table()
 {
-	tex = TextureManager::getInstance().getTexture("/sprites/table.png");
+	tex = TextureManager::getInstance().getTexture("Sprites/Table.png");
+	table.setOrigin(tex->getSize().x / 2.0f, tex->getSize().y / 2.0f);
 	table.setTexture(*tex);
 }
+
+void Table::update(float speedmodifer){
+	table.setPosition(position);
+}
+
+void Table::setRotation(float rotate){
+	table.rotate(rotate);
+}
+
 
 void Table::draw(sf::RenderWindow & window) const{
 

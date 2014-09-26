@@ -7,9 +7,9 @@ class Bench :
 {
 
 public:
-	void Bench::draw(sf::RenderWindow & window) const override;
-	void Bench::setRotation(float rotate);
 	Bench::Bench();
+	void Bench::draw(sf::RenderWindow & window) const override;
+	void Bench::setRotation(float rotate) override;
 	void Bench::update(float speedModifier) override;
 
 private:

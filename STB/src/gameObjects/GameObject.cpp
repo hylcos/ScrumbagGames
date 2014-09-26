@@ -30,8 +30,7 @@ void GameObject::setRotation(float rotate){
 }
 
 void GameObject::setPosition(sf::Vector2f position){
-	GameObject::position.x = position.x;
-	GameObject::position.y = position.y;
+	GameObject::position = position;
 }
 
 sf::Vector2f GameObject::getPosition(){

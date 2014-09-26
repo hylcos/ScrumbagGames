@@ -9,6 +9,8 @@ public:
 	Table();
 	//static Table table();
 	void Table::draw(sf::RenderWindow & window) const override;
+	void Table::setRotation(float rotate) override;
+	void Table::update(float speedModifier) override;
 	~Table();
 
 private:

@@ -12,7 +12,7 @@ SoundController::SoundController(){
 }*/
 
 void SoundController::playMusic(const char* file){
-	std::cout << "Play music";
+	std::cout << "Play music\n";
 	bgMusic.openFromFile(file);
 	bgMusic.play();
 }
