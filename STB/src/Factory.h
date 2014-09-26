@@ -27,7 +27,7 @@ public:
 		random = 512
 	};
 	Factory();
-	void Factory::loadLevel(std::string file, LevelController & levelController);
+	int Factory::loadLevel(std::string file, LevelController & levelController);
 	GameObject * Factory::screen_object_read(std::ifstream & input);
 	~Factory();
 private:

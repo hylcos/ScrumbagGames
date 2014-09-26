@@ -47,7 +47,7 @@ GameObject * Factory::screen_object_read(std::ifstream & input){
 }
 
 
-void Factory::loadLevel(std::string file, LevelController & levelController)
+int Factory::loadLevel(std::string file, LevelController & levelController)
 {
 	int i = 0;
 	int settings = 0;
@@ -69,6 +69,7 @@ void Factory::loadLevel(std::string file, LevelController & levelController)
 		std::cin >> c;
 		exit(0);
 	}
+	return settings;
 }
 
 

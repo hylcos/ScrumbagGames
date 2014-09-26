@@ -25,10 +25,14 @@ randomness{ randomness }
 
 void LevelController::startLevel(LevelController::Initializer initializer){
 	Factory factory;
-	factory.loadLevel(initializer.name, *this);
+	int settings = factory.loadLevel(initializer.name, *this);
+	terrorLevel = settings & 253;
+	bool random = ((settings & factory.random) == factory.random);
 	player = nullptr;
 	for (GameObject* obj : gameObjects){
-		obj->setRandomness(terrorLevel);
+		if (random){
+			obj->setRandomness(terrorLevel);
+		}
 		Player* v = dynamic_cast<Player*>(obj);
 		if (v != 0) {
 			player = v;
@@ -56,8 +60,8 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.setView(mainView);
 	if (player != nullptr){
 		setMainView(player->getPosition().x, player->getPosition().y);
-		sf::Vector2f pos = sf::Vector2f(sf::Mouse::getPosition(window)) -sf::Vector2f(window.getSize().x / 2.0f, window.getSize().y / 2.0f) + mainView.getCenter() - player->getPosition();
-		player->setRotation(atan2(pos.y,pos.x) * 180 / 3.14159265358979323846f + 90);
+		sf::Vector2f pos = sf::Vector2f(sf::Mouse::getPosition(window)) - sf::Vector2f(window.getSize().x / 2.0f, window.getSize().y / 2.0f) + mainView.getCenter() - player->getPosition();
+		player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
 	}
 
 	for (GameObject* obj : gameObjects){

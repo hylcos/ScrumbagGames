@@ -13,6 +13,9 @@ position{pos}
 }
 
 void GameObject::setRandomness(sf::Uint8 terrorLevel){
+	if (terrorLevel <= 0){
+		return;
+	}
 	setRotation(((rand() % terrorLevel) - terrorLevel / 2.0f) / 255.0f * 360.0f);
 	GameObject::position.x += (rand() % terrorLevel) / 255.0f * 128.0f - 64.0f;
 	GameObject::position.y += (rand() % terrorLevel) / 255.0f * 128.0f - 64.0f;
