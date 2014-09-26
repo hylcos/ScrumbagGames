@@ -4,8 +4,8 @@
 #include "../TextureManager.h"
 Bench::Bench()
 {
-	pic = TextureManager::getInstance().getTexture("/Sprites/Bench.png");
-	bench.setOrigin(63, 12);
+	pic = TextureManager::getInstance().getTexture("Sprites/Bench.png");
+	bench.setOrigin(pic->getSize().x / 2.0f, pic->getSize().y / 2.0f);
 	bench.setTexture(*pic);
 }
 
