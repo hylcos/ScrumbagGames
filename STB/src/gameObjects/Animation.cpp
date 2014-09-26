@@ -15,8 +15,8 @@ void Animation::setTextures(sf::Texture & tex1, sf::Texture & tex2, sf::Texture 
 	tex[6] = tex7;
 	tex[7] = tex8;
 	current = 0;
-	curSprite.setOrigin(16,16);
 	curSprite.setTexture(tex[current]);
+	curSprite.setOrigin(tex1.getSize().x / 2, tex1.getSize().y / 2);
 	
 }
 void Animation::next(){
