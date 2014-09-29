@@ -6,7 +6,7 @@
 #include <string>
 #include "Table.h"
 #include "Bench.h"
-//#include "Enemy.h"
+#include "Enemy.h"
 
 class GameObjectManager
 {

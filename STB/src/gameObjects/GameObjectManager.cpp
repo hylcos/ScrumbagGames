@@ -23,9 +23,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Table"){
 		return new Table();
 	}
-	/*if (string == "Enemy"){
+	if (string == "Enemy"){
 		return new Enemy();
-	}*/
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

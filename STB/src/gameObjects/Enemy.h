@@ -2,7 +2,6 @@
 #include "GameObject.h"
 #include "../TextureManager.h"
 #include <SFML\Graphics.hpp>
-#include "../LevelController.h"
 class Enemy :
 	public GameObject
 {
