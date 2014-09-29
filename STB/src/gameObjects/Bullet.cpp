@@ -18,7 +18,7 @@ damage{damage}
 void Bullet::update(float speedmodifer) {
 	collision[0] = sf::Vertex(posOld);
 	collision[1] = sf::Vertex(posNew);
-	if (posNew.x > 1280 || posNew.x < 0 | posNew.y > 960 || posNew.y < 0){
+	if (posNew.x > 1280 || posNew.x < 0 || posNew.y > 960 || posNew.y < 0){
 		LevelController::getInstance().removeObject(this);
 		Bullet::~Bullet();
 	}
