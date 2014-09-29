@@ -85,9 +85,11 @@
     <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Bullet.h" />
     <ClInclude Include="src\gameObjects\Enemy.h" />
     <ClInclude Include="src\gameObjects\Animation.h" />
     <ClInclude Include="src\gameObjects\Bench.h" />
+    <ClInclude Include="src\gameObjects\Gun.h" />
     <ClInclude Include="src\gameObjects\Player.h" />
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />
     <ClInclude Include="src\Exception.h" />
@@ -95,6 +97,7 @@
     <ClInclude Include="src\gameObjects\Logo.h" />
     <ClInclude Include="src\gameObjects\Circle.h" />
     <ClInclude Include="src\gameObjects\Table.h" />
+    <ClInclude Include="src\gameObjects\Weapon.h" />
     <ClInclude Include="src\LevelController.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
     <ClInclude Include="src\InputController.h" />
@@ -105,9 +108,11 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Bullet.cpp" />
     <ClCompile Include="src\gameObjects\Enemy.cpp" />
     <ClCompile Include="src\gameObjects\Animation.cpp" />
     <ClCompile Include="src\gameObjects\Bench.cpp" />
+    <ClCompile Include="src\gameObjects\Gun.cpp" />
     <ClCompile Include="src\gameObjects\Player.cpp" />
     <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
     <ClCompile Include="src\Exception.cpp" />
@@ -115,6 +120,7 @@
     <ClCompile Include="src\gameObjects\Logo.cpp" />
     <ClCompile Include="src\gameObjects\Circle.cpp" />
     <ClCompile Include="src\gameObjects\Table.cpp" />
+    <ClCompile Include="src\gameObjects\Weapon.cpp" />
     <ClCompile Include="src\LevelController.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\InputController.cpp" />
