@@ -8,7 +8,7 @@ public:
 	 virtual void Weapon::fire();
 
 	void Weapon::update(float speedModifier) override;
-	void Weapon::draw(sf::RenderWindow & window) const override;
+	virtual void Weapon::draw(sf::RenderWindow & window) const override;
 
 	~Weapon();
 };

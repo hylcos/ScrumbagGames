@@ -1,6 +1,6 @@
 
 #include "Gun.h"
-
+#include "../LevelController.h"
 Gun::Gun(std::string name, int damage, float reloadSpeed, int magazineSize, int range, short bulletSpeed) :
 damage{ damage },
 reloadSpeed{ reloadSpeed },
@@ -17,16 +17,15 @@ bulletSpeed{ bulletSpeed }
 
 void Gun::fire(){
 	Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage, position);
-	//bullets.push_back(newBullet);
+	//LevelController::getInstance().addObject(newBullet);
 }
 void Gun::setRotation(float rotation){
 	this->rotation = rotation;
 }
 void Gun::update(float speedModifier) {
 
-	/*for (auto & bullet : bullets){
-		bullet->update(speedModifier);
-	}*/
+	sprite.setPosition(position);
+	sprite.setRotation(rotation);
 }
 void Gun::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);

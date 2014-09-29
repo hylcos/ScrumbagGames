@@ -158,6 +158,9 @@
     <Image Include="Resources\Images\Sprites\Players\Player-3.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-4.png" />
     <Image Include="Resources\Images\Sprites\Table.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\pistol.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\shotgun.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\uzi.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

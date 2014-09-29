@@ -17,14 +17,15 @@ Animation{}
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
-	setWeapons(new Gun("Sprites/Weapons/pistol", 25, 2.0, 100, 350, 2), new Gun("Sprites/Weapons/pistol", 25, 2.0, 100, 350, 2), new Gun{ "Sprites/Weapons/pistol", 25, 2.0, 100, 350, 2 });
+	setWeapons(new Gun("Sprites/Weapons/pistol", 25, 2.0, 100, 350, 2), new Gun("Sprites/Weapons/uzi", 25, 2.0, 100, 350, 2), new Gun{ "Sprites/Weapons/shotgun", 25, 2.0, 100, 350, 2 });
 }
 
 void Player::update(float speedModifier) {
 	curSprite = *Animation::getCurrentAnimation();
 	curSprite.setPosition(position);
-	selectedWeapons[curWeapon]->setPosition(position);
 	curSprite.setRotation(rotation);
+	selectedWeapons[curWeapon]->setRotation(rotation);
+	selectedWeapons[curWeapon]->setPosition(position);
 	if (toNext >= 10){
 		Animation::next();
 		toNext -= 10;
@@ -33,11 +34,12 @@ void Player::update(float speedModifier) {
 		selectedWeapons[curWeapon]->fire();
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1))
-		curWeapon = 0;
+		curWeapon = 0; std::cout << curWeapon << "\n";
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2))
-		curWeapon = 1;
+		curWeapon = 1; std::cout << curWeapon << "\n";
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3))
-		curWeapon = 2;
+		curWeapon = 2; std::cout << curWeapon << "\n";
+	selectedWeapons[curWeapon]->update(speedModifier);
 }
 
 void Player::move(float speedModifier){
@@ -56,10 +58,12 @@ void Player::move(float speedModifier){
 		toNext += speedModifier;
 	}
 
+
+
 }
 void Player::draw(sf::RenderWindow & window) const {
+	window.draw(curSprite); 	
 	selectedWeapons[curWeapon]->draw(window);
-	window.draw(curSprite);
 }
 void Player::setRotation(float rotation){
 	Player::rotation = rotation;

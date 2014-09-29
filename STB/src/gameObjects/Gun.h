@@ -4,7 +4,8 @@
 #include "Weapon.h"
 #include "../TextureManager.h"
 #include <iostream>
-class Gun : public Weapon
+
+class Gun : public Weapon 
 {
 public:
 	Gun::Gun(std::string name,int damage, float reloadSpeed,int magazineSize,int range, short bulletSpeed);
