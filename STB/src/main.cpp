@@ -15,9 +15,9 @@ int main()
 	ShowWindow(GetConsoleWindow(), SW_HIDE); // Hide the console
 #endif
 
-	LevelController levelController;
+	LevelController::getInstance();
 	SoundController soundController;
-	GameController gameController{ soundController, levelController };
+	GameController gameController{ soundController };
 
 	gameController.start();
 	return 0;

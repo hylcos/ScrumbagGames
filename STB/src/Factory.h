@@ -11,7 +11,6 @@
 
 std::ifstream & operator>>(std::ifstream & input, sf::Vector2f & rhs);
 
-class LevelController;
 class Factory
 {
 public:
@@ -44,7 +43,7 @@ public:
 		random = 256
 	};
 	Factory();
-	int Factory::loadLevel(std::string file, LevelController & levelController);
+	int Factory::loadLevel(std::string file);
 	GameObject * Factory::screen_object_read(std::ifstream & input);
 	~Factory();
 private:

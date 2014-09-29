@@ -8,7 +8,12 @@ class GameController;
 class LevelController
 {
 public:
-	LevelController();
+	static LevelController& getInstance()
+	{
+		static LevelController    instance;
+		instance.load();
+		return instance;
+	}
 
 	class Initializer{
 	public:
@@ -40,9 +45,14 @@ public:
 
 	Player * LevelController::getPlayer();
 
-	~LevelController();
-
 private:
+	LevelController() {};
+	LevelController(LevelController const&);
+	void operator=(LevelController const&);
+
+	void LevelController::load();
+	bool isLoaded = false;
+
 	sf::View mainView;
 
 	sf::Texture background;
@@ -54,6 +64,6 @@ private:
 	sf::Uint8 terrorLevel = 255;
 
 	std::vector< GameObject* > gameObjects;
-	
+
 	Player * player = nullptr;
 };

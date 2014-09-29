@@ -9,9 +9,8 @@
 #include <iostream>
 #endif
 
-GameController::GameController(SoundController & soundController, LevelController & levelController) :
-soundController{ soundController },
-levelController{ levelController }
+GameController::GameController(SoundController & soundController) :
+soundController{ soundController }
 {}
 
 void GameController::stop(){
@@ -20,7 +19,7 @@ void GameController::stop(){
 
 void GameController::start(){
 	soundController.playMusic(soundController.INTRO);
-	levelController.startLevel(levelController.LEVEL_ONE);
+	LevelController::getInstance().startLevel(LevelController::getInstance().LEVEL_ONE);
 	while (!stopping){
 		step();
 	}
@@ -29,7 +28,7 @@ void GameController::start(){
 void GameController::step(){
 	checkWindow();
 
-	levelController.step(fps, window);
+	LevelController::getInstance().step(fps, window);
 
 	frames++;
 

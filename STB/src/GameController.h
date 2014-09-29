@@ -11,7 +11,7 @@ class LevelController;
 class GameController
 {
 public:
-	GameController(SoundController & soundController, LevelController & levelController);
+	GameController(SoundController & soundController);
 	//start (run) the game
 	//
 	//Call this function to start running the game.
@@ -34,7 +34,6 @@ private:
 	clock_t nextClock;
 
 	SoundController & soundController;
-	LevelController & levelController;
 
 	void step();
 	bool stopping = false;

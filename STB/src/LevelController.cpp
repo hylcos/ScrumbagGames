@@ -5,8 +5,12 @@
 
 #include <SFML\Graphics.hpp>
 
-LevelController::LevelController()
+void LevelController::load()
 {
+	if (isLoaded){
+		return;
+	}
+	isLoaded = true;
 	background.loadFromFile("Resources/Images/Background.jpg");
 	backgroundOverlay.loadFromFile("Resources/Images/BackgroundOverlay.jpg");
 
@@ -24,7 +28,7 @@ LevelController::Initializer::Initializer(std::string name)
 
 void LevelController::startLevel(LevelController::Initializer initializer){
 	Factory factory;
-	int settings = factory.loadLevel(initializer.name, *this);
+	int settings = factory.loadLevel(initializer.name);
 	terrorLevel = settings & 255;
 	bool random = ((settings & factory.random) == factory.random);
 	player = nullptr;
@@ -95,10 +99,10 @@ void LevelController::removeObject(GameObject * object){
 Player * LevelController::getPlayer(){
 	return player;
 }
-
+/*
 LevelController::~LevelController()
 {
 	for (GameObject* obj : gameObjects){
 		obj->~GameObject();
 	}
-}
+}*/
