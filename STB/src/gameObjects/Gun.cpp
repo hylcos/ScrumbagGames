@@ -1,18 +1,18 @@
- 
+
 #include "Gun.h"
 
-Gun::Gun(std::string name, int damage, float reloadSpeed, int magazineSize, int range, short bulletSpeed):
-name{ name },
+Gun::Gun(std::string name, int damage, float reloadSpeed, int magazineSize, int range, short bulletSpeed) :
 damage{ damage },
 reloadSpeed{ reloadSpeed },
 magazineSize{ magazineSize },
 range{ range },
-bulletSpeed{bulletSpeed}
+bulletSpeed{ bulletSpeed }
 {
-	 tex = *TextureManager::getInstance().getTexture(name + ".png");
-	 TextureManager::getInstance().getTexture(name + "_bullet.png");
-	 sprite.setTexture(tex);
-	 sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
+	Gun::name = name;
+	tex = *TextureManager::getInstance().getTexture(name + ".png");
+	TextureManager::getInstance().getTexture(name + "_bullet.png");
+	sprite.setTexture(tex);
+	sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
 }
 
 void Gun::fire(){
@@ -23,7 +23,7 @@ void Gun::setRotation(float rotation){
 	this->rotation = rotation;
 }
 void Gun::update(float speedModifier) {
-	
+
 	for (auto & bullet : bullets){
 		bullet->update(speedModifier);
 	}
