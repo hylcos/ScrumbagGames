@@ -26,7 +26,7 @@ void Enemy::update(float speedModifier){
 	LevelController& levelController = LevelController::getInstance();
 	Player* player = levelController.getPlayer();
 
-	sprite.setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / 3.14159265358979323846f + 90);
+	sprite.setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / 3.14159265358979323846f - 90);
 }
 
 void Enemy::move(float speedModifier){
