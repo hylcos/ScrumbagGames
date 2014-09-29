@@ -18,7 +18,7 @@ public:
 
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
-	LevelController::Initializer LEVEL_ONE{"Resources/Levels/init.level" };
+	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
 
 	//add GameObject
 	//
@@ -37,6 +37,8 @@ public:
 	void LevelController::setMainView(float x, float y);
 
 	void LevelController::step(float fps, sf::RenderWindow & window);
+
+	Player * LevelController::getPlayer();
 
 	~LevelController();
 

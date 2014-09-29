@@ -92,6 +92,9 @@ void LevelController::removeObject(GameObject * object){
 		gameObjects.erase(position);
 }
 
+Player * LevelController::getPlayer(){
+	return player;
+}
 
 LevelController::~LevelController()
 {
