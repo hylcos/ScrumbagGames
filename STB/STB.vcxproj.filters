@@ -77,6 +77,9 @@
     <ClInclude Include="src\gameObjects\Bench.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\Enemy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -130,6 +133,9 @@
     <ClCompile Include="src\gameObjects\Table.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameObjects\Enemy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Documentation\Game Sequence.xlsx" />
@@ -178,6 +184,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\Sprites\Players\Player-4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Average\1.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

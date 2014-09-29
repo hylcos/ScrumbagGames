@@ -85,6 +85,7 @@
     <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Enemy.h" />
     <ClInclude Include="src\gameObjects\Animation.h" />
     <ClInclude Include="src\gameObjects\Bench.h" />
     <ClInclude Include="src\gameObjects\Player.h" />
@@ -104,6 +105,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Enemy.cpp" />
     <ClCompile Include="src\gameObjects\Animation.cpp" />
     <ClCompile Include="src\gameObjects\Bench.cpp" />
     <ClCompile Include="src\gameObjects\Player.cpp" />
@@ -141,6 +143,7 @@
     <Image Include="Resources\Images\Logo.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
     <Image Include="Resources\Images\Sprites\Crosshair.png" />
+    <Image Include="Resources\Images\Sprites\Enemies\Average\1.png" />
     <Image Include="Resources\Images\Sprites\PlayButton.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />

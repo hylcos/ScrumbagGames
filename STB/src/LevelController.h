@@ -12,15 +12,13 @@ public:
 
 	class Initializer{
 	public:
-		Initializer(char randomness,std::string name);
+		Initializer(std::string name);
 		std::string name;
-	private:
-		char randomness;
 	};
 
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
-	LevelController::Initializer LEVEL_ONE{ (char)100, "Resources/Levels/init.level" };
+	LevelController::Initializer LEVEL_ONE{"Resources/Levels/init.level" };
 
 	//add GameObject
 	//

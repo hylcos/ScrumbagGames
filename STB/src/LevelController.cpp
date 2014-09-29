@@ -17,8 +17,7 @@ LevelController::LevelController()
 	mainView.setCenter(320, 240);
 }
 
-LevelController::Initializer::Initializer(char randomness, std::string name) :
-randomness{ randomness }
+LevelController::Initializer::Initializer(std::string name)
 {
 	Initializer::name = name;
 }
