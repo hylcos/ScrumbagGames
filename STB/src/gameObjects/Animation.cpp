@@ -26,6 +26,13 @@ void Animation::next(){
 	curSprite.setTexture(tex[current]);
 }
 void Animation::update(float speedModifier) {
+	curSprite = *Animation::getCurrentAnimation();
+	curSprite.setPosition(position);
+	curSprite.setRotation(rotation);
+	if (toNext >= 10){
+		Animation::next();
+		toNext -= 10;
+	}
 	curSprite.setPosition(position);
 }
 

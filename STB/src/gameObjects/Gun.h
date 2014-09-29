@@ -4,7 +4,6 @@
 #include "Weapon.h"
 #include "../TextureManager.h"
 #include <iostream>
-#include <vector>
 class Gun : public Weapon
 {
 public:
@@ -15,7 +14,6 @@ public:
 	void Gun::setRotation(float rotation) override;
 	Gun::~Gun();
 private:
-	std::vector<GameObject *> bullets;
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;

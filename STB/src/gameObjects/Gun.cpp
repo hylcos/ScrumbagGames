@@ -17,16 +17,16 @@ bulletSpeed{ bulletSpeed }
 
 void Gun::fire(){
 	Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage, position);
-	bullets.push_back(newBullet);
+	//bullets.push_back(newBullet);
 }
 void Gun::setRotation(float rotation){
 	this->rotation = rotation;
 }
 void Gun::update(float speedModifier) {
 
-	for (auto & bullet : bullets){
+	/*for (auto & bullet : bullets){
 		bullet->update(speedModifier);
-	}
+	}*/
 }
 void Gun::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);

@@ -3,7 +3,6 @@
 #include "Factory.h"
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
-
 class GameController;
 class LevelController
 {

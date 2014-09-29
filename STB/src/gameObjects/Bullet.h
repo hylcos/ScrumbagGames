@@ -1,9 +1,9 @@
 #pragma once
 #include "../stdafx.h"
-#include "Gun.h"
-#include "SFML\Graphics.hpp"
 #include "GameObject.h"
-#include "../LevelController.h"
+#include "../TextureManager.h"
+#include <iostream>
+
 class Bullet : public GameObject
 {
 public:
@@ -15,7 +15,7 @@ public:
 private:
 	sf::Texture tex;
 	sf::Sprite sprite;
-	sf::Vector2f posOld, posNew;
+	sf::Vector2f posOld;
 	sf::VertexArray collision;
 	int damage;
 	float rotation;
