@@ -30,11 +30,11 @@ public:
 	void Enemy::update(float speedModifier) override;
 	void Enemy::draw(sf::RenderWindow & window) const override;
 	void Enemy::move(float speedModifier) override;
-	Initializer average{ "Average", 0.9f, 100, true, 20, 1 };
+	Initializer average{ "Average", 0.9f, 100, true, 20, 60 };
 
 	~Enemy();
 private:
-	float hitCooldown;
+	float hitCooldown = 0;
 	Initializer & type = average;
 	sf::Sprite curSprite;
 };
