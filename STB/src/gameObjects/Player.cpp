@@ -41,7 +41,6 @@ void Player::update(float speedModifier) {
 	for (auto & choice : weaponchoice)
 	if (sf::Keyboard::isKeyPressed(choice.key))
 		curWeapon = choice.weapon;
-
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 
