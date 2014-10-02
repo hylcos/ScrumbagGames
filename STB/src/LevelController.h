@@ -3,6 +3,8 @@
 #include "Factory.h"
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
+
+#define PI 3.14159265
 class GameController;
 class LevelController
 {
