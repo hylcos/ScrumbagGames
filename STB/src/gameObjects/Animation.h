@@ -19,9 +19,8 @@ private:
 	sf::Sprite curSprite;
 	int count = 0;
 	int current = 0;
-	float rotation = 0.0;
 protected:
-
+	float rotation = 0.0;
 	float toNext = 0.0;
 };
 
