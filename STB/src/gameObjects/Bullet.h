@@ -15,7 +15,7 @@ public:
 private:
 	sf::Texture tex;
 	sf::Sprite sprite;
-	sf::Vector2f posOld;
+	sf::Vector2f velocity;
 	sf::VertexArray collision;
 	int damage;
 	float rotation;

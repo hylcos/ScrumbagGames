@@ -46,6 +46,16 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 
 void LevelController::step(float fps, sf::RenderWindow & window){
 	float speedModifier = 60 / fps;
+	for (GameObject* obj : gameObjectToAdd){
+		gameObjects.push_back(obj);
+	}
+	gameObjectToAdd.clear();
+
+	for (GameObject* obj : gameObjectToRemove){
+		LevelController::removeAllObjects(obj);
+	}
+	gameObjectToRemove.clear();
+
 	for (GameObject* obj : gameObjects){
 		obj->update(speedModifier);
 	}
@@ -83,10 +93,15 @@ void LevelController::setMainView(float x, float y){
 }
 
 void LevelController::addObject(GameObject * object){
+	gameObjectToAdd.push_back(object);
+}
+void LevelController::addObjectFromFactory(GameObject * object){
 	gameObjects.push_back(object);
 }
-
 void LevelController::removeObject(GameObject * object){
+	gameObjectToRemove.push_back(object);
+}
+void LevelController::removeAllObjects(GameObject * object){
 	if (object == nullptr){
 		return;
 	}

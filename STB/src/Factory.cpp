@@ -55,7 +55,7 @@ int Factory::loadLevel(std::string file)
 	try {
 		input >> settings;
 		for (;;){
-			LevelController::getInstance().addObject(screen_object_read(input));
+			LevelController::getInstance().addObjectFromFactory(screen_object_read(input));
 			i++;
 		}
 	}

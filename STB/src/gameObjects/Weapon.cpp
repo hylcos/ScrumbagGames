@@ -9,7 +9,6 @@ Weapon::Weapon()
 
 
 void Weapon::fire(){
-	std::cout << "Bang Bang /n";
 }
 
 void Weapon::update(float speedmodifer){

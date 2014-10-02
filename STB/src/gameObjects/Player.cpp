@@ -9,7 +9,11 @@ struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
 		{ sf::Keyboard::W, 0.0, -1.0 },
 		{ sf::Keyboard::S, 0.0, 1.0 }
 };
-
+struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
+	{ sf::Keyboard::Num1, 0 },
+	{ sf::Keyboard::Num2, 1 },
+	{ sf::Keyboard::Num3, 2 }
+};
 Player::Player() :
 Animation{}
 {
@@ -34,15 +38,10 @@ void Player::update(float speedModifier) {
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 		selectedWeapons[curWeapon]->fire();
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)){
-		curWeapon = 0; std::cout << curWeapon << "\n";
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)){
-		curWeapon = 1; std::cout << curWeapon << "\n";
-	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)){
-		curWeapon = 2; std::cout << curWeapon << "\n";
-	}
+	for (auto & choice : weaponchoice)
+	if (sf::Keyboard::isKeyPressed(choice.key))
+		curWeapon = choice.weapon;
+
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 

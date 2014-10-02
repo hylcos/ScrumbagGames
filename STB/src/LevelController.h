@@ -4,7 +4,7 @@
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
 
-#define PI 3.14159265
+#define PI 3.14159265358979323846
 class GameController;
 class LevelController
 {
@@ -31,11 +31,13 @@ public:
 	//This function will put a new GameObject under the control of the GameController.
 	void LevelController::addObject(GameObject * object);
 
+	void LevelController::addObjectFromFactory(GameObject * object);
 	//remove GameObject
 	//
 	//This function will remove a GameObject under the control of the GameController, and DESTROY the GameObject in question.
 	void LevelController::removeObject(GameObject * object);
 
+	void LevelController::removeAllObjects(GameObject * object);
 	//Move the main view
 	void LevelController::moveMainView(float x, float y);
 
@@ -64,7 +66,7 @@ private:
 
 	sf::Uint8 terrorLevel = 255;
 
-	std::vector< GameObject* > gameObjects;
+	std::vector< GameObject* > gameObjects, gameObjectToAdd, gameObjectToRemove;
 
 	Player * player = nullptr;
 };

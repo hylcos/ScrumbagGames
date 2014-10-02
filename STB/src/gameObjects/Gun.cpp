@@ -17,7 +17,7 @@ bulletSpeed{ bulletSpeed }
 
 void Gun::fire(){
 	Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage, position);
-	//LevelController::getInstance().addObject(newBullet);
+	LevelController::getInstance().addObject(newBullet);
 }
 void Gun::setRotation(float rotation){
 	this->rotation = rotation;
