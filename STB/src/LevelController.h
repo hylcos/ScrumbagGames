@@ -3,6 +3,7 @@
 #include "Factory.h"
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
+#include <unordered_set>
 
 #define PI 3.14159265358979323846f
 class GameController;
@@ -48,6 +49,8 @@ public:
 
 	Player * LevelController::getPlayer();
 
+	const std::vector< GameObject* > LevelController::getGameObjects();
+
 private:
 	LevelController() {};
 	LevelController(LevelController const&);
@@ -66,7 +69,8 @@ private:
 
 	sf::Uint8 terrorLevel = 255;
 
-	std::vector< GameObject* > gameObjects, gameObjectToAdd, gameObjectToRemove;
+	std::vector< GameObject* > gameObjects, gameObjectToAdd;
+	std::unordered_set<GameObject*> gameObjectToRemove;
 
 	Player * player = nullptr;
 };

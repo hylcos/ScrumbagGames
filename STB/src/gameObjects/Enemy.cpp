@@ -39,12 +39,20 @@ Animation{}
 		*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/2.png"));
 }
 
+void Enemy::reduceHP(int damage){
+	dmg += damage;
+	if (dmg > type.getHP()){
+		LevelController::getInstance().removeObject(this);
+	}
+}
+
 Enemy::Enemy(Enemy::Initializer initializer) :
 Animation{}
 {
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"));
 	type = initializer;
+
 }
 
 void Enemy::update(float speedModifier){

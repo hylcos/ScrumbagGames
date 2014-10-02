@@ -84,6 +84,10 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.display();
 }
 
+const std::vector< GameObject* > LevelController::getGameObjects(){
+	return gameObjects;
+}
+
 void LevelController::moveMainView(float x, float y){
 	setMainView(mainView.getCenter().x + x, mainView.getCenter().y + y);
 }
@@ -99,14 +103,14 @@ void LevelController::addObjectFromFactory(GameObject * object){
 	gameObjects.push_back(object);
 }
 void LevelController::removeObject(GameObject * object){
-	gameObjectToRemove.push_back(object);
+	gameObjectToRemove.insert(object);
 }
 void LevelController::removeAllObjects(GameObject * object){
 	if (object == nullptr){
 		return;
 	}
-	delete object;
 	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
+	delete object;
 	if (position != gameObjects.end()) // == vector.end() means the element was not found
 		gameObjects.erase(position);
 }

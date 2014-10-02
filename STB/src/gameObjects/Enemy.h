@@ -27,6 +27,7 @@ public:
 	Enemy();
 	Enemy(Initializer initializer);
 
+	void Enemy::reduceHP(int damage);
 	void Enemy::update(float speedModifier) override;
 	void Enemy::draw(sf::RenderWindow & window) const override;
 	void Enemy::move(float speedModifier) override;
@@ -35,6 +36,7 @@ public:
 	~Enemy();
 private:
 	float hitCooldown = 0;
+	int dmg = 0;
 	Initializer & type = average;
 	sf::Sprite curSprite;
 };
