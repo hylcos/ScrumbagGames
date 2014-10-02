@@ -21,7 +21,7 @@ Animation{}
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
-	setWeapons(new Gun("Sprites/Weapons/pistol", 25, 2.0, 100, 350, 2), new Gun("Sprites/Weapons/uzi", 25, 2.0, 100, 350, 2), new Gun{ "Sprites/Weapons/shotgun", 25, 2.0, 100, 350, 2 });
+	setWeapons(new Gun("Sprites/Weapons/pistol", 25, 90.0, 8,8, 350, 2,30), new Gun("Sprites/Weapons/uzi", 25, 90.0, 120,30, 350, 2,15), new Gun{ "Sprites/Weapons/shotgun", 25,180.0, 60,6, 350, 10,45 });
 }
 
 void Player::reduceHP(int damage){
@@ -35,12 +35,13 @@ void Player::update(float speedModifier) {
 	Animation::update(speedModifier);
 	selectedWeapons[curWeapon]->setRotation(rotation);
 	selectedWeapons[curWeapon]->setPosition(position);
-	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		selectedWeapons[curWeapon]->fire();
-	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
+		selectedWeapons[curWeapon]->reload();
 	for (auto & choice : weaponchoice)
-	if (sf::Keyboard::isKeyPressed(choice.key))
-		curWeapon = choice.weapon;
+		if (sf::Keyboard::isKeyPressed(choice.key))
+			curWeapon = choice.weapon;
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 

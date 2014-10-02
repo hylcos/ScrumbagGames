@@ -8,19 +8,20 @@
 class Gun : public Weapon 
 {
 public:
-	Gun::Gun(std::string name,int damage, float reloadSpeed,int magazineSize,int range, short bulletSpeed);
+	Gun::Gun(std::string name,int damage, float reloadSpeed,int ammo,int magazineSize,int range, short bulletSpeed,short fireRate);
 	void Gun::fire() override;
 	void Gun::update(float speedModifier) override;
 	void Gun::draw(sf::RenderWindow & window) const override;
 	void Gun::setRotation(float rotation) override;
+	void Gun::reload() override;
 	Gun::~Gun();
 private:
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;
 
-	int damage, magazineSize, range;
-	short bulletSpeed;
-	float reloadSpeed,rotation;
+	int damage, magazineSize, range,ammo,currentMagazine;
+	short bulletSpeed,fireRate;
+	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;
 };
 
