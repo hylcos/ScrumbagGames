@@ -20,6 +20,13 @@ Animation{}
 	setWeapons(new Gun("Sprites/Weapons/pistol", 25, 2.0, 100, 350, 2), new Gun("Sprites/Weapons/uzi", 25, 2.0, 100, 350, 2), new Gun{ "Sprites/Weapons/shotgun", 25, 2.0, 100, 350, 2 });
 }
 
+void Player::reduceHP(int damage){
+	hp -= damage;
+	if (hp < 0){
+		std::cout << "You're pretty dead...\n";
+	}
+}
+
 void Player::update(float speedModifier) {
 	Animation::update(speedModifier);
 	selectedWeapons[curWeapon]->setRotation(rotation);

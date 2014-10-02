@@ -3,8 +3,12 @@
 #include "../LevelController.h"
 #include <iostream>
 
-Enemy::Initializer::Initializer(std::string name, float movementSpeed) :
-movementSpeed{ movementSpeed }
+Enemy::Initializer::Initializer(std::string name, float movementSpeed, int hp, bool melee, int damage, float attackSpeed) :
+movementSpeed{ movementSpeed },
+hp{hp},
+melee{ melee },
+damage{ damage },
+attackSpeed{attackSpeed}
 {
 	Initializer::name = name;
 }
@@ -14,13 +18,25 @@ std::string Enemy::Initializer::getName(){
 float Enemy::Initializer::getMovementSpeed(){
 	return movementSpeed;
 }
+int Enemy::Initializer::getHP(){
+	return hp;
+}
+bool Enemy::Initializer::isMelee(){
+	return melee;
+}
+int Enemy::Initializer::getDamage(){
+	return damage;
+}
+float Enemy::Initializer::getAttackSpeed(){
+	return attackSpeed;
+}
+
 
 Enemy::Enemy() :
 Animation{}
 {
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/2.png"));
-	movementSpeed = average.getMovementSpeed();
 }
 
 Enemy::Enemy(Enemy::Initializer initializer) :
@@ -28,14 +44,24 @@ Animation{}
 {
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"));
-	movementSpeed = initializer.getMovementSpeed();
+	type = initializer;
 }
 
 void Enemy::update(float speedModifier){
 	Player* player = LevelController::getInstance().getPlayer();
 
-	setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / 3.14159265358979323846f - 90);
+	setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / (float)PI - 90);
 	toNext += speedModifier;
+
+	sf::Vector2f posDifference = position - player->getPosition();
+	float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
+	if (distance < 32){
+		if (hitCooldown < 0){
+			player->reduceHP(type.getDamage());
+			hitCooldown = type.getAttackSpeed();
+		}
+	}
+	hitCooldown -= speedModifier;
 	Animation::update(speedModifier);
 }
 
@@ -48,12 +74,12 @@ void Enemy::move(float speedModifier){
 	sf::Vector2f posDifference = position - player->getPosition();
 	float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
 	if (distance > 24){
-		position.x += (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*movementSpeed;
-		position.y += (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*movementSpeed;
+		position.x += (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+		position.y += (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
 	}
 	else if (distance < 16){
-		position.x -= (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*movementSpeed;
-		position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*movementSpeed;
+		position.x -= (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+		position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
 	}
 }
 

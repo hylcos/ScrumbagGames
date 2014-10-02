@@ -8,12 +8,20 @@ class Enemy :
 private:
 	class Initializer{
 	public:
-		Initializer(std::string name, float movementSpeed);
+		Initializer(std::string name, float movementSpeed, int hp, bool melee, int damage, float attackSpeed);
 		std::string getName();
 		float getMovementSpeed();
+		int getHP();
+		bool isMelee();
+		int getDamage();
+		float getAttackSpeed();
 	private:
 		std::string name;
 		float movementSpeed;
+		int hp;
+		bool melee;
+		int damage;
+		float attackSpeed;
 	};
 public:
 	Enemy();
@@ -22,11 +30,12 @@ public:
 	void Enemy::update(float speedModifier) override;
 	void Enemy::draw(sf::RenderWindow & window) const override;
 	void Enemy::move(float speedModifier) override;
-	Initializer average{ "Average", 0.8f };
+	Initializer average{ "Average", 0.9f, 100, true, 20, 1 };
 
 	~Enemy();
 private:
-	float movementSpeed;
+	float hitCooldown;
+	Initializer & type = average;
 	sf::Sprite curSprite;
 };
 

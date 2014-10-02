@@ -12,6 +12,7 @@ private:
 	float rotation = 0.0;
 	int curWeapon = 0;
 	Weapon * selectedWeapons[3];
+	int hp = 100;
 
 public:
 	sf::Texture tex1, tex2, tex3;
@@ -21,6 +22,7 @@ public:
 	void Player::update(float speedModifier) override;
 	void Player::draw(sf::RenderWindow & window) const override;
 	void Player::setRotation(float rotation) override;
+	void Player::reduceHP(int damage);
 	void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3);
 	Weapon * Player::getSelectedWeapon();
 
