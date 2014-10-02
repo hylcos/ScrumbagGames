@@ -10,6 +10,7 @@ sf::Texture* TextureManager::getTexture(std::string name){
 		return it->second;
 	}
 	sf::Texture* tex = new sf::Texture();
+	tex->setSmooth(true);
 	tex->loadFromFile("Resources/Images/" + name);
 	map.insert(std::pair<std::string, sf::Texture*>(name, tex));
 	return tex;
