@@ -11,8 +11,8 @@ public:
 	virtual void GameObject::move(float speedModifier);
 	virtual void GameObject::draw(sf::RenderWindow & window) const;
 	virtual void GameObject::next();
-	//virtual sf::Sprite GameObject::getCurrentAnimation()const;
 	void GameObject::setPosition(sf::Vector2f position);
+	virtual sf::FloatRect GameObject::getBounds();
 	sf::Vector2f GameObject::getPosition();
 	virtual void GameObject::setRotation(float rotate);
 

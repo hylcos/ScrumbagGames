@@ -44,6 +44,10 @@ void GameObject::move(float speedModifier){
 
 }
 
+sf::FloatRect GameObject::getBounds(){
+	return sf::RectangleShape{}.getGlobalBounds();
+}
+
 void GameObject::draw(sf::RenderWindow & window) const{
 }
 

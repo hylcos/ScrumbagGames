@@ -13,6 +13,7 @@ public:
 	void Animation::move(float speedModifier) override;
 	void Animation::setRotation(float rotation) override;
 	sf::Sprite *  Animation::getCurrentAnimation()  ;
+	sf::FloatRect Animation::getBounds() override;
 	~Animation();
 private:
 	sf::Texture  tex[8];

@@ -35,6 +35,10 @@ void Animation::update(float speedModifier) {
 	curSprite.setRotation(rotation);
 }
 
+sf::FloatRect Animation::getBounds(){
+	return curSprite.getGlobalBounds();
+}
+
 void Animation::move(float speedModifier){
 
 }
