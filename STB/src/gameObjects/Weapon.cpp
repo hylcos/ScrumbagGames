@@ -18,7 +18,7 @@ void Weapon::update(float speedmodifer){
 void Weapon::draw(sf::RenderWindow & window) const{
 
 }
-
+void Weapon::reload(){}
 Weapon::~Weapon()
 {
 }
