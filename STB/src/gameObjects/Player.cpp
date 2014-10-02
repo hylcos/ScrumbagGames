@@ -4,10 +4,10 @@
 #include <iostream>
 
 struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
-	{ sf::Keyboard::A, -1.0, 0.0 },
-	{ sf::Keyboard::D, 1.0, 0.0 },
-	{ sf::Keyboard::W, 0.0, -1.0 },
-	{ sf::Keyboard::S, 0.0, 1.0 }
+		{ sf::Keyboard::A, -1.0, 0.0 },
+		{ sf::Keyboard::D, 1.0, 0.0 },
+		{ sf::Keyboard::W, 0.0, -1.0 },
+		{ sf::Keyboard::S, 0.0, 1.0 }
 };
 
 Player::Player() :
@@ -21,24 +21,21 @@ Animation{}
 }
 
 void Player::update(float speedModifier) {
-	curSprite = *Animation::getCurrentAnimation();
-	curSprite.setPosition(position);
-	curSprite.setRotation(rotation);
+	Animation::update(speedModifier);
 	selectedWeapons[curWeapon]->setRotation(rotation);
 	selectedWeapons[curWeapon]->setPosition(position);
-	if (toNext >= 10){
-		Animation::next();
-		toNext -= 10;
-	}
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
 		selectedWeapons[curWeapon]->fire();
 	}
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1))
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1)){
 		curWeapon = 0; std::cout << curWeapon << "\n";
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2))
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2)){
 		curWeapon = 1; std::cout << curWeapon << "\n";
-	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3))
+	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3)){
 		curWeapon = 2; std::cout << curWeapon << "\n";
+	}
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 
@@ -62,11 +59,12 @@ void Player::move(float speedModifier){
 
 }
 void Player::draw(sf::RenderWindow & window) const {
-	window.draw(curSprite); 	
+	Animation::draw(window);
 	selectedWeapons[curWeapon]->draw(window);
 }
 void Player::setRotation(float rotation){
 	Player::rotation = rotation;
+	Animation::setRotation(rotation);
 }
 void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3){
 	selectedWeapons[0] = weapon1;

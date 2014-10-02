@@ -26,20 +26,26 @@ void Animation::next(){
 	curSprite.setTexture(tex[current]);
 }
 void Animation::update(float speedModifier) {
-	curSprite = *Animation::getCurrentAnimation();
-	curSprite.setPosition(position);
-	curSprite.setRotation(rotation);
 	if (toNext >= 10){
 		Animation::next();
 		toNext -= 10;
 	}
+	curSprite = *Animation::getCurrentAnimation();
 	curSprite.setPosition(position);
+	curSprite.setRotation(rotation);
 }
 
 void Animation::move(float speedModifier){
 
 }
-void Animation::draw(sf::RenderWindow & window) const {}
+
+void Animation::setRotation(float rotation){
+	Animation::rotation = rotation;
+}
+
+void Animation::draw(sf::RenderWindow & window) const {
+	window.draw(curSprite);
+}
 sf::Sprite * Animation::getCurrentAnimation() {
 	return &curSprite;
 }

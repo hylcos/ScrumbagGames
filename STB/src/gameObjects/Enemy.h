@@ -1,9 +1,9 @@
 #pragma once
-#include "GameObject.h"
+#include "Animation.h"
 #include "../TextureManager.h"
 #include <SFML\Graphics.hpp>
 class Enemy :
-	public GameObject
+	public Animation
 {
 private:
 	class Initializer{
@@ -18,12 +18,11 @@ public:
 	Enemy(Initializer initializer);
 
 	void Enemy::update(float speedModifier) override;
-	void Enemy::move(float speedModifier) override;
 	void Enemy::draw(sf::RenderWindow & window) const override;
 	Initializer average{ "Average" };
 
 	~Enemy();
 private:
-	sf::Sprite sprite;
+	sf::Sprite curSprite;
 };
 

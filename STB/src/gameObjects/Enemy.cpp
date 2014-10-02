@@ -9,31 +9,29 @@ std::string Enemy::Initializer::getName(){
 	return name;
 }
 
-Enemy::Enemy(){
-	sf::Texture *tex = TextureManager::getInstance().getTexture("Sprites/Enemies/Average/1.png");
-	sprite.setTexture(*tex);
-	sprite.setOrigin(tex->getSize().x / 2.0f, tex->getSize().y / 2.0f);
+Enemy::Enemy() :
+Animation{}
+{
+	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/1.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/2.png"));
 }
 
-Enemy::Enemy(Enemy::Initializer initializer)
+Enemy::Enemy(Enemy::Initializer initializer) :
+Animation{}
 {
-	sf::Texture *tex = TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png");
-	sprite.setTexture(*tex);
-	sprite.setOrigin(tex->getSize().x / 2.0f, tex->getSize().y / 2.0f);
+	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"));
 }
 
 void Enemy::update(float speedModifier){
 	Player* player = LevelController::getInstance().getPlayer();
 
-	sprite.setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / 3.14159265358979323846f - 90);
-}
-
-void Enemy::move(float speedModifier){
-	sprite.setPosition(position);
+	setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / 3.14159265358979323846f - 90);
+	Animation::update(speedModifier);
 }
 
 void Enemy::draw(sf::RenderWindow & window) const{
-	window.draw(sprite);
+	window.draw(curSprite);
 }
 
 Enemy::~Enemy()
