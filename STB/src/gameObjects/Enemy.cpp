@@ -27,11 +27,12 @@ void Enemy::update(float speedModifier){
 	Player* player = LevelController::getInstance().getPlayer();
 
 	setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / 3.14159265358979323846f - 90);
+	toNext += speedModifier;
 	Animation::update(speedModifier);
 }
 
 void Enemy::draw(sf::RenderWindow & window) const{
-	window.draw(curSprite);
+	Animation::draw(window);
 }
 
 Enemy::~Enemy()
