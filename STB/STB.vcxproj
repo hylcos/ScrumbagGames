@@ -151,7 +151,6 @@
     <Image Include="Resources\Images\Logo.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
     <Image Include="Resources\Images\Sprites\Crosshair.png" />
-    <Image Include="Resources\Images\Sprites\Enemies\Average\1.png" />
     <Image Include="Resources\Images\Sprites\PlayButton.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />

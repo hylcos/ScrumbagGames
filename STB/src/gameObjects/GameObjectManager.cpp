@@ -24,7 +24,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 		return new Table();
 	}
 	if (string == "Enemy"){
-		return new Enemy();
+		Enemy* e = new Enemy();
+		e->setType(e->cheerleader);
+		return e;
 	}
 	if (string == ""){
 		throw endOfFile();

@@ -35,8 +35,7 @@ float Enemy::Initializer::getAttackSpeed(){
 Enemy::Enemy() :
 Animation{}
 {
-	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/1.png"),
-		*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/2.png"));
+	
 }
 
 void Enemy::reduceHP(int damage){
@@ -46,11 +45,10 @@ void Enemy::reduceHP(int damage){
 	}
 }
 
-Enemy::Enemy(Enemy::Initializer initializer) :
+Enemy::Enemy(Initializer  initializer) :
 Animation{}
 {
-	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
-		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"));
+	
 	type = initializer;
 
 }
@@ -90,7 +88,13 @@ void Enemy::move(float speedModifier){
 		position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
 	}
 }
-
+void Enemy::setType(Initializer initializer){
+	type = initializer;
+	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/3.png"), 
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/4.png"));
+}
 Enemy::~Enemy()
 {
 }

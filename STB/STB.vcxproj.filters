@@ -210,9 +210,6 @@
     <Image Include="Resources\Images\Sprites\Players\Player-4.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\Sprites\Enemies\Average\1.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\Sprites\Table.png">
       <Filter>Resource Files</Filter>
     </Image>
