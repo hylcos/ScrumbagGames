@@ -41,7 +41,7 @@ public:
 
 	Powerup::Types puSprint{ Powerups::sprint, &Powerup::pufDoubleSpeed };
 	Powerup::Types puFullHealth{ Powerups::fullHealth, &Powerup::pufFullHealth };
-
+	Powerup::Types BAB{ Powerups::BAB, &Powerup::pufBAB };
 	void Powerup::update(float speedModifier);
 
 	sf::FloatRect Powerup::getBounds()  override;
@@ -50,6 +50,7 @@ public:
 
 	void Powerup::pufDoubleSpeed();
 	void Powerup::pufFullHealth();
+	void Powerup::pufBAB();
 
 	~Powerup();
 private:

@@ -14,7 +14,7 @@ ammo{ ammo }
 	tex = *TextureManager::getInstance().getTexture(name + ".png");
 	TextureManager::getInstance().getTexture(name + "_bullet.png");
 	sprite.setTexture(tex);
-	sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
+	sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
 	ammo -= magazineSize;
 	currentMagazine = magazineSize;
 }

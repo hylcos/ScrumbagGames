@@ -46,7 +46,9 @@ public:
 private:
 	float hitCooldown = 0;
 	int dmg = 0;
+	bool drawMelee;
 	Initializer & type = average;
-	sf::Sprite curSprite;
+	sf::Sprite curSprite,melee;
+	sf::Texture tex;
 };
 
