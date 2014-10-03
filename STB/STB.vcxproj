@@ -85,7 +85,6 @@
     <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\gameObjects\powerup.h" />
     <ClInclude Include="src\gameObjects\Bullet.h" />
     <ClInclude Include="src\gameObjects\Enemy.h" />
     <ClInclude Include="src\gameObjects\Animation.h" />
@@ -97,6 +96,7 @@
     <ClInclude Include="src\Factory.h" />
     <ClInclude Include="src\gameObjects\Logo.h" />
     <ClInclude Include="src\gameObjects\Circle.h" />
+    <ClInclude Include="src\gameObjects\Powerup.h" />
     <ClInclude Include="src\gameObjects\Table.h" />
     <ClInclude Include="src\gameObjects\Weapon.h" />
     <ClInclude Include="src\LevelController.h" />
@@ -109,7 +109,6 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\gameObjects\powerup.cpp" />
     <ClCompile Include="src\gameObjects\Bullet.cpp" />
     <ClCompile Include="src\gameObjects\Enemy.cpp" />
     <ClCompile Include="src\gameObjects\Animation.cpp" />
@@ -121,6 +120,7 @@
     <ClCompile Include="src\Factory.cpp" />
     <ClCompile Include="src\gameObjects\Logo.cpp" />
     <ClCompile Include="src\gameObjects\Circle.cpp" />
+    <ClCompile Include="src\gameObjects\Powerup.cpp" />
     <ClCompile Include="src\gameObjects\Table.cpp" />
     <ClCompile Include="src\gameObjects\Weapon.cpp" />
     <ClCompile Include="src\LevelController.cpp" />

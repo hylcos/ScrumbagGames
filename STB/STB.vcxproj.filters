@@ -89,7 +89,7 @@
     <ClInclude Include="src\gameObjects\Weapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\powerup.h">
+    <ClInclude Include="src\gameObjects\Powerup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -157,7 +157,7 @@
     <ClCompile Include="src\gameObjects\Weapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\powerup.cpp">
+    <ClCompile Include="src\gameObjects\Powerup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
