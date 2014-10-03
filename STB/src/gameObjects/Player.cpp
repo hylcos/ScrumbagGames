@@ -59,9 +59,6 @@ void Player::update(float speedModifier) {
 			if (gameObject->getBounds().intersects(Animation::getBounds())){
 				powerup* p = dynamic_cast<powerup*>(gameObject);
 				switch (p->getPowerup()) {
-					case fullHealth:
-						hp = 100;
-						break;
 					case doubleDamage :
 						break;
 					case doubleReloadSpeed:
@@ -151,6 +148,9 @@ Weapon * Player::getSelectedWeapon(){
 void Player::doubleSpeed(){
 	doubleSpeedTimer = 300;
 	speed = 5;
+}
+void Player::fullHealth(){
+	hp = 100;
 }
 
 Player::~Player()

@@ -34,7 +34,7 @@ public:
 		void (*action)();
 	};
 	powerup::Types sprint{ powerups::sprint, LevelController::getInstance().getPlayer()->doubleSpeed };
-
+	powerup::Types fullHealth{ powerups::fullHealth, LevelController::getInstance().getPlayer()->fullHealth };
 	powerup(sf::Vector2f position, int power = 0);
 
 	sf::FloatRect powerup::getBounds()  override;

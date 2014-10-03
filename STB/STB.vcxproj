@@ -161,6 +161,7 @@
     <Image Include="Resources\Images\Sprites\Players\Player-4.png" />
     <Image Include="Resources\Images\Sprites\Powerup.png" />
     <Image Include="Resources\Images\Sprites\Table.png" />
+    <Image Include="Resources\Images\Sprites\Trashcan.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol_bullet.png" />
     <Image Include="Resources\Images\Sprites\Weapons\shotgun.png" />

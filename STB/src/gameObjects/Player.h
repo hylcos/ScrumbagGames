@@ -30,6 +30,6 @@ public:
 	Weapon * Player::getSelectedWeapon();
 
 	void Player::doubleSpeed();
-
+	void Player::fullHealth();
 };
 
