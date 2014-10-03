@@ -1,6 +1,8 @@
 #pragma once
 #include "GameObject.h"
 #include "../TextureManager.h"
+#include "../LevelController.h"
+
 enum Powerups{
 	fullHealth
 	, doubleDamage
@@ -25,16 +27,17 @@ class Powerup : public GameObject
 {
 public:
 	class Types{
-	public: 
-		Types(Powerups type, void(*action)());
+	public:
+		Types(Powerups type, void(Player::*action)());
 		void executeAction();
 		Powerups getType();
 	private:
 		Powerups type;
-		void (*action)();
+		void(Player::*action)();
 	};
-	Powerup::Types sprint{ Powerups::sprint, LevelController::getInstance().getPlayer()->doubleSpeed };
-	Powerup::Types fullHealth{ Powerups::fullHealth, LevelController::getInstance().getPlayer()->fullHealth };
+
+	Powerup::Types sprint{ Powerups::sprint, &Player::doubleSpeed };
+	Powerup::Types fullHealth{ Powerups::fullHealth, &Player::fullHealth };
 	Powerup(sf::Vector2f position, int power = 0);
 
 	sf::FloatRect Powerup::getBounds()  override;

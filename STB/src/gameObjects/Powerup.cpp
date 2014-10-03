@@ -2,13 +2,14 @@
 #include "Powerup.h"
 #include "../LevelController.h"
 
-Powerup::Types::Types(Powerups type, void (*action)()) :
+Powerup::Types::Types(Powerups type, void(Player::*action)()) :
 type{ type },
 action{action}
 {}
 
 void Powerup::Types::executeAction(){
-	action();
+	Player* player = LevelController::getInstance().getPlayer();
+	(player->*action)();
 }
 
 Powerup::Powerup(sf::Vector2f position,int pwr)

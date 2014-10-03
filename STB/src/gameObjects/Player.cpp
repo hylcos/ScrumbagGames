@@ -3,7 +3,7 @@
 #include "../TextureManager.h"
 #include <iostream>
 #include "../LevelController.h"
-#include "powerup.h"
+#include "Powerup.h"
 struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
 		{ sf::Keyboard::A, -1.0, 0.0 },
 		{ sf::Keyboard::D, 1.0, 0.0 },
@@ -55,9 +55,9 @@ void Player::update(float speedModifier) {
 		invincible = false;
 
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
-		if (dynamic_cast<powerup*>(gameObject) != 0){
+		if (dynamic_cast<Powerup*>(gameObject) != 0){
 			if (gameObject->getBounds().intersects(Animation::getBounds())){
-				powerup* p = dynamic_cast<powerup*>(gameObject);
+				Powerup* p = dynamic_cast<Powerup*>(gameObject);
 				switch (p->getPowerup()) {
 					case doubleDamage :
 						break;
