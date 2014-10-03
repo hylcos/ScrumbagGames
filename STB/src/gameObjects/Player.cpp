@@ -2,7 +2,8 @@
 #include "Player.h"
 #include "../TextureManager.h"
 #include <iostream>
-
+#include "../LevelController.h"
+#include "powerup.h"
 struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
 		{ sf::Keyboard::A, -1.0, 0.0 },
 		{ sf::Keyboard::D, 1.0, 0.0 },
@@ -25,9 +26,11 @@ Animation{}
 }
 
 void Player::reduceHP(int damage){
-	hp -= damage;
-	if (hp < 0){
-		std::cout << "You're pretty dead...\n";
+	if (!invincible){
+		hp -= damage;
+		if (hp < 0){
+			std::cout << "You're pretty dead...\n";
+		}
 	}
 }
 
@@ -37,11 +40,75 @@ void Player::update(float speedModifier) {
 	selectedWeapons[curWeapon]->setPosition(position);
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
 		selectedWeapons[curWeapon]->fire();
+
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::R))
 		selectedWeapons[curWeapon]->reload();
+
 	for (auto & choice : weaponchoice)
 		if (sf::Keyboard::isKeyPressed(choice.key))
-			curWeapon = choice.weapon;
+			curWeapon = choice.weapon; 
+
+	doubleSpeedTimer -= speedModifier;
+	if (doubleSpeedTimer <= 0)
+		speed = 1;
+	if (invincibleTimer <= 0)
+		invincible = false;
+
+	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
+		if (dynamic_cast<powerup*>(gameObject) != 0){
+			if (gameObject->getBounds().intersects(Animation::getBounds())){
+				powerup* p = dynamic_cast<powerup*>(gameObject);
+				switch (p->getPowerup()) {
+					case fullHealth:
+						hp = 100;
+						break;
+					case doubleDamage :
+						break;
+					case doubleReloadSpeed:
+						break;
+					case BAB:
+						for (GameObject* gameObject : LevelController::getInstance().getGameObjects())
+							if (dynamic_cast<Enemy*>(gameObject) != 0)
+								LevelController::getInstance().removeObject(gameObject);
+						break;
+					case invincibility:
+						invincible = true;
+						invincibleTimer = 300;
+						break;
+					case instaKill:
+						break;
+					case sprint:
+						doubleSpeedTimer = 300;
+						speed = 2;
+						break;
+					case slowMotion:
+						break;
+					case miniGun:
+						break;
+					case sniperVision:
+						break;
+					case frenzy:
+						break;
+					case clone:
+						break;
+					case flamethrower:
+						break;
+					case doubleSpawn:
+						break;
+					case fog:
+						break;
+					case jam:
+						break;
+					case blind:
+						break;
+
+				}
+
+				
+				LevelController::getInstance().removeObject(gameObject);
+			}
+		}
+	}
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 
@@ -56,8 +123,8 @@ void Player::move(float speedModifier){
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		float dir = atan2(newPos.y, newPos.x);
 		rotation = dir * 180 / 3.14159265358979323846f + 90;
-		position.x += cos(dir) * speedModifier;
-		position.y += sin(dir) * speedModifier;
+		position.x += cos(dir) * speedModifier * speed;
+		position.y += sin(dir) * speedModifier * speed;
 		toNext += speedModifier;
 	}
 
@@ -80,6 +147,7 @@ void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3){
 Weapon * Player::getSelectedWeapon(){
 	return selectedWeapons[curWeapon];
 }
+
 Player::~Player()
 {
 	for each(Weapon * weapon in selectedWeapons)

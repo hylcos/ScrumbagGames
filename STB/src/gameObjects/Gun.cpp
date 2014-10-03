@@ -23,7 +23,7 @@ void Gun::fire(){
 	if (ammo > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
-				Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage, position);
+				Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
 				currentMagazine--;
@@ -31,13 +31,11 @@ void Gun::fire(){
 					ammo--;
 				}
 				std::cout << "Ammo: " << currentMagazine << "/" << magazineSize << "/" << ammo <<"\n";
-				if (currentMagazine == 0){
+				if (currentMagazine <= 0){
 					reload();
 				}
 			}
 		}
-		else
-			std::cout << "Reloading: " << reloadCoolDown << "\n";
 	}
 	else {
 
@@ -60,7 +58,7 @@ void Gun::draw(sf::RenderWindow & window) const {
 void Gun::reload(){
 	if (ammo!=0	){
 		if (reloadCoolDown <= 0){
-			if (magazineSize < ammo){
+			if (magazineSize <= ammo){
 				reloadCoolDown = reloadSpeed;
 				if (currentMagazine > 0)
 					ammo += currentMagazine;

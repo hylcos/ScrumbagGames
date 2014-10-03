@@ -234,5 +234,8 @@
     <Image Include="Resources\Images\Sprites\Weapons\shotgun_bullet.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Sprites\Powerup.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

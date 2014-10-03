@@ -10,9 +10,12 @@ private:
 
 	sf::Sprite curSprite;
 	float rotation = 0.0;
+	float doubleSpeedTimer,invincibleTimer;
 	int curWeapon = 0;
+	bool invincible;
 	Weapon * selectedWeapons[3];
 	int hp = 100;
+	int speed = 1;
 
 public:
 	sf::Texture tex1, tex2, tex3;

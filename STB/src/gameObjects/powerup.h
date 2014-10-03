@@ -24,11 +24,15 @@ enum powerups{
 class powerup : public GameObject
 {
 public:
-	powerup(sf::Vector2f position);
+	powerup(sf::Vector2f position, int power = 0);
+
+	sf::FloatRect powerup::getBounds()  override;
+	void powerup::draw(sf::RenderWindow & window) const override;
+	powerups powerup::getPowerup();
 	~powerup();
 private:
 	sf::Texture tex;
 	sf::Sprite sprite;
-	powerups p;
+	powerups power;
 };
 

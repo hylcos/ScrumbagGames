@@ -2,7 +2,7 @@
 #include "GameController.h"
 #include "LevelController.h"
 #include "Factory.h"
-
+#include "GameObjects/powerup.h"
 #include <SFML\Graphics.hpp>
 
 void LevelController::load()
@@ -41,6 +41,14 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 			player = v;
 		}
 	}
+	addObjectFromFactory(new powerup(sf::Vector2f{ 250, 250 },6));
+
+	addObjectFromFactory(new powerup(sf::Vector2f{ 200, 250 }, 0));
+
+	addObjectFromFactory(new powerup(sf::Vector2f{ 150, 250 }, 4));
+
+	addObjectFromFactory(new powerup(sf::Vector2f{ 100, 250 }, 3));
+
 
 }
 

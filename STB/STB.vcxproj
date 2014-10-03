@@ -159,6 +159,7 @@
     <Image Include="Resources\Images\Sprites\Players\Player-2.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-3.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-4.png" />
+    <Image Include="Resources\Images\Sprites\Powerup.png" />
     <Image Include="Resources\Images\Sprites\Table.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol_bullet.png" />

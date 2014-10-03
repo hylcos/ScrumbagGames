@@ -1,16 +1,28 @@
 #include "../stdafx.h"
 #include "powerup.h"
+#include "../LevelController.h"
 
 
-powerup::powerup(sf::Vector2f position)
+powerup::powerup(sf::Vector2f position,int pwr)
 {
-	p = static_cast<powerups>(rand() % last);
+
+	sprite.setPosition(position);
+	if (!pwr)
+		pwr = rand() % last;
+	power = static_cast<powerups>(pwr);
 	tex = *TextureManager::getInstance().getTexture("Sprites/Powerup.png");
 	sprite.setTexture(tex);
 
 }
-
-
+sf::FloatRect powerup::getBounds() {
+	return sprite.getGlobalBounds();
+}
+void powerup::draw(sf::RenderWindow & window) const {
+	window.draw(sprite);
+}
+powerups powerup::getPowerup(){
+	return power;
+}
 powerup::~powerup()
 {
 }
