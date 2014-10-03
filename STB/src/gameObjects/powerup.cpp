@@ -2,6 +2,14 @@
 #include "powerup.h"
 #include "../LevelController.h"
 
+powerup::Types::Types(powerups type, void (*action)()) :
+type{ type },
+action{action}
+{}
+
+void powerup::Types::executeAction(){
+	action();
+}
 
 powerup::powerup(sf::Vector2f position,int pwr)
 {

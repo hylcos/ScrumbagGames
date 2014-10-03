@@ -3,27 +3,38 @@
 #include "../TextureManager.h"
 enum powerups{
 	fullHealth
-	,doubleDamage
-	,doubleReloadSpeed
-	,BAB
-	,invincibility
-	,instaKill
-	,sprint
-	,slowMotion
-	,miniGun
-	,sniperVision
-	,frenzy
-	,clone
-	,flamethrower
-	,doubleSpawn
-	,fog
-	,jam
-	,blind
-	,last
+	, doubleDamage
+	, doubleReloadSpeed
+	, BAB
+	, invincibility
+	, instaKill
+	, sprint
+	, slowMotion
+	, miniGun
+	, sniperVision
+	, frenzy
+	, clone
+	, flamethrower
+	, doubleSpawn
+	, fog
+	, jam
+	, blind
+	, last
 };
 class powerup : public GameObject
 {
 public:
+	class Types{
+	public: 
+		Types(powerups type, void(*action)());
+		void executeAction();
+		powerups getType();
+	private:
+		powerups type;
+		void (*action)();
+	};
+	powerup::Types sprint{ powerups::sprint, LevelController::getInstance().getPlayer()->doubleSpeed };
+
 	powerup(sf::Vector2f position, int power = 0);
 
 	sf::FloatRect powerup::getBounds()  override;

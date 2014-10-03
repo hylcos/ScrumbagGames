@@ -148,6 +148,11 @@ Weapon * Player::getSelectedWeapon(){
 	return selectedWeapons[curWeapon];
 }
 
+void Player::doubleSpeed(){
+	doubleSpeedTimer = 300;
+	speed = 5;
+}
+
 Player::~Player()
 {
 	for each(Weapon * weapon in selectedWeapons)

@@ -29,5 +29,7 @@ public:
 	void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3);
 	Weapon * Player::getSelectedWeapon();
 
+	void Player::doubleSpeed();
+
 };
 
