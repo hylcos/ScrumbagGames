@@ -41,13 +41,21 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 			player = v;
 		}
 	}
-	addObjectFromFactory(new Powerup(sf::Vector2f{ 250, 250 },6));
+	Powerup* pu = new Powerup(sf::Vector2f{ 250, 250 }, 6);
+	pu->setType(&pu->puFullHealth);
+	addObjectFromFactory(pu);
 
-	addObjectFromFactory(new Powerup(sf::Vector2f{ 200, 250 }, 0));
+	pu = new Powerup(sf::Vector2f{ 200, 250 });
+	pu->setType(&pu->puSprint);
+	addObjectFromFactory(pu);
 
-	addObjectFromFactory(new Powerup(sf::Vector2f{ 150, 250 }, 4));
+	pu = new Powerup(sf::Vector2f{ 150, 250 }, 4);
+	pu->setType(&pu->puFullHealth);
+	addObjectFromFactory(pu);
 
-	addObjectFromFactory(new Powerup(sf::Vector2f{ 100, 250 }, 3));
+	pu = new Powerup(sf::Vector2f{ 100, 250 }, 3);
+	pu->setType(&pu->puSprint);
+	addObjectFromFactory(pu);
 
 
 }
@@ -129,7 +137,7 @@ Player * LevelController::getPlayer(){
 /*
 LevelController::~LevelController()
 {
-	for (GameObject* obj : gameObjects){
-		obj->~GameObject();
-	}
+for (GameObject* obj : gameObjects){
+obj->~GameObject();
+}
 }*/

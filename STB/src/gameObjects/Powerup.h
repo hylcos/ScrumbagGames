@@ -28,23 +28,33 @@ class Powerup : public GameObject
 public:
 	class Types{
 	public:
-		Types(Powerups type, void(Player::*action)());
-		void executeAction();
+		Types(Powerups type, void(Powerup::*action)());
+		void executeAction(Powerup & powerup);
 		Powerups getType();
 	private:
 		Powerups type;
-		void(Player::*action)();
+		void(Powerup::*action)();
 	};
+	Powerup::Powerup(sf::Vector2f position, int power = 0);
 
-	Powerup::Types sprint{ Powerups::sprint, &Player::doubleSpeed };
-	Powerup::Types fullHealth{ Powerups::fullHealth, &Player::fullHealth };
-	Powerup(sf::Vector2f position, int power = 0);
+	Powerup* Powerup::setType(Powerup::Types* type);
+
+	Powerup::Types puSprint{ Powerups::sprint, &Powerup::pufDoubleSpeed };
+	Powerup::Types puFullHealth{ Powerups::fullHealth, &Powerup::pufFullHealth };
+
+	void Powerup::update(float speedModifier);
 
 	sf::FloatRect Powerup::getBounds()  override;
 	void Powerup::draw(sf::RenderWindow & window) const override;
 	Powerups Powerup::getPowerup();
+
+	void Powerup::pufDoubleSpeed();
+	void Powerup::pufFullHealth();
+
 	~Powerup();
 private:
+	Types* type = nullptr;
+
 	sf::Texture tex;
 	sf::Sprite sprite;
 	Powerups power;

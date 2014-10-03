@@ -53,7 +53,7 @@ void Player::update(float speedModifier) {
 		speed = 1;
 	if (invincibleTimer <= 0)
 		invincible = false;
-
+	/*
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 		if (dynamic_cast<Powerup*>(gameObject) != 0){
 			if (gameObject->getBounds().intersects(Animation::getBounds())){
@@ -105,7 +105,7 @@ void Player::update(float speedModifier) {
 				LevelController::getInstance().removeObject(gameObject);
 			}
 		}
-	}
+	}*/
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 

@@ -2,18 +2,17 @@
 #include "Powerup.h"
 #include "../LevelController.h"
 
-Powerup::Types::Types(Powerups type, void(Player::*action)()) :
+Powerup::Types::Types(Powerups type, void(Powerup::*action)()) :
 type{ type },
-action{action}
+action{ action }
 {}
 
-void Powerup::Types::executeAction(){
+void Powerup::Types::executeAction(Powerup & powerup){
 	Player* player = LevelController::getInstance().getPlayer();
-	(player->*action)();
+	(powerup.*action)();
 }
 
-Powerup::Powerup(sf::Vector2f position,int pwr)
-{
+Powerup::Powerup(sf::Vector2f position, int pwr){
 
 	sprite.setPosition(position);
 	if (!pwr)
@@ -23,6 +22,21 @@ Powerup::Powerup(sf::Vector2f position,int pwr)
 	sprite.setTexture(tex);
 
 }
+
+Powerup* Powerup::setType(Powerup::Types* type){
+	this->type = type;
+	return this;
+}
+
+void Powerup::update(float speedModifier){
+	sf::Vector2f diff = sprite.getPosition() - LevelController::getInstance().getPlayer()->getPosition();
+	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
+	if (dist < 32){
+		type->executeAction(*this);
+		LevelController::getInstance().removeObject(this);
+	}
+}
+
 sf::FloatRect Powerup::getBounds() {
 	return sprite.getGlobalBounds();
 }
@@ -32,6 +46,14 @@ void Powerup::draw(sf::RenderWindow & window) const {
 Powerups Powerup::getPowerup(){
 	return power;
 }
+
+void Powerup::pufDoubleSpeed(){
+	LevelController::getInstance().getPlayer()->doubleSpeed();
+}
+void Powerup::pufFullHealth(){
+	std::cout << "Full health";
+}
+
 Powerup::~Powerup()
 {
 }
