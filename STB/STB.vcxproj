@@ -95,6 +95,7 @@
     <ClInclude Include="src\gameObjects\Animation.h" />
     <ClInclude Include="src\gameObjects\Bench.h" />
     <ClInclude Include="src\gameObjects\Gun.h" />
+    <ClInclude Include="src\gameObjects\Knife.h" />
     <ClInclude Include="src\gameObjects\menu\play.h" />
     <ClInclude Include="src\gameObjects\Player.h" />
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />
@@ -122,6 +123,7 @@
     <ClCompile Include="src\gameObjects\Animation.cpp" />
     <ClCompile Include="src\gameObjects\Bench.cpp" />
     <ClCompile Include="src\gameObjects\Gun.cpp" />
+    <ClCompile Include="src\gameObjects\Knife.cpp" />
     <ClCompile Include="src\gameObjects\menu\play.cpp" />
     <ClCompile Include="src\gameObjects\Player.cpp" />
     <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
