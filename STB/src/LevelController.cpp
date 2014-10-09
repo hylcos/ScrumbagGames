@@ -26,6 +26,10 @@ LevelController::Initializer::Initializer(std::string name)
 	Initializer::name = name;
 }
 
+void LevelController::goToNextLevel(LevelController::Initializer * initializer){
+	nextLevel = initializer;
+}
+
 void LevelController::startLevel(LevelController::Initializer initializer){
 	Factory factory;
 	int settings = factory.loadLevel(initializer.name);
@@ -99,6 +103,20 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
+
+	if (nextLevel != nullptr)
+	{
+		stopLevel();
+		startLevel(*nextLevel);
+		nextLevel = nullptr;
+	}
+}
+
+void LevelController::stopLevel(){
+	for (GameObject* obj : gameObjects){
+		delete obj;
+	}
+	gameObjects.clear();
 }
 
 sf::Vector2f LevelController::getMousePos(){

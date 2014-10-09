@@ -13,6 +13,7 @@ Play::Play()
 
 void Play::update(float speedModifier){
 	sprite.setPosition(position);
+	Clickable::update();
 }
 
 void Play::draw(sf::RenderWindow & window) const{
@@ -24,7 +25,7 @@ sf::FloatRect Play::getBounds(){
 }
 
 void Play::click(){
-	LevelController::getInstance().startLevel(LevelController::getInstance().LEVEL_ONE);
+	LevelController::getInstance().goToNextLevel(&(LevelController::getInstance().LEVEL_ONE));
 }
 
 Play::~Play()

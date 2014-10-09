@@ -163,6 +163,13 @@
     <Image Include="Resources\Images\Menu objecten\MenuBackgroundTab.png" />
     <Image Include="Resources\Images\Menu objecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\Menu objecten\UncheckedOption.png" />
+    <Image Include="Resources\Images\menuObjecten\BacktoMenuButton.png" />
+    <Image Include="Resources\Images\menuObjecten\button.png" />
+    <Image Include="Resources\Images\menuObjecten\CheckedOption.png" />
+    <Image Include="Resources\Images\menuObjecten\Menu titel.png" />
+    <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png" />
+    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
+    <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
     <Image Include="Resources\Images\Sprites\Crosshair.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Average\1.png" />

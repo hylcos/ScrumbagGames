@@ -69,6 +69,7 @@ int Factory::loadLevel(std::string file)
 		std::cin >> c;
 		exit(0);
 	}
+	input.close();
 	return settings;
 }
 

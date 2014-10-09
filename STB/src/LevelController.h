@@ -23,6 +23,7 @@ public:
 		std::string name;
 	};
 
+	void LevelController::goToNextLevel(LevelController::Initializer * initializer);
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
@@ -62,7 +63,11 @@ private:
 	void LevelController::load();
 	bool isLoaded = false;
 
+	void LevelController::stopLevel();
+
 	sf::View mainView;
+
+	Initializer* nextLevel = nullptr;
 
 	sf::Texture background;
 	sf::Texture backgroundOverlay;
