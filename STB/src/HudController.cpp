@@ -18,7 +18,7 @@ void HudController::step(sf::RenderWindow & window){
 	rect.setOrigin(rect.getSize()/2.0f);
 	rect.setPosition(hudView.getSize() / 2.0f);
 
-	window.draw(rect);
+	//window.draw(rect);
 }
 
 HudController::~HudController()
