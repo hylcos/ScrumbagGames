@@ -57,8 +57,9 @@ void Powerup::pufBAB(){
 	for (GameObject * obj : LevelController::getInstance().getGameObjects()){
 		if (dynamic_cast<Enemy *>(obj) != 0){
 			dynamic_cast<Enemy *>(obj)->reduceHP(1000);
+		}
+	}
 }
 
-Powerup::~Powerup()
-{
+Powerup::~Powerup(){
 }
