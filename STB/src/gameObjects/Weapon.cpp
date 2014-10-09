@@ -18,7 +18,14 @@ void Weapon::update(float speedmodifer){
 void Weapon::draw(sf::RenderWindow & window) const{
 
 }
-void Weapon::reload(){}
+
+void Weapon::reload(){
+
+}
+
+float Weapon::getAmmo(){
+	return 0;
+}
 
 Weapon::~Weapon()
 {
