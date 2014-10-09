@@ -9,6 +9,7 @@ public:
 	void Weapon::update(float speedModifier) override;
 	virtual void Weapon::draw(sf::RenderWindow & window) const override;
 	virtual void Weapon::reload();
+	virtual float Weapon::getAmmo();
 	void setMultipler();
 	~Weapon();
 	int multipler = 1;

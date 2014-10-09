@@ -28,6 +28,8 @@ public:
 	void Player::reduceHP(int damage);
 	void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3);
 	Weapon * Player::getSelectedWeapon();
+	int Player::getHp();
+	float Player::getAmmo();
 
 	void Player::doubleSpeed();
 	void Player::fullHealth();

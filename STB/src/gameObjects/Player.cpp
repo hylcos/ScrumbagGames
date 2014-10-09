@@ -144,7 +144,13 @@ void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3){
 Weapon * Player::getSelectedWeapon(){
 	return selectedWeapons[curWeapon];
 }
+int Player::getHp(){
+	return hp;
+}
 
+float Player::getAmmo(){
+	return getSelectedWeapon()->getAmmo();
+}
 void Player::doubleSpeed(){
 	doubleSpeedTimer = 300;
 	speed = 5;

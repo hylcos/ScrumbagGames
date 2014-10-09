@@ -51,7 +51,7 @@ void Powerup::pufDoubleSpeed(){
 	LevelController::getInstance().getPlayer()->doubleSpeed();
 }
 void Powerup::pufFullHealth(){
-	std::cout << "Full health";
+	LevelController::getInstance().getPlayer()->fullHealth();
 }
 void Powerup::pufBAB(){
 	for (GameObject * obj : LevelController::getInstance().getGameObjects()){

@@ -9,5 +9,9 @@ public:
 	void HudController::step(sf::RenderWindow & window);
 
 	~HudController();
+private:
+	sf::RectangleShape HPBackGround, HPForeGround;
+	sf::RectangleShape ammoBackGround, ammoForeGround;
+	sf::RectangleShape background;
 };
 

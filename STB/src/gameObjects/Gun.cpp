@@ -20,16 +20,14 @@ ammo{ ammo }
 }
 
 void Gun::fire(){
-	if (ammo > 0){
+	if (ammo > 0 || currentMagazine > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
 				Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
 				currentMagazine--;
-				if (name != "Sprites/Weapons/pistol"){
-					ammo--;
-				}
+				
 				std::cout << "Ammo: " << currentMagazine << "/" << magazineSize << "/" << ammo <<"\n";
 				if (currentMagazine <= 0){
 					reload();
@@ -60,16 +58,25 @@ void Gun::reload(){
 		if (reloadCoolDown <= 0){
 			if (magazineSize <= ammo){
 				reloadCoolDown = reloadSpeed;
-				if (currentMagazine > 0)
+				if (currentMagazine > 0){
 					ammo += currentMagazine;
+				}
 				currentMagazine = magazineSize;
-				if (name != "Sprites/Weapons/pistol"){
-					ammo -= currentMagazine;
+				ammo -= currentMagazine;
+				if (name == "Sprites/Weapons/pistol"){
+					ammo = 8;
 				}
 			}
 			std::cout
 				<< "Ammo left: " << ammo << "\n";
 		}
+	}
+}
+float Gun::getAmmo(){
+	if (reloadCoolDown <= 0 ){
+		return (100 * (static_cast<float>(currentMagazine) / static_cast<float>(magazineSize)));
+	} else {
+		return 0;
 	}
 }
 Gun::~Gun()

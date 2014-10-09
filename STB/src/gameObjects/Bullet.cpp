@@ -13,6 +13,7 @@ damage{ damage }
 	GameObject::position.y = position.y;
 	tex = *TextureManager::getInstance().getTexture(imagename);
 	sprite.setTexture(tex);
+	sprite.setRotation(rotation);
 }
 
 void Bullet::update(float speedmodifier){

@@ -14,6 +14,7 @@ public:
 	void Gun::draw(sf::RenderWindow & window) const override;
 	void Gun::setRotation(float rotation) override;
 	void Gun::reload() override;
+	float Gun::getAmmo() override;
 	Gun::~Gun();
 private:
 	sf::Sprite sprite;
