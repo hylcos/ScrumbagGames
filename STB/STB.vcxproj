@@ -99,6 +99,7 @@
     <ClInclude Include="src\gameObjects\Powerup.h" />
     <ClInclude Include="src\gameObjects\Table.h" />
     <ClInclude Include="src\gameObjects\Weapon.h" />
+    <ClInclude Include="src\HudController.h" />
     <ClInclude Include="src\LevelController.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
     <ClInclude Include="src\InputController.h" />
@@ -123,6 +124,7 @@
     <ClCompile Include="src\gameObjects\Powerup.cpp" />
     <ClCompile Include="src\gameObjects\Table.cpp" />
     <ClCompile Include="src\gameObjects\Weapon.cpp" />
+    <ClCompile Include="src\HudController.cpp" />
     <ClCompile Include="src\LevelController.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\InputController.cpp" />

@@ -9,8 +9,9 @@
 #include <iostream>
 #endif
 
-GameController::GameController(SoundController & soundController) :
-soundController{ soundController }
+GameController::GameController(SoundController & soundController, HudController & hudController) :
+soundController{ soundController },
+hudController{hudController}
 {}
 
 void GameController::stop(){
@@ -29,6 +30,7 @@ void GameController::step(){
 	checkWindow();
 
 	LevelController::getInstance().step(fps, window);
+	hudController.step(window);
 
 	frames++;
 

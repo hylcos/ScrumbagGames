@@ -7,6 +7,7 @@
 #include "SoundController.h"
 #include <Windows.h>
 #include "LevelController.h"
+#include "HudController.h"
 
 int main()
 {
@@ -17,7 +18,8 @@ int main()
 
 	LevelController::getInstance();
 	SoundController soundController;
-	GameController gameController{ soundController };
+	HudController hudController;
+	GameController gameController{ soundController, hudController };
 
 	gameController.start();
 	return 0;

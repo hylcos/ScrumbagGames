@@ -92,6 +92,9 @@
     <ClInclude Include="src\gameObjects\Powerup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\HudController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -158,6 +161,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\Powerup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HudController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
