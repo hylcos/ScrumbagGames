@@ -82,11 +82,12 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 	//window.clear(sf::Color::White);
 
+	window.setView(mainView);
+
 	window.draw(backgroundSprite);
 	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
 	window.draw(backgroundSpriteOverlay);
 
-	window.setView(mainView);
 	if (player != nullptr){
 		setMainView(player->getPosition().x, player->getPosition().y);
 		sf::Vector2f pos = sf::Vector2f(sf::Mouse::getPosition(window)) - sf::Vector2f(window.getSize().x / 2.0f, window.getSize().y / 2.0f) + mainView.getCenter() - player->getPosition();
@@ -96,8 +97,6 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
-
-	window.display();
 }
 
 const std::vector< GameObject* > LevelController::getGameObjects(){

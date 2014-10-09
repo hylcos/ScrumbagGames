@@ -31,6 +31,7 @@ void GameController::step(){
 
 	LevelController::getInstance().step(fps, window);
 	hudController.step(window);
+	window.display();
 
 	frames++;
 
