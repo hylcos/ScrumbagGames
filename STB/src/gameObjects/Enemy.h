@@ -2,6 +2,7 @@
 #include "Animation.h"
 #include "../TextureManager.h"
 #include <SFML\Graphics.hpp>
+
 class Enemy :
 	public Animation
 {
@@ -25,12 +26,13 @@ private:
 	};
 public:
 	Enemy();
-	Enemy(Initializer initializer);
+	Enemy(Initializer  initializer);
 
 	void Enemy::reduceHP(int damage);
 	void Enemy::update(float speedModifier) override;
 	void Enemy::draw(sf::RenderWindow & window) const override;
 	void Enemy::move(float speedModifier) override;
+	void Enemy::setType(Initializer initializer);
 
 	Initializer average{ "Average", 0.9f, 100, true, 20, 60 };
 	Initializer fat{ "Fat", 0.7f, 300, true, 20, 60 };
@@ -44,7 +46,9 @@ public:
 private:
 	float hitCooldown = 0;
 	int dmg = 0;
+	bool drawMelee;
 	Initializer & type = average;
-	sf::Sprite curSprite;
+	sf::Sprite curSprite,melee;
+	sf::Texture tex;
 };
 

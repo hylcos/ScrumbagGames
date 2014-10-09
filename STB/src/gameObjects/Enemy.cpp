@@ -35,8 +35,7 @@ float Enemy::Initializer::getAttackSpeed(){
 Enemy::Enemy() :
 Animation{}
 {
-	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/1.png"),
-		*TextureManager::getInstance().getTexture("Sprites/Enemies/Average/2.png"));
+	
 }
 
 void Enemy::reduceHP(int damage){
@@ -46,11 +45,10 @@ void Enemy::reduceHP(int damage){
 	}
 }
 
-Enemy::Enemy(Enemy::Initializer initializer) :
+Enemy::Enemy(Initializer  initializer) :
 Animation{}
 {
-	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
-		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"));
+	
 	type = initializer;
 
 }
@@ -60,21 +58,27 @@ void Enemy::update(float speedModifier){
 
 	setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / (float)PI - 90);
 	toNext += speedModifier;
-
+	melee.setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / (float)PI - 90);
+	melee.setPosition(position);
 	sf::Vector2f posDifference = position - player->getPosition();
 	float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
-	if (distance < 32){
-		if (hitCooldown < 0){
+	if (hitCooldown < 0){
+		if (distance < 32){
 			player->reduceHP(type.getDamage());
 			hitCooldown = type.getAttackSpeed();
+			drawMelee = true;
 		}
 	}
+	if ((hitCooldown - ( type.getAttackSpeed() *0.75)) < 0)
+		drawMelee = false;
 	hitCooldown -= speedModifier;
 	Animation::update(speedModifier);
 }
 
 void Enemy::draw(sf::RenderWindow & window) const{
 	Animation::draw(window);
+	if (drawMelee)
+		window.draw(melee);
 }
 
 void Enemy::move(float speedModifier){
@@ -90,7 +94,17 @@ void Enemy::move(float speedModifier){
 		position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
 	}
 }
-
+void Enemy::setType(Initializer initializer){
+	type = initializer;
+	Animation::setTextures(
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/1.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/2.png"),
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/3.png"), 
+		*TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/4.png"));
+	tex = *TextureManager::getInstance().getTexture("Sprites/Enemies/" + initializer.getName() + "/melee.png");
+	melee.setTexture(tex);
+	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
+}
 Enemy::~Enemy()
 {
 }

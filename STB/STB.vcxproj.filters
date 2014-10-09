@@ -210,9 +210,6 @@
     <Image Include="Resources\Images\Sprites\Players\Player-4.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\Sprites\Enemies\Average\1.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\Sprites\Table.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -238,6 +235,51 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\Sprites\Trashcan.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Cheerleader\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Cheerleader\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Cheerleader\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Cheerleader\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Cheerleader\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Average\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Average\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Average\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Average\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Average\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Fat\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Fat\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Fat\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Fat\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Fat\1.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
