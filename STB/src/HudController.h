@@ -4,12 +4,25 @@
 class HudController
 {
 public:
-	HudController();
+	static HudController& getInstance()
+	{
+		static HudController    instance;
+		instance.load();
+		return instance;
+	}
+
+	void HudController::load();
 
 	void HudController::step(sf::RenderWindow & window);
 
-	~HudController();
+	~HudController(){};
 private:
+	HudController() {};
+	HudController(HudController const&);
+	void operator=(HudController const&);
+
+	bool isLoaded = false;
+
 	sf::RectangleShape HPBackGround, HPForeGround;
 	sf::RectangleShape ammoBackGround, ammoForeGround;
 	sf::RectangleShape background;

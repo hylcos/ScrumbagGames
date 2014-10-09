@@ -4,7 +4,11 @@
 class SoundController
 {
 public:
-	SoundController();
+	static SoundController& getInstance()
+	{
+		static SoundController    instance;
+		return instance;
+	}
 	
 	const char* INTRO = "Resources/Sounds/intro.ogg";
 
@@ -20,6 +24,10 @@ public:
 
 	~SoundController();
 private:
+	SoundController() {};
+	SoundController(SoundController const&) = delete;
+	void operator=(SoundController const&) = delete;
+
 	sf::Music bgMusic;
 };
 

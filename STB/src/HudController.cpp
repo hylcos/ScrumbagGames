@@ -2,8 +2,12 @@
 #include "HudController.h"
 #include "LevelController.h"
 #include "TextureManager.h"
-HudController::HudController()
+void HudController::load()
 {
+	if (isLoaded){
+		return;
+	}
+	isLoaded = true;
 	HPBackGround.setFillColor(sf::Color::Black);
 	HPBackGround.setSize(sf::Vector2f(100, 15));
 	HPBackGround.setPosition(sf::Vector2f(60, 457.5));
@@ -30,8 +34,10 @@ void HudController::step(sf::RenderWindow & window){
 	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
 	//hudView.setCenter(sf::Vector2f(0.0f, 0.0f));
 	window.setView(hudView);
-	HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
-	ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));
+	if (LevelController::getInstance().getPlayer() != nullptr){
+		HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
+		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));
+	}
 	
 	background.setPosition(sf::Vector2f(40, 455));
 	window.draw(background);
@@ -41,8 +47,4 @@ void HudController::step(sf::RenderWindow & window){
 	window.draw(HPForeGround);
 	window.draw(ammoBackGround);
 	window.draw(ammoForeGround);
-}
-
-HudController::~HudController()
-{
 }

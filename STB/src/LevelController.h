@@ -26,6 +26,7 @@ public:
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
+	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
 
 	//add GameObject
 	//
@@ -49,12 +50,14 @@ public:
 
 	Player * LevelController::getPlayer();
 
+	sf::Vector2f LevelController::getMousePos();
+
 	const std::vector< GameObject* > LevelController::getGameObjects();
 
 private:
 	LevelController() {};
-	LevelController(LevelController const&);
-	void operator=(LevelController const&);
+	LevelController(LevelController const&) = delete;
+	void operator=(GameController const&) = delete;
 
 	void LevelController::load();
 	bool isLoaded = false;

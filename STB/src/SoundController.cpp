@@ -5,9 +5,6 @@
 #include <iostream>
 
 
-SoundController::SoundController(){
-}
-
 /*void SoundController::step(){
 }*/
 

@@ -7,6 +7,7 @@
 #include "Table.h"
 #include "Bench.h"
 #include "Enemy.h"
+#include "menu\play.h"
 
 class GameObjectManager
 {

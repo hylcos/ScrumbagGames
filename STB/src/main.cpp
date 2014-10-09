@@ -17,10 +17,9 @@ int main()
 #endif
 
 	LevelController::getInstance();
-	SoundController soundController;
-	HudController hudController;
-	GameController gameController{ soundController, hudController };
+	SoundController::getInstance();
+	HudController::getInstance();
 
-	gameController.start();
+	GameController::getInstance().start();
 	return 0;
 }

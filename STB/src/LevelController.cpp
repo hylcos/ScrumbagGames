@@ -41,6 +41,8 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 			player = v;
 		}
 	}
+
+	/*
 	Powerup* pu = new Powerup(sf::Vector2f{ 250, 250 }, 6);
 	pu->setType(&pu->puFullHealth);
 	addObjectFromFactory(pu);
@@ -55,7 +57,7 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 
 	pu = new Powerup(sf::Vector2f{ 100, 250 }, 3);
 	pu->setType(&pu->puSprint);
-	addObjectFromFactory(pu);
+	addObjectFromFactory(pu);*/
 
 
 }
@@ -90,13 +92,17 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 	if (player != nullptr){
 		setMainView(player->getPosition().x, player->getPosition().y);
-		sf::Vector2f pos = sf::Vector2f(sf::Mouse::getPosition(window)) - sf::Vector2f(window.getSize().x / 2.0f, window.getSize().y / 2.0f) + mainView.getCenter() - player->getPosition();
+		sf::Vector2f pos = getMousePos() - player->getPosition();
 		player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
 	}
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
+}
+
+sf::Vector2f LevelController::getMousePos(){
+	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f) + mainView.getCenter();
 }
 
 const std::vector< GameObject* > LevelController::getGameObjects(){

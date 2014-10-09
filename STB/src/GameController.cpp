@@ -9,28 +9,27 @@
 #include <iostream>
 #endif
 
-GameController::GameController(SoundController & soundController, HudController & hudController) :
-soundController{ soundController },
-hudController{hudController}
-{}
-
 void GameController::stop(){
 	stopping = true;
 }
 
 void GameController::start(){
-	soundController.playMusic(soundController.INTRO);
-	LevelController::getInstance().startLevel(LevelController::getInstance().LEVEL_ONE);
+	SoundController::getInstance().playMusic(SoundController::getInstance().INTRO);
+	LevelController::getInstance().startLevel(LevelController::getInstance().MENU_MAIN);
 	while (!stopping){
 		step();
 	}
+}
+
+sf::RenderWindow& GameController::getWindow(){
+	return window;
 }
 
 void GameController::step(){
 	checkWindow();
 
 	LevelController::getInstance().step(fps, window);
-	hudController.step(window);
+	HudController::getInstance().step(window);
 	window.display();
 
 	frames++;
