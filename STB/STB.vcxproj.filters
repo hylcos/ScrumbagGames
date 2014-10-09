@@ -288,5 +288,26 @@
     <Image Include="Resources\Images\Sprites\Enemies\Fat\1.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Menu objecten\BacktoMenuButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Menu objecten\button.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Menu objecten\CheckedOption.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Menu objecten\Menu titel.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Menu objecten\MenuBackgroundTab.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Menu objecten\ScrollButton(for_sound-music).png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Menu objecten\UncheckedOption.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
