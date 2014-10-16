@@ -18,7 +18,7 @@ damage{ damage }
 
 void Bullet::update(float speedmodifier){
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
-		if (dynamic_cast<Enemy*>(gameObject) != 0){
+		if (gameObject->getType() == enemy){
 			if (gameObject->getBounds().intersects(getBounds())){
 				(dynamic_cast<Enemy*>(gameObject))->reduceHP(damage);
 				LevelController::getInstance().removeObject(this);

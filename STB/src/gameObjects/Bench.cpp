@@ -2,7 +2,8 @@
 #include "Bench.h"
 #include "GameObject.h"
 #include "../TextureManager.h"
-Bench::Bench()
+Bench::Bench() :
+GameObject{ gameObjectType::bench }
 {
 	pic = TextureManager::getInstance().getTexture("Sprites/Bench.png");
 	bench.setOrigin(pic->getSize().x / 2.0f, pic->getSize().y / 2.0f);

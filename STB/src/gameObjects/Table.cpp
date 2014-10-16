@@ -3,7 +3,8 @@
 #include "../TextureManager.h"
 #include "GameObject.h"
 
-Table::Table()
+Table::Table():
+GameObject{gameObjectType::table}
 {
 	tex = TextureManager::getInstance().getTexture("Sprites/Table.png");
 	table.setOrigin(tex->getSize().x / 2.0f, tex->getSize().y / 2.0f);

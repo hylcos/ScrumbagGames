@@ -23,14 +23,14 @@ Animation{player}
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
-	setWeapons(WeaponManager::getInstance().Pistol, WeaponManager::getInstance().Uzi, WeaponManager::getInstance().Shotgun);
+	setWeapons(WeaponManager::getInstance().pistol, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
 }
 
 void Player::reduceHP(int damage){
 	if (!invincible){
 		hp -= damage;
-		if (hp < 0){
-			std::cout << "You're pretty dead...\n";
+		if (hp <= 0){
+			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
 		}
 	}
 }
@@ -72,15 +72,21 @@ void Player::move(float speedModifier){
 		newPos.x += cos(dir) * speedModifier * speed;
 		newPos.y += sin(dir) * speedModifier * speed;
 		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
-			if (sqrt(pow(position.x - obj->getPosition().x, 2) + pow(position.y - obj->getPosition().y, 2)) >128){
+			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
 				continue;
+			}
+			if (obj->getType() == bench && obj->getBounds().contains(newPos)){
+				isOnBench = true;
+				std::cout << "Je raakt een zieke bench aan: " << pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2);
 			}
 
 		}
+		if (!(newPos.x < 32 + 16 || newPos.x > 1248 -16|| newPos.y < 32 +16 || newPos.y > 934-16)){
+
+			position = newPos;
+		}
 
 
-
-		position = newPos;
 		toNext += speedModifier;
 	}
 

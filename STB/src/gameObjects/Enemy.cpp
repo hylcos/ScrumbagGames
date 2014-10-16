@@ -33,7 +33,7 @@ float Enemy::Initializer::getAttackSpeed(){
 
 
 Enemy::Enemy() :
-Animation{}
+Animation{enemy}
 {
 	
 }

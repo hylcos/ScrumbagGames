@@ -31,6 +31,7 @@ void LevelController::goToNextLevel(LevelController::Initializer * initializer){
 }
 
 void LevelController::startLevel(LevelController::Initializer initializer){
+
 	Factory factory;
 	int settings = factory.loadLevel(initializer.name);
 	terrorLevel = settings & 255;
