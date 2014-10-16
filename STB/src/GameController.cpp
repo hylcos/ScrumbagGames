@@ -21,6 +21,10 @@ void GameController::start(){
 	}
 }
 
+float GameController::getFPS(){
+	return fps;
+}
+
 sf::RenderWindow& GameController::getWindow(){
 	return window;
 }

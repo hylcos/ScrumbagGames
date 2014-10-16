@@ -106,10 +106,10 @@ int Factory::loadLevel(std::string file)
 				}
 			}
 			catch (unknownObject & exception){
-				if (exception.what() == "unknown object [HUD:]"){
+				if (static_cast<std::string>(exception.what()).compare("unknown object [HUD:]") == 0){
 					toHud = true;
 				}
-				else if (exception.what() == "unknown object [LEVEL:]"){
+				if (static_cast<std::string>(exception.what()).compare("unknown object [LEVEL:]") == 0){
 					toHud = false;
 				}
 			}

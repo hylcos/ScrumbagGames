@@ -19,6 +19,8 @@ public:
 		return instance;
 	}
 
+	float GameController::getFPS();
+
 	//start (run) the game
 	//
 	//Call this function to start running the game.
@@ -42,7 +44,7 @@ private:
 	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
 	void checkWindow();
 
-	float fps = 5000.0f;
+	float fps = 100.0f;
 	int frames = 0;
 	clock_t nextClock;
 
