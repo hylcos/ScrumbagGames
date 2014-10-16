@@ -43,6 +43,7 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(SOLUTIONDIR)/STB/deps/SFML/include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SOLUTIONDIR)/STB/deps/SFML/lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(SOLUTIONDIR)/STB/deps/SFML/bin;$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
