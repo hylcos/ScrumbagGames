@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <unordered_set>
+#include "gameObjects\GameObject.h"
 
 class HudController
 {

@@ -2,6 +2,7 @@
 #include "HudController.h"
 #include "LevelController.h"
 #include "TextureManager.h"
+
 void HudController::load()
 {
 	if (isLoaded){
