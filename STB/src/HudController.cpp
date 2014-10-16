@@ -28,6 +28,25 @@ void HudController::load()
 
 }
 
+void HudController::addObject(GameObject * object){
+	gameObjectToAdd.push_back(object);
+}
+void HudController::addObjectFromFactory(GameObject * object){
+	gameObjects.push_back(object);
+}
+void HudController::removeObject(GameObject * object){
+	gameObjectToRemove.insert(object);
+}
+void HudController::removeAllObjects(GameObject * object){
+	if (object == nullptr){
+		return;
+	}
+	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
+	delete object;
+	if (position != gameObjects.end()) // == vector.end() means the element was not found
+		gameObjects.erase(position);
+}
+
 void HudController::step(sf::RenderWindow & window){
 	sf::View hudView;
 	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
