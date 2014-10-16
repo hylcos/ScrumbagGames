@@ -40,9 +40,8 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 		if (random){
 			obj->setRandomness(terrorLevel);
 		}
-		Player* v = dynamic_cast<Player*>(obj);
-		if (v != 0) {
-			player = v;
+		if (obj->getType() == GameObject::player) {
+			player = dynamic_cast<Player*>(obj);
 		}
 	}
 

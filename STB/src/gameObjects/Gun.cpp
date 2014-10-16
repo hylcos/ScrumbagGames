@@ -11,8 +11,8 @@ fireRate{ fireRate },
 ammo{ ammo }
 {
 	Gun::name = name;
-	tex = *TextureManager::getInstance().getTexture(name + ".png");
-	TextureManager::getInstance().getTexture(name + "_bullet.png");
+	tex = *TextureManager::getInstance().getTexture("Sprites/Weapons/"+name + ".png");
+	TextureManager::getInstance().getTexture("Sprites/Weapons/"+name + "_bullet.png");
 	sprite.setTexture(tex);
 	sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
 	ammo -= magazineSize;
@@ -23,7 +23,7 @@ void Gun::fire(){
 	if (ammo > 0 || currentMagazine > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
-				Bullet * newBullet = new Bullet(name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
+				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
 				currentMagazine--;
@@ -63,7 +63,7 @@ void Gun::reload(){
 				}
 				currentMagazine = magazineSize;
 				ammo -= currentMagazine;
-				if (name == "Sprites/Weapons/pistol"){
+				if (name == "pistol"){
 					ammo = 8;
 				}
 			}

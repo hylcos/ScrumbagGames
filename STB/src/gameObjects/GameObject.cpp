@@ -3,8 +3,10 @@
 #include <SFML/Graphics.hpp>
 
 
-GameObject::GameObject()
+GameObject::GameObject(gameObjectType type):
+type{ type }
 {
+
 }
 
 GameObject::GameObject(sf::Vector2f pos) :
@@ -51,6 +53,9 @@ sf::FloatRect GameObject::getBounds(){
 void GameObject::draw(sf::RenderWindow & window) const{
 }
 
+GameObject::gameObjectType GameObject::getType(){
+	return type;
+}
 GameObject::~GameObject()
 {
 }

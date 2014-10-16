@@ -55,7 +55,6 @@ public:
 	~Powerup();
 private:
 	Types* type = nullptr;
-
 	sf::Texture tex;
 	sf::Sprite sprite;
 	Powerups power;

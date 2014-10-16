@@ -1,7 +1,9 @@
 #include "../stdafx.h"
 #include "Animation.h"
 
-Animation::Animation(){
+Animation::Animation(gameObjectType type):
+GameObject{ type }
+{
 
 }
 void Animation::setTextures(sf::Texture & tex1, sf::Texture & tex2, sf::Texture & tex3, sf::Texture & tex4,
