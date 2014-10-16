@@ -14,6 +14,7 @@ private:
 	int curWeapon = 0;
 	bool invincible;
 	Weapon * selectedWeapons[3];
+	
 	int hp = 100;
 	int speed = 1;
 

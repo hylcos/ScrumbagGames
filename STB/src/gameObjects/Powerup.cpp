@@ -12,7 +12,9 @@ void Powerup::Types::executeAction(Powerup & powerup){
 	(powerup.*action)();
 }
 
-Powerup::Powerup(sf::Vector2f position, int pwr){
+Powerup::Powerup(sf::Vector2f position, int pwr):
+GameObject{ gameObjectType::powerup }
+{
 
 	sprite.setPosition(position);
 	if (!pwr)

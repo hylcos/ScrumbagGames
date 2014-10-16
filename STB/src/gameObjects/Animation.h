@@ -19,7 +19,7 @@ public:
 	/*!
 	Just a default constructor, does nothing in particular.
 	*/
-	Animation();
+	Animation(gameObjectType type = unspecified);
 
 	//!  SetTextures sets the textures used in this animation.
 	/*!
