@@ -15,6 +15,9 @@ public:
 	void Gun::setRotation(float rotation) override;
 	void Gun::reload() override;
 	float Gun::getAmmo() override;
+	void Gun::upgradeDmg(int amount);
+
+	void Gun::upgradeFireRate(short amount);
 	Gun::~Gun();
 private:
 	sf::Sprite sprite;

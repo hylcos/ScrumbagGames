@@ -79,6 +79,15 @@ float Gun::getAmmo(){
 		return 0;
 	}
 }
+
+void Gun::upgradeDmg(int amount){
+	damage += amount;
+}
+
+void Gun::upgradeFireRate(short amount){
+	fireRate -= amount;
+}
+
 Gun::~Gun()
 {
 }
