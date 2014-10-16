@@ -17,7 +17,48 @@ Factory::Factory()
 std::ifstream & operator>>(std::ifstream & input, sf::Vector2f & rhs){
 	char c;
 	if (!(input >> c)){ throw endOfFile(); }
-	if (c != '('){ throw invalidPosition(c); }
+	if (c != '('){ 
+		if (c == 'H'){
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != 'U'){
+				throw invalidPosition(c);
+			}
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != 'D'){
+				throw invalidPosition(c);
+			}
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != ':'){
+				throw invalidPosition(c);
+			}
+			throw unknownObject("HUD:");
+		}
+		if (c == 'L'){
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != 'E'){
+				throw invalidPosition(c);
+			}
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != 'V'){
+				throw invalidPosition(c);
+			}
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != 'E'){
+				throw invalidPosition(c);
+			}
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != 'L'){
+				throw invalidPosition(c);
+			}
+			if (!(input >> c)){ throw endOfFile(); }
+			if (c != ':'){
+				throw invalidPosition(c);
+			}
+			throw unknownObject("LEVEL:");
+		}
+
+		throw invalidPosition(c); 
+	}
 
 	if (!(input >> rhs.x)){ throw endOfFile(); }
 
@@ -51,11 +92,27 @@ int Factory::loadLevel(std::string file)
 {
 	int i = 0;
 	int settings = 0;
+	bool toHud = false;
 	std::ifstream input(file);
 	try {
 		input >> settings;
 		for (;;){
-			LevelController::getInstance().addObjectFromFactory(screen_object_read(input));
+			try{
+				if (toHud){
+					HudController::getInstance().addObjectFromFactory(screen_object_read(input));
+				}
+				else{
+					LevelController::getInstance().addObjectFromFactory(screen_object_read(input));
+				}
+			}
+			catch (unknownObject & exception){
+				if (exception.what() == "unknown object [HUD:]"){
+					toHud = true;
+				}
+				else if (exception.what() == "unknown object [LEVEL:]"){
+					toHud = false;
+				}
+			}
 			i++;
 		}
 	}
