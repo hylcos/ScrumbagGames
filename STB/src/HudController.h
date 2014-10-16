@@ -10,6 +10,18 @@ public:
 		instance.load();
 		return instance;
 	}
+	//add GameObject
+	//
+	//This function will put a new GameObject under the control of the GameController.
+	void HudController::addObject(GameObject * object);
+
+	void HudController::addObjectFromFactory(GameObject * object);
+	//remove GameObject
+	//
+	//This function will remove a GameObject under the control of the GameController, and DESTROY the GameObject in question.
+	void HudController::removeObject(GameObject * object);
+
+	void HudController::removeAllObjects(GameObject * object);
 
 	void HudController::load();
 
@@ -26,5 +38,8 @@ private:
 	sf::RectangleShape HPBackGround, HPForeGround;
 	sf::RectangleShape ammoBackGround, ammoForeGround;
 	sf::RectangleShape background;
+
+	std::vector< GameObject* > gameObjects, gameObjectToAdd;
+	std::unordered_set<GameObject*> gameObjectToRemove;
 };
 
