@@ -21,3 +21,6 @@ void Bench::setRotation(float rotate){
 void Bench::draw(sf::RenderWindow & window) const{
 	window.draw(bench);
 }
+sf::FloatRect Bench::getBounds() {
+	return bench.getLocalBounds();
+}
