@@ -38,6 +38,10 @@ void HudController::step(sf::RenderWindow & window){
 		HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
 		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));
 	}
+	else {
+		HPForeGround.setSize(sf::Vector2f(100, 15));
+		ammoForeGround.setSize(sf::Vector2f(100, 15));
+	}
 	
 	background.setPosition(sf::Vector2f(40, 455));
 	window.draw(background);
