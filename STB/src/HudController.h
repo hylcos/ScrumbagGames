@@ -28,7 +28,9 @@ public:
 	void HudController::load();
 
 	void HudController::step(sf::RenderWindow & window);
-
+	
+	void HudController::prepareForNextLevel();
+	//const std::vector<GameObject *> HudController::getGameObjects();
 	~HudController(){};
 private:
 	HudController() {};

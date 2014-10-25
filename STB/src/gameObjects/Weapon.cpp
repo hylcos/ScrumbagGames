@@ -3,7 +3,8 @@
 #include "../TextureManager.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-Weapon::Weapon()
+Weapon::Weapon():
+GameObject{weapon}
 {
 }
 

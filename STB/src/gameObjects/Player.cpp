@@ -19,11 +19,18 @@ struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
 Player::Player() :
 Animation{player}
 {
+	
+	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
+	sf::sleep(sf::milliseconds(1000));
+	std::cout << "Oh hello you!!";
 	setWeapons(WeaponManager::getInstance().pistol, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
+	std::cout << "\n" << selectedWeapons[0]->getType() << "\n";
+	std::cout << "\n" << selectedWeapons[1]->getType() << "\n";
+	std::cout << "\n" << selectedWeapons[2]->getType() << "\n";
 }
 
 void Player::reduceHP(int damage){
@@ -75,9 +82,17 @@ void Player::move(float speedModifier){
 			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
 				continue;
 			}
-			if (obj->getType() == bench && obj->getBounds().contains(newPos)){
+		
+
+		
+		/*	sf::Vector2f topLeft = obj->getTransform().transformPoint(sf::Vector2f(0, 0));
+			sf::Vector2f topRight = obj->getTransform().transformPoint(sf::Vector2f(static_cast<float>(obj->getSize().x), 0));
+			sf::Vector2f bottomLeft = obj->getTransform().transformPoint(sf::Vector2f(0, static_cast<float>(obj->getSize().y)));
+			sf::Vector2f bottomRight = obj->getTransform().transformPoint(sf::Vector2f(static_cast<float>(obj->getSize()).x), static_cast<float>(obj->getSize().y)));
+			*/
+			if (obj->getType() == bench /*&& one.vertex.getBounds().contains(newPos)*/){
 				isOnBench = true;
-				std::cout << "Je raakt een zieke bench aan: " << pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2);
+				
 			}
 
 		}
@@ -126,7 +141,6 @@ void Player::fullHealth(){
 
 Player::~Player()
 {
-	for each(Weapon * weapon in selectedWeapons)
-		delete weapon;
+	
 
 }

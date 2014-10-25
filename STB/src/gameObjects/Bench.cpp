@@ -24,3 +24,9 @@ void Bench::draw(sf::RenderWindow & window) const{
 sf::FloatRect Bench::getBounds() {
 	return bench.getLocalBounds();
 }
+
+sf::Transform Bench::getTransform(){
+	return bench.getTransform();
+}sf::Vector2u Bench::getSize(){
+	return pic->getSize();
+}

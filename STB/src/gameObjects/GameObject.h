@@ -10,7 +10,8 @@ public:
 		player,
 		table,
 		bench,
-		powerup
+		powerup,
+		weapon
 	};
 	GameObject(gameObjectType type = unspecified);
 	GameObject(sf::Vector2f);
@@ -22,6 +23,8 @@ public:
 	void GameObject::setPosition(sf::Vector2f position);
 	virtual sf::FloatRect GameObject::getBounds();
 	sf::Vector2f GameObject::getPosition();
+	virtual sf::Transform GameObject::getTransform();
+	virtual sf::Vector2u GameObject::getSize();
 	virtual void GameObject::setRotation(float rotate);
 	gameObjectType GameObject::getType();
 

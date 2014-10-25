@@ -47,7 +47,9 @@ void HudController::removeAllObjects(GameObject * object){
 	if (position != gameObjects.end()) // == vector.end() means the element was not found
 		gameObjects.erase(position);
 }
-
+void HudController::prepareForNextLevel(){
+	gameObjects.clear();
+}
 void HudController::step(sf::RenderWindow & window){
 	float speedModifier = 60 / GameController::getInstance().getFPS();
 	sf::View hudView;
@@ -68,7 +70,6 @@ void HudController::step(sf::RenderWindow & window){
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
-
 	if (LevelController::getInstance().getPlayer() != nullptr){
 		HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
 		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));

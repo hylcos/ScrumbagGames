@@ -37,6 +37,10 @@ public:
 	void Bench::update(float speedModifier) override;
 
 	sf::FloatRect Bench::getBounds() override;
+
+	sf::Transform Bench::getTransform() override;
+
+	sf::Vector2u Bench::getSize() override;
 private:
 	//! The rotate amount of the texture.
 	/*

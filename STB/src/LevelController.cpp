@@ -107,6 +107,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	if (nextLevel != nullptr)
 	{
 		stopLevel();
+		HudController::getInstance().prepareForNextLevel();
 		startLevel(*nextLevel);
 		nextLevel = nullptr;
 	}

@@ -42,10 +42,15 @@ sf::Vector2f GameObject::getPosition(){
 	return position;
 }
 
+sf::Transform GameObject::getTransform(){
+	return sf::Transform();
+}
 void GameObject::move(float speedModifier){
 
 }
-
+sf::Vector2u GameObject::getSize(){
+	return sf::Vector2u(0, 0);
+}
 sf::FloatRect GameObject::getBounds(){
 	return sf::RectangleShape{}.getGlobalBounds();
 }

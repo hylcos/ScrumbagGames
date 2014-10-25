@@ -5,7 +5,10 @@
 #include "Gun.h"
 class Player : public Animation
 {
-
+	struct hitbox
+	{
+		sf::VertexArray vertex;
+	};
 private:
 
 	sf::Sprite curSprite;
