@@ -204,10 +204,18 @@
     <Image Include="Resources\Images\Sprites\Powerup.png" />
     <Image Include="Resources\Images\Sprites\Table.png" />
     <Image Include="Resources\Images\Sprites\Trashcan.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\dagger.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\dagger_hit.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol_bullet.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\rifle.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\rifle_bullet.png" />
     <Image Include="Resources\Images\Sprites\Weapons\shotgun.png" />
     <Image Include="Resources\Images\Sprites\Weapons\shotgun_bullet.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sniper.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sniper_bullet.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sword.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sword_hit.png" />
     <Image Include="Resources\Images\Sprites\Weapons\uzi.png" />
     <Image Include="Resources\Images\Sprites\Weapons\uzi_bullet.png" />
   </ItemGroup>

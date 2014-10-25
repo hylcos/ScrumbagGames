@@ -351,5 +351,29 @@
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\dagger.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\dagger_hit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\rifle.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\rifle_bullet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\sniper.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\sniper_bullet.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\sword.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Weapons\sword_hit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -27,7 +27,7 @@ Animation{player}
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
 	sf::sleep(sf::milliseconds(1000));
 	std::cout << "Oh hello you!!";
-	setWeapons(WeaponManager::getInstance().pistol, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
+	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
 	std::cout << "\n" << selectedWeapons[0]->getType() << "\n";
 	std::cout << "\n" << selectedWeapons[1]->getType() << "\n";
 	std::cout << "\n" << selectedWeapons[2]->getType() << "\n";
@@ -58,7 +58,7 @@ void Player::update(float speedModifier) {
 
 	doubleSpeedTimer -= speedModifier;
 	if (doubleSpeedTimer <= 0)
-		speed = 1;
+		speed = 3;
 	if (invincibleTimer <= 0)
 		invincible = false;
 	selectedWeapons[curWeapon]->update(speedModifier);

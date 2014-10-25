@@ -8,10 +8,10 @@ Knife::Knife(std::string name, int damage, short attackSpeed, int range):
 	range{ range }
 {
 	Knife::name = name;
-	tex = *TextureManager::getInstance().getTexture(name + ".png");
+	tex = *TextureManager::getInstance().getTexture("Sprites/Weapons/" + name + ".png");
 	sprite.setTexture(tex);
 	sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
-	texmelee = *TextureManager::getInstance().getTexture(name + "_hit.png");
+	texmelee = *TextureManager::getInstance().getTexture("Sprites/Weapons/" + name + "_hit.png");
 	melee.setTexture(texmelee);
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
 }
