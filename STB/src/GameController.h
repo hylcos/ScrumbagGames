@@ -40,10 +40,11 @@ private:
 	GameController(){};
 	GameController(GameController const&) = delete;
 	void operator=(GameController const&) = delete;
-
+	void GameController::changeCursor();
 	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
 	void checkWindow();
-
+	sf::Sprite cursorsprite;
+	sf::Texture cursortex;
 	float fps = 100.0f;
 	int frames = 0;
 	clock_t nextClock;
