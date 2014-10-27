@@ -6,7 +6,7 @@
 
 MainMenu::MainMenu()
 {
-	tex = TextureManager::getInstance().getTexture("menuObjecten/button.png");
+	tex = TextureManager::getInstance().getTexture("menuObjecten/BackButton.png");
 	sprite.setTexture(*tex, true);
 	sprite.setOrigin(static_cast<sf::Vector2f>(tex->getSize()) / 2.0f);
 }

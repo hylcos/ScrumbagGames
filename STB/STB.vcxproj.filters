@@ -394,6 +394,12 @@
     <Image Include="Resources\Images\menuObjecten\PlayButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\menuObjecten\OptionsButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\BackButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Coalition_v2..ttf" />
