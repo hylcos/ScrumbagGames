@@ -223,9 +223,6 @@
     <Image Include="Resources\Images\Sprites\Crosshair.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\Sprites\PlayButton.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\GameLogo.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -386,6 +383,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\Sprites\Weapons\sword_hit.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\PlayButton.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

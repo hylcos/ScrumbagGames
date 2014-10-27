@@ -199,7 +199,7 @@
     <Image Include="Resources\Images\Sprites\Enemies\Fat\3.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Fat\4.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Fat\melee.png" />
-    <Image Include="Resources\Images\Sprites\PlayButton.png" />
+    <Image Include="Resources\Images\menuObjecten\PlayButton.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-1.png" />
