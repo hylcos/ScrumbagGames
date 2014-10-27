@@ -95,9 +95,14 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.draw(backgroundSpriteOverlay);
 
 	if (player != nullptr){
-		setMainView(player->getPosition().x, player->getPosition().y);
+		setMainView(player->getPosition());
 		sf::Vector2f pos = getMousePos() - player->getPosition();
 		player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
+	}
+	else{
+		viewMovement.x = std::max(-1.0f, std::min(1.0f, viewMovement.x + ((rand() % 11) - (4.8f+(mainView.getCenter().x < 640?0.0f:0.4f))) / 10000.0f));
+		viewMovement.y = std::max(-1.0f, std::min(1.0f, viewMovement.y + ((rand() % 11) - (4.8f + (mainView.getCenter().y < 480 ? 0.0f : 0.4f))) / 10000.0f));
+		moveMainView(viewMovement*speedModifier*10.0f);
 	}
 
 	for (GameObject* obj : gameObjects){
@@ -128,8 +133,15 @@ const std::vector< GameObject* > LevelController::getGameObjects(){
 	return gameObjects;
 }
 
+void LevelController::moveMainView(sf::Vector2f pos){
+	moveMainView(pos.x, pos.y);
+}
 void LevelController::moveMainView(float x, float y){
 	setMainView(mainView.getCenter().x + x, mainView.getCenter().y + y);
+}
+
+void LevelController::setMainView(sf::Vector2f pos){
+	mainView.setCenter(pos.x,pos.y);
 }
 
 void LevelController::setMainView(float x, float y){
