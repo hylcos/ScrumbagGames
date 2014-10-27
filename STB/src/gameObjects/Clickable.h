@@ -22,7 +22,13 @@ public:
 	*/
 	void Clickable::update();
 
-
+	//! The setOnHud method of the clickable class
+	/*!
+	When set to true this gameobject will be displayed on the HUD instead of being part of the games map.
+	Being on the HUD means the object has a fixed position on the window and won't move when
+	the player moves around the screen.
+	@param onHud wether or not the game object should be on the HUD.
+	*/
 	void Clickable::setOnHud(bool onHud);
 
 	//! The click method for the clickable class
