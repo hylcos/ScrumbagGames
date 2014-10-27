@@ -62,8 +62,8 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
-	isWalkeble = true;
-	isOnBench = false;
+	bool isOnBench = false;
+	bool isWalkeble = true;
 	bool collided = false;
 	sf::Vector2f newPos{ 0, 0 };
 	for (auto & action : actions){
@@ -86,18 +86,23 @@ void Player::move(float speedModifier){
 			if (obj->getType() == bench && Collision::collision(LevelController::getInstance().getPlayer(),obj)){
 				isOnBench = true;
 				std::cout << "Oh hell yeah";
+				collided = true;
 			}
 			if (obj->getType() == table && Collision::collision(LevelController::getInstance().getPlayer(), obj)){
 
 				std::cout << "Oh hell yeah times 2";
 				if (isOnBench || isOnTable){
 					isOnTable = true;
+					collided = true;
 				}
 				else {
 					isWalkeble = false;
 				}
 			}
 
+		}
+		if (!collided){
+			isOnTable = false;
 		}
 
 

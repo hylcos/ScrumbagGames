@@ -19,8 +19,7 @@ private:
 	int curWeapon = 0;
 	bool invincible;
 	Weapon * selectedWeapons[3];
-	bool isOnBench = false;
-	bool isWalkeble = true;
+	bool isOnTable = false;
 	int hp = 100;
 	int speed = 1;
 
