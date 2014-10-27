@@ -22,6 +22,9 @@ public:
 	*/
 	void Clickable::update();
 
+
+	void Clickable::setOnHud(bool onHud);
+
 	//! The click method for the clickable class
 	/*!
 	In this method there will be specified what has to happen when this game object is clicked.
