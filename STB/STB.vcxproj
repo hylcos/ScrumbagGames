@@ -92,6 +92,7 @@
     <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Collision.h" />
     <ClInclude Include="src\gameObjects\Bullet.h" />
     <ClInclude Include="src\gameObjects\Clickable.h" />
     <ClInclude Include="src\gameObjects\Enemy.h" />
@@ -121,6 +122,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Collision.cpp" />
     <ClCompile Include="src\gameObjects\Bullet.cpp" />
     <ClCompile Include="src\gameObjects\Clickable.cpp" />
     <ClCompile Include="src\gameObjects\Enemy.cpp" />

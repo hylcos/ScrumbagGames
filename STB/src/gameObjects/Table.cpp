@@ -25,6 +25,15 @@ void Table::draw(sf::RenderWindow & window) const{
 	window.draw(table);
 }
 
+sf::FloatRect Table::getBounds() {
+	return table.getLocalBounds();
+}
 
+sf::Transform Table::getTransform(){
+	return table.getTransform();
+
+}sf::Vector2u Table::getSize(){
+	return tex->getSize();
+}
 Table::~Table(){}
 

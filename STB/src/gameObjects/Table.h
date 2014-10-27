@@ -11,6 +11,11 @@ public:
 	void Table::draw(sf::RenderWindow & window) const override;
 	void Table::setRotation(float rotate) override;
 	void Table::update(float speedModifier) override;
+	sf::FloatRect Table::getBounds() override;
+
+	sf::Transform Table::getTransform() override;
+
+	sf::Vector2u Table::getSize() override;
 	~Table();
 
 private:

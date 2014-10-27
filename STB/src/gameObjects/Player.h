@@ -3,6 +3,8 @@
 #include "SFML\Graphics.hpp"
 #include "Weapon.h"
 #include "Gun.h"
+
+#include "Collision.h"
 class Player : public Animation
 {
 	struct hitbox
@@ -18,6 +20,7 @@ private:
 	bool invincible;
 	Weapon * selectedWeapons[3];
 	bool isOnBench = false;
+	bool isWalkeble = true;
 	int hp = 100;
 	int speed = 1;
 

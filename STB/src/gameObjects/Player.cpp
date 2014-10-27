@@ -26,11 +26,8 @@ Animation{player}
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
 	sf::sleep(sf::milliseconds(1000));
-	std::cout << "Oh hello you!!";
 	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
-	std::cout << "\n" << selectedWeapons[0]->getType() << "\n";
-	std::cout << "\n" << selectedWeapons[1]->getType() << "\n";
-	std::cout << "\n" << selectedWeapons[2]->getType() << "\n";
+
 }
 
 void Player::reduceHP(int damage){
@@ -65,6 +62,9 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
+	isWalkeble = true;
+	isOnBench = false;
+	bool collided = false;
 	sf::Vector2f newPos{ 0, 0 };
 	for (auto & action : actions){
 		if (sf::Keyboard::isKeyPressed(action.key)){
@@ -83,20 +83,25 @@ void Player::move(float speedModifier){
 				continue;
 			}
 		
-
-		
-		/*	sf::Vector2f topLeft = obj->getTransform().transformPoint(sf::Vector2f(0, 0));
-			sf::Vector2f topRight = obj->getTransform().transformPoint(sf::Vector2f(static_cast<float>(obj->getSize().x), 0));
-			sf::Vector2f bottomLeft = obj->getTransform().transformPoint(sf::Vector2f(0, static_cast<float>(obj->getSize().y)));
-			sf::Vector2f bottomRight = obj->getTransform().transformPoint(sf::Vector2f(static_cast<float>(obj->getSize()).x), static_cast<float>(obj->getSize().y)));
-			*/
-			if (obj->getType() == bench /*&& one.vertex.getBounds().contains(newPos)*/){
+			if (obj->getType() == bench && Collision::collision(LevelController::getInstance().getPlayer(),obj)){
 				isOnBench = true;
-				
+				std::cout << "Oh hell yeah";
+			}
+			if (obj->getType() == table && Collision::collision(LevelController::getInstance().getPlayer(), obj)){
+
+				std::cout << "Oh hell yeah times 2";
+				if (isOnBench || isOnTable){
+					isOnTable = true;
+				}
+				else {
+					isWalkeble = false;
+				}
 			}
 
 		}
-		if (!(newPos.x < 32 + 16 || newPos.x > 1248 -16|| newPos.y < 32 +16 || newPos.y > 934-16)){
+
+
+		if (!(newPos.x < 32 + 16 || newPos.x > 1248 -16|| newPos.y < 32 +16 || newPos.y > 934-16) && isWalkeble){
 
 			position = newPos;
 		}

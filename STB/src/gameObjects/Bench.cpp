@@ -27,6 +27,7 @@ sf::FloatRect Bench::getBounds() {
 
 sf::Transform Bench::getTransform(){
 	return bench.getTransform();
+
 }sf::Vector2u Bench::getSize(){
 	return pic->getSize();
 }
