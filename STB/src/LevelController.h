@@ -28,6 +28,7 @@ public:
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
+	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 
 	//add GameObject
 	//
@@ -42,9 +43,11 @@ public:
 
 	void LevelController::removeAllObjects(GameObject * object);
 	//Move the main view
+	void LevelController::moveMainView(sf::Vector2f pos);
 	void LevelController::moveMainView(float x, float y);
 
 	//Set the main view position
+	void LevelController::setMainView(sf::Vector2f pos);
 	void LevelController::setMainView(float x, float y);
 
 	void LevelController::step(float fps, sf::RenderWindow & window);
@@ -68,6 +71,8 @@ private:
 	sf::View mainView;
 
 	Initializer* nextLevel = nullptr;
+
+	sf::Vector2f viewMovement{ 0,0 };
 
 	sf::Texture background;
 	sf::Texture backgroundOverlay;

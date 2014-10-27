@@ -88,3 +88,7 @@ void HudController::step(sf::RenderWindow & window){
 	window.draw(ammoBackGround);
 	window.draw(ammoForeGround);
 }
+
+sf::Vector2f HudController::getMousePos(){
+	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f)+sf::Vector2f{ 320, 240 };
+}

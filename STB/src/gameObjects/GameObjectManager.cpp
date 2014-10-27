@@ -31,6 +31,12 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/Play"){
 		return new Play();
 	}
+	if (string == "menu/Options"){
+		return new Options();
+	}
+	if (string == "menu/MainMenu"){
+		return new MainMenu();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

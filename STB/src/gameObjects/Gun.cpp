@@ -23,6 +23,10 @@ void Gun::fire(){
 	if (ammo > 0 || currentMagazine > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
+				position.x += (10 * cos(rotation * PI / 180)
+					+ 15 * cos((rotation - 90) * PI / 180));
+				position.y += (10 * sin(rotation* PI / 180)
+					+ 15 * sin((rotation - 90) * PI / 180));
 				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
