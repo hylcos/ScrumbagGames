@@ -8,6 +8,8 @@
 #include "Bench.h"
 #include "Enemy.h"
 #include "menu\play.h"
+#include "menu\Options.h"
+#include "menu\MainMenu.h"
 
 class GameObjectManager
 {

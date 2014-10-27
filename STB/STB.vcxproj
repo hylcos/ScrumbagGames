@@ -99,6 +99,8 @@
     <ClInclude Include="src\gameObjects\Bench.h" />
     <ClInclude Include="src\gameObjects\Gun.h" />
     <ClInclude Include="src\gameObjects\Knife.h" />
+    <ClInclude Include="src\gameObjects\menu\MainMenu.h" />
+    <ClInclude Include="src\gameObjects\menu\Options.h" />
     <ClInclude Include="src\gameObjects\menu\play.h" />
     <ClInclude Include="src\gameObjects\Player.h" />
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />
@@ -128,6 +130,8 @@
     <ClCompile Include="src\gameObjects\Bench.cpp" />
     <ClCompile Include="src\gameObjects\Gun.cpp" />
     <ClCompile Include="src\gameObjects\Knife.cpp" />
+    <ClCompile Include="src\gameObjects\menu\MainMenu.cpp" />
+    <ClCompile Include="src\gameObjects\menu\Options.cpp" />
     <ClCompile Include="src\gameObjects\menu\play.cpp" />
     <ClCompile Include="src\gameObjects\Player.cpp" />
     <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
@@ -156,6 +160,7 @@
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
     <None Include="Resources\Levels\mainMenu.level" />
+    <None Include="Resources\Levels\optionsMenu.level" />
     <None Include="Resources\Sounds\intro.ogg" />
   </ItemGroup>
   <ItemGroup>

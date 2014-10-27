@@ -40,5 +40,6 @@ public:
 	~Clickable();
 private:
 	bool onHud = false;
+	bool lmbDown = false;
 };
 

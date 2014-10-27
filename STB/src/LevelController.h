@@ -28,6 +28,7 @@ public:
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
+	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 
 	//add GameObject
 	//
