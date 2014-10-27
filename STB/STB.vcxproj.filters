@@ -107,13 +107,13 @@
     <ClInclude Include="src\gameObjects\WeaponManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\Options.h">
+    <ClInclude Include="src\gameObjects\Collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\menu\MainMenu.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\Collision.h">
+    <ClInclude Include="src\gameObjects\menu\Options.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -199,13 +199,13 @@
     <ClCompile Include="src\gameObjects\WeaponManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\Options.cpp">
+    <ClCompile Include="src\gameObjects\Collision.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\menu\MainMenu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\Collision.cpp">
+    <ClCompile Include="src\gameObjects\menu\Options.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -394,5 +394,8 @@
     <Image Include="Resources\Images\menuObjecten\PlayButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Fonts\Coalition_v2..ttf" />
   </ItemGroup>
 </Project>

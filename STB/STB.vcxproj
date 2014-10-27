@@ -226,6 +226,9 @@
     <Image Include="Resources\Images\Sprites\Weapons\uzi.png" />
     <Image Include="Resources\Images\Sprites\Weapons\uzi_bullet.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Fonts\Coalition_v2..ttf" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
