@@ -28,6 +28,8 @@ public:
 	void HudController::load();
 
 	void HudController::step(sf::RenderWindow & window);
+
+	sf::Vector2f HudController::getMousePos();
 	
 	void HudController::prepareForNextLevel();
 	//const std::vector<GameObject *> HudController::getGameObjects();

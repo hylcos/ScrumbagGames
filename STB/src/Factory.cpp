@@ -78,12 +78,15 @@ std::ifstream & operator>>(std::ifstream & input, sf::Vector2f & rhs){
 
 // reads one line form the input and returns a pointer to
 // the corresponding screen object (allocated on the heap)
-GameObject * Factory::screen_object_read(std::ifstream & input){
+GameObject * Factory::screen_object_read(std::ifstream & input, bool toHud){
 	sf::Vector2f position;
 	std::string name;
 	input >> position >> name;
 	GameObject * gameObject = gameObjectManager.createObjectFromName(name);
 	gameObject->setPosition(position);
+	if (dynamic_cast<Clickable*>(gameObject) != 0){
+		dynamic_cast<Clickable*>(gameObject)->setOnHud(toHud);
+	}
 	return gameObject;
 }
 
@@ -99,10 +102,10 @@ int Factory::loadLevel(std::string file)
 		for (;;){
 			try{
 				if (toHud){
-					HudController::getInstance().addObjectFromFactory(screen_object_read(input));
+					HudController::getInstance().addObjectFromFactory(screen_object_read(input, toHud));
 				}
 				else{
-					LevelController::getInstance().addObjectFromFactory(screen_object_read(input));
+					LevelController::getInstance().addObjectFromFactory(screen_object_read(input, toHud));
 				}
 			}
 			catch (unknownObject & exception){

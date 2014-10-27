@@ -44,7 +44,7 @@ public:
 	};
 	Factory();
 	int Factory::loadLevel(std::string file);
-	GameObject * Factory::screen_object_read(std::ifstream & input);
+	GameObject * Factory::screen_object_read(std::ifstream & input, bool toHud);
 	~Factory();
 private:
 	GameObjectManager gameObjectManager;

@@ -7,10 +7,13 @@ class Clickable : public GameObject
 public:
 	Clickable();
 
+	void setOnHud(bool onHud);
 	void Clickable::update();
 	virtual void Clickable::click();
 
 
 	~Clickable();
+private:
+	bool onHud = false;
 };
 
