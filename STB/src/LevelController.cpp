@@ -141,7 +141,7 @@ void LevelController::moveMainView(float x, float y){
 }
 
 void LevelController::setMainView(sf::Vector2f pos){
-	mainView.setCenter(pos.x,pos.y);
+	setMainView(pos.x, pos.y);
 }
 
 void LevelController::setMainView(float x, float y){
