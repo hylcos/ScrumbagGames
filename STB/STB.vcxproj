@@ -173,6 +173,12 @@
     <Image Include="Resources\Images\Background.jpg" />
     <Image Include="Resources\Images\BackgroundOverlay.jpg" />
     <Image Include="Resources\Images\GameLogo.png" />
+    <Image Include="Resources\Images\HUDObjecten\AmmoBar.png" />
+    <Image Include="Resources\Images\HUDObjecten\BuffsBar.png" />
+    <Image Include="Resources\Images\HUDObjecten\ExtraWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\HUDdesign.png" />
+    <Image Include="Resources\Images\HUDObjecten\HealthBar.png" />
+    <Image Include="Resources\Images\HUDObjecten\Timer.png" />
     <Image Include="Resources\Images\Logo.png" />
     <Image Include="Resources\Images\Menu objecten\BacktoMenuButton.png" />
     <Image Include="Resources\Images\Menu objecten\button.png" />

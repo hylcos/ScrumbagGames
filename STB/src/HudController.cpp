@@ -24,27 +24,43 @@ void HudController::removeAllObjects(GameObject * object){
 
 void HudController::load()
 {
+	healthtex = *TextureManager::getInstance().getTexture("HUDObjecten/HealthBar.png");
+	healthsprite.setTexture(healthtex);
+
+	ammotex = *TextureManager::getInstance().getTexture("HUDObjecten/AmmoBar.png");
+	ammosprite.setTexture(ammotex);
+
+	timetex = *TextureManager::getInstance().getTexture("HUDObjecten/Timer.png");
+	timesprite.setTexture(timetex);
+	timesprite.setOrigin(timetex.getSize().x / 2.0f, timetex.getSize().y/2.0f);
+
+	weapontex = *TextureManager::getInstance().getTexture("HUDObjecten/ExtraWeapon.png");
+	weaponsprite1.setTexture(weapontex);
+	weaponsprite2.setTexture(weapontex);
+
+	weaponsprite1.setOrigin(weapontex.getSize().x / 2.0f, weapontex.getSize().y / 2.0f);
+	weaponsprite2.setOrigin(weapontex.getSize().x / 2.0f, weapontex.getSize().y / 2.0f);
+
+	buffstex = *TextureManager::getInstance().getTexture("HUDObjecten/BuffsBar.png");
+	buffssprite.setTexture(buffstex);
+
 	if (isLoaded){
 		return;
 	}
 	isLoaded = true;
-	HPBackGround.setFillColor(sf::Color::Black);
-	HPBackGround.setSize(sf::Vector2f(100, 15));
-	HPBackGround.setPosition(sf::Vector2f(60, 457.5));
+	timesprite.setPosition(sf::Vector2f(320,30));
+	healthsprite.setPosition(sf::Vector2f(20, 405));
+	ammosprite.setPosition(sf::Vector2f(435, 405));
 
-	HPForeGround.setFillColor(sf::Color::Red);
-	HPForeGround.setPosition(sf::Vector2f(60, 457.5));
+	weaponsprite1.setPosition(sf::Vector2f(590, 380));
+	weaponsprite2.setPosition(sf::Vector2f(590, 330));
+	ammoForeGround.setPosition(sf::Vector2f(445, 440));
+	healthForeGround.setPosition(sf::Vector2f(35, 440));
 
-	ammoBackGround.setFillColor(sf::Color::Black);
-	ammoBackGround.setSize(sf::Vector2f(100, 15));
-	ammoBackGround.setPosition(sf::Vector2f(300, 457.5));
-
+	healthForeGround.setFillColor(sf::Color::Red);
 	ammoForeGround.setFillColor(sf::Color::Yellow);
-	ammoForeGround.setPosition(sf::Vector2f(300, 457.5));
-
-	background.setFillColor(sf::Color::White);
-	background.setSize(sf::Vector2f(140, 25));
 }
+
 void HudController::step(sf::RenderWindow & window){
 	float speedModifier = 60 / GameController::getInstance().getFPS();
 	sf::View hudView;
@@ -66,22 +82,23 @@ void HudController::step(sf::RenderWindow & window){
 		obj->draw(window);
 	}
 	if (LevelController::getInstance().getPlayer() != nullptr){
-		HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
+		healthForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()* 1.5) , 15));
 		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));
 	}
 	else {
-		HPForeGround.setSize(sf::Vector2f(100, 15));
+		healthForeGround.setSize(sf::Vector2f(150, 15));
 		ammoForeGround.setSize(sf::Vector2f(100, 15));
 	}
 
-	background.setPosition(sf::Vector2f(40, 455));
-	window.draw(background);
-	background.setPosition(sf::Vector2f(280, 455));
-	window.draw(background);
-	window.draw(HPBackGround);
-	window.draw(HPForeGround);
-	window.draw(ammoBackGround);
+
+	window.draw(weaponsprite1);
+	
+	window.draw(weaponsprite2);
+	window.draw(ammosprite);
+	window.draw(healthsprite);
+	window.draw(healthForeGround);
 	window.draw(ammoForeGround);
+	window.draw(timesprite);
 }
 void HudController::prepareForNextLevel(){
 	gameObjects.clear();

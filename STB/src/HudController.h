@@ -88,12 +88,11 @@ private:
 	HudController() {};
 	HudController(HudController const&);
 	void operator=(HudController const&);
-
+	sf::Sprite healthsprite, ammosprite, timesprite, weaponsprite1, weaponsprite2, buffssprite;
+	sf::Texture healthtex, ammotex, timetex, weapontex, buffstex;
 	bool isLoaded = false;
-
-	sf::RectangleShape HPBackGround, HPForeGround;
-	sf::RectangleShape ammoBackGround, ammoForeGround;
-	sf::RectangleShape background;
+	void HudController::draw(sf::RenderWindow & window) const;
+	sf::RectangleShape healthForeGround, ammoForeGround;
 
 	std::vector< GameObject* > gameObjects, gameObjectToAdd;
 	std::unordered_set<GameObject*> gameObjectToRemove;
