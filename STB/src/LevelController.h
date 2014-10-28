@@ -4,7 +4,7 @@
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
 #include <unordered_set>
-
+#include "gameObjects\menu\Resume.h"
 #define PI 3.14159265358979323846f
 class GameController;
 class LevelController
@@ -50,6 +50,7 @@ public:
 	void LevelController::setMainView(sf::Vector2f pos);
 	void LevelController::setMainView(float x, float y);
 
+	void LevelController::setPaused();
 	void LevelController::step(float fps, sf::RenderWindow & window);
 
 	Player * LevelController::getPlayer();
@@ -65,6 +66,8 @@ private:
 
 	void LevelController::load();
 	bool isLoaded = false;
+	bool paused = false;
+	bool pausedPressed = false;
 
 	void LevelController::stopLevel();
 
@@ -76,7 +79,9 @@ private:
 
 	sf::Texture background;
 	sf::Texture backgroundOverlay;
+	sf::Texture pauseOverlay;
 
+	sf::Sprite pauseSprite;
 	sf::Sprite backgroundSprite;
 	sf::Sprite backgroundSpriteOverlay;
 
@@ -84,6 +89,9 @@ private:
 
 	std::vector< GameObject* > gameObjects, gameObjectToAdd;
 	std::unordered_set<GameObject*> gameObjectToRemove;
-
+	
+	MainMenu backToMenu;
+	Play restart;
+	Resume resume;
 	Player * player = nullptr;
 };

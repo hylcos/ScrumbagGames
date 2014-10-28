@@ -4,7 +4,7 @@
 #include "Factory.h"
 #include "GameObjects/Powerup.h"
 #include <SFML\Graphics.hpp>
-
+#include "TextureManager.h"
 void LevelController::load()
 {
 	if (isLoaded){
@@ -13,6 +13,9 @@ void LevelController::load()
 	isLoaded = true;
 	background.loadFromFile("Resources/Images/Background.jpg");
 	backgroundOverlay.loadFromFile("Resources/Images/BackgroundOverlay.jpg");
+
+	pauseOverlay.loadFromFile("Resources/Images//PauseMenuOverlay.png");
+	pauseSprite.setTexture(pauseOverlay, true);
 
 	backgroundSprite.setTexture(background, true);
 	backgroundSpriteOverlay.setTexture(backgroundOverlay, true);
@@ -67,50 +70,74 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 }
 
 void LevelController::step(float fps, sf::RenderWindow & window){
-	float speedModifier = 60 / fps;
-	for (GameObject* obj : gameObjectToAdd){
-		gameObjects.push_back(obj);
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) && !pausedPressed){
+		paused = !paused;
+		pausedPressed = true;
+	} 
+	if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))) {
+		pausedPressed = false;
 	}
-	gameObjectToAdd.clear();
+		float speedModifier = 60 / fps;
+		for (GameObject* obj : gameObjectToAdd){
+			gameObjects.push_back(obj);
+		}
+		gameObjectToAdd.clear();
 
-	for (GameObject* obj : gameObjectToRemove){
-		LevelController::removeAllObjects(obj);
+		for (GameObject* obj : gameObjectToRemove){
+			LevelController::removeAllObjects(obj);
+		}
+		gameObjectToRemove.clear();
+		if (!paused){
+			for (GameObject* obj : gameObjects){
+				obj->update(speedModifier);
+			}
+
+			for (GameObject* obj : gameObjects){
+				obj->move(speedModifier);
+			}
+		}
+		//window.clear(sf::Color::White);
+
+		window.setView(mainView);
+
+		window.draw(backgroundSprite);
+		backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
+		window.draw(backgroundSpriteOverlay);
+
+		if (player != nullptr){
+			setMainView(player->getPosition());
+			sf::Vector2f pos = getMousePos() - player->getPosition();
+			player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
+		}
+		else{
+			viewMovement.x = std::max(-1.0f, std::min(1.0f, viewMovement.x + ((rand() % 11) - (4.8f + (mainView.getCenter().x < 640 ? 0.0f : 0.4f))) / 10000.0f));
+			viewMovement.y = std::max(-1.0f, std::min(1.0f, viewMovement.y + ((rand() % 11) - (4.8f + (mainView.getCenter().y < 480 ? 0.0f : 0.4f))) / 10000.0f));
+			moveMainView(viewMovement*speedModifier*10.0f);
+		}
+
+		for (GameObject* obj : gameObjects){
+			obj->draw(window);
+		}
+	
+	
+	if(paused) {
+		backToMenu.setPosition(sf::Vector2f(mainView.getCenter().x,mainView.getCenter().y+60));
+		backToMenu.update(speedModifier);
+		
+		restart.setPosition(mainView.getCenter());
+		restart.update(speedModifier);
+		
+		resume.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y - 60));
+		resume.update(speedModifier);
+
+		window.draw(pauseSprite);
+		backToMenu.draw(window);
+		restart.draw(window);
+		resume.draw(window);
 	}
-	gameObjectToRemove.clear();
-
-	for (GameObject* obj : gameObjects){
-		obj->update(speedModifier);
-	}
-
-	for (GameObject* obj : gameObjects){
-		obj->move(speedModifier);
-	}
-
-	//window.clear(sf::Color::White);
-
-	window.setView(mainView);
-
-	window.draw(backgroundSprite);
-	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
-	window.draw(backgroundSpriteOverlay);
-
-	if (player != nullptr){
-		setMainView(player->getPosition());
-		sf::Vector2f pos = getMousePos() - player->getPosition();
-		player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
-	}
-	else{
-		viewMovement.x = std::max(-1.0f, std::min(1.0f, viewMovement.x + ((rand() % 11) - (4.8f+(mainView.getCenter().x < 640?0.0f:0.4f))) / 10000.0f));
-		viewMovement.y = std::max(-1.0f, std::min(1.0f, viewMovement.y + ((rand() % 11) - (4.8f + (mainView.getCenter().y < 480 ? 0.0f : 0.4f))) / 10000.0f));
-		moveMainView(viewMovement*speedModifier*10.0f);
-	}
-
-	for (GameObject* obj : gameObjects){
-		obj->draw(window);
-	}
-
 	if (nextLevel != nullptr)
 	{
+		paused = false;
 		stopLevel();
 		HudController::getInstance().prepareForNextLevel();
 		startLevel(*nextLevel);
@@ -169,6 +196,10 @@ void LevelController::removeAllObjects(GameObject * object){
 
 Player * LevelController::getPlayer(){
 	return player;
+}
+
+void LevelController::setPaused(){
+	paused = !paused;
 }
 /*
 LevelController::~LevelController()
