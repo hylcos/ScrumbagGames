@@ -1,3 +1,7 @@
+//! The gamecontroller header file
+/*!
+This is the header file of the gamecontroller class.
+*/
 #pragma once
 #include "SoundController.h"
 #include <SFML/Graphics.hpp>
@@ -13,27 +17,48 @@ class GameController
 {
 public:
 
+	//!The getInsatnce method of the gamecontroller
+	/*!
+	This method makes sure there is only 1 instance of the gamecontroller at a time.
+	This way, every time an external class uses a gamecontroller, it uses a gamecontroller
+	with the same attributes as every other class.
+	@return The instance of the gamecontroller
+	*/
 	static GameController& getInstance()
 	{
-		static GameController    instance;
+		static GameController instance;
 		return instance;
 	}
 
+	//! The getFPS method of the gamecontroller
+	/*!
+	@return The frames per second of the game
+	*/
 	float GameController::getFPS();
 
-	//start (run) the game
-	//
-	//Call this function to start running the game.
-	//@returns the exit code.
+	//! The start method of the gamecontroller
+	/*!
+	Calling this method will cause the game to start running.
+	*/
 	void GameController::start();
 
-	//stop the game
-	//
-	//This function will stop the game. Prerequirement: start() must be called.
+	//! The stop method of the gamecontroller
+	/*!
+	Calling this method will stop the game.
+	Prerequirement: the game has to be started.
+	*/
 	void GameController::stop();
 
+	//! The getwindow method of the gamecontroller
+	/*!
+	@return The current window the game has to be drawn in
+	*/
 	sf::RenderWindow& GameController::getWindow();
 
+	//! The deconstructor of the gamecontroller
+	/*
+	Deallocates the gamecontroller.
+	*/
 	~GameController();
 
 private:

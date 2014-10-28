@@ -10,6 +10,8 @@
 #include "menu\play.h"
 #include "menu\Options.h"
 #include "menu\MainMenu.h"
+#include "menu\Checkbox.h"
+#include "menu\ToggleMusic.h"
 
 class GameObjectManager
 {

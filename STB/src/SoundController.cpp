@@ -14,6 +14,14 @@ void SoundController::playMusic(const char* file){
 	bgMusic.play();
 }
 
+void SoundController::setBackgroundMusic(bool enabled){
+	if (!enabled){
+		bgMusic.stop();
+		return;
+	}
+	bgMusic.play();
+}
+
 SoundController::~SoundController(){
 
 }
