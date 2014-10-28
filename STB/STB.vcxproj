@@ -89,7 +89,7 @@
   <ItemGroup>
     <Text Include="Idea.txt" />
     <Text Include="ReadMe.txt" />
-    <Text Include="Resources\Levels\init.level" />
+    <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gameObjects\Collision.h" />
