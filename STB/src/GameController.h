@@ -41,7 +41,7 @@ private:
 	GameController(GameController const&) = delete;
 	void operator=(GameController const&) = delete;
 	void GameController::changeCursor();
-	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
+	sf::RenderWindow window{ sf::VideoMode(640, 480), "STB", sf::Style::Titlebar | sf::Style::Close };
 	void checkWindow();
 	sf::Sprite cursorsprite;
 	sf::Texture cursortex;
