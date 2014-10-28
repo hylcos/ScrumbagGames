@@ -1,0 +1,95 @@
+\hypertarget{class_factory}{\section{Factory Class Reference}
+\label{class_factory}\index{Factory@{Factory}}
+}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{class_factory_a31534970ff95c9cb57a4883cb8ef7b78}{level\-Settings} \{ {\bfseries random} = 256
+ \}
+\begin{DoxyCompactList}\small\item\em T\-O\-D\-O\-: enum shit idk. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_factory_ac792bf88cfb7b6804b479529da5308cc}{Factory} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the factory class. \end{DoxyCompactList}\item 
+int \hyperlink{class_factory_af0852710e037ab8ded28cc12ec1c099b}{load\-Level} (std\-::string file)
+\begin{DoxyCompactList}\small\item\em The load\-Level method of the factory. \end{DoxyCompactList}\item 
+Game\-Object $\ast$ \hyperlink{class_factory_ad7696889634790fcac45cfd18ae44039}{screen\-\_\-object\-\_\-read} (std\-::ifstream \&input, bool to\-Hud)
+\begin{DoxyCompactList}\small\item\em The screen\-\_\-object\-\_\-read method of the factory. \end{DoxyCompactList}\item 
+\hyperlink{class_factory_a8f71456f48e4df402c778a44191ff40e}{$\sim$\-Factory} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the factory. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_factory_ac792bf88cfb7b6804b479529da5308cc}{\index{Factory@{Factory}!Factory@{Factory}}
+\index{Factory@{Factory}!Factory@{Factory}}
+\subsubsection[{Factory}]{\setlength{\rightskip}{0pt plus 5cm}Factory\-::\-Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_factory_ac792bf88cfb7b6804b479529da5308cc}
+
+
+The constructor of the factory class. 
+
+default constructor, also initializes the game\-Object\-Manager. \hypertarget{class_factory_a8f71456f48e4df402c778a44191ff40e}{\index{Factory@{Factory}!$\sim$\-Factory@{$\sim$\-Factory}}
+\index{$\sim$\-Factory@{$\sim$\-Factory}!Factory@{Factory}}
+\subsubsection[{$\sim$\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}Factory\-::$\sim$\-Factory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_factory_a8f71456f48e4df402c778a44191ff40e}
+
+
+The deconstructor of the factory. 
+
+the default deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_factory_af0852710e037ab8ded28cc12ec1c099b}{\index{Factory@{Factory}!load\-Level@{load\-Level}}
+\index{load\-Level@{load\-Level}!Factory@{Factory}}
+\subsubsection[{load\-Level}]{\setlength{\rightskip}{0pt plus 5cm}int Factory\-::load\-Level (
+\begin{DoxyParamCaption}
+\item[{std\-::string}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_factory_af0852710e037ab8ded28cc12ec1c099b}
+
+
+The load\-Level method of the factory. 
+
+Loads the level from a text file. Puts all items in the map based on the terror level. Also loads all objects to the H\-U\-D. 
+\begin{DoxyParams}{Parameters}
+{\em file} & The file in which all the game objects are stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value of the terror level. 
+\end{DoxyReturn}
+\hypertarget{class_factory_ad7696889634790fcac45cfd18ae44039}{\index{Factory@{Factory}!screen\-\_\-object\-\_\-read@{screen\-\_\-object\-\_\-read}}
+\index{screen\-\_\-object\-\_\-read@{screen\-\_\-object\-\_\-read}!Factory@{Factory}}
+\subsubsection[{screen\-\_\-object\-\_\-read}]{\setlength{\rightskip}{0pt plus 5cm}Game\-Object $\ast$ Factory\-::screen\-\_\-object\-\_\-read (
+\begin{DoxyParamCaption}
+\item[{std\-::ifstream \&}]{input, }
+\item[{bool}]{to\-Hud}
+\end{DoxyParamCaption}
+)}}\label{class_factory_ad7696889634790fcac45cfd18ae44039}
+
+
+The screen\-\_\-object\-\_\-read method of the factory. 
+
+Reads values from a text file and puts them together to create an object. 
+\begin{DoxyParams}{Parameters}
+{\em input} & The stream from which the factory has to read the values for the object \\
+\hline
+{\em to\-Hud} & wether or not the object should be placed on the H\-U\-D \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Object created with all the values read from the input stream 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Factory.\-h\item 
+Factory.\-cpp\end{DoxyCompactItemize}
