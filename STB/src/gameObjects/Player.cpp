@@ -1,3 +1,4 @@
+#include "Particle.h"
 #include "../stdafx.h"
 #include "Player.h"
 #include "../TextureManager.h"
@@ -62,6 +63,12 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
+	i++;
+	if (i > 250){
+		Particle * p =new  Particle(position);
+		LevelController::getInstance().addObject(p);
+		i = 0;
+	}
 	bool isOnBench = false;
 	bool isWalkeble = true;
 	bool collided = false;
