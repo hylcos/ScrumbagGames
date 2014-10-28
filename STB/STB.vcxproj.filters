@@ -119,6 +119,9 @@
     <ClInclude Include="src\gameObjects\menu\Checkbox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\ToggleMusic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -212,6 +215,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\menu\Checkbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\ToggleMusic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

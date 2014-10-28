@@ -22,6 +22,8 @@ public:
 	//Executed every step to check change requests in the music
 	void SoundController::step();
 
+	void SoundController::setBackgroundMusic(bool enabled);
+
 	~SoundController();
 private:
 	SoundController() {};

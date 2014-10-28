@@ -40,6 +40,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/Checkbox"){
 		return new Checkbox();
 	}
+	if (string == "menu/ToggleMusic"){
+		return new ToggleMusic();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

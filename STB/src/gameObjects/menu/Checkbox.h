@@ -8,13 +8,13 @@ public:
 	void Checkbox::update(float speedModifier) override;
 	void Checkbox::draw(sf::RenderWindow & window) const override;
 	void Checkbox::click() override;
-	void Checkbox::setToggleAction(void(*function)(bool checked));
 	sf::FloatRect Checkbox::getBounds() override;
 
 	~Checkbox();
-private:
+protected:
 	bool checked = false;
-	void (*function)(bool checked) = nullptr;
+	virtual void Checkbox::toggle(bool checked);
+private:
 	sf::Texture * texChecked, *texUnchecked;
 	sf::Sprite sprite;
 };
