@@ -7,14 +7,16 @@
 Particle::Particle(sf::Vector2f pos)
 {
 	particle = sf::RectangleShape{};
-	particle.setSize(sf::Vector2f{ 3.0, 3.0 });
+	particle.setSize(sf::Vector2f{ 4.0, 4.0 });
+	particle.setFillColor(sf::Color::Black);
 	GameObject::position = pos;
-	particleSpeed = static_cast<float>(rand() % 50);
+	particleSpeed = static_cast<float>(rand() % 2 + 3);
 	rotation = static_cast<float>(rand() % 360);
+	particle.setRotation(rotation);
 }
 
 void Particle::update(float speedModifier){
-	particleSpeed *= 1.0f - (0.85f * speedModifier);
+	particleSpeed *= 1.0f - (0.1f * speedModifier);
 	if (particleSpeed <= 0.01){
 		LevelController::getInstance().removeObject(this);
 		Particle::~Particle();

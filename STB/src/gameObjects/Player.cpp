@@ -64,9 +64,12 @@ void Player::update(float speedModifier) {
 
 void Player::move(float speedModifier){
 	i++;
-	if (i > 250){
-		Particle * p =new  Particle(position);
-		LevelController::getInstance().addObject(p);
+	if (i > 150){
+		int max = rand() % 3 + 1;
+		for (int x = 0; x < max; x++){
+			Particle * p = new  Particle(position);
+			LevelController::getInstance().addObject(p);
+		}
 		i = 0;
 	}
 	bool isOnBench = false;
