@@ -63,15 +63,7 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
-	i++;
-	if (i > 150){
-		int max = rand() % 3 + 1;
-		for (int x = 0; x < max; x++){
-			Particle * p = new  Particle(position);
-			LevelController::getInstance().addObject(p);
-		}
-		i = 0;
-	}
+	framesTillNextParticle++;
 	bool isOnBench = false;
 	bool isWalkeble = true;
 	bool collided = false;
@@ -119,8 +111,16 @@ void Player::move(float speedModifier){
 		position.x -= (cos(dir) * speedModifier * speed);
 		position.y -= (sin(dir) * speedModifier * speed);
 		if (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16) && isWalkeble){
-			
-			
+
+			// Spawn Particles
+			if (framesTillNextParticle > 1 / speedModifier){
+				int maximumNumberOfParticles = rand() % 3;
+				for (int particleNumber = 0; particleNumber < maximumNumberOfParticles; particleNumber++){
+					Particle * p = new  Particle(position);
+					LevelController::getInstance().addObject(p);
+				}
+				framesTillNextParticle = 0;
+			}
 		}
 		else {
 			position = reservePos;
