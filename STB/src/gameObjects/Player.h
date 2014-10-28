@@ -36,7 +36,6 @@ public:
 	Weapon * Player::getSelectedWeapon();
 	int Player::getHp();
 	float Player::getAmmo();
-
 	void Player::doubleSpeed();
 	void Player::fullHealth();
 };

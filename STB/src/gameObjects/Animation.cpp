@@ -1,6 +1,6 @@
 #include "../stdafx.h"
 #include "Animation.h"
-
+#include <iostream>
 Animation::Animation(gameObjectType type):
 GameObject{ type }
 {
@@ -34,10 +34,23 @@ void Animation::update(float speedModifier) {
 	}
 	curSprite = *Animation::getCurrentAnimation();
 	curSprite.setPosition(position);
-	curSprite.setRotation(rotation);
+	//curSprite.setRotation(rotation);
 }
 
 sf::FloatRect Animation::getBounds(){
+	sf::FloatRect rect = curSprite.getGlobalBounds();
+	/*std::cout << "Left: " << rect.left;
+	std::cout << "Top: " << rect.top;
+	std::cout << "Width: " << rect.width;
+	std::cout << "Height: " << rect.height << "\n";*/
+	rect.left += 6;
+	rect.top += 6;
+	rect.width -= 6;
+	rect.height -= 6;
+	/*std::cout << "Left: " << rect.left;
+	std::cout << "Top: " << rect.top;
+	std::cout << "Width: " << rect.width;
+	std::cout << "Height: " << rect.height << "\n";*/
 	return curSprite.getGlobalBounds();
 }
 

@@ -64,6 +64,14 @@ void GameController::step(){
 	}
 }
 
+sf::Font * GameController::getFont(){
+	if (font == nullptr){
+		font = new sf::Font();
+		font->loadFromFile("Resources/Fonts/Coalition_v2.ttf");
+	}
+	return font;
+}
+
 void GameController::checkWindow(){
 	sf::Event event;
 
@@ -77,6 +85,7 @@ void GameController::checkWindow(){
 			return;
 		}
 		
+		
 	}
 	
 
@@ -84,4 +93,5 @@ void GameController::checkWindow(){
 }
 
 GameController::~GameController(){
+	delete font;
 };

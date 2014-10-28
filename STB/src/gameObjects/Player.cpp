@@ -65,7 +65,8 @@ void Player::move(float speedModifier){
 	bool isOnBench = false;
 	bool isWalkeble = true;
 	bool collided = false;
-	sf::Vector2f newPos{ 0, 0 };
+	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
+
 	for (auto & action : actions){
 		if (sf::Keyboard::isKeyPressed(action.key)){
 			newPos.x += action.x;
@@ -75,9 +76,14 @@ void Player::move(float speedModifier){
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		float dir = atan2(newPos.y, newPos.x);
 		newPos = position;
-		rotation = dir * 180 / 3.14159265358979323846f + 90;
-		newPos.x += cos(dir) * speedModifier * speed;
-		newPos.y += sin(dir) * speedModifier * speed;
+		reservePos = position;
+		rotation = dir * 180 / PI + 90;
+		position.x += (cos(dir) * speedModifier * speed) * 2;
+		position.y += (sin(dir) * speedModifier * speed) * 2;
+		//newPos.x -= (cos(dir) * speedModifier * speed);
+		//newPos.y -= (sin(dir) * speedModifier * speed);
+		curSprite.setPosition(position);
+		curSprite.setRotation(0.0f);
 		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
 			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
 				continue;
@@ -85,12 +91,9 @@ void Player::move(float speedModifier){
 		
 			if (obj->getType() == bench && Collision::collision(LevelController::getInstance().getPlayer(),obj)){
 				isOnBench = true;
-				std::cout << "Oh hell yeah";
 				collided = true;
 			}
 			if (obj->getType() == table && Collision::collision(LevelController::getInstance().getPlayer(), obj)){
-
-				std::cout << "Oh hell yeah times 2";
 				if (isOnBench || isOnTable){
 					isOnTable = true;
 					collided = true;
@@ -105,10 +108,14 @@ void Player::move(float speedModifier){
 			isOnTable = false;
 		}
 
-
-		if (!(newPos.x < 32 + 16 || newPos.x > 1248 -16|| newPos.y < 32 +16 || newPos.y > 934-16) && isWalkeble){
-
-			position = newPos;
+		position.x -= (cos(dir) * speedModifier * speed);
+		position.y -= (sin(dir) * speedModifier * speed);
+		if (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16) && isWalkeble){
+			
+			
+		}
+		else {
+			position = reservePos;
 		}
 
 

@@ -3,6 +3,25 @@
 #include "LevelController.h"
 #include "TextureManager.h"
 
+void HudController::addObject(GameObject * object){
+	gameObjectToAdd.push_back(object);
+}
+void HudController::addObjectFromFactory(GameObject * object){
+	gameObjects.push_back(object);
+}
+void HudController::removeObject(GameObject * object){
+	gameObjectToRemove.insert(object);
+}
+void HudController::removeAllObjects(GameObject * object){
+	if (object == nullptr){
+		return;
+	}
+	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
+	delete object;
+	if (position != gameObjects.end()) // == vector.end() means the element was not found
+		gameObjects.erase(position);
+}
+
 void HudController::load()
 {
 	if (isLoaded){
@@ -25,30 +44,6 @@ void HudController::load()
 
 	background.setFillColor(sf::Color::White);
 	background.setSize(sf::Vector2f(140, 25));
-	
-
-}
-
-void HudController::addObject(GameObject * object){
-	gameObjectToAdd.push_back(object);
-}
-void HudController::addObjectFromFactory(GameObject * object){
-	gameObjects.push_back(object);
-}
-void HudController::removeObject(GameObject * object){
-	gameObjectToRemove.insert(object);
-}
-void HudController::removeAllObjects(GameObject * object){
-	if (object == nullptr){
-		return;
-	}
-	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
-	delete object;
-	if (position != gameObjects.end()) // == vector.end() means the element was not found
-		gameObjects.erase(position);
-}
-void HudController::prepareForNextLevel(){
-	gameObjects.clear();
 }
 void HudController::step(sf::RenderWindow & window){
 	float speedModifier = 60 / GameController::getInstance().getFPS();
@@ -78,7 +73,7 @@ void HudController::step(sf::RenderWindow & window){
 		HPForeGround.setSize(sf::Vector2f(100, 15));
 		ammoForeGround.setSize(sf::Vector2f(100, 15));
 	}
-	
+
 	background.setPosition(sf::Vector2f(40, 455));
 	window.draw(background);
 	background.setPosition(sf::Vector2f(280, 455));
@@ -87,6 +82,9 @@ void HudController::step(sf::RenderWindow & window){
 	window.draw(HPForeGround);
 	window.draw(ammoBackGround);
 	window.draw(ammoForeGround);
+}
+void HudController::prepareForNextLevel(){
+	gameObjects.clear();
 }
 
 sf::Vector2f HudController::getMousePos(){

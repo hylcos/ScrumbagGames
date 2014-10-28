@@ -414,6 +414,6 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <Font Include="Resources\Fonts\Coalition_v2..ttf" />
+    <Font Include="Resources\Fonts\Coalition_v2.ttf" />
   </ItemGroup>
 </Project>

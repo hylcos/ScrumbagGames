@@ -55,6 +55,8 @@ public:
 	*/
 	sf::RenderWindow& GameController::getWindow();
 
+	sf::Font * GameController::getFont();
+
 	//! The deconstructor of the gamecontroller
 	/*
 	Deallocates the gamecontroller.
@@ -66,13 +68,14 @@ private:
 	GameController(GameController const&) = delete;
 	void operator=(GameController const&) = delete;
 	void GameController::changeCursor();
-	sf::RenderWindow window{ sf::VideoMode{640,480} ,"STB"};
+	sf::RenderWindow window{ sf::VideoMode(640, 480), "STB", sf::Style::Titlebar | sf::Style::Close };
 	void checkWindow();
 	sf::Sprite cursorsprite;
 	sf::Texture cursortex;
 	float fps = 100.0f;
 	int frames = 0;
 	clock_t nextClock;
+	sf::Font * font = nullptr;
 
 	void step();
 	bool stopping = false;

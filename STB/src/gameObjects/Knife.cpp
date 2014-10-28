@@ -38,11 +38,6 @@ void Knife::fire(){
 	
 }
 
-void Knife::setRotation(float rotation){
-	sprite.setRotation(rotation);
-	melee.setRotation(rotation);
-}
-
 void Knife::update(float speedModifier) {
 	hitCooldown -= speedModifier;
 	if (hitCooldown < attackSpeed *0.8){
@@ -57,4 +52,9 @@ void Knife::draw(sf::RenderWindow & window) const {
 	if (drawMelee){
 		window.draw(melee);
 	}
+}
+
+void Knife::setRotation(float rotation){
+	sprite.setRotation(rotation);
+	melee.setRotation(rotation);
 }
