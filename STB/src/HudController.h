@@ -24,6 +24,11 @@ public:
 		instance.load();
 		return instance;
 	}
+
+	//! The add object method of the HUD controller
+	/*
+	
+	*/
 	//add GameObject
 	//
 	//This function will put a new GameObject under the control of the GameController.
