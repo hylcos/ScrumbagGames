@@ -43,7 +43,7 @@
 	}*/
 
 float Collision::dist2(sf::Vector2f p1, sf::Vector2f p2){
-	return pow(p1.x - p2.x,2) + pow(p1.y - p2.y,2);
+	return pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2);
 }
 
 float Collision::distToSegment(Line line, sf::Vector2f point){
@@ -70,7 +70,8 @@ bool Collision::collision(GameObject * circle, GameObject * square)
 	one.vertex[2] = transform.transformPoint(sf::Vector2f(rect.left + rect.width, rect.top + rect.height));
 	one.vertex[3] = transform.transformPoint(sf::Vector2f(rect.left, rect.top + rect.height));
 
-	Line lines[] = { Line{ one.vertex[0], one.vertex[1] }, Line{ one.vertex[2], one.vertex[1] }, Line{ one.vertex[2], one.vertex[3] }, Line{ one.vertex[0], one.vertex[3] } };
+	Line middleLine{ transform.transformPoint(sf::Vector2f(rect.left, rect.top + rect.height / 2)), transform.transformPoint(sf::Vector2f(rect.left + rect.width, rect.top + rect.height / 2)), };
+	Line lines[] = { Line{ one.vertex[0], one.vertex[1] }, Line{ one.vertex[2], one.vertex[1] }, Line{ one.vertex[2], one.vertex[3] }, Line{ one.vertex[0], one.vertex[3] }, middleLine };
 
 	for (Line & line : lines){
 		if (distToSegment(line, circleOrigin) < maxDist){

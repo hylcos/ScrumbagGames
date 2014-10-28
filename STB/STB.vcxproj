@@ -89,9 +89,10 @@
   <ItemGroup>
     <Text Include="Idea.txt" />
     <Text Include="ReadMe.txt" />
-    <Text Include="Resources\Levels\init.level" />
+    <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Particle.h" />
     <ClInclude Include="src\gameObjects\Collision.h" />
     <ClInclude Include="src\gameObjects\Bullet.h" />
     <ClInclude Include="src\gameObjects\Clickable.h" />
@@ -127,6 +128,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Particle.cpp" />
     <ClCompile Include="src\gameObjects\Collision.cpp" />
     <ClCompile Include="src\gameObjects\Bullet.cpp" />
     <ClCompile Include="src\gameObjects\Clickable.cpp" />

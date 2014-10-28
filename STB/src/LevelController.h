@@ -26,7 +26,7 @@ public:
 	void LevelController::goToNextLevel(LevelController::Initializer * initializer);
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
-	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
+	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/levelOne.level" };
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
 	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 

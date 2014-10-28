@@ -23,7 +23,7 @@
   <ItemGroup>
     <Text Include="ReadMe.txt" />
     <Text Include="Idea.txt" />
-    <Text Include="Resources\Levels\init.level" />
+    <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GameController.h">
@@ -125,6 +125,9 @@
     <ClInclude Include="src\gameObjects\menu\Resume.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\Particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -224,6 +227,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\menu\Resume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Particle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
