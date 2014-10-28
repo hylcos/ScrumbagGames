@@ -14,6 +14,7 @@ public:
 protected:
 	bool checked = false;
 	virtual void Checkbox::toggle(bool checked);
+	sf::Text text;
 private:
 	sf::Texture * texChecked, *texUnchecked;
 	sf::Sprite sprite;

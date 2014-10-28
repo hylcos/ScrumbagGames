@@ -55,6 +55,8 @@ public:
 	*/
 	sf::RenderWindow& GameController::getWindow();
 
+	sf::Font * GameController::getFont();
+
 	//! The deconstructor of the gamecontroller
 	/*
 	Deallocates the gamecontroller.
@@ -73,6 +75,7 @@ private:
 	float fps = 100.0f;
 	int frames = 0;
 	clock_t nextClock;
+	sf::Font * font = nullptr;
 
 	void step();
 	bool stopping = false;
