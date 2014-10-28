@@ -85,6 +85,7 @@ void GameController::checkWindow(){
 			return;
 		}
 		
+		
 	}
 	
 

@@ -1,3 +1,7 @@
+//! The HUDController header file
+/*!
+This is the header file of the HUD controller class.
+*/
 #pragma once
 #include <SFML\Graphics.hpp>
 #include <unordered_set>
@@ -6,6 +10,14 @@
 class HudController
 {
 public:
+
+	//!The getInsatnce method of the HUD controller
+	/*!
+	This method makes sure there is only 1 instance of the HUD controller at a time.
+	This way, every time an external class uses a HUD controller, it uses a HUD controller
+	with the same attributes as every other class.
+	@return
+	*/
 	static HudController& getInstance()
 	{
 		static HudController    instance;
