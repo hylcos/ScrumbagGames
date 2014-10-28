@@ -78,13 +78,12 @@ void Player::move(float speedModifier){
 		newPos = position;
 		reservePos = position;
 		rotation = dir * 180 / PI + 90;
-		newPos.x += (cos(dir) * speedModifier * speed) * 2;
-		newPos.y += (sin(dir) * speedModifier * speed) * 2;
-		
-		position = newPos;
-		position.x -= (cos(dir) * speedModifier * speed);
-		position.y -= (sin(dir) * speedModifier * speed);
+		position.x += (cos(dir) * speedModifier * speed) * 2;
+		position.y += (sin(dir) * speedModifier * speed) * 2;
+		//newPos.x -= (cos(dir) * speedModifier * speed);
+		//newPos.y -= (sin(dir) * speedModifier * speed);
 		curSprite.setPosition(position);
+		curSprite.setRotation(0.0f);
 		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
 			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
 				continue;
@@ -109,9 +108,10 @@ void Player::move(float speedModifier){
 			isOnTable = false;
 		}
 
-
-		if (!(newPos.x < 32 + 16 || newPos.x > 1248 -16|| newPos.y < 32 + 6 || newPos.y > 934-16) && isWalkeble){
-	
+		position.x -= (cos(dir) * speedModifier * speed);
+		position.y -= (sin(dir) * speedModifier * speed);
+		if (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16) && isWalkeble){
+			
 			
 		}
 		else {

@@ -34,7 +34,7 @@ void Animation::update(float speedModifier) {
 	}
 	curSprite = *Animation::getCurrentAnimation();
 	curSprite.setPosition(position);
-	curSprite.setRotation(rotation);
+	//curSprite.setRotation(rotation);
 }
 
 sf::FloatRect Animation::getBounds(){
