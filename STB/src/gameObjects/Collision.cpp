@@ -2,7 +2,6 @@
 #include "Collision.h"
 #include <iostream>
 
-
 /*void Collision::normalize(sf::Vector2f& vector) {
 	const float length = sqrt(vector.x * vector.x + vector.y * vector.y);
 	if (length == 0)
@@ -57,7 +56,7 @@ float Collision::distToSegment(Line line, sf::Vector2f point){
 		line.p1.y + t * (line.p2.y - line.p1.y) }));
 }
 
-bool Collision::collision(GameObject * square, GameObject * circle)
+bool Collision::collision(GameObject * circle, GameObject * square)
 {
 	sf::FloatRect rect = square->getBounds();
 	float maxDist = circle->getSize().x / 2.0f;
@@ -70,12 +69,12 @@ bool Collision::collision(GameObject * square, GameObject * circle)
 	one.vertex[1] = transform.transformPoint(sf::Vector2f(rect.left + rect.width, rect.top));
 	one.vertex[2] = transform.transformPoint(sf::Vector2f(rect.left + rect.width, rect.top + rect.height));
 	one.vertex[3] = transform.transformPoint(sf::Vector2f(rect.left, rect.top + rect.height));
+
 	Line lines[] = { Line{ one.vertex[0], one.vertex[1] }, Line{ one.vertex[2], one.vertex[1] }, Line{ one.vertex[2], one.vertex[3] }, Line{ one.vertex[0], one.vertex[3] } };
 
 	for (Line & line : lines){
 		if (distToSegment(line, circleOrigin) < maxDist){
-			std::cout << "Collision  dist " << distToSegment(line, circleOrigin) << "\n";
-			true;
+			return true;
 		}
 	}
 	return false;

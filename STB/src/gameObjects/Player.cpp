@@ -80,20 +80,18 @@ void Player::move(float speedModifier){
 		rotation = dir * 180 / PI + 90;
 		position.x += (cos(dir) * speedModifier * speed) * 2;
 		position.y += (sin(dir) * speedModifier * speed) * 2;
-		//newPos.x -= (cos(dir) * speedModifier * speed);
-		//newPos.y -= (sin(dir) * speedModifier * speed);
+
 		curSprite.setPosition(position);
-		curSprite.setRotation(0.0f);
 		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
 			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
 				continue;
 			}
 		
-			if (obj->getType() == bench && Collision::collision(LevelController::getInstance().getPlayer(),obj)){
+			if (obj->getType() == bench && Collision::collision(this,obj)){
 				isOnBench = true;
 				collided = true;
 			}
-			if (obj->getType() == table && Collision::collision(LevelController::getInstance().getPlayer(), obj)){
+			if (obj->getType() == table && Collision::collision(this, obj)){
 				if (isOnBench || isOnTable){
 					isOnTable = true;
 					collided = true;
@@ -156,6 +154,10 @@ void Player::fullHealth(){
 	hp = 100;
 }
 
+sf::Vector2u Player::getSize(){
+
+	return sf::Vector2u{ static_cast<unsigned int>(getBounds().width), static_cast<unsigned int>(getBounds().height) };
+}
 Player::~Player()
 {
 	
