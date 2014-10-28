@@ -1,6 +1,6 @@
 var NAVTREE =
 [
-  [ "Shoot The Bully", "index.html", [
+  [ "My Project", "index.html", [
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
       [ "Class Index", "classes.html", null ],

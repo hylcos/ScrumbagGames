@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Shoot The Bully: HudController.h Source File</title>
+<title>My Project: HudController.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -29,7 +29,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Shoot The Bully
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -117,51 +117,61 @@ $(document).ready(function(){initNavTree('_hud_controller_8h_source.html','');})
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_hud_controller.html#a9dafa97894bb74e7ada5ab5f76b886c4">   21</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_hud_controller.html">HudController</a>&amp; <a class="code" href="class_hud_controller.html#a9dafa97894bb74e7ada5ab5f76b886c4">getInstance</a>()</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_hud_controller.html">HudController</a>    instance;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        instance.load();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        instance.<a class="code" href="class_hud_controller.html#abeeed176eb5114ce613c499135c528d4">load</a>();</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">return</span> instance;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">    </span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//add GameObject</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="comment">//This function will put a new GameObject under the control of the GameController.</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#a27862a3db822f65de6dbcf22835ec58a">HudController::addObject</a>(GameObject * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#a27862a3db822f65de6dbcf22835ec58a">HudController::addObject</a>(GameObject * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> HudController::addObjectFromFactory(GameObject * <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="comment">//remove GameObject</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">//This function will remove a GameObject under the control of the GameController, and DESTROY the GameObject in question.</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> HudController::removeObject(GameObject * <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> HudController::removeAllObjects(GameObject * <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> HudController::load();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> HudController::step(sf::RenderWindow &amp; window);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#abaab3a30a47733b2588236100267e206">HudController::addObjectFromFactory</a>(GameObject * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#ab07bc4161257a8fbc16df56ed9dbf1ea">HudController::removeObject</a>(GameObject * <span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    sf::Vector2f HudController::getMousePos();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> HudController::prepareForNextLevel();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="comment">//const std::vector&lt;GameObject *&gt; HudController::getGameObjects();</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    ~<a class="code" href="class_hud_controller.html">HudController</a>(){};</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_hud_controller.html">HudController</a>() {};</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_hud_controller.html">HudController</a>(<a class="code" href="class_hud_controller.html">HudController</a> <span class="keyword">const</span>&amp;);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="class_hud_controller.html">HudController</a> <span class="keyword">const</span>&amp;);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> isLoaded = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    sf::RectangleShape HPBackGround, HPForeGround;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    sf::RectangleShape ammoBackGround, ammoForeGround;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    sf::RectangleShape background;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    std::vector&lt; GameObject* &gt; gameObjects, gameObjectToAdd;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    std::unordered_set&lt;GameObject*&gt; gameObjectToRemove;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#aac63180083695594ae2d17278c13d604">HudController::removeAllObjects</a>(GameObject * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#abeeed176eb5114ce613c499135c528d4">HudController::load</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#a6cd82988ca9221b6cb8d520a8e26b204">HudController::step</a>(sf::RenderWindow &amp; window);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="ttc" id="class_hud_controller_html_a27862a3db822f65de6dbcf22835ec58a"><div class="ttname"><a href="class_hud_controller.html#a27862a3db822f65de6dbcf22835ec58a">HudController::addObject</a></div><div class="ttdeci">void addObject(GameObject *object)</div><div class="ttdoc">The add object method of the HUD controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:32</div></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    sf::Vector2f <a class="code" href="class_hud_controller.html#a4c6c9c53841c41d156a2f715a43be703">HudController::getMousePos</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_hud_controller.html#a9e9c4e19bdb0bc55247c96e79c5548c3">HudController::prepareForNextLevel</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="class_hud_controller.html#a53264716b1a602a351a7bfcebb0d4dc1">   85</a></span>&#160;    <a class="code" href="class_hud_controller.html#a53264716b1a602a351a7bfcebb0d4dc1">~HudController</a>(){};</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="class_hud_controller.html">HudController</a>() {};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="class_hud_controller.html">HudController</a>(<a class="code" href="class_hud_controller.html">HudController</a> <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="class_hud_controller.html">HudController</a> <span class="keyword">const</span>&amp;);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> isLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    sf::RectangleShape HPBackGround, HPForeGround;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    sf::RectangleShape ammoBackGround, ammoForeGround;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    sf::RectangleShape background;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    std::vector&lt; GameObject* &gt; gameObjects, gameObjectToAdd;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    std::unordered_set&lt;GameObject*&gt; gameObjectToRemove;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;};</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="ttc" id="class_hud_controller_html_a6cd82988ca9221b6cb8d520a8e26b204"><div class="ttname"><a href="class_hud_controller.html#a6cd82988ca9221b6cb8d520a8e26b204">HudController::step</a></div><div class="ttdeci">void step(sf::RenderWindow &amp;window)</div><div class="ttdoc">The step method of the HUD controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:48</div></div>
+<div class="ttc" id="class_hud_controller_html_aac63180083695594ae2d17278c13d604"><div class="ttname"><a href="class_hud_controller.html#aac63180083695594ae2d17278c13d604">HudController::removeAllObjects</a></div><div class="ttdeci">void removeAllObjects(GameObject *object)</div><div class="ttdoc">The remove all objects method of the hud controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:15</div></div>
+<div class="ttc" id="class_hud_controller_html_a9e9c4e19bdb0bc55247c96e79c5548c3"><div class="ttname"><a href="class_hud_controller.html#a9e9c4e19bdb0bc55247c96e79c5548c3">HudController::prepareForNextLevel</a></div><div class="ttdeci">void prepareForNextLevel()</div><div class="ttdoc">the prepare for next level method of the hud controller </div><div class="ttdef"><b>Definition:</b> HudController.cpp:86</div></div>
+<div class="ttc" id="class_hud_controller_html_ab07bc4161257a8fbc16df56ed9dbf1ea"><div class="ttname"><a href="class_hud_controller.html#ab07bc4161257a8fbc16df56ed9dbf1ea">HudController::removeObject</a></div><div class="ttdeci">void removeObject(GameObject *object)</div><div class="ttdoc">The remove object method of the hud controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:12</div></div>
+<div class="ttc" id="class_hud_controller_html_a4c6c9c53841c41d156a2f715a43be703"><div class="ttname"><a href="class_hud_controller.html#a4c6c9c53841c41d156a2f715a43be703">HudController::getMousePos</a></div><div class="ttdeci">sf::Vector2f getMousePos()</div><div class="ttdoc">the get mouse position method of the hud controller </div><div class="ttdef"><b>Definition:</b> HudController.cpp:90</div></div>
+<div class="ttc" id="class_hud_controller_html_abeeed176eb5114ce613c499135c528d4"><div class="ttname"><a href="class_hud_controller.html#abeeed176eb5114ce613c499135c528d4">HudController::load</a></div><div class="ttdeci">void load()</div><div class="ttdoc">The load method of the hud controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:25</div></div>
+<div class="ttc" id="class_hud_controller_html_a27862a3db822f65de6dbcf22835ec58a"><div class="ttname"><a href="class_hud_controller.html#a27862a3db822f65de6dbcf22835ec58a">HudController::addObject</a></div><div class="ttdeci">void addObject(GameObject *object)</div><div class="ttdoc">The add object method of the HUD controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:6</div></div>
+<div class="ttc" id="class_hud_controller_html_abaab3a30a47733b2588236100267e206"><div class="ttname"><a href="class_hud_controller.html#abaab3a30a47733b2588236100267e206">HudController::addObjectFromFactory</a></div><div class="ttdeci">void addObjectFromFactory(GameObject *object)</div><div class="ttdoc">The add object from factory method of the hud controller. </div><div class="ttdef"><b>Definition:</b> HudController.cpp:9</div></div>
+<div class="ttc" id="class_hud_controller_html_a53264716b1a602a351a7bfcebb0d4dc1"><div class="ttname"><a href="class_hud_controller.html#a53264716b1a602a351a7bfcebb0d4dc1">HudController::~HudController</a></div><div class="ttdeci">~HudController()</div><div class="ttdoc">the deconstructor of the hud controller </div><div class="ttdef"><b>Definition:</b> HudController.h:85</div></div>
 <div class="ttc" id="class_hud_controller_html_a9dafa97894bb74e7ada5ab5f76b886c4"><div class="ttname"><a href="class_hud_controller.html#a9dafa97894bb74e7ada5ab5f76b886c4">HudController::getInstance</a></div><div class="ttdeci">static HudController &amp; getInstance()</div><div class="ttdoc">The getInsatnce method of the HUD controller. </div><div class="ttdef"><b>Definition:</b> HudController.h:21</div></div>
 <div class="ttc" id="class_hud_controller_html"><div class="ttname"><a href="class_hud_controller.html">HudController</a></div><div class="ttdoc">The HUDController header file. </div><div class="ttdef"><b>Definition:</b> HudController.h:10</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -170,7 +180,7 @@ $(document).ready(function(){initNavTree('_hud_controller_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>HudController.h</b></li>
-    <li class="footer">Generated on Tue Oct 28 2014 13:18:07 for Shoot The Bully by
+    <li class="footer">Generated on Tue Oct 28 2014 13:42:08 for My Project by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.5 </li>
   </ul>
