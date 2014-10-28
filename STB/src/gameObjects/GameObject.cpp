@@ -9,8 +9,9 @@ type{ type }
 
 }
 
-GameObject::GameObject(sf::Vector2f pos) :
-position{pos}
+GameObject::GameObject(sf::Vector2f pos, gameObjectType type) :
+position{pos},
+type{ type }
 {
 }
 

@@ -24,17 +24,12 @@ sf::FloatRect Checkbox::getBounds(){
 	return sprite.getGlobalBounds();
 }
 
-void Checkbox::setToggleAction(void(*function)(bool checked)){
-	this->function = function;
-}
+void Checkbox::toggle(bool checked){}
 
 void Checkbox::click(){
 	checked = !checked;
 	sprite.setTexture((checked ? *texChecked : *texUnchecked), true);
-	if (function == nullptr){
-		return;
-	}
-	(function)(checked);
+	toggle(checked);
 }
 
 Checkbox::~Checkbox()
