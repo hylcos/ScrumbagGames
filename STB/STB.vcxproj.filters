@@ -449,6 +449,33 @@
     <Image Include="Resources\Images\PauseMenuOverlay.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\Sprites\Table2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Table3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\AmmoBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\BuffsBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\ExtraWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\HUDdesign.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\HealthBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\Timer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\PauseMenuOverlay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Coalition_v2.ttf" />
