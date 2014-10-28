@@ -22,6 +22,7 @@ private:
 	bool isOnTable = false;
 	int hp = 100;
 	int speed = 1;
+	int i = 0;
 
 public:
 	sf::Texture tex1, tex2, tex3;

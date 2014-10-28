@@ -89,9 +89,10 @@
   <ItemGroup>
     <Text Include="Idea.txt" />
     <Text Include="ReadMe.txt" />
-    <Text Include="Resources\Levels\init.level" />
+    <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Particle.h" />
     <ClInclude Include="src\gameObjects\Collision.h" />
     <ClInclude Include="src\gameObjects\Bullet.h" />
     <ClInclude Include="src\gameObjects\Clickable.h" />
@@ -104,6 +105,7 @@
     <ClInclude Include="src\gameObjects\menu\MainMenu.h" />
     <ClInclude Include="src\gameObjects\menu\Options.h" />
     <ClInclude Include="src\gameObjects\menu\play.h" />
+    <ClInclude Include="src\gameObjects\menu\Resume.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleMusic.h" />
     <ClInclude Include="src\gameObjects\Player.h" />
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />
@@ -126,6 +128,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Particle.cpp" />
     <ClCompile Include="src\gameObjects\Collision.cpp" />
     <ClCompile Include="src\gameObjects\Bullet.cpp" />
     <ClCompile Include="src\gameObjects\Clickable.cpp" />
@@ -138,6 +141,7 @@
     <ClCompile Include="src\gameObjects\menu\MainMenu.cpp" />
     <ClCompile Include="src\gameObjects\menu\Options.cpp" />
     <ClCompile Include="src\gameObjects\menu\play.cpp" />
+    <ClCompile Include="src\gameObjects\menu\Resume.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleMusic.cpp" />
     <ClCompile Include="src\gameObjects\Player.cpp" />
     <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
@@ -196,6 +200,7 @@
     <Image Include="Resources\Images\menuObjecten\OptionsButton.png" />
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
+    <Image Include="Resources\Images\PauseMenuOverlay.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
     <Image Include="Resources\Images\Sprites\Crosshair.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Average\1.png" />
