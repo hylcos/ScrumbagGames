@@ -19,7 +19,8 @@ public:
 		table,
 		bench,
 		powerup,
-		weapon
+		weapon,
+		particle
 	};
 
 	//! The standard constructor of the gameobject
