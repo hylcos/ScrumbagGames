@@ -41,6 +41,9 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SOLUTIONDIR)/STB/deps/SFML/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SOLUTIONDIR)/STB/deps/SFML/lib;$(LibraryPath)</LibraryPath>
+    <ExecutablePath>$(SOLUTIONDIR)/STB/deps/SFML/bin;$(VC_ExecutablePath_x86);$(WindowsSDK_ExecutablePath);$(VS_ExecutablePath);$(MSBuild_ExecutablePath);$(SystemRoot)\SysWow64;$(FxCopDir);$(PATH);</ExecutablePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -52,15 +55,19 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\SFML\SFML-2.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SOLUTIONDIR)\STB\deps\SFML\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <TreatWarningAsError>true</TreatWarningAsError>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\SFML\SFML-2.1\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SOLUTIONDIR)/STB/deps/SFML/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>sfml-graphics-d.lib;sfml-window-d.lib;sfml-audio-d.lib;sfml-system-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -85,11 +92,19 @@
     <Text Include="Resources\Levels\init.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\Collision.h" />
     <ClInclude Include="src\gameObjects\Bullet.h" />
+    <ClInclude Include="src\gameObjects\Clickable.h" />
     <ClInclude Include="src\gameObjects\Enemy.h" />
     <ClInclude Include="src\gameObjects\Animation.h" />
     <ClInclude Include="src\gameObjects\Bench.h" />
     <ClInclude Include="src\gameObjects\Gun.h" />
+    <ClInclude Include="src\gameObjects\Knife.h" />
+    <ClInclude Include="src\gameObjects\menu\Checkbox.h" />
+    <ClInclude Include="src\gameObjects\menu\MainMenu.h" />
+    <ClInclude Include="src\gameObjects\menu\Options.h" />
+    <ClInclude Include="src\gameObjects\menu\play.h" />
+    <ClInclude Include="src\gameObjects\menu\ToggleMusic.h" />
     <ClInclude Include="src\gameObjects\Player.h" />
     <ClInclude Include="src\gameObjects\GameObjectManager.h" />
     <ClInclude Include="src\Exception.h" />
@@ -99,6 +114,7 @@
     <ClInclude Include="src\gameObjects\Powerup.h" />
     <ClInclude Include="src\gameObjects\Table.h" />
     <ClInclude Include="src\gameObjects\Weapon.h" />
+    <ClInclude Include="src\gameObjects\WeaponManager.h" />
     <ClInclude Include="src\HudController.h" />
     <ClInclude Include="src\LevelController.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
@@ -110,11 +126,19 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\Collision.cpp" />
     <ClCompile Include="src\gameObjects\Bullet.cpp" />
+    <ClCompile Include="src\gameObjects\Clickable.cpp" />
     <ClCompile Include="src\gameObjects\Enemy.cpp" />
     <ClCompile Include="src\gameObjects\Animation.cpp" />
     <ClCompile Include="src\gameObjects\Bench.cpp" />
     <ClCompile Include="src\gameObjects\Gun.cpp" />
+    <ClCompile Include="src\gameObjects\Knife.cpp" />
+    <ClCompile Include="src\gameObjects\menu\Checkbox.cpp" />
+    <ClCompile Include="src\gameObjects\menu\MainMenu.cpp" />
+    <ClCompile Include="src\gameObjects\menu\Options.cpp" />
+    <ClCompile Include="src\gameObjects\menu\play.cpp" />
+    <ClCompile Include="src\gameObjects\menu\ToggleMusic.cpp" />
     <ClCompile Include="src\gameObjects\Player.cpp" />
     <ClCompile Include="src\gameObjects\GameObjectManager.cpp" />
     <ClCompile Include="src\Exception.cpp" />
@@ -124,6 +148,7 @@
     <ClCompile Include="src\gameObjects\Powerup.cpp" />
     <ClCompile Include="src\gameObjects\Table.cpp" />
     <ClCompile Include="src\gameObjects\Weapon.cpp" />
+    <ClCompile Include="src\gameObjects\WeaponManager.cpp" />
     <ClCompile Include="src\HudController.cpp" />
     <ClCompile Include="src\LevelController.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
@@ -138,12 +163,10 @@
     <ClCompile Include="src\TextureManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Documentation\Class Diagram part1.simp" />
-    <None Include="Documentation\Game Sequence.xlsx" />
-    <None Include="Documentation\High-Concept-Document-Verbetering.doc" />
-    <None Include="Documentation\SFML Game Development.pdf" />
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
+    <None Include="Resources\Levels\mainMenu.level" />
+    <None Include="Resources\Levels\optionsMenu.level" />
     <None Include="Resources\Sounds\intro.ogg" />
   </ItemGroup>
   <ItemGroup>
@@ -158,6 +181,15 @@
     <Image Include="Resources\Images\Menu objecten\MenuBackgroundTab.png" />
     <Image Include="Resources\Images\Menu objecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\Menu objecten\UncheckedOption.png" />
+    <Image Include="Resources\Images\menuObjecten\BackButton.png" />
+    <Image Include="Resources\Images\menuObjecten\BacktoMenuButton.png" />
+    <Image Include="Resources\Images\menuObjecten\button.png" />
+    <Image Include="Resources\Images\menuObjecten\CheckedOption.png" />
+    <Image Include="Resources\Images\menuObjecten\Menu titel.png" />
+    <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png" />
+    <Image Include="Resources\Images\menuObjecten\OptionsButton.png" />
+    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
+    <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
     <Image Include="Resources\Images\Sprites\Crosshair.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Average\1.png" />
@@ -175,7 +207,7 @@
     <Image Include="Resources\Images\Sprites\Enemies\Fat\3.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Fat\4.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Fat\melee.png" />
-    <Image Include="Resources\Images\Sprites\PlayButton.png" />
+    <Image Include="Resources\Images\menuObjecten\PlayButton.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-1.png" />
@@ -185,12 +217,23 @@
     <Image Include="Resources\Images\Sprites\Powerup.png" />
     <Image Include="Resources\Images\Sprites\Table.png" />
     <Image Include="Resources\Images\Sprites\Trashcan.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\dagger.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\dagger_hit.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol.png" />
     <Image Include="Resources\Images\Sprites\Weapons\pistol_bullet.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\rifle.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\rifle_bullet.png" />
     <Image Include="Resources\Images\Sprites\Weapons\shotgun.png" />
     <Image Include="Resources\Images\Sprites\Weapons\shotgun_bullet.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sniper.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sniper_bullet.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sword.png" />
+    <Image Include="Resources\Images\Sprites\Weapons\sword_hit.png" />
     <Image Include="Resources\Images\Sprites\Weapons\uzi.png" />
     <Image Include="Resources\Images\Sprites\Weapons\uzi_bullet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Resources\Fonts\Coalition_v2.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,0 +1,196 @@
+\hypertarget{class_hud_controller}{\section{Hud\-Controller Class Reference}
+\label{class_hud_controller}\index{Hud\-Controller@{Hud\-Controller}}
+}
+
+
+The H\-U\-D\-Controller header file.  
+
+
+
+
+{\ttfamily \#include $<$Hud\-Controller.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_hud_controller_a27862a3db822f65de6dbcf22835ec58a}{add\-Object} (Game\-Object $\ast$object)
+\begin{DoxyCompactList}\small\item\em The add object method of the H\-U\-D controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_abaab3a30a47733b2588236100267e206}{add\-Object\-From\-Factory} (Game\-Object $\ast$object)
+\begin{DoxyCompactList}\small\item\em The add object from factory method of the hud controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_ab07bc4161257a8fbc16df56ed9dbf1ea}{remove\-Object} (Game\-Object $\ast$object)
+\begin{DoxyCompactList}\small\item\em The remove object method of the hud controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_aac63180083695594ae2d17278c13d604}{remove\-All\-Objects} (Game\-Object $\ast$object)
+\begin{DoxyCompactList}\small\item\em The remove all objects method of the hud controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_abeeed176eb5114ce613c499135c528d4}{load} ()
+\begin{DoxyCompactList}\small\item\em The load method of the hud controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_a6cd82988ca9221b6cb8d520a8e26b204}{step} (sf\-::\-Render\-Window \&window)
+\begin{DoxyCompactList}\small\item\em The step method of the H\-U\-D controller. \end{DoxyCompactList}\item 
+sf\-::\-Vector2f \hyperlink{class_hud_controller_a4c6c9c53841c41d156a2f715a43be703}{get\-Mouse\-Pos} ()
+\begin{DoxyCompactList}\small\item\em the get mouse position method of the hud controller \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_a9e9c4e19bdb0bc55247c96e79c5548c3}{prepare\-For\-Next\-Level} ()
+\begin{DoxyCompactList}\small\item\em the prepare for next level method of the hud controller \end{DoxyCompactList}\item 
+\hyperlink{class_hud_controller_a53264716b1a602a351a7bfcebb0d4dc1}{$\sim$\-Hud\-Controller} ()
+\begin{DoxyCompactList}\small\item\em the deconstructor of the hud controller \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_hud_controller}{Hud\-Controller} \& \hyperlink{class_hud_controller_a9dafa97894bb74e7ada5ab5f76b886c4}{get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em The get\-Insatnce method of the H\-U\-D controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The H\-U\-D\-Controller header file. 
+
+This is the header file of the H\-U\-D controller class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_hud_controller_a53264716b1a602a351a7bfcebb0d4dc1}{\index{Hud\-Controller@{Hud\-Controller}!$\sim$\-Hud\-Controller@{$\sim$\-Hud\-Controller}}
+\index{$\sim$\-Hud\-Controller@{$\sim$\-Hud\-Controller}!HudController@{Hud\-Controller}}
+\subsubsection[{$\sim$\-Hud\-Controller}]{\setlength{\rightskip}{0pt plus 5cm}Hud\-Controller\-::$\sim$\-Hud\-Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_hud_controller_a53264716b1a602a351a7bfcebb0d4dc1}
+
+
+the deconstructor of the hud controller 
+
+default 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_hud_controller_a27862a3db822f65de6dbcf22835ec58a}{\index{Hud\-Controller@{Hud\-Controller}!add\-Object@{add\-Object}}
+\index{add\-Object@{add\-Object}!HudController@{Hud\-Controller}}
+\subsubsection[{add\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::add\-Object (
+\begin{DoxyParamCaption}
+\item[{Game\-Object $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a27862a3db822f65de6dbcf22835ec58a}
+
+
+The add object method of the H\-U\-D controller. 
+
+This function will put a new game object under the control of the game controller 
+\begin{DoxyParams}{Parameters}
+{\em object} & The object that has to be added \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hud_controller_abaab3a30a47733b2588236100267e206}{\index{Hud\-Controller@{Hud\-Controller}!add\-Object\-From\-Factory@{add\-Object\-From\-Factory}}
+\index{add\-Object\-From\-Factory@{add\-Object\-From\-Factory}!HudController@{Hud\-Controller}}
+\subsubsection[{add\-Object\-From\-Factory}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::add\-Object\-From\-Factory (
+\begin{DoxyParamCaption}
+\item[{Game\-Object $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_abaab3a30a47733b2588236100267e206}
+
+
+The add object from factory method of the hud controller. 
+
+Puts an object created by the factory under control of the game controller 
+\begin{DoxyParams}{Parameters}
+{\em object} & The object from the factory \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hud_controller_a9dafa97894bb74e7ada5ab5f76b886c4}{\index{Hud\-Controller@{Hud\-Controller}!get\-Instance@{get\-Instance}}
+\index{get\-Instance@{get\-Instance}!HudController@{Hud\-Controller}}
+\subsubsection[{get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Hud\-Controller}\& Hud\-Controller\-::get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_hud_controller_a9dafa97894bb74e7ada5ab5f76b886c4}
+
+
+The get\-Insatnce method of the H\-U\-D controller. 
+
+This method makes sure there is only 1 instance of the H\-U\-D controller at a time. This way, every time an external class uses a H\-U\-D controller, it uses a H\-U\-D controller with the same attributes as every other class. \begin{DoxyReturn}{Returns}
+The instance of the H\-U\-D controller 
+\end{DoxyReturn}
+\hypertarget{class_hud_controller_a4c6c9c53841c41d156a2f715a43be703}{\index{Hud\-Controller@{Hud\-Controller}!get\-Mouse\-Pos@{get\-Mouse\-Pos}}
+\index{get\-Mouse\-Pos@{get\-Mouse\-Pos}!HudController@{Hud\-Controller}}
+\subsubsection[{get\-Mouse\-Pos}]{\setlength{\rightskip}{0pt plus 5cm}sf\-::\-Vector2f Hud\-Controller\-::get\-Mouse\-Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a4c6c9c53841c41d156a2f715a43be703}
+
+
+the get mouse position method of the hud controller 
+
+\begin{DoxyReturn}{Returns}
+The position of the mouse cursor. 
+\end{DoxyReturn}
+\hypertarget{class_hud_controller_abeeed176eb5114ce613c499135c528d4}{\index{Hud\-Controller@{Hud\-Controller}!load@{load}}
+\index{load@{load}!HudController@{Hud\-Controller}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_abeeed176eb5114ce613c499135c528d4}
+
+
+The load method of the hud controller. 
+
+This method will set all the standard values for the H\-U\-D objects. \hypertarget{class_hud_controller_a9e9c4e19bdb0bc55247c96e79c5548c3}{\index{Hud\-Controller@{Hud\-Controller}!prepare\-For\-Next\-Level@{prepare\-For\-Next\-Level}}
+\index{prepare\-For\-Next\-Level@{prepare\-For\-Next\-Level}!HudController@{Hud\-Controller}}
+\subsubsection[{prepare\-For\-Next\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::prepare\-For\-Next\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a9e9c4e19bdb0bc55247c96e79c5548c3}
+
+
+the prepare for next level method of the hud controller 
+
+deletes all the objects from the H\-U\-D to make place for the new objects of the next level \hypertarget{class_hud_controller_aac63180083695594ae2d17278c13d604}{\index{Hud\-Controller@{Hud\-Controller}!remove\-All\-Objects@{remove\-All\-Objects}}
+\index{remove\-All\-Objects@{remove\-All\-Objects}!HudController@{Hud\-Controller}}
+\subsubsection[{remove\-All\-Objects}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::remove\-All\-Objects (
+\begin{DoxyParamCaption}
+\item[{Game\-Object $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_aac63180083695594ae2d17278c13d604}
+
+
+The remove all objects method of the hud controller. 
+
+This method will remove the complete list of game objects 
+\begin{DoxyParams}{Parameters}
+{\em object} & The pointer to the start of the object vector \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hud_controller_ab07bc4161257a8fbc16df56ed9dbf1ea}{\index{Hud\-Controller@{Hud\-Controller}!remove\-Object@{remove\-Object}}
+\index{remove\-Object@{remove\-Object}!HudController@{Hud\-Controller}}
+\subsubsection[{remove\-Object}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::remove\-Object (
+\begin{DoxyParamCaption}
+\item[{Game\-Object $\ast$}]{object}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_ab07bc4161257a8fbc16df56ed9dbf1ea}
+
+
+The remove object method of the hud controller. 
+
+This function will remove a game object under the control of the game controller, and will destroy this particular game object. 
+\begin{DoxyParams}{Parameters}
+{\em object} & The object that has to be removed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hud_controller_a6cd82988ca9221b6cb8d520a8e26b204}{\index{Hud\-Controller@{Hud\-Controller}!step@{step}}
+\index{step@{step}!HudController@{Hud\-Controller}}
+\subsubsection[{step}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\-Controller\-::step (
+\begin{DoxyParamCaption}
+\item[{sf\-::\-Render\-Window \&}]{window}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a6cd82988ca9221b6cb8d520a8e26b204}
+
+
+The step method of the H\-U\-D controller. 
+
+This method will update every object from the H\-U\-D and draw them 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window on which the objects have to be drawn \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Hud\-Controller.\-h\item 
+Hud\-Controller.\-cpp\end{DoxyCompactItemize}

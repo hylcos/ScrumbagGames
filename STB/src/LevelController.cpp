@@ -26,7 +26,12 @@ LevelController::Initializer::Initializer(std::string name)
 	Initializer::name = name;
 }
 
+void LevelController::goToNextLevel(LevelController::Initializer * initializer){
+	nextLevel = initializer;
+}
+
 void LevelController::startLevel(LevelController::Initializer initializer){
+
 	Factory factory;
 	int settings = factory.loadLevel(initializer.name);
 	terrorLevel = settings & 255;
@@ -36,11 +41,12 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 		if (random){
 			obj->setRandomness(terrorLevel);
 		}
-		Player* v = dynamic_cast<Player*>(obj);
-		if (v != 0) {
-			player = v;
+		if (obj->getType() == GameObject::player) {
+			player = dynamic_cast<Player*>(obj);
 		}
 	}
+
+	/*
 	Powerup* pu = new Powerup(sf::Vector2f{ 250, 250 }, 6);
 	pu->setType(&pu->puFullHealth);
 	addObjectFromFactory(pu);
@@ -55,7 +61,7 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 
 	pu = new Powerup(sf::Vector2f{ 100, 250 }, 3);
 	pu->setType(&pu->puSprint);
-	addObjectFromFactory(pu);
+	addObjectFromFactory(pu);*/
 
 
 }
@@ -89,22 +95,53 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	window.draw(backgroundSpriteOverlay);
 
 	if (player != nullptr){
-		setMainView(player->getPosition().x, player->getPosition().y);
-		sf::Vector2f pos = sf::Vector2f(sf::Mouse::getPosition(window)) - sf::Vector2f(window.getSize().x / 2.0f, window.getSize().y / 2.0f) + mainView.getCenter() - player->getPosition();
+		setMainView(player->getPosition());
+		sf::Vector2f pos = getMousePos() - player->getPosition();
 		player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
+	}
+	else{
+		viewMovement.x = std::max(-1.0f, std::min(1.0f, viewMovement.x + ((rand() % 11) - (4.8f+(mainView.getCenter().x < 640?0.0f:0.4f))) / 10000.0f));
+		viewMovement.y = std::max(-1.0f, std::min(1.0f, viewMovement.y + ((rand() % 11) - (4.8f + (mainView.getCenter().y < 480 ? 0.0f : 0.4f))) / 10000.0f));
+		moveMainView(viewMovement*speedModifier*10.0f);
 	}
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
+
+	if (nextLevel != nullptr)
+	{
+		stopLevel();
+		HudController::getInstance().prepareForNextLevel();
+		startLevel(*nextLevel);
+		nextLevel = nullptr;
+	}
+}
+
+void LevelController::stopLevel(){
+	for (GameObject* obj : gameObjects){
+		delete obj;
+	}
+	gameObjects.clear();
+}
+
+sf::Vector2f LevelController::getMousePos(){
+	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f) + mainView.getCenter();
 }
 
 const std::vector< GameObject* > LevelController::getGameObjects(){
 	return gameObjects;
 }
 
+void LevelController::moveMainView(sf::Vector2f pos){
+	moveMainView(pos.x, pos.y);
+}
 void LevelController::moveMainView(float x, float y){
 	setMainView(mainView.getCenter().x + x, mainView.getCenter().y + y);
+}
+
+void LevelController::setMainView(sf::Vector2f pos){
+	setMainView(pos.x, pos.y);
 }
 
 void LevelController::setMainView(float x, float y){

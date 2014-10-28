@@ -3,12 +3,15 @@
 #include <SFML/Graphics.hpp>
 
 
-GameObject::GameObject()
+GameObject::GameObject(gameObjectType type):
+type{ type }
 {
+
 }
 
-GameObject::GameObject(sf::Vector2f pos) :
-position{pos}
+GameObject::GameObject(sf::Vector2f pos, gameObjectType type) :
+position{pos},
+type{ type }
 {
 }
 
@@ -40,10 +43,15 @@ sf::Vector2f GameObject::getPosition(){
 	return position;
 }
 
+sf::Transform GameObject::getTransform(){
+	return sf::Transform();
+}
 void GameObject::move(float speedModifier){
 
 }
-
+sf::Vector2u GameObject::getSize(){
+	return sf::Vector2u(0, 0);
+}
 sf::FloatRect GameObject::getBounds(){
 	return sf::RectangleShape{}.getGlobalBounds();
 }
@@ -51,6 +59,9 @@ sf::FloatRect GameObject::getBounds(){
 void GameObject::draw(sf::RenderWindow & window) const{
 }
 
+GameObject::gameObjectType GameObject::getType(){
+	return type;
+}
 GameObject::~GameObject()
 {
 }

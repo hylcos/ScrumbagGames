@@ -12,7 +12,9 @@ void Powerup::Types::executeAction(Powerup & powerup){
 	(powerup.*action)();
 }
 
-Powerup::Powerup(sf::Vector2f position, int pwr){
+Powerup::Powerup(sf::Vector2f position, int pwr):
+GameObject{ gameObjectType::powerup }
+{
 
 	sprite.setPosition(position);
 	if (!pwr)
@@ -51,7 +53,7 @@ void Powerup::pufDoubleSpeed(){
 	LevelController::getInstance().getPlayer()->doubleSpeed();
 }
 void Powerup::pufFullHealth(){
-	std::cout << "Full health";
+	LevelController::getInstance().getPlayer()->fullHealth();
 }
 void Powerup::pufBAB(){
 	for (GameObject * obj : LevelController::getInstance().getGameObjects()){

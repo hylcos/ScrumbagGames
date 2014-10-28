@@ -3,7 +3,8 @@
 #include "../TextureManager.h"
 #include "GameObject.h"
 
-Table::Table()
+Table::Table():
+GameObject{gameObjectType::table}
 {
 	tex = TextureManager::getInstance().getTexture("Sprites/Table.png");
 	table.setOrigin(tex->getSize().x / 2.0f, tex->getSize().y / 2.0f);
@@ -24,6 +25,15 @@ void Table::draw(sf::RenderWindow & window) const{
 	window.draw(table);
 }
 
+sf::FloatRect Table::getBounds() {
+	return table.getLocalBounds();
+}
 
+sf::Transform Table::getTransform(){
+	return table.getTransform();
+
+}sf::Vector2u Table::getSize(){
+	return tex->getSize();
+}
 Table::~Table(){}
 

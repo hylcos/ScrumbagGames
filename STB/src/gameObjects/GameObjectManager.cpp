@@ -28,6 +28,21 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 		e->setType(e->cheerleader);
 		return e;
 	}
+	if (string == "menu/Play"){
+		return new Play();
+	}
+	if (string == "menu/Options"){
+		return new Options();
+	}
+	if (string == "menu/MainMenu"){
+		return new MainMenu();
+	}
+	if (string == "menu/Checkbox"){
+		return new Checkbox();
+	}
+	if (string == "menu/ToggleMusic"){
+		return new ToggleMusic();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

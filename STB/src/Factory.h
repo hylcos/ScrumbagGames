@@ -1,3 +1,8 @@
+//! The factory header file
+/*!
+This is the header file of the factory class, the class where all game objects
+needed for the game are read from a text file.
+*/
 #pragma once
 
 #include "gameObjects\GameObjectManager.h"
@@ -14,6 +19,7 @@ std::ifstream & operator>>(std::ifstream & input, sf::Vector2f & rhs);
 class Factory
 {
 public:
+	//! TODO: enum shit idk
 	enum levelSettings{
 		/*	Usage:
 			bits:	0000000011111111: terror level (0-255)
@@ -42,9 +48,35 @@ public:
 		//8-32768
 		random = 256
 	};
+
+	//! The constructor of the factory class
+	/*!
+	default constructor, also initializes the gameObjectManager.
+	*/
 	Factory();
+
+	//! The loadLevel method of the factory
+	/*!
+	Loads the level from a text file. Puts all items in the map based on the terror level.
+	Also loads all objects to the HUD.
+	@param file The file in which all the game objects are stored.
+	@return the value of the terror level.
+	*/
 	int Factory::loadLevel(std::string file);
-	GameObject * Factory::screen_object_read(std::ifstream & input);
+
+	//! The screen_object_read method of the factory
+	/*!
+	Reads values from a text file and puts them together to create an object.
+	@param input The stream from which the factory has to read the values for the object
+	@param toHud wether or not the object should be placed on the HUD
+	@return the Object created with all the values read from the input stream
+	*/
+	GameObject * Factory::screen_object_read(std::ifstream & input, bool toHud);
+
+	//! The deconstructor of the factory
+	/*!
+	the default deconstructor
+	*/
 	~Factory();
 private:
 	GameObjectManager gameObjectManager;

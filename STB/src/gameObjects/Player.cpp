@@ -4,6 +4,7 @@
 #include <iostream>
 #include "../LevelController.h"
 #include "Powerup.h"
+#include "WeaponManager.h"
 struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
 		{ sf::Keyboard::A, -1.0, 0.0 },
 		{ sf::Keyboard::D, 1.0, 0.0 },
@@ -11,25 +12,29 @@ struct { sf::Keyboard::Key key; float x; float y; } actions[] = {
 		{ sf::Keyboard::S, 0.0, 1.0 }
 };
 struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
-	{ sf::Keyboard::Num1, 0 },
-	{ sf::Keyboard::Num2, 1 },
-	{ sf::Keyboard::Num3, 2 }
+		{ sf::Keyboard::Num1, 0 },
+		{ sf::Keyboard::Num2, 1 },
+		{ sf::Keyboard::Num3, 2 }
 };
 Player::Player() :
-Animation{}
+Animation{player}
 {
+	
+	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
-	setWeapons(new Gun("Sprites/Weapons/pistol", 25, 90.0, 8,8, 350, 2,30), new Gun("Sprites/Weapons/uzi", 25, 90.0, 120,30, 350, 2,15), new Gun{ "Sprites/Weapons/shotgun", 25,180.0, 60,6, 350, 10,45 });
+	sf::sleep(sf::milliseconds(1000));
+	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
+
 }
 
 void Player::reduceHP(int damage){
 	if (!invincible){
 		hp -= damage;
-		if (hp < 0){
-			std::cout << "You're pretty dead...\n";
+		if (hp <= 0){
+			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
 		}
 	}
 }
@@ -50,67 +55,18 @@ void Player::update(float speedModifier) {
 
 	doubleSpeedTimer -= speedModifier;
 	if (doubleSpeedTimer <= 0)
-		speed = 1;
+		speed = 3;
 	if (invincibleTimer <= 0)
 		invincible = false;
-	/*
-	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
-		if (dynamic_cast<Powerup*>(gameObject) != 0){
-			if (gameObject->getBounds().intersects(Animation::getBounds())){
-				Powerup* p = dynamic_cast<Powerup*>(gameObject);
-				switch (p->getPowerup()) {
-					case doubleDamage :
-						break;
-					case doubleReloadSpeed:
-						break;
-					case BAB:
-						for (GameObject* gameObject : LevelController::getInstance().getGameObjects())
-							if (dynamic_cast<Enemy*>(gameObject) != 0)
-								LevelController::getInstance().removeObject(gameObject);
-						break;
-					case invincibility:
-						invincible = true;
-						invincibleTimer = 300;
-						break;
-					case instaKill:
-						break;
-					case sprint:
-						doubleSpeedTimer = 300;
-						speed = 2;
-						break;
-					case slowMotion:
-						break;
-					case miniGun:
-						break;
-					case sniperVision:
-						break;
-					case frenzy:
-						break;
-					case clone:
-						break;
-					case flamethrower:
-						break;
-					case doubleSpawn:
-						break;
-					case fog:
-						break;
-					case jam:
-						break;
-					case blind:
-						break;
-
-				}
-
-				
-				LevelController::getInstance().removeObject(gameObject);
-			}
-		}
-	}*/
 	selectedWeapons[curWeapon]->update(speedModifier);
 }
 
 void Player::move(float speedModifier){
-	sf::Vector2f newPos{ 0, 0 };
+	bool isOnBench = false;
+	bool isWalkeble = true;
+	bool collided = false;
+	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
+
 	for (auto & action : actions){
 		if (sf::Keyboard::isKeyPressed(action.key)){
 			newPos.x += action.x;
@@ -119,9 +75,48 @@ void Player::move(float speedModifier){
 	}
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		float dir = atan2(newPos.y, newPos.x);
-		rotation = dir * 180 / 3.14159265358979323846f + 90;
-		position.x += cos(dir) * speedModifier * speed;
-		position.y += sin(dir) * speedModifier * speed;
+		newPos = position;
+		reservePos = position;
+		rotation = dir * 180 / PI + 90;
+		position.x += (cos(dir) * speedModifier * speed) * 2;
+		position.y += (sin(dir) * speedModifier * speed) * 2;
+
+		curSprite.setPosition(position);
+		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
+				continue;
+			}
+		
+			if (obj->getType() == bench && Collision::collision(this,obj)){
+				isOnBench = true;
+				collided = true;
+			}
+			if (obj->getType() == table && Collision::collision(this, obj)){
+				if (isOnBench || isOnTable){
+					isOnTable = true;
+					collided = true;
+				}
+				else {
+					isWalkeble = false;
+				}
+			}
+
+		}
+		if (!collided){
+			isOnTable = false;
+		}
+
+		position.x -= (cos(dir) * speedModifier * speed);
+		position.y -= (sin(dir) * speedModifier * speed);
+		if (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16) && isWalkeble){
+			
+			
+		}
+		else {
+			position = reservePos;
+		}
+
+
 		toNext += speedModifier;
 	}
 
@@ -144,7 +139,13 @@ void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3){
 Weapon * Player::getSelectedWeapon(){
 	return selectedWeapons[curWeapon];
 }
+int Player::getHp(){
+	return hp;
+}
 
+float Player::getAmmo(){
+	return getSelectedWeapon()->getAmmo();
+}
 void Player::doubleSpeed(){
 	doubleSpeedTimer = 300;
 	speed = 5;
@@ -153,9 +154,12 @@ void Player::fullHealth(){
 	hp = 100;
 }
 
+sf::Vector2u Player::getSize(){
+
+	return sf::Vector2u{ static_cast<unsigned int>(getBounds().width), static_cast<unsigned int>(getBounds().height) };
+}
 Player::~Player()
 {
-	for each(Weapon * weapon in selectedWeapons)
-		delete weapon;
+	
 
 }

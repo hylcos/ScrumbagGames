@@ -3,7 +3,8 @@
 #include "../TextureManager.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
-Weapon::Weapon()
+Weapon::Weapon():
+GameObject{weapon}
 {
 }
 
@@ -18,7 +19,14 @@ void Weapon::update(float speedmodifer){
 void Weapon::draw(sf::RenderWindow & window) const{
 
 }
-void Weapon::reload(){}
+
+void Weapon::reload(){
+
+}
+
+float Weapon::getAmmo(){
+	return 0;
+}
 
 Weapon::~Weapon()
 {

@@ -33,9 +33,17 @@ float Enemy::Initializer::getAttackSpeed(){
 
 
 Enemy::Enemy() :
-Animation{}
+Animation{enemy}
 {
 	
+}
+
+Enemy::Enemy(Initializer  initializer) :
+Animation{}
+{
+
+	type = initializer;
+
 }
 
 void Enemy::reduceHP(int damage){
@@ -43,14 +51,6 @@ void Enemy::reduceHP(int damage){
 	if (dmg > type.getHP()){
 		LevelController::getInstance().removeObject(this);
 	}
-}
-
-Enemy::Enemy(Initializer  initializer) :
-Animation{}
-{
-	
-	type = initializer;
-
 }
 
 void Enemy::update(float speedModifier){

@@ -3,9 +3,14 @@
 #include "SFML\Graphics.hpp"
 #include "Weapon.h"
 #include "Gun.h"
+
+#include "Collision.h"
 class Player : public Animation
 {
-
+	struct hitbox
+	{
+		sf::VertexArray vertex;
+	};
 private:
 
 	sf::Sprite curSprite;
@@ -14,6 +19,7 @@ private:
 	int curWeapon = 0;
 	bool invincible;
 	Weapon * selectedWeapons[3];
+	bool isOnTable = false;
 	int hp = 100;
 	int speed = 1;
 
@@ -28,7 +34,9 @@ public:
 	void Player::reduceHP(int damage);
 	void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3);
 	Weapon * Player::getSelectedWeapon();
-
+	int Player::getHp();
+	sf::Vector2u Player::getSize() override;
+	float Player::getAmmo();
 	void Player::doubleSpeed();
 	void Player::fullHealth();
 };

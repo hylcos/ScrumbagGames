@@ -23,9 +23,12 @@ public:
 		std::string name;
 	};
 
+	void LevelController::goToNextLevel(LevelController::Initializer * initializer);
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/init.level" };
+	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
+	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 
 	//add GameObject
 	//
@@ -40,26 +43,36 @@ public:
 
 	void LevelController::removeAllObjects(GameObject * object);
 	//Move the main view
+	void LevelController::moveMainView(sf::Vector2f pos);
 	void LevelController::moveMainView(float x, float y);
 
 	//Set the main view position
+	void LevelController::setMainView(sf::Vector2f pos);
 	void LevelController::setMainView(float x, float y);
 
 	void LevelController::step(float fps, sf::RenderWindow & window);
 
 	Player * LevelController::getPlayer();
 
+	sf::Vector2f LevelController::getMousePos();
+
 	const std::vector< GameObject* > LevelController::getGameObjects();
 
 private:
 	LevelController() {};
-	LevelController(LevelController const&);
-	void operator=(LevelController const&);
+	LevelController(LevelController const&) = delete;
+	void operator=(GameController const&) = delete;
 
 	void LevelController::load();
 	bool isLoaded = false;
 
+	void LevelController::stopLevel();
+
 	sf::View mainView;
+
+	Initializer* nextLevel = nullptr;
+
+	sf::Vector2f viewMovement{ 0,0 };
 
 	sf::Texture background;
 	sf::Texture backgroundOverlay;

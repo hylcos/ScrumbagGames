@@ -4,7 +4,11 @@
 class SoundController
 {
 public:
-	SoundController();
+	static SoundController& getInstance()
+	{
+		static SoundController    instance;
+		return instance;
+	}
 	
 	const char* INTRO = "Resources/Sounds/intro.ogg";
 
@@ -18,8 +22,14 @@ public:
 	//Executed every step to check change requests in the music
 	void SoundController::step();
 
+	void SoundController::setBackgroundMusic(bool enabled);
+
 	~SoundController();
 private:
+	SoundController() {};
+	SoundController(SoundController const&) = delete;
+	void operator=(SoundController const&) = delete;
+
 	sf::Music bgMusic;
 };
 

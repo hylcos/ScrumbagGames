@@ -1,26 +1,92 @@
 #include "stdafx.h"
 #include "HudController.h"
 #include "LevelController.h"
+#include "TextureManager.h"
 
-HudController::HudController()
-{
+void HudController::addObject(GameObject * object){
+	gameObjectToAdd.push_back(object);
+}
+void HudController::addObjectFromFactory(GameObject * object){
+	gameObjects.push_back(object);
+}
+void HudController::removeObject(GameObject * object){
+	gameObjectToRemove.insert(object);
+}
+void HudController::removeAllObjects(GameObject * object){
+	if (object == nullptr){
+		return;
+	}
+	std::vector<GameObject*>::iterator position = std::find(gameObjects.begin(), gameObjects.end(), object);
+	delete object;
+	if (position != gameObjects.end()) // == vector.end() means the element was not found
+		gameObjects.erase(position);
 }
 
+void HudController::load()
+{
+	if (isLoaded){
+		return;
+	}
+	isLoaded = true;
+	HPBackGround.setFillColor(sf::Color::Black);
+	HPBackGround.setSize(sf::Vector2f(100, 15));
+	HPBackGround.setPosition(sf::Vector2f(60, 457.5));
+
+	HPForeGround.setFillColor(sf::Color::Red);
+	HPForeGround.setPosition(sf::Vector2f(60, 457.5));
+
+	ammoBackGround.setFillColor(sf::Color::Black);
+	ammoBackGround.setSize(sf::Vector2f(100, 15));
+	ammoBackGround.setPosition(sf::Vector2f(300, 457.5));
+
+	ammoForeGround.setFillColor(sf::Color::Yellow);
+	ammoForeGround.setPosition(sf::Vector2f(300, 457.5));
+
+	background.setFillColor(sf::Color::White);
+	background.setSize(sf::Vector2f(140, 25));
+}
 void HudController::step(sf::RenderWindow & window){
+	float speedModifier = 60 / GameController::getInstance().getFPS();
 	sf::View hudView;
 	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
 	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
 	//hudView.setCenter(sf::Vector2f(0.0f, 0.0f));
 	window.setView(hudView);
 
-	sf::RectangleShape rect(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
-	rect.setFillColor(sf::Color::Black);
-	rect.setOrigin(rect.getSize()/2.0f);
-	rect.setPosition(hudView.getSize() / 2.0f);
 
-	window.draw(rect);
+	for (GameObject* obj : gameObjects){
+		obj->update(speedModifier);
+	}
+
+	for (GameObject* obj : gameObjects){
+		obj->move(speedModifier);
+	}
+
+	for (GameObject* obj : gameObjects){
+		obj->draw(window);
+	}
+	if (LevelController::getInstance().getPlayer() != nullptr){
+		HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
+		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));
+	}
+	else {
+		HPForeGround.setSize(sf::Vector2f(100, 15));
+		ammoForeGround.setSize(sf::Vector2f(100, 15));
+	}
+
+	background.setPosition(sf::Vector2f(40, 455));
+	window.draw(background);
+	background.setPosition(sf::Vector2f(280, 455));
+	window.draw(background);
+	window.draw(HPBackGround);
+	window.draw(HPForeGround);
+	window.draw(ammoBackGround);
+	window.draw(ammoForeGround);
+}
+void HudController::prepareForNextLevel(){
+	gameObjects.clear();
 }
 
-HudController::~HudController()
-{
+sf::Vector2f HudController::getMousePos(){
+	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f)+sf::Vector2f{ 320, 240 };
 }
