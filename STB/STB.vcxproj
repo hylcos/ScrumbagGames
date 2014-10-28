@@ -227,6 +227,8 @@
     <Image Include="Resources\Images\Sprites\Players\Player-4.png" />
     <Image Include="Resources\Images\Sprites\Powerup.png" />
     <Image Include="Resources\Images\Sprites\Table.png" />
+    <Image Include="Resources\Images\Sprites\Table2.png" />
+    <Image Include="Resources\Images\Sprites\Table3.png" />
     <Image Include="Resources\Images\Sprites\Trashcan.png" />
     <Image Include="Resources\Images\Sprites\Weapons\dagger.png" />
     <Image Include="Resources\Images\Sprites\Weapons\dagger_hit.png" />
