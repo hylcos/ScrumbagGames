@@ -172,6 +172,10 @@
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
     <None Include="Resources\Sounds\intro.ogg" />
+    <None Include="Resources\Sounds\pistol.ogg" />
+    <None Include="Resources\Sounds\rifle.ogg" />
+    <None Include="Resources\Sounds\shotgun.ogg" />
+    <None Include="Resources\Sounds\sniper.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg" />

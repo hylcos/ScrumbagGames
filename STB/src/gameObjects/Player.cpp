@@ -26,8 +26,7 @@ Animation{player}
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
-	sf::sleep(sf::milliseconds(1000));
-	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().rifle, WeaponManager::getInstance().shotgun);
+	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().sniper, WeaponManager::getInstance().rifle);
 
 }
 

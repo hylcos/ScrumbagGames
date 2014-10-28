@@ -27,6 +27,7 @@ void Gun::fire(){
 					+ 15 * cos((rotation - 90) * PI / 180));
 				position.y += (10 * sin(rotation* PI / 180)
 					+ 15 * sin((rotation - 90) * PI / 180));
+				SoundController::getInstance().playMusic(name);
 				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
