@@ -9,7 +9,7 @@ class Particle :
 	public GameObject
 {
 public:
-	Particle();
+	Particle(sf::Vector2f pos);
 	~Particle();
 };
 
