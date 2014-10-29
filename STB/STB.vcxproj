@@ -191,6 +191,12 @@
     <Image Include="Resources\Images\HUDObjecten\ExtraWeapon.png" />
     <Image Include="Resources\Images\HUDObjecten\HUDdesign.png" />
     <Image Include="Resources\Images\HUDObjecten\HealthBar.png" />
+    <Image Include="Resources\Images\HUDObjecten\knifeWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\pistolWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\rifleWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\shotgunWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\sniperWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\swordWeapon.png" />
     <Image Include="Resources\Images\HUDObjecten\Timer.png" />
     <Image Include="Resources\Images\Logo.png" />
     <Image Include="Resources\Images\Menu objecten\BacktoMenuButton.png" />

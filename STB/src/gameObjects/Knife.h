@@ -47,6 +47,8 @@ public:
 	@param rotation the value the knife's rotation should be set to
 	*/
 	void Knife::setRotation(float rotation);
+
+	std::string Knife::getName() override;
 private:
 	sf::Sprite sprite, melee;
 	sf::Texture tex, texmelee;
