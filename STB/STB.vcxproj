@@ -123,6 +123,7 @@
     <ClInclude Include="src\LevelController.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
     <ClInclude Include="src\InputController.h" />
+    <ClInclude Include="src\SettingsController.h" />
     <ClInclude Include="src\SoundController.h" />
     <ClInclude Include="src\GameController.h" />
     <ClInclude Include="src\stdafx.h" />
@@ -161,6 +162,7 @@
     <ClCompile Include="src\LevelController.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
     <ClCompile Include="src\InputController.cpp" />
+    <ClCompile Include="src\SettingsController.cpp" />
     <ClCompile Include="src\SoundController.cpp" />
     <ClCompile Include="src\GameController.cpp" />
     <ClCompile Include="src\main.cpp" />

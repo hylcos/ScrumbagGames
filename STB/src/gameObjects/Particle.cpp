@@ -13,16 +13,22 @@ Particle::Particle(sf::Vector2f pos)
 	rotation = static_cast<float>(rand() % 360);
 	particle.setRotation(rotation);
 	GameObject::position = pos;
-	position.x += cos((rotation - 90)*PI / 180) * particleSpeed * 3;
-	position.y += sin((rotation - 90)*PI / 180) * particleSpeed * 3;
 }
 
 void Particle::setColor(sf::Color color){
 	particle.setFillColor(color);
 }
 
+void Particle::setSpeed(float speed){
+	particleSpeed = static_cast<float>(rand() % (int)((speed - 1.f) * 100.f)) / 100.f + 1.f;
+}
+
+void Particle::setDeceleration(float dec){
+	deceleration = dec;
+}
+
 void Particle::update(float speedModifier){
-	particleSpeed *= 1.0f - (0.15f * speedModifier);
+	particleSpeed *= 1.0f - (deceleration * speedModifier);
 	if (particleSpeed <= 0.004){
 		LevelController::getInstance().getParticleManager()->removeObject(this);
 		Particle::~Particle();

@@ -134,6 +134,9 @@
     <ClInclude Include="src\gameObjects\ParticleEmitter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\SettingsController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -242,6 +245,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\ParticleEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SettingsController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

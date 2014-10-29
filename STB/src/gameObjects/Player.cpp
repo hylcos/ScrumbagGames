@@ -21,9 +21,8 @@ Player::Player() :
 Animation{ player }
 {
 	//Particle Emitter
-	frequency = 2;
-	amount = 4;
-	ParticleEmitter::setColor(sf::Color::Black, 125);
+	frequency = 1;
+	amount = 13;
 	ParticleEmitter::object = this;
 
 	WeaponManager::getInstance().load();
@@ -69,6 +68,12 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
+	int i = rand() % 3;
+	if (i > 0){
+		ParticleEmitter::setColor(sf::Color::Red, 200);
+	}
+	else
+		ParticleEmitter::setColor(sf::Color::Yellow, 200);
 	framesTillNextParticle++;
 	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
 
@@ -78,6 +83,7 @@ void Player::move(float speedModifier){
 			newPos.y += action.y;
 		}
 	}
+	emit = false;
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		emit = true;
 		bool isOnBench = false;
@@ -110,11 +116,11 @@ void Player::move(float speedModifier){
 					collided = true;
 				}
 				else {
-					if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
+					/*if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
 						closestCollisionPoint = Collision::getClosestPoint(obj, this);
 						closestTableDistance = Collision::dist2(closestCollisionPoint, newPos);
 						closestTable = obj;
-					}
+					}*/
 					isWalkeble = false;
 				}
 			}
@@ -134,6 +140,7 @@ void Player::move(float speedModifier){
 
 		if (!isWalkeble){
 			position = reservePos;
+			emit = false;/*
 			float dirToPoint = atan2(closestCollisionPoint.y - position.y, closestCollisionPoint.x - position.x) * 180 / PI;
 			float playerDir = dir * 180 / PI;
 			float newDir = playerDir;
@@ -168,22 +175,9 @@ void Player::move(float speedModifier){
 				position = reservePos;
 				emit = false;
 			}
-
+			*/
 		}
-	exit:
-
-		if (isWalkeble){
-
-			// Spawn Particles
-			/*if (framesTillNextParticle > 1 / speedModifier){
-				int maximumNumberOfParticles = rand() % 3;
-				for (int particleNumber = 0; particleNumber < maximumNumberOfParticles; particleNumber++){
-				Particle * p = new  Particle(position);
-				LevelController::getInstance().addObject(p);
-				}
-				framesTillNextParticle = 0;
-				}*/
-		}
+	//exit:
 
 
 		toNext += speedModifier;

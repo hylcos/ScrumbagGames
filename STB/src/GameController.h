@@ -17,7 +17,7 @@ class GameController
 {
 public:
 
-	//!The getInsatnce method of the gamecontroller
+	//!The getInstance method of the gamecontroller
 	/*!
 	This method makes sure there is only 1 instance of the gamecontroller at a time.
 	This way, every time an external class uses a gamecontroller, it uses a gamecontroller
