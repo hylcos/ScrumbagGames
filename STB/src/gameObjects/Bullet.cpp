@@ -15,6 +15,8 @@ damage{ damage }
 	frequency = 1;
 	particleColor = sf::Color::Yellow;
 	object = this;
+	speed = 60;
+	deceleration = 0.25f;
 
 	GameObject::position.x = position.x;
 	GameObject::position.y = position.y;

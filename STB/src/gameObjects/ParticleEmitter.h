@@ -19,6 +19,8 @@ protected:
 	float frequency = 30;
 	int amount = 1;
 	int frame = 0;
+	float speed = 20;
+	float deceleration = 0.15f;
 	ParticleManager * particleManager = nullptr;
 	GameObject * object;
 };
