@@ -47,6 +47,9 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 		if (obj->getType() == GameObject::player) {
 			player = dynamic_cast<Player*>(obj);
 		}
+		if (obj->getType() == GameObject::particleManager) {
+			particleManager = dynamic_cast<ParticleManager*>(obj);
+		}
 	}
 
 	/*
@@ -196,6 +199,10 @@ void LevelController::removeAllObjects(GameObject * object){
 
 Player * LevelController::getPlayer(){
 	return player;
+}
+
+ParticleManager * LevelController::getParticleManager(){
+	return particleManager;
 }
 
 void LevelController::setPaused(){

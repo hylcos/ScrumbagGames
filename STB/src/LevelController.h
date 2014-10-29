@@ -1,5 +1,6 @@
 #pragma once
 #include "GameController.h"
+#include "gameObjects\ParticleManager.h"
 #include "Factory.h"
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
@@ -55,6 +56,8 @@ public:
 
 	Player * LevelController::getPlayer();
 
+	ParticleManager * LevelController::getParticleManager();
+
 	sf::Vector2f LevelController::getMousePos();
 
 	const std::vector< GameObject* > LevelController::getGameObjects();
@@ -94,4 +97,5 @@ private:
 	Play restart;
 	Resume resume;
 	Player * player = nullptr;
+	ParticleManager * particleManager = nullptr;
 };
