@@ -123,7 +123,7 @@ void Player::move(float speedModifier){
 
 		if (!isWalkeble){
 			position = reservePos;
-			float dirToPoint = atan2(position.y - closestCollisionPoint.y, position.x - closestCollisionPoint.x) * 180 / PI;
+			float dirToPoint = atan2(closestCollisionPoint.y - position.y, closestCollisionPoint.x - position.x) * 180 / PI;
 			float playerDir = dir * 180 / PI;
 			float newDir = playerDir;
 			if (playerDir == dirToPoint){
@@ -136,9 +136,8 @@ void Player::move(float speedModifier){
 				newDir = dirToPoint + 90;
 			}
 			float spd = abs(playerDir - dirToPoint) / 90;
-			position.x -= (cos(newDir * PI / 180) * speedModifier * spd);
-			position.y -= (sin(dir * PI / 180) * speedModifier * spd);
-			std::cout << "PlayerDir:"<<playerDir << "\nnewDir"<<newDir<<"\ndirToPoint"<<dirToPoint<<"\n";
+			position.x += (cos(newDir * PI / 180) * speedModifier * spd);
+			position.y += (sin(newDir * PI / 180) * speedModifier * spd);
 			float newClosestTableDistance = closestTableDistance;
 			GameObject * newClosestTable = closestTable;
 
@@ -156,11 +155,10 @@ void Player::move(float speedModifier){
 			}
 			if (newClosestTable != closestTable){
 				position = reservePos;
-				std::cout << "Closer table found, undo.\n";
 			}
 
 		}
-		exit:
+	exit:
 
 		if (isWalkeble){
 
@@ -168,11 +166,11 @@ void Player::move(float speedModifier){
 			/*if (framesTillNextParticle > 1 / speedModifier){
 				int maximumNumberOfParticles = rand() % 3;
 				for (int particleNumber = 0; particleNumber < maximumNumberOfParticles; particleNumber++){
-					Particle * p = new  Particle(position);
-					LevelController::getInstance().addObject(p);
+				Particle * p = new  Particle(position);
+				LevelController::getInstance().addObject(p);
 				}
 				framesTillNextParticle = 0;
-			}*/
+				}*/
 		}
 
 
