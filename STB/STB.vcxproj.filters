@@ -497,6 +497,24 @@
     <Image Include="Resources\Images\PauseMenuOverlay.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\HUDObjecten\pistolWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\rifleWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\shotgunWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\sniperWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\swordWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\knifeWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Coalition_v2.ttf" />

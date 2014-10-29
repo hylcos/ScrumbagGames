@@ -32,7 +32,9 @@ float Weapon::getAmmo(){
 std::string Weapon::getAmmoString(){
 	return "Melee";
 }
-
+std::string Weapon::getName(){
+	return " ";
+}
 Weapon::~Weapon()
 {
 }
