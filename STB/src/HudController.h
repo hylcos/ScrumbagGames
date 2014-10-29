@@ -92,8 +92,8 @@ private:
 	void operator=(HudController const&);
 	sf::Font font;
 	sf::Text ammotext, timetext;
-	sf::Sprite healthsprite, ammosprite, timesprite, weaponsprite1, weaponsprite2, buffssprite, riflesprite, pistolsprite, knifesprite, swordsprite, snipersprite;
-	sf::Texture healthtex, ammotex, timetex, weapontex, buffstex, rifletex, pistoltex, knifetex, swordtex, snipertex;
+	sf::Sprite healthsprite, ammosprite, timesprite, buffssprite, riflesprite, pistolsprite, knifesprite, swordsprite, snipersprite, shotgunsprite;
+	sf::Texture healthtex, ammotex, timetex, buffstex, rifletex, pistoltex, knifetex, swordtex, snipertex, shotguntex;
 	bool isLoaded = false;
 	void HudController::draw(sf::RenderWindow & window) const;
 	sf::RectangleShape healthForeGround, ammoForeGround;

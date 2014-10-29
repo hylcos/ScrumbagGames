@@ -61,6 +61,9 @@ void Gun::update(float speedModifier) {
 	sprite.setPosition(position);
 	sprite.setRotation(rotation);
 }
+std::string Gun::getName(){
+	return name;
+}
 void Gun::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
 }

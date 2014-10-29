@@ -262,6 +262,8 @@
     <None Include="Resources\Sounds\rifle.ogg" />
     <None Include="Resources\Sounds\shotgun.ogg" />
     <None Include="Resources\Sounds\outro.ogg" />
+    <None Include="Resources\Sounds\Ouch_1.ogg" />
+    <None Include="Resources\Sounds\Ouch_2.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">
@@ -493,6 +495,24 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\PauseMenuOverlay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\pistolWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\rifleWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\shotgunWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\sniperWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\swordWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\knifeWeapon.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

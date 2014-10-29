@@ -58,3 +58,6 @@ void Knife::setRotation(float rotation){
 	sprite.setRotation(rotation);
 	melee.setRotation(rotation);
 }
+std::string Knife::getName(){
+	return name;
+}
