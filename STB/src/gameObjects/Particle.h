@@ -8,6 +8,8 @@ class Particle :
 public:
 	Particle(sf::Vector2f pos);
 	void setColor(sf::Color);
+	void setSpeed(float speed);
+	void setDeceleration(float dec);
 	void Particle::update(float speedModifier) override;
 	void Particle::move(float speedModifier) override;
 	void Particle::draw(sf::RenderWindow & window) const override;
@@ -15,6 +17,7 @@ public:
 private:
 	float rotation;
 	float particleSpeed;
+	float deceleration = 0.15f;
 	sf::Vector2f prevPosition{ 0, 0 };
 	sf::RectangleShape particle;
 };

@@ -10,7 +10,7 @@ class ParticleManager :
 public:
 	ParticleManager();
 
-	void spawnParticles(GameObject * object, sf::Color color, int amount);
+	void addParticle(Particle * p);
 
 	void update(float speedModifier) override;
 	void move(float speedModifier) override;
