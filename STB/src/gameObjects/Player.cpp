@@ -18,9 +18,9 @@ struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
 		{ sf::Keyboard::Num3, 2 }
 };
 Player::Player() :
-Animation{player}
+Animation{ player }
 {
-	
+
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
@@ -32,7 +32,6 @@ Animation{player}
 
 void Player::reduceHP(int damage){
 	if (!invincible){
-		SoundController::getInstance().playMusic("Ouch_" + std::to_string(rand() % 2 + 1));
 		hp -= damage;
 		if (hp <= 0){
 			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
@@ -52,7 +51,7 @@ void Player::update(float speedModifier) {
 
 	for (auto & choice : weaponchoice)
 		if (sf::Keyboard::isKeyPressed(choice.key))
-			curWeapon = choice.weapon; 
+			curWeapon = choice.weapon;
 
 	doubleSpeedTimer -= speedModifier;
 	if (doubleSpeedTimer <= 0)
@@ -64,9 +63,6 @@ void Player::update(float speedModifier) {
 
 void Player::move(float speedModifier){
 	framesTillNextParticle++;
-	bool isOnBench = false;
-	bool isWalkeble = true;
-	bool collided = false;
 	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
 
 	for (auto & action : actions){
@@ -76,10 +72,17 @@ void Player::move(float speedModifier){
 		}
 	}
 	if (newPos != sf::Vector2f{ 0, 0 }){
+		bool isOnBench = false;
+		bool isWalkeble = true;
+		bool collided = false;
+		GameObject * closestTable = nullptr;
+		float closestTableDistance = 128.0f*128.0f;
+		sf::Vector2f closestCollisionPoint;
+
 		float dir = atan2(newPos.y, newPos.x);
 		newPos = position;
 		reservePos = position;
-		rotation = dir * 180 / PI + 90;
+		//rotation = dir * 180 / PI + 90;
 		position.x += (cos(dir) * speedModifier * speed) * 2;
 		position.y += (sin(dir) * speedModifier * speed) * 2;
 
@@ -88,8 +91,8 @@ void Player::move(float speedModifier){
 			if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
 				continue;
 			}
-		
-			if (obj->getType() == bench && Collision::collision(this,obj)){
+
+			if (obj->getType() == bench && Collision::collision(this, obj)){
 				isOnBench = true;
 				collided = true;
 			}
@@ -99,6 +102,11 @@ void Player::move(float speedModifier){
 					collided = true;
 				}
 				else {
+					if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
+						closestCollisionPoint = Collision::getClosestPoint(obj, this);
+						closestTableDistance = Collision::dist2(closestCollisionPoint, newPos);
+						closestTable = obj;
+					}
 					isWalkeble = false;
 				}
 			}
@@ -110,20 +118,61 @@ void Player::move(float speedModifier){
 
 		position.x -= (cos(dir) * speedModifier * speed);
 		position.y -= (sin(dir) * speedModifier * speed);
-		if (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16) && isWalkeble){
+
+		isWalkeble &= (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16));
+
+		if (!isWalkeble){
+			position = reservePos;
+			float dirToPoint = atan2(position.y - closestCollisionPoint.y, position.x - closestCollisionPoint.x) * 180 / PI;
+			float playerDir = dir * 180 / PI;
+			float newDir = playerDir;
+			if (playerDir == dirToPoint){
+				goto exit;
+			}
+			if (playerDir < dirToPoint){
+				newDir = dirToPoint - 90;
+			}
+			else{
+				newDir = dirToPoint + 90;
+			}
+			float spd = abs(playerDir - dirToPoint) / 90;
+			position.x -= (cos(newDir * PI / 180) * speedModifier * spd);
+			position.y -= (sin(dir * PI / 180) * speedModifier * spd);
+			std::cout << "PlayerDir:"<<playerDir << "\nnewDir"<<newDir<<"\ndirToPoint"<<dirToPoint<<"\n";
+			float newClosestTableDistance = closestTableDistance;
+			GameObject * newClosestTable = closestTable;
+
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (sqrt(pow(newPos.x - obj->getPosition().x, 2) + pow(newPos.y - obj->getPosition().y, 2)) > 128){
+					continue;
+				}
+				if (obj->getType() == table && Collision::collision(this, obj)){
+					if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < newClosestTableDistance){
+						closestTableDistance = Collision::dist2(closestCollisionPoint, newPos);
+						closestTable = obj;
+					}
+				}
+
+			}
+			if (newClosestTable != closestTable){
+				position = reservePos;
+				std::cout << "Closer table found, undo.\n";
+			}
+
+		}
+		exit:
+
+		if (isWalkeble){
 
 			// Spawn Particles
-			if (framesTillNextParticle > 1 / speedModifier){
+			/*if (framesTillNextParticle > 1 / speedModifier){
 				int maximumNumberOfParticles = rand() % 3;
 				for (int particleNumber = 0; particleNumber < maximumNumberOfParticles; particleNumber++){
 					Particle * p = new  Particle(position);
 					LevelController::getInstance().addObject(p);
 				}
 				framesTillNextParticle = 0;
-			}
-		}
-		else {
-			position = reservePos;
+			}*/
 		}
 
 
@@ -170,6 +219,6 @@ sf::Vector2u Player::getSize(){
 }
 Player::~Player()
 {
-	
+
 
 }
