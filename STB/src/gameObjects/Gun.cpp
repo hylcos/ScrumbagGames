@@ -20,7 +20,7 @@ ammo{ ammo }
 }
 
 void Gun::fire(){
-	if (ammo > 0 || currentMagazine > 0){
+	if (ammo > 0 && currentMagazine > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
 				position.x += (10 * cos(rotation * PI / 180)
@@ -68,7 +68,7 @@ void Gun::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
 }
 void Gun::reload(){
-	if (ammo!=0	){
+	if (ammo > 0){
 		if (reloadCoolDown <= 0){
 			if (magazineSize <= ammo){
 				reloadCoolDown = reloadSpeed;
