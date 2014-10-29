@@ -249,6 +249,7 @@
     <None Include="Resources\Sounds\pistol.ogg" />
     <None Include="Resources\Sounds\rifle.ogg" />
     <None Include="Resources\Sounds\shotgun.ogg" />
+    <None Include="Resources\Sounds\outro.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">

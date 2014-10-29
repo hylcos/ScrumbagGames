@@ -11,8 +11,9 @@ public:
 		instance.load();
 		return instance;
 	}
-	
+
 	const char* INTRO = "Resources/Sounds/intro.ogg";
+	const char* OUTRO = "Resources/Sounds/outro.ogg";
 	void SoundController::load();
 	//play selected music
 	//
