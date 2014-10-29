@@ -28,6 +28,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 		e->setType(e->cheerleader);
 		return e;
 	}
+	if (string == "ParticleManager"){
+		return new ParticleManager();
+	}
 	if (string == "menu/Play"){
 		return new Play();
 	}
