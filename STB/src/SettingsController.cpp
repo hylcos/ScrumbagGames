@@ -1,14 +1,19 @@
 #include "stdafx.h"
 #include "SettingsController.h"
 #include <iostream>
+#include <fstream>
 
 
 void SettingsController::saveSettings(){
 	settings.saveToFile("settings.png");
 }
 
-void SettingsController::loadSettings(){
-	settings.loadFromFile("settings.png");
+bool SettingsController::loadSettings(){
+	return settings.loadFromFile("settings.png");
+}
+void SettingsController::createSettings(){
+	settings.create((unsigned int)256, (unsigned int)256, sf::Color::White);
+	settings.saveToFile("settings.png");
 }
 
 int SettingsController::fromVector2i(sf::Vector2i vector){

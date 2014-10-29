@@ -5,15 +5,17 @@ class SettingsController
 {
 private:
 	SettingsController(){
-		settings.create((unsigned int)256, (unsigned int)256, sf::Color::White);
-		loadSettings();
+		if (!loadSettings()){
+			createSettings();
+		}
 		saveSettings();
 	};
 	SettingsController(SettingsController const&) = delete;
 	void operator=(SettingsController const&) = delete;
 	sf::Image settings;
 	void SettingsController::saveSettings();
-	void SettingsController::loadSettings();
+	bool SettingsController::loadSettings();
+	void SettingsController::createSettings();
 	sf::Vector2i SettingsController::toVector2i(int pos);
 	int SettingsController::fromVector2i(sf::Vector2i vector);
 public:
