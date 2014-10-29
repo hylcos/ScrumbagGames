@@ -93,5 +93,4 @@ void GameController::checkWindow(){
 }
 
 GameController::~GameController(){
-	delete font;
 };
