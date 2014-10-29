@@ -1,7 +1,5 @@
 #include "stdafx.h"
 #include "SettingsController.h"
-#include <iostream>
-#include <fstream>
 
 
 void SettingsController::saveSettings(){
@@ -32,7 +30,13 @@ int SettingsController::getSetting(setting set){
 
 void SettingsController::setSetting(setting set, int value){
 	loadSettings();
-	std::cout << "Setting " << set << "saved (" << value << ")\n";
 	settings.setPixel(toVector2i(set).x, toVector2i(set).y, sf::Color{ (sf::Uint8)(value % 256), (sf::Uint8)((value / 256) % 256), (sf::Uint8)((value / 256 / 256) % 256), (sf::Uint8)255 });
+	saveSettings();
+}
+
+void SettingsController::setSetting(setting set, bool value){
+	int val = (value ? 255 : 0);
+	loadSettings();
+	settings.setPixel(toVector2i(set).x, toVector2i(set).y, sf::Color{ (sf::Uint8)(val % 256), (sf::Uint8)((val / 256) % 256), (sf::Uint8)((val / 256 / 256) % 256), (sf::Uint8)255 });
 	saveSettings();
 }

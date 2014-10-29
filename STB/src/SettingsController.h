@@ -36,6 +36,7 @@ public:
 		backgroundMusic
 	};
 	int SettingsController::getSetting(setting set);
-	void SettingsController::setSetting(setting set, int value);
+	void SettingsController::setSetting(setting set, int value); 
+	void SettingsController::setSetting(setting set, bool value);
 };
 
