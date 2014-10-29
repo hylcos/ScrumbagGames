@@ -3,6 +3,7 @@
 #include "../TextureManager.h"
 #include <SFML/Graphics.hpp>
 #include <iostream>
+#include "Gun.h"
 Weapon::Weapon():
 GameObject{weapon}
 {
@@ -26,6 +27,10 @@ void Weapon::reload(){
 
 float Weapon::getAmmo(){
 	return 0;
+}
+
+std::string Weapon::getAmmoString(){
+	return "Melee";
 }
 
 Weapon::~Weapon()

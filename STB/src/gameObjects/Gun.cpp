@@ -46,6 +46,12 @@ void Gun::fire(){
 	}
 	
 }
+
+std::string Gun::getAmmoString(){
+	std::string Ammo{  std::to_string(currentMagazine) + "/" + std::to_string(ammo) };
+	return Ammo;
+}
+
 void Gun::setRotation(float rotation){
 	this->rotation = rotation;
 }

@@ -52,7 +52,7 @@ public:
 	@param object The pointer to the start of the object vector
 	*/
 	void HudController::removeAllObjects(GameObject * object);
-
+	
 	//! The load method of the hud controller
 	/*!
 	This method will set all the standard values for the HUD objects.
@@ -84,12 +84,16 @@ public:
 	*/
 	~HudController(){};
 
+	void HudController::loadHudTextures();
+
 private:
 	HudController() {};
 	HudController(HudController const&);
 	void operator=(HudController const&);
-	sf::Sprite healthsprite, ammosprite, timesprite, weaponsprite1, weaponsprite2, buffssprite;
-	sf::Texture healthtex, ammotex, timetex, weapontex, buffstex;
+	sf::Font font;
+	sf::Text ammotext, timetext;
+	sf::Sprite healthsprite, ammosprite, timesprite, weaponsprite1, weaponsprite2, buffssprite, riflesprite, pistolsprite, knifesprite, swordsprite, snipersprite;
+	sf::Texture healthtex, ammotex, timetex, weapontex, buffstex, rifletex, pistoltex, knifetex, swordtex, snipertex;
 	bool isLoaded = false;
 	void HudController::draw(sf::RenderWindow & window) const;
 	sf::RectangleShape healthForeGround, ammoForeGround;
