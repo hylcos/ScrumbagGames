@@ -59,6 +59,8 @@ void Player::update(float speedModifier) {
 	if (invincibleTimer <= 0)
 		invincible = false;
 	selectedWeapons[curWeapon]->update(speedModifier);
+
+	ParticleEmitter::update(speedModifier);
 }
 
 void Player::move(float speedModifier){
