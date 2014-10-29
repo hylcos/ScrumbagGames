@@ -21,9 +21,8 @@ Player::Player() :
 Animation{ player }
 {
 	//Particle Emitter
-	frequency = 2;
-	amount = 4;
-	ParticleEmitter::setColor(sf::Color::Black, 125);
+	frequency = 1;
+	amount = 13;
 	ParticleEmitter::object = this;
 
 	WeaponManager::getInstance().load();
@@ -69,6 +68,12 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
+	int i = rand() % 3;
+	if (i > 0){
+		ParticleEmitter::setColor(sf::Color::Red, 200);
+	}
+	else
+		ParticleEmitter::setColor(sf::Color::Yellow, 200);
 	framesTillNextParticle++;
 	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
 
@@ -78,6 +83,7 @@ void Player::move(float speedModifier){
 			newPos.y += action.y;
 		}
 	}
+	emit = false;
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		emit = true;
 		bool isOnBench = false;

@@ -12,8 +12,9 @@ void ParticleEmitter::update(float speedModifier){
 		particleManager = LevelController::getInstance().getParticleManager();
 	}
 	frame++;
-	if (frame >= frequency / speedModifier){
+	if (frame >= frequency / speedModifier && isEmitting()){
 		particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
+		frame = 0;
 	}
 }
 
@@ -26,6 +27,7 @@ void ParticleEmitter::setColor(int r, int g, int b, int a){
 
 void ParticleEmitter::setColor(sf::Color color, int a){
 	particleColor = color;
+	particleColor.a = a;
 }
 
 bool ParticleEmitter::isEmitting(){
