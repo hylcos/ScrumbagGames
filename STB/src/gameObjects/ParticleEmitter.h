@@ -10,7 +10,7 @@ public:
 	float getFrequency();
 	int getParticleAmount();
 	~ParticleEmitter();
-private:
+protected:
 	sf::Color particleColor;
 	bool emitOnce = false;
 	bool emit = false;

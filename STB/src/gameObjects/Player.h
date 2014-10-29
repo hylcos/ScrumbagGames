@@ -1,11 +1,12 @@
 #pragma once
 #include "Animation.h"
 #include "SFML\Graphics.hpp"
+#include "ParticleEmitter.h"
 #include "Weapon.h"
 #include "Gun.h"
 
 #include "Collision.h"
-class Player : public Animation
+class Player : public Animation, ParticleEmitter
 {
 	struct hitbox
 	{

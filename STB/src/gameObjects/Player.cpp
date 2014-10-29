@@ -20,7 +20,7 @@ struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
 Player::Player() :
 Animation{ player }
 {
-
+	frequency = 60;
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
@@ -72,6 +72,7 @@ void Player::move(float speedModifier){
 		}
 	}
 	if (newPos != sf::Vector2f{ 0, 0 }){
+		emit = true;
 		bool isOnBench = false;
 		bool isWalkeble = true;
 		bool collided = false;
@@ -120,6 +121,9 @@ void Player::move(float speedModifier){
 		position.y -= (sin(dir) * speedModifier * speed);
 
 		isWalkeble &= (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16));
+		if (position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16){
+			emit = false;
+		}
 
 		if (!isWalkeble){
 			position = reservePos;
@@ -155,6 +159,7 @@ void Player::move(float speedModifier){
 			}
 			if (newClosestTable != closestTable){
 				position = reservePos;
+				emit = false;
 			}
 
 		}
