@@ -100,12 +100,11 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 			}
 			if (timeToNextEnemySpawn <= 0 && player != nullptr){
 				sf::Vector2f enemyPosition(0,0);
-				while (enemyPosition.x < mainView.getCenter().x - (mainView.getSize().x / 2) && enemyPosition.x > mainView.getCenter().x + (mainView.getSize().x / 2) && enemyPosition.x > 0 && enemyPosition.x < 1280){
-					enemyPosition.x = static_cast<float>(rand() % 1280);
-				}
-				while (enemyPosition.y < mainView.getCenter().y - (mainView.getSize().y / 2) && enemyPosition.y > mainView.getCenter().y + (mainView.getSize().y / 2) && enemyPosition.y > 0 && enemyPosition.y < 1280){
-					enemyPosition.y = static_cast<float>(rand() % 960);
-				}
+				int random = rand() % 360;
+				float radius = random * PI / 180;
+				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
+				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
+				
 				Enemy * e = new Enemy();
 				switch (rand() % 4){
 					case 0: e->setType(e->average); break;
