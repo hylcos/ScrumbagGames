@@ -113,7 +113,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 					case 2: e->setType(e->cheerleader); break;
 					case 3: e->setType(e->macho); break;
 				}
-				
+				e->setPosition(enemyPosition);
 				addObject(e);
 				timeToNextEnemySpawn = enemySpawnTime;
 			}
