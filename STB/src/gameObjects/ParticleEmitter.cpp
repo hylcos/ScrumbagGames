@@ -18,6 +18,7 @@ void ParticleEmitter::update(float speedModifier){
 			for (int i = 0; i < p; i++){
 				Particle * p = new Particle(object->getPosition());
 				p->setColor(particleColor);
+				std::cout << speed;
 				p->setSpeed(speed);
 				p->setDeceleration(deceleration);
 				particleManager->addParticle(p);
