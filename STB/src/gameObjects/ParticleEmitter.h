@@ -21,6 +21,10 @@ protected:
 	int frame = 0;
 	float speed = 20;
 	float deceleration = 0.15f;
+	float direction = 0;
+	float deviation = 360;
+	float size = 4.0f;
+	
 	ParticleManager * particleManager = nullptr;
 	GameObject * object;
 };

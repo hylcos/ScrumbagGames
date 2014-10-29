@@ -10,6 +10,8 @@ public:
 	void setColor(sf::Color);
 	void setSpeed(float speed);
 	void setDeceleration(float dec);
+	void setDirection(float dir, float dev);
+	void setSize(float size);
 	void Particle::update(float speedModifier) override;
 	void Particle::move(float speedModifier) override;
 	void Particle::draw(sf::RenderWindow & window) const override;

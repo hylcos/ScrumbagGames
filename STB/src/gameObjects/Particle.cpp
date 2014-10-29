@@ -6,12 +6,6 @@
 
 Particle::Particle(sf::Vector2f pos)
 {
-	particle = sf::RectangleShape{};
-	particle.setSize(sf::Vector2f{ 4.0, 4.0 });
-	particle.setFillColor(sf::Color::Black);
-	particleSpeed = static_cast<float>(rand() % 200) / 100.f + 1.f;
-	rotation = static_cast<float>(rand() % 360);
-	particle.setRotation(rotation);
 	GameObject::position = pos;
 }
 
@@ -20,11 +14,20 @@ void Particle::setColor(sf::Color color){
 }
 
 void Particle::setSpeed(float speed){
-	particleSpeed = static_cast<float>(rand() % (int)((speed - 1.f) * 100.f)) / 100.f + 1.f;
+	particleSpeed = static_cast<float>(rand() % (int)((speed - 0.2f) * 100.f)) / 100.f + 0.2f;
 }
 
 void Particle::setDeceleration(float dec){
 	deceleration = dec;
+}
+
+void Particle::setDirection(float dir, float dev){
+	rotation = static_cast<float>(rand() % (int)(dev * 2) - dev + dir);
+	particle.setRotation(rotation);
+}
+
+void Particle::setSize(float size){
+	particle.setSize(sf::Vector2f{ size, size });
 }
 
 void Particle::update(float speedModifier){

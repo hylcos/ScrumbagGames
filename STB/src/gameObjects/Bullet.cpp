@@ -10,13 +10,16 @@ bulletSpeed{ bulletSpeed },
 damage{ damage }
 {
 	// Set particles
-	amount = 4;
-	emitOnce = true;
-	frequency = 1;
-	particleColor = sf::Color::Yellow;
-	object = this;
-	speed = 60;
-	deceleration = 0.25f;
+	ParticleEmitter::amount = 4;
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::frequency = 1;
+	ParticleEmitter::particleColor = sf::Color::Yellow;
+	ParticleEmitter::object = this;
+	ParticleEmitter::speed = 1.f;
+	ParticleEmitter::deceleration = 0.05f;
+	ParticleEmitter::direction = rotation;
+	ParticleEmitter::deviation = 90.f;
+	ParticleEmitter::size = 2.f;
 
 	GameObject::position.x = position.x;
 	GameObject::position.y = position.y;

@@ -20,6 +20,8 @@ void ParticleEmitter::update(float speedModifier){
 				p->setColor(particleColor);
 				p->setSpeed(speed);
 				p->setDeceleration(deceleration);
+				p->setDirection(direction, deviation);
+				p->setSize(size);
 				particleManager->addParticle(p);
 			}
 			//particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
