@@ -1,7 +1,7 @@
 #include "../stdafx.h"
 #include "ParticleEmitter.h"
 #include "../LevelController.h"
-
+#include <iostream>
 
 ParticleEmitter::ParticleEmitter()
 {
@@ -12,9 +12,17 @@ void ParticleEmitter::update(float speedModifier){
 		particleManager = LevelController::getInstance().getParticleManager();
 	}
 	frame++;
-	if (frame >= frequency / speedModifier && isEmitting()){
-		particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
-		frame = 0;
+	if (frame >= frequency / speedModifier){
+		if (isEmitting()){
+			int p = rand() % (amount - 1) + 1;
+			for (int i = 0; i < p; i++){
+				Particle * p = new Particle(object->getPosition());
+				p->setColor(particleColor);
+				particleManager->addParticle(p);
+			}
+			//particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
+			frame = 0;
+		}
 	}
 }
 

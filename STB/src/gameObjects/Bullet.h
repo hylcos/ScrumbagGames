@@ -5,10 +5,11 @@ This is the header file of the bullet class.
 #pragma once
 #include "../stdafx.h"
 #include "GameObject.h"
+#include "ParticleEmitter.h"
 #include "../TextureManager.h"
 #include <iostream>
 
-class Bullet : public GameObject
+class Bullet : public GameObject, ParticleEmitter
 {
 public:
 	//! The constructor of the bullet

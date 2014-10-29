@@ -9,6 +9,13 @@ rotation{ rotation },
 bulletSpeed{ bulletSpeed },
 damage{ damage }
 {
+	// Set particles
+	amount = 4;
+	emitOnce = true;
+	frequency = 1;
+	particleColor = sf::Color::Yellow;
+	object = this;
+
 	GameObject::position.x = position.x;
 	GameObject::position.y = position.y;
 	tex = *TextureManager::getInstance().getTexture(imagename);
@@ -17,6 +24,7 @@ damage{ damage }
 }
 
 void Bullet::update(float speedmodifier){
+	ParticleEmitter::update(speedmodifier);
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 		if (gameObject->getType() == enemy){
 			if (gameObject->getBounds().intersects(getBounds())){
