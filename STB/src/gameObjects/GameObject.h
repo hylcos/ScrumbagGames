@@ -20,7 +20,8 @@ public:
 		bench,
 		powerup,
 		weapon,
-		particle
+		particle,
+		particleManager
 	};
 
 	//! The standard constructor of the gameobject

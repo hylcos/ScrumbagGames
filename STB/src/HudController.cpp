@@ -24,6 +24,11 @@ void HudController::removeAllObjects(GameObject * object){
 
 void HudController::load()
 {
+	if (isLoaded){
+		return;
+	}
+	isLoaded = true;
+
 	healthtex = *TextureManager::getInstance().getTexture("HUDObjecten/HealthBar.png");
 	healthsprite.setTexture(healthtex);
 
@@ -32,7 +37,7 @@ void HudController::load()
 
 	timetex = *TextureManager::getInstance().getTexture("HUDObjecten/Timer.png");
 	timesprite.setTexture(timetex);
-	timesprite.setOrigin(timetex.getSize().x / 2.0f, timetex.getSize().y/2.0f);
+	timesprite.setOrigin(timetex.getSize().x / 2.0f, timetex.getSize().y / 2.0f);
 
 	weapontex = *TextureManager::getInstance().getTexture("HUDObjecten/ExtraWeapon.png");
 	weaponsprite1.setTexture(weapontex);
@@ -44,10 +49,6 @@ void HudController::load()
 	buffstex = *TextureManager::getInstance().getTexture("HUDObjecten/BuffsBar.png");
 	buffssprite.setTexture(buffstex);
 
-	if (isLoaded){
-		return;
-	}
-	isLoaded = true;
 	timesprite.setPosition(sf::Vector2f(320,30));
 	healthsprite.setPosition(sf::Vector2f(20, 405));
 	ammosprite.setPosition(sf::Vector2f(435, 405));

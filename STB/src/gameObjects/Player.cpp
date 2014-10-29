@@ -32,6 +32,7 @@ Animation{player}
 
 void Player::reduceHP(int damage){
 	if (!invincible){
+		SoundController::getInstance().playMusic("Ouch_" + std::to_string(rand() % 2 + 1));
 		hp -= damage;
 		if (hp <= 0){
 			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);

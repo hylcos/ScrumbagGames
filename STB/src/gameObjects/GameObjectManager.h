@@ -4,6 +4,7 @@ This is the header file of the game object manager class.
 */
 #pragma once
 #include "GameObject.h"
+#include "ParticleManager.h"
 #include "Circle.h"
 #include "Logo.h"
 #include "Player.h"
