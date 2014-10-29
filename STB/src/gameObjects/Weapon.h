@@ -10,6 +10,7 @@ public:
 	virtual void Weapon::draw(sf::RenderWindow & window) const override;
 	virtual void Weapon::reload();
 	virtual float Weapon::getAmmo();
+	virtual std::string Weapon::getAmmoString();
 	void setMultipler();
 	~Weapon();
 	int multipler = 1;

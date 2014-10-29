@@ -20,6 +20,10 @@ struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
 Player::Player() :
 Animation{ player }
 {
+	//Particle Emitter
+	frequency = 1;
+	amount = 13;
+	ParticleEmitter::object = this;
 
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
@@ -59,9 +63,17 @@ void Player::update(float speedModifier) {
 	if (invincibleTimer <= 0)
 		invincible = false;
 	selectedWeapons[curWeapon]->update(speedModifier);
+
+	ParticleEmitter::update(speedModifier);
 }
 
 void Player::move(float speedModifier){
+	int i = rand() % 3;
+	if (i > 0){
+		ParticleEmitter::setColor(sf::Color::Red, 200);
+	}
+	else
+		ParticleEmitter::setColor(sf::Color::Yellow, 200);
 	framesTillNextParticle++;
 	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
 
@@ -71,7 +83,9 @@ void Player::move(float speedModifier){
 			newPos.y += action.y;
 		}
 	}
+	emit = false;
 	if (newPos != sf::Vector2f{ 0, 0 }){
+		emit = true;
 		bool isOnBench = false;
 		bool isWalkeble = true;
 		bool collided = false;
@@ -120,6 +134,9 @@ void Player::move(float speedModifier){
 		position.y -= (sin(dir) * speedModifier * speed);
 
 		isWalkeble &= (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16));
+		if (position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16){
+			emit = false;
+		}
 
 		if (!isWalkeble){
 			position = reservePos;
@@ -155,6 +172,7 @@ void Player::move(float speedModifier){
 			}
 			if (newClosestTable != closestTable){
 				position = reservePos;
+				emit = false;
 			}
 
 		}

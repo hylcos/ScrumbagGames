@@ -17,6 +17,10 @@ Particle::Particle(sf::Vector2f pos)
 	position.y += sin((rotation - 90)*PI / 180) * particleSpeed * 3;
 }
 
+void Particle::setColor(sf::Color color){
+	particle.setFillColor(color);
+}
+
 void Particle::update(float speedModifier){
 	particleSpeed *= 1.0f - (0.15f * speedModifier);
 	if (particleSpeed <= 0.004){

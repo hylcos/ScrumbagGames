@@ -7,6 +7,14 @@ GameObject{ particleManager }
 {
 }
 
+void ParticleManager::spawnParticles(GameObject * object, sf::Color color, int amount){
+	for (int i = 0; i < amount; i++){
+		Particle * p = new Particle(object->getPosition());
+		p->setColor(color);
+		ParticlesToAdd.push_back(p);
+	}
+}
+
 void ParticleManager::update(float speedModifier) {
 	for (Particle * p : ParticlesToAdd){
 		Particles.push_back(p);
@@ -17,6 +25,9 @@ void ParticleManager::update(float speedModifier) {
 		ParticleManager::removeAllObjects(p);
 	}
 	ParticlesToRemove.clear();
+	for (Particle * p : Particles){
+		p->update(speedModifier);
+	}
 }
 
 void ParticleManager::move(float speedModifier) {

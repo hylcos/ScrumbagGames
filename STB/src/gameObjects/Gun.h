@@ -86,6 +86,8 @@ public:
 	*/
 	Gun::~Gun();
 
+	std::string Gun::getAmmoString() override;
+
 private:
 	sf::Sprite sprite;
 	sf::Texture tex;
