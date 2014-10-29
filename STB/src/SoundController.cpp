@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "SoundController.h"
+#include "SettingsController.h"
 
 #include <SFML/Audio.hpp>
 #include <iostream>
@@ -14,8 +15,8 @@ void SoundController::load(){
 	}
 	isLoaded = true;
 	bgMusic.openFromFile(INTRO);
-	bgMusic.play();
 	bgMusic.setLoop(true);
+	setBackgroundMusic(SettingsController::getInstance().getSetting(SettingsController::backgroundMusic) != 0);
 }
 void SoundController::playMusic(const std::string file){
 	std::map<std::string, sf::Music*>::iterator it = map.find(file);

@@ -3,12 +3,13 @@
 #include "../../TextureManager.h"
 #include "..\..\GameController.h"
 #include "../../SettingsController.h"
+#include <iostream>
 
 
 Checkbox::Checkbox()
 {
 	checked = (SettingsController::getInstance().getSetting(SettingsController::setting::backgroundMusic) != 0);
-
+	std::cout << "Setting: "<<SettingsController::getInstance().getSetting(SettingsController::setting::backgroundMusic)<<"\n";
 	texChecked = TextureManager::getInstance().getTexture("menuObjecten/CheckedOption.png");
 	texUnchecked = TextureManager::getInstance().getTexture("menuObjecten/UncheckedOption.png");
 	sprite.setTexture((checked ? *texChecked : *texUnchecked), true);
