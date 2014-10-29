@@ -116,11 +116,11 @@ void Player::move(float speedModifier){
 					collided = true;
 				}
 				else {
-					if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
+					/*if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
 						closestCollisionPoint = Collision::getClosestPoint(obj, this);
 						closestTableDistance = Collision::dist2(closestCollisionPoint, newPos);
 						closestTable = obj;
-					}
+					}*/
 					isWalkeble = false;
 				}
 			}
@@ -140,6 +140,7 @@ void Player::move(float speedModifier){
 
 		if (!isWalkeble){
 			position = reservePos;
+			emit = false;/*
 			float dirToPoint = atan2(closestCollisionPoint.y - position.y, closestCollisionPoint.x - position.x) * 180 / PI;
 			float playerDir = dir * 180 / PI;
 			float newDir = playerDir;
@@ -174,22 +175,9 @@ void Player::move(float speedModifier){
 				position = reservePos;
 				emit = false;
 			}
-
+			*/
 		}
-	exit:
-
-		if (isWalkeble){
-
-			// Spawn Particles
-			/*if (framesTillNextParticle > 1 / speedModifier){
-				int maximumNumberOfParticles = rand() % 3;
-				for (int particleNumber = 0; particleNumber < maximumNumberOfParticles; particleNumber++){
-				Particle * p = new  Particle(position);
-				LevelController::getInstance().addObject(p);
-				}
-				framesTillNextParticle = 0;
-				}*/
-		}
+	//exit:
 
 
 		toNext += speedModifier;
