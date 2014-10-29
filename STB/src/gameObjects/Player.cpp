@@ -38,6 +38,7 @@ Animation{ player }
 
 void Player::reduceHP(int damage){
 	if (!invincible){
+		SoundController::getInstance().playMusic("Ouch_" + std::to_string(rand() % 2 + 1));
 		hp -= damage;
 		if (hp <= 0){
 			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
@@ -135,13 +136,13 @@ void Player::move(float speedModifier){
 			
 		}
 		else {
-			if (toNextWalkSound >= 10){
+			if (toNextWalkSound >= 20){
 				walkSound++;
 				if (walkSound == 9){
 					walkSound = 1;
 				}
-				SoundController::getInstance().playMusic("walk_" + std::to_string(walkSound));
-				toNextWalkSound -= 10;
+				SoundController::getInstance().playMusic("walk_" + std::to_string(rand() % 8 + 1));
+				toNextWalkSound -= 20;
 			}
 		}
 
