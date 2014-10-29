@@ -73,7 +73,7 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 }
 
 void LevelController::step(float fps, sf::RenderWindow & window){
-	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) && !pausedPressed){
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) && !pausedPressed && player != nullptr){
 		paused = !paused;
 		pausedPressed = true;
 	} 
@@ -97,6 +97,28 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 			for (GameObject* obj : gameObjects){
 				obj->move(speedModifier);
+			}
+			if (timeToNextEnemySpawn <= 0 && player != nullptr){
+				sf::Vector2f enemyPosition(0,0);
+				while (enemyPosition.x < mainView.getCenter().x - (mainView.getSize().x / 2) && enemyPosition.x > mainView.getCenter().x + (mainView.getSize().x / 2) && enemyPosition.x > 0 && enemyPosition.x < 1280){
+					enemyPosition.x = static_cast<float>(rand() % 1280);
+				}
+				while (enemyPosition.y < mainView.getCenter().y - (mainView.getSize().y / 2) && enemyPosition.y > mainView.getCenter().y + (mainView.getSize().y / 2) && enemyPosition.y > 0 && enemyPosition.y < 1280){
+					enemyPosition.y = static_cast<float>(rand() % 960);
+				}
+				Enemy * e = new Enemy();
+				switch (rand() % 4){
+					case 0: e->setType(e->average); break;
+					case 1: e->setType(e->fat); break;
+					case 2: e->setType(e->cheerleader); break;
+					case 3: e->setType(e->macho); break;
+				}
+				
+				addObject(e);
+				timeToNextEnemySpawn = enemySpawnTime;
+			}
+			else {
+				timeToNextEnemySpawn -= speedModifier;
 			}
 		}
 		//window.clear(sf::Color::White);
