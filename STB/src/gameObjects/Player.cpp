@@ -132,6 +132,17 @@ void Player::move(float speedModifier){
 		isWalkeble &= (!(position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16));
 		if (position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16){
 			emit = false;
+			
+		}
+		else {
+			if (toNextWalkSound >= 10){
+				walkSound++;
+				if (walkSound == 9){
+					walkSound = 1;
+				}
+				SoundController::getInstance().playMusic("walk_" + std::to_string(walkSound));
+				toNextWalkSound -= 10;
+			}
 		}
 
 		if (!isWalkeble){
@@ -175,7 +186,7 @@ void Player::move(float speedModifier){
 		}
 	//exit:
 
-
+		toNextWalkSound += speedModifier;
 		toNext += speedModifier;
 	}
 

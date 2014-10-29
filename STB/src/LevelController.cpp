@@ -99,13 +99,9 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 				obj->move(speedModifier);
 			}
 			if (timeToNextEnemySpawn <= 0 && player != nullptr){
-				sf::Vector2f enemyPosition(0,0);
-				int random = rand() % 360;
-				float radius = random * PI / 180;
-				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
-				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
 				
 				Enemy * e = new Enemy();
+
 				switch (rand() % 4){
 					case 0: e->setType(e->average); break;
 					case 1: e->setType(e->fat); break;
@@ -113,11 +109,24 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 					case 3: e->setType(e->macho); break;
 				}
 				e->setPosition(enemyPosition);
+				enemyPosition = sf::Vector2f{ 0, 0 };
 				addObject(e);
 				timeToNextEnemySpawn = enemySpawnTime;
 			}
 			else {
 				timeToNextEnemySpawn -= speedModifier;
+			}
+		}
+		if (player != nullptr){
+			if (enemyPosition.x < 32 || enemyPosition.x > 1248){
+				int random = rand() % 360;
+				float radius = random * PI / 180;
+				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
+			}
+			if (enemyPosition.y < 32 || enemyPosition.y > 934){
+				int random = rand() % 360;
+				float radius = random * PI / 180;
+				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
 			}
 		}
 		//window.clear(sf::Color::White);

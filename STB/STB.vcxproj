@@ -185,6 +185,14 @@
     <None Include="Resources\Sounds\rifle.ogg" />
     <None Include="Resources\Sounds\shotgun.ogg" />
     <None Include="Resources\Sounds\sniper.ogg" />
+    <None Include="Resources\Sounds\walk_1.ogg" />
+    <None Include="Resources\Sounds\walk_2.ogg" />
+    <None Include="Resources\Sounds\walk_3.ogg" />
+    <None Include="Resources\Sounds\walk_4.ogg" />
+    <None Include="Resources\Sounds\walk_5.ogg" />
+    <None Include="Resources\Sounds\walk_6.ogg" />
+    <None Include="Resources\Sounds\walk_7.ogg" />
+    <None Include="Resources\Sounds\walk_8.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg" />

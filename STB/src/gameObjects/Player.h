@@ -24,7 +24,8 @@ private:
 	int hp = 100;
 	int speed = 1;
 	int framesTillNextParticle = 0;
-
+	int walkSound = 0;
+	float toNextWalkSound = 0;
 public:
 	sf::Texture tex1, tex2, tex3;
 	Player();

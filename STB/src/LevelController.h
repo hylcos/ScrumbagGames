@@ -78,7 +78,7 @@ private:
 
 	Initializer* nextLevel = nullptr;
 
-	sf::Vector2f viewMovement{ 0,0 };
+	sf::Vector2f viewMovement{ 0, 0 };
 
 	sf::Texture background;
 	sf::Texture backgroundOverlay;
@@ -94,7 +94,7 @@ private:
 	std::unordered_set<GameObject*> gameObjectToRemove;
 	float enemySpawnTime = 240;
 	float timeToNextEnemySpawn = 240;
-
+	sf::Vector2f enemyPosition{0, 0};
 	MainMenu backToMenu;
 	Play restart;
 	Resume resume;
