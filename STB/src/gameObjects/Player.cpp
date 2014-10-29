@@ -21,9 +21,11 @@ Player::Player() :
 Animation{ player }
 {
 	//Particle Emitter
-	frequency = 1;
-	amount = 13;
+	ParticleEmitter::frequency = 10;
+	ParticleEmitter::amount = 6;
+	ParticleEmitter::speed = 5;
 	ParticleEmitter::object = this;
+	ParticleEmitter::setColor(sf::Color::Black, 180);
 
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
@@ -68,12 +70,6 @@ void Player::update(float speedModifier) {
 }
 
 void Player::move(float speedModifier){
-	int i = rand() % 3;
-	if (i > 0){
-		ParticleEmitter::setColor(sf::Color::Red, 200);
-	}
-	else
-		ParticleEmitter::setColor(sf::Color::Yellow, 200);
 	framesTillNextParticle++;
 	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
 
