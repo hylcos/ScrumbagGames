@@ -20,7 +20,12 @@ struct { sf::Keyboard::Key key; int weapon; } weaponchoice[]{
 Player::Player() :
 Animation{ player }
 {
-	frequency = 60;
+	//Particle Emitter
+	frequency = 2;
+	amount = 4;
+	ParticleEmitter::setColor(sf::Color::Black, 125);
+	ParticleEmitter::object = this;
+
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),

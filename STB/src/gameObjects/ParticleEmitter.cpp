@@ -1,16 +1,30 @@
 #include "../stdafx.h"
 #include "ParticleEmitter.h"
+#include "../LevelController.h"
 
 
 ParticleEmitter::ParticleEmitter()
 {
 }
 
-void ParticleEmitter::setColor(int r, int g, int b, int a){
-
+void ParticleEmitter::update(float speedModifier){
+	if (particleManager == nullptr){
+		particleManager = LevelController::getInstance().getParticleManager();
+	}
+	frame++;
+	if (frame >= frequency / speedModifier){
+		particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
+	}
 }
 
-void ParticleEmitter::setColor(sf::Color color){
+void ParticleEmitter::setColor(int r, int g, int b, int a){
+	particleColor.r = r;
+	particleColor.g = g;
+	particleColor.b = b;
+	particleColor.a = a;
+}
+
+void ParticleEmitter::setColor(sf::Color color, int a){
 	particleColor = color;
 }
 
