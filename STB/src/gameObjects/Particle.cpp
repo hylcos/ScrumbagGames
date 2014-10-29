@@ -20,7 +20,7 @@ Particle::Particle(sf::Vector2f pos)
 void Particle::update(float speedModifier){
 	particleSpeed *= 1.0f - (0.15f * speedModifier);
 	if (particleSpeed <= 0.004){
-		LevelController::getInstance().removeObject(this);
+		LevelController::getInstance().getParticleManager()->removeObject(this);
 		Particle::~Particle();
 	}
 }
