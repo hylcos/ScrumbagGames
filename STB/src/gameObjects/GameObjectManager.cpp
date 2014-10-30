@@ -24,9 +24,7 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 		return new Table();
 	}
 	if (string == "Enemy"){
-		Enemy* e = new Enemy();
-		e->setType(e->cheerleader);
-		return e;
+		return new Enemy();
 	}
 	if (string == "ParticleManager"){
 		return new ParticleManager();
