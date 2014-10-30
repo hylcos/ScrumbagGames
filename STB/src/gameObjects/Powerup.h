@@ -2,6 +2,7 @@
 #include "GameObject.h"
 #include "../TextureManager.h"
 #include "../LevelController.h"
+#include "ParticleEmitter.h"
 
 enum Powerups{
 	fullHealth
@@ -24,7 +25,7 @@ enum Powerups{
 	//, blind
 	, last
 };
-class Powerup : public GameObject
+class Powerup : public GameObject, ParticleEmitter
 {
 public:
 	class Types{

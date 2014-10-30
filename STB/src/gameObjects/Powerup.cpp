@@ -54,6 +54,16 @@ void Powerup::pufAmmoUp(){
 	LevelController::getInstance().getPlayer()->getSelectedWeapon()->setAmmo(2);
 }
 void Powerup::pufBAB(){
+	ParticleEmitter::amount = 600;
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::particleColor = sf::Color::White;
+	ParticleEmitter::object = LevelController::getInstance().getPlayer();
+	ParticleEmitter::speed = 50.f;
+	ParticleEmitter::deceleration = 0.1f;
+	ParticleEmitter::direction = rotation;
+	ParticleEmitter::directionDeviation = 180.f;
+	ParticleEmitter::size = 8.f;
+	ParticleEmitter::update(0.f);
 	for (GameObject * obj : LevelController::getInstance().getGameObjects()){
 		if (dynamic_cast<Enemy *>(obj) != 0){
 			dynamic_cast<Enemy *>(obj)->reduceHP(1000);

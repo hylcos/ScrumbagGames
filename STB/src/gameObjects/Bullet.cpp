@@ -10,7 +10,7 @@ bulletSpeed{ bulletSpeed },
 damage{ damage }
 {
 	// Set particles
-	ParticleEmitter::amount = 4;
+	ParticleEmitter::amount = 3;
 	ParticleEmitter::emitOnce = true;
 	ParticleEmitter::frequency = 1;
 	ParticleEmitter::particleColor = sf::Color::Yellow;
@@ -35,7 +35,7 @@ void Bullet::update(float speedmodifier){
 			if (gameObject->getBounds().intersects(getBounds())){
 				ParticleEmitter::spawnPosition.x = position.x + cos((rotation - 90)*PI / 180) * bulletSpeed;
 				ParticleEmitter::spawnPosition.y = position.y + sin((rotation - 90)*PI / 180) * bulletSpeed;
-				ParticleEmitter::amount = damage;
+				ParticleEmitter::amount = (int)(damage/2);
 				ParticleEmitter::emitOnce = true;
 				ParticleEmitter::setColor(sf::Color::Red, 200);
 				ParticleEmitter::speed = 30.f;

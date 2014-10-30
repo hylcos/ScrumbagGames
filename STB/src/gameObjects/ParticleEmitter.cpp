@@ -14,7 +14,7 @@ void ParticleEmitter::update(float speedModifier){
 	frame++;
 	if ((frame >= frequency / speedModifier && emit) || emitOnce){
 		emitOnce = false;
-		int p = rand() % (amount - 1) + 1;
+		int p = rand() % ((int)(amount/2)) + (int)(amount/2);
 		for (int i = 0; i < p; i++){
 			Particle * p;
 			if (spawnPosition.x == 0){
