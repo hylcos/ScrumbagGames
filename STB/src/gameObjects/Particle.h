@@ -12,7 +12,7 @@ public:
 	void setDeceleration(float dec);
 	void setDirection(float dir, float dev);
 	void setRotation(float rot, float dev);
-	void setSize(sf::Vector2f size);
+	void setSize(float size);
 	void setMinimumSpeed(float min);
 	void setGore(bool g);
 	void Particle::update(float speedModifier) override;
@@ -28,6 +28,6 @@ private:
 	float minimumSpeed;
 	bool isGore;
 	sf::Vector2f prevPosition{ 0, 0 };
-	sf::RectangleShape particle;
+	sf::CircleShape particle;
 };
 

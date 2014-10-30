@@ -21,11 +21,14 @@ Player::Player() :
 Animation{ player }
 {
 	//Particle Emitter
-	ParticleEmitter::frequency = 10;
 	ParticleEmitter::amount = 6;
-	ParticleEmitter::speed = 5;
+	ParticleEmitter::frequency = 10;
+	ParticleEmitter::setColor(sf::Color::Black, 120);
 	ParticleEmitter::object = this;
-	ParticleEmitter::setColor(sf::Color::Black, 180);
+	ParticleEmitter::speed = 5.f;
+	ParticleEmitter::deceleration = 0.15f;
+	ParticleEmitter::directionDeviation = 180.f;
+	ParticleEmitter::size = 3.f;
 
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
