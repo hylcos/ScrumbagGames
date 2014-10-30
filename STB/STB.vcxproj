@@ -95,6 +95,7 @@
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
     <ClInclude Include="src\gameObjects\menu\MusicSlider.h" />
     <ClInclude Include="src\gameObjects\menu\Slider.h" />
+    <ClInclude Include="src\gameObjects\menu\SoundSlider.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleGore.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleSound.h" />
     <ClInclude Include="src\gameObjects\ParticleEmitter.h" />
@@ -134,11 +135,13 @@
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
     <ClInclude Include="src\TextureManager.h" />
+    <ClInclude Include="src\gameObjects\Trashcan.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
     <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
+    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp" />
     <ClCompile Include="src\gameObjects\ParticleEmitter.cpp" />
@@ -181,6 +184,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\TextureManager.cpp" />
+    <ClCompile Include="src\gameObjects\Trashcan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />

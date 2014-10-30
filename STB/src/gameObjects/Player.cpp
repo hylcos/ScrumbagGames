@@ -110,6 +110,10 @@ void Player::move(float speedModifier){
 				isOnBench = true;
 				collided = true;
 			}
+			if (obj->getType() == trashcan && Collision::collision(this, obj)){
+					collided = true;
+					isWalkeble = false;
+			}
 			if (obj->getType() == table && Collision::collision(this, obj)){
 				if (isOnBench || isOnTable){
 					isOnTable = true;

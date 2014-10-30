@@ -121,6 +121,18 @@
 (1147,722) Table
 (1147,855) Table
 
+(700, 300) Trashcan
+(381, 505) Trashcan
+(584, 120) Trashcan
+(800,800) Trashcan
+(800,500) Trashcan
+(500,750) Trashcan
+(900, 515) Trashcan
+(986, 484) Trashcan
+(695, 150) Trashcan
+(652, 820) Trashcan
+(652, 780) Trashcan
+
 (0,0) ParticleManager
 
 (640,480) Player

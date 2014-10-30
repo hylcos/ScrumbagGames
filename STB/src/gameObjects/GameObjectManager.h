@@ -11,6 +11,7 @@ This is the header file of the game object manager class.
 #include <string>
 #include "Table.h"
 #include "Bench.h"
+#include "Trashcan.h"
 #include "Enemy.h"
 #include "menu\play.h"
 #include "menu\Options.h"
@@ -20,6 +21,7 @@ This is the header file of the game object manager class.
 #include "menu\ToggleSound.h"
 #include "menu\ToggleGore.h"
 #include "menu\MusicSlider.h"
+#include "menu\SoundSlider.h"
 
 class GameObjectManager
 {

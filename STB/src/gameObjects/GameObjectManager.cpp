@@ -20,6 +20,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Bench"){
 		return new Bench();
 	}
+	if (string == "Trashcan"){
+		return new Trashcan();
+	}
 	if (string == "Table"){
 		return new Table();
 	}
@@ -52,6 +55,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	}
 	if (string == "menu/MusicSlider"){
 		return new MusicSlider();
+	}
+	if (string == "menu/SoundSlider"){
+		return new SoundSlider();
 	}
 	if (string == ""){
 		throw endOfFile();
