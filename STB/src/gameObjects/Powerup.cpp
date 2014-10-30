@@ -12,17 +12,12 @@ void Powerup::Types::executeAction(Powerup & powerup){
 	(powerup.*action)();
 }
 
-Powerup::Powerup(sf::Vector2f position, int pwr):
+Powerup::Powerup(sf::Vector2f position):
 GameObject{ gameObjectType::powerup }
 {
-
 	sprite.setPosition(position);
-	if (!pwr)
-		pwr = rand() % last;
-	power = static_cast<Powerups>(pwr);
 	tex = *TextureManager::getInstance().getTexture("Sprites/Powerup.png");
 	sprite.setTexture(tex);
-
 }
 
 Powerup* Powerup::setType(Powerup::Types* type){
@@ -54,6 +49,9 @@ void Powerup::pufDoubleSpeed(){
 }
 void Powerup::pufFullHealth(){
 	LevelController::getInstance().getPlayer()->fullHealth();
+}
+void Powerup::pufAmmoUp(){
+	LevelController::getInstance().getPlayer()->getSelectedWeapon()->setAmmo(2);
 }
 void Powerup::pufBAB(){
 	for (GameObject * obj : LevelController::getInstance().getGameObjects()){

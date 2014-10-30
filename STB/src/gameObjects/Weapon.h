@@ -12,6 +12,7 @@ public:
 	virtual float Weapon::getAmmo();
 	virtual std::string Weapon::getAmmoString();
 	virtual std::string Weapon::getName();
+	virtual void Weapon::setAmmo(int amount);
 	void setMultipler();
 	~Weapon();
 	int multipler = 1;
