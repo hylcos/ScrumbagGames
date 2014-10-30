@@ -19,7 +19,7 @@ void SoundController::load(){
 	bgMusic.setVolume((float)(SettingsController::getInstance().getSetting(SettingsController::backgroundMusicVolume) * 100 / 255));
 	setBackgroundMusic(SettingsController::getInstance().getSetting(SettingsController::backgroundMusic) != 0);
 }
-void SoundController::playMusic(const std::string file){
+void SoundController::playMusic(std::string file){
 	if (!SettingsController::getInstance().getSetting(SettingsController::sounds)){
 		return;
 	}
@@ -27,8 +27,9 @@ void SoundController::playMusic(const std::string file){
 	if (it != map.end())
 	{
 		it->second->play();
+		return;
 	}
-	sf::Music* temp = new sf::Music();
+	sf::Music* temp = new sf::Music();	
 	temp->openFromFile("Resources/Sounds/" + file + ".ogg");
 	map.insert(std::pair<std::string, sf::Music*>(file, temp));
 	it = map.find(file);
