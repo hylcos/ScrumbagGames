@@ -31,7 +31,7 @@ public:
 
 	~SoundController();
 
-	std::map < std::string, sf::Music* > SoundController::map;
+	std::map <  std::string, sf::Music* > SoundController::map;
 private:
 	SoundController() {};
 	SoundController(SoundController const&) = delete;

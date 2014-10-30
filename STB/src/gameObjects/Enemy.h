@@ -111,12 +111,14 @@ public:
 	*/
 	~Enemy();
 
+
+	sf::Sprite melee;
 private:
 	float hitCooldown = 0;
 	int dmg = 0;
 	bool drawMelee;
 	Initializer & type = average;
-	sf::Sprite curSprite,melee;
+	sf::Sprite curSprite;
 	sf::Texture tex;
 };
 
