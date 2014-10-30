@@ -18,6 +18,7 @@ This is the header file of the game object manager class.
 #include "menu\Checkbox.h"
 #include "menu\ToggleMusic.h"
 #include "menu\ToggleSound.h"
+#include "menu\ToggleGore.h"
 
 class GameObjectManager
 {

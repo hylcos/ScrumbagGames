@@ -8,7 +8,10 @@
 
 Checkbox::Checkbox()
 {
-	checked = (SettingsController::getInstance().getSetting(SettingsController::backgroundMusic) != 0);
+
+}
+
+void Checkbox::init(){
 	texChecked = TextureManager::getInstance().getTexture("menuObjecten/CheckedOption.png");
 	texUnchecked = TextureManager::getInstance().getTexture("menuObjecten/UncheckedOption.png");
 	sprite.setTexture((checked ? *texChecked : *texUnchecked), true);

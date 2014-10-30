@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <SFML/Graphics/Image.hpp>
+#include <SFML/Graphics.hpp>
 class SettingsController
 {
 private:
@@ -34,7 +34,8 @@ public:
 
 	enum setting{
 		backgroundMusic,
-		sounds
+		sounds,
+		gore
 	};
 	int SettingsController::getSetting(setting set);
 	void SettingsController::setSetting(setting set, int value); 
