@@ -18,6 +18,7 @@ public:
 		player,
 		table,
 		bench,
+		trashcan,
 		powerup,
 		weapon,
 		particle,

@@ -20,6 +20,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Bench"){
 		return new Bench();
 	}
+	if (string == "Trashcan"){
+		return new Trashcan();
+	}
 	if (string == "Table"){
 		return new Table();
 	}

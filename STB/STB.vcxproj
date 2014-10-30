@@ -132,6 +132,7 @@
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
     <ClInclude Include="src\TextureManager.h" />
+    <ClInclude Include="src\gameObjects\Trashcan.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
@@ -177,6 +178,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\TextureManager.cpp" />
+    <ClCompile Include="src\gameObjects\Trashcan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />
