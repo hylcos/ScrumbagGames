@@ -6,7 +6,7 @@
 
 MusicSlider::MusicSlider()
 {
-	value = SettingsController::getInstance().getSetting(SettingsController::backgroundMusicVolume);
+	value = std::max(0, std::min(255, SettingsController::getInstance().getSetting(SettingsController::backgroundMusicVolume)));
 }
 
 void MusicSlider::updateValue(int value){

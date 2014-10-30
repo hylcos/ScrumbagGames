@@ -149,6 +149,9 @@
     <ClInclude Include="src\gameObjects\menu\MusicSlider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\SoundSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -272,6 +275,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -552,6 +558,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\menuObjecten\ScrollBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\SlideBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

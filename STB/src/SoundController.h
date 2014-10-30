@@ -27,6 +27,7 @@ public:
 
 	void SoundController::setBackgroundMusic(bool enabled);
 	void SoundController::setBackgroundMusicVolume(int value);
+	void SoundController::setSoundVolume(int value);
 
 	~SoundController();
 
@@ -36,6 +37,7 @@ private:
 	SoundController(SoundController const&) = delete;
 	void operator=(SoundController const&) = delete;
 
+	int soundVolume;
 	bool isLoaded = false;
 	sf::Music bgMusic;
 };

@@ -55,6 +55,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/MusicSlider"){
 		return new MusicSlider();
 	}
+	if (string == "menu/SoundSlider"){
+		return new SoundSlider();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}
