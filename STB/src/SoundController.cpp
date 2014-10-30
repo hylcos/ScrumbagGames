@@ -19,6 +19,9 @@ void SoundController::load(){
 	setBackgroundMusic(SettingsController::getInstance().getSetting(SettingsController::backgroundMusic) != 0);
 }
 void SoundController::playMusic(const std::string file){
+	if (!SettingsController::getInstance().getSetting(SettingsController::sounds)){
+		return;
+	}
 	std::map<std::string, sf::Music*>::iterator it = map.find(file);
 	if (it != map.end())
 	{

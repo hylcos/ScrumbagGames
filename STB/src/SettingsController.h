@@ -33,7 +33,8 @@ public:
 	}
 
 	enum setting{
-		backgroundMusic
+		backgroundMusic,
+		sounds
 	};
 	int SettingsController::getSetting(setting set);
 	void SettingsController::setSetting(setting set, int value); 

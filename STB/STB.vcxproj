@@ -92,6 +92,7 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\menu\ToggleSound.h" />
     <ClInclude Include="src\gameObjects\ParticleEmitter.h" />
     <ClInclude Include="src\gameObjects\ParticleManager.h" />
     <ClInclude Include="src\gameObjects\Particle.h" />
@@ -131,6 +132,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp" />
     <ClCompile Include="src\gameObjects\ParticleEmitter.cpp" />
     <ClCompile Include="src\gameObjects\ParticleManager.cpp" />
     <ClCompile Include="src\gameObjects\Particle.cpp" />
