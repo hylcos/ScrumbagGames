@@ -233,6 +233,7 @@
     <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png" />
     <Image Include="Resources\Images\menuObjecten\OptionsButton.png" />
     <Image Include="Resources\Images\menuObjecten\ScrollButton.png" />
+    <Image Include="Resources\Images\menuObjecten\SlideBar.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\PauseMenuOverlay.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />

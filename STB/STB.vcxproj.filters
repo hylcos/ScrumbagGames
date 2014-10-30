@@ -542,6 +542,9 @@
     <Image Include="Resources\Images\menuObjecten\ScrollButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\menuObjecten\SlideBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Coalition_v2.ttf" />
