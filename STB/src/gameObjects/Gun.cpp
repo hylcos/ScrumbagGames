@@ -20,7 +20,7 @@ ammo{ ammo }
 }
 
 void Gun::fire(){
-	if (ammo > 0 && currentMagazine > 0){
+	if (ammo >= 0 && currentMagazine > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
 				position.x += (10 * cos(rotation * PI / 180)
@@ -80,6 +80,11 @@ void Gun::reload(){
 				if (name == "pistol"){
 					ammo = 8;
 				}
+			}
+			else {
+				reloadCoolDown = reloadSpeed;
+				currentMagazine = ammo;
+				ammo -= currentMagazine;
 			}
 			std::cout
 				<< "Ammo left: " << ammo << "\n";
