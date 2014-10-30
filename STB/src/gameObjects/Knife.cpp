@@ -1,7 +1,7 @@
 #include "../stdafx.h"
 #include "Knife.h"
 #include "../LevelController.h"
-
+#include <iostream>
 Knife::Knife(std::string name, int damage, short attackSpeed, int range):
 	damage{ damage },
 	attackSpeed{ attackSpeed },
@@ -20,6 +20,7 @@ void Knife::fire(){
 	if (hitCooldown <= 0){
 		drawMelee = true;
 		hitCooldown = attackSpeed;
+		SoundController::getInstance().playMusic("knife_hit"+ std::to_string(rand() % 2 + 1));
 		sf::Vector2f point{ 
 			position.x 
 			+ 11 * cos(melee.getRotation() * PI / 180) 

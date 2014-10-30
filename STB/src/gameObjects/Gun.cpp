@@ -70,6 +70,7 @@ void Gun::draw(sf::RenderWindow & window) const {
 void Gun::reload(){
 	if (ammo > 0){
 		if (reloadCoolDown <= 0){
+			SoundController::getInstance().playMusic(name + "_reload");
 			if (magazineSize <= ammo){
 				reloadCoolDown = reloadSpeed;
 				if (currentMagazine > 0){
