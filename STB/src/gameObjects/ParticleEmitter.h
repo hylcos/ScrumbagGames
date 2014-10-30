@@ -30,7 +30,7 @@ protected:
 	float rotation = 0.f;
 	float rotationDeviation = 360.f;
 	float minimumSpeed = 0.004f;
-	sf::Vector2f position{ 0, 0 };
+	sf::Vector2f spawnPosition{ 0, 0 };
 	
 	ParticleManager * particleManager = nullptr;
 	GameObject * object;

@@ -17,11 +17,11 @@ void ParticleEmitter::update(float speedModifier){
 		int p = rand() % (amount - 1) + 1;
 		for (int i = 0; i < p; i++){
 			Particle * p;
-			if (position.x == 0){
+			if (spawnPosition.x == 0){
 				p = new Particle(object->getPosition());
 			}
 			else {
-				p = new Particle(position);
+				p = new Particle(spawnPosition);
 			}
 			p->setColor(particleColor);
 			p->setSpeed(speed);

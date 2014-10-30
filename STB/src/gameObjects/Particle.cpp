@@ -70,7 +70,7 @@ void Particle::draw(sf::RenderWindow & window) const{
 	window.draw(particle);
 }
 
-bool getGore(){
+bool Particle::getGore(){
 	return isGore;
 }
 
