@@ -38,6 +38,9 @@ void Bullet::update(float speedmodifier){
 				ParticleEmitter::setColor(sf::Color::Red, 200);
 				ParticleEmitter::speed = 15.f;
 				ParticleEmitter::setSize(4.f);
+				ParticleEmitter::minimumSpeed = 0.0001f;
+				ParticleEmitter::deceleration = 0.3f;
+				ParticleEmitter::rotationDeviation = 30;
 				ParticleEmitter::update(speedmodifier);
 				(dynamic_cast<Enemy*>(gameObject))->reduceHP(damage);
 				LevelController::getInstance().removeObject(this);

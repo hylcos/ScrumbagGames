@@ -23,6 +23,7 @@ void ParticleEmitter::update(float speedModifier){
 			p->setDirection(direction, directionDeviation);
 			p->setSize(size);
 			p->setRotation(rotation, rotationDeviation);
+			p->setMinimumSpeed(minimumSpeed);
 			particleManager->addParticle(p);
 		}
 		//particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);

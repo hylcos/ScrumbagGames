@@ -27,6 +27,7 @@ protected:
 	sf::Vector2f size{ 0, 0 };
 	float rotation = 0.f;
 	float rotationDeviation = 360.f;
+	float minimumSpeed = 0.004f;
 	
 	ParticleManager * particleManager = nullptr;
 	GameObject * object;

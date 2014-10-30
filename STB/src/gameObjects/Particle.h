@@ -22,8 +22,8 @@ private:
 	float rotation;
 	float direction;
 	float particleSpeed;
-	float deceleration = 0.15f;
-	float minimumSpeed = 0.004f;
+	float deceleration;
+	float minimumSpeed;
 	sf::Vector2f prevPosition{ 0, 0 };
 	sf::RectangleShape particle;
 };
