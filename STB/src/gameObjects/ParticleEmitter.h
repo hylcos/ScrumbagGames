@@ -11,19 +11,22 @@ public:
 	bool isEmitting();
 	float getFrequency();
 	int getParticleAmount();
+	void setSize(float sizeX, float sizeY = 0.f);
 	~ParticleEmitter();
 protected:
 	sf::Color particleColor;
 	bool emitOnce = false;
 	bool emit = false;
-	float frequency = 30;
+	float frequency = 30.f;
 	int amount = 1;
 	int frame = 0;
-	float speed = 20;
+	float speed = 20.f;
 	float deceleration = 0.15f;
-	float direction = 0;
-	float deviation = 360;
-	float size = 4.0f;
+	float direction = 0.f;
+	float directionDeviation = 360.f;
+	sf::Vector2f size{ 0, 0 };
+	float rotation = 0.f;
+	float rotationDeviation = 360.f;
 	
 	ParticleManager * particleManager = nullptr;
 	GameObject * object;

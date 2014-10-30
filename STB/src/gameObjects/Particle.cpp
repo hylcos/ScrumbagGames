@@ -22,17 +22,34 @@ void Particle::setDeceleration(float dec){
 }
 
 void Particle::setDirection(float dir, float dev){
-	rotation = static_cast<float>(rand() % (int)(dev * 2) - dev + dir);
-	particle.setRotation(rotation);
+	if (dev == 0.f){
+		rotation = dir;
+	}
+	else {
+		rotation = static_cast<float>(rand() % (int)(dev * 2) - dev + dir);
+	}
 }
 
-void Particle::setSize(float size){
-	particle.setSize(sf::Vector2f{ size, size });
+void Particle::setRotation(float rot, float dev){
+	if (dev == 0.f){
+		particle.setRotation(rot);
+	}
+	else {
+		particle.setRotation(static_cast<float>(rand() % (int)(dev * 2) - dev + rot));
+	}
+}
+
+void Particle::setSize(sf::Vector2f size){
+	particle.setSize(size);
+}
+
+void Particle::setMinimumSpeed(float min){
+	minimumSpeed = min;
 }
 
 void Particle::update(float speedModifier){
 	particleSpeed *= 1.0f - (deceleration * speedModifier);
-	if (particleSpeed <= 0.004){
+	if (particleSpeed <= minimumSpeed){
 		LevelController::getInstance().getParticleManager()->removeObject(this);
 		Particle::~Particle();
 	}

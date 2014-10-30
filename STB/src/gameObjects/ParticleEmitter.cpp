@@ -12,21 +12,21 @@ void ParticleEmitter::update(float speedModifier){
 		particleManager = LevelController::getInstance().getParticleManager();
 	}
 	frame++;
-	if (frame >= frequency / speedModifier){
-		if (isEmitting()){
-			int p = rand() % (amount - 1) + 1;
-			for (int i = 0; i < p; i++){
-				Particle * p = new Particle(object->getPosition());
-				p->setColor(particleColor);
-				p->setSpeed(speed);
-				p->setDeceleration(deceleration);
-				p->setDirection(direction, deviation);
-				p->setSize(size);
-				particleManager->addParticle(p);
-			}
-			//particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
-			frame = 0;
+	if ((frame >= frequency / speedModifier && emit) || emitOnce){
+		emitOnce = false;
+		int p = rand() % (amount - 1) + 1;
+		for (int i = 0; i < p; i++){
+			Particle * p = new Particle(object->getPosition());
+			p->setColor(particleColor);
+			p->setSpeed(speed);
+			p->setDeceleration(deceleration);
+			p->setDirection(direction, directionDeviation);
+			p->setSize(size);
+			p->setRotation(rotation, rotationDeviation);
+			particleManager->addParticle(p);
 		}
+		//particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
+		frame = 0;
 	}
 }
 
@@ -42,23 +42,19 @@ void ParticleEmitter::setColor(sf::Color color, int a){
 	particleColor.a = a;
 }
 
-bool ParticleEmitter::isEmitting(){
-	if (emit){
-		return emit;
-	}
-	if (emitOnce){
-		emitOnce = false;
-		return true;
-	}
-	return false;
-}
-
 float ParticleEmitter::getFrequency(){
 	return frequency;
 }
 
 int ParticleEmitter::getParticleAmount(){
 	return amount;
+}
+
+void ParticleEmitter::setSize(float sizeX, float sizeY){
+	if (sizeY == 0){
+		sizeY = sizeX;
+	}
+	size = sf::Vector2f{ sizeX, sizeY };
 }
 
 ParticleEmitter::~ParticleEmitter()

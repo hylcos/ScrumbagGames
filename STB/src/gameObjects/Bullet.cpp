@@ -18,8 +18,8 @@ damage{ damage }
 	ParticleEmitter::speed = 1.f;
 	ParticleEmitter::deceleration = 0.05f;
 	ParticleEmitter::direction = rotation;
-	ParticleEmitter::deviation = 90.f;
-	ParticleEmitter::size = 2.f;
+	ParticleEmitter::directionDeviation = 90.f;
+	ParticleEmitter::setSize(2.f);
 
 	GameObject::position.x = position.x;
 	GameObject::position.y = position.y;
@@ -33,6 +33,12 @@ void Bullet::update(float speedmodifier){
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 		if (gameObject->getType() == enemy){
 			if (gameObject->getBounds().intersects(getBounds())){
+				ParticleEmitter::amount = 6;
+				ParticleEmitter::emitOnce = true;
+				ParticleEmitter::setColor(sf::Color::Red, 200);
+				ParticleEmitter::speed = 15.f;
+				ParticleEmitter::setSize(4.f);
+				ParticleEmitter::update(speedmodifier);
 				(dynamic_cast<Enemy*>(gameObject))->reduceHP(damage);
 				LevelController::getInstance().removeObject(this);
 			}
