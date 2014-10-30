@@ -39,8 +39,8 @@ void Particle::setRotation(float rot, float dev){
 	}
 }
 
-void Particle::setSize(sf::Vector2f size){
-	particle.setSize(size);
+void Particle::setSize(float size){
+	particle.setRadius(size);
 }
 
 void Particle::setMinimumSpeed(float min){
