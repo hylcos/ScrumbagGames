@@ -76,6 +76,7 @@ private:
 	int frames = 0;
 	clock_t nextClock;
 	sf::Font * font = nullptr;
+	bool particlesEnabled;
 
 	void step();
 	bool stopping = false;

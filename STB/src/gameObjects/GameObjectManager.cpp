@@ -49,6 +49,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/ToggleSound"){
 		return new ToggleSound();
 	}
+	if (string == "menu/ToggleGore"){
+		return new ToggleGore();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

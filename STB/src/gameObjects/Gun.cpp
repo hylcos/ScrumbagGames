@@ -20,7 +20,7 @@ ammo{ ammo }
 }
 
 void Gun::fire(){
-	if (ammo > 0 && currentMagazine > 0){
+	if (ammo >= 0 && currentMagazine > 0){
 		if (reloadCoolDown <= 0){
 			if (shootCoolDown <= 0){
 				position.x += (10 * cos(rotation * PI / 180)
@@ -77,6 +77,7 @@ void Gun::draw(sf::RenderWindow & window) const {
 void Gun::reload(){
 	if (ammo > 0){
 		if (reloadCoolDown <= 0){
+			SoundController::getInstance().playMusic(name + "_reload");
 			if (magazineSize <= ammo){
 				reloadCoolDown = reloadSpeed;
 				if (currentMagazine > 0){
@@ -87,6 +88,11 @@ void Gun::reload(){
 				if (name == "pistol"){
 					ammo = 8;
 				}
+			}
+			else {
+				reloadCoolDown = reloadSpeed;
+				currentMagazine = ammo;
+				ammo -= currentMagazine;
 			}
 			std::cout
 				<< "Ammo left: " << ammo << "\n";

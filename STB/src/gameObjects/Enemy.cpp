@@ -77,6 +77,7 @@ void Enemy::reduceHP(int damage){
 }
 
 void Enemy::update(float speedModifier){
+	if (hitCooldown < 0){
 	Player* player = LevelController::getInstance().getPlayer();
 
 	setRotation(atan2(position.y - player->getPosition().y, position.x - player->getPosition().x) * 180 / (float)PI - 90);
@@ -85,7 +86,7 @@ void Enemy::update(float speedModifier){
 	melee.setPosition(position);
 	sf::Vector2f posDifference = position - player->getPosition();
 	float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
-	if (hitCooldown < 0){
+	
 		if (distance < 32){
 			player->reduceHP(type.getDamage());
 			hitCooldown = type.getAttackSpeed();
@@ -105,16 +106,18 @@ void Enemy::draw(sf::RenderWindow & window) const{
 }
 
 void Enemy::move(float speedModifier){
-	Player* player = LevelController::getInstance().getPlayer();
-	sf::Vector2f posDifference = position - player->getPosition();
-	float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
-	if (distance > 24){
-		position.x += (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
-		position.y += (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
-	}
-	else if (distance < 16){
-		position.x -= (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
-		position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+	if (hitCooldown- ( type.getAttackSpeed() / 2)< 0){
+		Player* player = LevelController::getInstance().getPlayer();
+		sf::Vector2f posDifference = position - player->getPosition();
+		float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
+		if (distance > 24){
+			position.x += (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+			position.y += (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+		}
+		else if (distance < 16){
+			position.x -= (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+			position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+		}
 	}
 }
 void Enemy::setType(Initializer initializer){

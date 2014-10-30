@@ -47,6 +47,10 @@ void Particle::setMinimumSpeed(float min){
 	minimumSpeed = min;
 }
 
+void Particle::setGore(bool g){
+	isGore = g;
+}
+
 void Particle::update(float speedModifier){
 	particleSpeed *= 1.0f - (deceleration * speedModifier);
 	if (particleSpeed <= minimumSpeed){
@@ -64,6 +68,10 @@ void Particle::move(float speedModifier){
 
 void Particle::draw(sf::RenderWindow & window) const{
 	window.draw(particle);
+}
+
+bool Particle::getGore(){
+	return isGore;
 }
 
 Particle::~Particle()

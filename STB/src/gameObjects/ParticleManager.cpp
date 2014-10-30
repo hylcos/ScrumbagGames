@@ -1,14 +1,18 @@
 #include "../stdafx.h"
 #include "ParticleManager.h"
 #include <SFML\Graphics.hpp>
+#include <iostream>
 
 ParticleManager::ParticleManager() :
 GameObject{ particleManager }
 {
+	goreEnabled = (SettingsController::getInstance().getSetting(SettingsController::gore) != 0);
 }
 
 void ParticleManager::addParticle(Particle * p){
-	ParticlesToAdd.push_back(p);
+	if (!(p->getGore()) || goreEnabled){
+		ParticlesToAdd.push_back(p);
+	}
 }
 
 void ParticleManager::update(float speedModifier) {

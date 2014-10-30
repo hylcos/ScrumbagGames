@@ -33,14 +33,17 @@ void Bullet::update(float speedmodifier){
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 		if (gameObject->getType() == enemy){
 			if (gameObject->getBounds().intersects(getBounds())){
-				ParticleEmitter::amount = 6;
+				ParticleEmitter::spawnPosition.x = position.x + cos((rotation - 90)*PI / 180) * bulletSpeed;
+				ParticleEmitter::spawnPosition.y = position.y + sin((rotation - 90)*PI / 180) * bulletSpeed;
+				ParticleEmitter::amount = damage;
 				ParticleEmitter::emitOnce = true;
 				ParticleEmitter::setColor(sf::Color::Red, 200);
-				ParticleEmitter::speed = 15.f;
-				ParticleEmitter::setSize(4.f);
+				ParticleEmitter::speed = 30.f;
 				ParticleEmitter::minimumSpeed = 0.0001f;
+				ParticleEmitter::setSize(4.f);
 				ParticleEmitter::deceleration = 0.3f;
-				ParticleEmitter::rotationDeviation = 30;
+				ParticleEmitter::directionDeviation = 40;
+				ParticleEmitter::isGore = true;
 				ParticleEmitter::update(speedmodifier);
 				(dynamic_cast<Enemy*>(gameObject))->reduceHP(damage);
 				LevelController::getInstance().removeObject(this);
