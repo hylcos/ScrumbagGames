@@ -177,6 +177,7 @@
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
+    <None Include="Resources\Sounds\dagger.ogg" />
     <None Include="Resources\Sounds\intro.ogg" />
     <None Include="Resources\Sounds\Ouch_1.ogg" />
     <None Include="Resources\Sounds\Ouch_2.ogg" />

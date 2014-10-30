@@ -108,6 +108,11 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 					case 2: e->setType(e->cheerleader); break;
 					case 3: e->setType(e->macho); break;
 				}
+				int random = rand() % 360;
+				float radius = random * PI / 180;
+				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
+				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
+
 				e->setPosition(enemyPosition);
 				enemyPosition = sf::Vector2f{ 0, 0 };
 				addObject(e);
@@ -117,7 +122,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 				timeToNextEnemySpawn -= speedModifier;
 			}
 		}
-		if (player != nullptr){
+		/*if (player != nullptr){
 			if (enemyPosition.x < 32 || enemyPosition.x > 1248){
 				int random = rand() % 360;
 				float radius = random * PI / 180;
@@ -128,7 +133,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 				float radius = random * PI / 180;
 				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
 			}
-		}
+		}*/
 		//window.clear(sf::Color::White);
 
 		window.setView(mainView);

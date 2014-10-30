@@ -272,6 +272,7 @@
     <None Include="Resources\Sounds\walk_6.ogg" />
     <None Include="Resources\Sounds\walk_7.ogg" />
     <None Include="Resources\Sounds\walk_1.ogg" />
+    <None Include="Resources\Sounds\dagger.ogg" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">
