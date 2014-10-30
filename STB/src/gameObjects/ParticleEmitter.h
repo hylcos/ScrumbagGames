@@ -12,11 +12,13 @@ public:
 	float getFrequency();
 	int getParticleAmount();
 	void setSize(float sizeX, float sizeY = 0.f);
+	bool getGore();
 	~ParticleEmitter();
 protected:
 	sf::Color particleColor;
 	bool emitOnce = false;
 	bool emit = false;
+	bool isGore = false;
 	float frequency = 30.f;
 	int amount = 1;
 	int frame = 0;
@@ -28,6 +30,7 @@ protected:
 	float rotation = 0.f;
 	float rotationDeviation = 360.f;
 	float minimumSpeed = 0.004f;
+	sf::Vector2f spawnPosition{ 0, 0 };
 	
 	ParticleManager * particleManager = nullptr;
 	GameObject * object;

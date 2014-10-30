@@ -5,6 +5,7 @@ class Checkbox :
 {
 public:
 	Checkbox();
+	void Checkbox::init();
 	void Checkbox::update(float speedModifier) override;
 	void Checkbox::draw(sf::RenderWindow & window) const override;
 	void Checkbox::click() override;

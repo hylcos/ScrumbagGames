@@ -5,6 +5,8 @@
 
 ToggleSound::ToggleSound()
 {
+	checked = (SettingsController::getInstance().getSetting(SettingsController::sounds) != 0);
+	init();
 	text.setString("sOUNDS");
 }
 

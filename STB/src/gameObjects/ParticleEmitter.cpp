@@ -16,7 +16,13 @@ void ParticleEmitter::update(float speedModifier){
 		emitOnce = false;
 		int p = rand() % (amount - 1) + 1;
 		for (int i = 0; i < p; i++){
-			Particle * p = new Particle(object->getPosition());
+			Particle * p;
+			if (spawnPosition.x == 0){
+				p = new Particle(object->getPosition());
+			}
+			else {
+				p = new Particle(spawnPosition);
+			}
 			p->setColor(particleColor);
 			p->setSpeed(speed);
 			p->setDeceleration(deceleration);
@@ -24,6 +30,7 @@ void ParticleEmitter::update(float speedModifier){
 			p->setSize(size);
 			p->setRotation(rotation, rotationDeviation);
 			p->setMinimumSpeed(minimumSpeed);
+			p->setGore(isGore);
 			particleManager->addParticle(p);
 		}
 		//particleManager->spawnParticles(object, particleColor, rand() % (amount - 1) + 1);
@@ -56,6 +63,10 @@ void ParticleEmitter::setSize(float sizeX, float sizeY){
 		sizeY = sizeX;
 	}
 	size = sf::Vector2f{ sizeX, sizeY };
+}
+
+bool ParticleEmitter::getGore(){
+	return isGore;
 }
 
 ParticleEmitter::~ParticleEmitter()
