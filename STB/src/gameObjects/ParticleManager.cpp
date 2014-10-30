@@ -9,7 +9,7 @@ GameObject{ particleManager }
 }
 
 void ParticleManager::addParticle(Particle * p){
-	if (!(p->getGore) || SettingsController::getInstance().getSetting(SettingsController::gore)){
+	if (!(p->getGore()) || SettingsController::getInstance().getSetting(SettingsController::gore)){
 		ParticlesToAdd.push_back(p);
 	}
 }

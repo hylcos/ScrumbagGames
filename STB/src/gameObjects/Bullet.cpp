@@ -33,6 +33,8 @@ void Bullet::update(float speedmodifier){
 	for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 		if (gameObject->getType() == enemy){
 			if (gameObject->getBounds().intersects(getBounds())){
+				ParticleEmitter::spawnPosition.x += cos((rotation - 90)*PI / 180) * speedmodifier * bulletSpeed * 2;
+				ParticleEmitter::spawnPosition.y += sin((rotation - 90)*PI / 180) * speedmodifier * bulletSpeed * 2;
 				ParticleEmitter::amount = damage;
 				ParticleEmitter::emitOnce = true;
 				ParticleEmitter::setColor(sf::Color::Red, 200);
