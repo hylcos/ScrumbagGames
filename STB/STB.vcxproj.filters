@@ -140,10 +140,13 @@
     <ClInclude Include="src\gameObjects\menu\ToggleSound.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\ToggleGore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\gameObjects\menu\Slider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\ToggleGore.h">
+    <ClInclude Include="src\gameObjects\Trashcan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h">
@@ -271,10 +274,13 @@
     <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\gameObjects\menu\Slider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp">
+    <ClCompile Include="src\gameObjects\Trashcan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp">
@@ -309,6 +315,7 @@
     <None Include="Resources\Sounds\walk_7.ogg" />
     <None Include="Resources\Sounds\walk_1.ogg" />
     <None Include="Resources\Sounds\dagger.ogg" />
+    <None Include="Resources\Levels\levelTwo.level" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">
@@ -455,9 +462,6 @@
     <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -566,13 +570,13 @@
     <Image Include="Resources\Images\menuObjecten\ScrollButton.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\menuObjecten\ScrollBar.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\menuObjecten\SlideBar.png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ScrollBar.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

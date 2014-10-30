@@ -189,6 +189,7 @@
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
+    <None Include="Resources\Levels\levelTwo.level" />
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
     <None Include="Resources\Sounds\dagger.ogg" />
