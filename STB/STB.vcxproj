@@ -93,9 +93,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
-    <ClInclude Include="src\gameObjects\menu\MusicSlider.h" />
     <ClInclude Include="src\gameObjects\menu\Slider.h" />
-    <ClInclude Include="src\gameObjects\menu\SoundSlider.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleGore.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleSound.h" />
     <ClInclude Include="src\gameObjects\ParticleEmitter.h" />
@@ -123,6 +121,7 @@
     <ClInclude Include="src\gameObjects\Circle.h" />
     <ClInclude Include="src\gameObjects\Powerup.h" />
     <ClInclude Include="src\gameObjects\Table.h" />
+    <ClInclude Include="src\gameObjects\Trashcan.h" />
     <ClInclude Include="src\gameObjects\Weapon.h" />
     <ClInclude Include="src\gameObjects\WeaponManager.h" />
     <ClInclude Include="src\HudController.h" />
@@ -135,13 +134,10 @@
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
     <ClInclude Include="src\TextureManager.h" />
-    <ClInclude Include="src\gameObjects\Trashcan.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
-    <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
-    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp" />
     <ClCompile Include="src\gameObjects\ParticleEmitter.cpp" />
@@ -169,6 +165,7 @@
     <ClCompile Include="src\gameObjects\Circle.cpp" />
     <ClCompile Include="src\gameObjects\Powerup.cpp" />
     <ClCompile Include="src\gameObjects\Table.cpp" />
+    <ClCompile Include="src\gameObjects\Trashcan.cpp" />
     <ClCompile Include="src\gameObjects\Weapon.cpp" />
     <ClCompile Include="src\gameObjects\WeaponManager.cpp" />
     <ClCompile Include="src\HudController.cpp" />
@@ -184,7 +181,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\TextureManager.cpp" />
-    <ClCompile Include="src\gameObjects\Trashcan.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />

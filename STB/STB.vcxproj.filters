@@ -149,10 +149,7 @@
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\MusicSlider.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\SoundSlider.h">
+    <ClInclude Include="src\gameObjects\Trashcan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -280,10 +277,7 @@
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp">
+    <ClCompile Include="src\gameObjects\Trashcan.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

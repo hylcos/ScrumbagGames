@@ -103,7 +103,7 @@ public:
 
 
 	//! The standard values for the dunken boss bully.
-	Initializer dunken{ "Boss Dunken", 0.9f, 1500, true, 20, 60 };
+	Initializer dunken{ "Dunken", 0.9f, 1500, true, 20, 60 };
 	
 	//! The deconstructor of the enemy class.
 	/*!
