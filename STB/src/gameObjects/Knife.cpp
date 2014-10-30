@@ -24,10 +24,10 @@ void Knife::fire(){
 		sf::Vector2f point{ 
 			position.x 
 			+ 11 * cos(melee.getRotation() * PI / 180) 
-			+ 21 * cos((melee.getRotation() - 90) * PI / 180), 
+			+ (range* 2)* cos((melee.getRotation() - 90) * PI / 180),
 			position.y 
 			+ 11 * sin(melee.getRotation() * PI / 180) 
-			+ 21 * sin((melee.getRotation() - 90) * PI / 180) };
+			+ (range * 2) * sin((melee.getRotation() - 90) * PI / 180) };
 		for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 			if (dynamic_cast<Enemy*>(gameObject) != 0){
 				if (gameObject->getBounds().contains(point)){
