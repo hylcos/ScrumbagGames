@@ -32,6 +32,16 @@ void Knife::fire(){
 			if (dynamic_cast<Enemy*>(gameObject) != 0){
 				if (gameObject->getBounds().contains(point)){
 					dynamic_cast<Enemy*>(gameObject)->reduceHP(damage);
+					ParticleEmitter::amount = (int)(damage / 2);
+					ParticleEmitter::emitOnce = true;
+					ParticleEmitter::setColor(sf::Color::Red, 200);
+					ParticleEmitter::speed = 30.f;
+					ParticleEmitter::minimumSpeed = 0.0001f;
+					ParticleEmitter::size = 4.f;
+					ParticleEmitter::deceleration = 0.3f;
+					ParticleEmitter::directionDeviation = 40;
+					ParticleEmitter::isGore = true;
+					ParticleEmitter::update(0.f);
 				}
 			}
 		}

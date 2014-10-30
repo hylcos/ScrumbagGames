@@ -7,8 +7,9 @@ This is the header file of the knife class.
 #include "Weapon.h"
 #include "../TextureManager.h"
 #include <iostream>
+#include "ParticleEmitter.h"
 
-class Knife : public Weapon 
+class Knife : public Weapon, ParticleEmitter 
 {
 public:
 	//! The constructor of the knife
