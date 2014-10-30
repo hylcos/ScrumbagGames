@@ -43,7 +43,6 @@ void Checkbox::toggle(bool checked){}
 void Checkbox::click(){
 	checked = !checked;
 	sprite.setTexture((checked ? *texChecked : *texUnchecked), true);
-	SettingsController::getInstance().setSetting(SettingsController::setting::backgroundMusic, checked);
 	toggle(checked);
 }
 

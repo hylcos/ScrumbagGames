@@ -13,6 +13,7 @@ ToggleMusic::ToggleMusic()
 
 void ToggleMusic::toggle(bool checked){
 	SoundController::getInstance().setBackgroundMusic(checked);
+	SettingsController::getInstance().setSetting(SettingsController::setting::backgroundMusic, checked);
 }
 
 ToggleMusic::~ToggleMusic()
