@@ -1,6 +1,7 @@
 #include "../stdafx.h"
 #include "ParticleManager.h"
 #include <SFML\Graphics.hpp>
+#include "../SettingsController.h"
 
 ParticleManager::ParticleManager() :
 GameObject{ particleManager }
@@ -8,7 +9,9 @@ GameObject{ particleManager }
 }
 
 void ParticleManager::addParticle(Particle * p){
-	ParticlesToAdd.push_back(p);
+	if (!(p->getGore) || SettingsController::getInstance().getSetting(SettingsController::gore)){
+		ParticlesToAdd.push_back(p);
+	}
 }
 
 void ParticleManager::update(float speedModifier) {
