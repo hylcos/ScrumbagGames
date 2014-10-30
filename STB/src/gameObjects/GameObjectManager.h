@@ -20,6 +20,8 @@ This is the header file of the game object manager class.
 #include "menu\ToggleMusic.h"
 #include "menu\ToggleSound.h"
 #include "menu\ToggleGore.h"
+#include "menu\MusicSlider.h"
+#include "menu\SoundSlider.h"
 
 class GameObjectManager
 {

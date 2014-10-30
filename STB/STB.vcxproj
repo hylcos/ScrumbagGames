@@ -92,7 +92,10 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
+    <ClInclude Include="src\gameObjects\menu\MusicSlider.h" />
     <ClInclude Include="src\gameObjects\menu\Slider.h" />
+    <ClInclude Include="src\gameObjects\menu\SoundSlider.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleGore.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleSound.h" />
     <ClInclude Include="src\gameObjects\ParticleEmitter.h" />
@@ -135,7 +138,10 @@
     <ClInclude Include="src\gameObjects\Trashcan.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
+    <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
+    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp" />
     <ClCompile Include="src\gameObjects\ParticleEmitter.cpp" />
@@ -238,6 +244,7 @@
     <Image Include="Resources\Images\menuObjecten\SlideBar.png" />
     <Image Include="Resources\Images\menuObjecten\ResumeButton.png" />
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
+    <Image Include="Resources\Images\menuObjecten\ScrollBar.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\PauseMenuOverlay.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />

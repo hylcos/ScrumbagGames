@@ -27,9 +27,7 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 		return new Table();
 	}
 	if (string == "Enemy"){
-		Enemy* e = new Enemy();
-		e->setType(e->cheerleader);
-		return e;
+		return new Enemy();
 	}
 	if (string == "ParticleManager"){
 		return new ParticleManager();
@@ -54,6 +52,12 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	}
 	if (string == "menu/ToggleGore"){
 		return new ToggleGore();
+	}
+	if (string == "menu/MusicSlider"){
+		return new MusicSlider();
+	}
+	if (string == "menu/SoundSlider"){
+		return new SoundSlider();
 	}
 	if (string == ""){
 		throw endOfFile();

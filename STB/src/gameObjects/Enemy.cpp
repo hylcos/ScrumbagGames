@@ -52,6 +52,20 @@ Animation{}
 void Enemy::reduceHP(int damage){
 	dmg += damage;
 	if (dmg > type.getHP()){
+		//Particles
+		ParticleEmitter::object = this;
+		ParticleEmitter::amount = 50;
+		ParticleEmitter::emitOnce = true;
+		ParticleEmitter::setColor(sf::Color::Red, 150);
+		ParticleEmitter::speed = 2.f;
+		ParticleEmitter::minimumSpeed = 0.0001f;
+		ParticleEmitter::size = 8.f;
+		ParticleEmitter::deceleration = 0.04f;
+		ParticleEmitter::directionDeviation = 180;
+		ParticleEmitter::isGore = true;
+		ParticleEmitter::update(0.f);
+
+
 		LevelController::getInstance().removeObject(this);
 	
 		if (rand() % 7 == 1){
@@ -111,12 +125,12 @@ void Enemy::move(float speedModifier){
 		sf::Vector2f posDifference = position - player->getPosition();
 		float distance = sqrt(pow(posDifference.x, 2) + pow(posDifference.y, 2));
 		if (distance > 24){
-			position.x += (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
-			position.y += (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+			position.x += (cos((Animation::rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+			position.y += (sin((Animation::rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
 		}
 		else if (distance < 16){
-			position.x -= (cos((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
-			position.y -= (sin((rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+			position.x -= (cos((Animation::rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
+			position.y -= (sin((Animation::rotation - 90)*(float)PI / 180.0f)*speedModifier)*type.getMovementSpeed();
 		}
 	}
 }

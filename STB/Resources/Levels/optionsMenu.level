@@ -1,6 +1,8 @@
 254
 HUD:
 (320,440) menu/MainMenu
-(240,376) menu/ToggleMusic
-(240,348) menu/ToggleSound
-(240,320) menu/ToggleGore
+(240,232) menu/ToggleGore
+(240,344) menu/ToggleSound
+(320,368) menu/SoundSlider
+(240,288) menu/ToggleMusic
+(320,312) menu/MusicSlider

@@ -39,6 +39,9 @@ public:
 	//TODO: make virtual.
 	virtual void Clickable::click();
 
+	virtual void Clickable::release();
+	virtual void Clickable::press();
+
 	//! The deconstructor of the clickable class
 	/*!
 	Deallocates the clickable object.

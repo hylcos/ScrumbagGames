@@ -19,7 +19,7 @@ damage{ damage }
 	ParticleEmitter::deceleration = 0.05f;
 	ParticleEmitter::direction = rotation;
 	ParticleEmitter::directionDeviation = 90.f;
-	ParticleEmitter::setSize(2.f);
+	ParticleEmitter::size = 1.f;
 
 	GameObject::position.x = position.x;
 	GameObject::position.y = position.y;
@@ -40,7 +40,7 @@ void Bullet::update(float speedmodifier){
 				ParticleEmitter::setColor(sf::Color::Red, 200);
 				ParticleEmitter::speed = 30.f;
 				ParticleEmitter::minimumSpeed = 0.0001f;
-				ParticleEmitter::setSize(4.f);
+				ParticleEmitter::size = 4.f;
 				ParticleEmitter::deceleration = 0.3f;
 				ParticleEmitter::directionDeviation = 40;
 				ParticleEmitter::isGore = true;

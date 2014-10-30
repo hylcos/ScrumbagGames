@@ -11,7 +11,6 @@ public:
 	bool isEmitting();
 	float getFrequency();
 	int getParticleAmount();
-	void setSize(float sizeX, float sizeY = 0.f);
 	bool getGore();
 	~ParticleEmitter();
 protected:
@@ -26,7 +25,7 @@ protected:
 	float deceleration = 0.15f;
 	float direction = 0.f;
 	float directionDeviation = 360.f;
-	sf::Vector2f size{ 0, 0 };
+	float size = 2.f;
 	float rotation = 0.f;
 	float rotationDeviation = 360.f;
 	float minimumSpeed = 0.004f;
