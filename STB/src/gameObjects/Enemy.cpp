@@ -56,11 +56,11 @@ void Enemy::reduceHP(int damage){
 		ParticleEmitter::object = this;
 		ParticleEmitter::amount = 50;
 		ParticleEmitter::emitOnce = true;
-		ParticleEmitter::setColor(sf::Color::Red, 200);
-		ParticleEmitter::speed = 30.f;
+		ParticleEmitter::setColor(sf::Color::Red, 150);
+		ParticleEmitter::speed = 2.f;
 		ParticleEmitter::minimumSpeed = 0.0001f;
 		ParticleEmitter::size = 8.f;
-		ParticleEmitter::deceleration = 0.3f;
+		ParticleEmitter::deceleration = 0.04f;
 		ParticleEmitter::directionDeviation = 180;
 		ParticleEmitter::isGore = true;
 		ParticleEmitter::update(0.f);

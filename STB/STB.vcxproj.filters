@@ -140,10 +140,13 @@
     <ClInclude Include="src\gameObjects\menu\ToggleSound.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\Slider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="src\gameObjects\menu\ToggleGore.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\Slider.h">
+    <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\menu\MusicSlider.h">
@@ -268,10 +271,13 @@
     <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\Slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\Slider.cpp">
+    <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp">
@@ -447,6 +453,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png">

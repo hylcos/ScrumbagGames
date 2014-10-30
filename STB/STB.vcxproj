@@ -92,6 +92,7 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
     <ClInclude Include="src\gameObjects\menu\MusicSlider.h" />
     <ClInclude Include="src\gameObjects\menu\Slider.h" />
     <ClInclude Include="src\gameObjects\menu\SoundSlider.h" />
@@ -136,6 +137,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
     <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
     <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp" />
