@@ -58,13 +58,6 @@ int ParticleEmitter::getParticleAmount(){
 	return amount;
 }
 
-void ParticleEmitter::setSize(float sizeX, float sizeY){
-	if (sizeY == 0){
-		sizeY = sizeX;
-	}
-	size = sf::Vector2f{ sizeX, sizeY };
-}
-
 bool ParticleEmitter::getGore(){
 	return isGore;
 }

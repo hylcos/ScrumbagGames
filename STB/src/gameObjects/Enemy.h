@@ -6,9 +6,10 @@ This is the header file of the enemy class.
 #include "Animation.h"
 #include "../TextureManager.h"
 #include <SFML\Graphics.hpp>
+#include "ParticleEmitter.h"
 
 class Enemy :
-	public Animation
+	public Animation, ParticleEmitter
 {
 private:
 	class Initializer{
