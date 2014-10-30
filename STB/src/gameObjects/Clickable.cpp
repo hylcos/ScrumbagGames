@@ -14,6 +14,12 @@ void Clickable::setOnHud(bool onHud){
 
 void Clickable::update(){
 	if (sf::Mouse::isButtonPressed(sf::Mouse::Left)){
+		if (!lmbDown){
+			sf::Vector2f pos = (onHud ? HudController::getInstance().getMousePos() : LevelController::getInstance().getMousePos());
+			if (getBounds().contains(pos)){
+				press();
+			}
+		}
 		lmbDown = true;
 		return;
 	}
@@ -21,15 +27,23 @@ void Clickable::update(){
 		return;
 	}
 	lmbDown = false;
+	release();
+
 	sf::Vector2f pos = (onHud?HudController::getInstance().getMousePos():LevelController::getInstance().getMousePos());
-	std::cout << "Click at " << pos.x << '|' << pos.y <<"\n";
 	if (getBounds().contains(pos)){
 		click();
-		std::cout << "Click\n";
 	}
 }
 
 void Clickable::click(){
+
+}
+
+void Clickable::press(){
+
+}
+
+void Clickable::release(){
 
 }
 

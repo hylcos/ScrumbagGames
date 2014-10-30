@@ -92,6 +92,7 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\menu\MusicSlider.h" />
     <ClInclude Include="src\gameObjects\menu\Slider.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleGore.h" />
     <ClInclude Include="src\gameObjects\menu\ToggleSound.h" />
@@ -134,6 +135,7 @@
     <ClInclude Include="src\TextureManager.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp" />
     <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp" />
@@ -233,7 +235,7 @@
     <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png" />
     <Image Include="Resources\Images\menuObjecten\OptionsButton.png" />
     <Image Include="Resources\Images\menuObjecten\ScrollButton.png" />
-    <Image Include="Resources\Images\menuObjecten\SlideBar.png" />
+    <Image Include="Resources\Images\menuObjecten\ScrollBar.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\PauseMenuOverlay.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />

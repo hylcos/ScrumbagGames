@@ -4,3 +4,4 @@ HUD:
 (240,376) menu/ToggleMusic
 (240,348) menu/ToggleSound
 (240,320) menu/ToggleGore
+(320,292) menu/MusicSlider

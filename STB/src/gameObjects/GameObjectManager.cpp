@@ -52,6 +52,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/ToggleGore"){
 		return new ToggleGore();
 	}
+	if (string == "menu/MusicSlider"){
+		return new MusicSlider();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}
