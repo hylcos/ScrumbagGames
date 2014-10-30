@@ -12,7 +12,7 @@ public:
 
 	~Checkbox();
 protected:
-	bool checked = false;
+	bool checked;
 	virtual void Checkbox::toggle(bool checked);
 	sf::Text text;
 private:

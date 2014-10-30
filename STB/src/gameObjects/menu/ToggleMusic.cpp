@@ -5,7 +5,6 @@
 
 ToggleMusic::ToggleMusic()
 {
-	checked = true;
 	text.setString("bACKGROUND MUSIC");
 }
 

@@ -8,8 +8,7 @@
 
 Checkbox::Checkbox()
 {
-	checked = (SettingsController::getInstance().getSetting(SettingsController::setting::backgroundMusic) != 0);
-	std::cout << "Setting: "<<SettingsController::getInstance().getSetting(SettingsController::setting::backgroundMusic)<<"\n";
+	checked = (SettingsController::getInstance().getSetting(SettingsController::backgroundMusic) != 0);
 	texChecked = TextureManager::getInstance().getTexture("menuObjecten/CheckedOption.png");
 	texUnchecked = TextureManager::getInstance().getTexture("menuObjecten/UncheckedOption.png");
 	sprite.setTexture((checked ? *texChecked : *texUnchecked), true);
