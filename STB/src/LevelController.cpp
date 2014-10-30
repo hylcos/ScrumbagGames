@@ -112,7 +112,17 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 				float radius = random * PI / 180;
 				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
 				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
-
+				if (enemyPosition.y > 960){
+					enemyPosition.y -= 480 * 1.5;
+				} else if (enemyPosition.y > 0){
+					enemyPosition.y += 480 * 1.5;
+				} 
+				if (enemyPosition.x > 1280){
+					enemyPosition.x -= 640 * 1.5;
+				} else if (enemyPosition.x < 0){
+					enemyPosition.x += 640 * 1.5;
+				}
+				
 				e->setPosition(enemyPosition);
 				enemyPosition = sf::Vector2f{ 0, 0 };
 				addObject(e);

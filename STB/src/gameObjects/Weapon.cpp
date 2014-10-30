@@ -28,7 +28,9 @@ void Weapon::reload(){
 float Weapon::getAmmo(){
 	return 0;
 }
+void Weapon::setAmmo(int amount){
 
+}
 std::string Weapon::getAmmoString(){
 	return "Melee";
 }

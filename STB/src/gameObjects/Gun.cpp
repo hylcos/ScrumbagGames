@@ -1,4 +1,4 @@
-
+﻿
 #include "Gun.h"
 #include "../LevelController.h"
 Gun::Gun(std::string name, int damage, float reloadSpeed,int ammo, int magazineSize, int range, short bulletSpeed,short fireRate) :
@@ -48,8 +48,15 @@ void Gun::fire(){
 }
 
 std::string Gun::getAmmoString(){
-	std::string Ammo{  std::to_string(currentMagazine) + "/" + std::to_string(ammo) };
-	return Ammo;
+	if (name == "pistol"){
+		std::string Ammo{ std::to_string(currentMagazine) + "/ inf" };
+		return Ammo;
+	}
+	else{
+		std::string Ammo{ std::to_string(currentMagazine) + "/" + std::to_string(ammo) };
+		return Ammo;
+	}
+	
 }
 
 void Gun::setRotation(float rotation){
@@ -70,6 +77,7 @@ void Gun::draw(sf::RenderWindow & window) const {
 void Gun::reload(){
 	if (ammo > 0){
 		if (reloadCoolDown <= 0){
+			SoundController::getInstance().playMusic(name + "_reload");
 			if (magazineSize <= ammo){
 				reloadCoolDown = reloadSpeed;
 				if (currentMagazine > 0){
@@ -97,6 +105,10 @@ float Gun::getAmmo(){
 	} else {
 		return 0;
 	}
+}
+void Gun::setAmmo(int amount){
+	amount = amount * magazineSize;
+	ammo += amount;
 }
 
 void Gun::upgradeDmg(int amount){

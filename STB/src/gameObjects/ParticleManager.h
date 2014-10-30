@@ -3,6 +3,7 @@
 #include "Particle.h"
 #include <SFML\Graphics.hpp>
 #include <unordered_set>
+#include "../SettingsController.h"
 
 class ParticleManager :
 	public GameObject
@@ -23,5 +24,6 @@ public:
 private:
 	std::vector< Particle* > Particles, ParticlesToAdd;
 	std::unordered_set<Particle*> ParticlesToRemove;
+	bool goreEnabled;
 };
 

@@ -1,7 +1,7 @@
 #include "../stdafx.h"
 #include "ParticleEmitter.h"
-#include "../LevelController.h"
 #include <iostream>
+#include "../LevelController.h"
 
 ParticleEmitter::ParticleEmitter()
 {
