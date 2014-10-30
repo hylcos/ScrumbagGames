@@ -88,6 +88,8 @@ public:
 
 	std::string Gun::getAmmoString() override;
 	std::string Gun::getName() override;
+	Gun Gun::getWeapon();
+	void Gun::setAmmo(int amount);
 private:
 	sf::Sprite sprite;
 	sf::Texture tex;

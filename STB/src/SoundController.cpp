@@ -16,6 +16,7 @@ void SoundController::load(){
 	isLoaded = true;
 	bgMusic.openFromFile(INTRO);
 	bgMusic.setLoop(true);
+	bgMusic.setVolume((float)(SettingsController::getInstance().getSetting(SettingsController::backgroundMusicVolume) * 100 / 255));
 	setBackgroundMusic(SettingsController::getInstance().getSetting(SettingsController::backgroundMusic) != 0);
 }
 void SoundController::playMusic(const std::string file){
@@ -41,6 +42,9 @@ void SoundController::setBackgroundMusic(bool enabled){
 		return;
 	}
 	bgMusic.play();
+}
+void SoundController::setBackgroundMusicVolume(int value){
+	bgMusic.setVolume((float)(value * 100 / 255));
 }
 
 SoundController::~SoundController(){

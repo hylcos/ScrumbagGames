@@ -26,6 +26,7 @@ public:
 	void SoundController::step();
 
 	void SoundController::setBackgroundMusic(bool enabled);
+	void SoundController::setBackgroundMusicVolume(int value);
 
 	~SoundController();
 
