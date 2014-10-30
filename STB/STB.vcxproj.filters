@@ -155,6 +155,12 @@
     <ClInclude Include="src\gameObjects\Trashcan.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\SoundSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\MusicSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -284,6 +290,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\Trashcan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
