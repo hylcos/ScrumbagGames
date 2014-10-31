@@ -49,7 +49,7 @@ public:
 	Damages this enemey, if his hp reaches 0, this enemy will die.
 	@param damage The amount of damage dealt to this enemy.
 	*/
-	void Enemy::reduceHP(int damage);
+	virtual void Enemy::reduceHP(int damage);
 
 	//! The update method of the enemy class
 	/*!
@@ -112,12 +112,15 @@ public:
 	~Enemy();
 
 
+	Initializer & type = average;
+
 	sf::Sprite melee;
+
+	int dmg = 0;
+
 private:
 	float hitCooldown = 0;
-	int dmg = 0;
 	bool drawMelee;
-	Initializer & type = average;
 	sf::Sprite curSprite;
 	sf::Texture tex;
 };

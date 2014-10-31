@@ -1,11 +1,12 @@
 #include "../../stdafx.h"
 #include "dunkenBoss.h"
-
+#include "../../LevelController.h"
 
 dunkenBoss::dunkenBoss():
 Enemy{}
 {
-	Enemy::setType(Enemy::dunken);
+	std::cout << "Dunken\n";
+	Enemy::type = dunken;
 	Animation::setTextures(
 		*TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/2.png"),
@@ -17,16 +18,28 @@ Enemy{}
 	
 }
 void dunkenBoss::update(float speedModifier) {
-	Enemy::update(speedModifier);
-	timeToSpawn -= speedModifier;
+	if (floor(timeToSpawn) <= 0)
+		Enemy::update(speedModifier);
+	else{
+		timeToSpawn -= speedModifier;
+		HudController::getInstance().updateTimer(timeToSpawn);
+	}
 }
 void dunkenBoss::draw(sf::RenderWindow &  window) const {
-	Enemy::draw(window);
+	if (floor(timeToSpawn) <= 0)
+		Enemy::draw(window);
 }
 void dunkenBoss::move(float speedModifier) {
-	Enemy::move(speedModifier);
+	if (floor(timeToSpawn) <= 0)
+		Enemy::move(speedModifier);
 }
 
+void dunkenBoss::reduceHP(int damage){
+	Enemy::reduceHP(damage);
+	if (dmg > type.getHP()){
+		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().LEVEL_TWO);
+	}
+}
 
 dunkenBoss::~dunkenBoss()
 {

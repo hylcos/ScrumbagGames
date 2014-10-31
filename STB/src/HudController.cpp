@@ -71,7 +71,7 @@ void HudController::load()
 
 	timetext.setFont(font);
 	timetext.setCharacterSize(20);
-	timetext.setColor(sf::Color(119, 108, 108));
+	timetext.setColor(sf::Color(255, 20, 20));
 	timetext.setPosition(278, 18);
 	timetext.setString("00:00");
 
@@ -166,4 +166,10 @@ void HudController::prepareForNextLevel(){
 
 sf::Vector2f HudController::getMousePos(){
 	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f)+sf::Vector2f{ 320, 240 };
+}
+void HudController::updateTimer(float time){
+	int minutes =  (int) floor(time / 3600);
+	int seconds = (int)floor((time / 60));
+	seconds %= 60;
+	timetext.setString("0"+ std::to_string(minutes) + ":" + std::to_string(seconds));
 }

@@ -84,6 +84,8 @@ public:
 	*/
 	~HudController(){};
 
+	void HudController::updateTimer(float time);
+
 	void HudController::loadHudTextures();
 
 private:

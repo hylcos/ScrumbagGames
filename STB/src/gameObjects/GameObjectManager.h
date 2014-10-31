@@ -23,6 +23,7 @@ This is the header file of the game object manager class.
 #include "menu\MusicSlider.h"
 #include "menu\SoundSlider.h"
 
+#include "bosses\dunkenBoss.h"
 class GameObjectManager
 {
 public:

@@ -1,9 +1,5 @@
 #include "stdafx.h"
 #include "Factory.h"
-#include "gameObjects\GameObjectManager.h"
-#include "gameObjects\GameObject.h"
-#include "LevelController.h"
-#include "Exception.h"
 
 #include <exception>
 #include <fstream>
