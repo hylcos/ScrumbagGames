@@ -2,10 +2,12 @@
 #include "Powerup.h"
 #include "../LevelController.h"
 
+
 Powerup::Types::Types(Powerups type, void(Powerup::*action)()) :
 type{ type },
 action{ action }
 {}
+
 
 void Powerup::Types::executeAction(Powerup & powerup){
 	Player* player = LevelController::getInstance().getPlayer();
@@ -18,6 +20,11 @@ GameObject{ gameObjectType::powerup }
 	sprite.setPosition(position);
 	tex = *TextureManager::getInstance().getTexture("Sprites/Powerup.png");
 	sprite.setTexture(tex);
+	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
+	poweruptext.setFont(font);
+	poweruptext.setCharacterSize(20);
+	poweruptext.setColor(sf::Color::Yellow);
+	poweruptext.setPosition(200, 200);
 }
 
 Powerup* Powerup::setType(Powerup::Types* type){
@@ -30,7 +37,9 @@ void Powerup::update(float speedModifier){
 	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
 	if (dist < 32){
 		type->executeAction(*this);
+		poweruptext.setString(PowerupNames[Powerups::ammoUp]);
 		LevelController::getInstance().removeObject(this);
+		
 	}
 }
 
@@ -39,6 +48,11 @@ sf::FloatRect Powerup::getBounds() {
 }
 void Powerup::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
+	sf::View hudView;
+	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
+	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
+	window.setView(hudView);
+	window.draw(poweruptext);
 }
 Powerups Powerup::getPowerup(){
 	return power;

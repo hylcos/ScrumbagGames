@@ -105,7 +105,7 @@ void HudController::step(sf::RenderWindow & window){
 	sf::View hudView;
 	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
 	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
-	//hudView.setCenter(sf::Vector2f(0.0f, 0.0f));
+
 	window.setView(hudView);
 
 

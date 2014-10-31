@@ -4,27 +4,36 @@
 #include "../LevelController.h"
 #include "ParticleEmitter.h"
 
-enum Powerups{
-	fullHealth
-	, doubleDamage
-	, sprint
-	, ammoUp
-	, BAB
-	//, invincibility
-	//, instaKill
-	//	, doubleReloadSpeed
-	//, slowMotion
-	//, miniGun
-	//, sniperVision
-	//, frenzy
-	//, clone
-	//, flamethrower
-	//, doubleSpawn
-	//, fog
-	//, jam
-	//, blind
-	, last
-};
+	enum Powerups{
+		fullHealth
+		, doubleDamage
+		, sprint
+		, ammoUp
+		, BAB
+		//, invincibility
+		//, instaKill
+		//, doubleReloadSpeed
+		//, slowMotion
+		//, miniGun
+		//, sniperVision
+		//, frenzy
+		//, clone
+		//, flamethrower
+		//, doubleSpawn
+		//, fog
+		//, jam
+		//, blind
+		, last
+	};
+	static const char* PowerupNames[last] = {
+		"fullHealth"
+		, "doubleDamage"
+		, "sprint"
+		, "ammoUp"
+		, "BAB"
+	};
+
+
 class Powerup : public GameObject, ParticleEmitter
 {
 public:
@@ -56,6 +65,9 @@ public:
 
 	~Powerup();
 private:
+
+	sf::Font font;
+	sf::Text poweruptext;
 	Types* type = nullptr;
 	sf::Texture tex;
 	sf::Sprite sprite;
