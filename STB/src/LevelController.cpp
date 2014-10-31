@@ -22,6 +22,8 @@ void LevelController::load()
 
 	mainView.setSize(sf::Vector2f(640, 480));
 	mainView.setCenter(320, 240);
+
+	enemySpawnTime = 240;
 }
 
 LevelController::Initializer::Initializer(std::string name)
@@ -51,24 +53,6 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 			particleManager = dynamic_cast<ParticleManager*>(obj);
 		}
 	}
-
-	/*
-	Powerup* pu = new Powerup(sf::Vector2f{ 250, 250 }, 6);
-	pu->setType(&pu->puFullHealth);
-	addObjectFromFactory(pu);
-
-	pu = new Powerup(sf::Vector2f{ 200, 250 });
-	pu->setType(&pu->puSprint);
-	addObjectFromFactory(pu);
-
-	pu = new Powerup(sf::Vector2f{ 150, 250 }, 4);
-	pu->setType(&pu->puFullHealth);
-	addObjectFromFactory(pu);
-
-	pu = new Powerup(sf::Vector2f{ 100, 250 }, 3);
-	pu->setType(&pu->puSprint);
-	addObjectFromFactory(pu);*/
-
 
 }
 
@@ -198,6 +182,8 @@ void LevelController::stopLevel(){
 		delete obj;
 	}
 	gameObjects.clear();
+	gameObjectToRemove.clear();
+	gameObjectToAdd.clear();
 }
 
 sf::Vector2f LevelController::getMousePos(){

@@ -86,6 +86,8 @@ public:
 
 	void HudController::updateTimer(float time);
 
+	void HudController::updateTimer(std::string value);
+
 	void HudController::loadHudTextures();
 
 private:

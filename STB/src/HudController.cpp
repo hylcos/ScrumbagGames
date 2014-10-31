@@ -171,5 +171,9 @@ void HudController::updateTimer(float time){
 	int minutes =  (int) floor(time / 3600);
 	int seconds = (int)floor((time / 60));
 	seconds %= 60;
-	timetext.setString("0"+ std::to_string(minutes) + ":" + std::to_string(seconds));
+	timetext.setString("0" + std::to_string(minutes) + ":" + (seconds >= 10 ? (std::to_string(seconds)) : "0" + (std::to_string(seconds))));
+}
+
+void HudController::updateTimer(std::string value){
+	timetext.setString(value);
 }

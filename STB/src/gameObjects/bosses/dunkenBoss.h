@@ -12,6 +12,7 @@ public:
 
 	~dunkenBoss();
 private:
-	float timeToSpawn = 300;
+	float timeToSpawn;
+	bool spawned = false;
 };
 

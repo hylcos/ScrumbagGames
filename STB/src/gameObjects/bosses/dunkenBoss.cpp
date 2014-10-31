@@ -2,8 +2,7 @@
 #include "dunkenBoss.h"
 #include "../../LevelController.h"
 
-dunkenBoss::dunkenBoss():
-Enemy{}
+dunkenBoss::dunkenBoss()
 {
 	std::cout << "Dunken\n";
 	Enemy::type = dunken;
@@ -15,28 +14,38 @@ Enemy{}
 	sf::Texture tex = *TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/melee.png");
 	Enemy::melee.setTexture(tex);
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
+	timeToSpawn = 5400;
 	
 }
 void dunkenBoss::update(float speedModifier) {
-	if (floor(timeToSpawn) <= 0)
 		Enemy::update(speedModifier);
-	else{
 		timeToSpawn -= speedModifier;
-		HudController::getInstance().updateTimer(timeToSpawn);
-	}
+		if (floor(timeToSpawn) > 0 )
+			HudController::getInstance().updateTimer(timeToSpawn);
+		else if (spawned == false) {
+			spawned = true;
+			std::cout << "boss has spwn";
+			int random = rand() % 360;
+			float radius = random * PI / 180;
+			position.x = LevelController::getInstance().getPlayer()->getPosition().x + cos(radius) * 640;
+			position.y = LevelController::getInstance().getPlayer()->getPosition().y + sin(radius) * 480;
+			HudController::getInstance().updateTimer("BOSS");
+		}
+		
 }
 void dunkenBoss::draw(sf::RenderWindow &  window) const {
 	if (floor(timeToSpawn) <= 0)
-		Enemy::draw(window);
+	Enemy::draw(window);
 }
 void dunkenBoss::move(float speedModifier) {
 	if (floor(timeToSpawn) <= 0)
-		Enemy::move(speedModifier);
+	Enemy::move(speedModifier);
 }
 
 void dunkenBoss::reduceHP(int damage){
-	Enemy::reduceHP(damage);
+	dmg += damage;
 	if (dmg > type.getHP()){
+	
 		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().LEVEL_TWO);
 	}
 }

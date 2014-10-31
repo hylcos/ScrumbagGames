@@ -93,8 +93,8 @@ private:
 
 	std::vector< GameObject* > gameObjects, gameObjectToAdd;
 	std::unordered_set<GameObject*> gameObjectToRemove;
-	float enemySpawnTime = 240;
-	float timeToNextEnemySpawn = 240;
+	float enemySpawnTime;
+	float timeToNextEnemySpawn=0;
 	sf::Vector2f enemyPosition{0, 0};
 	MainMenu backToMenu;
 	Play restart;
