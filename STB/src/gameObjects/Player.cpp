@@ -217,6 +217,10 @@ void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3){
 Weapon * Player::getSelectedWeapon(){
 	return selectedWeapons[curWeapon];
 }
+
+Weapon * Player::getWeapons(int value){
+	return selectedWeapons[value];
+}
 int Player::getHp(){
 	return hp;
 }

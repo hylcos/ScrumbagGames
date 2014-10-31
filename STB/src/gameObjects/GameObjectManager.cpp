@@ -62,6 +62,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/SoundSlider"){
 		return new SoundSlider();
 	}
+	if (string == "menu/ShopCard"){
+		//return new ShopCard();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}
