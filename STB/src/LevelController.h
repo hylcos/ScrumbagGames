@@ -21,6 +21,7 @@ public:
 	class Initializer{
 	public:
 		Initializer(std::string name);
+		Initializer();
 		std::string name;
 	};
 
@@ -29,11 +30,16 @@ public:
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/levelOne.level" };
 	LevelController::Initializer LEVEL_TWO{ "Resources/Levels/levelTwo.level" };
+	LevelController::Initializer LEVEL_THREE{ "Resources/Levels/levelOne.level" };
+	LevelController::Initializer LEVEL_FOUR{ "Resources/Levels/levelTwo.level" };
+	LevelController::Initializer LEVEL_FIVE{ "Resources/Levels/levelOne.level" };
 
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
 	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 	LevelController::Initializer SHOP{ "Resources/Levels/shop.level" };
 
+
+	
 	//add GameObject
 	//
 	//This function will put a new GameObject under the control of the GameController.
@@ -58,6 +64,7 @@ public:
 	void LevelController::step(float fps, sf::RenderWindow & window);
 
 	Player * LevelController::getPlayer();
+	Player * LevelController::getPlayer2();
 
 	ParticleManager * LevelController::getParticleManager();
 
@@ -65,6 +72,7 @@ public:
 
 	const std::vector< GameObject* > LevelController::getGameObjects();
 
+	void LevelController::goToNextRound();
 private:
 	LevelController() {};
 	LevelController(LevelController const&) = delete;
@@ -80,6 +88,8 @@ private:
 	sf::View mainView;
 
 	Initializer* nextLevel = nullptr;
+
+	int curLevel = 0;
 
 	sf::Vector2f viewMovement{ 0, 0 };
 
@@ -102,5 +112,6 @@ private:
 	Play restart;
 	Resume resume;
 	Player * player = nullptr;
+	Player player2 ;
 	ParticleManager * particleManager = nullptr;
 };

@@ -219,7 +219,7 @@ Weapon * Player::getSelectedWeapon(){
 }
 
 Weapon * Player::getWeapons(int value){
-	return selectedWeapons[value];
+	return selectedWeapons[value-1];
 }
 int Player::getHp(){
 	return hp;

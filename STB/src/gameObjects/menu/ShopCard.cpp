@@ -6,17 +6,23 @@
 
 ShopCard::ShopCard()
 {
-	card1 = new WeaponCard{ LevelController::getInstance().getPlayer()->getWeapons(1) };
-
-	card2 = new WeaponCard{ LevelController::getInstance().getPlayer()->getWeapons(2) };
-
-	card3 = new WeaponCard{ LevelController::getInstance().getPlayer()->getWeapons(3) };
+	card1 = new WeaponCard{ LevelController::getInstance().getPlayer2()->getWeapons(1)};
+	card1->setPosition(sf::Vector2f(50, 10));
+	card2 = new WeaponCard{ LevelController::getInstance().getPlayer2()->getWeapons(2)};
+	card2->setPosition(sf::Vector2f(250, 10));
+	card3 = new WeaponCard{ LevelController::getInstance().getPlayer2()->getWeapons(3)};
+	card3->setPosition(sf::Vector2f(450, 10));
 }
 
 void ShopCard::update(float speedModifier) {
-
+	card1->update(speedModifier);
+	card2->update(speedModifier);
+	card3->update(speedModifier);
 }
 void ShopCard::draw(sf::RenderWindow & window) const {
+	card1->draw(window);
+	card2->draw(window);
+	card3->draw(window);
 }
 
 ShopCard::~ShopCard()

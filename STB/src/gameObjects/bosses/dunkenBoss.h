@@ -13,6 +13,7 @@ public:
 	~dunkenBoss();
 private:
 	float timeToSpawn;
+	sf::Texture tex;
 	bool spawned = false;
 };
 

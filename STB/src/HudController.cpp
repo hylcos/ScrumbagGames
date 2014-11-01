@@ -33,7 +33,7 @@ void HudController::loadHudTextures(){
 	swordtex = *TextureManager::getInstance().getTexture("HUDObjecten/swordWeapon.png");
 	swordsprite.setTexture(swordtex);
 
-	knifetex = *TextureManager::getInstance().getTexture("HUDObjecten/knifeWeapon.png");
+	knifetex = *TextureManager::getInstance().getTexture("HUDObjecten/daggerWeapon.png");
 	knifesprite.setTexture(knifetex);
 
 	shotguntex = *TextureManager::getInstance().getTexture("HUDObjecten/shotgunWeapon.png");

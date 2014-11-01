@@ -164,7 +164,10 @@
     <ClInclude Include="src\gameObjects\menu\ShopCard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\WeaponCard.h">
+    <ClInclude Include="src\gameObjects\menu\NextRound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -307,7 +310,10 @@
     <ClCompile Include="src\gameObjects\menu\ShopCard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\WeaponCard.cpp">
+    <ClCompile Include="src\gameObjects\menu\NextRound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -580,9 +586,6 @@
     <Image Include="Resources\Images\HUDObjecten\swordWeapon.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\HUDObjecten\knifeWeapon.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\menuObjecten\ResumeButton.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -653,6 +656,12 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\Sprites\Bosses\Zoey\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\daggerWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\WeaponCardBackGround.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

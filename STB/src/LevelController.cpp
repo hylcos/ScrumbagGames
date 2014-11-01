@@ -5,6 +5,9 @@
 #include "GameObjects/Powerup.h"
 #include <SFML\Graphics.hpp>
 #include "TextureManager.h"
+
+
+LevelController::Initializer LEVELS[5];
 void LevelController::load()
 {
 	if (isLoaded){
@@ -22,7 +25,11 @@ void LevelController::load()
 
 	mainView.setSize(sf::Vector2f(640, 480));
 	mainView.setCenter(320, 240);
-
+	LEVELS[0] = LEVEL_ONE;
+	LEVELS[1] = LEVEL_TWO;
+	LEVELS[2] = LEVEL_THREE;
+	LEVELS[3] = LEVEL_FOUR;
+	LEVELS[4] = LEVEL_FIVE;
 	enemySpawnTime = 240;
 }
 
@@ -30,6 +37,7 @@ LevelController::Initializer::Initializer(std::string name)
 {
 	Initializer::name = name;
 }
+LevelController::Initializer::Initializer(){}
 
 void LevelController::goToNextLevel(LevelController::Initializer * initializer){
 	nextLevel = initializer;
@@ -48,6 +56,7 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 		}
 		if (obj->getType() == GameObject::player) {
 			player = dynamic_cast<Player*>(obj);
+			player2 = *player;
 		}
 		if (obj->getType() == GameObject::particleManager) {
 			particleManager = dynamic_cast<ParticleManager*>(obj);
@@ -170,8 +179,11 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	if (nextLevel != nullptr)
 	{
 		paused = false;
+		if (player != nullptr)
+			player2 = *player;
 		stopLevel();
 		HudController::getInstance().prepareForNextLevel();
+		
 		startLevel(*nextLevel);
 		nextLevel = nullptr;
 	}
@@ -179,6 +191,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 void LevelController::stopLevel(){
 	for (GameObject* obj : gameObjects){
+		
 		delete obj;
 	}
 	gameObjects.clear();
@@ -231,6 +244,9 @@ void LevelController::removeAllObjects(GameObject * object){
 Player * LevelController::getPlayer(){
 	return player;
 }
+Player * LevelController::getPlayer2(){
+	return &player2;
+}
 
 ParticleManager * LevelController::getParticleManager(){
 	return particleManager;
@@ -238,6 +254,10 @@ ParticleManager * LevelController::getParticleManager(){
 
 void LevelController::setPaused(){
 	paused = !paused;
+}
+void LevelController::goToNextRound(){
+	curLevel++;
+	goToNextLevel(&LEVELS[curLevel]);
 }
 /*
 LevelController::~LevelController()

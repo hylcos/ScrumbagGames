@@ -22,8 +22,9 @@ This is the header file of the game object manager class.
 #include "menu\ToggleGore.h"
 #include "menu\MusicSlider.h"
 #include "menu\SoundSlider.h"
-#include "bosses\dunkenBoss.h"
+#include "bosses/dunkenBoss.h"
 #include "menu/ShopCard.h"
+#include "menu/NextRound.h"
 class GameObjectManager
 {
 public:

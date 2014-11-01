@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../GameObject.h"
-#include "WeaponCard.h"
+#include "shop/WeaponCard.h"
 
 class ShopCard : public GameObject
 {

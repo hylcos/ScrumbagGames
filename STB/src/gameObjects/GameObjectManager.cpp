@@ -63,7 +63,10 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 		return new SoundSlider();
 	}
 	if (string == "menu/ShopCard"){
-		//return new ShopCard();
+		return new ShopCard();
+	}
+	if (string == "menu/NextRound"){
+		return new NextRound();
 	}
 	if (string == ""){
 		throw endOfFile();
