@@ -12,9 +12,9 @@ dunkenBoss::dunkenBoss()
 		*TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/4.png"));
 	sf::Texture tex = *TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/melee.png");
-	Enemy::melee.setTexture(tex);
+	melee.setTexture(tex);
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
-	timeToSpawn = 5400;
+	timeToSpawn = 300;
 	
 }
 void dunkenBoss::update(float speedModifier) {
@@ -45,8 +45,7 @@ void dunkenBoss::move(float speedModifier) {
 void dunkenBoss::reduceHP(int damage){
 	dmg += damage;
 	if (dmg > type.getHP()){
-	
-		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().LEVEL_TWO);
+		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
 	}
 }
 

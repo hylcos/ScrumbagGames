@@ -17,6 +17,7 @@ void GameController::stop(){
 void GameController::start(){
 	SoundController::getInstance().load();
 	LevelController::getInstance().startLevel(LevelController::getInstance().MENU_MAIN);
+	changeCursor();
 	while (!stopping){
 		step();
 	}
@@ -39,14 +40,14 @@ void GameController::changeCursor(){
 	cursorsprite.setTexture(cursortex);
 	cursorsprite.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)));
 	window.draw(cursorsprite);
-	
 }
 
 void GameController::step(){
 	checkWindow();
 	LevelController::getInstance().step(fps, window);
 	HudController::getInstance().step(window);
-	changeCursor();
+	cursorsprite.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)));
+	window.draw(cursorsprite);
 	window.display();
 	
 	

@@ -39,6 +39,7 @@ public:
 	Weapon * Player::getSelectedWeapon();
 	int Player::getHp();
 	sf::Vector2u Player::getSize() override;
+	Weapon * Player::getWeapons(int value);
 	float Player::getAmmo();
 	void Player::doubleSpeed();
 	void Player::fullHealth();
