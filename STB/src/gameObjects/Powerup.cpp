@@ -37,6 +37,10 @@ Powerup* Powerup::setType(Powerup::Types* type){
 	return this;
 }
 
+void Powerup::setNumber(int& number){
+	powerupnumber = number;
+}
+
 void Powerup::update(float speedModifier){
 	sf::Vector2f diff = sprite.getPosition() - LevelController::getInstance().getPlayer()->getPosition();
 	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
@@ -45,7 +49,7 @@ void Powerup::update(float speedModifier){
 		type->executeAction(*this);
 		std::cout << "PRINT";
 		showtextTimer = 300;
-		poweruptext.setString(PowerupNames[dynamic_cast<int>(*type)]);
+		poweruptext.setString(PowerupNames[powerupnumber]);
 		poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
 		isLoaded = true;
 		

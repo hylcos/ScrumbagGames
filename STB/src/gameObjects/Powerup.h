@@ -26,11 +26,11 @@
 		, last
 	};
 	static const char* PowerupNames[last] = {
-		"fullHealth"
-		, "doubleDamage"
-		, "sprint"
-		, "ammoUp"
-		, "BAB"
+		"Full Health"
+		, "Double Damage"
+		, "Sprint"
+		, "Ammo Up"
+		, "Big Ass Bomb"
 	};
 
 
@@ -40,6 +40,7 @@ public:
 	
 	class Types{
 	public:
+		
 		Types(Powerups type, void(Powerup::*action)());
 		void executeAction(Powerup & powerup);
 		Powerups getType();
@@ -65,9 +66,12 @@ public:
 	void Powerup::pufBAB();
 	void Powerup::setText(std::string powerupstring);
 	void Powerup::load();
+	void Powerup::setNumber(int & number);
 	~Powerup();
+int powerupnumber;
 private:
 	bool isLoaded;
+
 	float showtextTimer;
 	sf::Font font;
 	sf::Text poweruptext;

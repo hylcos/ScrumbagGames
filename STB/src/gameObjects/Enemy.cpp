@@ -68,14 +68,15 @@ void Enemy::reduceHP(int damage){
 
 		LevelController::getInstance().removeObject(this);
 	
-		if (rand() % 7 == 1){
+		if (rand() % 6 == 1){
 			Powerup* pu = new Powerup(sf::Vector2f{position});
 			int i = rand() % 4 + 1;
+			pu->setNumber(i);
 			switch (i){
 			case 1:	
 				pu->setType(&pu->puSprint); 
 				std::cout << "SPRINT \n"; break;
-			case 2: 
+			case 2: 	
 				pu->setType(&pu->puFullHealth); 
 				std::cout << "FULLHealth \n"; break;
 			case 3:
