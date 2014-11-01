@@ -37,6 +37,7 @@
 class Powerup : public GameObject, ParticleEmitter
 {
 public:
+	
 	class Types{
 	public:
 		Types(Powerups type, void(Powerup::*action)());
@@ -62,10 +63,12 @@ public:
 	void Powerup::pufDoubleSpeed();
 	void Powerup::pufFullHealth();
 	void Powerup::pufBAB();
-
+	void Powerup::setText(std::string powerupstring);
+	void Powerup::load();
 	~Powerup();
 private:
-
+	bool isLoaded;
+	float showtextTimer;
 	sf::Font font;
 	sf::Text poweruptext;
 	Types* type = nullptr;

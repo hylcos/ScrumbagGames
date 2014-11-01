@@ -1,13 +1,17 @@
 #include "../stdafx.h"
 #include "Powerup.h"
 #include "../LevelController.h"
-
+#include "Player.h"
 
 Powerup::Types::Types(Powerups type, void(Powerup::*action)()) :
 type{ type },
 action{ action }
-{}
+{
 
+}
+void Powerup::setText(std::string powerupstring){
+
+}
 
 void Powerup::Types::executeAction(Powerup & powerup){
 	Player* player = LevelController::getInstance().getPlayer();
@@ -20,11 +24,12 @@ GameObject{ gameObjectType::powerup }
 	sprite.setPosition(position);
 	tex = *TextureManager::getInstance().getTexture("Sprites/Powerup.png");
 	sprite.setTexture(tex);
+
 	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
 	poweruptext.setFont(font);
 	poweruptext.setCharacterSize(20);
 	poweruptext.setColor(sf::Color::Yellow);
-	poweruptext.setPosition(200, 200);
+
 }
 
 Powerup* Powerup::setType(Powerup::Types* type){
@@ -35,23 +40,33 @@ Powerup* Powerup::setType(Powerup::Types* type){
 void Powerup::update(float speedModifier){
 	sf::Vector2f diff = sprite.getPosition() - LevelController::getInstance().getPlayer()->getPosition();
 	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
-	if (dist < 32){
+	poweruptext.setPosition(LevelController::getInstance().getPlayer()->getPosition().x, LevelController::getInstance().getPlayer()->getPosition().y-100);
+	if (dist < 32 && !isLoaded){
 		type->executeAction(*this);
-		poweruptext.setString(PowerupNames[Powerups::ammoUp]);
-		LevelController::getInstance().removeObject(this);
+		std::cout << "PRINT";
+		showtextTimer = 300;
+		poweruptext.setString(PowerupNames[dynamic_cast<int>(*type)]);
+		poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
+		isLoaded = true;
 		
 	}
+	if (isLoaded){
+		showtextTimer -= speedModifier;
+		if (showtextTimer <= 0){
+			poweruptext.setString("");
+			LevelController::getInstance().removeObject(this);
+		}
+	}
+	
+
 }
 
 sf::FloatRect Powerup::getBounds() {
 	return sprite.getGlobalBounds();
 }
 void Powerup::draw(sf::RenderWindow & window) const {
-	window.draw(sprite);
-	sf::View hudView;
-	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
-	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
-	window.setView(hudView);
+	if (!isLoaded)
+		window.draw(sprite);
 	window.draw(poweruptext);
 }
 Powerups Powerup::getPowerup(){
