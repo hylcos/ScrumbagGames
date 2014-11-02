@@ -1,5 +1,6 @@
 #pragma once
 #include "GameController.h"
+#include "TextureManager.h"
 #include "gameObjects\ParticleManager.h"
 #include "Factory.h"
 #include "gameObjects\Player.h"

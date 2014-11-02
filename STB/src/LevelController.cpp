@@ -1,10 +1,6 @@
 #include "stdafx.h"
-#include "GameController.h"
 #include "LevelController.h"
-#include "Factory.h"
-#include "GameObjects/Powerup.h"
 #include <SFML\Graphics.hpp>
-#include "TextureManager.h"
 
 
 LevelController::Initializer LEVELS[5];
