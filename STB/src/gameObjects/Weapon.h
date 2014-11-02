@@ -13,6 +13,11 @@ public:
 	virtual std::string Weapon::getAmmoString();
 	virtual std::string Weapon::getName();
 	virtual void Weapon::setAmmo(int amount);
+	virtual int Weapon::getDamageLevel();
+	virtual void Weapon::upgradeDamage();
+	virtual int Weapon::getFirerateLevel();
+	virtual void Weapon::upgradeFireRate();
+	virtual std::string Weapon::getInfo();
 	void setMultipler();
 	~Weapon();
 	int multipler = 1;

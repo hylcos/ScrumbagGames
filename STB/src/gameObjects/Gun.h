@@ -80,6 +80,16 @@ public:
 	*/
 	void Gun::upgradeFireRate(short amount);
 
+
+	int Gun::getDamageLevel() override;
+	
+	void Gun::upgradeDamage() override;
+
+	int Gun::getFirerateLevel() override;
+
+	void Gun::upgradeFireRate() override;
+
+	std::string Gun::getInfo() override;
 	//! The deconstructor of the gun
 	/*!
 	Deallocates the gun class.
@@ -94,7 +104,7 @@ private:
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;
-
+	int damageLevel = 0, fireRateLevel = 0;
 	int damage, magazineSize, range,ammo,currentMagazine;
 	short bulletSpeed,fireRate;
 	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;

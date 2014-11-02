@@ -107,7 +107,10 @@ void HudController::step(sf::RenderWindow & window){
 	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
 
 	window.setView(hudView);
-
+	for (GameObject* obj : gameObjectToAdd){
+		gameObjects.push_back(obj);
+	}
+	gameObjectToAdd.clear();
 
 	for (GameObject* obj : gameObjects){
 		obj->update(speedModifier);

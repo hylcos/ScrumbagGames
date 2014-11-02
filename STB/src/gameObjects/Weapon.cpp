@@ -34,8 +34,26 @@ void Weapon::setAmmo(int amount){
 std::string Weapon::getAmmoString(){
 	return "Melee";
 }
+int Weapon::getDamageLevel(){
+	return 0;
+}
+
+void Weapon::upgradeDamage(){
+
+}
+int Weapon::getFirerateLevel(){
+	return 0;
+}
+
+void Weapon::upgradeFireRate(){
+
+}
 std::string Weapon::getName(){
 	return " ";
+}
+
+std::string Weapon::getInfo(){
+	return std::string("Hoi");
 }
 Weapon::~Weapon()
 {

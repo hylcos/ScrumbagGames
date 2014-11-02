@@ -28,7 +28,7 @@ void Gun::fire(){
 				position.y += (10 * sin(rotation* PI / 180)
 					+ 15 * sin((rotation - 90) * PI / 180));
 				SoundController::getInstance().playMusic(name);
-				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, damage*multipler, position);
+				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, damage, position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
 				currentMagazine--;
@@ -119,6 +119,38 @@ void Gun::upgradeFireRate(short amount){
 	fireRate -= amount;
 }
 
+int Gun::getDamageLevel() {
+	return damageLevel;
+}
+void Gun::upgradeDamage() {
+	if (damageLevel < 5){
+		float betweenStep = static_cast<float>( damage) * 1.25f;
+		damage = static_cast<int>(betweenStep);
+		damageLevel++;
+	}
+}
+int Gun::getFirerateLevel() {
+	return fireRateLevel;
+}
+void Gun::upgradeFireRate() {
+	if (fireRateLevel < 5){
+		float betweenStep = static_cast<float>(fireRate)/ 1.10f;
+		fireRate = static_cast<short>(betweenStep);
+		fireRateLevel++;
+	}
+}
+
+std::string Gun::getInfo() {
+	std::string info;
+	info += "Name: " + name + "\n";
+	info += "Damage: " + std::to_string(damage) + "\n";
+	info += "MagazineSize: " + std::to_string(magazineSize) + "\n";
+	info += "Range: " + std::to_string(range) + "\n";
+	info += "BulletSpeed: " + std::to_string(bulletSpeed) + "\n";
+	info += "FireRate: " + std::to_string(fireRate) + "\n";
+	info += "ReloadSpeed: " + std::to_string(static_cast<int>(reloadSpeed)) + "\n";
+	return info;
+}
 Gun::~Gun()
 {
 }

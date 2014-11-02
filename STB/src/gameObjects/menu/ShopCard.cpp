@@ -18,6 +18,7 @@ void ShopCard::update(float speedModifier) {
 	card1->update(speedModifier);
 	card2->update(speedModifier);
 	card3->update(speedModifier);
+	LevelController::getInstance().getPlayer2()->setWeapons(card1->getWeapon(), card2->getWeapon(), card3->getWeapon());
 }
 void ShopCard::draw(sf::RenderWindow & window) const {
 	card1->draw(window);

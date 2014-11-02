@@ -92,6 +92,7 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\menu\shop\DropDownMenu.h" />
     <ClInclude Include="src\gameObjects\menu\NextRound.h" />
     <ClInclude Include="src\gameObjects\menu\ShopCard.h" />
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
@@ -139,8 +140,10 @@
     <ClInclude Include="src\targetver.h" />
     <ClInclude Include="src\TextureManager.h" />
     <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h" />
+    <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\menu\shop\DropDownMenu.cpp" />
     <ClCompile Include="src\gameObjects\menu\NextRound.cpp" />
     <ClCompile Include="src\gameObjects\menu\ShopCard.cpp" />
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
@@ -191,6 +194,7 @@
     </ClCompile>
     <ClCompile Include="src\TextureManager.cpp" />
     <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp" />
+    <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />
@@ -254,6 +258,7 @@
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\menuObjecten\ScrollBar.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
+    <Image Include="Resources\Images\menuObjecten\UpgradeButton.png" />
     <Image Include="Resources\Images\menuObjecten\WeaponCardBackGround.png" />
     <Image Include="Resources\Images\PauseMenuOverlay.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
