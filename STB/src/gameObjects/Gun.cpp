@@ -129,6 +129,7 @@ void Gun::upgradeDamage() {
 		damageLevel++;
 	}
 }
+
 int Gun::getFirerateLevel() {
 	return fireRateLevel;
 }
@@ -139,6 +140,18 @@ void Gun::upgradeFireRate() {
 		fireRateLevel++;
 	}
 }
+
+int Gun::getReloadSpeedLevel() {
+	return reloadSpeedLevel;
+}
+void Gun::upgradeReloadSpeed() {
+	if (reloadSpeedLevel < 5){
+		reloadSpeed /= 1.10f;
+		reloadSpeedLevel++;
+	}
+}
+
+
 
 std::string Gun::getInfo() {
 	std::string info;

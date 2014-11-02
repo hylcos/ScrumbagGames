@@ -18,6 +18,6 @@ private:
 	sf::Texture backgroundTexture, weaponTexture;
 	Weapon * weapon;
 	sf::Text weaponInfo;
-	Upgrade * fireSpeedUpgrade, * damageUpgrade;
+	Upgrade * fireSpeedUpgrade, * damageUpgrade, * reloadSpeed;
 };
 

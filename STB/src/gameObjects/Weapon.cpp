@@ -37,17 +37,24 @@ std::string Weapon::getAmmoString(){
 int Weapon::getDamageLevel(){
 	return 0;
 }
-
 void Weapon::upgradeDamage(){
 
 }
+
 int Weapon::getFirerateLevel(){
 	return 0;
 }
-
 void Weapon::upgradeFireRate(){
 
 }
+
+int Weapon::getReloadSpeedLevel(){
+	return 0;
+}
+void Weapon::upgradeReloadSpeed(){
+
+}
+
 std::string Weapon::getName(){
 	return " ";
 }

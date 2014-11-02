@@ -24,6 +24,10 @@ weapon{ weapon }
 	damageUpgrade->setOnHud(true);
 	HudController::getInstance().addObject(damageUpgrade);
 
+	reloadSpeed = new Upgrade(weapon, "ReloadSpeed");
+	reloadSpeed->setOnHud(true);
+	HudController::getInstance().addObject(reloadSpeed);
+
 	weaponInfo.setFont(*GameController::getInstance().getFont());
 	weaponInfo.setCharacterSize(10);
 	weaponInfo.setColor(sf::Color(255, 20, 20));
@@ -34,10 +38,11 @@ weapon{ weapon }
 void WeaponCard::update(float speedModifier) {
 
 	backgroundSprite.setPosition(position);
-	weaponInfo.setPosition(sf::Vector2f(position.x+16, position.y + 280));
+	weaponInfo.setPosition(sf::Vector2f(position.x+16, position.y + 300));
 	weaponInfo.setString(weapon->getInfo());
-	damageUpgrade->setPosition(sf::Vector2f(position.x + 40, position.y + 180));
+	damageUpgrade->setPosition(sf::Vector2f(position.x + 40, position.y + 140));
 	fireSpeedUpgrade->setPosition(sf::Vector2f(position.x + 40, position.y + 80));
+	reloadSpeed->setPosition(sf::Vector2f(position.x + 40, position.y + 200));
 	weaponSprite.setPosition(sf::Vector2f(position.x + 40, position.y + 40));
 
 }

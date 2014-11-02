@@ -17,9 +17,9 @@ public:
 	virtual void Weapon::upgradeDamage();
 	virtual int Weapon::getFirerateLevel();
 	virtual void Weapon::upgradeFireRate();
+	virtual int Weapon::getReloadSpeedLevel();
+	virtual void Weapon::upgradeReloadSpeed();
 	virtual std::string Weapon::getInfo();
-	void setMultipler();
 	~Weapon();
-	int multipler = 1;
 };
 

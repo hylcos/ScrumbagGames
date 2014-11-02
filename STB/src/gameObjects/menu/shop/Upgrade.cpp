@@ -42,6 +42,9 @@ void Upgrade::update(float speedModifier) {
 	else if (type == "Damage"){
 		UpgradeLevel = weapon->getDamageLevel();
 	}
+	else if (type == "ReloadSpeed"){
+		UpgradeLevel = weapon->getReloadSpeedLevel();
+	}
 	
 	Clickable::update();
 }
@@ -64,6 +67,9 @@ void Upgrade::click() {
 	}
 	else if (type == "Damage"){
 		weapon->upgradeDamage();
+	}
+	else if (type == "ReloadSpeed"){
+		weapon->upgradeReloadSpeed();
 	}
 
 	std::cout << "Upgrade bounds asked \n";
