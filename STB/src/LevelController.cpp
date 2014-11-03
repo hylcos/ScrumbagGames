@@ -255,7 +255,7 @@ void LevelController::setPaused(){
 	paused = !paused;
 }
 void LevelController::goToNextRound(){
-	if (curLevel < 4){
+	if (curLevel <= 4){
 		curLevel++;
 		goToNextLevel(&LEVELS[curLevel]);
 	}
