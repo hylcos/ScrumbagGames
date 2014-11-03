@@ -41,6 +41,9 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Parker"){
 		return new parkerBoss();
 	}
+	if (string == "Bobby"){
+		return new bobbyBoss();
+	}
 	if (string == "ParticleManager"){
 		return new ParticleManager();
 	}

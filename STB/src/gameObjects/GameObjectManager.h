@@ -26,6 +26,7 @@ This is the header file of the game object manager class.
 #include "bosses/ethanBoss.h"
 #include "bosses/zoeyBoss.h"
 #include "bosses/parkerBoss.h"
+#include "bosses/bobbyBoss.h"
 #include "menu/ShopCard.h"
 #include "menu/NextRound.h"
 class GameObjectManager

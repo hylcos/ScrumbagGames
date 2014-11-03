@@ -113,6 +113,9 @@ public:
 
 	//! The standard values for the zoey boss bully.
 	Initializer parker{ "Parker", 1.5f, 800, true, 35, 60 };
+
+	//! The standard values for the zoey boss bully.
+	Initializer bobby{ "Bobby", 1.4f, 2000, true, 55, 60 };
 	
 	//! The deconstructor of the enemy class.
 	/*!
