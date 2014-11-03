@@ -170,10 +170,10 @@
     <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\shop\DropDownMenu.h">
+    <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h">
+    <ClInclude Include="src\gameObjects\menu\shop\switchWeapon.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -322,10 +322,10 @@
     <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\shop\DropDownMenu.cpp">
+    <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp">
+    <ClCompile Include="src\gameObjects\menu\shop\switchWeapon.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -353,6 +353,9 @@
     <None Include="Resources\Sounds\dagger.ogg" />
     <None Include="Resources\Levels\levelTwo.level" />
     <None Include="Resources\Levels\shop.level" />
+    <None Include="Resources\Levels\levelThree.level" />
+    <None Include="Resources\Levels\levelFour.level" />
+    <None Include="Resources\Levels\levelFive.level" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">
@@ -677,6 +680,9 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\menuObjecten\UpgradeButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\SwitchWeaponButton.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

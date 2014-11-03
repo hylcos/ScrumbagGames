@@ -31,9 +31,9 @@ public:
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/levelOne.level" };
 	LevelController::Initializer LEVEL_TWO{ "Resources/Levels/levelTwo.level" };
-	LevelController::Initializer LEVEL_THREE{ "Resources/Levels/levelOne.level" };
-	LevelController::Initializer LEVEL_FOUR{ "Resources/Levels/levelTwo.level" };
-	LevelController::Initializer LEVEL_FIVE{ "Resources/Levels/levelOne.level" };
+	LevelController::Initializer LEVEL_THREE{ "Resources/Levels/levelThree.level" };
+	LevelController::Initializer LEVEL_FOUR{ "Resources/Levels/levelFour.level" };
+	LevelController::Initializer LEVEL_FIVE{ "Resources/Levels/levelFive.level" };
 
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
 	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };

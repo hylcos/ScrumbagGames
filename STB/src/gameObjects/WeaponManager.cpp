@@ -13,4 +13,25 @@ void WeaponManager::load()
 	sword = new Knife("sword", 50, 70, 32);
 
 }
+
+
+Weapon * WeaponManager::getOtherWeapon(Weapon * weapon){
+	if (weapon == pistol)
+		return rifle;
+	if (weapon == rifle)
+		return pistol;
+
+	if (weapon == shotgun)
+		return sniper;
+	if (weapon == sniper)
+		return shotgun;
+
+	if (weapon == sword)
+		return dagger;
+	if (weapon == dagger)
+		return sword;
+
+
+	return nullptr;
+}
 WeaponManager::~WeaponManager(){}

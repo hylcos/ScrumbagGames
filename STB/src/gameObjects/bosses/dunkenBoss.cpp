@@ -14,7 +14,7 @@ dunkenBoss::dunkenBoss()
 	tex = *TextureManager::getInstance().getTexture("Sprites/Bosses/Dunken/melee.png");
 	melee.setTexture(tex);
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
-	timeToSpawn = 300;
+	timeToSpawn = 5400;
 	
 }
 void dunkenBoss::update(float speedModifier) {

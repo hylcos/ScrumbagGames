@@ -92,7 +92,6 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\gameObjects\menu\shop\DropDownMenu.h" />
     <ClInclude Include="src\gameObjects\menu\NextRound.h" />
     <ClInclude Include="src\gameObjects\menu\ShopCard.h" />
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
@@ -141,9 +140,9 @@
     <ClInclude Include="src\TextureManager.h" />
     <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h" />
     <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h" />
+    <ClInclude Include="src\gameObjects\menu\shop\switchWeapon.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\gameObjects\menu\shop\DropDownMenu.cpp" />
     <ClCompile Include="src\gameObjects\menu\NextRound.cpp" />
     <ClCompile Include="src\gameObjects\menu\ShopCard.cpp" />
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
@@ -195,10 +194,14 @@
     <ClCompile Include="src\TextureManager.cpp" />
     <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp" />
     <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp" />
+    <ClCompile Include="src\gameObjects\menu\shop\switchWeapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
+    <None Include="Resources\Levels\levelFive.level" />
+    <None Include="Resources\Levels\levelFour.level" />
+    <None Include="Resources\Levels\levelThree.level" />
     <None Include="Resources\Levels\levelTwo.level" />
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
@@ -257,6 +260,7 @@
     <Image Include="Resources\Images\menuObjecten\ResumeButton.png" />
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\menuObjecten\ScrollBar.png" />
+    <Image Include="Resources\Images\menuObjecten\SwitchWeaponButton.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\menuObjecten\UpgradeButton.png" />
     <Image Include="Resources\Images\menuObjecten\WeaponCardBackGround.png" />

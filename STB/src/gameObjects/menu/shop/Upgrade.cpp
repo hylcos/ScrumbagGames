@@ -71,14 +71,16 @@ void Upgrade::click() {
 	else if (type == "ReloadSpeed"){
 		weapon->upgradeReloadSpeed();
 	}
-
-	std::cout << "Upgrade bounds asked \n";
 }
 sf::FloatRect Upgrade::getBounds(){
 	return sprite.getGlobalBounds();
 
 }
 
+void Upgrade::updateWeapon(Weapon * weapon){
+	this->weapon = weapon;
+
+}
 Upgrade::~Upgrade()
 {
 }

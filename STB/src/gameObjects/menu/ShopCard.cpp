@@ -11,7 +11,7 @@ ShopCard::ShopCard()
 	card2 = new WeaponCard{ LevelController::getInstance().getPlayer2()->getWeapons(2)};
 	card2->setPosition(sf::Vector2f(250, 10));
 	card3 = new WeaponCard{ LevelController::getInstance().getPlayer2()->getWeapons(3)};
-	card3->setPosition(sf::Vector2f(450, 10));
+	card3->setPosition(sf::Vector2f(450, 10)); 
 }
 
 void ShopCard::update(float speedModifier) {

@@ -9,6 +9,7 @@ public:
 	void Upgrade::draw(sf::RenderWindow & window) const override;
 	void Upgrade::click() override;
 	sf::FloatRect Upgrade::getBounds() override;
+	void Upgrade::updateWeapon(Weapon * weapon);
 	~Upgrade();
 private:
 	sf::RectangleShape backGround[5];

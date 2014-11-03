@@ -17,6 +17,7 @@ public:
 	Knife * dagger;
 	Knife * sword;
 	
+	Weapon * WeaponManager::getOtherWeapon(Weapon * weapon);
 	WeaponManager::~WeaponManager();
 
 private:

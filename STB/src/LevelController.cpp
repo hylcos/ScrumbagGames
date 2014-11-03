@@ -52,6 +52,9 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 		}
 		if (obj->getType() == GameObject::player) {
 			player = dynamic_cast<Player*>(obj);
+			if (&player2 != nullptr){
+				player->setWeapons(player2.getWeapons(1), player2.getWeapons(2), player2.getWeapons(3));
+			}
 			player2 = *player;
 		}
 		if (obj->getType() == GameObject::particleManager) {
@@ -252,8 +255,13 @@ void LevelController::setPaused(){
 	paused = !paused;
 }
 void LevelController::goToNextRound(){
-	curLevel++;
-	goToNextLevel(&LEVELS[curLevel]);
+	if (curLevel < 4){
+		curLevel++;
+		goToNextLevel(&LEVELS[curLevel]);
+	}
+	else{
+		goToNextLevel(&MENU_MAIN);
+	}
 }
 /*
 LevelController::~LevelController()
