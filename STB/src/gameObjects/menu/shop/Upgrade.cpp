@@ -5,10 +5,11 @@
 #include "../../../LevelController.h"
 #include "../../../GameController.h"
 
-Upgrade::Upgrade(Weapon * weapon,std::string type):
+Upgrade::Upgrade(Weapon * weapon,types type):
 type{ type },
 weapon{ weapon }
 {
+	Upgrade::type = type;
 	tex = *TextureManager::getInstance().getTexture("menuObjecten/UpgradeButton.png");
 	sprite.setTexture(tex);
 
@@ -16,7 +17,15 @@ weapon{ weapon }
 	text.setCharacterSize(10);
 	text.setColor(sf::Color(255, 20, 20));
 	text.setPosition(position);
-	text.setString(type);
+	if (type == types::FireRate){
+		text.setString("Fire rate");
+	}
+	else if (type == types::Damage){
+		text.setString("Damage");
+	}
+	else if (type == types::ReloadSpeed){
+		text.setString("Reload speed");
+	}
 
 
 
@@ -36,13 +45,13 @@ void Upgrade::update(float speedModifier) {
 	}
 	text.setPosition(position);
 	sprite.setPosition(sf::Vector2f(position.x -16 , position.y));
-	if (type == "FireRate"){
+	if (type == types::FireRate){
 		UpgradeLevel = weapon->getFirerateLevel();
 	}
-	else if (type == "Damage"){
+	else if (type == types::Damage){
 		UpgradeLevel = weapon->getDamageLevel();
 	}
-	else if (type == "ReloadSpeed"){
+	else if (type == types::ReloadSpeed){
 		UpgradeLevel = weapon->getReloadSpeedLevel();
 	}
 	
@@ -62,13 +71,13 @@ void Upgrade::draw(sf::RenderWindow & window) const {
 	
 }
 void Upgrade::click() { 
-	if (type == "FireRate"){
+	if (type == types::FireRate){
 		weapon->upgradeFireRate();
 	}
-	else if (type == "Damage"){
+	else if (type == types::Damage){
 		weapon->upgradeDamage();
 	}
-	else if (type == "ReloadSpeed"){
+	else if (type == types::ReloadSpeed){
 		weapon->upgradeReloadSpeed();
 	}
 }

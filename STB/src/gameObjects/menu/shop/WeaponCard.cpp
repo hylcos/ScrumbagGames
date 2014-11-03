@@ -24,15 +24,15 @@ weapon{ wpn }
 	std::cout << "SwitchButton Made";
 	
 
-	fireSpeedUpgrade = new Upgrade(weapon, "FireRate");
+	fireSpeedUpgrade = new Upgrade(weapon, Upgrade::types::FireRate);
 	fireSpeedUpgrade->setOnHud(true);
 	HudController::getInstance().addObject(fireSpeedUpgrade);
 
-	damageUpgrade = new Upgrade(weapon,"Damage");
+	damageUpgrade = new Upgrade(weapon, Upgrade::types::Damage);
 	damageUpgrade->setOnHud(true);
 	HudController::getInstance().addObject(damageUpgrade);
 
-	reloadSpeed = new Upgrade(weapon, "ReloadSpeed");
+	reloadSpeed = new Upgrade(weapon, Upgrade::types::ReloadSpeed);
 	reloadSpeed->setOnHud(true);
 	HudController::getInstance().addObject(reloadSpeed);
 
