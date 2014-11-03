@@ -74,6 +74,8 @@ public:
 	const std::vector< GameObject* > LevelController::getGameObjects();
 
 	void LevelController::goToNextRound();
+
+	int curLevel = 0;
 private:
 	LevelController() {};
 	LevelController(LevelController const&) = delete;
@@ -89,8 +91,6 @@ private:
 	sf::View mainView;
 
 	Initializer* nextLevel = nullptr;
-
-	int curLevel = 0;
 
 	sf::Vector2f viewMovement{ 0, 0 };
 

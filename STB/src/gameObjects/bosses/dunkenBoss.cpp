@@ -23,13 +23,15 @@ void dunkenBoss::update(float speedModifier) {
 		if (floor(timeToSpawn) > 0 )
 			HudController::getInstance().updateTimer(timeToSpawn);
 		else if (spawned == false) {
-			spawned = true;
-			std::cout << "boss has spwn";
-			int random = rand() % 360;
-			float radius = random * PI / 180;
-			position.x = LevelController::getInstance().getPlayer()->getPosition().x + cos(radius) * 640;
-			position.y = LevelController::getInstance().getPlayer()->getPosition().y + sin(radius) * 480;
-			HudController::getInstance().updateTimer("BOSS");
+			if (LevelController::getInstance().curLevel == 0){
+				spawned = true;
+				std::cout << "dunken has spwn";
+				int random = rand() % 360;
+				float radius = random * PI / 180;
+				position.x = LevelController::getInstance().getPlayer()->getPosition().x + cos(radius) * 640;
+				position.y = LevelController::getInstance().getPlayer()->getPosition().y + sin(radius) * 480;
+				HudController::getInstance().updateTimer("BOSS");
+			}
 		}
 		
 }

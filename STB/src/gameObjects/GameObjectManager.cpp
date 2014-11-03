@@ -32,6 +32,15 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Dunken"){
 		return new dunkenBoss();
 	}
+	if (string == "Ethan"){
+		return new ethanBoss();
+	}
+	if (string == "Zoey"){
+		return new zoeyBoss();
+	}
+	if (string == "Parker"){
+		return new parkerBoss();
+	}
 	if (string == "ParticleManager"){
 		return new ParticleManager();
 	}

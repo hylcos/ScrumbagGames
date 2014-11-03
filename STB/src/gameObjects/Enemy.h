@@ -104,6 +104,15 @@ public:
 
 	//! The standard values for the dunken boss bully.
 	Initializer dunken{ "Dunken", 1.2f, 1500, true, 65, 60 };
+
+	//! The standard values for the ethan boss bully.
+	Initializer ethan{ "Ethan", 1.3f, 1000, true, 50, 60 };
+
+	//! The standard values for the zoey boss bully.
+	Initializer zoey{ "Zoey", 1.8f, 750, true, 25, 60 };
+
+	//! The standard values for the zoey boss bully.
+	Initializer parker{ "Parker", 1.5f, 800, true, 35, 60 };
 	
 	//! The deconstructor of the enemy class.
 	/*!
