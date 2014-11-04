@@ -20,7 +20,7 @@ public:
 	@param attackSpeed The amount of frames in between two attacks
 	@param range The range the melee weapon can reach
 	*/
-	Knife::Knife(std::string name, int damage, short attackSpeed, int range);
+	Knife::Knife(std::string name, float damage, short attackSpeed, int range);
 
 	//! The fire method of the knife
 	/*!
@@ -59,7 +59,7 @@ public:
 
 	int Knife::getReloadSpeedLevel() override;
 	void Knife::upgradeReloadSpeed() override;
-	void Knife::doubleDamage() override;
+void Knife::reset() override;
 	std::string Knife::getInfo() override;
 private:
 	sf::Sprite sprite, melee;
@@ -68,8 +68,8 @@ private:
 	bool drawMelee;
 	float doubleDamageTimer;
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 6;
-	int damage, range;
-	short attackSpeed;
+	int  range;
+	float attackSpeed,damage;
 	float hitCooldown = 0, rotation;
 	
 };

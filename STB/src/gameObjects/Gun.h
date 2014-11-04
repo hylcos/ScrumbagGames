@@ -24,7 +24,7 @@ public:
 	@param bulletSpeed The speed with which the bullets travel
 	@param fireRate The amount of frames in between two shots
 	*/
-	Gun::Gun(std::string name,int damage, float reloadSpeed,int ammo,int magazineSize,int range, short bulletSpeed,short fireRate);
+	Gun::Gun(std::string name,float damage, float reloadSpeed,int ammo,int magazineSize,int range, short bulletSpeed,short fireRate);
 
 	//! The fire method of the gun
 	/*!
@@ -102,6 +102,8 @@ public:
 	Gun Gun::getWeapon();
 	void Gun::setAmmo(int amount);
 	bool Gun::getIsReloading() override;
+
+	void Gun::reset() override;
 private:
 	float doubleDamageTimer;
 	bool isReloading = false;
@@ -109,8 +111,9 @@ private:
 	sf::Texture tex;
 	std::string name;
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;
-	int damage, magazineSize, range,ammo,currentMagazine;
-	short bulletSpeed,fireRate;
+	int magazineSize, range,ammo,currentMagazine;
+	float damage, fireRate;
+	short bulletSpeed;
 	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;
 };
 

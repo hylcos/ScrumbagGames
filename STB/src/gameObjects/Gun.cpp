@@ -1,7 +1,7 @@
 ﻿
 #include "Gun.h"
 #include "../LevelController.h"
-Gun::Gun(std::string name, int damage, float reloadSpeed,int ammo, int magazineSize, int range, short bulletSpeed,short fireRate) :
+Gun::Gun(std::string name, float damage, float reloadSpeed, int ammo, int magazineSize, int range, short bulletSpeed, short fireRate) :
 damage{ damage },
 reloadSpeed{ reloadSpeed },
 magazineSize{ magazineSize },
@@ -28,7 +28,7 @@ void Gun::fire(){
 				position.y += (10 * sin(rotation* PI / 180)
 					+ 15 * sin((rotation - 90) * PI / 180));
 				SoundController::getInstance().playMusic(name);
-				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, damage, position);
+				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, static_cast<int>(damage), position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
 				currentMagazine--;
@@ -141,8 +141,7 @@ int Gun::getDamageLevel() {
 }
 void Gun::upgradeDamage() {
 	if (damageLevel < 5){
-		float betweenStep = static_cast<float>( damage) * 1.25f;
-		damage = static_cast<int>(betweenStep);
+		damage *= 1.25f;
 		damageLevel++;
 	}
 }
@@ -152,8 +151,7 @@ int Gun::getFirerateLevel() {
 }
 void Gun::upgradeFireRate() {
 	if (fireRateLevel < 5){
-		float betweenStep = static_cast<float>(fireRate)/ 1.10f;
-		fireRate = static_cast<short>(betweenStep);
+		fireRate /= 1.10f;
 		fireRateLevel++;
 	}
 }
@@ -173,14 +171,27 @@ void Gun::upgradeReloadSpeed() {
 std::string Gun::getInfo() {
 	std::string info;
 	info += "Name: " + name + "\n";
-	info += "Damage: " + std::to_string(damage) + "\n";
+	info += "Damage: " + std::to_string(static_cast<int>(damage)) + "\n";
 	info += "MagazineSize: " + std::to_string(magazineSize) + "\n";
 	info += "Range: " + std::to_string(range) + "\n";
 	info += "BulletSpeed: " + std::to_string(bulletSpeed) + "\n";
-	info += "FireRate: " + std::to_string(fireRate) + "\n";
+	info += "FireRate: " + std::to_string(static_cast<int>(fireRate)) + "\n";
 	info += "ReloadSpeed: " + std::to_string(static_cast<int>(reloadSpeed)) + "\n";
 	return info;
 }
+
 Gun::~Gun()
 {
+}
+void Gun::reset(){
+	for (reloadSpeedLevel; reloadSpeedLevel >= 0; reloadSpeedLevel--){
+		reloadSpeed *= 1.10f;
+	}
+	for (fireRateLevel; fireRateLevel > 0; fireRateLevel--){
+		fireRate *= 1.10f;
+
+	}
+	for (damageLevel; damageLevel > 0; damageLevel--){
+		damage /= 1.25f;
+	}
 }
