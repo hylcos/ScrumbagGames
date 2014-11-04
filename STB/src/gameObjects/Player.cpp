@@ -224,7 +224,16 @@ Weapon * Player::getWeapons(int value){
 int Player::getHp(){
 	return hp;
 }
+void Player::addMoney(int money){
+	this->money += money;
+}
 
+void Player::setMoney(int money){
+	this->money = money;
+}
+int Player::getMoney(){
+	return money;
+}
 float Player::getAmmo(){
 	return getSelectedWeapon()->getAmmo();
 }

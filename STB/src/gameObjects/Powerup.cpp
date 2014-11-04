@@ -34,6 +34,9 @@ GameObject{ gameObjectType::powerup }
 
 Powerup* Powerup::setType(Powerup::Types* type){
 	this->type = type;
+	if (type == &Money){
+		tex = *TextureManager::getInstance().getTexture("Sprites/money.png");
+	}
 	return this;
 }
 
@@ -49,8 +52,10 @@ void Powerup::update(float speedModifier){
 		type->executeAction(*this);
 		std::cout << "PRINT";
 		showtextTimer = 300;
-		poweruptext.setString(PowerupNames[powerupnumber]);
-		poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
+		if (type != &Money){
+			poweruptext.setString(PowerupNames[powerupnumber]);
+			poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
+		}
 		isLoaded = true;
 		
 	}
@@ -117,6 +122,9 @@ void Powerup::pufBAB(){
 			dynamic_cast<Enemy *>(obj)->reduceHP(1000);
 		}
 	}
+}
+void Powerup::addMoney(){
+	LevelController::getInstance().getPlayer()->addMoney(rand() % 25 + 25);
 }
 
 Powerup::~Powerup(){

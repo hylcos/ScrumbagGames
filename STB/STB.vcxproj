@@ -310,6 +310,7 @@
     <Image Include="Resources\Images\Sprites\Enemies\Macho\3.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Macho\4.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Macho\melee.png" />
+    <Image Include="Resources\Images\Sprites\money.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-1.png" />

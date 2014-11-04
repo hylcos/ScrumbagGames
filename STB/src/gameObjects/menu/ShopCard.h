@@ -15,5 +15,8 @@ private:
 	WeaponCard * card1;
 	WeaponCard * card2;
 	WeaponCard * card3;
+	sf::Text MoneyText;
+	sf::Texture timetex;
+	sf::Sprite timesprite;
 };
 

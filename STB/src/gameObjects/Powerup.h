@@ -10,6 +10,7 @@
 		, sprint
 		, ammoUp
 		, BAB
+		, Money
 		//, invincibility
 		//, instaKill
 		//, doubleReloadSpeed
@@ -55,6 +56,7 @@ public:
 	Powerup::Types puSprint{ Powerups::sprint, &Powerup::pufDoubleSpeed };
 	Powerup::Types puFullHealth{ Powerups::fullHealth, &Powerup::pufFullHealth };
 	Powerup::Types BAB{ Powerups::BAB, &Powerup::pufBAB };
+	Powerup::Types Money{ Powerups::Money, &Powerup::addMoney };
 	void Powerup::update(float speedModifier);
 
 	sf::FloatRect Powerup::getBounds()  override;
@@ -64,6 +66,7 @@ public:
 	void Powerup::pufDoubleSpeed();
 	void Powerup::pufFullHealth();
 	void Powerup::pufBAB();
+	void Powerup::addMoney();
 	void Powerup::setText(std::string powerupstring);
 	void Powerup::load();
 	void Powerup::setNumber(int & number);
