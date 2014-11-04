@@ -12,7 +12,9 @@ GameObject{ particleManager }
 void ParticleManager::addParticle(Particle * p){
 	if (!(p->getGore()) || goreEnabled){
 		ParticlesToAdd.push_back(p);
+		return;
 	}
+	delete p;
 }
 
 void ParticleManager::update(float speedModifier) {

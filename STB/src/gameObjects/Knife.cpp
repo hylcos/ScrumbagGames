@@ -42,7 +42,7 @@ void Knife::fire(){
 					ParticleEmitter::deceleration = 0.3f;
 					ParticleEmitter::directionDeviation = 180;
 					ParticleEmitter::isGore = true;
-					ParticleEmitter::update(0.f);
+					ParticleEmitter::emitParticles();
 				}
 			}
 		}
@@ -57,6 +57,7 @@ void Knife::update(float speedModifier) {
 	}
 	sprite.setPosition(position);
 	melee.setPosition(position);
+	ParticleEmitter::update(0.f);
 }
 
 void Knife::draw(sf::RenderWindow & window) const {

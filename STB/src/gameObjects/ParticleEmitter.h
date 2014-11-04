@@ -5,13 +5,14 @@ class ParticleEmitter
 {
 public:
 	ParticleEmitter();
-	void update(float speedModifier);
-	void setColor(int r, int g, int b, int a);
-	void setColor(sf::Color color, int a = 255);
-	bool isEmitting();
-	float getFrequency();
-	int getParticleAmount();
-	bool getGore();
+	void ParticleEmitter::emitParticles();
+	void ParticleEmitter::update(float speedModifier);
+	void ParticleEmitter::setColor(int r, int g, int b, int a);
+	void ParticleEmitter::setColor(sf::Color color, int a = 255);
+	bool ParticleEmitter::isEmitting();
+	float ParticleEmitter::getFrequency();
+	int ParticleEmitter::getParticleAmount();
+	bool ParticleEmitter::getGore();
 	~ParticleEmitter();
 protected:
 	sf::Color particleColor;
