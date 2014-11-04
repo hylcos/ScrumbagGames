@@ -4,7 +4,7 @@
 
 bobbyBoss::bobbyBoss()
 {
-	std::cout << "Bobby\n";
+	//std::cout << "Bobby\n";
 	Enemy::type = bobby;
 	Animation::setTextures(
 		*TextureManager::getInstance().getTexture("Sprites/Bosses/Bobby/1.png"),
