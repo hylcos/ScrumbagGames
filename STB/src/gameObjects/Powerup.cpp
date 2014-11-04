@@ -61,6 +61,7 @@ void Powerup::update(float speedModifier){
 	}
 	if (isLoaded){
 		showtextTimer -= speedModifier;
+		poweruptext.setColor(sf::Color::Color(255, 255, 0, sf::Uint8(std::min(255.f,showtextTimer))));
 		if (showtextTimer <= 0){
 			poweruptext.setString("");
 			LevelController::getInstance().removeObject(this);
