@@ -46,6 +46,8 @@ void parkerBoss::reduceHP(int damage){
 	if (spawned){
 		dmg += damage;
 		if (dmg > type.getHP()){
+
+			LevelController::getInstance().getPlayer()->addMoney(1600);
 			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
 		}
 	}

@@ -58,6 +58,7 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 			player = dynamic_cast<Player*>(obj);
 			if (&player2 != nullptr){
 				player->setWeapons(player2.getWeapons(1), player2.getWeapons(2), player2.getWeapons(3));
+				player->setMoney(player2.getMoney());
 			}
 			player2 = *player;
 		}
