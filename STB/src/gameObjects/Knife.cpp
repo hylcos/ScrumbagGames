@@ -2,7 +2,7 @@
 #include "Knife.h"
 #include "../LevelController.h"
 #include <iostream>
-Knife::Knife(std::string name, int damage, short attackSpeed, int range):
+Knife::Knife(std::string name, float damage, short attackSpeed, int range):
 	damage{ damage },
 	attackSpeed{ attackSpeed },
 	range{ range }
@@ -42,7 +42,7 @@ void Knife::fire(){
 					ParticleEmitter::directionDeviation = 180;
 					ParticleEmitter::isGore = true;
 					ParticleEmitter::emitParticles();
-					dynamic_cast<Enemy*>(gameObject)->reduceHP(damage);
+					dynamic_cast<Enemy*>(gameObject)->reduceHP(static_cast<int>(damage));
 				}
 			}
 		}
@@ -79,8 +79,8 @@ int Knife::getDamageLevel() {
 }
 void Knife::upgradeDamage() {
 	if (damageLevel < 5){
-		float betweenStep = static_cast<float>(damage)* 1.25f;
-		damage = static_cast<int>(betweenStep);
+		damage *= 1.25f;
+
 		damageLevel++;
 	}
 }
@@ -90,8 +90,7 @@ int Knife::getFirerateLevel() {
 }
 void Knife::upgradeFireRate() {
 	if (fireRateLevel < 5){
-		float betweenStep = static_cast<float>(attackSpeed) / 1.10f;
-		attackSpeed = static_cast<short>(betweenStep);
+		attackSpeed /= 1.10f;
 		fireRateLevel++;
 	}
 }
@@ -108,8 +107,17 @@ void Knife::upgradeReloadSpeed() {
 std::string Knife::getInfo() {
 	std::string info;
 	info += "Name: " + name + "\n";
-	info += "Damage: " + std::to_string(damage) + "\n";
-	info += "AttackSpeed: " + std::to_string(attackSpeed) + "\n";
+	info += "Damage: " + std::to_string(static_cast<int>(damage)) + "\n";
+	info += "AttackSpeed: " + std::to_string(static_cast<int>(attackSpeed)) + "\n";
 	info += "Range: " + std::to_string(range) + "\n";
 	return info;
+}
+
+void Knife::reset(){
+	for (fireRateLevel; fireRateLevel > 0; fireRateLevel--){
+		attackSpeed *= 1.10f;
+	}
+	for (damageLevel; damageLevel > 0; damageLevel--){
+		damage /= 1.25f;
+	}
 }

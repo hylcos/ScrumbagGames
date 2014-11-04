@@ -64,6 +64,8 @@ public:
 	void LevelController::setPaused();
 	void LevelController::step(float fps, sf::RenderWindow & window);
 
+	void LevelController::reset();
+
 	Player * LevelController::getPlayer();
 	Player * LevelController::getPlayer2();
 

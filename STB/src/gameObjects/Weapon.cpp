@@ -65,6 +65,9 @@ std::string Weapon::getName(){
 std::string Weapon::getInfo(){
 	return std::string("Hoi");
 }
+void Weapon::reset(){
+
+}
 Weapon::~Weapon()
 {
 }

@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "LevelController.h"
 #include <SFML\Graphics.hpp>
-
+#include "gameObjects\WeaponManager.h"
 
 LevelController::Initializer LEVELS[5];
 void LevelController::load()
@@ -79,6 +79,9 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	}
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F11) )) {
 		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+	}
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F1))) {
+		LevelController::getInstance().getPlayer()->addMoney(1000);
 	}
 		float speedModifier = 60 / fps;
 
@@ -274,6 +277,18 @@ void LevelController::goToNextRound(){
 	else{
 		goToNextLevel(&MENU_MAIN);
 	}
+}
+
+void LevelController::reset(){
+	curLevel = 0;
+	WeaponManager::getInstance().dagger->reset();
+	WeaponManager::getInstance().pistol->reset();
+	WeaponManager::getInstance().sniper->reset();
+	WeaponManager::getInstance().rifle->reset();
+	WeaponManager::getInstance().shotgun->reset();
+	WeaponManager::getInstance().sword->reset();
+	//player->setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().pistol, WeaponManager::getInstance().shotgun);
+
 }
 /*
 LevelController::~LevelController()

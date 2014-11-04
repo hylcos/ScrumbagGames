@@ -25,6 +25,7 @@ sf::FloatRect Play::getBounds(){
 }
 
 void Play::click(){
+	LevelController::getInstance().reset();
 	LevelController::getInstance().goToNextLevel(&(LevelController::getInstance().LEVEL_ONE));
 }
 

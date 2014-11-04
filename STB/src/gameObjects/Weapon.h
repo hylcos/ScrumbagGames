@@ -21,6 +21,7 @@ public:
 	virtual void Weapon::upgradeReloadSpeed();
 	virtual std::string Weapon::getInfo();
 	virtual bool Weapon::getIsReloading();
+	virtual void Weapon::reset();
 	~Weapon();
 };
 
