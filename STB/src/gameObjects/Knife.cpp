@@ -64,6 +64,7 @@ void Knife::update(float speedModifier) {
 	}
 }
 void Knife::doubleDamage(){
+	oldDamage = damage;
 	damage = damage * 2;
 	doubleDamageTimer = 300;
 }

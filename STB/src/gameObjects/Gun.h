@@ -110,9 +110,10 @@ private:
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;
+
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;
 	int magazineSize, range,ammo,currentMagazine;
-	float damage, fireRate;
+	float damage, fireRate, oldDamage;
 	short bulletSpeed;
 	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;
 };

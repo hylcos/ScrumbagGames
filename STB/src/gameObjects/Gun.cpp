@@ -69,7 +69,7 @@ void Gun::update(float speedModifier) {
 	sprite.setRotation(rotation);
 	doubleDamageTimer -= speedModifier;
 	if (doubleDamageTimer <= 0){
-		damage = damage / 2;
+		damage = oldDamage;
 	}
 }
 std::string Gun::getName(){
@@ -133,6 +133,7 @@ void Gun::upgradeFireRate(short amount){
 	fireRate -= amount;
 }
 void Gun::doubleDamage(){
+	oldDamage = damage;
 	damage = damage * 2;
 	doubleDamageTimer = 300;
 }
