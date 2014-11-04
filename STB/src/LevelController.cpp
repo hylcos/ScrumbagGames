@@ -72,6 +72,9 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))) {
 		pausedPressed = false;
 	}
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F12) )) {
+		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+	}
 		float speedModifier = 60 / fps;
 		for (GameObject* obj : gameObjectToAdd){
 			gameObjects.push_back(obj);

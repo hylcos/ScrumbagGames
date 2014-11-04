@@ -59,15 +59,17 @@ void Upgrade::update(float speedModifier) {
 }
 
 void Upgrade::draw(sf::RenderWindow & window) const {
-	for (int i = 0; i < 5; i++){
-		window.draw(backGround[i]);
-	}
-	for (int i = 0; i < UpgradeLevel; i++){
-		window.draw(foreGround[i]);
-	}
+	if (UpgradeLevel != 6){
+		for (int i = 0; i < 5; i++){
+			window.draw(backGround[i]);
+		}
+		for (int i = 0; i < UpgradeLevel; i++){
+			window.draw(foreGround[i]);
+		}
 
-	window.draw(sprite);
-	window.draw(text);
+		window.draw(sprite);
+		window.draw(text);
+	}
 	
 }
 void Upgrade::click() { 
@@ -77,7 +79,7 @@ void Upgrade::click() {
 	else if (type == types::Damage){
 		weapon->upgradeDamage();
 	}
-	else if (type == types::ReloadSpeed){
+	else if (type == types::ReloadSpeed && UpgradeLevel != 5){
 		weapon->upgradeReloadSpeed();
 	}
 }

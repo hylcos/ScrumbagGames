@@ -50,12 +50,24 @@ public:
 	void Knife::setRotation(float rotation);
 
 	std::string Knife::getName() override;
+
+	int Knife::getDamageLevel() override;
+	void Knife::upgradeDamage() override;
+
+	int Knife::getFirerateLevel() override;
+	void Knife::upgradeFireRate() override;
+
+	int Knife::getReloadSpeedLevel() override;
+	void Knife::upgradeReloadSpeed() override;
+
+	std::string Knife::getInfo() override;
 private:
 	sf::Sprite sprite, melee;
 	sf::Texture tex, texmelee;
 	std::string name;
 	bool drawMelee;
 
+	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 6;
 	int damage, range;
 	short attackSpeed;
 	float hitCooldown = 0, rotation;

@@ -74,3 +74,42 @@ void Knife::setRotation(float rotation){
 std::string Knife::getName(){
 	return name;
 }
+int Knife::getDamageLevel() {
+	return damageLevel;
+}
+void Knife::upgradeDamage() {
+	if (damageLevel < 5){
+		float betweenStep = static_cast<float>(damage)* 1.25f;
+		damage = static_cast<int>(betweenStep);
+		damageLevel++;
+	}
+}
+
+int Knife::getFirerateLevel() {
+	return fireRateLevel;
+}
+void Knife::upgradeFireRate() {
+	if (fireRateLevel < 5){
+		float betweenStep = static_cast<float>(attackSpeed) / 1.10f;
+		attackSpeed = static_cast<short>(betweenStep);
+		fireRateLevel++;
+	}
+}
+
+int Knife::getReloadSpeedLevel() {
+	return reloadSpeedLevel;
+}
+void Knife::upgradeReloadSpeed() {
+
+}
+
+
+
+std::string Knife::getInfo() {
+	std::string info;
+	info += "Name: " + name + "\n";
+	info += "Damage: " + std::to_string(damage) + "\n";
+	info += "AttackSpeed: " + std::to_string(attackSpeed) + "\n";
+	info += "Range: " + std::to_string(range) + "\n";
+	return info;
+}
