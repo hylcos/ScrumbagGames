@@ -31,8 +31,7 @@ void Knife::fire(){
 		for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 			if (dynamic_cast<Enemy*>(gameObject) != 0){
 				if (gameObject->getBounds().contains(point)){
-					dynamic_cast<Enemy*>(gameObject)->reduceHP(damage);
-					ParticleEmitter::object = gameObject;
+					ParticleEmitter::spawnPosition = gameObject->getPosition();
 					ParticleEmitter::amount = (int)(damage / 2);
 					ParticleEmitter::emitOnce = true;
 					ParticleEmitter::setColor(sf::Color::Red, 200);
@@ -43,6 +42,7 @@ void Knife::fire(){
 					ParticleEmitter::directionDeviation = 180;
 					ParticleEmitter::isGore = true;
 					ParticleEmitter::emitParticles();
+					dynamic_cast<Enemy*>(gameObject)->reduceHP(damage);
 				}
 			}
 		}
