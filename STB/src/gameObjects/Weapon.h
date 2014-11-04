@@ -22,6 +22,7 @@ public:
 	virtual std::string Weapon::getInfo();
 	virtual bool Weapon::getIsReloading();
 	virtual void Weapon::doubleDamage();
+	virtual void Weapon::reset();
 	~Weapon();
 };
 

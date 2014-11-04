@@ -59,7 +59,8 @@ public:
 
 	int Knife::getReloadSpeedLevel() override;
 	void Knife::upgradeReloadSpeed() override;
-void Knife::reset() override;
+	void Knife::reset() override;
+	void Knife::doubleDamage() override;
 	std::string Knife::getInfo() override;
 private:
 	sf::Sprite sprite, melee;
