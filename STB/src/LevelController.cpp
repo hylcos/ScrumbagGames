@@ -211,7 +211,7 @@ void LevelController::stopLevel(){
 }
 
 sf::Vector2f LevelController::getMousePos(){
-	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize())/2.0f + mainView.getCenter();
+	return GameController::getInstance().getWindow().mapPixelToCoords(sf::Mouse::getPosition(GameController::getInstance().getWindow()));// - sf::Vector2f(mainView.getSize().x/2.f, mainView.getSize().y/2.f) + mainView.getCenter();
 }
 
 const std::vector< GameObject* > LevelController::getGameObjects(){
