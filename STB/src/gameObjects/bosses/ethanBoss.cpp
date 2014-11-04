@@ -45,9 +45,11 @@ void ethanBoss::move(float speedModifier) {
 }
 
 void ethanBoss::reduceHP(int damage){
-	dmg += damage;
-	if (dmg > type.getHP()){
-		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+	if (spawned){
+		dmg += damage;
+		if (dmg > type.getHP()){
+			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+		}
 	}
 }
 

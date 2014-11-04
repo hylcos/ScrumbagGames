@@ -45,9 +45,11 @@ void zoeyBoss::move(float speedModifier) {
 }
 
 void zoeyBoss::reduceHP(int damage){
-	dmg += damage;
-	if (dmg > type.getHP()){
-		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+	if (spawned){
+		dmg += damage;
+		if (dmg > type.getHP()){
+			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+		}
 	}
 }
 
