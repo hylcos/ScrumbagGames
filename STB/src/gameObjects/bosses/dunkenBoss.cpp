@@ -46,6 +46,7 @@ void dunkenBoss::reduceHP(int damage){
 	if (spawned){
 		dmg += damage;
 		if (dmg > type.getHP()){
+			LevelController::getInstance().getPlayer()->addMoney(400);
 			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
 		}
 	}

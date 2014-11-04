@@ -5,7 +5,7 @@
 #include "ParticleEmitter.h"
 
 	enum Powerups{
-		fullHealth
+		fullHealth = 0
 		, doubleDamage
 		, sprint
 		, ammoUp
@@ -32,6 +32,7 @@
 		, "Sprint"
 		, "Ammo Up"
 		, "Big Ass Bomb"
+		, ""//money
 	};
 
 

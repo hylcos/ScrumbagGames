@@ -73,14 +73,17 @@ void Upgrade::draw(sf::RenderWindow & window) const {
 	
 }
 void Upgrade::click() { 
-	if (type == types::FireRate){
-		weapon->upgradeFireRate();
-	}
-	else if (type == types::Damage){
-		weapon->upgradeDamage();
-	}
-	else if (type == types::ReloadSpeed && UpgradeLevel != 5){
-		weapon->upgradeReloadSpeed();
+	if (LevelController::getInstance().getPlayer2()->getMoney() > ((UpgradeLevel + 1) * 100) && UpgradeLevel != 5){
+		if (type == types::FireRate){
+			weapon->upgradeFireRate();
+		}
+		else if (type == types::Damage){
+			weapon->upgradeDamage();
+		}
+		else if (type == types::ReloadSpeed){
+			weapon->upgradeReloadSpeed();
+		}
+		LevelController::getInstance().getPlayer2()->setMoney(LevelController::getInstance().getPlayer2()->getMoney() - ((UpgradeLevel + 1) * 100));
 	}
 }
 sf::FloatRect Upgrade::getBounds(){

@@ -9,7 +9,7 @@ This is the header file of the gamecontroller class.
 #include "LevelController.h"
 #include "HudController.h"
 
-#define DEBUG
+//#define DEBUG
 
 class LevelController;
 

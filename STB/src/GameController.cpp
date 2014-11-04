@@ -54,9 +54,8 @@ void GameController::step(){
 	frames++;
 
 	if (clock() > nextClock){
-		nextClock = clock() + CLOCKS_PER_SEC / 3;
-		fps = fps / 3 * 2 + (float)frames;
-
+		nextClock = clock() + CLOCKS_PER_SEC / 30;
+		fps = fps / 3 * 2 + (float)frames*10;
 #ifdef DEBUG//Defined in GameController.h
 		std::cout << fps << "\n";
 #endif
