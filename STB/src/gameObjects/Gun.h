@@ -96,13 +96,14 @@ public:
 	Deallocates the gun class.
 	*/
 	Gun::~Gun();
-
+	void Gun::doubleDamage();
 	std::string Gun::getAmmoString() override;
 	std::string Gun::getName() override;
 	Gun Gun::getWeapon();
 	void Gun::setAmmo(int amount);
 	bool Gun::getIsReloading() override;
 private:
+	float doubleDamageTimer;
 	bool isReloading = false;
 	sf::Sprite sprite;
 	sf::Texture tex;

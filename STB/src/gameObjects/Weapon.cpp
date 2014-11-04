@@ -43,7 +43,9 @@ int Weapon::getDamageLevel(){
 void Weapon::upgradeDamage(){
 
 }
+void Weapon::doubleDamage(){
 
+}
 int Weapon::getFirerateLevel(){
 	return 0;
 }

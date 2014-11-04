@@ -55,6 +55,7 @@ public:
 	Powerup* Powerup::setType(Powerup::Types* type);
 	Powerup::Types puAmmoUp{ Powerups::ammoUp, &Powerup::pufAmmoUp };
 	Powerup::Types puSprint{ Powerups::sprint, &Powerup::pufDoubleSpeed };
+	Powerup::Types puDoubleDamage{ Powerups::doubleDamage, &Powerup::pufDoubleDamage };
 	Powerup::Types puFullHealth{ Powerups::fullHealth, &Powerup::pufFullHealth };
 	Powerup::Types BAB{ Powerups::BAB, &Powerup::pufBAB };
 	Powerup::Types Money{ Powerups::Money, &Powerup::addMoney };
@@ -65,6 +66,7 @@ public:
 	Powerups Powerup::getPowerup();
 	void Powerup::pufAmmoUp();
 	void Powerup::pufDoubleSpeed();
+	void Powerup::pufDoubleDamage();
 	void Powerup::pufFullHealth();
 	void Powerup::pufBAB();
 	void Powerup::addMoney();

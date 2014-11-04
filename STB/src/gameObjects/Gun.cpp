@@ -67,6 +67,10 @@ void Gun::update(float speedModifier) {
 	reloadCoolDown -= speedModifier;
 	sprite.setPosition(position);
 	sprite.setRotation(rotation);
+	doubleDamageTimer -= speedModifier;
+	if (doubleDamageTimer <= 0){
+		damage = damage / 2;
+	}
 }
 std::string Gun::getName(){
 	return name;
@@ -128,7 +132,10 @@ void Gun::upgradeDmg(int amount){
 void Gun::upgradeFireRate(short amount){
 	fireRate -= amount;
 }
-
+void Gun::doubleDamage(){
+	damage = damage * 2;
+	doubleDamageTimer = 300;
+}
 int Gun::getDamageLevel() {
 	return damageLevel;
 }

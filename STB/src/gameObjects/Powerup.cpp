@@ -89,6 +89,9 @@ void Powerup::pufDoubleSpeed(){
 void Powerup::pufFullHealth(){
 	LevelController::getInstance().getPlayer()->fullHealth();
 }
+void Powerup::pufDoubleDamage(){
+	LevelController::getInstance().getPlayer()->getSelectedWeapon()->doubleDamage();
+}
 void Powerup::pufAmmoUp(){
 	LevelController::getInstance().getPlayer()->getSelectedWeapon()->setAmmo(2);
 }

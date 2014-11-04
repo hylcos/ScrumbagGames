@@ -59,14 +59,14 @@ public:
 
 	int Knife::getReloadSpeedLevel() override;
 	void Knife::upgradeReloadSpeed() override;
-
+	void Knife::doubleDamage() override;
 	std::string Knife::getInfo() override;
 private:
 	sf::Sprite sprite, melee;
 	sf::Texture tex, texmelee;
 	std::string name;
 	bool drawMelee;
-
+	float doubleDamageTimer;
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 6;
 	int damage, range;
 	short attackSpeed;

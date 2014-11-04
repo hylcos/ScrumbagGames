@@ -58,8 +58,15 @@ void Knife::update(float speedModifier) {
 	sprite.setPosition(position);
 	melee.setPosition(position);
 	ParticleEmitter::update(0.f);
+	doubleDamageTimer -= speedModifier;
+	if (doubleDamageTimer <= 0){
+		damage = damage / 2;
+	}
 }
-
+void Knife::doubleDamage(){
+	damage = damage * 2;
+	doubleDamageTimer = 300;
+}
 void Knife::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
 	if (drawMelee){
