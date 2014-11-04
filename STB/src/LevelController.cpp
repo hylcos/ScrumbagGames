@@ -35,6 +35,10 @@ LevelController::Initializer::Initializer(std::string name)
 }
 LevelController::Initializer::Initializer(){}
 
+void LevelController::setZoom(float f){
+	targetZoom = f;
+}
+
 void LevelController::goToNextLevel(LevelController::Initializer * initializer){
 	nextLevel = initializer;
 }
@@ -72,10 +76,14 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))) {
 		pausedPressed = false;
 	}
-	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F12) )) {
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F11) )) {
 		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
 	}
 		float speedModifier = 60 / fps;
+
+		mainView.setSize(sf::Vector2f(curZoom * 640, curZoom * 480));
+		curZoom = curZoom * 0.99f + targetZoom * 0.01f;
+
 		for (GameObject* obj : gameObjectToAdd){
 			gameObjects.push_back(obj);
 		}
@@ -202,7 +210,8 @@ void LevelController::stopLevel(){
 }
 
 sf::Vector2f LevelController::getMousePos(){
-	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f) + mainView.getCenter();
+	//std::cout << "x " << (sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f / curZoom, GameController::getInstance().getWindow().getSize().y / 2.0f / curZoom) + mainView.getCenter()).x << '\n';// << "\ny " << (sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f / curZoom, GameController::getInstance().getWindow().getSize().y / 2.0f / curZoom) + mainView.getCenter()).y << '\n';
+	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(mainView.getSize().x/2.f, mainView.getSize().y/2.f) + mainView.getCenter();
 }
 
 const std::vector< GameObject* > LevelController::getGameObjects(){
@@ -221,7 +230,7 @@ void LevelController::setMainView(sf::Vector2f pos){
 }
 
 void LevelController::setMainView(float x, float y){
-	mainView.setCenter(std::min(std::max(x, 320.0f), 1280.0f - 320.0f), std::min(std::max(y, 240.0f), 960.0f - 240.0f));
+	mainView.setCenter(std::min(std::max(x, curZoom *320.0f), 1280.0f - curZoom *320.0f), std::min(std::max(y, curZoom *240.0f), 960.0f - curZoom *240.0f));
 }
 
 void LevelController::addObject(GameObject * object){

@@ -60,14 +60,16 @@ void Player::update(float speedModifier) {
 		selectedWeapons[curWeapon]->reload();
 
 	for (auto & choice : weaponchoice)
-		if (sf::Keyboard::isKeyPressed(choice.key))
+		if (sf::Keyboard::isKeyPressed(choice.key)){
 			curWeapon = choice.weapon;
+		}
 
 	doubleSpeedTimer -= speedModifier;
 	if (doubleSpeedTimer <= 0)
 		speed = 3;
 	if (invincibleTimer <= 0)
 		invincible = false;
+	LevelController::getInstance().setZoom(selectedWeapons[curWeapon]->getName() == "sniper"?1.5f:1.f);
 	selectedWeapons[curWeapon]->update(speedModifier);
 
 	ParticleEmitter::update(speedModifier);

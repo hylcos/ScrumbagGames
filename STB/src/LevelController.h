@@ -39,7 +39,7 @@ public:
 	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 	LevelController::Initializer SHOP{ "Resources/Levels/shop.level" };
 
-
+	void LevelController::setZoom(float f);
 	
 	//add GameObject
 	//
@@ -103,6 +103,9 @@ private:
 	sf::Sprite backgroundSpriteOverlay;
 
 	sf::Uint8 terrorLevel = 255;
+
+	float targetZoom = 1.f;
+	float curZoom = 1.f;
 
 	std::vector< GameObject* > gameObjects, gameObjectToAdd;
 	std::unordered_set<GameObject*> gameObjectToRemove;
