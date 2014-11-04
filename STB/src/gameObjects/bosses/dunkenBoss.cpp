@@ -22,7 +22,7 @@ void dunkenBoss::update(float speedModifier) {
 		timeToSpawn -= speedModifier;
 		if (floor(timeToSpawn) > 0 )
 			HudController::getInstance().updateTimer(timeToSpawn);
-		else if (spawned == false) 
+		else if (spawned == false) {
 				spawned = true;
 				std::cout << "dunken has spwn";
 				int random = rand() % 360;
