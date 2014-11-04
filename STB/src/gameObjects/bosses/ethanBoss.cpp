@@ -23,7 +23,6 @@ void ethanBoss::update(float speedModifier) {
 	if (floor(timeToSpawn) > 0)
 		HudController::getInstance().updateTimer(timeToSpawn);
 	else if (spawned == false) {
-		if (LevelController::getInstance().curLevel == 1){
 			spawned = true;
 			std::cout << "ethan has spwn";
 			int random = rand() % 360;
@@ -31,7 +30,6 @@ void ethanBoss::update(float speedModifier) {
 			position.x = LevelController::getInstance().getPlayer()->getPosition().x + cos(radius) * 640;
 			position.y = LevelController::getInstance().getPlayer()->getPosition().y + sin(radius) * 480;
 			HudController::getInstance().updateTimer("BOSS");
-		}
 	}
 
 }
