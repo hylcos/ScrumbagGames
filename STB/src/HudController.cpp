@@ -75,6 +75,12 @@ void HudController::load()
 	timetext.setPosition(278, 18);
 	timetext.setString("00:00");
 
+	moneytext.setFont(font);
+	moneytext.setCharacterSize(15);
+	moneytext.setColor(sf::Color::Yellow);
+	moneytext.setPosition(35, 400);
+	moneytext.setString("Money: 0");
+
 	knifesprite.setPosition(sf::Vector2f(568, 431));
 	riflesprite.setPosition(sf::Vector2f(568, 429));
 	snipersprite.setPosition(sf::Vector2f(568, 429));
@@ -127,8 +133,16 @@ void HudController::step(sf::RenderWindow & window){
 	if (LevelController::getInstance().getPlayer() != nullptr){
 		healthForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()* 1.5) , 15));
 		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 28));
-		ammotext.setString(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmoString());
+		if (LevelController::getInstance().getPlayer()->getSelectedWeapon()->getIsReloading()){
+			ammotext.setCharacterSize(12);
+			ammotext.setString("Reloading");
+		}
+		else{
+			ammotext.setCharacterSize(20);
+			ammotext.setString(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmoString());
+		}
 		
+		moneytext.setString("Money: " + std::to_string(LevelController::getInstance().getPlayer()->getMoney()));
 		std::string weaponname = LevelController::getInstance().getPlayer()->getSelectedWeapon()->getName();
 		if (weaponname == "dagger")	{
 			window.draw(knifesprite);
@@ -148,7 +162,7 @@ void HudController::step(sf::RenderWindow & window){
 		if (weaponname == "shotgun")	{
 			window.draw(shotgunsprite);
 		}
-	
+		
 		window.draw(ammosprite);
 		window.draw(healthsprite);
 		window.draw(healthForeGround);
@@ -156,6 +170,7 @@ void HudController::step(sf::RenderWindow & window){
 		window.draw(timesprite);
 		window.draw(ammotext);
 		window.draw(timetext);
+		window.draw(moneytext);
 	}
 	else {
 		healthForeGround.setSize(sf::Vector2f(150, 15));

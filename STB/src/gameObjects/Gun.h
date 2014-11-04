@@ -101,7 +101,9 @@ public:
 	std::string Gun::getName() override;
 	Gun Gun::getWeapon();
 	void Gun::setAmmo(int amount);
+	bool Gun::getIsReloading() override;
 private:
+	bool isReloading = false;
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;

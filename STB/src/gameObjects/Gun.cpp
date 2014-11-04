@@ -74,6 +74,15 @@ std::string Gun::getName(){
 void Gun::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
 }
+bool Gun::getIsReloading(){
+	if (reloadCoolDown <= 0){
+		isReloading = false;
+	}
+	else {
+		isReloading = true;
+	}
+	return isReloading;
+}
 void Gun::reload(){
 	if (ammo > 0){
 		if (reloadCoolDown <= 0){
@@ -96,9 +105,10 @@ void Gun::reload(){
 			}
 			std::cout
 				<< "Ammo left: " << ammo << "\n";
-		}
-	}
+		}	
+	}	
 }
+
 float Gun::getAmmo(){
 	if (reloadCoolDown <= 0 ){
 		return (100 * (static_cast<float>(currentMagazine) / static_cast<float>(magazineSize)));

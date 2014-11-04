@@ -31,6 +31,9 @@ float Weapon::getAmmo(){
 void Weapon::setAmmo(int amount){
 
 }
+bool Weapon::getIsReloading(){
+	return false;
+}
 std::string Weapon::getAmmoString(){
 	return "Melee";
 }

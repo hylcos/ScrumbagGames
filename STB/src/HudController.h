@@ -95,7 +95,7 @@ private:
 	HudController(HudController const&);
 	void operator=(HudController const&);
 	sf::Font font;
-	sf::Text ammotext, timetext;
+	sf::Text ammotext, timetext, moneytext;
 	sf::Sprite healthsprite, ammosprite, timesprite, buffssprite, riflesprite, pistolsprite, knifesprite, swordsprite, snipersprite, shotgunsprite;
 	sf::Texture healthtex, ammotex, timetex, buffstex, rifletex, pistoltex, knifetex, swordtex, snipertex, shotguntex;
 	bool isLoaded = false;
