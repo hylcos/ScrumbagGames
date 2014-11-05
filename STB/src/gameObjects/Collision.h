@@ -15,7 +15,7 @@ private:
 	};
 	static float Collision::distToSegment(Line line, sf::Vector2f point);
 public:
-	static bool Collision::collision(GameObject * square, GameObject * circle);
+	static bool Collision::collision(GameObject * circle, GameObject * square);
 	static float Collision::dist2(sf::Vector2f p1, sf::Vector2f p2);
 	static sf::Vector2f Collision::getClosestPoint(Line line, sf::Vector2f P);
 	static sf::Vector2f Collision::getClosestPoint(GameObject * square, GameObject * circle);
