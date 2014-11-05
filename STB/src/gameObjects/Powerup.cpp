@@ -47,13 +47,17 @@ void Powerup::setNumber(int& number){
 void Powerup::update(float speedModifier){
 	sf::Vector2f diff = sprite.getPosition() - LevelController::getInstance().getPlayer()->getPosition();
 	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
-	poweruptext.setPosition(LevelController::getInstance().getPlayer()->getPosition().x, LevelController::getInstance().getPlayer()->getPosition().y-100);
+	poweruptext.setPosition(LevelController::getInstance().getPlayer()->getPosition().x, LevelController::getInstance().getPlayer()->getPosition().y - 100);
 	if (dist < 32 && !isLoaded){
 		type->executeAction(*this);
 		std::cout << "PRINT";
 		showtextTimer = 300;
 		if (type != &Money){
 			poweruptext.setString(PowerupNames[powerupnumber-1]);
+			poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
+		}
+		else{
+			poweruptext.setString("Money + " + std::to_string(moneyAmount));
 			poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
 		}
 		isLoaded = true;
@@ -128,7 +132,8 @@ void Powerup::pufBAB(){
 	}
 }
 void Powerup::addMoney(){
-	LevelController::getInstance().getPlayer()->addMoney(rand() % 25 + 25);
+	moneyAmount = rand() % 25 + 25;
+	LevelController::getInstance().getPlayer()->addMoney(moneyAmount);
 }
 
 Powerup::~Powerup(){

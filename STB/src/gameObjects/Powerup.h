@@ -77,7 +77,7 @@ public:
 int powerupnumber;
 private:
 	bool isLoaded;
-
+	int moneyAmount;
 	float showtextTimer;
 	sf::Font font;
 	sf::Text poweruptext;
