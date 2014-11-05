@@ -9,11 +9,12 @@ public:
 	void parkerBoss::draw(sf::RenderWindow &  window) const override;
 	void parkerBoss::move(float speedModifier) override;
 	void parkerBoss::reduceHP(int damage) override;
-
+	void parkerBoss::showHp();
 	~parkerBoss();
 private:
 	float timeToSpawn;
 	sf::Texture tex;
 	bool spawned = false;
+	sf::RectangleShape healthForeGround;
 };
 
