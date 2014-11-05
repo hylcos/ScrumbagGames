@@ -20,6 +20,7 @@ ethanBoss::ethanBoss()
 void ethanBoss::update(float speedModifier) {
 	Enemy::update(speedModifier);
 	timeToSpawn -= speedModifier;
+	showHp();
 	if (floor(timeToSpawn) > 0)
 		HudController::getInstance().updateTimer(timeToSpawn);
 	else if (spawned == false) {
@@ -36,6 +37,15 @@ void ethanBoss::update(float speedModifier) {
 void ethanBoss::draw(sf::RenderWindow &  window) const {
 	if (floor(timeToSpawn) <= 0)
 		Enemy::draw(window);
+	    window.draw(healthForeGround);
+}
+void ethanBoss::showHp()  {
+	healthForeGround.setFillColor(sf::Color::Red);
+	if (spawned){
+		healthForeGround.setSize(sf::Vector2f(static_cast<float>(((type.getHP() - dmg) / 15)), 15));
+		healthForeGround.setPosition(position.x, position.y - 50);
+		healthForeGround.setOrigin(healthForeGround.getSize().x / 2.0f, healthForeGround.getSize().y / 2.0f);
+	}
 }
 void ethanBoss::move(float speedModifier) {
 	if (floor(timeToSpawn) <= 0)

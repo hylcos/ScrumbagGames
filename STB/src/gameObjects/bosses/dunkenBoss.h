@@ -9,11 +9,13 @@ public:
 	void dunkenBoss::draw(sf::RenderWindow &  window) const override;
 	void dunkenBoss::move(float speedModifier) override;
 	void dunkenBoss::reduceHP(int damage) override;
-
+	// test for hp bar
+	void dunkenBoss::showHp();
 	~dunkenBoss();
 private:
 	float timeToSpawn;
 	sf::Texture tex;
 	bool spawned = false;
+	sf::RectangleShape healthForeGround;
 };
 

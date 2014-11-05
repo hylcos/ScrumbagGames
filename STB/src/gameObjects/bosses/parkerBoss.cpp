@@ -20,6 +20,7 @@ parkerBoss::parkerBoss()
 void parkerBoss::update(float speedModifier) {
 	Enemy::update(speedModifier);
 	timeToSpawn -= speedModifier;
+	showHp();
 	if (floor(timeToSpawn) > 0)
 		HudController::getInstance().updateTimer(timeToSpawn);
 	else if (spawned == false) {
@@ -36,10 +37,19 @@ void parkerBoss::update(float speedModifier) {
 void parkerBoss::draw(sf::RenderWindow &  window) const {
 	if (floor(timeToSpawn) <= 0)
 		Enemy::draw(window);
+		window.draw(healthForeGround);
 }
 void parkerBoss::move(float speedModifier) {
 	if (floor(timeToSpawn) <= 0)
 		Enemy::move(speedModifier);
+}
+void parkerBoss::showHp()  {
+	healthForeGround.setFillColor(sf::Color::Red);
+	if (spawned){
+		healthForeGround.setSize(sf::Vector2f(static_cast<float>(((type.getHP() - dmg) / 15)), 15));
+		healthForeGround.setPosition(position.x, position.y - 50);
+		healthForeGround.setOrigin(healthForeGround.getSize().x / 2.0f, healthForeGround.getSize().y / 2.0f);
+	}
 }
 
 void parkerBoss::reduceHP(int damage){

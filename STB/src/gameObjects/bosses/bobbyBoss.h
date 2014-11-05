@@ -42,7 +42,9 @@ public:
 	@param damage The amount of damage dealt to the boss
 	*/
 	void bobbyBoss::reduceHP(int damage) override;
-
+	
+	//! hp bar method
+	void bobbyBoss::showHp();
 	//! The deconstructor of the Bobby Boss
 	/*!
 	The default constructor of the boss
@@ -52,5 +54,6 @@ private:
 	float timeToSpawn;
 	sf::Texture tex;
 	bool spawned = false;
+	sf::RectangleShape healthForeGround;
 };
 
