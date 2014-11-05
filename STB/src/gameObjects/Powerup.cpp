@@ -53,7 +53,7 @@ void Powerup::update(float speedModifier){
 		std::cout << "PRINT";
 		showtextTimer = 300;
 		if (type != &Money){
-			poweruptext.setString(PowerupNames[powerupnumber]);
+			poweruptext.setString(PowerupNames[powerupnumber-1]);
 			poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
 		}
 		isLoaded = true;

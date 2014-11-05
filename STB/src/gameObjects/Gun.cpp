@@ -17,6 +17,7 @@ ammo{ ammo }
 	sprite.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
 	ammo -= magazineSize;
 	currentMagazine = magazineSize;
+	oldDamage = damage;
 }
 
 void Gun::fire(){
@@ -135,7 +136,7 @@ void Gun::upgradeFireRate(short amount){
 void Gun::doubleDamage(){
 	oldDamage = damage;
 	damage = damage * 2;
-	doubleDamageTimer = 300;
+	doubleDamageTimer = 600;
 }
 int Gun::getDamageLevel() {
 	return damageLevel;

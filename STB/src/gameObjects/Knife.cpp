@@ -14,6 +14,7 @@ Knife::Knife(std::string name, float damage, short attackSpeed, int range):
 	texmelee = *TextureManager::getInstance().getTexture("Sprites/Weapons/" + name + "_hit.png");
 	melee.setTexture(texmelee);
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
+	oldDamage = damage;
 }
 
 void Knife::fire(){
@@ -60,13 +61,13 @@ void Knife::update(float speedModifier) {
 	ParticleEmitter::update(0.f);
 	doubleDamageTimer -= speedModifier;
 	if (doubleDamageTimer <= 0){
-		damage = damage / 2;
+		damage = oldDamage;
 	}
 }
 void Knife::doubleDamage(){
 	oldDamage = damage;
 	damage = damage * 2;
-	doubleDamageTimer = 300;
+	doubleDamageTimer = 600;
 }
 void Knife::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
