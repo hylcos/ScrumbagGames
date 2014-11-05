@@ -146,6 +146,7 @@ void Gun::upgradeDamage() {
 		damage *= 1.25f;
 		damageLevel++;
 	}
+	oldDamage = damage;
 }
 
 int Gun::getFirerateLevel() {

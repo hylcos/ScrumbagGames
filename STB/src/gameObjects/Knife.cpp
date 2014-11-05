@@ -92,6 +92,7 @@ void Knife::upgradeDamage() {
 
 		damageLevel++;
 	}
+	oldDamage = damage;
 }
 
 int Knife::getFirerateLevel() {
