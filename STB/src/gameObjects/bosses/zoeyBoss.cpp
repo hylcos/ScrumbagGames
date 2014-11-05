@@ -16,6 +16,12 @@ zoeyBoss::zoeyBoss()
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
 	timeToSpawn = 5400;
 
+	healthForeGround.setFillColor(sf::Color::Red);
+	healthBackGround.setFillColor(sf::Color::Black);
+	healthBackGround.setSize(sf::Vector2f(type.getHP() / 15.f, 15.f));
+	healthBackGround.setOutlineColor(sf::Color::White);
+	healthBackGround.setOutlineThickness(2.f);
+
 }
 void zoeyBoss::update(float speedModifier) {
 	Enemy::update(speedModifier);
@@ -35,9 +41,11 @@ void zoeyBoss::update(float speedModifier) {
 
 }
 void zoeyBoss::draw(sf::RenderWindow &  window) const {
-	if (floor(timeToSpawn) <= 0)
+	if (floor(timeToSpawn) <= 0){
 		Enemy::draw(window);
+		window.draw(healthBackGround);
 		window.draw(healthForeGround);
+	}
 }
 void zoeyBoss::move(float speedModifier) {
 	if (floor(timeToSpawn) <= 0)
@@ -45,11 +53,13 @@ void zoeyBoss::move(float speedModifier) {
 }
 
 void zoeyBoss::showHp()  {
-	healthForeGround.setFillColor(sf::Color::Red);
+	
 	if (spawned){
 		healthForeGround.setSize(sf::Vector2f(static_cast<float>(((type.getHP() - dmg) / 15)), 15));
 		healthForeGround.setPosition(position.x, position.y - 50);
-		healthForeGround.setOrigin(healthForeGround.getSize().x / 2.0f, healthForeGround.getSize().y / 2.0f);
+		healthBackGround.setPosition(position.x, position.y - 50);
+		healthForeGround.setOrigin(healthBackGround.getSize().x / 2.0f, healthBackGround.getSize().y / 2.0f);
+		healthBackGround.setOrigin(healthBackGround.getSize().x / 2.0f, healthBackGround.getSize().y / 2.0f);
 	}
 }
 
@@ -57,7 +67,6 @@ void zoeyBoss::reduceHP(int damage){
 	if (spawned){
 		dmg += damage;
 		if (dmg > type.getHP()){
-
 			LevelController::getInstance().getPlayer()->addMoney(1200);
 			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
 		}

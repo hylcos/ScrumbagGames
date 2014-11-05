@@ -16,6 +16,6 @@ private:
 	float timeToSpawn;
 	sf::Texture tex;
 	bool spawned = false;
-	sf::RectangleShape healthForeGround;
+	sf::RectangleShape healthForeGround, healthBackGround;
 };
 

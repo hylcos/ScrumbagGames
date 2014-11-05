@@ -35,22 +35,28 @@ void ethanBoss::update(float speedModifier) {
 
 }
 void ethanBoss::draw(sf::RenderWindow &  window) const {
-	if (floor(timeToSpawn) <= 0)
+	if (floor(timeToSpawn) <= 0){
 		Enemy::draw(window);
-	    window.draw(healthForeGround);
-}
-void ethanBoss::showHp()  {
-	healthForeGround.setFillColor(sf::Color::Red);
-	if (spawned){
-		healthForeGround.setSize(sf::Vector2f(static_cast<float>(((type.getHP() - dmg) / 15)), 15));
-		healthForeGround.setPosition(position.x, position.y - 50);
-		healthForeGround.setOrigin(healthForeGround.getSize().x / 2.0f, healthForeGround.getSize().y / 2.0f);
+		window.draw(healthBackGround);
+		window.draw(healthForeGround);
 	}
 }
 void ethanBoss::move(float speedModifier) {
 	if (floor(timeToSpawn) <= 0)
 		Enemy::move(speedModifier);
 }
+
+void ethanBoss::showHp()  {
+
+	if (spawned){
+		healthForeGround.setSize(sf::Vector2f(static_cast<float>(((type.getHP() - dmg) / 15)), 15));
+		healthForeGround.setPosition(position.x, position.y - 50);
+		healthBackGround.setPosition(position.x, position.y - 50);
+		healthForeGround.setOrigin(healthBackGround.getSize().x / 2.0f, healthBackGround.getSize().y / 2.0f);
+		healthBackGround.setOrigin(healthBackGround.getSize().x / 2.0f, healthBackGround.getSize().y / 2.0f);
+	}
+}
+
 
 void ethanBoss::reduceHP(int damage){
 	if (spawned){
