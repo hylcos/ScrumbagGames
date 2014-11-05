@@ -100,7 +100,7 @@ void Powerup::pufAmmoUp(){
 	LevelController::getInstance().getPlayer()->getSelectedWeapon()->setAmmo(2);
 }
 void Powerup::pufBAB(){
-	ParticleEmitter::amount = 200;
+	ParticleEmitter::amount = 120;
 	ParticleEmitter::object = LevelController::getInstance().getPlayer();
 	ParticleEmitter::speed = 50.f;
 	ParticleEmitter::deceleration = 0.1f;
