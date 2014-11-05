@@ -17,8 +17,18 @@ void Animation::setTextures(sf::Texture & tex1, sf::Texture & tex2, sf::Texture 
 	tex[6] = tex7;
 	tex[7] = tex8;
 	current = 0;
+	char c = 0;
+	float width = 0, height = 0;
+	while (1){
+		if (tex[c].getSize().x == 0 || c == 8){
+			break;
+		}
+		width = std::max(width, static_cast<float>(tex[current].getSize().x));
+		height = std::max(height, static_cast<float>(tex[current].getSize().y));
+		c++;
+	}
 	curSprite.setTexture(tex[current]);
-	curSprite.setOrigin(tex1.getSize().x / 2.0f, tex1.getSize().y / 2.0f);
+	curSprite.setOrigin(width / 2.0f, height / 2.0f);
 	
 }
 void Animation::next(){
@@ -38,7 +48,17 @@ void Animation::update(float speedModifier) {
 }
 
 sf::FloatRect Animation::getBounds(){
-	return curSprite.getGlobalBounds();
+	char current = 0;
+	float width = 0, height = 0;
+	while (1){
+		if (tex[current].getSize().x == 0 || current == 8){
+			break;
+		}
+		width = std::max(width, static_cast<float>(tex[current].getSize().x));
+		height = std::max(height, static_cast<float>(tex[current].getSize().y));
+		current++;
+	}
+	return sf::FloatRect{ position.x - width / 2, position.y - height / 2, width, height };
 }
 
 void Animation::move(float speedModifier){

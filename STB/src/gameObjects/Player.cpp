@@ -77,7 +77,7 @@ void Player::update(float speedModifier) {
 
 void Player::move(float speedModifier){
 	framesTillNextParticle++;
-	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
+	sf::Vector2f newPos{ 0, 0 }, reservePos{ position };
 
 	for (auto & action : actions){
 		if (sf::Keyboard::isKeyPressed(action.key)){
@@ -86,6 +86,95 @@ void Player::move(float speedModifier){
 		}
 	}
 	emit = false;
+	{//Calculate newpos
+		if (newPos == sf::Vector2f{ 0, 0 }){
+			return;
+		}
+		float dir = atan2(newPos.y, newPos.x);
+		newPos.x = (cos(dir) * speedModifier * speed);
+		newPos.y = (sin(dir) * speedModifier * speed);
+	}
+	position += newPos;
+	curSprite.setPosition(position);
+	{//Calculate all collisions
+		//Calculate collisions with trashcans
+		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+			if (obj->getType() != GameObject::gameObjectType::trashcan){
+				continue;
+			}
+			if (32 > sqrt(pow(obj->getPosition().x - position.x, 2) + pow(obj->getPosition().y - position.y, 2))){
+				//If the distance is smaller than 32, collide with bin
+				position = reservePos;
+				return;
+			}
+		}
+
+		bool collidesWithBench = false;
+		if (!isOnTable){
+			//Calculate collision with benches
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::bench){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					collidesWithBench = true;
+				}
+			}
+		}
+
+		if (!isOnTable && collidesWithBench){//set isOnTable if colliding with both a table and a bench.
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::table){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					isOnTable = true;
+				}
+			}
+		}
+
+		if (isOnTable){//Reset isOnTable if not on a table
+			isOnTable = false;
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::table){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					isOnTable = true;
+				}
+			}
+		}
+
+		if (!isOnTable){//Stop moving if not on a table but colliding with one.
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::table){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					position = reservePos;
+					return;
+				}
+			}
+		}
+	}
+
+	if (((position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16))){
+		position = reservePos;
+	}
+	if (position != reservePos){
+		emit = true;
+		toNextWalkSound += speedModifier;
+		toNext += speedModifier;
+		if (toNextWalkSound >= 20){
+			walkSound++;
+			if (walkSound == 9){
+				walkSound = 1;
+			}
+			SoundController::getInstance().playMusic("walk_" + std::to_string(rand() % 8 + 1));
+			toNextWalkSound -= 20;
+		}
+	}
+	/*
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		emit = true;
 		bool isOnBench = false;
@@ -122,11 +211,11 @@ void Player::move(float speedModifier){
 					collided = true;
 				}
 				else {
-					/*if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
+					if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
 						closestCollisionPoint = Collision::getClosestPoint(obj, this);
 						closestTableDistance = Collision::dist2(closestCollisionPoint, newPos);
 						closestTable = obj;
-					}*/
+					}
 					isWalkeble = false;
 				}
 			}
@@ -157,11 +246,11 @@ void Player::move(float speedModifier){
 
 		if (!isWalkeble){
 			position = reservePos;
-			emit = false;/*
+			emit = false;
 			float dirToPoint = atan2(closestCollisionPoint.y - position.y, closestCollisionPoint.x - position.x) * 180 / PI;
 			float playerDir = dir * 180 / PI;
 			float newDir = playerDir;
-			if (playerDir == dirToPoint){
+			if (playerDir == dirToPoint || playerDir > fmodf(dirToPoint + 90,360.f) || playerDir < fmodf(dirToPoint - 90 + 360,360.f)){
 				goto exit;
 			}
 			if (playerDir < dirToPoint){
@@ -192,15 +281,16 @@ void Player::move(float speedModifier){
 				position = reservePos;
 				emit = false;
 			}
-			*/
 		}
-	//exit:
-
+		exit:
+		if (((position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16))){
+			position = reservePos;
+		}
 		toNextWalkSound += speedModifier;
 		toNext += speedModifier;
 	}
 
-
+	*/
 
 }
 void Player::draw(sf::RenderWindow & window) const {
