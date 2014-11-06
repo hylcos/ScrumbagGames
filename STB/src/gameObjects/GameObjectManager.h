@@ -29,6 +29,8 @@ This is the header file of the game object manager class.
 #include "bosses/bobbyBoss.h"
 #include "menu/ShopCard.h"
 #include "menu/NextRound.h"
+#include "menu/TutorialScreen.h"
+#include "menu/Tutorial.h"
 class GameObjectManager
 {
 public:

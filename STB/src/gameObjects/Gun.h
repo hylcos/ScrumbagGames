@@ -104,6 +104,7 @@ public:
 	bool Gun::getIsReloading() override;
 
 	void Gun::reset() override;
+	void Gun::resetAmmo() override;
 private:
 	float doubleDamageTimer;
 	bool isReloading = false;
@@ -112,7 +113,7 @@ private:
 	std::string name;
 
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;
-	int magazineSize, range,ammo,currentMagazine;
+	int magazineSize, range, ammo, currentMagazine, startAmmo;
 	float damage, fireRate, oldDamage;
 	short bulletSpeed;
 	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;

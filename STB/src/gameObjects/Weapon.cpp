@@ -70,6 +70,9 @@ std::string Weapon::getInfo(){
 void Weapon::reset(){
 
 }
+void Weapon::resetAmmo(){
+
+}
 Weapon::~Weapon()
 {
 }

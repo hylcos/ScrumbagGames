@@ -25,6 +25,9 @@ sf::FloatRect NextRound::getBounds(){
 }
 
 void NextRound::click(){
+	LevelController::getInstance().getPlayer2()->getWeapons(1)->resetAmmo();
+	LevelController::getInstance().getPlayer2()->getWeapons(2)->resetAmmo();
+	LevelController::getInstance().getPlayer2()->getWeapons(3)->resetAmmo();
 	LevelController::getInstance().goToNextRound();
 }
 

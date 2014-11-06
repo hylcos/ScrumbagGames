@@ -38,6 +38,7 @@ public:
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
 	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
 	LevelController::Initializer SHOP{ "Resources/Levels/shop.level" };
+	LevelController::Initializer TUTORIAL{ "Resources/Levels/tutorial.level" };
 
 	void LevelController::setZoom(float f);
 	

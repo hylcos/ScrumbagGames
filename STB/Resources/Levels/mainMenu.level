@@ -1,4 +1,5 @@
 254
 HUD:
-(320,240) menu/Options
+(320,336) menu/Options
 (320,144) menu/Play
+(320,240) menu/Tutorial

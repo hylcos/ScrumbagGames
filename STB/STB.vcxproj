@@ -145,6 +145,8 @@
     <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h" />
     <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h" />
     <ClInclude Include="src\gameObjects\menu\shop\switchWeapon.h" />
+    <ClInclude Include="src\gameObjects\menu\TutorialScreen.h" />
+    <ClInclude Include="src\gameObjects\menu\Tutorial.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\gameObjects\bosses\bobbyBoss.cpp" />
@@ -203,6 +205,8 @@
     <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp" />
     <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp" />
     <ClCompile Include="src\gameObjects\menu\shop\switchWeapon.cpp" />
+    <ClCompile Include="src\gameObjects\menu\TutorialScreen.cpp" />
+    <ClCompile Include="src\gameObjects\menu\Tutorial.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />
@@ -214,6 +218,7 @@
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
     <None Include="Resources\Levels\shop.level" />
+    <None Include="Resources\Levels\tutorial.level" />
     <None Include="Resources\Sounds\dagger.ogg" />
     <None Include="Resources\Sounds\intro.ogg" />
     <None Include="Resources\Sounds\Ouch_1.ogg" />

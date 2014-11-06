@@ -188,6 +188,12 @@
     <ClInclude Include="src\gameObjects\bosses\bobbyBoss.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\TutorialScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\Tutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -352,6 +358,12 @@
     <ClCompile Include="src\gameObjects\bosses\bobbyBoss.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\TutorialScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\Tutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sounds\intro.ogg" />
@@ -380,6 +392,7 @@
     <None Include="Resources\Levels\levelThree.level" />
     <None Include="Resources\Levels\levelFour.level" />
     <None Include="Resources\Levels\levelFive.level" />
+    <None Include="Resources\Levels\tutorial.level" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">

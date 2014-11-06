@@ -26,6 +26,22 @@ sf::FloatRect Play::getBounds(){
 
 void Play::click(){
 	LevelController::getInstance().reset();
+	if (LevelController::getInstance().getPlayer() != nullptr)
+	LevelController::getInstance().getPlayer()->setMoney(0);
+	if (LevelController::getInstance().getPlayer2() != nullptr)
+	LevelController::getInstance().getPlayer2()->setMoney(0);
+
+	if (LevelController::getInstance().getPlayer() != nullptr){
+		LevelController::getInstance().getPlayer()->getWeapons(1)->resetAmmo();
+		LevelController::getInstance().getPlayer()->getWeapons(2)->resetAmmo();
+		LevelController::getInstance().getPlayer()->getWeapons(3)->resetAmmo();
+	}
+	if (LevelController::getInstance().getPlayer2() != nullptr){
+		LevelController::getInstance().getPlayer2()->getWeapons(1)->resetAmmo();
+		LevelController::getInstance().getPlayer2()->getWeapons(2)->resetAmmo();
+		LevelController::getInstance().getPlayer2()->getWeapons(3)->resetAmmo();
+	}
+
 	LevelController::getInstance().goToNextLevel(&(LevelController::getInstance().LEVEL_ONE));
 }
 

@@ -80,6 +80,12 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "menu/NextRound"){
 		return new NextRound();
 	}
+	if (string == "menu/TutorialScreen"){
+		return new TutorialScreen();
+	}
+	if (string == "menu/Tutorial"){
+		return new Tutorial();
+	}
 	if (string == ""){
 		throw endOfFile();
 	}

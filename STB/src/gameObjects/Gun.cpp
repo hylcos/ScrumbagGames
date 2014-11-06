@@ -8,7 +8,8 @@ magazineSize{ magazineSize },
 range{ range },
 bulletSpeed{ bulletSpeed },
 fireRate{ fireRate },
-ammo{ ammo }
+ammo{ ammo },
+startAmmo{ ammo }
 {
 	Gun::name = name;
 	tex = *TextureManager::getInstance().getTexture("Sprites/Weapons/"+name + ".png");
@@ -197,4 +198,8 @@ void Gun::reset(){
 	for (damageLevel; damageLevel > 0; damageLevel--){
 		damage /= 1.25f;
 	}
+}
+
+void Gun::resetAmmo(){
+	ammo = startAmmo;
 }

@@ -23,6 +23,7 @@ public:
 	virtual bool Weapon::getIsReloading();
 	virtual void Weapon::doubleDamage();
 	virtual void Weapon::reset();
+	virtual void Weapon::resetAmmo();
 	~Weapon();
 };
 
