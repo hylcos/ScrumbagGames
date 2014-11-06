@@ -3,6 +3,7 @@
 #include "LevelController.h"
 #include "TextureManager.h"
 #include "GameController.h"
+#include <algorithm>
 
 void HudController::addObject(GameObject * object){
 	gameObjectToAdd.push_back(object);
@@ -135,7 +136,7 @@ void HudController::step(sf::RenderWindow & window){
 	}
 
 	if (LevelController::getInstance().getPlayer() != nullptr){
-		healthForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()* 1.5) , 15));
+		healthForeGround.setSize(std::max(0,sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()* 1.5) , 15)));
 		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 28));
 		if (LevelController::getInstance().getPlayer()->getSelectedWeapon()->getIsReloading()){
 			ammotext.setCharacterSize(12);

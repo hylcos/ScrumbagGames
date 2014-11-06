@@ -196,8 +196,19 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 			window.setView(HudController::getInstance().getHudView());
 			sf::RectangleShape rect{ sf::Vector2f{ 640, 480 } };
 			rect.setPosition(0, 0);
-			rect.setFillColor(sf::Color::Color(0, 0, 0, static_cast<sf::Uint8>(std::min(255.f, gameOverTimer))));
+			rect.setFillColor(sf::Color::Color(25, 25, 25, static_cast<sf::Uint8>(std::min(255.f, gameOverTimer))));
 			window.draw(rect);
+
+
+			sf::Text text;
+			text.setString("gAME OVER");
+			text.setFont(*GameController::getInstance().getFont());
+			//text.setCharacterSize(60);
+			text.setOrigin(sf::Vector2f{ text.getLocalBounds().width, text.getLocalBounds().height } / 2.f);
+			text.setPosition(320, 240);
+			text.setColor(sf::Color::Color(255, 0, 0, static_cast<sf::Uint8>(std::min(255.f, gameOverTimer*2))));
+			window.draw(text);
+
 			if (gameOverTimer > 200.f){
 				backToMenu.update(speedModifier);
 				backToMenu.draw(window);
