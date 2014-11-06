@@ -41,6 +41,7 @@ public:
 	LevelController::Initializer SHOP{ "Resources/Levels/shop.level" };
 	LevelController::Initializer TUTORIAL{ "Resources/Levels/tutorial.level" };
 
+	LevelController::Initializer SPLASH{ "Resources/Levels/logo.level" };
 	void LevelController::setZoom(float f);
 	
 	//add GameObject

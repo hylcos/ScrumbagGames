@@ -399,6 +399,7 @@
     <None Include="Resources\Levels\levelFour.level" />
     <None Include="Resources\Levels\levelFive.level" />
     <None Include="Resources\Levels\tutorial.level" />
+    <None Include="Resources\Levels\logo.level" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">

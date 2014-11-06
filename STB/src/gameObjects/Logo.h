@@ -13,6 +13,7 @@ public:
 
 	~Logo();
 private:
+	float time;
 	sf::Texture Logo::texture;
 	sf::Sprite Logo::logo;
 };

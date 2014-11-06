@@ -16,7 +16,7 @@ void GameController::stop(){
 
 void GameController::start(){
 	SoundController::getInstance().load();
-	LevelController::getInstance().startLevel(LevelController::getInstance().MENU_MAIN);
+	LevelController::getInstance().startLevel(LevelController::getInstance().SPLASH);
 	changeCursor();
 	while (!stopping){
 		step();

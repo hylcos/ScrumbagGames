@@ -217,6 +217,7 @@
     <None Include="Resources\Levels\levelFour.level" />
     <None Include="Resources\Levels\levelThree.level" />
     <None Include="Resources\Levels\levelTwo.level" />
+    <None Include="Resources\Levels\logo.level" />
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
     <None Include="Resources\Levels\shop.level" />
