@@ -100,7 +100,9 @@ private:
 	sf::Texture background;
 	sf::Texture backgroundOverlay;
 	sf::Texture pauseOverlay;
+	sf::Texture gameOverTexture;
 
+	sf::Sprite gameOverSprite;
 	sf::Sprite pauseSprite;
 	sf::Sprite backgroundSprite;
 	sf::Sprite backgroundSpriteOverlay;

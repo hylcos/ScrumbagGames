@@ -29,7 +29,7 @@ Animation{ player }
 	ParticleEmitter::deceleration = 0.15f;
 	ParticleEmitter::directionDeviation = 180.f;
 	ParticleEmitter::size = 3.f;
-
+	gameOver = false;
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
@@ -44,11 +44,14 @@ void Player::reduceHP(int damage){
 		SoundController::getInstance().playMusic("Ouch_" + std::to_string(rand() % 2 + 1));
 		hp -= damage;
 		if (hp <= 0){
-			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
+			gameOver = true;
+			gameOverTimer = 500;
 		}
 	}
 }
-
+bool Player::getgameOver(){
+	return gameOver;
+}
 void Player::update(float speedModifier) {
 	Animation::update(speedModifier);
 	selectedWeapons[curWeapon]->setRotation(rotation);
@@ -63,12 +66,17 @@ void Player::update(float speedModifier) {
 		if (sf::Keyboard::isKeyPressed(choice.key)){
 			curWeapon = choice.weapon;
 		}
-
+	gameOverTimer -= speedModifier;
 	doubleSpeedTimer -= speedModifier;
 	if (doubleSpeedTimer <= 0)
 		speed = 3;
 	if (invincibleTimer <= 0)
 		invincible = false;
+	if (gameOverTimer <= 0 && gameOver){
+		gameOver = false;
+		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
+
+	}
 	LevelController::getInstance().setZoom(selectedWeapons[curWeapon]->getName() == "sniper"?1.5f:1.f);
 	selectedWeapons[curWeapon]->update(speedModifier);
 

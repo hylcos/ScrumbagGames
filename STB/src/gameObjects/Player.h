@@ -16,9 +16,9 @@ private:
 
 	sf::Sprite curSprite;
 	float rotation = 0.0;
-	float doubleSpeedTimer,invincibleTimer;
+	float doubleSpeedTimer, invincibleTimer, gameOverTimer;
 	int curWeapon = 0;
-	bool invincible;
+	bool invincible, gameOver = false;
 	Weapon * selectedWeapons[3];
 	bool isOnTable = false;
 	int hp = 100;
@@ -31,6 +31,7 @@ public:
 	sf::Texture tex1, tex2, tex3;
 	Player();
 	~Player();
+	bool Player::getgameOver();
 	void Player::move(float speedModifier) override;
 	void Player::update(float speedModifier) override;
 	void Player::draw(sf::RenderWindow & window) const override;

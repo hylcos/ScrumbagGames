@@ -728,6 +728,9 @@
     <Image Include="Resources\Images\menuObjecten\TutorialButton.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="Resources\Images\HUDObjecten\GameOver.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Resources\Fonts\Coalition_v2.ttf" />

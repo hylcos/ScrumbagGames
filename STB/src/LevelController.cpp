@@ -16,6 +16,9 @@ void LevelController::load()
 	pauseOverlay.loadFromFile("Resources/Images//PauseMenuOverlay.png");
 	pauseSprite.setTexture(pauseOverlay, true);
 
+	gameOverTexture.loadFromFile("HUDObjecten/GameOver.png");
+	gameOverSprite.setTexture(gameOverTexture, true);
+
 	backgroundSprite.setTexture(background, true);
 	backgroundSpriteOverlay.setTexture(backgroundOverlay, true);
 
@@ -73,115 +76,122 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) && !pausedPressed && player != nullptr){
 		paused = !paused;
 		pausedPressed = true;
-	} 
+	}
 	if (!(sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))) {
 		pausedPressed = false;
 	}
-	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F11) )) {
+	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F11))) {
 		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
 	}
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::F1))) {
 		LevelController::getInstance().getPlayer()->addMoney(1000);
 	}
-		float speedModifier = 60 / fps;
+	float speedModifier = 60 / fps;
 
-		mainView.setSize(sf::Vector2f(curZoom * 640, curZoom * 480));
-		curZoom = curZoom * 0.99f + targetZoom * 0.01f;
+	mainView.setSize(sf::Vector2f(curZoom * 640, curZoom * 480));
+	curZoom = curZoom * 0.99f + targetZoom * 0.01f;
 
-		for (GameObject* obj : gameObjectToAdd){
-			gameObjects.push_back(obj);
-		}
-		gameObjectToAdd.clear();
+	for (GameObject* obj : gameObjectToAdd){
+		gameObjects.push_back(obj);
+	}
+	gameObjectToAdd.clear();
 
-		for (GameObject* obj : gameObjectToRemove){
-			LevelController::removeAllObjects(obj);
-		}
-		gameObjectToRemove.clear();
-		if (!paused){
-			for (GameObject* obj : gameObjects){
-				obj->update(speedModifier);
-			}
-
-			for (GameObject* obj : gameObjects){
-				obj->move(speedModifier);
-			}
-			if (timeToNextEnemySpawn <= 0 && player != nullptr){
-				
-				Enemy * e = new Enemy();
-
-				switch (rand() % 4){
-					case 0: e->setType(e->average); break;
-					case 1: e->setType(e->fat); break;
-					case 2: e->setType(e->cheerleader); break;
-					case 3: e->setType(e->macho); break;
-				}
-				int random = rand() % 360;
-				float radius = random * PI / 180;
-				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
-				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
-				if (enemyPosition.y > 960){
-					enemyPosition.y -= 480 * 1.5;
-				} else if (enemyPosition.y > 0){
-					enemyPosition.y += 480 * 1.5;
-				} 
-				if (enemyPosition.x > 1280){
-					enemyPosition.x -= 640 * 1.5;
-				} else if (enemyPosition.x < 0){
-					enemyPosition.x += 640 * 1.5;
-				}
-				
-				e->setPosition(enemyPosition);
-				enemyPosition = sf::Vector2f{ 0, 0 };
-				addObject(e);
-				timeToNextEnemySpawn = enemySpawnTime;
-			}
-			else {
-				timeToNextEnemySpawn -= speedModifier;
-			}
-		}
-		/*if (player != nullptr){
-			if (enemyPosition.x < 32 || enemyPosition.x > 1248){
-				int random = rand() % 360;
-				float radius = random * PI / 180;
-				enemyPosition.x = player->getPosition().x + cos(radius) * 640;
-			}
-			if (enemyPosition.y < 32 || enemyPosition.y > 934){
-				int random = rand() % 360;
-				float radius = random * PI / 180;
-				enemyPosition.y = player->getPosition().y + sin(radius) * 480;
-			}
-		}*/
-		//window.clear(sf::Color::White);
-
-		window.setView(mainView);
-
-		window.draw(backgroundSprite);
-		backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
-		window.draw(backgroundSpriteOverlay);
-
-		if (player != nullptr){
-			setMainView(player->getPosition());
-			sf::Vector2f pos = getMousePos() - player->getPosition();
-			player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
-		}
-		else{
-			viewMovement.x = std::max(-1.0f, std::min(1.0f, viewMovement.x + ((rand() % 11) - (4.8f + (mainView.getCenter().x < 640 ? 0.0f : 0.4f))) / 10000.0f));
-			viewMovement.y = std::max(-1.0f, std::min(1.0f, viewMovement.y + ((rand() % 11) - (4.8f + (mainView.getCenter().y < 480 ? 0.0f : 0.4f))) / 10000.0f));
-			moveMainView(viewMovement*speedModifier*10.0f);
+	for (GameObject* obj : gameObjectToRemove){
+		LevelController::removeAllObjects(obj);
+	}
+	gameObjectToRemove.clear();
+	if (!paused){
+		for (GameObject* obj : gameObjects){
+			obj->update(speedModifier);
 		}
 
 		for (GameObject* obj : gameObjects){
-			obj->draw(window);
+			obj->move(speedModifier);
 		}
-	
-	
-	if(paused) {
-		backToMenu.setPosition(sf::Vector2f(mainView.getCenter().x,mainView.getCenter().y+60));
+		if (timeToNextEnemySpawn <= 0 && player != nullptr){
+
+			Enemy * e = new Enemy();
+
+			switch (rand() % 4){
+			case 0: e->setType(e->average); break;
+			case 1: e->setType(e->fat); break;
+			case 2: e->setType(e->cheerleader); break;
+			case 3: e->setType(e->macho); break;
+			}
+			int random = rand() % 360;
+			float radius = random * PI / 180;
+			enemyPosition.x = player->getPosition().x + cos(radius) * 640;
+			enemyPosition.y = player->getPosition().y + sin(radius) * 480;
+			if (enemyPosition.y > 960){
+				enemyPosition.y -= 480 * 1.5;
+			}
+			else if (enemyPosition.y > 0){
+				enemyPosition.y += 480 * 1.5;
+			}
+			if (enemyPosition.x > 1280){
+				enemyPosition.x -= 640 * 1.5;
+			}
+			else if (enemyPosition.x < 0){
+				enemyPosition.x += 640 * 1.5;
+			}
+
+			e->setPosition(enemyPosition);
+			enemyPosition = sf::Vector2f{ 0, 0 };
+			addObject(e);
+			timeToNextEnemySpawn = enemySpawnTime;
+		}
+		else {
+			timeToNextEnemySpawn -= speedModifier;
+		}
+	}
+	/*if (player != nullptr){
+		if (enemyPosition.x < 32 || enemyPosition.x > 1248){
+		int random = rand() % 360;
+		float radius = random * PI / 180;
+		enemyPosition.x = player->getPosition().x + cos(radius) * 640;
+		}
+		if (enemyPosition.y < 32 || enemyPosition.y > 934){
+		int random = rand() % 360;
+		float radius = random * PI / 180;
+		enemyPosition.y = player->getPosition().y + sin(radius) * 480;
+		}
+		}*/
+	//window.clear(sf::Color::White);
+
+	window.setView(mainView);
+
+	window.draw(backgroundSprite);
+	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
+	window.draw(backgroundSpriteOverlay);
+
+	if (player != nullptr){
+		setMainView(player->getPosition());
+		sf::Vector2f pos = getMousePos() - player->getPosition();
+		player->setRotation(atan2(pos.y, pos.x) * 180 / 3.14159265358979323846f + 90);
+	}
+	else{
+		viewMovement.x = std::max(-1.0f, std::min(1.0f, viewMovement.x + ((rand() % 11) - (4.8f + (mainView.getCenter().x < 640 ? 0.0f : 0.4f))) / 10000.0f));
+		viewMovement.y = std::max(-1.0f, std::min(1.0f, viewMovement.y + ((rand() % 11) - (4.8f + (mainView.getCenter().y < 480 ? 0.0f : 0.4f))) / 10000.0f));
+		moveMainView(viewMovement*speedModifier*10.0f);
+	}
+
+	for (GameObject* obj : gameObjects){
+		obj->draw(window);
+	}
+	if (player != nullptr){
+		if (LevelController::getInstance().getPlayer()->getgameOver()){
+			backToMenu.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y + 60));
+			backToMenu.update(speedModifier);
+			window.draw(gameOverSprite);
+		}
+	}
+	if (paused) {
+		backToMenu.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y + 60));
 		backToMenu.update(speedModifier);
-		
+
 		restart.setPosition(mainView.getCenter());
 		restart.update(speedModifier);
-		
+
 		resume.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y - 60));
 		resume.update(speedModifier);
 
@@ -197,7 +207,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 			player2 = *player;
 		stopLevel();
 		HudController::getInstance().prepareForNextLevel();
-		
+
 		startLevel(*nextLevel);
 		nextLevel = nullptr;
 	}
@@ -205,7 +215,7 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 void LevelController::stopLevel(){
 	for (GameObject* obj : gameObjects){
-		
+
 		delete obj;
 	}
 	gameObjects.clear();
