@@ -92,6 +92,7 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\menu\Shop.h" />
     <ClInclude Include="src\gameObjects\bosses\bobbyBoss.h" />
     <ClInclude Include="src\gameObjects\bosses\ethanBoss.h" />
     <ClInclude Include="src\gameObjects\bosses\parkerBoss.h" />
@@ -149,6 +150,7 @@
     <ClInclude Include="src\gameObjects\menu\Tutorial.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\menu\Shop.cpp" />
     <ClCompile Include="src\gameObjects\bosses\bobbyBoss.cpp" />
     <ClCompile Include="src\gameObjects\bosses\ethanBoss.cpp" />
     <ClCompile Include="src\gameObjects\bosses\parkerBoss.cpp" />

@@ -68,7 +68,7 @@ void zoeyBoss::reduceHP(int damage){
 		dmg += damage;
 		if (dmg > type.getHP()){
 			LevelController::getInstance().getPlayer()->addMoney(1200);
-			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+			LevelController::getInstance().getPlayer()->setNextRound(true);
 		}
 	}
 }

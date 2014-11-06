@@ -27,6 +27,7 @@ private:
 	int walkSound = 0;
 	float toNextWalkSound = 0;
 	int money = 0;
+	bool nextRound = false;
 public:
 	sf::Texture tex1, tex2, tex3;
 	Player();
@@ -39,6 +40,9 @@ public:
 	void Player::reduceHP(int damage);
 	void Player::addMoney(int money);
 	void Player::setMoney(int money);
+
+	void Player::setNextRound(bool value);
+	bool Player::getNextRound();
 	int Player::getMoney();
 	void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3);
 	Weapon * Player::getSelectedWeapon();

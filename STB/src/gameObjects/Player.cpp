@@ -349,6 +349,12 @@ sf::Vector2u Player::getSize(){
 
 	return sf::Vector2u{ static_cast<unsigned int>(getBounds().width), static_cast<unsigned int>(getBounds().height) };
 }
+void Player::setNextRound(bool value){
+	nextRound = value;
+}
+bool Player::getNextRound(){
+	return nextRound;
+}
 Player::~Player()
 {
 

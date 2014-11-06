@@ -7,6 +7,7 @@
 #include <SFML\Graphics.hpp>
 #include <unordered_set>
 #include "gameObjects\menu\Resume.h"
+#include "gameObjects\menu\Shop.h"
 #define PI 3.14159265358979323846f
 class GameController;
 class LevelController
@@ -120,6 +121,7 @@ private:
 	float gameOverTimer = 0.f;
 	sf::Vector2f enemyPosition{0, 0};
 	MainMenu backToMenu;
+	Shop goToShop;
 	Play restart;
 	Resume resume;
 	Player * player = nullptr;

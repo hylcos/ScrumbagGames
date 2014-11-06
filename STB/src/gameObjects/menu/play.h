@@ -18,4 +18,3 @@ private:
 	sf::Texture * tex;
 	sf::Sprite sprite;
 };
-

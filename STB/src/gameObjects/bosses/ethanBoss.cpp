@@ -70,7 +70,7 @@ void ethanBoss::reduceHP(int damage){
 		dmg += damage;
 		if (dmg > type.getHP()){
 			LevelController::getInstance().getPlayer()->addMoney(800);
-			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().SHOP);
+			LevelController::getInstance().getPlayer()->setNextRound(true);
 		}
 	}
 }
