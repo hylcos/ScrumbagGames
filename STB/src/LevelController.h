@@ -117,6 +117,7 @@ private:
 	std::unordered_set<GameObject*> gameObjectToRemove;
 	float enemySpawnTime;
 	float timeToNextEnemySpawn=0;
+	float gameOverTimer = 0.f;
 	sf::Vector2f enemyPosition{0, 0};
 	MainMenu backToMenu;
 	Play restart;

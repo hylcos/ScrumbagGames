@@ -57,6 +57,7 @@ void LevelController::goToNextLevel(LevelController::Initializer * initializer){
 void LevelController::startLevel(LevelController::Initializer initializer){
 
 	Factory factory;
+	gameOverTimer = 0.f;
 	int settings = factory.loadLevel(initializer.name);
 	terrorLevel = settings & 255;
 	bool random = ((settings & factory.random) == factory.random);
@@ -188,15 +189,21 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 	if (player != nullptr){//gameOver
 		if (LevelController::getInstance().getPlayer()->getgameOver()){
-
 			for (GameObject* obj : gameObjects){
 				obj->draw(window);
 			}
 
-			backToMenu.update(speedModifier);
 			window.setView(HudController::getInstance().getHudView());
-			backToMenu.draw(window);
+			sf::RectangleShape rect{ sf::Vector2f{ 640, 480 } };
+			rect.setPosition(0, 0);
+			rect.setFillColor(sf::Color::Color(0, 0, 0, static_cast<sf::Uint8>(std::min(255.f, gameOverTimer))));
+			window.draw(rect);
+			if (gameOverTimer > 200.f){
+				backToMenu.update(speedModifier);
+				backToMenu.draw(window);
+			}
 			//window.draw(gameOverSprite);
+			gameOverTimer += speedModifier;
 			return;
 		}
 	}
