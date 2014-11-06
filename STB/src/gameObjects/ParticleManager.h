@@ -22,8 +22,8 @@ public:
 
 	~ParticleManager();
 private:
-	std::vector< Particle* > Particles, ParticlesToAdd;
-	std::unordered_set<Particle*> ParticlesToRemove;
+	std::vector< Particle* > Particles = {}, ParticlesToAdd = {};
+	std::unordered_set<Particle*> ParticlesToRemove = {};
 	bool goreEnabled;
 };
 

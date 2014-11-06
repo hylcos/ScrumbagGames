@@ -33,6 +33,6 @@ protected:
 	sf::Vector2f spawnPosition{ 0, 0 };
 	
 	ParticleManager * particleManager = nullptr;
-	GameObject * object;
+	GameObject * object = nullptr;
 };
 
