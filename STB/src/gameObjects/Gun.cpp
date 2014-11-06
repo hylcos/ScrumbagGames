@@ -193,7 +193,6 @@ void Gun::reset(){
 	}
 	for (fireRateLevel; fireRateLevel > 0; fireRateLevel--){
 		fireRate *= 1.10f;
-
 	}
 	for (damageLevel; damageLevel > 0; damageLevel--){
 		damage /= 1.25f;
@@ -202,4 +201,5 @@ void Gun::reset(){
 
 void Gun::resetAmmo(){
 	ammo = startAmmo;
+	currentMagazine = magazineSize;
 }
