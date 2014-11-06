@@ -90,10 +90,13 @@ public:
 
 	void HudController::loadHudTextures();
 
+	sf::View HudController::getHudView();
 private:
 	HudController() {};
 	HudController(HudController const&);
 	void operator=(HudController const&);
+
+	sf::View hudView;
 	sf::Font font;
 	sf::Text ammotext, timetext, moneytext;
 	sf::Sprite healthsprite, ammosprite, timesprite, buffssprite, riflesprite, pistolsprite, knifesprite, swordsprite, snipersprite, shotgunsprite;

@@ -10,6 +10,14 @@ void LevelController::load()
 		return;
 	}
 	isLoaded = true;
+
+	backToMenu.setOnHud(true);
+	restart.setOnHud(true);
+	resume.setOnHud(true);
+	backToMenu.setPosition(sf::Vector2f{ 320, 240 } +sf::Vector2f{ 0, 60 });
+	restart.setPosition(sf::Vector2f{ 320, 240 });
+	resume.setPosition(sf::Vector2f{ 320, 240 } +sf::Vector2f{ 0, -60 });
+
 	background.loadFromFile("Resources/Images/Background.jpg");
 	backgroundOverlay.loadFromFile("Resources/Images/BackgroundOverlay.jpg");
 
@@ -72,6 +80,44 @@ void LevelController::startLevel(LevelController::Initializer initializer){
 
 }
 
+void LevelController::spawnEnemies(float speedModifier){
+	if (timeToNextEnemySpawn <= 0 && player != nullptr){
+
+		Enemy * e = new Enemy();
+
+		switch (rand() % 4){
+		case 0: e->setType(e->average); break;
+		case 1: e->setType(e->fat); break;
+		case 2: e->setType(e->cheerleader); break;
+		case 3: e->setType(e->macho); break;
+		}
+		int random = rand() % 360;
+		float radius = random * PI / 180;
+		enemyPosition.x = player->getPosition().x + cos(radius) * 640;
+		enemyPosition.y = player->getPosition().y + sin(radius) * 480;
+		if (enemyPosition.y > 960){
+			enemyPosition.y -= 480 * 1.5;
+		}
+		else if (enemyPosition.y > 0){
+			enemyPosition.y += 480 * 1.5;
+		}
+		if (enemyPosition.x > 1280){
+			enemyPosition.x -= 640 * 1.5;
+		}
+		else if (enemyPosition.x < 0){
+			enemyPosition.x += 640 * 1.5;
+		}
+
+		e->setPosition(enemyPosition);
+		enemyPosition = sf::Vector2f{ 0, 0 };
+		addObject(e);
+		timeToNextEnemySpawn = enemySpawnTime;
+	}
+	else {
+		timeToNextEnemySpawn -= speedModifier;
+	}
+}
+
 void LevelController::step(float fps, sf::RenderWindow & window){
 	if ((sf::Keyboard::isKeyPressed(sf::Keyboard::P) || sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)) && !pausedPressed && player != nullptr){
 		paused = !paused;
@@ -100,69 +146,70 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 		LevelController::removeAllObjects(obj);
 	}
 	gameObjectToRemove.clear();
-	if (!paused){
-		for (GameObject* obj : gameObjects){
-			obj->update(speedModifier);
-		}
-
-		for (GameObject* obj : gameObjects){
-			obj->move(speedModifier);
-		}
-		if (timeToNextEnemySpawn <= 0 && player != nullptr){
-
-			Enemy * e = new Enemy();
-
-			switch (rand() % 4){
-			case 0: e->setType(e->average); break;
-			case 1: e->setType(e->fat); break;
-			case 2: e->setType(e->cheerleader); break;
-			case 3: e->setType(e->macho); break;
-			}
-			int random = rand() % 360;
-			float radius = random * PI / 180;
-			enemyPosition.x = player->getPosition().x + cos(radius) * 640;
-			enemyPosition.y = player->getPosition().y + sin(radius) * 480;
-			if (enemyPosition.y > 960){
-				enemyPosition.y -= 480 * 1.5;
-			}
-			else if (enemyPosition.y > 0){
-				enemyPosition.y += 480 * 1.5;
-			}
-			if (enemyPosition.x > 1280){
-				enemyPosition.x -= 640 * 1.5;
-			}
-			else if (enemyPosition.x < 0){
-				enemyPosition.x += 640 * 1.5;
-			}
-
-			e->setPosition(enemyPosition);
-			enemyPosition = sf::Vector2f{ 0, 0 };
-			addObject(e);
-			timeToNextEnemySpawn = enemySpawnTime;
-		}
-		else {
-			timeToNextEnemySpawn -= speedModifier;
-		}
-	}
-	/*if (player != nullptr){
-		if (enemyPosition.x < 32 || enemyPosition.x > 1248){
-		int random = rand() % 360;
-		float radius = random * PI / 180;
-		enemyPosition.x = player->getPosition().x + cos(radius) * 640;
-		}
-		if (enemyPosition.y < 32 || enemyPosition.y > 934){
-		int random = rand() % 360;
-		float radius = random * PI / 180;
-		enemyPosition.y = player->getPosition().y + sin(radius) * 480;
-		}
-		}*/
-	//window.clear(sf::Color::White);
 
 	window.setView(mainView);
 
 	window.draw(backgroundSprite);
 	backgroundSpriteOverlay.setColor(sf::Color{ 255, 255, 255, terrorLevel });
 	window.draw(backgroundSpriteOverlay);
+
+	if (nextLevel != nullptr)//Go to next level if nextLevel != nullptr
+	{
+		paused = false;
+		if (player != nullptr)
+			player2 = *player;
+		stopLevel();
+		HudController::getInstance().prepareForNextLevel();
+
+		startLevel(*nextLevel);
+		nextLevel = nullptr;
+	}
+
+	if (paused) {//paused
+		backToMenu.update(speedModifier);
+
+		restart.update(speedModifier);
+
+		resume.update(speedModifier);
+
+
+		window.setView(mainView);
+		for (GameObject* obj : gameObjects){
+			obj->draw(window);
+		}
+
+		window.setView(HudController::getInstance().getHudView());
+		window.draw(pauseSprite);
+		backToMenu.draw(window);
+		restart.draw(window);
+		resume.draw(window);
+		return;
+	}
+
+	if (player != nullptr){//gameOver
+		if (LevelController::getInstance().getPlayer()->getgameOver()){
+
+			for (GameObject* obj : gameObjects){
+				obj->draw(window);
+			}
+
+			backToMenu.update(speedModifier);
+			window.setView(HudController::getInstance().getHudView());
+			backToMenu.draw(window);
+			//window.draw(gameOverSprite);
+			return;
+		}
+	}
+
+	for (GameObject* obj : gameObjects){
+		obj->update(speedModifier);
+	}
+
+	for (GameObject* obj : gameObjects){
+		obj->move(speedModifier);
+	}
+	
+	spawnEnemies(speedModifier);
 
 	if (player != nullptr){
 		setMainView(player->getPosition());
@@ -177,39 +224,6 @@ void LevelController::step(float fps, sf::RenderWindow & window){
 
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
-	}
-	if (player != nullptr){
-		if (LevelController::getInstance().getPlayer()->getgameOver()){
-			backToMenu.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y + 60));
-			backToMenu.update(speedModifier);
-			window.draw(gameOverSprite);
-		}
-	}
-	if (paused) {
-		backToMenu.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y + 60));
-		backToMenu.update(speedModifier);
-
-		restart.setPosition(mainView.getCenter());
-		restart.update(speedModifier);
-
-		resume.setPosition(sf::Vector2f(mainView.getCenter().x, mainView.getCenter().y - 60));
-		resume.update(speedModifier);
-
-		window.draw(pauseSprite);
-		backToMenu.draw(window);
-		restart.draw(window);
-		resume.draw(window);
-	}
-	if (nextLevel != nullptr)
-	{
-		paused = false;
-		if (player != nullptr)
-			player2 = *player;
-		stopLevel();
-		HudController::getInstance().prepareForNextLevel();
-
-		startLevel(*nextLevel);
-		nextLevel = nullptr;
 	}
 }
 

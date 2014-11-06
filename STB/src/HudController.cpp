@@ -62,6 +62,9 @@ void HudController::load()
 		return;
 	}
 	isLoaded = true;
+
+	hudView.setCenter(static_cast<sf::Vector2f>(GameController::getInstance().getWindow().getSize()) / 2.0f);
+	hudView.setSize(static_cast<sf::Vector2f>(GameController::getInstance().getWindow().getSize()));
 	
 	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
     ammotext.setFont(font);
@@ -106,11 +109,12 @@ void HudController::load()
 
 }
 
+sf::View HudController::getHudView(){
+	return hudView;
+}
+
 void HudController::step(sf::RenderWindow & window){
 	float speedModifier = 60 / GameController::getInstance().getFPS();
-	sf::View hudView;
-	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
-	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
 
 	window.setView(hudView);
 	for (GameObject* obj : gameObjectToAdd){

@@ -84,6 +84,7 @@ private:
 	LevelController(LevelController const&) = delete;
 	void operator=(GameController const&) = delete;
 
+	void LevelController::spawnEnemies(float speedModifier);
 	void LevelController::load();
 	bool isLoaded = false;
 	bool paused = false;
