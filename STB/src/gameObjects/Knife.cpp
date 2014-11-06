@@ -14,7 +14,7 @@ Knife::Knife(std::string name, float damage, short attackSpeed, int range):
 	texmelee = *TextureManager::getInstance().getTexture("Sprites/Weapons/" + name + "_hit.png");
 	melee.setTexture(texmelee);
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().x*1.5f);
-	oldDamage = damage;
+
 }
 
 void Knife::fire(){
@@ -43,7 +43,7 @@ void Knife::fire(){
 					ParticleEmitter::directionDeviation = 180;
 					ParticleEmitter::isGore = true;
 					ParticleEmitter::emitParticles();
-					dynamic_cast<Enemy*>(gameObject)->reduceHP(static_cast<int>(damage));
+					dynamic_cast<Enemy*>(gameObject)->reduceHP(static_cast<int>(damage)* (doubleDamageEnabled ? 2 : 1));
 				}
 			}
 		}
@@ -60,14 +60,13 @@ void Knife::update(float speedModifier) {
 	melee.setPosition(position);
 	ParticleEmitter::update(0.f);
 	doubleDamageTimer -= speedModifier;
-	if (doubleDamageTimer <= 0){
-		damage = oldDamage;
+	if (doubleDamageTimer <= 0 && doubleDamageEnabled){
+		doubleDamageEnabled = false;
 	}
 }
 void Knife::doubleDamage(){
-	oldDamage = damage;
-	damage = damage * 2;
-	doubleDamageTimer = 600;
+	doubleDamageEnabled = true;
+	doubleDamageTimer = 360;
 }
 void Knife::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
@@ -88,11 +87,10 @@ int Knife::getDamageLevel() {
 }
 void Knife::upgradeDamage() {
 	if (damageLevel < 5){
-		damage *= 1.25f;
+		damage *= 1.10f;
 
 		damageLevel++;
 	}
-	oldDamage = damage;
 }
 
 int Knife::getFirerateLevel() {
@@ -128,6 +126,6 @@ void Knife::reset(){
 		attackSpeed *= 1.10f;
 	}
 	for (damageLevel; damageLevel > 0; damageLevel--){
-		damage /= 1.25f;
+		damage /= 1.10f;
 	}
 }

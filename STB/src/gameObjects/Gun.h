@@ -111,7 +111,7 @@ private:
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;
-
+	bool doubleDamageEnabled = false;
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;
 	int magazineSize, range, ammo, currentMagazine, startAmmo;
 	float damage, fireRate, oldDamage;

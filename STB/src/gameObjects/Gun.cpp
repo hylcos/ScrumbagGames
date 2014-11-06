@@ -30,7 +30,7 @@ void Gun::fire(){
 				position.y += (10 * sin(rotation* PI / 180)
 					+ 15 * sin((rotation - 90) * PI / 180));
 				SoundController::getInstance().playMusic(name);
-				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, static_cast<int>(damage), position);
+				Bullet * newBullet = new Bullet("Sprites/Weapons/" + name + "_bullet.png", rotation, bulletSpeed, static_cast<int>(damage)* (doubleDamageEnabled?2:1), position);
 				LevelController::getInstance().addObject(newBullet);
 				shootCoolDown = fireRate;
 				currentMagazine--;
@@ -70,8 +70,8 @@ void Gun::update(float speedModifier) {
 	sprite.setPosition(position);
 	sprite.setRotation(rotation);
 	doubleDamageTimer -= speedModifier;
-	if (doubleDamageTimer <= 0){
-		damage = oldDamage;
+	if (doubleDamageTimer <= 0 && doubleDamageEnabled){
+		doubleDamageEnabled = false;
 	}
 }
 std::string Gun::getName(){
@@ -135,19 +135,17 @@ void Gun::upgradeFireRate(short amount){
 	fireRate -= amount;
 }
 void Gun::doubleDamage(){
-	oldDamage = damage;
-	damage = damage * 2;
-	doubleDamageTimer = 600;
+	doubleDamageEnabled = true;
+	doubleDamageTimer = 360;
 }
 int Gun::getDamageLevel() {
 	return damageLevel;
 }
 void Gun::upgradeDamage() {
 	if (damageLevel < 5){
-		damage *= 1.25f;
+		damage *= 1.10f;
 		damageLevel++;
 	}
-	oldDamage = damage;
 }
 
 int Gun::getFirerateLevel() {
@@ -195,7 +193,7 @@ void Gun::reset(){
 		fireRate *= 1.10f;
 	}
 	for (damageLevel; damageLevel > 0; damageLevel--){
-		damage /= 1.25f;
+		damage /= 1.10f;
 	}
 }
 

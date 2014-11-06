@@ -70,7 +70,7 @@ private:
 	float doubleDamageTimer;
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 6;
 	int  range;
-	float oldDamage;
+	bool doubleDamageEnabled = false;
 	float attackSpeed,damage;
 	float hitCooldown = 0, rotation;
 	

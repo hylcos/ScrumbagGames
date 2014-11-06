@@ -24,7 +24,7 @@ GameObject{ gameObjectType::powerup }
 	sprite.setPosition(position);
 	tex = *TextureManager::getInstance().getTexture("Sprites/Powerup.png");
 	sprite.setTexture(tex);
-
+	sprite.setOrigin(tex.getSize().x / 2.f, tex.getSize().y / 2.f);
 	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
 	poweruptext.setFont(font);
 	poweruptext.setCharacterSize(20);
