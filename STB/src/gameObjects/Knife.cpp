@@ -32,7 +32,7 @@ void Knife::fire(){
 		for (GameObject* gameObject : LevelController::getInstance().getGameObjects()){
 			if (dynamic_cast<Enemy*>(gameObject) != 0){
 				if (gameObject->getBounds().contains(point)){
-					ParticleEmitter::spawnPosition = gameObject->getPosition();
+					ParticleEmitter::object = gameObject;
 					ParticleEmitter::amount = (int)(damage / 2);
 					ParticleEmitter::emitOnce = true;
 					ParticleEmitter::setColor(sf::Color::Red, 200);
