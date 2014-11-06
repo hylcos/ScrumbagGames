@@ -274,6 +274,7 @@
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\menuObjecten\ScrollBar.png" />
     <Image Include="Resources\Images\menuObjecten\SwitchWeaponButton.png" />
+    <Image Include="Resources\Images\menuObjecten\TutorialButton.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
     <Image Include="Resources\Images\menuObjecten\UpgradeButton.png" />
     <Image Include="Resources\Images\menuObjecten\WeaponCardBackGround.png" />
