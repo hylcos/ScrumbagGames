@@ -16,6 +16,11 @@ parkerBoss::parkerBoss()
 	melee.setOrigin(tex.getSize().x / 2.0f, tex.getSize().y / 2.0f);
 	timeToSpawn = 5400;
 
+	healthForeGround.setFillColor(sf::Color::Red);
+	healthBackGround.setFillColor(sf::Color::Black);
+	healthBackGround.setSize(sf::Vector2f(type.getHP() / 15.f, 15.f));
+	healthBackGround.setOutlineColor(sf::Color::White);
+	healthBackGround.setOutlineThickness(2.f);
 }
 void parkerBoss::update(float speedModifier) {
 	Enemy::update(speedModifier);
