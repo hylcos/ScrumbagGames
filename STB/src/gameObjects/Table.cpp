@@ -32,8 +32,6 @@ sf::FloatRect Table::getBounds() {
 sf::Transform Table::getTransform(){
 	return table.getTransform();
 
-}sf::Vector2u Table::getSize(){
-	return tex->getSize();
 }
 Table::~Table(){}
 

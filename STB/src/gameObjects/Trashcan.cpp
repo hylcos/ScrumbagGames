@@ -26,9 +26,3 @@ sf::FloatRect Trashcan::getBounds() {
 	return trashcan.getLocalBounds();
 }
 
-sf::Transform Trashcan::getTransform(){
-	return trashcan.getTransform();
-
-}sf::Vector2u Trashcan::getSize(){
-	return pic->getSize();
-}
