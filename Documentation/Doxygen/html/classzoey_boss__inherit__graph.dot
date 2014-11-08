@@ -1,0 +1,14 @@
+digraph "zoeyBoss"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="zoeyBoss",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node2 -> Node1 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Enemy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_enemy.html",tooltip="The Enemy header file. "];
+  Node3 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Animation",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_animation.html"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GameObject",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_object.html",tooltip="The game object header file. "];
+  Node5 -> Node2 [dir="back",color="firebrick4",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ParticleEmitter",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_particle_emitter.html"];
+}

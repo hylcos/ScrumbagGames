@@ -1,0 +1,116 @@
+\hypertarget{class_particle}{\section{Particle Class Reference}
+\label{class_particle}\index{Particle@{Particle}}
+}
+
+
+Inherits \hyperlink{class_game_object}{Game\+Object}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_aeb1cb89169a8cd1ebdf9620e6f2f6566}{{\bfseries Particle} (sf\+::\+Vector2f pos)}\label{class_particle_aeb1cb89169a8cd1ebdf9620e6f2f6566}
+
+\item 
+\hypertarget{class_particle_afad70dcca52de78b900342b29e68f895}{void {\bfseries set\+Color} (sf\+::\+Color)}\label{class_particle_afad70dcca52de78b900342b29e68f895}
+
+\item 
+\hypertarget{class_particle_ac57a8908b8ab1a1b9bb29aa02e347f56}{void {\bfseries set\+Speed} (float speed)}\label{class_particle_ac57a8908b8ab1a1b9bb29aa02e347f56}
+
+\item 
+\hypertarget{class_particle_a87a76728e3b91795c52beb9257e7e9df}{void {\bfseries set\+Deceleration} (float dec)}\label{class_particle_a87a76728e3b91795c52beb9257e7e9df}
+
+\item 
+\hypertarget{class_particle_a2e6c588a1cb9607ef70f3d97edefd780}{void {\bfseries set\+Direction} (float dir, float dev)}\label{class_particle_a2e6c588a1cb9607ef70f3d97edefd780}
+
+\item 
+\hypertarget{class_particle_a8472fac4770b3d198426e480ccef97d5}{void {\bfseries set\+Rotation} (float rot, float dev)}\label{class_particle_a8472fac4770b3d198426e480ccef97d5}
+
+\item 
+\hypertarget{class_particle_a9cbcb7c7f4b1f1d11033a9eea16bae2c}{void {\bfseries set\+Size} (float size)}\label{class_particle_a9cbcb7c7f4b1f1d11033a9eea16bae2c}
+
+\item 
+\hypertarget{class_particle_aed19fba4d00acaa104bf1030c99b99e9}{void {\bfseries set\+Minimum\+Speed} (float min)}\label{class_particle_aed19fba4d00acaa104bf1030c99b99e9}
+
+\item 
+\hypertarget{class_particle_a88d3824351cadeda57b752a6bc14d175}{void {\bfseries set\+Gore} (bool g)}\label{class_particle_a88d3824351cadeda57b752a6bc14d175}
+
+\item 
+void \hyperlink{class_particle_a9bd18a091946b1814f685118dfe66a1e}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_a6273669457c67cde70b992a59e589022}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_afa25f9b8898269ebf36593d7176b3145}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_a22249cbdfd21c42b65db1ce9936202c9}{bool {\bfseries get\+Gore} ()}\label{class_particle_a22249cbdfd21c42b65db1ce9936202c9}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_particle_afa25f9b8898269ebf36593d7176b3145}{\index{Particle@{Particle}!draw@{draw}}
+\index{draw@{draw}!Particle@{Particle}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_afa25f9b8898269ebf36593d7176b3145}
+
+
+The draw method of the game object. 
+
+Virtual method that will specify what happens when the game object has to be drawn 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window the game object has to be drawn in \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_particle_a6273669457c67cde70b992a59e589022}{\index{Particle@{Particle}!move@{move}}
+\index{move@{move}!Particle@{Particle}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_a6273669457c67cde70b992a59e589022}
+
+
+The move method of the game object. 
+
+Virtual method that will specify what happens when the game object is told to move 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a5929b9837b72ea7d82fda6c5719dd348}{Game\+Object}.
+
+\hypertarget{class_particle_a9bd18a091946b1814f685118dfe66a1e}{\index{Particle@{Particle}!update@{update}}
+\index{update@{update}!Particle@{Particle}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_a9bd18a091946b1814f685118dfe66a1e}
+
+
+The update method of the game object. 
+
+Virtual method that will specify what happens when the game object is updated 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Particle.\+h\item 
+game\+Objects/Particle.\+cpp\end{DoxyCompactItemize}

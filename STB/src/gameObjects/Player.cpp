@@ -301,6 +301,7 @@ void Player::move(float speedModifier){
 	*/
 
 }
+
 void Player::draw(sf::RenderWindow & window) const {
 	Animation::draw(window);
 	selectedWeapons[curWeapon]->draw(window);
@@ -334,9 +335,7 @@ void Player::setMoney(int money){
 int Player::getMoney(){
 	return money;
 }
-float Player::getAmmo(){
-	return getSelectedWeapon()->getAmmo();
-}
+
 void Player::doubleSpeed(){
 	doubleSpeedTimer = 300;
 	speed = 5;

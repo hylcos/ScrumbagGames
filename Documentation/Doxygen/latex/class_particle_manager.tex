@@ -1,0 +1,95 @@
+\hypertarget{class_particle_manager}{\section{Particle\+Manager Class Reference}
+\label{class_particle_manager}\index{Particle\+Manager@{Particle\+Manager}}
+}
+
+
+Inherits \hyperlink{class_game_object}{Game\+Object}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_manager_a651901462992745401596956c790d87d}{void {\bfseries add\+Particle} (\hyperlink{class_particle}{Particle} $\ast$p)}\label{class_particle_manager_a651901462992745401596956c790d87d}
+
+\item 
+void \hyperlink{class_particle_manager_a2c786926fc1cd9992c518b3ea4ee07cb}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_manager_a77357f72908d4fa5eea451baee1b354d}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_manager_a03682007d1bedb0f00795026f14a517c}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}{void {\bfseries remove\+Object} (\hyperlink{class_particle}{Particle} $\ast$p)}\label{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}
+
+\item 
+\hypertarget{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}{void {\bfseries remove\+All\+Objects} (\hyperlink{class_particle}{Particle} $\ast$p)}\label{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_particle_manager_a03682007d1bedb0f00795026f14a517c}{\index{Particle\+Manager@{Particle\+Manager}!draw@{draw}}
+\index{draw@{draw}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_manager_a03682007d1bedb0f00795026f14a517c}
+
+
+The draw method of the game object. 
+
+Virtual method that will specify what happens when the game object has to be drawn 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window the game object has to be drawn in \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_particle_manager_a77357f72908d4fa5eea451baee1b354d}{\index{Particle\+Manager@{Particle\+Manager}!move@{move}}
+\index{move@{move}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_manager_a77357f72908d4fa5eea451baee1b354d}
+
+
+The move method of the game object. 
+
+Virtual method that will specify what happens when the game object is told to move 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a5929b9837b72ea7d82fda6c5719dd348}{Game\+Object}.
+
+\hypertarget{class_particle_manager_a2c786926fc1cd9992c518b3ea4ee07cb}{\index{Particle\+Manager@{Particle\+Manager}!update@{update}}
+\index{update@{update}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_manager_a2c786926fc1cd9992c518b3ea4ee07cb}
+
+
+The update method of the game object. 
+
+Virtual method that will specify what happens when the game object is updated 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Particle\+Manager.\+h\item 
+game\+Objects/Particle\+Manager.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+digraph "gameObjects/bosses" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_7ea47908f92776705f55163b0cb78b51 {
+    graph [ bgcolor="#ddddee", pencolor="black", label="gameObjects" fontname="Helvetica", fontsize="10", URL="dir_7ea47908f92776705f55163b0cb78b51.html"]
+  dir_7332285c53a5e35446f58f48db133fbe [shape=box, label="bosses", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_7332285c53a5e35446f58f48db133fbe.html"];
+  }
+}

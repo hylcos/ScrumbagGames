@@ -1,0 +1,111 @@
+\hypertarget{classdunken_boss}{\section{dunken\+Boss Class Reference}
+\label{classdunken_boss}\index{dunken\+Boss@{dunken\+Boss}}
+}
+
+
+Inherits \hyperlink{class_enemy}{Enemy}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classdunken_boss_ad9ae91ab3ce0b97ee48ab90203c7e4fd}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+void \hyperlink{classdunken_boss_a5b2bf5b73f34e1970fd47985a2671f86}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+void \hyperlink{classdunken_boss_a298c2278b70343f32cc44ab0bb52ef77}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{classdunken_boss_a5bf9bfb79d92656ad08995cf0fca13f0}{reduce\+H\+P} (int damage) override
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
+\hypertarget{classdunken_boss_ad17c38732ddca5502bc07cbeee9bde44}{void {\bfseries show\+Hp} ()}\label{classdunken_boss_ad17c38732ddca5502bc07cbeee9bde44}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classdunken_boss_a5b2bf5b73f34e1970fd47985a2671f86}{\index{dunken\+Boss@{dunken\+Boss}!draw@{draw}}
+\index{draw@{draw}!dunken\+Boss@{dunken\+Boss}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void dunken\+Boss\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classdunken_boss_a5b2bf5b73f34e1970fd47985a2671f86}
+
+
+Draw draws the current texture on the window. 
+
+Gets the current sprite and draws it on the screen given in the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em window} & is the window in which the whole game is displayed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{Animation}.
+
+\hypertarget{classdunken_boss_a298c2278b70343f32cc44ab0bb52ef77}{\index{dunken\+Boss@{dunken\+Boss}!move@{move}}
+\index{move@{move}!dunken\+Boss@{dunken\+Boss}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void dunken\+Boss\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classdunken_boss_a298c2278b70343f32cc44ab0bb52ef77}
+
+
+The move method of the game object. 
+
+Virtual method that will specify what happens when the game object is told to move 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{Animation}.
+
+\hypertarget{classdunken_boss_a5bf9bfb79d92656ad08995cf0fca13f0}{\index{dunken\+Boss@{dunken\+Boss}!reduce\+H\+P@{reduce\+H\+P}}
+\index{reduce\+H\+P@{reduce\+H\+P}!dunken\+Boss@{dunken\+Boss}}
+\subsubsection[{reduce\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void dunken\+Boss\+::reduce\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classdunken_boss_a5bf9bfb79d92656ad08995cf0fca13f0}
+
+
+The reduce\+H\+P method of the enemy. 
+
+Damages this enemey, if his hp reaches 0, this enemy will die. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage dealt to this enemy. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
+
+\hypertarget{classdunken_boss_ad9ae91ab3ce0b97ee48ab90203c7e4fd}{\index{dunken\+Boss@{dunken\+Boss}!update@{update}}
+\index{update@{update}!dunken\+Boss@{dunken\+Boss}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void dunken\+Boss\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classdunken_boss_ad9ae91ab3ce0b97ee48ab90203c7e4fd}
+
+
+Updates the texture of the animation. 
+
+Updates the current texture of the animation to the right one based on the time elapsed. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/bosses/dunken\+Boss.\+h\item 
+game\+Objects/bosses/dunken\+Boss.\+cpp\end{DoxyCompactItemize}

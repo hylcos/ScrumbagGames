@@ -37,6 +37,10 @@ public:
 	*/
 	Weapon * WeaponManager::getOtherWeapon(Weapon * weapon);
 
+	//! The deconstructor  of a WeaponManager
+	/*!
+
+	*/
 	WeaponManager::~WeaponManager();
 
 private:

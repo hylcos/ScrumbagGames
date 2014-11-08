@@ -1,0 +1,512 @@
+\hypertarget{class_gun}{\section{Gun Class Reference}
+\label{class_gun}\index{Gun@{Gun}}
+}
+
+
+The \hyperlink{class_gun}{Gun} header file.  
+
+
+
+
+{\ttfamily \#include $<$Gun.\+h$>$}
+
+
+
+Inherits \hyperlink{class_weapon}{Weapon}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_gun_a9c018f8c08161908cc4a52f97ed00e0e}{Gun} (std\+::string name, float damage, float reload\+Speed, int ammo, int magazine\+Size, int range, short bullet\+Speed, short fire\+Rate)
+\begin{DoxyCompactList}\small\item\em The constructor of the gun class. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a84fec52052e08f9d3d9546a873ea90e8}{fire} () override
+\begin{DoxyCompactList}\small\item\em The fire method of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_ae7cbc34b103c1e89b4536309582dafb5}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a9f9c687cb43472691c14af52f508553a}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a86d524a277e286ff34c5a57cc9c8c438}{set\+Rotation} (float rotation) override
+\begin{DoxyCompactList}\small\item\em The set\+Rotation method of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_ad92a9c0cc00e8e65bb4f7589c9e58113}{reload} () override
+\begin{DoxyCompactList}\small\item\em The reload method of the gun. \end{DoxyCompactList}\item 
+float \hyperlink{class_gun_a11bf618e3bf21f3be546c843c64b06f1}{get\+Ammo} () override
+\begin{DoxyCompactList}\small\item\em The get\+Ammo method of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_aa35ec2c6dff5d0d2e5392f98c74e86e5}{upgrade\+Dmg} (int amount)
+\begin{DoxyCompactList}\small\item\em The upgrade\+Damage method of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a7db78488abab127b3fceefd56c9b2de6}{upgrade\+Fire\+Rate} (short amount)
+\begin{DoxyCompactList}\small\item\em The upgrade\+Fire\+Rate method of the gun. \end{DoxyCompactList}\item 
+int \hyperlink{class_gun_a390b808f9094e07df029b8938749df28}{get\+Damage\+Level} () override
+\begin{DoxyCompactList}\small\item\em The get\+Damage\+Level method of weapon. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a0d4270857233543d7c326995f746e27a}{upgrade\+Damage} () override
+\begin{DoxyCompactList}\small\item\em The upgrade\+Damage method of weapon. \end{DoxyCompactList}\item 
+int \hyperlink{class_gun_a9a7483bdcb239a4039ac2100e9794956}{get\+Firerate\+Level} () override
+\begin{DoxyCompactList}\small\item\em The get\+Firerate\+Level method of weapon. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a0a5fa9346fbaa59e60d0f0a16e64ab11}{upgrade\+Fire\+Rate} () override
+\begin{DoxyCompactList}\small\item\em The upgrade\+Fire\+Rate method of weapon. \end{DoxyCompactList}\item 
+int \hyperlink{class_gun_aa4625cb9f717925e0416d38ae02db057}{get\+Reload\+Speed\+Level} () override
+\begin{DoxyCompactList}\small\item\em The get\+Reload\+Speed\+Level method of weapon. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a88408d572350474609c2fc294a6b807b}{upgrade\+Reload\+Speed} () override
+\begin{DoxyCompactList}\small\item\em The upgrade\+Reload\+Speed method of weapon. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_gun_a95d46c82be65c2552f3386f561e53bfb}{get\+Info} () override
+\begin{DoxyCompactList}\small\item\em The get\+Info method of weapon. \end{DoxyCompactList}\item 
+\hyperlink{class_gun_af107f78d608720fef712c14b148afcdd}{$\sim$\+Gun} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the gun. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_a62ab15432407b2396c86d35264ea8a5b}{double\+Damage} ()
+\begin{DoxyCompactList}\small\item\em The double\+Damage method of weapon. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_gun_a6c38ebbaf4b538bda73538c4125c663c}{get\+Ammo\+String} () override
+\begin{DoxyCompactList}\small\item\em The get\+Ammo\+Screen method of \hyperlink{class_weapon}{Weapon}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_gun_a7230d075015f04e59822b9078719c5d7}{get\+Name} () override
+\begin{DoxyCompactList}\small\item\em The get\+Name method of weapon. \end{DoxyCompactList}\item 
+\hypertarget{class_gun_a86d8b628b6ea7038834ce538bea5cf9b}{\hyperlink{class_gun}{Gun} {\bfseries get\+Weapon} ()}\label{class_gun_a86d8b628b6ea7038834ce538bea5cf9b}
+
+\item 
+void \hyperlink{class_gun_a32ff9325061ddab247a5d726d8f98207}{set\+Ammo} (int amount)
+\begin{DoxyCompactList}\small\item\em The set\+Ammo Method of \hyperlink{class_weapon}{Weapon}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_gun_af74d11f4e7f839f4a5842557caeecd64}{get\+Is\+Reloading} () override
+\begin{DoxyCompactList}\small\item\em The get\+Is\+Reloading method of weapon. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_adda4a40faac31a145d132ff88002ea20}{reset} () override
+\begin{DoxyCompactList}\small\item\em The reset method of weapon. \end{DoxyCompactList}\item 
+void \hyperlink{class_gun_aa9b43a5d5d47f8d4c09689fbf4ae84c3}{reset\+Ammo} () override
+\begin{DoxyCompactList}\small\item\em The reset\+Ammo method of weapon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_gun}{Gun} header file. 
+
+This is the header file of the gun class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_gun_a9c018f8c08161908cc4a52f97ed00e0e}{\index{Gun@{Gun}!Gun@{Gun}}
+\index{Gun@{Gun}!Gun@{Gun}}
+\subsubsection[{Gun}]{\setlength{\rightskip}{0pt plus 5cm}Gun\+::\+Gun (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{float}]{damage, }
+\item[{float}]{reload\+Speed, }
+\item[{int}]{ammo, }
+\item[{int}]{magazine\+Size, }
+\item[{int}]{range, }
+\item[{short}]{bullet\+Speed, }
+\item[{short}]{fire\+Rate}
+\end{DoxyParamCaption}
+)}}\label{class_gun_a9c018f8c08161908cc4a52f97ed00e0e}
+
+
+The constructor of the gun class. 
+
+Initializes a gun with the given parameters 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the gun \\
+\hline
+{\em damage} & The amount of damage the gun deals \\
+\hline
+{\em reload\+Speed} & The time the gun takes to reload \\
+\hline
+{\em ammo} & The ammount of ammunition the gun has in total \\
+\hline
+{\em magazine\+Size} & The size of one clip of the gun \\
+\hline
+{\em range} & The range the bullets of this gun can travel \\
+\hline
+{\em bullet\+Speed} & The speed with which the bullets travel \\
+\hline
+{\em fire\+Rate} & The amount of frames in between two shots \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gun_af107f78d608720fef712c14b148afcdd}{\index{Gun@{Gun}!````~Gun@{$\sim$\+Gun}}
+\index{````~Gun@{$\sim$\+Gun}!Gun@{Gun}}
+\subsubsection[{$\sim$\+Gun}]{\setlength{\rightskip}{0pt plus 5cm}Gun\+::$\sim$\+Gun (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_gun_af107f78d608720fef712c14b148afcdd}
+
+
+The deconstructor of the gun. 
+
+Deallocates the gun class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_gun_a62ab15432407b2396c86d35264ea8a5b}{\index{Gun@{Gun}!double\+Damage@{double\+Damage}}
+\index{double\+Damage@{double\+Damage}!Gun@{Gun}}
+\subsubsection[{double\+Damage}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::double\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_gun_a62ab15432407b2396c86d35264ea8a5b}
+
+
+The double\+Damage method of weapon. 
+
+Virtual Method that is called when the powerup Double\+Damage is picked up and doubles the damage for a amount of time 
+
+Reimplemented from \hyperlink{class_weapon_a4e416a0635f930a322529af55b69e5ef}{Weapon}.
+
+\hypertarget{class_gun_a9f9c687cb43472691c14af52f508553a}{\index{Gun@{Gun}!draw@{draw}}
+\index{draw@{draw}!Gun@{Gun}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a9f9c687cb43472691c14af52f508553a}
+
+
+The draw method of the gun. 
+
+Draws the sprite of the gun on the screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window the gun has to be drawn on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_weapon_acb2e13733d27dec0a15845c359bf68a6}{Weapon}.
+
+\hypertarget{class_gun_a84fec52052e08f9d3d9546a873ea90e8}{\index{Gun@{Gun}!fire@{fire}}
+\index{fire@{fire}!Gun@{Gun}}
+\subsubsection[{fire}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a84fec52052e08f9d3d9546a873ea90e8}
+
+
+The fire method of the gun. 
+
+This method will check if there is sufficient ammunition for the gun to fire, and if it is not on cooldown or reloading. Then it will check where the mouse is located and create a bullet heading in the direction of the mouse cursor. 
+
+Reimplemented from \hyperlink{class_weapon_af6f8ab97e28fd4778f97c96c78fd02f4}{Weapon}.
+
+\hypertarget{class_gun_a11bf618e3bf21f3be546c843c64b06f1}{\index{Gun@{Gun}!get\+Ammo@{get\+Ammo}}
+\index{get\+Ammo@{get\+Ammo}!Gun@{Gun}}
+\subsubsection[{get\+Ammo}]{\setlength{\rightskip}{0pt plus 5cm}float Gun\+::get\+Ammo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a11bf618e3bf21f3be546c843c64b06f1}
+
+
+The get\+Ammo method of the gun. 
+
+\begin{DoxyReturn}{Returns}
+The amount of ammunition the gun has left 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a2286ebc74825dd4b03d9981eb968e602}{Weapon}.
+
+\hypertarget{class_gun_a6c38ebbaf4b538bda73538c4125c663c}{\index{Gun@{Gun}!get\+Ammo\+String@{get\+Ammo\+String}}
+\index{get\+Ammo\+String@{get\+Ammo\+String}!Gun@{Gun}}
+\subsubsection[{get\+Ammo\+String}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Gun\+::get\+Ammo\+String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a6c38ebbaf4b538bda73538c4125c663c}
+
+
+The get\+Ammo\+Screen method of \hyperlink{class_weapon}{Weapon}. 
+
+Virtual Method that will return the amount of ammo the weapon has in a string \begin{DoxyReturn}{Returns}
+amount of ammo in a String 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_ae412d66702a05b0a0d5d6c026ee3f8d3}{Weapon}.
+
+\hypertarget{class_gun_a390b808f9094e07df029b8938749df28}{\index{Gun@{Gun}!get\+Damage\+Level@{get\+Damage\+Level}}
+\index{get\+Damage\+Level@{get\+Damage\+Level}!Gun@{Gun}}
+\subsubsection[{get\+Damage\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int Gun\+::get\+Damage\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a390b808f9094e07df029b8938749df28}
+
+
+The get\+Damage\+Level method of weapon. 
+
+Virtual Method that will return the current upgrade level for the damage of the weapon \begin{DoxyReturn}{Returns}
+current Damage\+Level 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_adfa7cf4006b6089d3843081cfd46aaf2}{Weapon}.
+
+\hypertarget{class_gun_a9a7483bdcb239a4039ac2100e9794956}{\index{Gun@{Gun}!get\+Firerate\+Level@{get\+Firerate\+Level}}
+\index{get\+Firerate\+Level@{get\+Firerate\+Level}!Gun@{Gun}}
+\subsubsection[{get\+Firerate\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int Gun\+::get\+Firerate\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a9a7483bdcb239a4039ac2100e9794956}
+
+
+The get\+Firerate\+Level method of weapon. 
+
+Virtual Method that will return the current upgrade level for the Fire Rate of the weapon \begin{DoxyReturn}{Returns}
+current Fire Rate Level 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a5ada13535926ce1445b8205f91085c39}{Weapon}.
+
+\hypertarget{class_gun_a95d46c82be65c2552f3386f561e53bfb}{\index{Gun@{Gun}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!Gun@{Gun}}
+\subsubsection[{get\+Info}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Gun\+::get\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a95d46c82be65c2552f3386f561e53bfb}
+
+
+The get\+Info method of weapon. 
+
+Virtual Method that will return a string with all the info about a weapon \begin{DoxyReturn}{Returns}
+the info about the weapon 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_acbb83cac4f5426151954c6d4d5c66230}{Weapon}.
+
+\hypertarget{class_gun_af74d11f4e7f839f4a5842557caeecd64}{\index{Gun@{Gun}!get\+Is\+Reloading@{get\+Is\+Reloading}}
+\index{get\+Is\+Reloading@{get\+Is\+Reloading}!Gun@{Gun}}
+\subsubsection[{get\+Is\+Reloading}]{\setlength{\rightskip}{0pt plus 5cm}bool Gun\+::get\+Is\+Reloading (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_af74d11f4e7f839f4a5842557caeecd64}
+
+
+The get\+Is\+Reloading method of weapon. 
+
+Virtual Method that will return if the current weapon is busy with reloading \begin{DoxyReturn}{Returns}
+false = if not reloading, true = if reloading 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a8126dd185bfc566566d4e4d5bdfb1f1a}{Weapon}.
+
+\hypertarget{class_gun_a7230d075015f04e59822b9078719c5d7}{\index{Gun@{Gun}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Gun@{Gun}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Gun\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a7230d075015f04e59822b9078719c5d7}
+
+
+The get\+Name method of weapon. 
+
+Virtual Method that will return the name of a \hyperlink{class_weapon}{Weapon} \begin{DoxyReturn}{Returns}
+returns the name of the weapon 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a0cc1adfac060d480dbb6d10b96de0a0d}{Weapon}.
+
+\hypertarget{class_gun_aa4625cb9f717925e0416d38ae02db057}{\index{Gun@{Gun}!get\+Reload\+Speed\+Level@{get\+Reload\+Speed\+Level}}
+\index{get\+Reload\+Speed\+Level@{get\+Reload\+Speed\+Level}!Gun@{Gun}}
+\subsubsection[{get\+Reload\+Speed\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int Gun\+::get\+Reload\+Speed\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_aa4625cb9f717925e0416d38ae02db057}
+
+
+The get\+Reload\+Speed\+Level method of weapon. 
+
+Virtual Method that will return the current upgrade level for the Reload of the weapon \begin{DoxyReturn}{Returns}
+current Reload\+Level 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a188f89050bfb1b8ba94d5c6cb1527496}{Weapon}.
+
+\hypertarget{class_gun_ad92a9c0cc00e8e65bb4f7589c9e58113}{\index{Gun@{Gun}!reload@{reload}}
+\index{reload@{reload}!Gun@{Gun}}
+\subsubsection[{reload}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::reload (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_ad92a9c0cc00e8e65bb4f7589c9e58113}
+
+
+The reload method of the gun. 
+
+Checks for some factors if the gun is able to reload and then refills the magazine. 
+
+Reimplemented from \hyperlink{class_weapon_ae02c48b932b0327382c5dd1672079590}{Weapon}.
+
+\hypertarget{class_gun_adda4a40faac31a145d132ff88002ea20}{\index{Gun@{Gun}!reset@{reset}}
+\index{reset@{reset}!Gun@{Gun}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_adda4a40faac31a145d132ff88002ea20}
+
+
+The reset method of weapon. 
+
+Virtual Method that will reset the damage,reload\+Speed,Fire\+Rate too there normale state 
+
+Reimplemented from \hyperlink{class_weapon_a126b2f1436460fafa591687b04c6b06a}{Weapon}.
+
+\hypertarget{class_gun_aa9b43a5d5d47f8d4c09689fbf4ae84c3}{\index{Gun@{Gun}!reset\+Ammo@{reset\+Ammo}}
+\index{reset\+Ammo@{reset\+Ammo}!Gun@{Gun}}
+\subsubsection[{reset\+Ammo}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::reset\+Ammo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_aa9b43a5d5d47f8d4c09689fbf4ae84c3}
+
+
+The reset\+Ammo method of weapon. 
+
+Virtual Method that will reset the Ammo to there normal state 
+
+Reimplemented from \hyperlink{class_weapon_a1222b1f67b198fa7f9e97a6b55eb0350}{Weapon}.
+
+\hypertarget{class_gun_a32ff9325061ddab247a5d726d8f98207}{\index{Gun@{Gun}!set\+Ammo@{set\+Ammo}}
+\index{set\+Ammo@{set\+Ammo}!Gun@{Gun}}
+\subsubsection[{set\+Ammo}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::set\+Ammo (
+\begin{DoxyParamCaption}
+\item[{int}]{amount}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_gun_a32ff9325061ddab247a5d726d8f98207}
+
+
+The set\+Ammo Method of \hyperlink{class_weapon}{Weapon}. 
+
+Virtual Method that will set the Ammo of the specified weapon 
+\begin{DoxyParams}{Parameters}
+{\em the} & amount that ammo must be set to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_weapon_a06ca67c2d2f869c6a4fc7208d4ad56b5}{Weapon}.
+
+\hypertarget{class_gun_a86d524a277e286ff34c5a57cc9c8c438}{\index{Gun@{Gun}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Gun@{Gun}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a86d524a277e286ff34c5a57cc9c8c438}
+
+
+The set\+Rotation method of the gun. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & The value the rotation of the gun has to be set to. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a32562ecd2f833271b606d86a926d82b8}{Game\+Object}.
+
+\hypertarget{class_gun_ae7cbc34b103c1e89b4536309582dafb5}{\index{Gun@{Gun}!update@{update}}
+\index{update@{update}!Gun@{Gun}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_ae7cbc34b103c1e89b4536309582dafb5}
+
+
+The update method of the gun. 
+
+reduces the cooldown and reload time of the gun accordingly to the framerate. Also updates the position and rotation of the gun. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & the amount of time subtracted from the cooldown and reload time based on the framerate. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+\hypertarget{class_gun_a0d4270857233543d7c326995f746e27a}{\index{Gun@{Gun}!upgrade\+Damage@{upgrade\+Damage}}
+\index{upgrade\+Damage@{upgrade\+Damage}!Gun@{Gun}}
+\subsubsection[{upgrade\+Damage}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::upgrade\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a0d4270857233543d7c326995f746e27a}
+
+
+The upgrade\+Damage method of weapon. 
+
+Virtual Method that will upgrade the current Damage 
+
+Reimplemented from \hyperlink{class_weapon_a9419b6f263f0b78e0665678c9a14973a}{Weapon}.
+
+\hypertarget{class_gun_aa35ec2c6dff5d0d2e5392f98c74e86e5}{\index{Gun@{Gun}!upgrade\+Dmg@{upgrade\+Dmg}}
+\index{upgrade\+Dmg@{upgrade\+Dmg}!Gun@{Gun}}
+\subsubsection[{upgrade\+Dmg}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::upgrade\+Dmg (
+\begin{DoxyParamCaption}
+\item[{int}]{amount}
+\end{DoxyParamCaption}
+)}}\label{class_gun_aa35ec2c6dff5d0d2e5392f98c74e86e5}
+
+
+The upgrade\+Damage method of the gun. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount with which the damage of the gun has to be increased. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gun_a7db78488abab127b3fceefd56c9b2de6}{\index{Gun@{Gun}!upgrade\+Fire\+Rate@{upgrade\+Fire\+Rate}}
+\index{upgrade\+Fire\+Rate@{upgrade\+Fire\+Rate}!Gun@{Gun}}
+\subsubsection[{upgrade\+Fire\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::upgrade\+Fire\+Rate (
+\begin{DoxyParamCaption}
+\item[{short}]{amount}
+\end{DoxyParamCaption}
+)}}\label{class_gun_a7db78488abab127b3fceefd56c9b2de6}
+
+
+The upgrade\+Fire\+Rate method of the gun. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount of frames the relead time of the gun has to be reduced with. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_gun_a0a5fa9346fbaa59e60d0f0a16e64ab11}{\index{Gun@{Gun}!upgrade\+Fire\+Rate@{upgrade\+Fire\+Rate}}
+\index{upgrade\+Fire\+Rate@{upgrade\+Fire\+Rate}!Gun@{Gun}}
+\subsubsection[{upgrade\+Fire\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::upgrade\+Fire\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a0a5fa9346fbaa59e60d0f0a16e64ab11}
+
+
+The upgrade\+Fire\+Rate method of weapon. 
+
+Virtual Method that will upgrade the current Fire Rate 
+
+Reimplemented from \hyperlink{class_weapon_aedc0a69ed6da65caf70e8ff2d81b1271}{Weapon}.
+
+\hypertarget{class_gun_a88408d572350474609c2fc294a6b807b}{\index{Gun@{Gun}!upgrade\+Reload\+Speed@{upgrade\+Reload\+Speed}}
+\index{upgrade\+Reload\+Speed@{upgrade\+Reload\+Speed}!Gun@{Gun}}
+\subsubsection[{upgrade\+Reload\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Gun\+::upgrade\+Reload\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_gun_a88408d572350474609c2fc294a6b807b}
+
+
+The upgrade\+Reload\+Speed method of weapon. 
+
+Virtual Method that will upgrade the current Reload Speed 
+
+Reimplemented from \hyperlink{class_weapon_abd120b07bb75721966026445033d6601}{Weapon}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Gun.\+h\item 
+game\+Objects/Gun.\+cpp\end{DoxyCompactItemize}

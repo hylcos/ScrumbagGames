@@ -71,7 +71,7 @@ void Enemy::reduceHP(int damage){
 			if (rand() % 3 == 1){
 				Powerup* pu = new Powerup(sf::Vector2f{ position });
 				int i = rand() % 5 + 1;
-				pu->setNumber(i);
+				
 				switch (i){
 				case 1:
 					pu->setType(&pu->puFullHealth);

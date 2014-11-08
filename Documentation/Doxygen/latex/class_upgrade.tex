@@ -1,0 +1,116 @@
+\hypertarget{class_upgrade}{\section{Upgrade Class Reference}
+\label{class_upgrade}\index{Upgrade@{Upgrade}}
+}
+
+
+Inherits \hyperlink{class_clickable}{Clickable}.
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}{enum {\bfseries types} \{ {\bfseries Fire\+Rate}, 
+{\bfseries Damage}, 
+{\bfseries Reload\+Speed}
+ \}}\label{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}{{\bfseries Upgrade} (\hyperlink{class_weapon}{Weapon} $\ast$weapon, types type)}\label{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}
+
+\item 
+void \hyperlink{class_upgrade_a66b04bde03bdf6ad0935b98963619444}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_upgrade_a01a806588165e9c9059343dec7cc52a3}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}{click} () override
+\begin{DoxyCompactList}\small\item\em The click method for the clickable class. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_upgrade_a680e5842436c75191a9b0564e20ab70e}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the game object. \end{DoxyCompactList}\item 
+\hypertarget{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}{void {\bfseries update\+Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)}\label{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}{\index{Upgrade@{Upgrade}!click@{click}}
+\index{click@{click}!Upgrade@{Upgrade}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrade\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}
+
+
+The click method for the clickable class. 
+
+In this method there will be specified what has to happen when this game object is clicked. 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{class_upgrade_a01a806588165e9c9059343dec7cc52a3}{\index{Upgrade@{Upgrade}!draw@{draw}}
+\index{draw@{draw}!Upgrade@{Upgrade}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrade\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a01a806588165e9c9059343dec7cc52a3}
+
+
+The draw method of the game object. 
+
+Virtual method that will specify what happens when the game object has to be drawn 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window the game object has to be drawn in \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_upgrade_a680e5842436c75191a9b0564e20ab70e}{\index{Upgrade@{Upgrade}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Upgrade@{Upgrade}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Upgrade\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a680e5842436c75191a9b0564e20ab70e}
+
+
+The get bounds method of the game object. 
+
+\begin{DoxyReturn}{Returns}
+A rectangle indicating the bounds of the game object 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_upgrade_a66b04bde03bdf6ad0935b98963619444}{\index{Upgrade@{Upgrade}!update@{update}}
+\index{update@{update}!Upgrade@{Upgrade}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrade\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a66b04bde03bdf6ad0935b98963619444}
+
+
+The update method of the game object. 
+
+Virtual method that will specify what happens when the game object is updated 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/shop/Upgrade.\+h\item 
+game\+Objects/menu/shop/Upgrade.\+cpp\end{DoxyCompactItemize}

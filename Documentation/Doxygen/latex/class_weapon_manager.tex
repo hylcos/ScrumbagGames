@@ -1,0 +1,92 @@
+\hypertarget{class_weapon_manager}{\section{Weapon\+Manager Class Reference}
+\label{class_weapon_manager}\index{Weapon\+Manager@{Weapon\+Manager}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_weapon_manager_a6c96a12d89dc2e500fe830ce58d59d00}{load} ()
+\begin{DoxyCompactList}\small\item\em The load method of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. \end{DoxyCompactList}\item 
+\hyperlink{class_weapon}{Weapon} $\ast$ \hyperlink{class_weapon_manager_a06a726626541c01ed4074e3a02d2d1fc}{get\+Other\+Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)
+\begin{DoxyCompactList}\small\item\em The get\+Other\+Weapon of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. \end{DoxyCompactList}\item 
+\hypertarget{class_weapon_manager_a240f037e5294e11081ca3cce1ab4651e}{\hyperlink{class_weapon_manager_a240f037e5294e11081ca3cce1ab4651e}{$\sim$\+Weapon\+Manager} ()}\label{class_weapon_manager_a240f037e5294e11081ca3cce1ab4651e}
+
+\begin{DoxyCompactList}\small\item\em The deconstructor of a \hyperlink{class_weapon_manager}{Weapon\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_weapon_manager}{Weapon\+Manager} \& \hyperlink{class_weapon_manager_a397c93681bbba0a24f285d2e699b82f3}{get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em The get\+Insatnce method of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_weapon_manager_a0b44e6bfd98a88d8a234290dc187dcdd}{\hyperlink{class_gun}{Gun} $\ast$ {\bfseries pistol}}\label{class_weapon_manager_a0b44e6bfd98a88d8a234290dc187dcdd}
+
+\item 
+\hypertarget{class_weapon_manager_a4dd7fad16e730b78d2fd6209328de5f2}{\hyperlink{class_gun}{Gun} $\ast$ {\bfseries rifle}}\label{class_weapon_manager_a4dd7fad16e730b78d2fd6209328de5f2}
+
+\item 
+\hypertarget{class_weapon_manager_abbd732d9ef93c6c3dd084191b22094bd}{\hyperlink{class_gun}{Gun} $\ast$ {\bfseries shotgun}}\label{class_weapon_manager_abbd732d9ef93c6c3dd084191b22094bd}
+
+\item 
+\hypertarget{class_weapon_manager_aec3cb2dcbab3df14dbdad8fad0344493}{\hyperlink{class_gun}{Gun} $\ast$ {\bfseries sniper}}\label{class_weapon_manager_aec3cb2dcbab3df14dbdad8fad0344493}
+
+\item 
+\hypertarget{class_weapon_manager_a2260b2f3e124d37a07a8a87db2e6f61b}{\hyperlink{class_knife}{Knife} $\ast$ {\bfseries dagger}}\label{class_weapon_manager_a2260b2f3e124d37a07a8a87db2e6f61b}
+
+\item 
+\hypertarget{class_weapon_manager_aed3158ed3033cc4edb359153c9554e60}{\hyperlink{class_knife}{Knife} $\ast$ {\bfseries sword}}\label{class_weapon_manager_aed3158ed3033cc4edb359153c9554e60}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_weapon_manager_a397c93681bbba0a24f285d2e699b82f3}{\index{Weapon\+Manager@{Weapon\+Manager}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Weapon\+Manager@{Weapon\+Manager}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Weapon\+Manager}\& Weapon\+Manager\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_weapon_manager_a397c93681bbba0a24f285d2e699b82f3}
+
+
+The get\+Insatnce method of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. 
+
+This method makes sure there is only 1 instance of the \hyperlink{class_weapon_manager}{Weapon\+Manager} at a time. This way, every time an external class uses a \hyperlink{class_weapon_manager}{Weapon\+Manager}, it uses a \hyperlink{class_weapon_manager}{Weapon\+Manager} with the same attributes as every other class. \begin{DoxyReturn}{Returns}
+The instance of the \hyperlink{class_weapon_manager}{Weapon\+Manager} 
+\end{DoxyReturn}
+\hypertarget{class_weapon_manager_a06a726626541c01ed4074e3a02d2d1fc}{\index{Weapon\+Manager@{Weapon\+Manager}!get\+Other\+Weapon@{get\+Other\+Weapon}}
+\index{get\+Other\+Weapon@{get\+Other\+Weapon}!Weapon\+Manager@{Weapon\+Manager}}
+\subsubsection[{get\+Other\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weapon} $\ast$ Weapon\+Manager\+::get\+Other\+Weapon (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_manager_a06a726626541c01ed4074e3a02d2d1fc}
+
+
+The get\+Other\+Weapon of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. 
+
+This method will check in which tier the given weapon is and returns the other weapon in the same tier 
+\begin{DoxyParams}{Parameters}
+{\em weapon} & that needs to be switched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the other weapon in the tier then the one who is being send 
+\end{DoxyReturn}
+\hypertarget{class_weapon_manager_a6c96a12d89dc2e500fe830ce58d59d00}{\index{Weapon\+Manager@{Weapon\+Manager}!load@{load}}
+\index{load@{load}!Weapon\+Manager@{Weapon\+Manager}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\+Manager\+::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_manager_a6c96a12d89dc2e500fe830ce58d59d00}
+
+
+The load method of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. 
+
+This method will set all the standard values for the \hyperlink{class_weapon_manager}{Weapon\+Manager} 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Weapon\+Manager.\+h\item 
+game\+Objects/Weapon\+Manager.\+cpp\end{DoxyCompactItemize}

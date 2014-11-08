@@ -9,12 +9,9 @@ action{ action }
 {
 
 }
-void Powerup::setText(std::string powerupstring){
 
-}
 
 void Powerup::Types::executeAction(Powerup & powerup){
-	Player* player = LevelController::getInstance().getPlayer();
 	(powerup.*action)();
 }
 
@@ -49,7 +46,7 @@ void Powerup::update(float speedModifier){
 	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
 	poweruptext.setPosition(LevelController::getInstance().getPlayer()->getPosition().x, LevelController::getInstance().getPlayer()->getPosition().y - 100);
 	if (dist < 32 && !isLoaded){
-		type->executeAction(*this);
+		type->executeAction(* this);
 		std::cout << "PRINT";
 		showtextTimer = 300;
 		if (type != &Money){
@@ -75,17 +72,15 @@ void Powerup::update(float speedModifier){
 
 }
 
-sf::FloatRect Powerup::getBounds() {
-	return sprite.getGlobalBounds();
-}
 void Powerup::draw(sf::RenderWindow & window) const {
-	if (!isLoaded)
+	if (!isLoaded){
 		window.draw(sprite);
-	window.draw(poweruptext);
+	}
+	else {
+		window.draw(poweruptext);
+	}
 }
-Powerups Powerup::getPowerup(){
-	return power;
-}
+
 
 void Powerup::pufDoubleSpeed(){
 	LevelController::getInstance().getPlayer()->doubleSpeed();
@@ -132,7 +127,7 @@ void Powerup::pufBAB(){
 	}
 }
 void Powerup::addMoney(){
-	moneyAmount = rand() % 25 + 25;
+	moneyAmount = rand() % 26 + 25;
 	LevelController::getInstance().getPlayer()->addMoney(moneyAmount);
 }
 

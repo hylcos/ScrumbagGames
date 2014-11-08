@@ -1,0 +1,97 @@
+\hypertarget{class_particle_emitter}{\section{Particle\+Emitter Class Reference}
+\label{class_particle_emitter}\index{Particle\+Emitter@{Particle\+Emitter}}
+}
+
+
+Inherited by \hyperlink{class_bullet}{Bullet}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_enemy}{Enemy}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_knife}{Knife}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_player}{Player}{\ttfamily  \mbox{[}private\mbox{]}}, and \hyperlink{class_powerup}{Powerup}{\ttfamily  \mbox{[}private\mbox{]}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_emitter_a59e863f0386f1de946bb5f5a2eef3358}{void {\bfseries emit\+Particles} ()}\label{class_particle_emitter_a59e863f0386f1de946bb5f5a2eef3358}
+
+\item 
+\hypertarget{class_particle_emitter_a1567fd71b41c71b56ee8b72c5bca559c}{void {\bfseries update} (float speed\+Modifier)}\label{class_particle_emitter_a1567fd71b41c71b56ee8b72c5bca559c}
+
+\item 
+\hypertarget{class_particle_emitter_aa639c76a4637bba568a407f69e1c8ebd}{void {\bfseries set\+Color} (int r, int g, int b, int a)}\label{class_particle_emitter_aa639c76a4637bba568a407f69e1c8ebd}
+
+\item 
+\hypertarget{class_particle_emitter_ac2d2189e309f8e557b214963aeb8aef8}{void {\bfseries set\+Color} (sf\+::\+Color color, int a=255)}\label{class_particle_emitter_ac2d2189e309f8e557b214963aeb8aef8}
+
+\item 
+\hypertarget{class_particle_emitter_af5a699705ec1ebc5258087bd8f48dadd}{bool {\bfseries is\+Emitting} ()}\label{class_particle_emitter_af5a699705ec1ebc5258087bd8f48dadd}
+
+\item 
+\hypertarget{class_particle_emitter_aa16926ba7ce5cec4a12049d4cb3d84da}{float {\bfseries get\+Frequency} ()}\label{class_particle_emitter_aa16926ba7ce5cec4a12049d4cb3d84da}
+
+\item 
+\hypertarget{class_particle_emitter_a47af719c9d36a6cdc2bc21fd5186cfac}{int {\bfseries get\+Particle\+Amount} ()}\label{class_particle_emitter_a47af719c9d36a6cdc2bc21fd5186cfac}
+
+\item 
+\hypertarget{class_particle_emitter_a5b55b1ff5f17eadbec7184a8808cd237}{bool {\bfseries get\+Gore} ()}\label{class_particle_emitter_a5b55b1ff5f17eadbec7184a8808cd237}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_emitter_ac5bd01ffba334b3475c723438ebbb0d9}{sf\+::\+Color {\bfseries particle\+Color}}\label{class_particle_emitter_ac5bd01ffba334b3475c723438ebbb0d9}
+
+\item 
+\hypertarget{class_particle_emitter_a4bfdf1026500e45025d7d847079449ac}{bool {\bfseries emit\+Once} = false}\label{class_particle_emitter_a4bfdf1026500e45025d7d847079449ac}
+
+\item 
+\hypertarget{class_particle_emitter_adad6aa5f4e12833ec208463a471cc72f}{bool {\bfseries emit} = false}\label{class_particle_emitter_adad6aa5f4e12833ec208463a471cc72f}
+
+\item 
+\hypertarget{class_particle_emitter_a0bfdd28a5fb6be6d310f4afe19d5bb69}{bool {\bfseries is\+Gore} = false}\label{class_particle_emitter_a0bfdd28a5fb6be6d310f4afe19d5bb69}
+
+\item 
+\hypertarget{class_particle_emitter_af32de038d2b86f175da7a7cf6d35f94e}{float {\bfseries frequency} = 30.f}\label{class_particle_emitter_af32de038d2b86f175da7a7cf6d35f94e}
+
+\item 
+\hypertarget{class_particle_emitter_ab9bbf606442bbc94056fc99739116fae}{int {\bfseries amount} = 1}\label{class_particle_emitter_ab9bbf606442bbc94056fc99739116fae}
+
+\item 
+\hypertarget{class_particle_emitter_a09c7892513030cf727dd44dea28f5785}{int {\bfseries frame} = 0}\label{class_particle_emitter_a09c7892513030cf727dd44dea28f5785}
+
+\item 
+\hypertarget{class_particle_emitter_a0f6f30a9cfd1b9b6ed033793ed8c5f4e}{float {\bfseries speed} = 20.f}\label{class_particle_emitter_a0f6f30a9cfd1b9b6ed033793ed8c5f4e}
+
+\item 
+\hypertarget{class_particle_emitter_a0659c3d423516551eb2bccabd5118d98}{float {\bfseries deceleration} = 0.\+15f}\label{class_particle_emitter_a0659c3d423516551eb2bccabd5118d98}
+
+\item 
+\hypertarget{class_particle_emitter_af330001a636059db3f7fea0c0d5a0fdf}{float {\bfseries direction} = 0.f}\label{class_particle_emitter_af330001a636059db3f7fea0c0d5a0fdf}
+
+\item 
+\hypertarget{class_particle_emitter_ab5cee07d425137bc979058bed2fc7b91}{float {\bfseries direction\+Deviation} = 360.f}\label{class_particle_emitter_ab5cee07d425137bc979058bed2fc7b91}
+
+\item 
+\hypertarget{class_particle_emitter_a36dcead124ad38150b8f21feda7115d8}{float {\bfseries size} = 2.f}\label{class_particle_emitter_a36dcead124ad38150b8f21feda7115d8}
+
+\item 
+\hypertarget{class_particle_emitter_aef5ed3707677d9fdf0e411276a8be6ab}{float {\bfseries rotation} = 0.f}\label{class_particle_emitter_aef5ed3707677d9fdf0e411276a8be6ab}
+
+\item 
+\hypertarget{class_particle_emitter_a2ccd7416ae393bace934fe2b415f64cf}{float {\bfseries rotation\+Deviation} = 360.f}\label{class_particle_emitter_a2ccd7416ae393bace934fe2b415f64cf}
+
+\item 
+\hypertarget{class_particle_emitter_a6618d5435d8fe332e26656c20aecb7a6}{float {\bfseries minimum\+Speed} = 0.\+004f}\label{class_particle_emitter_a6618d5435d8fe332e26656c20aecb7a6}
+
+\item 
+\hypertarget{class_particle_emitter_ae43520e60f9102c9626f110090830ae1}{sf\+::\+Vector2f {\bfseries spawn\+Position} \{ 0, 0 \}}\label{class_particle_emitter_ae43520e60f9102c9626f110090830ae1}
+
+\item 
+\hypertarget{class_particle_emitter_ac89ef51ef2739ef7bc39461b6d4e3d17}{\hyperlink{class_particle_manager}{Particle\+Manager} $\ast$ {\bfseries particle\+Manager} = nullptr}\label{class_particle_emitter_ac89ef51ef2739ef7bc39461b6d4e3d17}
+
+\item 
+\hypertarget{class_particle_emitter_a558c0bd0ad1193482111782f488cadb2}{\hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries object} = nullptr}\label{class_particle_emitter_a558c0bd0ad1193482111782f488cadb2}
+
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Particle\+Emitter.\+h\item 
+game\+Objects/Particle\+Emitter.\+cpp\end{DoxyCompactItemize}
