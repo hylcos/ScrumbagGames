@@ -21,8 +21,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_animation_8h_source.html",
-"class_level_controller.html#a8e3f9f2081f00f3e1ade44eb7e8c24ad",
-"class_weapon.html"
+"class_level_controller.html#a9cb1f95fee01739d9658801dfebb43b1",
+"class_weapon.html#a06ca67c2d2f869c6a4fc7208d4ad56b5"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

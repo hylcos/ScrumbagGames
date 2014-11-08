@@ -153,31 +153,33 @@ $(document).ready(function(){initNavTree('_gun_8h_source.html','');});
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#a88408d572350474609c2fc294a6b807b">Gun::upgradeReloadSpeed</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string <a class="code" href="class_gun.html#a95d46c82be65c2552f3386f561e53bfb">Gun::getInfo</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="class_gun.html#af107f78d608720fef712c14b148afcdd">Gun::~Gun</a>();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#a62ab15432407b2396c86d35264ea8a5b">Gun::doubleDamage</a>();</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    std::string <a class="code" href="class_gun.html#a6c38ebbaf4b538bda73538c4125c663c">Gun::getAmmoString</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    std::string <a class="code" href="class_gun.html#a7230d075015f04e59822b9078719c5d7">Gun::getName</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <a class="code" href="class_gun.html">Gun</a> Gun::getWeapon();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#a32ff9325061ddab247a5d726d8f98207">Gun::setAmmo</a>(<span class="keywordtype">int</span> amount);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_gun.html#af74d11f4e7f839f4a5842557caeecd64">Gun::getIsReloading</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#adda4a40faac31a145d132ff88002ea20">Gun::reset</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#aa9b43a5d5d47f8d4c09689fbf4ae84c3">Gun::resetAmmo</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordtype">float</span> doubleDamageTimer;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">bool</span> isReloading = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    sf::Sprite sprite;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    sf::Texture tex;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    std::string name;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">bool</span> doubleDamageEnabled = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">int</span> damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">int</span> magazineSize, range, ammo, currentMagazine, startAmmo;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">float</span> damage, fireRate, oldDamage;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">short</span> bulletSpeed;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">float</span> reloadSpeed,rotation,shootCoolDown,reloadCoolDown;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;};</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#a62ab15432407b2396c86d35264ea8a5b">Gun::doubleDamage</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    std::string <a class="code" href="class_gun.html#a6c38ebbaf4b538bda73538c4125c663c">Gun::getAmmoString</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    std::string <a class="code" href="class_gun.html#a7230d075015f04e59822b9078719c5d7">Gun::getName</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <a class="code" href="class_gun.html">Gun</a> Gun::getWeapon();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#a32ff9325061ddab247a5d726d8f98207">Gun::setAmmo</a>(<span class="keywordtype">int</span> amount);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_gun.html#af74d11f4e7f839f4a5842557caeecd64">Gun::getIsReloading</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#adda4a40faac31a145d132ff88002ea20">Gun::reset</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_gun.html#aa9b43a5d5d47f8d4c09689fbf4ae84c3">Gun::resetAmmo</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_gun.html#af107f78d608720fef712c14b148afcdd">Gun::~Gun</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">float</span> doubleDamageTimer;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">bool</span> isReloading = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    sf::Sprite sprite;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    sf::Texture tex;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    std::string name;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">bool</span> doubleDamageEnabled = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">int</span> damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">int</span> magazineSize, range, ammo, currentMagazine, startAmmo;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">float</span> damage, fireRate, oldDamage;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">short</span> bulletSpeed;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">float</span> reloadSpeed,rotation,shootCoolDown,reloadCoolDown;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;};</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;</div>
 <div class="ttc" id="class_gun_html_ae7cbc34b103c1e89b4536309582dafb5"><div class="ttname"><a href="class_gun.html#ae7cbc34b103c1e89b4536309582dafb5">Gun::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the gun. </div><div class="ttdef"><b>Definition:</b> Gun.cpp:67</div></div>
 <div class="ttc" id="class_gun_html_a390b808f9094e07df029b8938749df28"><div class="ttname"><a href="class_gun.html#a390b808f9094e07df029b8938749df28">Gun::getDamageLevel</a></div><div class="ttdeci">int getDamageLevel() override</div><div class="ttdoc">The getDamageLevel method of weapon. </div><div class="ttdef"><b>Definition:</b> Gun.cpp:141</div></div>
 <div class="ttc" id="class_weapon_html"><div class="ttname"><a href="class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition:</b> Weapon.h:4</div></div>
@@ -209,7 +211,7 @@ $(document).ready(function(){initNavTree('_gun_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><b>Gun.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 18:27:08 for Shoot The Bully by
+    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

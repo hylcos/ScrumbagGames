@@ -65,7 +65,22 @@ The instance of the \hyperlink{class_weapon_manager}{Weapon\+Manager}
 
 The get\+Other\+Weapon of the \hyperlink{class_weapon_manager}{Weapon\+Manager}. 
 
-This method will check in which tier the given weapon is and returns the other weapon in the same tier 
+This method will check in which tier the given weapon is and returns the other weapon in the same tier
+
+
+\begin{DoxyCode}
+\textcolor{comment}{//This will return Sword}
+\hyperlink{class_weapon_manager_a06a726626541c01ed4074e3a02d2d1fc}{WeaponManager::getOtherWeapon}(\hyperlink{class_weapon_manager_a2260b2f3e124d37a07a8a87db2e6f61b}{dagger});
+\textcolor{comment}{//This will return Rifle}
+\hyperlink{class_weapon_manager_a06a726626541c01ed4074e3a02d2d1fc}{WeaponManager::getOtherWeapon}(\hyperlink{class_weapon_manager_a0b44e6bfd98a88d8a234290dc187dcdd}{pistol});
+\textcolor{comment}{//This will return Sniper}
+\hyperlink{class_weapon_manager_a06a726626541c01ed4074e3a02d2d1fc}{WeaponManager::getOtherWeapon}(\hyperlink{class_weapon_manager_abbd732d9ef93c6c3dd084191b22094bd}{shotgun});
+
+\textcolor{comment}{// And this will also work the other way around}
+\end{DoxyCode}
+
+
+
 \begin{DoxyParams}{Parameters}
 {\em weapon} & that needs to be switched \\
 \hline

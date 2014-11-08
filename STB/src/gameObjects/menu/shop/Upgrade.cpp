@@ -73,7 +73,7 @@ void Upgrade::draw(sf::RenderWindow & window) const {
 	
 }
 void Upgrade::click() { 
-	if (LevelController::getInstance().getPlayer2()->getMoney() >= ((UpgradeLevel + 1) * 100) && UpgradeLevel != 5){
+	if (LevelController::getInstance().getPlayer2()->getMoney() >= ((UpgradeLevel + 1) * 100) && UpgradeLevel < 5){
 		if (type == types::FireRate){
 			weapon->upgradeFireRate();
 		}

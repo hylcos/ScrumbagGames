@@ -16,10 +16,12 @@ public:
 	/*!
 	This method will return or make a texture.
 	@param name of the Texture the user wants to get
+	@return the Texture the user want
 	*/
 	sf::Texture* TextureManager::getTexture(std::string name);
-	std::map < std::string, sf::Texture* > map;
 private:
+
+	std::map < std::string, sf::Texture* > map;
 	TextureManager() {};
 	TextureManager(TextureManager const&);
 	void operator=(TextureManager const&);

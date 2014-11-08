@@ -54,7 +54,7 @@ void Weapon::upgradeFireRate(){
 }
 
 int Weapon::getReloadSpeedLevel(){
-	return 0;
+	return 6;
 }
 void Weapon::upgradeReloadSpeed(){
 

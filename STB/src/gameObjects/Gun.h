@@ -91,11 +91,7 @@ public:
 	void Gun::upgradeReloadSpeed() override;
 
 	std::string Gun::getInfo() override;
-	//! The deconstructor of the gun
-	/*!
-	Deallocates the gun class.
-	*/
-	Gun::~Gun();
+	
 	void Gun::doubleDamage();
 	std::string Gun::getAmmoString() override;
 	std::string Gun::getName() override;
@@ -105,6 +101,12 @@ public:
 
 	void Gun::reset() override;
 	void Gun::resetAmmo() override;
+
+	//! The deconstructor of the gun
+	/*!
+	Deallocates the gun class.
+	*/
+	Gun::~Gun();
 private:
 	float doubleDamageTimer;
 	bool isReloading = false;

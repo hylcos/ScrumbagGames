@@ -23,7 +23,7 @@ var searchData=
   ['getnextround',['getNextRound',['../class_player.html#ad0c154bef16fa0c1c3e4c6efb124d420',1,'Player']]],
   ['getotherweapon',['getOtherWeapon',['../class_weapon_manager.html#a06a726626541c01ed4074e3a02d2d1fc',1,'WeaponManager']]],
   ['getposition',['getPosition',['../class_game_object.html#ae682851d1b2d40a793465c959eafafa4',1,'GameObject']]],
-  ['getreloadspeedlevel',['getReloadSpeedLevel',['../class_gun.html#aa4625cb9f717925e0416d38ae02db057',1,'Gun::getReloadSpeedLevel()'],['../class_knife.html#a42742989265d9ecf7eb6d96ec8ff0a5a',1,'Knife::getReloadSpeedLevel()'],['../class_weapon.html#a188f89050bfb1b8ba94d5c6cb1527496',1,'Weapon::getReloadSpeedLevel()']]],
+  ['getreloadspeedlevel',['getReloadSpeedLevel',['../class_gun.html#aa4625cb9f717925e0416d38ae02db057',1,'Gun::getReloadSpeedLevel()'],['../class_weapon.html#a188f89050bfb1b8ba94d5c6cb1527496',1,'Weapon::getReloadSpeedLevel()']]],
   ['getselectedweapon',['getSelectedWeapon',['../class_player.html#ab087a0124f92c63e91cc846db9b82b76',1,'Player']]],
   ['getsize',['getSize',['../class_bench.html#af34d9a13039d25aaa2bca761513448fc',1,'Bench::getSize()'],['../class_game_object.html#a2f771b23fa5f6c2e031b308fa3926ada',1,'GameObject::getSize()'],['../class_player.html#a9b815bbbc9cb8332549acc10d03c7c0b',1,'Player::getSize()']]],
   ['gettexture',['getTexture',['../class_texture_manager.html#a014fb7d59012f507cefc88cbc9ad05bc',1,'TextureManager']]],

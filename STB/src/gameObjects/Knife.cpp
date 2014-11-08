@@ -103,12 +103,7 @@ void Knife::upgradeFireRate() {
 	}
 }
 
-int Knife::getReloadSpeedLevel() {
-	return reloadSpeedLevel;
-}
-void Knife::upgradeReloadSpeed() {
 
-}
 
 
 
@@ -128,4 +123,7 @@ void Knife::reset(){
 	for (damageLevel; damageLevel > 0; damageLevel--){
 		damage /= 1.10f;
 	}
+}
+
+Knife::~Knife(){
 }

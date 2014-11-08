@@ -49,19 +49,63 @@ public:
 	*/
 	void Knife::setRotation(float rotation);
 
+	//! The getName method of Knife
+	/*!
+	@return returns the name of the Knife
+	*/
 	std::string Knife::getName() override;
 
+	//! The getDamageLevel method of weapon
+	/*!
+	Method that will return the current upgrade level for the damage of the weapon
+	@return current DamageLevel
+	*/
 	int Knife::getDamageLevel() override;
+
+	//! The upgradeDamage method of Knife
+	/*!
+	Will upgrade the current Damage
+	*/
 	void Knife::upgradeDamage() override;
 
+
+	//! The getFirerateLevel method of Knife
+	/*!
+	will return the current upgrade level for the Fire Rate of the Knife
+	@return current Fire Rate Level
+	*/
 	int Knife::getFirerateLevel() override;
+
+	//! The upgradeFireRate method of Knife
+	/*!
+	Will upgrade the current Fire Rate
+	*/
 	void Knife::upgradeFireRate() override;
 
-	int Knife::getReloadSpeedLevel() override;
-	void Knife::upgradeReloadSpeed() override;
+	//! The reset method of Knife
+	/*!
+	Will reset the damage and FireRate too there normale state
+	*/
 	void Knife::reset() override;
+
+	//! The doubleDamage method of Knife
+	/*!
+	when the powerup DoubleDamage is picked up and doubles the 
+	damage for a amount of time
+	*/
 	void Knife::doubleDamage() override;
+
+	//! The getInfo method of weapon
+	/*!
+	returns a string with all the info about a Knife
+	@return the info about the Knife
+	*/
 	std::string Knife::getInfo() override;
+	//! The deconstructor of the Knife
+	/*!
+	Deallocates the Knife class.
+	*/
+	Knife::~Knife();
 private:
 	sf::Sprite sprite, melee;
 	sf::Texture tex, texmelee;

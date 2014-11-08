@@ -38,8 +38,22 @@ public:
 	//! The getOtherWeapon of the WeaponManager
 	/*!
 	This method will check in which tier the given weapon is and returns the other weapon in the same tier
+	
+	\code
+
+	//This will return Sword
+	WeaponManager::getOtherWeapon(dagger);
+	//This will return Rifle
+	WeaponManager::getOtherWeapon(pistol);
+	//This will return Sniper
+	WeaponManager::getOtherWeapon(shotgun);
+
+	// And this will also work the other way around
+	\endcode
+
 	@param weapon that needs to be switched
 	@return the other weapon in the tier then the one who is being send
+	
 	*/
 	Weapon * WeaponManager::getOtherWeapon(Weapon * weapon);
 

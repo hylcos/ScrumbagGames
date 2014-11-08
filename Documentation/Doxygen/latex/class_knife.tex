@@ -28,25 +28,23 @@ void \hyperlink{class_knife_a747c0cc2dcc81df06f63cc4259ed3556}{draw} (sf\+::\+Re
 void \hyperlink{class_knife_a3a6345197e3a146c311e28145a257665}{set\+Rotation} (float rotation)
 \begin{DoxyCompactList}\small\item\em The set rotation method of the knife. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{class_knife_a45e5c10b9b6aa04b0ef71fbbf25269d4}{get\+Name} () override
-\begin{DoxyCompactList}\small\item\em The get\+Name method of weapon. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The get\+Name method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
 int \hyperlink{class_knife_a9a3afd5408784399fc9cc7afc33eb3cd}{get\+Damage\+Level} () override
 \begin{DoxyCompactList}\small\item\em The get\+Damage\+Level method of weapon. \end{DoxyCompactList}\item 
 void \hyperlink{class_knife_ad4a30cd292cabb9dd1d2638f893040b8}{upgrade\+Damage} () override
-\begin{DoxyCompactList}\small\item\em The upgrade\+Damage method of weapon. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The upgrade\+Damage method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
 int \hyperlink{class_knife_aaee97b167b530dafa85d8bead3403a10}{get\+Firerate\+Level} () override
-\begin{DoxyCompactList}\small\item\em The get\+Firerate\+Level method of weapon. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The get\+Firerate\+Level method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
 void \hyperlink{class_knife_a9c89877c20a19190103f8b5da013efb5}{upgrade\+Fire\+Rate} () override
-\begin{DoxyCompactList}\small\item\em The upgrade\+Fire\+Rate method of weapon. \end{DoxyCompactList}\item 
-int \hyperlink{class_knife_a42742989265d9ecf7eb6d96ec8ff0a5a}{get\+Reload\+Speed\+Level} () override
-\begin{DoxyCompactList}\small\item\em The get\+Reload\+Speed\+Level method of weapon. \end{DoxyCompactList}\item 
-void \hyperlink{class_knife_a270749a27205b0a0994d9dc6d4c93c9c}{upgrade\+Reload\+Speed} () override
-\begin{DoxyCompactList}\small\item\em The upgrade\+Reload\+Speed method of weapon. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The upgrade\+Fire\+Rate method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
 void \hyperlink{class_knife_ad33b6b16ba209474ef0211317fce057b}{reset} () override
-\begin{DoxyCompactList}\small\item\em The reset method of weapon. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The reset method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
 void \hyperlink{class_knife_aa32f6d087a7451a319c640652006a528}{double\+Damage} () override
-\begin{DoxyCompactList}\small\item\em The double\+Damage method of weapon. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The double\+Damage method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
 std\+::string \hyperlink{class_knife_aa0d13d7ea1113f3dbd177c65acec9e87}{get\+Info} () override
-\begin{DoxyCompactList}\small\item\em The get\+Info method of weapon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The get\+Info method of weapon. \end{DoxyCompactList}\item 
+\hyperlink{class_knife_aba6d0d191765285bb5993a6c2f02046e}{$\sim$\+Knife} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -81,7 +79,18 @@ Initializes the melee weapon based on the given parametes
 {\em range} & The range the melee weapon can reach \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_knife_aba6d0d191765285bb5993a6c2f02046e}{\index{Knife@{Knife}!````~Knife@{$\sim$\+Knife}}
+\index{````~Knife@{$\sim$\+Knife}!Knife@{Knife}}
+\subsubsection[{$\sim$\+Knife}]{\setlength{\rightskip}{0pt plus 5cm}Knife\+::$\sim$\+Knife (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_knife_aba6d0d191765285bb5993a6c2f02046e}
 
+
+The deconstructor of the \hyperlink{class_knife}{Knife}. 
+
+Deallocates the \hyperlink{class_knife}{Knife} class. 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_knife_aa32f6d087a7451a319c640652006a528}{\index{Knife@{Knife}!double\+Damage@{double\+Damage}}
@@ -93,9 +102,9 @@ Initializes the melee weapon based on the given parametes
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_aa32f6d087a7451a319c640652006a528}
 
 
-The double\+Damage method of weapon. 
+The double\+Damage method of \hyperlink{class_knife}{Knife}. 
 
-Virtual Method that is called when the powerup Double\+Damage is picked up and doubles the damage for a amount of time 
+when the powerup Double\+Damage is picked up and doubles the damage for a amount of time 
 
 Reimplemented from \hyperlink{class_weapon_a4e416a0635f930a322529af55b69e5ef}{Weapon}.
 
@@ -145,7 +154,7 @@ Reimplemented from \hyperlink{class_weapon_af6f8ab97e28fd4778f97c96c78fd02f4}{We
 
 The get\+Damage\+Level method of weapon. 
 
-Virtual Method that will return the current upgrade level for the damage of the weapon \begin{DoxyReturn}{Returns}
+Method that will return the current upgrade level for the damage of the weapon \begin{DoxyReturn}{Returns}
 current Damage\+Level 
 \end{DoxyReturn}
 
@@ -161,9 +170,9 @@ Reimplemented from \hyperlink{class_weapon_adfa7cf4006b6089d3843081cfd46aaf2}{We
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_aaee97b167b530dafa85d8bead3403a10}
 
 
-The get\+Firerate\+Level method of weapon. 
+The get\+Firerate\+Level method of \hyperlink{class_knife}{Knife}. 
 
-Virtual Method that will return the current upgrade level for the Fire Rate of the weapon \begin{DoxyReturn}{Returns}
+will return the current upgrade level for the Fire Rate of the \hyperlink{class_knife}{Knife} \begin{DoxyReturn}{Returns}
 current Fire Rate Level 
 \end{DoxyReturn}
 
@@ -181,8 +190,8 @@ Reimplemented from \hyperlink{class_weapon_a5ada13535926ce1445b8205f91085c39}{We
 
 The get\+Info method of weapon. 
 
-Virtual Method that will return a string with all the info about a weapon \begin{DoxyReturn}{Returns}
-the info about the weapon 
+returns a string with all the info about a \hyperlink{class_knife}{Knife} \begin{DoxyReturn}{Returns}
+the info about the \hyperlink{class_knife}{Knife} 
 \end{DoxyReturn}
 
 
@@ -197,32 +206,14 @@ Reimplemented from \hyperlink{class_weapon_acbb83cac4f5426151954c6d4d5c66230}{We
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a45e5c10b9b6aa04b0ef71fbbf25269d4}
 
 
-The get\+Name method of weapon. 
+The get\+Name method of \hyperlink{class_knife}{Knife}. 
 
-Virtual Method that will return the name of a \hyperlink{class_weapon}{Weapon} \begin{DoxyReturn}{Returns}
-returns the name of the weapon 
+\begin{DoxyReturn}{Returns}
+returns the name of the \hyperlink{class_knife}{Knife} 
 \end{DoxyReturn}
 
 
 Reimplemented from \hyperlink{class_weapon_a0cc1adfac060d480dbb6d10b96de0a0d}{Weapon}.
-
-\hypertarget{class_knife_a42742989265d9ecf7eb6d96ec8ff0a5a}{\index{Knife@{Knife}!get\+Reload\+Speed\+Level@{get\+Reload\+Speed\+Level}}
-\index{get\+Reload\+Speed\+Level@{get\+Reload\+Speed\+Level}!Knife@{Knife}}
-\subsubsection[{get\+Reload\+Speed\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int Knife\+::get\+Reload\+Speed\+Level (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a42742989265d9ecf7eb6d96ec8ff0a5a}
-
-
-The get\+Reload\+Speed\+Level method of weapon. 
-
-Virtual Method that will return the current upgrade level for the Reload of the weapon \begin{DoxyReturn}{Returns}
-current Reload\+Level 
-\end{DoxyReturn}
-
-
-Reimplemented from \hyperlink{class_weapon_a188f89050bfb1b8ba94d5c6cb1527496}{Weapon}.
 
 \hypertarget{class_knife_ad33b6b16ba209474ef0211317fce057b}{\index{Knife@{Knife}!reset@{reset}}
 \index{reset@{reset}!Knife@{Knife}}
@@ -233,9 +224,9 @@ Reimplemented from \hyperlink{class_weapon_a188f89050bfb1b8ba94d5c6cb1527496}{We
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_ad33b6b16ba209474ef0211317fce057b}
 
 
-The reset method of weapon. 
+The reset method of \hyperlink{class_knife}{Knife}. 
 
-Virtual Method that will reset the damage,reload\+Speed,Fire\+Rate too there normale state 
+Will reset the damage and Fire\+Rate too there normale state 
 
 Reimplemented from \hyperlink{class_weapon_a126b2f1436460fafa591687b04c6b06a}{Weapon}.
 
@@ -288,9 +279,9 @@ Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_ad4a30cd292cabb9dd1d2638f893040b8}
 
 
-The upgrade\+Damage method of weapon. 
+The upgrade\+Damage method of \hyperlink{class_knife}{Knife}. 
 
-Virtual Method that will upgrade the current Damage 
+Will upgrade the current Damage 
 
 Reimplemented from \hyperlink{class_weapon_a9419b6f263f0b78e0665678c9a14973a}{Weapon}.
 
@@ -303,26 +294,11 @@ Reimplemented from \hyperlink{class_weapon_a9419b6f263f0b78e0665678c9a14973a}{We
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a9c89877c20a19190103f8b5da013efb5}
 
 
-The upgrade\+Fire\+Rate method of weapon. 
+The upgrade\+Fire\+Rate method of \hyperlink{class_knife}{Knife}. 
 
-Virtual Method that will upgrade the current Fire Rate 
+Will upgrade the current Fire Rate 
 
 Reimplemented from \hyperlink{class_weapon_aedc0a69ed6da65caf70e8ff2d81b1271}{Weapon}.
-
-\hypertarget{class_knife_a270749a27205b0a0994d9dc6d4c93c9c}{\index{Knife@{Knife}!upgrade\+Reload\+Speed@{upgrade\+Reload\+Speed}}
-\index{upgrade\+Reload\+Speed@{upgrade\+Reload\+Speed}!Knife@{Knife}}
-\subsubsection[{upgrade\+Reload\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::upgrade\+Reload\+Speed (
-\begin{DoxyParamCaption}
-{}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a270749a27205b0a0994d9dc6d4c93c9c}
-
-
-The upgrade\+Reload\+Speed method of weapon. 
-
-Virtual Method that will upgrade the current Reload Speed 
-
-Reimplemented from \hyperlink{class_weapon_abd120b07bb75721966026445033d6601}{Weapon}.
 
 
 

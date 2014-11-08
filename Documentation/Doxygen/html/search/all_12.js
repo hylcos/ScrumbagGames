@@ -6,5 +6,5 @@ var searchData=
   ['upgradedamage',['upgradeDamage',['../class_gun.html#a0d4270857233543d7c326995f746e27a',1,'Gun::upgradeDamage()'],['../class_knife.html#ad4a30cd292cabb9dd1d2638f893040b8',1,'Knife::upgradeDamage()'],['../class_weapon.html#a9419b6f263f0b78e0665678c9a14973a',1,'Weapon::upgradeDamage()']]],
   ['upgradedmg',['upgradeDmg',['../class_gun.html#aa35ec2c6dff5d0d2e5392f98c74e86e5',1,'Gun']]],
   ['upgradefirerate',['upgradeFireRate',['../class_gun.html#a7db78488abab127b3fceefd56c9b2de6',1,'Gun::upgradeFireRate(short amount)'],['../class_gun.html#a0a5fa9346fbaa59e60d0f0a16e64ab11',1,'Gun::upgradeFireRate() override'],['../class_knife.html#a9c89877c20a19190103f8b5da013efb5',1,'Knife::upgradeFireRate()'],['../class_weapon.html#aedc0a69ed6da65caf70e8ff2d81b1271',1,'Weapon::upgradeFireRate()']]],
-  ['upgradereloadspeed',['upgradeReloadSpeed',['../class_gun.html#a88408d572350474609c2fc294a6b807b',1,'Gun::upgradeReloadSpeed()'],['../class_knife.html#a270749a27205b0a0994d9dc6d4c93c9c',1,'Knife::upgradeReloadSpeed()'],['../class_weapon.html#abd120b07bb75721966026445033d6601',1,'Weapon::upgradeReloadSpeed()']]]
+  ['upgradereloadspeed',['upgradeReloadSpeed',['../class_gun.html#a88408d572350474609c2fc294a6b807b',1,'Gun::upgradeReloadSpeed()'],['../class_weapon.html#abd120b07bb75721966026445033d6601',1,'Weapon::upgradeReloadSpeed()']]]
 ];
