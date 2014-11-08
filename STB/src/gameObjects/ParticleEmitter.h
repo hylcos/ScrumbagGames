@@ -4,15 +4,47 @@
 class ParticleEmitter
 {
 public:
+	//! The ParticleManager constructor
+	/*!
+	*/
 	ParticleEmitter();
+
+	//! The emitParticles Method of ParticalEmitter
+	/*!
+	Spawns a given Amount of Particals and sets all there Attributes
+	*/
 	void ParticleEmitter::emitParticles();
+	//! The update Method of ParticalEmitter
+	/*!
+	Gets the ParticalManager is called for the first time
+	If the number of past frames is more or equal then the spawnrate 
+	of the ParticalEmmiter there will spawn a new bunch of Particals
+	@param speedModifier the speed of the game
+	*/
 	void ParticleEmitter::update(float speedModifier);
+
+	//! The setColor Method of ParticalEmitter
+	/*!
+	sets the color of the particals that have to been spawned
+	@param r How much Red
+	@param g How much Green
+	@param b How much Blue
+	@param a How much the Opacity is
+	*/
 	void ParticleEmitter::setColor(int r, int g, int b, int a);
+
+	//! The setColor Method of ParticalEmitter
+	/*!
+	sets the color of the particals that have to been spawned
+	@param color the base Color of the Particals
+	@param a How much the Opacity is
+	*/
 	void ParticleEmitter::setColor(sf::Color color, int a = 255);
-	bool ParticleEmitter::isEmitting();
-	float ParticleEmitter::getFrequency();
-	int ParticleEmitter::getParticleAmount();
-	bool ParticleEmitter::getGore();
+
+	//! The deconstructor of a ParticleEmitter
+	/*!
+
+	*/
 	~ParticleEmitter();
 protected:
 	sf::Color particleColor;

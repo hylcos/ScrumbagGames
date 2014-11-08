@@ -110,7 +110,7 @@ public:
 	//! The getWeapons method of the Player
 	/*!
 	Return one of the selected weapons
-	@param the number of which of the three weapons has to be returned
+	@param value the number of which of the three weapons has to be returned
 	@return the Weapon which corresponds with the given value
 	*/
 	Weapon * Player::getWeapons(int value);
@@ -140,7 +140,7 @@ public:
 	*/
 	void Player::fullHealth();
 
-	//! The deconstructor  of a Powerup
+	//! The deconstructor  of a Player
 	/*!
 
 	*/

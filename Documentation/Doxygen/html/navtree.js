@@ -22,7 +22,7 @@ var NAVTREEINDEX =
 [
 "_animation_8h_source.html",
 "class_level_controller.html#a8e3f9f2081f00f3e1ade44eb7e8c24ad",
-"class_upgrade.html#a680e5842436c75191a9b0564e20ab70e"
+"class_weapon.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

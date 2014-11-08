@@ -119,29 +119,35 @@ $(document).ready(function(){initNavTree('_weapon_manager_8h_source.html','');})
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_manager.html#a6c96a12d89dc2e500fe830ce58d59d00">WeaponManager::load</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_gun.html">Gun</a> * pistol;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_gun.html">Gun</a> * rifle;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_gun.html">Gun</a> * shotgun;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_gun.html">Gun</a> * sniper;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_knife.html">Knife</a> * dagger;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_knife.html">Knife</a> * sword;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * <a class="code" href="class_weapon_manager.html#a06a726626541c01ed4074e3a02d2d1fc">WeaponManager::getOtherWeapon</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_weapon_manager.html#a0b44e6bfd98a88d8a234290dc187dcdd">   26</a></span>&#160;    <a class="code" href="class_gun.html">Gun</a> * <a class="code" href="class_weapon_manager.html#a0b44e6bfd98a88d8a234290dc187dcdd">pistol</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_weapon_manager.html#a4dd7fad16e730b78d2fd6209328de5f2">   28</a></span>&#160;    <a class="code" href="class_gun.html">Gun</a> * <a class="code" href="class_weapon_manager.html#a4dd7fad16e730b78d2fd6209328de5f2">rifle</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_weapon_manager.html#abbd732d9ef93c6c3dd084191b22094bd">   30</a></span>&#160;    <a class="code" href="class_gun.html">Gun</a> * <a class="code" href="class_weapon_manager.html#abbd732d9ef93c6c3dd084191b22094bd">shotgun</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_weapon_manager.html#aec3cb2dcbab3df14dbdad8fad0344493">   32</a></span>&#160;    <a class="code" href="class_gun.html">Gun</a> * <a class="code" href="class_weapon_manager.html#aec3cb2dcbab3df14dbdad8fad0344493">sniper</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_weapon_manager.html#a2260b2f3e124d37a07a8a87db2e6f61b">   34</a></span>&#160;    <a class="code" href="class_knife.html">Knife</a> * <a class="code" href="class_weapon_manager.html#a2260b2f3e124d37a07a8a87db2e6f61b">dagger</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_weapon_manager.html#aed3158ed3033cc4edb359153c9554e60">   36</a></span>&#160;    <a class="code" href="class_knife.html">Knife</a> * <a class="code" href="class_weapon_manager.html#aed3158ed3033cc4edb359153c9554e60">sword</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_weapon_manager.html#a240f037e5294e11081ca3cce1ab4651e">WeaponManager::~WeaponManager</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * <a class="code" href="class_weapon_manager.html#a06a726626541c01ed4074e3a02d2d1fc">WeaponManager::getOtherWeapon</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">bool</span> isLoaded = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_weapon_manager.html#a240f037e5294e11081ca3cce1ab4651e">WeaponManager::~WeaponManager</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">bool</span> isLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;};</div>
 <div class="ttc" id="class_weapon_manager_html_a240f037e5294e11081ca3cce1ab4651e"><div class="ttname"><a href="class_weapon_manager.html#a240f037e5294e11081ca3cce1ab4651e">WeaponManager::~WeaponManager</a></div><div class="ttdeci">~WeaponManager()</div><div class="ttdoc">The deconstructor of a WeaponManager. </div><div class="ttdef"><b>Definition:</b> WeaponManager.cpp:37</div></div>
 <div class="ttc" id="class_weapon_html"><div class="ttname"><a href="class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition:</b> Weapon.h:4</div></div>
+<div class="ttc" id="class_weapon_manager_html_abbd732d9ef93c6c3dd084191b22094bd"><div class="ttname"><a href="class_weapon_manager.html#abbd732d9ef93c6c3dd084191b22094bd">WeaponManager::shotgun</a></div><div class="ttdeci">Gun * shotgun</div><div class="ttdoc">The Gun Weapon shotgun. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:30</div></div>
+<div class="ttc" id="class_weapon_manager_html_a4dd7fad16e730b78d2fd6209328de5f2"><div class="ttname"><a href="class_weapon_manager.html#a4dd7fad16e730b78d2fd6209328de5f2">WeaponManager::rifle</a></div><div class="ttdeci">Gun * rifle</div><div class="ttdoc">The Gun Weapon rifle. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:28</div></div>
+<div class="ttc" id="class_weapon_manager_html_aed3158ed3033cc4edb359153c9554e60"><div class="ttname"><a href="class_weapon_manager.html#aed3158ed3033cc4edb359153c9554e60">WeaponManager::sword</a></div><div class="ttdeci">Knife * sword</div><div class="ttdoc">The Knife Weapon Sword. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:36</div></div>
+<div class="ttc" id="class_weapon_manager_html_a2260b2f3e124d37a07a8a87db2e6f61b"><div class="ttname"><a href="class_weapon_manager.html#a2260b2f3e124d37a07a8a87db2e6f61b">WeaponManager::dagger</a></div><div class="ttdeci">Knife * dagger</div><div class="ttdoc">The Knife Weapon Dagger. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:34</div></div>
 <div class="ttc" id="class_knife_html"><div class="ttname"><a href="class_knife.html">Knife</a></div><div class="ttdoc">The knife header file. </div><div class="ttdef"><b>Definition:</b> Knife.h:12</div></div>
+<div class="ttc" id="class_weapon_manager_html_aec3cb2dcbab3df14dbdad8fad0344493"><div class="ttname"><a href="class_weapon_manager.html#aec3cb2dcbab3df14dbdad8fad0344493">WeaponManager::sniper</a></div><div class="ttdeci">Gun * sniper</div><div class="ttdoc">The Gun Weapon Sniper. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:32</div></div>
 <div class="ttc" id="class_weapon_manager_html_a06a726626541c01ed4074e3a02d2d1fc"><div class="ttname"><a href="class_weapon_manager.html#a06a726626541c01ed4074e3a02d2d1fc">WeaponManager::getOtherWeapon</a></div><div class="ttdeci">Weapon * getOtherWeapon(Weapon *weapon)</div><div class="ttdoc">The getOtherWeapon of the WeaponManager. </div><div class="ttdef"><b>Definition:</b> WeaponManager.cpp:18</div></div>
 <div class="ttc" id="class_weapon_manager_html_a397c93681bbba0a24f285d2e699b82f3"><div class="ttname"><a href="class_weapon_manager.html#a397c93681bbba0a24f285d2e699b82f3">WeaponManager::getInstance</a></div><div class="ttdeci">static WeaponManager &amp; getInstance()</div><div class="ttdoc">The getInsatnce method of the WeaponManager. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:13</div></div>
 <div class="ttc" id="class_weapon_manager_html"><div class="ttname"><a href="class_weapon_manager.html">WeaponManager</a></div><div class="ttdef"><b>Definition:</b> WeaponManager.h:4</div></div>
+<div class="ttc" id="class_weapon_manager_html_a0b44e6bfd98a88d8a234290dc187dcdd"><div class="ttname"><a href="class_weapon_manager.html#a0b44e6bfd98a88d8a234290dc187dcdd">WeaponManager::pistol</a></div><div class="ttdeci">Gun * pistol</div><div class="ttdoc">The Gun Weapon pistol. </div><div class="ttdef"><b>Definition:</b> WeaponManager.h:26</div></div>
 <div class="ttc" id="class_gun_html"><div class="ttname"><a href="class_gun.html">Gun</a></div><div class="ttdoc">The Gun header file. </div><div class="ttdef"><b>Definition:</b> Gun.h:12</div></div>
 <div class="ttc" id="class_weapon_manager_html_a6c96a12d89dc2e500fe830ce58d59d00"><div class="ttname"><a href="class_weapon_manager.html#a6c96a12d89dc2e500fe830ce58d59d00">WeaponManager::load</a></div><div class="ttdeci">void load()</div><div class="ttdoc">The load method of the WeaponManager. </div><div class="ttdef"><b>Definition:</b> WeaponManager.cpp:2</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -150,7 +156,7 @@ $(document).ready(function(){initNavTree('_weapon_manager_8h_source.html','');})
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><b>WeaponManager.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 17:15:49 for Shoot The Bully by
+    <li class="footer">Generated on Sat Nov 8 2014 18:27:09 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

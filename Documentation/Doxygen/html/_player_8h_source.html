@@ -122,60 +122,91 @@ $(document).ready(function(){initNavTree('_player_8h_source.html','');});
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a79a7509b3cde94c77b79247fa46b13dd">Player::move</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a70e7b6ef62c5b8080e454edcb15cacc8">Player::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a5e0147aee1248db63417987b9a203a9a">Player::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#af81c4b00747424065dae4984f4f6c57e">Player::setRotation</a>(<span class="keywordtype">float</span> rotation) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">int</span> Player::getHp();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> Player::reduceHP(<span class="keywordtype">int</span> damage);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a5e0147aee1248db63417987b9a203a9a">Player::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordtype">void</span> Player::addMoney(<span class="keywordtype">int</span> money);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> Player::setMoney(<span class="keywordtype">int</span> money);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">int</span> Player::getMoney();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> Player::setNextRound(<span class="keywordtype">bool</span> value);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> Player::getNextRound();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> Player::setWeapons(<a class="code" href="class_weapon.html">Weapon</a> * weapon1, <a class="code" href="class_weapon.html">Weapon</a> * weapon2, <a class="code" href="class_weapon.html">Weapon</a> * weapon3);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * Player::getSelectedWeapon();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * Player::getWeapons(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    sf::Vector2u <a class="code" href="class_player.html#a9b815bbbc9cb8332549acc10d03c7c0b">Player::getSize</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">bool</span> Player::getgameOver();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">void</span> Player::doubleSpeed();</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> Player::fullHealth();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ~<a class="code" href="class_player.html">Player</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#af81c4b00747424065dae4984f4f6c57e">Player::setRotation</a>(<span class="keywordtype">float</span> rotation) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#aa6479f194f9bb44b09adaf3b04a5594d">Player::getHp</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#ae03528c4ade65b66ed097a2b622d59a5">Player::reduceHP</a>(<span class="keywordtype">int</span> damage);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    sf::Texture tex1, tex2, tex3;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    sf::Sprite curSprite;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">float</span> rotation = 0.0;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">float</span> doubleSpeedTimer, invincibleTimer, gameOverTimer;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">int</span> curWeapon = 0;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">bool</span> invincible, gameOver = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * selectedWeapons[3];</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">bool</span> isOnTable = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">int</span> hp = 100;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">int</span> speed = 1;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> framesTillNextParticle = 0;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> walkSound = 0;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">float</span> toNextWalkSound = 0;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">int</span> money = 0;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> nextRound = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;};</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a0f592e3e7e589f40dc5144d1d58283f2">Player::addMoney</a>(<span class="keywordtype">int</span> money);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a6e78f6a0e2e73323bf200a9e1c2e0ac6">Player::setMoney</a>(<span class="keywordtype">int</span> money);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_player.html#ac45154df7c4eb2d1d58255c3ff1c55dd">Player::getMoney</a>();</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a7429c38bfd16ded1b2a11af1b0673ba3">Player::setNextRound</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_player.html#ad0c154bef16fa0c1c3e4c6efb124d420">Player::getNextRound</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a0fca3ee9cea38e8944663f19a0cdb27b">Player::setWeapons</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon1, <a class="code" href="class_weapon.html">Weapon</a> * weapon2, <a class="code" href="class_weapon.html">Weapon</a> * weapon3);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * <a class="code" href="class_player.html#ab087a0124f92c63e91cc846db9b82b76">Player::getSelectedWeapon</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * <a class="code" href="class_player.html#af442b7ed41244bba619d1a2ef8812123">Player::getWeapons</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    sf::Vector2u <a class="code" href="class_player.html#a9b815bbbc9cb8332549acc10d03c7c0b">Player::getSize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_player.html#a1d3d8988bfe2487e1ef7d82502171c8e">Player::getgameOver</a>();</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a8e4910c81921d28b35878db4395b1f47">Player::doubleSpeed</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_player.html#a807069673b66d211110c018998456d3e">Player::fullHealth</a>();</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <a class="code" href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">~Player</a>();</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    sf::Texture tex1, tex2, tex3;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    sf::Sprite curSprite;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">float</span> rotation = 0.0;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">float</span> doubleSpeedTimer, invincibleTimer, gameOverTimer;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">int</span> curWeapon = 0;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">bool</span> invincible, gameOver = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * selectedWeapons[3];</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">bool</span> isOnTable = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">int</span> hp = 100;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">int</span> speed = 1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">int</span> framesTillNextParticle = 0;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">int</span> walkSound = 0;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">float</span> toNextWalkSound = 0;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordtype">int</span> money = 0;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">bool</span> nextRound = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;};</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
 <div class="ttc" id="class_animation_html"><div class="ttname"><a href="class_animation.html">Animation</a></div><div class="ttdef"><b>Definition:</b> Animation.h:15</div></div>
-<div class="ttc" id="class_player_html_a5e0147aee1248db63417987b9a203a9a"><div class="ttname"><a href="class_player.html#a5e0147aee1248db63417987b9a203a9a">Player::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">Draw draws the current texture on the window. </div><div class="ttdef"><b>Definition:</b> Player.cpp:304</div></div>
+<div class="ttc" id="class_player_html_ac45154df7c4eb2d1d58255c3ff1c55dd"><div class="ttname"><a href="class_player.html#ac45154df7c4eb2d1d58255c3ff1c55dd">Player::getMoney</a></div><div class="ttdeci">int getMoney()</div><div class="ttdoc">The getMoney method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:335</div></div>
+<div class="ttc" id="class_player_html_a5e0147aee1248db63417987b9a203a9a"><div class="ttname"><a href="class_player.html#a5e0147aee1248db63417987b9a203a9a">Player::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The Draw method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:305</div></div>
 <div class="ttc" id="class_weapon_html"><div class="ttname"><a href="class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition:</b> Weapon.h:4</div></div>
+<div class="ttc" id="class_player_html_a0fca3ee9cea38e8944663f19a0cdb27b"><div class="ttname"><a href="class_player.html#a0fca3ee9cea38e8944663f19a0cdb27b">Player::setWeapons</a></div><div class="ttdeci">void setWeapons(Weapon *weapon1, Weapon *weapon2, Weapon *weapon3)</div><div class="ttdoc">The setWeapons method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:313</div></div>
+<div class="ttc" id="class_player_html_a1d3d8988bfe2487e1ef7d82502171c8e"><div class="ttname"><a href="class_player.html#a1d3d8988bfe2487e1ef7d82502171c8e">Player::getgameOver</a></div><div class="ttdeci">bool getgameOver()</div><div class="ttdoc">The getgameOver method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:52</div></div>
 <div class="ttc" id="class_player_html_affe0cc3cb714f6deb4e62f0c0d3f1fd8"><div class="ttname"><a href="class_player.html#affe0cc3cb714f6deb4e62f0c0d3f1fd8">Player::Player</a></div><div class="ttdeci">Player()</div><div class="ttdoc">Constructor method for Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:20</div></div>
+<div class="ttc" id="class_player_html_a6e78f6a0e2e73323bf200a9e1c2e0ac6"><div class="ttname"><a href="class_player.html#a6e78f6a0e2e73323bf200a9e1c2e0ac6">Player::setMoney</a></div><div class="ttdeci">void setMoney(int money)</div><div class="ttdoc">The setMoney method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:332</div></div>
 <div class="ttc" id="class_player_html_a79a7509b3cde94c77b79247fa46b13dd"><div class="ttname"><a href="class_player.html#a79a7509b3cde94c77b79247fa46b13dd">Player::move</a></div><div class="ttdeci">void move(float speedModifier) override</div><div class="ttdoc">The Move method for Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:86</div></div>
-<div class="ttc" id="class_player_html_a9b815bbbc9cb8332549acc10d03c7c0b"><div class="ttname"><a href="class_player.html#a9b815bbbc9cb8332549acc10d03c7c0b">Player::getSize</a></div><div class="ttdeci">sf::Vector2u getSize() override</div><div class="ttdoc">The get size method of the game object. </div><div class="ttdef"><b>Definition:</b> Player.cpp:346</div></div>
-<div class="ttc" id="class_player_html_af81c4b00747424065dae4984f4f6c57e"><div class="ttname"><a href="class_player.html#af81c4b00747424065dae4984f4f6c57e">Player::setRotation</a></div><div class="ttdeci">void setRotation(float rotation) override</div><div class="ttdoc">setRotation sets the rotation of the animation. </div><div class="ttdef"><b>Definition:</b> Player.cpp:308</div></div>
+<div class="ttc" id="class_player_html_ab087a0124f92c63e91cc846db9b82b76"><div class="ttname"><a href="class_player.html#ab087a0124f92c63e91cc846db9b82b76">Player::getSelectedWeapon</a></div><div class="ttdeci">Weapon * getSelectedWeapon()</div><div class="ttdoc">The getSelectedWeapon method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:318</div></div>
+<div class="ttc" id="class_player_html_a0f592e3e7e589f40dc5144d1d58283f2"><div class="ttname"><a href="class_player.html#a0f592e3e7e589f40dc5144d1d58283f2">Player::addMoney</a></div><div class="ttdeci">void addMoney(int money)</div><div class="ttdoc">The addMoney method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:328</div></div>
+<div class="ttc" id="class_player_html_a807069673b66d211110c018998456d3e"><div class="ttname"><a href="class_player.html#a807069673b66d211110c018998456d3e">Player::fullHealth</a></div><div class="ttdeci">void fullHealth()</div><div class="ttdoc">The fullHealth method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:343</div></div>
+<div class="ttc" id="class_player_html_ae03528c4ade65b66ed097a2b622d59a5"><div class="ttname"><a href="class_player.html#ae03528c4ade65b66ed097a2b622d59a5">Player::reduceHP</a></div><div class="ttdeci">void reduceHP(int damage)</div><div class="ttdoc">The reduceHP method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:42</div></div>
+<div class="ttc" id="class_player_html_a9b815bbbc9cb8332549acc10d03c7c0b"><div class="ttname"><a href="class_player.html#a9b815bbbc9cb8332549acc10d03c7c0b">Player::getSize</a></div><div class="ttdeci">sf::Vector2u getSize() override</div><div class="ttdoc">gets the Size of the Table </div><div class="ttdef"><b>Definition:</b> Player.cpp:347</div></div>
+<div class="ttc" id="class_player_html_af81c4b00747424065dae4984f4f6c57e"><div class="ttname"><a href="class_player.html#af81c4b00747424065dae4984f4f6c57e">Player::setRotation</a></div><div class="ttdeci">void setRotation(float rotation) override</div><div class="ttdoc">The setRotation method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:309</div></div>
+<div class="ttc" id="class_player_html_ad0c154bef16fa0c1c3e4c6efb124d420"><div class="ttname"><a href="class_player.html#ad0c154bef16fa0c1c3e4c6efb124d420">Player::getNextRound</a></div><div class="ttdeci">bool getNextRound()</div><div class="ttdoc">The getNextRound method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:354</div></div>
+<div class="ttc" id="class_player_html_a8e4910c81921d28b35878db4395b1f47"><div class="ttname"><a href="class_player.html#a8e4910c81921d28b35878db4395b1f47">Player::doubleSpeed</a></div><div class="ttdeci">void doubleSpeed()</div><div class="ttdoc">The doubleSpeed method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:339</div></div>
+<div class="ttc" id="class_player_html_aa6479f194f9bb44b09adaf3b04a5594d"><div class="ttname"><a href="class_player.html#aa6479f194f9bb44b09adaf3b04a5594d">Player::getHp</a></div><div class="ttdeci">int getHp()</div><div class="ttdoc">The getHp method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:325</div></div>
+<div class="ttc" id="class_player_html_a749d2c00e1fe0f5c2746f7505a58c062"><div class="ttname"><a href="class_player.html#a749d2c00e1fe0f5c2746f7505a58c062">Player::~Player</a></div><div class="ttdeci">~Player()</div><div class="ttdoc">The deconstructor of a Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:357</div></div>
+<div class="ttc" id="class_player_html_af442b7ed41244bba619d1a2ef8812123"><div class="ttname"><a href="class_player.html#af442b7ed41244bba619d1a2ef8812123">Player::getWeapons</a></div><div class="ttdeci">Weapon * getWeapons(int value)</div><div class="ttdoc">The getWeapons method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:322</div></div>
 <div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:9</div></div>
+<div class="ttc" id="class_player_html_a7429c38bfd16ded1b2a11af1b0673ba3"><div class="ttname"><a href="class_player.html#a7429c38bfd16ded1b2a11af1b0673ba3">Player::setNextRound</a></div><div class="ttdeci">void setNextRound(bool value)</div><div class="ttdoc">The setNextRound method of the Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:351</div></div>
 <div class="ttc" id="class_player_html_a70e7b6ef62c5b8080e454edcb15cacc8"><div class="ttname"><a href="class_player.html#a70e7b6ef62c5b8080e454edcb15cacc8">Player::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The Move method for Player. </div><div class="ttdef"><b>Definition:</b> Player.cpp:55</div></div>
 <div class="ttc" id="class_particle_emitter_html"><div class="ttname"><a href="class_particle_emitter.html">ParticleEmitter</a></div><div class="ttdef"><b>Definition:</b> ParticleEmitter.h:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -184,7 +215,7 @@ $(document).ready(function(){initNavTree('_player_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><b>Player.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 17:15:49 for Shoot The Bully by
+    <li class="footer">Generated on Sat Nov 8 2014 18:27:09 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

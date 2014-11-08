@@ -112,43 +112,81 @@ $(document).ready(function(){initNavTree('_particle_8h_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_game_object.html">GameObject</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_particle.html">Particle</a>(sf::Vector2f pos);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> setColor(sf::Color);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> setSpeed(<span class="keywordtype">float</span> speed);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> setDeceleration(<span class="keywordtype">float</span> dec);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> setDirection(<span class="keywordtype">float</span> dir, <span class="keywordtype">float</span> dev);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> setRotation(<span class="keywordtype">float</span> rot, <span class="keywordtype">float</span> dev);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> setSize(<span class="keywordtype">float</span> size);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> setMinimumSpeed(<span class="keywordtype">float</span> min);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> setGore(<span class="keywordtype">bool</span> g);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a9bd18a091946b1814f685118dfe66a1e">Particle::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a6273669457c67cde70b992a59e589022">Particle::move</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#afa25f9b8898269ebf36593d7176b3145">Particle::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">bool</span> getGore();</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    ~<a class="code" href="class_particle.html">Particle</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> rotation;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">float</span> direction;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">float</span> particleSpeed;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> deceleration;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> minimumSpeed;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> isGore;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    sf::Vector2f prevPosition{ 0, 0 };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    sf::CircleShape particle;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_particle.html#aeb1cb89169a8cd1ebdf9620e6f2f6566">Particle</a>(sf::Vector2f pos);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#ad7dcfb0c3c1b11d35d321b7918bd546f">setColor</a>(sf::Color color);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#ac57a8908b8ab1a1b9bb29aa02e347f56">setSpeed</a>(<span class="keywordtype">float</span> speed);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a87a76728e3b91795c52beb9257e7e9df">setDeceleration</a>(<span class="keywordtype">float</span> dec);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a2e6c588a1cb9607ef70f3d97edefd780">setDirection</a>(<span class="keywordtype">float</span> dir, <span class="keywordtype">float</span> dev);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a8472fac4770b3d198426e480ccef97d5">setRotation</a>(<span class="keywordtype">float</span> rot, <span class="keywordtype">float</span> dev);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a9cbcb7c7f4b1f1d11033a9eea16bae2c">setSize</a>(<span class="keywordtype">float</span> size);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#aed19fba4d00acaa104bf1030c99b99e9">setMinimumSpeed</a>(<span class="keywordtype">float</span> min);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a88d3824351cadeda57b752a6bc14d175">setGore</a>(<span class="keywordtype">bool</span> g);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a9bd18a091946b1814f685118dfe66a1e">Particle::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#a6273669457c67cde70b992a59e589022">Particle::move</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle.html#afa25f9b8898269ebf36593d7176b3145">Particle::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_particle.html#a22249cbdfd21c42b65db1ce9936202c9">getGore</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="class_particle.html#ad030d0fe7b88cf81744b127c99244ff4">~Particle</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">float</span> rotation;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">float</span> direction;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">float</span> particleSpeed;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">float</span> deceleration;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">float</span> minimumSpeed;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">bool</span> isGore;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    sf::Vector2f prevPosition{ 0, 0 };</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    sf::CircleShape particle;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;};</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;</div>
+<div class="ttc" id="class_particle_html_a88d3824351cadeda57b752a6bc14d175"><div class="ttname"><a href="class_particle.html#a88d3824351cadeda57b752a6bc14d175">Particle::setGore</a></div><div class="ttdeci">void setGore(bool g)</div><div class="ttdoc">The setGore method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:50</div></div>
+<div class="ttc" id="class_particle_html_a87a76728e3b91795c52beb9257e7e9df"><div class="ttname"><a href="class_particle.html#a87a76728e3b91795c52beb9257e7e9df">Particle::setDeceleration</a></div><div class="ttdeci">void setDeceleration(float dec)</div><div class="ttdoc">The setDeceleration method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:20</div></div>
+<div class="ttc" id="class_particle_html_ad030d0fe7b88cf81744b127c99244ff4"><div class="ttname"><a href="class_particle.html#ad030d0fe7b88cf81744b127c99244ff4">Particle::~Particle</a></div><div class="ttdeci">~Particle()</div><div class="ttdoc">The deconstructor of a Particle. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:77</div></div>
 <div class="ttc" id="class_particle_html"><div class="ttname"><a href="class_particle.html">Particle</a></div><div class="ttdef"><b>Definition:</b> Particle.h:5</div></div>
+<div class="ttc" id="class_particle_html_a22249cbdfd21c42b65db1ce9936202c9"><div class="ttname"><a href="class_particle.html#a22249cbdfd21c42b65db1ce9936202c9">Particle::getGore</a></div><div class="ttdeci">bool getGore()</div><div class="ttdoc">The getGore Method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:73</div></div>
+<div class="ttc" id="class_particle_html_a2e6c588a1cb9607ef70f3d97edefd780"><div class="ttname"><a href="class_particle.html#a2e6c588a1cb9607ef70f3d97edefd780">Particle::setDirection</a></div><div class="ttdeci">void setDirection(float dir, float dev)</div><div class="ttdoc">The setDirection method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:24</div></div>
+<div class="ttc" id="class_particle_html_ad7dcfb0c3c1b11d35d321b7918bd546f"><div class="ttname"><a href="class_particle.html#ad7dcfb0c3c1b11d35d321b7918bd546f">Particle::setColor</a></div><div class="ttdeci">void setColor(sf::Color color)</div><div class="ttdoc">The setColor method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:12</div></div>
+<div class="ttc" id="class_particle_html_ac57a8908b8ab1a1b9bb29aa02e347f56"><div class="ttname"><a href="class_particle.html#ac57a8908b8ab1a1b9bb29aa02e347f56">Particle::setSpeed</a></div><div class="ttdeci">void setSpeed(float speed)</div><div class="ttdoc">The setSpeed method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:16</div></div>
 <div class="ttc" id="class_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">The game object header file. </div><div class="ttdef"><b>Definition:</b> GameObject.h:7</div></div>
-<div class="ttc" id="class_particle_html_afa25f9b8898269ebf36593d7176b3145"><div class="ttname"><a href="class_particle.html#afa25f9b8898269ebf36593d7176b3145">Particle::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the game object. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:69</div></div>
-<div class="ttc" id="class_particle_html_a6273669457c67cde70b992a59e589022"><div class="ttname"><a href="class_particle.html#a6273669457c67cde70b992a59e589022">Particle::move</a></div><div class="ttdeci">void move(float speedModifier) override</div><div class="ttdoc">The move method of the game object. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:62</div></div>
-<div class="ttc" id="class_particle_html_a9bd18a091946b1814f685118dfe66a1e"><div class="ttname"><a href="class_particle.html#a9bd18a091946b1814f685118dfe66a1e">Particle::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the game object. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:54</div></div>
+<div class="ttc" id="class_particle_html_aed19fba4d00acaa104bf1030c99b99e9"><div class="ttname"><a href="class_particle.html#aed19fba4d00acaa104bf1030c99b99e9">Particle::setMinimumSpeed</a></div><div class="ttdeci">void setMinimumSpeed(float min)</div><div class="ttdoc">The setMinimumSpeed method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:46</div></div>
+<div class="ttc" id="class_particle_html_afa25f9b8898269ebf36593d7176b3145"><div class="ttname"><a href="class_particle.html#afa25f9b8898269ebf36593d7176b3145">Particle::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw Method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:69</div></div>
+<div class="ttc" id="class_particle_html_a6273669457c67cde70b992a59e589022"><div class="ttname"><a href="class_particle.html#a6273669457c67cde70b992a59e589022">Particle::move</a></div><div class="ttdeci">void move(float speedModifier) override</div><div class="ttdoc">The move method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:62</div></div>
+<div class="ttc" id="class_particle_html_aeb1cb89169a8cd1ebdf9620e6f2f6566"><div class="ttname"><a href="class_particle.html#aeb1cb89169a8cd1ebdf9620e6f2f6566">Particle::Particle</a></div><div class="ttdeci">Particle(sf::Vector2f pos)</div><div class="ttdoc">The Particle constructor. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:7</div></div>
+<div class="ttc" id="class_particle_html_a9cbcb7c7f4b1f1d11033a9eea16bae2c"><div class="ttname"><a href="class_particle.html#a9cbcb7c7f4b1f1d11033a9eea16bae2c">Particle::setSize</a></div><div class="ttdeci">void setSize(float size)</div><div class="ttdoc">The setSize method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:42</div></div>
+<div class="ttc" id="class_particle_html_a9bd18a091946b1814f685118dfe66a1e"><div class="ttname"><a href="class_particle.html#a9bd18a091946b1814f685118dfe66a1e">Particle::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The Update method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:54</div></div>
+<div class="ttc" id="class_particle_html_a8472fac4770b3d198426e480ccef97d5"><div class="ttname"><a href="class_particle.html#a8472fac4770b3d198426e480ccef97d5">Particle::setRotation</a></div><div class="ttdeci">void setRotation(float rot, float dev)</div><div class="ttdoc">The setRotation method of Partical. </div><div class="ttdef"><b>Definition:</b> Particle.cpp:33</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><b>Particle.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 17:15:49 for Shoot The Bully by
+    <li class="footer">Generated on Sat Nov 8 2014 18:27:08 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

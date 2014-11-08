@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['emitparticles',['emitParticles',['../class_particle_emitter.html#a59e863f0386f1de946bb5f5a2eef3358',1,'ParticleEmitter']]],
   ['endoffile',['endOfFile',['../classend_of_file.html',1,'']]],
   ['enemy',['Enemy',['../class_enemy.html',1,'Enemy'],['../class_enemy.html#a94f30d348b6d2840fd71675472ba38dd',1,'Enemy::Enemy()'],['../class_enemy.html#a46078d479d4ca128752f2676fb2f5321',1,'Enemy::Enemy(Initializer initializer)']]],
   ['ethan',['ethan',['../class_enemy.html#ae1c2e8a37b9d60c81a670c30bf523576',1,'Enemy']]],

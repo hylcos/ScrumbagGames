@@ -53,18 +53,6 @@ void ParticleEmitter::setColor(sf::Color color, int a){
 	particleColor.a = a;
 }
 
-float ParticleEmitter::getFrequency(){
-	return frequency;
-}
-
-int ParticleEmitter::getParticleAmount(){
-	return amount;
-}
-
-bool ParticleEmitter::getGore(){
-	return isGore;
-}
-
 ParticleEmitter::~ParticleEmitter()
 {
 }

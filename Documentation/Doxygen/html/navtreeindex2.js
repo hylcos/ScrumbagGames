@@ -1,9 +1,5 @@
 var NAVTREEINDEX2 =
 {
-"class_upgrade.html#a680e5842436c75191a9b0564e20ab70e":[0,0,52,5],
-"class_upgrade.html#a71242d7205c08174f064f4b5b39dedc5":[0,0,52,2],
-"class_upgrade.html#a8e86cea146dd2e9a4c69781d9c7d3c8d":[0,0,52,7],
-"class_upgrade.html#aaad9a32e9ef265c0b7a1a63ea599a225":[0,0,52,1],
 "class_weapon.html":[0,0,53],
 "class_weapon.html#a06ca67c2d2f869c6a4fc7208d4ad56b5":[0,0,53,16],
 "class_weapon.html#a098b1074ff1099e9fbd83d1186b8f18f":[0,0,53,17],
@@ -108,8 +104,8 @@ var NAVTREEINDEX2 =
 "dunken_boss_8h_source.html":[1,0,0,0,1],
 "ethan_boss_8h_source.html":[1,0,0,0,2],
 "files.html":[1,0],
-"functions.html":[0,3,0,0],
 "functions.html":[0,3,0],
+"functions.html":[0,3,0,0],
 "functions_b.html":[0,3,0,1],
 "functions_c.html":[0,3,0,2],
 "functions_d.html":[0,3,0,3],

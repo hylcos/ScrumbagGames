@@ -22,11 +22,17 @@ public:
 	*/
 	void WeaponManager::load();
 
+	//! The Gun Weapon pistol
 	Gun * pistol;
+	//! The Gun Weapon rifle
 	Gun * rifle;
+	//! The Gun Weapon shotgun
 	Gun * shotgun;
+	//! The Gun Weapon Sniper
 	Gun * sniper;
+	//! The Knife Weapon Dagger
 	Knife * dagger;
+	//! The Knife Weapon Sword
 	Knife * sword;
 
 	//! The getOtherWeapon of the WeaponManager

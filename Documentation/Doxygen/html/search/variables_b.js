@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['zoey',['zoey',['../class_enemy.html#a05a3bacef0c241d5bc435d3b2cad0640',1,'Enemy']]]
+  ['tonext',['toNext',['../class_animation.html#afd9ad77afa13d0dc50586e0780ab6b20',1,'Animation']]]
 ];

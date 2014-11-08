@@ -8,25 +8,57 @@ Inherits \hyperlink{class_game_object}{Game\+Object}.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_particle_manager_a651901462992745401596956c790d87d}{void {\bfseries add\+Particle} (\hyperlink{class_particle}{Particle} $\ast$p)}\label{class_particle_manager_a651901462992745401596956c790d87d}
-
-\item 
+\hyperlink{class_particle_manager_a36f2371b06ef7bd96fc1e0cb1fcebd66}{Particle\+Manager} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_particle_manager}{Particle\+Manager} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_manager_a651901462992745401596956c790d87d}{add\+Particle} (\hyperlink{class_particle}{Particle} $\ast$p)
+\begin{DoxyCompactList}\small\item\em The add\+Particle Method of Partical\+Manager. \end{DoxyCompactList}\item 
 void \hyperlink{class_particle_manager_a2c786926fc1cd9992c518b3ea4ee07cb}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update Method of Partical\+Manager. \end{DoxyCompactList}\item 
 void \hyperlink{class_particle_manager_a77357f72908d4fa5eea451baee1b354d}{move} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update Method of Partical\+Manager. \end{DoxyCompactList}\item 
 void \hyperlink{class_particle_manager_a03682007d1bedb0f00795026f14a517c}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
-\hypertarget{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}{void {\bfseries remove\+Object} (\hyperlink{class_particle}{Particle} $\ast$p)}\label{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}
+\begin{DoxyCompactList}\small\item\em The draw Method of Partical\+Manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}{remove\+Object} (\hyperlink{class_particle}{Particle} $\ast$p)
+\begin{DoxyCompactList}\small\item\em The remove\+Object Method of Partical\+Manager. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}{remove\+All\+Objects} (\hyperlink{class_particle}{Particle} $\ast$p)
+\begin{DoxyCompactList}\small\item\em The remove\+All\+Objects Method of Partical\+Manager. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_manager_a3d3be537ebf5e8d6cd00181bff9dfbd6}{\hyperlink{class_particle_manager_a3d3be537ebf5e8d6cd00181bff9dfbd6}{$\sim$\+Particle\+Manager} ()}\label{class_particle_manager_a3d3be537ebf5e8d6cd00181bff9dfbd6}
 
-\item 
-\hypertarget{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}{void {\bfseries remove\+All\+Objects} (\hyperlink{class_particle}{Particle} $\ast$p)}\label{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The deconstructor of a \hyperlink{class_particle_manager}{Particle\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_particle_manager_a36f2371b06ef7bd96fc1e0cb1fcebd66}{\index{Particle\+Manager@{Particle\+Manager}!Particle\+Manager@{Particle\+Manager}}
+\index{Particle\+Manager@{Particle\+Manager}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{Particle\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Particle\+Manager\+::\+Particle\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_particle_manager_a36f2371b06ef7bd96fc1e0cb1fcebd66}
+
+
+The \hyperlink{class_particle_manager}{Particle\+Manager} constructor. 
+
+Checks if Gore is enabled in the settings 
+
 \subsection{Member Function Documentation}
+\hypertarget{class_particle_manager_a651901462992745401596956c790d87d}{\index{Particle\+Manager@{Particle\+Manager}!add\+Particle@{add\+Particle}}
+\index{add\+Particle@{add\+Particle}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{add\+Particle}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::add\+Particle (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_particle_manager_a651901462992745401596956c790d87d}
+
+
+The add\+Particle Method of Partical\+Manager. 
+
+checks if ( Partical is Gore Partical and Gore is enabled) if so the partical is added to the Particals\+To\+Add vector 
+\begin{DoxyParams}{Parameters}
+{\em p} & partical that has to be added to the partical\+Manager \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_particle_manager_a03682007d1bedb0f00795026f14a517c}{\index{Particle\+Manager@{Particle\+Manager}!draw@{draw}}
 \index{draw@{draw}!Particle\+Manager@{Particle\+Manager}}
 \subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::draw (
@@ -36,11 +68,11 @@ void \hyperlink{class_particle_manager_a03682007d1bedb0f00795026f14a517c}{draw} 
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_manager_a03682007d1bedb0f00795026f14a517c}
 
 
-The draw method of the game object. 
+The draw Method of Partical\+Manager. 
 
-Virtual method that will specify what happens when the game object has to be drawn 
+Calls the draw function in all the Particals 
 \begin{DoxyParams}{Parameters}
-{\em window} & The window the game object has to be drawn in \\
+{\em window} & the screen on which the Particals has to been draw on. \\
 \hline
 \end{DoxyParams}
 
@@ -56,17 +88,49 @@ Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_manager_a77357f72908d4fa5eea451baee1b354d}
 
 
-The move method of the game object. 
+The update Method of Partical\+Manager. 
 
-Virtual method that will specify what happens when the game object is told to move 
+Moves all the Particals to there new Position 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & the framerate that calculate on which speed the Particals have to move \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_game_object_a5929b9837b72ea7d82fda6c5719dd348}{Game\+Object}.
 
+\hypertarget{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}{\index{Particle\+Manager@{Particle\+Manager}!remove\+All\+Objects@{remove\+All\+Objects}}
+\index{remove\+All\+Objects@{remove\+All\+Objects}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{remove\+All\+Objects}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::remove\+All\+Objects (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_particle_manager_a41c792442b70b1f027d9b782fdb73060}
+
+
+The remove\+All\+Objects Method of Partical\+Manager. 
+
+Checks if p exist in Particals Vector. If it does it is deleted 
+\begin{DoxyParams}{Parameters}
+{\em p} & Partical that have to be Removed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}{\index{Particle\+Manager@{Particle\+Manager}!remove\+Object@{remove\+Object}}
+\index{remove\+Object@{remove\+Object}!Particle\+Manager@{Particle\+Manager}}
+\subsubsection[{remove\+Object}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::remove\+Object (
+\begin{DoxyParamCaption}
+\item[{{\bf Particle} $\ast$}]{p}
+\end{DoxyParamCaption}
+)}}\label{class_particle_manager_a1973cc7d0869d695ce1b516dce7584f4}
+
+
+The remove\+Object Method of Partical\+Manager. 
+
+Adds a Partical to the list of Particals that have to been deleted 
+\begin{DoxyParams}{Parameters}
+{\em p} & Partical that have to be Removed \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_particle_manager_a2c786926fc1cd9992c518b3ea4ee07cb}{\index{Particle\+Manager@{Particle\+Manager}!update@{update}}
 \index{update@{update}!Particle\+Manager@{Particle\+Manager}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Manager\+::update (
@@ -76,11 +140,11 @@ Reimplemented from \hyperlink{class_game_object_a5929b9837b72ea7d82fda6c5719dd34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_particle_manager_a2c786926fc1cd9992c518b3ea4ee07cb}
 
 
-The update method of the game object. 
+The update Method of Partical\+Manager. 
 
-Virtual method that will specify what happens when the game object is updated 
+adds Particals\+To\+Add Particals to main Particals Vector Removes all the Particals\+To\+Remove Partical from the Main Particals Vector And Updates all Particals 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & the framerate that calculate on which speed the Particals have to move \\
 \hline
 \end{DoxyParams}
 
