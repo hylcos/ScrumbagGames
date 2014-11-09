@@ -44,6 +44,9 @@ public:
 	void ethanBoss::reduceHP(int damage) override;
 
 	//! hp bar method
+	/*!
+	Shows the hp bar of the Ethan Boss, and changes it according to how much hp the Ethan Boss has left.
+	*/
 	void ethanBoss::showHp();
 	//! The deconstructor of the Ethan Boss
 	/*!

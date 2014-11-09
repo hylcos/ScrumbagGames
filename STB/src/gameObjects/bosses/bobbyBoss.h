@@ -44,6 +44,9 @@ public:
 	void bobbyBoss::reduceHP(int damage) override;
 	
 	//! hp bar method
+	/*!
+	Shows the hp bar of the Bobby Boss, and changes it according to how much hp the Bobby Boss has left.
+	*/
 	void bobbyBoss::showHp();
 	//! The deconstructor of the Bobby Boss
 	/*!

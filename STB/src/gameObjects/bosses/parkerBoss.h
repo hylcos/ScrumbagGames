@@ -44,6 +44,9 @@ public:
 	void parkerBoss::reduceHP(int damage) override;
 
 	//! hp bar method
+	/*!
+	Shows the hp bar of the Parker Boss, and changes it according to how much hp the Parker Boss has left.
+	*/
 	void parkerBoss::showHp();
 	//! The deconstructor of the Parker Boss
 	/*!

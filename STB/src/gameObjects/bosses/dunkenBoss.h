@@ -44,6 +44,9 @@ public:
 	void dunkenBoss::reduceHP(int damage) override;
 
 	//! hp bar method
+	/*!
+	Shows the hp bar of the Dunken Boss, and changes it according to how much hp the Dunken Boss has left.
+	*/
 	void dunkenBoss::showHp();
 	//! The deconstructor of the Dunken Boss
 	/*!

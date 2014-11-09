@@ -44,6 +44,9 @@ public:
 	void zoeyBoss::reduceHP(int damage) override;
 
 	//! hp bar method
+	/*!
+	Shows the hp bar of the Zoey Boss, and changes it according to how much hp the Zoey Boss has left.
+	*/
 	void zoeyBoss::showHp();
 	//! The deconstructor of the Zoey Boss
 	/*!
