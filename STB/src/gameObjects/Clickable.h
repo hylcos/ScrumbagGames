@@ -35,11 +35,18 @@ public:
 	/*!
 	In this method there will be specified what has to happen when this game object is clicked.
 	*/
-
-	//TODO: make virtual.
 	virtual void Clickable::click();
 
+	//! The release method for the clickable class
+	/*!
+	In this method there will be specified what has to happen when this game object is released.
+	*/
 	virtual void Clickable::release();
+
+	//! The press method for the clickable class
+	/*!
+	In this method there will be specified what has to happen when this game object is press.
+	*/
 	virtual void Clickable::press();
 
 	//! The deconstructor of the clickable class

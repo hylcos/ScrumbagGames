@@ -19,45 +19,47 @@ public:
 	//! The Draw function of the Bench
 	/*!
 	Draws the current sprite of the bench on the screen.
-	\param window the screen on which the bench should be drawn.
+	@param window the screen on which the bench should be drawn.
 	*/
 	void Bench::draw(sf::RenderWindow & window) const override;
 
 	//! setRotation sets the rotation of the Bench texture
 	/*!
-	\param rotate The amount with which the Bench texture should be rotated.
+	@param rotate The amount with which the Bench texture should be rotated.
 	*/
 	void Bench::setRotation(float rotate) override;
 
 	//! Updates the texture of the Bench
 	/*!
 	Updates the position of the bench.
-	\param speedModifier isn't really used but is here because of the override.
+	@param speedModifier isn't really used but is here because of the override.
 	*/
 	void Bench::update(float speedModifier) override;
 
+	//! gets the bounds of the Bench
+	/*!
+	Gets the bounds of the sprite and returns this.
+	@return the bounds of the sprite so they can be compared with
+	the bounds of the player and see if they intersect
+	*/
 	sf::FloatRect Bench::getBounds() override;
 
+	//! gets the Transformation of the Bench
+	/*!
+	Gets the Transformation of the sprite and returns this.
+	@return the Transformation of the sprite so it can be
+	calculated into the real bounds of the object
+	*/
 	sf::Transform Bench::getTransform() override;
 
+	//! Gives the size of the bench
+	/*!
+	@return a Vector that is the size of the bench 
+	*/
 	sf::Vector2u Bench::getSize() override;
 private:
-	//! The rotate amount of the texture.
-	/*
-	Indicates how much the texture should be rotated before it is drawn on the screen.
-	*/
 	float rotate;
-
-	//! The texture used for the Bench.
-	/*!
-	The pointer to the texture of the bench.
-	*/
 	sf::Texture * pic;
-
-	//! The sprite of the Bench.
-	/*!
-	The sprite used to drawn the bench on the screen.
-	*/
 	sf::Sprite bench;
 };
 
