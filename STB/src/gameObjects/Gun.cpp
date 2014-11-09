@@ -1,11 +1,10 @@
 ﻿
 #include "Gun.h"
 #include "../LevelController.h"
-Gun::Gun(std::string name, float damage, float reloadSpeed, int ammo, int magazineSize, int range, short bulletSpeed, short fireRate) :
+Gun::Gun(std::string name, float damage, float reloadSpeed, int ammo, int magazineSize, short bulletSpeed, short fireRate) :
 damage{ damage },
 reloadSpeed{ reloadSpeed },
 magazineSize{ magazineSize },
-range{ range },
 bulletSpeed{ bulletSpeed },
 fireRate{ fireRate },
 ammo{ ammo },
@@ -64,6 +63,7 @@ std::string Gun::getAmmoString(){
 void Gun::setRotation(float rotation){
 	this->rotation = rotation;
 }
+
 void Gun::update(float speedModifier) {
 	shootCoolDown -= speedModifier;
 	reloadCoolDown -= speedModifier;
@@ -74,9 +74,11 @@ void Gun::update(float speedModifier) {
 		doubleDamageEnabled = false;
 	}
 }
+
 std::string Gun::getName(){
 	return name;
 }
+
 void Gun::draw(sf::RenderWindow & window) const {
 	window.draw(sprite);
 }
@@ -89,6 +91,7 @@ bool Gun::getIsReloading(){
 	}
 	return isReloading;
 }
+
 void Gun::reload(){
 	if (ammo > 0){
 		if (reloadCoolDown <= 0){
@@ -122,6 +125,7 @@ float Gun::getAmmo(){
 		return 0;
 	}
 }
+
 void Gun::setAmmo(int amount){
 	amount = amount * magazineSize;
 	ammo += amount;
@@ -134,13 +138,16 @@ void Gun::upgradeDmg(int amount){
 void Gun::upgradeFireRate(short amount){
 	fireRate -= amount;
 }
+
 void Gun::doubleDamage(){
 	doubleDamageEnabled = true;
 	doubleDamageTimer = 360;
 }
+
 int Gun::getDamageLevel() {
 	return damageLevel;
 }
+
 void Gun::upgradeDamage() {
 	if (damageLevel < 5){
 		damage *= 1.10f;
@@ -151,6 +158,7 @@ void Gun::upgradeDamage() {
 int Gun::getFirerateLevel() {
 	return fireRateLevel;
 }
+
 void Gun::upgradeFireRate() {
 	if (fireRateLevel < 5){
 		fireRate /= 1.10f;
@@ -161,6 +169,7 @@ void Gun::upgradeFireRate() {
 int Gun::getReloadSpeedLevel() {
 	return reloadSpeedLevel;
 }
+
 void Gun::upgradeReloadSpeed() {
 	if (reloadSpeedLevel < 5){
 		reloadSpeed /= 1.10f;
@@ -168,23 +177,17 @@ void Gun::upgradeReloadSpeed() {
 	}
 }
 
-
-
 std::string Gun::getInfo() {
 	std::string info;
 	info += "Name: " + name + "\n";
 	info += "Damage: " + std::to_string(static_cast<int>(damage)) + "\n";
 	info += "MagazineSize: " + std::to_string(magazineSize) + "\n";
-	info += "Range: " + std::to_string(range) + "\n";
 	info += "BulletSpeed: " + std::to_string(bulletSpeed) + "\n";
 	info += "FireRate: " + std::to_string(static_cast<int>(fireRate)) + "\n";
 	info += "ReloadSpeed: " + std::to_string(static_cast<int>(reloadSpeed)) + "\n";
 	return info;
 }
 
-Gun::~Gun()
-{
-}
 void Gun::reset(){
 	for (reloadSpeedLevel; reloadSpeedLevel >= 0; reloadSpeedLevel--){
 		reloadSpeed *= 1.10f;
@@ -200,4 +203,8 @@ void Gun::reset(){
 void Gun::resetAmmo(){
 	ammo = startAmmo;
 	currentMagazine = magazineSize;
+}
+
+Gun::~Gun()
+{
 }
