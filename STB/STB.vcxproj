@@ -127,7 +127,6 @@
     <ClInclude Include="src\Exception.h" />
     <ClInclude Include="src\Factory.h" />
     <ClInclude Include="src\gameObjects\Logo.h" />
-    <ClInclude Include="src\gameObjects\Circle.h" />
     <ClInclude Include="src\gameObjects\Powerup.h" />
     <ClInclude Include="src\gameObjects\Table.h" />
     <ClInclude Include="src\gameObjects\Trashcan.h" />
@@ -136,7 +135,6 @@
     <ClInclude Include="src\HudController.h" />
     <ClInclude Include="src\LevelController.h" />
     <ClInclude Include="src\gameObjects\GameObject.h" />
-    <ClInclude Include="src\InputController.h" />
     <ClInclude Include="src\SettingsController.h" />
     <ClInclude Include="src\SoundController.h" />
     <ClInclude Include="src\GameController.h" />
@@ -185,7 +183,6 @@
     <ClCompile Include="src\Exception.cpp" />
     <ClCompile Include="src\Factory.cpp" />
     <ClCompile Include="src\gameObjects\Logo.cpp" />
-    <ClCompile Include="src\gameObjects\Circle.cpp" />
     <ClCompile Include="src\gameObjects\Powerup.cpp" />
     <ClCompile Include="src\gameObjects\Table.cpp" />
     <ClCompile Include="src\gameObjects\Trashcan.cpp" />
@@ -194,7 +191,6 @@
     <ClCompile Include="src\HudController.cpp" />
     <ClCompile Include="src\LevelController.cpp" />
     <ClCompile Include="src\gameObjects\GameObject.cpp" />
-    <ClCompile Include="src\InputController.cpp" />
     <ClCompile Include="src\SettingsController.cpp" />
     <ClCompile Include="src\SoundController.cpp" />
     <ClCompile Include="src\GameController.cpp" />
