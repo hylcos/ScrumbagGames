@@ -1,0 +1,5 @@
+0
+HUD:
+(20,20) menu/TutorialScreen
+(550,440) menu/Play
+(80,440) menu/MainMenu 

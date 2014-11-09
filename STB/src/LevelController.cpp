@@ -27,8 +27,8 @@ void LevelController::load()
 	pauseOverlay.loadFromFile("Resources/Images//PauseMenuOverlay.png");
 	pauseSprite.setTexture(pauseOverlay, true);
 
-	gameOverTexture.loadFromFile("HUDObjecten/GameOver.png");
-	gameOverSprite.setTexture(gameOverTexture, true);
+	//gameOverTexture.loadFromFile("HUDObjecten/GameOver.png");
+	//gameOverSprite.setTexture(gameOverTexture, true);
 
 	backgroundSprite.setTexture(background, true);
 	backgroundSpriteOverlay.setTexture(backgroundOverlay, true);
