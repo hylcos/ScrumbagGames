@@ -112,7 +112,7 @@ private:
 	std::string name;
 	bool drawMelee;
 	float doubleDamageTimer;
-	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 6;
+	int damageLevel = 0, fireRateLevel = 0;
 	int  range;
 	bool doubleDamageEnabled = false;
 	float attackSpeed,damage;
