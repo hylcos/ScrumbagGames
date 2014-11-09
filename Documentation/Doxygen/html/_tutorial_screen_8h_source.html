@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -104,33 +104,43 @@ $(document).ready(function(){initNavTree('_tutorial_screen_8h_source.html','');}
 <div class="title">TutorialScreen.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../GameObject.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_tutorial_screen.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tutorial_screen.html">TutorialScreen</a> : <span class="keyword">public</span> <a class="code" href="class_game_object.html">GameObject</a></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="class_tutorial_screen.html">TutorialScreen</a>();</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tutorial_screen.html#a67f9d997c5702c3ee032d7070d6363ec">TutorialScreen::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tutorial_screen.html#aba6b13f389e90bc94ab3409b9687ffd6">TutorialScreen::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    ~<a class="code" href="class_tutorial_screen.html">TutorialScreen</a>();</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span> :</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    sf::Text mainText;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    sf::Text header;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    sf::Text story;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;};</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../GameObject.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_tutorial_screen.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_tutorial_screen.html">TutorialScreen</a> : <span class="keyword">public</span> <a class="code" href="class_game_object.html">GameObject</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_tutorial_screen.html#aac021bc44c667dbe7145ce5f6f707639">TutorialScreen</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="ttc" id="class_tutorial_screen_html"><div class="ttname"><a href="class_tutorial_screen.html">TutorialScreen</a></div><div class="ttdef"><b>Definition:</b> TutorialScreen.h:3</div></div>
-<div class="ttc" id="class_tutorial_screen_html_a67f9d997c5702c3ee032d7070d6363ec"><div class="ttname"><a href="class_tutorial_screen.html#a67f9d997c5702c3ee032d7070d6363ec">TutorialScreen::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the game object. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.cpp:37</div></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tutorial_screen.html#a67f9d997c5702c3ee032d7070d6363ec">TutorialScreen::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_tutorial_screen.html#aba6b13f389e90bc94ab3409b9687ffd6">TutorialScreen::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_tutorial_screen.html#ae76e9faca1ea1c38cb8526a244f42199">~TutorialScreen</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span> :</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    sf::Text mainText;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    sf::Text header;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    sf::Text story;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="ttc" id="class_tutorial_screen_html"><div class="ttname"><a href="class_tutorial_screen.html">TutorialScreen</a></div><div class="ttdoc">The tutorial screen header file. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.h:7</div></div>
+<div class="ttc" id="class_tutorial_screen_html_a67f9d997c5702c3ee032d7070d6363ec"><div class="ttname"><a href="class_tutorial_screen.html#a67f9d997c5702c3ee032d7070d6363ec">TutorialScreen::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the tutorial screen. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.cpp:37</div></div>
+<div class="ttc" id="class_tutorial_screen_html_ae76e9faca1ea1c38cb8526a244f42199"><div class="ttname"><a href="class_tutorial_screen.html#ae76e9faca1ea1c38cb8526a244f42199">TutorialScreen::~TutorialScreen</a></div><div class="ttdeci">~TutorialScreen()</div><div class="ttdoc">The deconstructor of the tutorial screen. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.cpp:48</div></div>
 <div class="ttc" id="class_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">The game object header file. </div><div class="ttdef"><b>Definition:</b> GameObject.h:7</div></div>
-<div class="ttc" id="class_tutorial_screen_html_aba6b13f389e90bc94ab3409b9687ffd6"><div class="ttname"><a href="class_tutorial_screen.html#aba6b13f389e90bc94ab3409b9687ffd6">TutorialScreen::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the game object. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.cpp:43</div></div>
+<div class="ttc" id="class_tutorial_screen_html_aac021bc44c667dbe7145ce5f6f707639"><div class="ttname"><a href="class_tutorial_screen.html#aac021bc44c667dbe7145ce5f6f707639">TutorialScreen::TutorialScreen</a></div><div class="ttdeci">TutorialScreen()</div><div class="ttdoc">The constructor of the tutorial screen. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.cpp:5</div></div>
+<div class="ttc" id="class_tutorial_screen_html_aba6b13f389e90bc94ab3409b9687ffd6"><div class="ttname"><a href="class_tutorial_screen.html#aba6b13f389e90bc94ab3409b9687ffd6">TutorialScreen::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the tutorial screen. </div><div class="ttdef"><b>Definition:</b> TutorialScreen.cpp:43</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><a class="el" href="dir_da2b87729fa5bc028d3e0fd094d555fd.html">menu</a></li><li class="navelem"><b>TutorialScreen.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

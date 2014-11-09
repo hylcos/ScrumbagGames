@@ -1,0 +1,55 @@
+\hypertarget{_powerup_8h}{\section{game\+Objects/\+Powerup.h File Reference}
+\label{_powerup_8h}\index{game\+Objects/\+Powerup.\+h@{game\+Objects/\+Powerup.\+h}}
+}
+{\ttfamily \#include \char`\"{}Game\+Object.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+Texture\+Manager.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+Level\+Controller.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Particle\+Emitter.\+h\char`\"{}}\\*
+Include dependency graph for Powerup.\+h\+:
+This graph shows which files directly or indirectly include this file\+:
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_powerup}{Powerup}
+\item 
+class \hyperlink{class_powerup_1_1_types}{Powerup\+::\+Types}
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_powerup_1_1_types}{Types} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bd}{Powerups} \{ \\*
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bdac9a4bb71f48037693fab172718c1caf9}{full\+Health} = 0, 
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bda0f8e2b0b1eaa232706697e60e86287d5}{double\+Damage}, 
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bdaac5ac0847bae29aacfa4335f29701803}{sprint}, 
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bda32464d4757119ee46ffbfdffac9d681b}{ammo\+Up}, 
+\\*
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bdaa874fd7b2bd6b8faecbe22741ac8d01e}{B\+A\+B}, 
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bda339857e5074e456674fdca57a67f965c}{Money}, 
+\hyperlink{_powerup_8h_a680a20d40344dc7864472467d12e28bdaa1a074a72eb46dfdde53e589d946ab98}{last}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bd}{\index{Powerup.\+h@{Powerup.\+h}!Powerups@{Powerups}}
+\index{Powerups@{Powerups}!Powerup.\+h@{Powerup.\+h}}
+\subsubsection[{Powerups}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Powerups}}}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bd}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{full\+Health@{full\+Health}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!full\+Health@{full\+Health}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bdac9a4bb71f48037693fab172718c1caf9}{full\+Health}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bdac9a4bb71f48037693fab172718c1caf9}
+}]\index{double\+Damage@{double\+Damage}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!double\+Damage@{double\+Damage}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bda0f8e2b0b1eaa232706697e60e86287d5}{double\+Damage}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bda0f8e2b0b1eaa232706697e60e86287d5}
+}]\index{sprint@{sprint}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!sprint@{sprint}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bdaac5ac0847bae29aacfa4335f29701803}{sprint}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bdaac5ac0847bae29aacfa4335f29701803}
+}]\index{ammo\+Up@{ammo\+Up}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!ammo\+Up@{ammo\+Up}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bda32464d4757119ee46ffbfdffac9d681b}{ammo\+Up}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bda32464d4757119ee46ffbfdffac9d681b}
+}]\index{B\+A\+B@{B\+A\+B}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!B\+A\+B@{B\+A\+B}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bdaa874fd7b2bd6b8faecbe22741ac8d01e}{B\+A\+B}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bdaa874fd7b2bd6b8faecbe22741ac8d01e}
+}]\index{Money@{Money}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!Money@{Money}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bda339857e5074e456674fdca57a67f965c}{Money}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bda339857e5074e456674fdca57a67f965c}
+}]\index{last@{last}!Powerup.\+h@{Powerup.\+h}}\index{Powerup.\+h@{Powerup.\+h}!last@{last}}\item[{\em 
+\hypertarget{_powerup_8h_a680a20d40344dc7864472467d12e28bdaa1a074a72eb46dfdde53e589d946ab98}{last}\label{_powerup_8h_a680a20d40344dc7864472467d12e28bdaa1a074a72eb46dfdde53e589d946ab98}
+}]\end{description}
+\end{Desc}

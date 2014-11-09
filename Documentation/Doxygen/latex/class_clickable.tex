@@ -12,12 +12,22 @@ The \hyperlink{class_clickable}{Clickable} header file.
 
 
 
-Inherits \hyperlink{class_game_object}{Game\+Object}.
+Inheritance diagram for Clickable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_clickable__inherit__graph}
+\end{center}
+\end{figure}
 
 
-
-Inherited by \hyperlink{class_checkbox}{Checkbox}, \hyperlink{class_main_menu}{Main\+Menu}, \hyperlink{class_next_round}{Next\+Round}, \hyperlink{class_options}{Options}, \hyperlink{class_play}{Play}, \hyperlink{class_resume}{Resume}, \hyperlink{class_shop}{Shop}, \hyperlink{class_slider}{Slider}, \hyperlink{classswitch_weapon}{switch\+Weapon}, \hyperlink{class_tutorial}{Tutorial}, and \hyperlink{class_upgrade}{Upgrade}.
-
+Collaboration diagram for Clickable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_clickable__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,12 +39,10 @@ void \hyperlink{class_clickable_a28eaa099f0a3230d7a140a1690b64036}{set\+On\+Hud}
 \begin{DoxyCompactList}\small\item\em The set\+On\+Hud method of the clickable class. \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{click} ()
 \begin{DoxyCompactList}\small\item\em The click method for the clickable class. \end{DoxyCompactList}\item 
-\hypertarget{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}{virtual void {\bfseries release} ()}\label{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}
-
-\item 
-\hypertarget{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}{virtual void {\bfseries press} ()}\label{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}
-
-\item 
+virtual void \hyperlink{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}{release} ()
+\begin{DoxyCompactList}\small\item\em The release method for the clickable class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}{press} ()
+\begin{DoxyCompactList}\small\item\em The press method for the clickable class. \end{DoxyCompactList}\item 
 \hyperlink{class_clickable_ac534e76857fc4ff6dc079b0185ee076c}{$\sim$\+Clickable} ()
 \begin{DoxyCompactList}\small\item\em The deconstructor of the clickable class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
@@ -85,6 +93,36 @@ The click method for the clickable class.
 In this method there will be specified what has to happen when this game object is clicked. 
 
 Reimplemented in \hyperlink{class_checkbox_a851b633a864cd4f3c99b235268238f42}{Checkbox}, \hyperlink{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}{Upgrade}, \hyperlink{class_next_round_a4a8032a6c21bdf374edd7cd4551ce970}{Next\+Round}, \hyperlink{class_play_abacc901bd17776b87850e333d82f3de3}{Play}, \hyperlink{class_shop_aa2e219f5db2af725434b94194d34c4a0}{Shop}, \hyperlink{class_tutorial_a8d000f10154e7a04cf000bf83ad472b9}{Tutorial}, \hyperlink{class_main_menu_ac97a553b913177aeabeb0bfcc4b54caa}{Main\+Menu}, \hyperlink{class_options_a99920558b09b82026ee06100535db6e3}{Options}, \hyperlink{class_resume_af0fcbeeebd7efae59d5a9d3835270649}{Resume}, and \hyperlink{classswitch_weapon_a8b848f4f3d33cadf233c693861164f29}{switch\+Weapon}.
+
+\hypertarget{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}{\index{Clickable@{Clickable}!press@{press}}
+\index{press@{press}!Clickable@{Clickable}}
+\subsubsection[{press}]{\setlength{\rightskip}{0pt plus 5cm}void Clickable\+::press (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}
+
+
+The press method for the clickable class. 
+
+In this method there will be specified what has to happen when this game object is press. 
+
+Reimplemented in \hyperlink{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}{Slider}.
+
+\hypertarget{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}{\index{Clickable@{Clickable}!release@{release}}
+\index{release@{release}!Clickable@{Clickable}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void Clickable\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}
+
+
+The release method for the clickable class. 
+
+In this method there will be specified what has to happen when this game object is released. 
+
+Reimplemented in \hyperlink{class_slider_ac1cb7218b21febfe4dffecc0055427ac}{Slider}.
 
 \hypertarget{class_clickable_a28eaa099f0a3230d7a140a1690b64036}{\index{Clickable@{Clickable}!set\+On\+Hud@{set\+On\+Hud}}
 \index{set\+On\+Hud@{set\+On\+Hud}!Clickable@{Clickable}}

@@ -1,9 +1,0 @@
-digraph "gameObjects/menu/shop" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_da2b87729fa5bc028d3e0fd094d555fd {
-    graph [ bgcolor="#ddddee", pencolor="black", label="menu" fontname="Helvetica", fontsize="10", URL="dir_da2b87729fa5bc028d3e0fd094d555fd.html"]
-  dir_eb7a852b6258e757bad35a2bb1669697 [shape=box, label="shop", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_eb7a852b6258e757bad35a2bb1669697.html"];
-  }
-}

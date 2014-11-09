@@ -1,0 +1,10 @@
+<map id="Enemy" name="Enemy">
+<area shape="rect" id="node5" href="$classbobby_boss.html" title="The Bobby Boss header file. " alt="" coords="5,229,92,256"/>
+<area shape="rect" id="node6" href="$classdunken_boss.html" title="The Dunken Boss header file. " alt="" coords="116,229,211,256"/>
+<area shape="rect" id="node7" href="$classethan_boss.html" title="The Ethan Boss header file. " alt="" coords="235,229,319,256"/>
+<area shape="rect" id="node8" href="$classparker_boss.html" title="The Parker Boss header file. " alt="" coords="343,229,431,256"/>
+<area shape="rect" id="node9" href="$classzoey_boss.html" title="The Zoey Boss header file. " alt="" coords="455,229,535,256"/>
+<area shape="rect" id="node2" href="$class_animation.html" title="Animation" alt="" coords="178,80,258,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="The game object header file. " alt="" coords="171,5,265,32"/>
+<area shape="rect" id="node4" href="$class_particle_emitter.html" title="ParticleEmitter" alt="" coords="283,80,391,107"/>
+</map>

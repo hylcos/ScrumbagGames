@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -110,43 +110,61 @@ $(document).ready(function(){initNavTree('_upgrade_8h_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="class_upgrade.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_upgrade.html">Upgrade</a> : <span class="keyword">public</span> <a class="code" href="class_clickable.html">Clickable</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keyword">enum</span> types{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        FireRate,</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        Damage,</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        ReloadSpeed</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    };</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_upgrade.html">Upgrade</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon,types type);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_clickable.html#a57d5d78289d710b078ddfe61000f0dbd">Upgrade::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_upgrade.html#a01a806588165e9c9059343dec7cc52a3">Upgrade::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_upgrade.html#a1ac674476147c05476d04b9bf6dc0b19">Upgrade::click</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    sf::FloatRect <a class="code" href="class_upgrade.html#a680e5842436c75191a9b0564e20ab70e">Upgrade::getBounds</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> Upgrade::updateWeapon(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    ~<a class="code" href="class_upgrade.html">Upgrade</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    sf::RectangleShape backGround[5];</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    sf::RectangleShape foreGround[5];</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    sf::Text text;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    types type;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    sf::Sprite sprite;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    sf::Texture tex;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> UpgradeLevel;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * weapon;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_upgrade.html#a5834f56fecec704c0c9a25158bd09b0b">    8</a></span>&#160;    <span class="keyword">enum</span> <a class="code" href="class_upgrade.html#a5834f56fecec704c0c9a25158bd09b0b">types</a>{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        FireRate,</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        Damage,</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        ReloadSpeed</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    };</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_upgrade.html#aaad9a32e9ef265c0b7a1a63ea599a225">Upgrade</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon,<a class="code" href="class_upgrade.html#a5834f56fecec704c0c9a25158bd09b0b">types</a> type);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_clickable.html#a57d5d78289d710b078ddfe61000f0dbd">Upgrade::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="ttc" id="class_upgrade_html_a1ac674476147c05476d04b9bf6dc0b19"><div class="ttname"><a href="class_upgrade.html#a1ac674476147c05476d04b9bf6dc0b19">Upgrade::click</a></div><div class="ttdeci">void click() override</div><div class="ttdoc">The click method for the clickable class. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:75</div></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_upgrade.html#a01a806588165e9c9059343dec7cc52a3">Upgrade::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_upgrade.html#a1ac674476147c05476d04b9bf6dc0b19">Upgrade::click</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    sf::FloatRect <a class="code" href="class_upgrade.html#a680e5842436c75191a9b0564e20ab70e">Upgrade::getBounds</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_upgrade.html#a8e86cea146dd2e9a4c69781d9c7d3c8d">Upgrade::updateWeapon</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_upgrade.html#a71242d7205c08174f064f4b5b39dedc5">~Upgrade</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    sf::RectangleShape backGround[5];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    sf::RectangleShape foreGround[5];</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    sf::Text text;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_upgrade.html#a5834f56fecec704c0c9a25158bd09b0b">types</a> type;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    sf::Sprite sprite;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    sf::Texture tex;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> UpgradeLevel;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * weapon;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="ttc" id="class_upgrade_html_a1ac674476147c05476d04b9bf6dc0b19"><div class="ttname"><a href="class_upgrade.html#a1ac674476147c05476d04b9bf6dc0b19">Upgrade::click</a></div><div class="ttdeci">void click() override</div><div class="ttdoc">the click method of the upgrade class </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:75</div></div>
 <div class="ttc" id="class_weapon_html"><div class="ttname"><a href="class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition:</b> Weapon.h:4</div></div>
-<div class="ttc" id="class_upgrade_html_a01a806588165e9c9059343dec7cc52a3"><div class="ttname"><a href="class_upgrade.html#a01a806588165e9c9059343dec7cc52a3">Upgrade::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the game object. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:61</div></div>
+<div class="ttc" id="class_upgrade_html_a71242d7205c08174f064f4b5b39dedc5"><div class="ttname"><a href="class_upgrade.html#a71242d7205c08174f064f4b5b39dedc5">Upgrade::~Upgrade</a></div><div class="ttdeci">~Upgrade()</div><div class="ttdoc">The deconstructor of the upgrade class. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:98</div></div>
+<div class="ttc" id="class_upgrade_html_a5834f56fecec704c0c9a25158bd09b0b"><div class="ttname"><a href="class_upgrade.html#a5834f56fecec704c0c9a25158bd09b0b">Upgrade::types</a></div><div class="ttdeci">types</div><div class="ttdoc">This enum represents the 3 possible upgrades the player can apply to any weapon. </div><div class="ttdef"><b>Definition:</b> Upgrade.h:8</div></div>
+<div class="ttc" id="class_upgrade_html_a01a806588165e9c9059343dec7cc52a3"><div class="ttname"><a href="class_upgrade.html#a01a806588165e9c9059343dec7cc52a3">Upgrade::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the upgrade class. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:61</div></div>
 <div class="ttc" id="class_upgrade_html"><div class="ttname"><a href="class_upgrade.html">Upgrade</a></div><div class="ttdef"><b>Definition:</b> Upgrade.h:4</div></div>
+<div class="ttc" id="class_upgrade_html_aaad9a32e9ef265c0b7a1a63ea599a225"><div class="ttname"><a href="class_upgrade.html#aaad9a32e9ef265c0b7a1a63ea599a225">Upgrade::Upgrade</a></div><div class="ttdeci">Upgrade(Weapon *weapon, types type)</div><div class="ttdoc">The constructor of the upgrade class. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:8</div></div>
+<div class="ttc" id="class_upgrade_html_a8e86cea146dd2e9a4c69781d9c7d3c8d"><div class="ttname"><a href="class_upgrade.html#a8e86cea146dd2e9a4c69781d9c7d3c8d">Upgrade::updateWeapon</a></div><div class="ttdeci">void updateWeapon(Weapon *weapon)</div><div class="ttdoc">The update weapon method of the upgrade weapon class. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:94</div></div>
 <div class="ttc" id="class_clickable_html_a57d5d78289d710b078ddfe61000f0dbd"><div class="ttname"><a href="class_clickable.html#a57d5d78289d710b078ddfe61000f0dbd">Clickable::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">The update method for the clickable class. </div><div class="ttdef"><b>Definition:</b> Clickable.cpp:15</div></div>
 <div class="ttc" id="class_clickable_html"><div class="ttname"><a href="class_clickable.html">Clickable</a></div><div class="ttdoc">The Clickable header file. </div><div class="ttdef"><b>Definition:</b> Clickable.h:9</div></div>
-<div class="ttc" id="class_upgrade_html_a680e5842436c75191a9b0564e20ab70e"><div class="ttname"><a href="class_upgrade.html#a680e5842436c75191a9b0564e20ab70e">Upgrade::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() override</div><div class="ttdoc">The get bounds method of the game object. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:89</div></div>
+<div class="ttc" id="class_upgrade_html_a680e5842436c75191a9b0564e20ab70e"><div class="ttname"><a href="class_upgrade.html#a680e5842436c75191a9b0564e20ab70e">Upgrade::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() override</div><div class="ttdoc">The get bounds method of the upgrade class. </div><div class="ttdef"><b>Definition:</b> Upgrade.cpp:89</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><a class="el" href="dir_da2b87729fa5bc028d3e0fd094d555fd.html">menu</a></li><li class="navelem"><a class="el" href="dir_eb7a852b6258e757bad35a2bb1669697.html">shop</a></li><li class="navelem"><b>Upgrade.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,0 +1,6 @@
+digraph "GameObject"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{GameObject\n|# position\l# type\l|+ GameObject()\l+ GameObject()\l+ update()\l+ move()\l+ draw()\l+ next()\l+ setPosition()\l+ getBounds()\l+ getPosition()\l+ getTransform()\l+ getSize()\l+ setRotation()\l+ getType()\l+ setRandomness()\l+ ~GameObject()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

@@ -1,0 +1,12 @@
+<map id="ParticleEmitter" name="ParticleEmitter">
+<area shape="rect" id="node2" href="$class_bullet.html" title="The Bullet header file. " alt="" coords="167,80,221,107"/>
+<area shape="rect" id="node3" href="$class_enemy.html" title="The Enemy header file. " alt="" coords="245,80,308,107"/>
+<area shape="rect" id="node9" href="$class_knife.html" title="The knife header file. " alt="" coords="333,80,383,107"/>
+<area shape="rect" id="node10" href="$class_player.html" title="Player" alt="" coords="407,80,466,107"/>
+<area shape="rect" id="node11" href="$class_powerup.html" title="Powerup" alt="" coords="490,80,562,107"/>
+<area shape="rect" id="node4" href="$classbobby_boss.html" title="The Bobby Boss header file. " alt="" coords="5,155,92,181"/>
+<area shape="rect" id="node5" href="$classdunken_boss.html" title="The Dunken Boss header file. " alt="" coords="116,155,211,181"/>
+<area shape="rect" id="node6" href="$classethan_boss.html" title="The Ethan Boss header file. " alt="" coords="235,155,319,181"/>
+<area shape="rect" id="node7" href="$classparker_boss.html" title="The Parker Boss header file. " alt="" coords="343,155,431,181"/>
+<area shape="rect" id="node8" href="$classzoey_boss.html" title="The Zoey Boss header file. " alt="" coords="455,155,535,181"/>
+</map>

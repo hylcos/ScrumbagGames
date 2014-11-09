@@ -3,8 +3,22 @@
 }
 
 
-Inherited by \hyperlink{class_bullet}{Bullet}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_enemy}{Enemy}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_knife}{Knife}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_player}{Player}{\ttfamily  \mbox{[}private\mbox{]}}, and \hyperlink{class_powerup}{Powerup}{\ttfamily  \mbox{[}private\mbox{]}}.
+Inheritance diagram for Particle\+Emitter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_particle_emitter__inherit__graph}
+\end{center}
+\end{figure}
 
+
+Collaboration diagram for Particle\+Emitter\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{class_particle_emitter__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -19,6 +33,8 @@ void \hyperlink{class_particle_emitter_aa639c76a4637bba568a407f69e1c8ebd}{set\+C
 \begin{DoxyCompactList}\small\item\em The set\+Color Method of Partical\+Emitter. \end{DoxyCompactList}\item 
 void \hyperlink{class_particle_emitter_ac2d2189e309f8e557b214963aeb8aef8}{set\+Color} (sf\+::\+Color color, int a=255)
 \begin{DoxyCompactList}\small\item\em The set\+Color Method of Partical\+Emitter. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_emitter_aa1feb698e1cb96591596b38ce595e9a1}{update\+Particle\+Manager} ()
+\begin{DoxyCompactList}\small\item\em The update \hyperlink{class_particle}{Particle} Manager method of the particle Emitter. \end{DoxyCompactList}\item 
 \hypertarget{class_particle_emitter_a6f4952f7555ede99d74d42b30c80f3e2}{\hyperlink{class_particle_emitter_a6f4952f7555ede99d74d42b30c80f3e2}{$\sim$\+Particle\+Emitter} ()}\label{class_particle_emitter_a6f4952f7555ede99d74d42b30c80f3e2}
 
 \begin{DoxyCompactList}\small\item\em The deconstructor of a \hyperlink{class_particle_emitter}{Particle\+Emitter}. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -153,7 +169,18 @@ Gets the Partical\+Manager is called for the first time If the number of past fr
 {\em speed\+Modifier} & the speed of the game \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_particle_emitter_aa1feb698e1cb96591596b38ce595e9a1}{\index{Particle\+Emitter@{Particle\+Emitter}!update\+Particle\+Manager@{update\+Particle\+Manager}}
+\index{update\+Particle\+Manager@{update\+Particle\+Manager}!Particle\+Emitter@{Particle\+Emitter}}
+\subsubsection[{update\+Particle\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Emitter\+::update\+Particle\+Manager (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_particle_emitter_aa1feb698e1cb96591596b38ce595e9a1}
 
+
+The update \hyperlink{class_particle}{Particle} Manager method of the particle Emitter. 
+
+Forces the \hyperlink{class_particle}{Particle} Emitter to update its pointer of the particle Manager. Sometimes the particle emitter would have a pointer to the particle manager of the previous level, and wont update automaticly. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

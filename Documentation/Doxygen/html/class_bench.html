@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -115,8 +115,20 @@ $(document).ready(function(){initNavTree('class_bench.html','');});
  <a href="class_bench.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_bench_8h_source.html">Bench.h</a>&gt;</code></p>
-
-<p>Inherits <a class="el" href="class_game_object.html">GameObject</a>.</p>
+<div class="dynheader">
+Inheritance diagram for Bench:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bench__inherit__graph.png" border="0" usemap="#_bench_inherit__map" alt="Inheritance graph"/></div>
+<map name="_bench_inherit__map" id="_bench_inherit__map">
+<area shape="rect" id="node2" href="class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Bench:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_bench__coll__graph.png" border="0" usemap="#_bench_coll__map" alt="Collaboration graph"/></div>
+<map name="_bench_coll__map" id="_bench_coll__map">
+<area shape="rect" id="node2" href="class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -133,13 +145,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:abb815aa9afeee6e72fa93db3d51cf1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the texture of the <a class="el" href="class_bench.html" title="The Bench header file. ">Bench</a>.  <a href="#abb815aa9afeee6e72fa93db3d51cf1a1">More...</a><br /></td></tr>
 <tr class="separator:abb815aa9afeee6e72fa93db3d51cf1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9483349535b2a8333052993c3a7e02c9"><td class="memItemLeft" align="right" valign="top">sf::FloatRect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bench.html#a9483349535b2a8333052993c3a7e02c9">getBounds</a> () override</td></tr>
-<tr class="memdesc:a9483349535b2a8333052993c3a7e02c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get bounds method of the game object.  <a href="#a9483349535b2a8333052993c3a7e02c9">More...</a><br /></td></tr>
+<tr class="memdesc:a9483349535b2a8333052993c3a7e02c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the bounds of the <a class="el" href="class_bench.html" title="The Bench header file. ">Bench</a>  <a href="#a9483349535b2a8333052993c3a7e02c9">More...</a><br /></td></tr>
 <tr class="separator:a9483349535b2a8333052993c3a7e02c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab77f7c8625bd343add0cfa4bff48c38b"><td class="memItemLeft" align="right" valign="top">sf::Transform&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bench.html#ab77f7c8625bd343add0cfa4bff48c38b">getTransform</a> () override</td></tr>
-<tr class="memdesc:ab77f7c8625bd343add0cfa4bff48c38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get transform method of the game object.  <a href="#ab77f7c8625bd343add0cfa4bff48c38b">More...</a><br /></td></tr>
+<tr class="memdesc:ab77f7c8625bd343add0cfa4bff48c38b"><td class="mdescLeft">&#160;</td><td class="mdescRight">gets the Transformation of the <a class="el" href="class_bench.html" title="The Bench header file. ">Bench</a>  <a href="#ab77f7c8625bd343add0cfa4bff48c38b">More...</a><br /></td></tr>
 <tr class="separator:ab77f7c8625bd343add0cfa4bff48c38b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af34d9a13039d25aaa2bca761513448fc"><td class="memItemLeft" align="right" valign="top">sf::Vector2u&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bench.html#af34d9a13039d25aaa2bca761513448fc">getSize</a> () override</td></tr>
-<tr class="memdesc:af34d9a13039d25aaa2bca761513448fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">The get size method of the game object.  <a href="#af34d9a13039d25aaa2bca761513448fc">More...</a><br /></td></tr>
+<tr class="memdesc:af34d9a13039d25aaa2bca761513448fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gives the size of the bench.  <a href="#af34d9a13039d25aaa2bca761513448fc">More...</a><br /></td></tr>
 <tr class="separator:af34d9a13039d25aaa2bca761513448fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_game_object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_game_object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_game_object.html">GameObject</a></td></tr>
 <tr class="memitem:a8aa723c1cff01c9f4d33f14f89fd13c0 inherit pub_methods_class_game_object"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_object.html#a8aa723c1cff01c9f4d33f14f89fd13c0">GameObject</a> (<a class="el" href="class_game_object.html#ad5092169e581fb0772e01026882ea0c8">gameObjectType</a> type=unspecified)</td></tr>
@@ -276,8 +288,8 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
 </table>
 </div><div class="memdoc">
 
-<p>The get bounds method of the game object. </p>
-<dl class="section return"><dt>Returns</dt><dd>A rectangle indicating the bounds of the game object </dd></dl>
+<p>gets the bounds of the <a class="el" href="class_bench.html" title="The Bench header file. ">Bench</a> </p>
+<p>Gets the bounds of the sprite and returns this. </p><dl class="section return"><dt>Returns</dt><dd>the bounds of the sprite so they can be compared with the bounds of the player and see if they intersect </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_game_object.html#ab82f4f320038769dc98a972340c15fc6">GameObject</a>.</p>
 
@@ -304,8 +316,8 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
 </table>
 </div><div class="memdoc">
 
-<p>The get size method of the game object. </p>
-<dl class="section return"><dt>Returns</dt><dd>the size of the game object </dd></dl>
+<p>Gives the size of the bench. </p>
+<dl class="section return"><dt>Returns</dt><dd>a Vector that is the size of the bench </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_game_object.html#a2f771b23fa5f6c2e031b308fa3926ada">GameObject</a>.</p>
 
@@ -332,8 +344,8 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
 </table>
 </div><div class="memdoc">
 
-<p>The get transform method of the game object. </p>
-<dl class="section return"><dt>Returns</dt><dd>The real bounds of the game object, also indicating the rotation </dd></dl>
+<p>gets the Transformation of the <a class="el" href="class_bench.html" title="The Bench header file. ">Bench</a> </p>
+<p>Gets the Transformation of the sprite and returns this. </p><dl class="section return"><dt>Returns</dt><dd>the Transformation of the sprite so it can be calculated into the real bounds of the object </dd></dl>
 
 <p>Reimplemented from <a class="el" href="class_game_object.html#a099849f3c0c6cfb0e0957d7fb6b37809">GameObject</a>.</p>
 
@@ -417,7 +429,7 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_bench.html">Bench</a></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:21 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

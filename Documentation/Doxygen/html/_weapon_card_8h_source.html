@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -104,46 +104,66 @@ $(document).ready(function(){initNavTree('_weapon_card_8h_source.html','');});
 <div class="title">WeaponCard.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../../Weapon.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;Upgrade.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;switchWeapon.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="class_weapon_card.html">    5</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_weapon_card.html">WeaponCard</a> : <span class="keyword">public</span> <a class="code" href="class_game_object.html">GameObject</a></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="class_weapon_card.html">WeaponCard</a>();</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    WeaponCard::WeaponCard(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_card.html#a160dc14db9e74b67537e74fcbf0a6e75">WeaponCard::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_card.html#a96b2a3317bbc9228dc22947ef3086883">WeaponCard::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * WeaponCard::getWeapon();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">void</span> WeaponCard::setWeapon(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> WeaponCard::changeWeapon();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ~<a class="code" href="class_weapon_card.html">WeaponCard</a>();</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    sf::Sprite backgroundSprite, weaponSprite;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    sf::Texture backgroundTexture, weaponTexture;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * weapon;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    sf::Text weaponInfo;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> timeToUpdateInfo = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classswitch_weapon.html">switchWeapon</a> * switchButton;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_upgrade.html">Upgrade</a> * fireSpeedUpgrade, * damageUpgrade, * reloadSpeed;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../../Weapon.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;Upgrade.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;switchWeapon.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_weapon_card.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_weapon_card.html">WeaponCard</a> : <span class="keyword">public</span> <a class="code" href="class_game_object.html">GameObject</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_weapon_card.html#ad4741d62814ccb8898b6d5530ecfe146">WeaponCard</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_weapon_card.html#ad4741d62814ccb8898b6d5530ecfe146">WeaponCard::WeaponCard</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_card.html#a160dc14db9e74b67537e74fcbf0a6e75">WeaponCard::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_card.html#a96b2a3317bbc9228dc22947ef3086883">WeaponCard::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * <a class="code" href="class_weapon_card.html#afe7e0c4ab0aa2fa0b3f2ef86a16cecc0">WeaponCard::getWeapon</a>();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_card.html#a764285ce92ffbe9712ddd83a5b8a8402">WeaponCard::setWeapon</a>(<a class="code" href="class_weapon.html">Weapon</a> * weapon);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_weapon_card.html#a063b1986fe8bd4e62b55b6186b426b7d">WeaponCard::changeWeapon</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_weapon_card.html#a8e657b50a65a34809a509e6f0a8abb26">~WeaponCard</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    sf::Sprite backgroundSprite, weaponSprite;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    sf::Texture backgroundTexture, weaponTexture;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_weapon.html">Weapon</a> * weapon;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    sf::Text weaponInfo;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">float</span> timeToUpdateInfo = 0;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="classswitch_weapon.html">switchWeapon</a> * switchButton;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_upgrade.html">Upgrade</a> * fireSpeedUpgrade, * damageUpgrade, * reloadSpeed;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
 <div class="ttc" id="classswitch_weapon_html"><div class="ttname"><a href="classswitch_weapon.html">switchWeapon</a></div><div class="ttdef"><b>Definition:</b> switchWeapon.h:3</div></div>
 <div class="ttc" id="class_weapon_html"><div class="ttname"><a href="class_weapon.html">Weapon</a></div><div class="ttdef"><b>Definition:</b> Weapon.h:4</div></div>
 <div class="ttc" id="class_upgrade_html"><div class="ttname"><a href="class_upgrade.html">Upgrade</a></div><div class="ttdef"><b>Definition:</b> Upgrade.h:4</div></div>
-<div class="ttc" id="class_weapon_card_html_a160dc14db9e74b67537e74fcbf0a6e75"><div class="ttname"><a href="class_weapon_card.html#a160dc14db9e74b67537e74fcbf0a6e75">WeaponCard::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the game object. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:46</div></div>
-<div class="ttc" id="class_weapon_card_html_a96b2a3317bbc9228dc22947ef3086883"><div class="ttname"><a href="class_weapon_card.html#a96b2a3317bbc9228dc22947ef3086883">WeaponCard::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the game object. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:70</div></div>
+<div class="ttc" id="class_weapon_card_html_a063b1986fe8bd4e62b55b6186b426b7d"><div class="ttname"><a href="class_weapon_card.html#a063b1986fe8bd4e62b55b6186b426b7d">WeaponCard::changeWeapon</a></div><div class="ttdeci">void changeWeapon()</div><div class="ttdoc">The change weapon method of this weapon card. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:83</div></div>
+<div class="ttc" id="class_weapon_card_html_a160dc14db9e74b67537e74fcbf0a6e75"><div class="ttname"><a href="class_weapon_card.html#a160dc14db9e74b67537e74fcbf0a6e75">WeaponCard::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the weapon card. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:46</div></div>
+<div class="ttc" id="class_weapon_card_html_a8e657b50a65a34809a509e6f0a8abb26"><div class="ttname"><a href="class_weapon_card.html#a8e657b50a65a34809a509e6f0a8abb26">WeaponCard::~WeaponCard</a></div><div class="ttdeci">~WeaponCard()</div><div class="ttdoc">The deconstructor of the weapon card. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:91</div></div>
+<div class="ttc" id="class_weapon_card_html_a764285ce92ffbe9712ddd83a5b8a8402"><div class="ttname"><a href="class_weapon_card.html#a764285ce92ffbe9712ddd83a5b8a8402">WeaponCard::setWeapon</a></div><div class="ttdeci">void setWeapon(Weapon *weapon)</div><div class="ttdoc">The set weapon method of this class. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:79</div></div>
+<div class="ttc" id="class_weapon_card_html_a96b2a3317bbc9228dc22947ef3086883"><div class="ttname"><a href="class_weapon_card.html#a96b2a3317bbc9228dc22947ef3086883">WeaponCard::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the weapon card. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:70</div></div>
 <div class="ttc" id="class_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">The game object header file. </div><div class="ttdef"><b>Definition:</b> GameObject.h:7</div></div>
-<div class="ttc" id="class_weapon_card_html"><div class="ttname"><a href="class_weapon_card.html">WeaponCard</a></div><div class="ttdef"><b>Definition:</b> WeaponCard.h:5</div></div>
+<div class="ttc" id="class_weapon_card_html_afe7e0c4ab0aa2fa0b3f2ef86a16cecc0"><div class="ttname"><a href="class_weapon_card.html#afe7e0c4ab0aa2fa0b3f2ef86a16cecc0">WeaponCard::getWeapon</a></div><div class="ttdeci">Weapon * getWeapon()</div><div class="ttdoc">The getWeapon method of the weapon card. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:75</div></div>
+<div class="ttc" id="class_weapon_card_html_ad4741d62814ccb8898b6d5530ecfe146"><div class="ttname"><a href="class_weapon_card.html#ad4741d62814ccb8898b6d5530ecfe146">WeaponCard::WeaponCard</a></div><div class="ttdeci">WeaponCard()</div><div class="ttdoc">The weapon card constructor. </div><div class="ttdef"><b>Definition:</b> WeaponCard.cpp:7</div></div>
+<div class="ttc" id="class_weapon_card_html"><div class="ttname"><a href="class_weapon_card.html">WeaponCard</a></div><div class="ttdoc">The Weapon Card header file. </div><div class="ttdef"><b>Definition:</b> WeaponCard.h:9</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><a class="el" href="dir_da2b87729fa5bc028d3e0fd094d555fd.html">menu</a></li><li class="navelem"><a class="el" href="dir_eb7a852b6258e757bad35a2bb1669697.html">shop</a></li><li class="navelem"><b>WeaponCard.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

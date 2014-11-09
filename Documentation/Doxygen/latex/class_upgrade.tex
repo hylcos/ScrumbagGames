@@ -3,36 +3,83 @@
 }
 
 
-Inherits \hyperlink{class_clickable}{Clickable}.
+Inheritance diagram for Upgrade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_upgrade__inherit__graph}
+\end{center}
+\end{figure}
 
+
+Collaboration diagram for Upgrade\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_upgrade__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}{enum {\bfseries types} \{ {\bfseries Fire\+Rate}, 
+\hypertarget{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}{enum \hyperlink{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}{types} \{ {\bfseries Fire\+Rate}, 
 {\bfseries Damage}, 
 {\bfseries Reload\+Speed}
  \}}\label{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em This enum represents the 3 possible upgrades the player can apply to any weapon. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}{{\bfseries Upgrade} (\hyperlink{class_weapon}{Weapon} $\ast$weapon, types type)}\label{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}
-
-\item 
+\hyperlink{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}{Upgrade} (\hyperlink{class_weapon}{Weapon} $\ast$weapon, \hyperlink{class_upgrade_a5834f56fecec704c0c9a25158bd09b0b}{types} type)
+\begin{DoxyCompactList}\small\item\em The constructor of the upgrade class. \end{DoxyCompactList}\item 
 void \hyperlink{class_upgrade_a66b04bde03bdf6ad0935b98963619444}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em the update method of the upgrade class \end{DoxyCompactList}\item 
 void \hyperlink{class_upgrade_a01a806588165e9c9059343dec7cc52a3}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The draw method of the upgrade class. \end{DoxyCompactList}\item 
 void \hyperlink{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}{click} () override
-\begin{DoxyCompactList}\small\item\em The click method for the clickable class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em the click method of the upgrade class \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{class_upgrade_a680e5842436c75191a9b0564e20ab70e}{get\+Bounds} () override
-\begin{DoxyCompactList}\small\item\em The get bounds method of the game object. \end{DoxyCompactList}\item 
-\hypertarget{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}{void {\bfseries update\+Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)}\label{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The get bounds method of the upgrade class. \end{DoxyCompactList}\item 
+void \hyperlink{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}{update\+Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)
+\begin{DoxyCompactList}\small\item\em The update weapon method of the upgrade weapon class. \end{DoxyCompactList}\item 
+\hyperlink{class_upgrade_a71242d7205c08174f064f4b5b39dedc5}{$\sim$\+Upgrade} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the upgrade class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}{\index{Upgrade@{Upgrade}!Upgrade@{Upgrade}}
+\index{Upgrade@{Upgrade}!Upgrade@{Upgrade}}
+\subsubsection[{Upgrade}]{\setlength{\rightskip}{0pt plus 5cm}Upgrade\+::\+Upgrade (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon, }
+\item[{{\bf types}}]{type}
+\end{DoxyParamCaption}
+)}}\label{class_upgrade_aaad9a32e9ef265c0b7a1a63ea599a225}
+
+
+The constructor of the upgrade class. 
+
+The constructor will load in the image of the upgrade button and will set a text according to which upgrade that button represents. 
+\begin{DoxyParams}{Parameters}
+{\em weapon} & The weapon that can be upgraded \\
+\hline
+{\em type} & The type of this particular weapon \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_upgrade_a71242d7205c08174f064f4b5b39dedc5}{\index{Upgrade@{Upgrade}!````~Upgrade@{$\sim$\+Upgrade}}
+\index{````~Upgrade@{$\sim$\+Upgrade}!Upgrade@{Upgrade}}
+\subsubsection[{$\sim$\+Upgrade}]{\setlength{\rightskip}{0pt plus 5cm}Upgrade\+::$\sim$\+Upgrade (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_upgrade_a71242d7205c08174f064f4b5b39dedc5}
+
+
+The deconstructor of the upgrade class. 
+
+The default deconstructor 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}{\index{Upgrade@{Upgrade}!click@{click}}
@@ -44,9 +91,9 @@ sf\+::\+Float\+Rect \hyperlink{class_upgrade_a680e5842436c75191a9b0564e20ab70e}{
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a1ac674476147c05476d04b9bf6dc0b19}
 
 
-The click method for the clickable class. 
+the click method of the upgrade class 
 
-In this method there will be specified what has to happen when this game object is clicked. 
+This method manages what happens when the player clicks on a button to upgrade. 
 
 Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
 
@@ -59,11 +106,11 @@ Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a01a806588165e9c9059343dec7cc52a3}
 
 
-The draw method of the game object. 
+The draw method of the upgrade class. 
 
-Virtual method that will specify what happens when the game object has to be drawn 
+This method will draw the button, text, and draw the amount of upgrades applied to the weapon 
 \begin{DoxyParams}{Parameters}
-{\em window} & The window the game object has to be drawn in \\
+{\em window} & The window in which everything has to be drawn. \\
 \hline
 \end{DoxyParams}
 
@@ -79,10 +126,10 @@ Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a680e5842436c75191a9b0564e20ab70e}
 
 
-The get bounds method of the game object. 
+The get bounds method of the upgrade class. 
 
 \begin{DoxyReturn}{Returns}
-A rectangle indicating the bounds of the game object 
+The bounds of the upgrade button 
 \end{DoxyReturn}
 
 
@@ -97,18 +144,29 @@ Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_upgrade_a66b04bde03bdf6ad0935b98963619444}
 
 
-The update method of the game object. 
+the update method of the upgrade class 
 
-Virtual method that will specify what happens when the game object is updated 
+This method will fill the upgrade bar with however far the weapon is upgraded. It will also manage the stats of the weapon that has to be upgraded. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & A value in our game that represents the speed of the frames the game is currently running at. \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
 
+\hypertarget{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}{\index{Upgrade@{Upgrade}!update\+Weapon@{update\+Weapon}}
+\index{update\+Weapon@{update\+Weapon}!Upgrade@{Upgrade}}
+\subsubsection[{update\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}void Upgrade\+::update\+Weapon (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon}
+\end{DoxyParamCaption}
+)}}\label{class_upgrade_a8e86cea146dd2e9a4c69781d9c7d3c8d}
 
+
+The update weapon method of the upgrade weapon class. 
+
+This method will update the statistics of the weapon it represents when the player chooses to upgrade it. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -104,40 +104,55 @@ $(document).ready(function(){initNavTree('dunken_boss_8h_source.html','');});
 <div class="title">dunkenBoss.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;../Enemy.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classdunken_boss.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdunken_boss.html">dunkenBoss</a> : <span class="keyword">public</span> <a class="code" href="class_enemy.html">Enemy</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="classdunken_boss.html">dunkenBoss</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#ad9ae91ab3ce0b97ee48ab90203c7e4fd">dunkenBoss::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#a5b2bf5b73f34e1970fd47985a2671f86">dunkenBoss::draw</a>(sf::RenderWindow &amp;  window) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#a298c2278b70343f32cc44ab0bb52ef77">dunkenBoss::move</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#a5bf9bfb79d92656ad08995cf0fca13f0">dunkenBoss::reduceHP</a>(<span class="keywordtype">int</span> damage) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">// test for hp bar</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> dunkenBoss::showHp();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="classdunken_boss.html">dunkenBoss</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">float</span> timeToSpawn;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    sf::Texture tex;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> spawned = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    sf::RectangleShape healthForeGround, healthBackGround;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="ttc" id="classdunken_boss_html_a5bf9bfb79d92656ad08995cf0fca13f0"><div class="ttname"><a href="classdunken_boss.html#a5bf9bfb79d92656ad08995cf0fca13f0">dunkenBoss::reduceHP</a></div><div class="ttdeci">void reduceHP(int damage) override</div><div class="ttdoc">The reduceHP method of the enemy. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:66</div></div>
-<div class="ttc" id="classdunken_boss_html_a5b2bf5b73f34e1970fd47985a2671f86"><div class="ttname"><a href="classdunken_boss.html#a5b2bf5b73f34e1970fd47985a2671f86">dunkenBoss::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">Draw draws the current texture on the window. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:43</div></div>
-<div class="ttc" id="classdunken_boss_html_a298c2278b70343f32cc44ab0bb52ef77"><div class="ttname"><a href="classdunken_boss.html#a298c2278b70343f32cc44ab0bb52ef77">dunkenBoss::move</a></div><div class="ttdeci">void move(float speedModifier) override</div><div class="ttdoc">The move method of the game object. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:50</div></div>
-<div class="ttc" id="classdunken_boss_html"><div class="ttname"><a href="classdunken_boss.html">dunkenBoss</a></div><div class="ttdef"><b>Definition:</b> dunkenBoss.h:4</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;../Enemy.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classdunken_boss.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdunken_boss.html">dunkenBoss</a> : <span class="keyword">public</span> <a class="code" href="class_enemy.html">Enemy</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classdunken_boss.html#a66852d3fb008c3bbb3f62da434654336">dunkenBoss</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#ad9ae91ab3ce0b97ee48ab90203c7e4fd">dunkenBoss::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#a5b2bf5b73f34e1970fd47985a2671f86">dunkenBoss::draw</a>(sf::RenderWindow &amp;  window) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#a298c2278b70343f32cc44ab0bb52ef77">dunkenBoss::move</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#a5bf9bfb79d92656ad08995cf0fca13f0">dunkenBoss::reduceHP</a>(<span class="keywordtype">int</span> damage) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classdunken_boss.html#ad17c38732ddca5502bc07cbeee9bde44">dunkenBoss::showHp</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="classdunken_boss.html#a3644e5206cd4c4e3883febacd42191c5">~dunkenBoss</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span> timeToSpawn;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    sf::Texture tex;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> spawned = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    sf::RectangleShape healthForeGround, healthBackGround;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="ttc" id="classdunken_boss_html_a3644e5206cd4c4e3883febacd42191c5"><div class="ttname"><a href="classdunken_boss.html#a3644e5206cd4c4e3883febacd42191c5">dunkenBoss::~dunkenBoss</a></div><div class="ttdeci">~dunkenBoss()</div><div class="ttdoc">The deconstructor of the Dunken Boss. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:76</div></div>
+<div class="ttc" id="classdunken_boss_html_a5bf9bfb79d92656ad08995cf0fca13f0"><div class="ttname"><a href="classdunken_boss.html#a5bf9bfb79d92656ad08995cf0fca13f0">dunkenBoss::reduceHP</a></div><div class="ttdeci">void reduceHP(int damage) override</div><div class="ttdoc">The reduceHP method of the Dunken Boss. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:66</div></div>
+<div class="ttc" id="classdunken_boss_html_ad17c38732ddca5502bc07cbeee9bde44"><div class="ttname"><a href="classdunken_boss.html#ad17c38732ddca5502bc07cbeee9bde44">dunkenBoss::showHp</a></div><div class="ttdeci">void showHp()</div><div class="ttdoc">hp bar method </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:55</div></div>
+<div class="ttc" id="classdunken_boss_html_a5b2bf5b73f34e1970fd47985a2671f86"><div class="ttname"><a href="classdunken_boss.html#a5b2bf5b73f34e1970fd47985a2671f86">dunkenBoss::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the Dunken Boss. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:43</div></div>
+<div class="ttc" id="classdunken_boss_html_a66852d3fb008c3bbb3f62da434654336"><div class="ttname"><a href="classdunken_boss.html#a66852d3fb008c3bbb3f62da434654336">dunkenBoss::dunkenBoss</a></div><div class="ttdeci">dunkenBoss()</div><div class="ttdoc">The Dunken Boss Constructor. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:5</div></div>
+<div class="ttc" id="classdunken_boss_html_a298c2278b70343f32cc44ab0bb52ef77"><div class="ttname"><a href="classdunken_boss.html#a298c2278b70343f32cc44ab0bb52ef77">dunkenBoss::move</a></div><div class="ttdeci">void move(float speedModifier) override</div><div class="ttdoc">The move method of the Dunken Boss. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:50</div></div>
+<div class="ttc" id="classdunken_boss_html"><div class="ttname"><a href="classdunken_boss.html">dunkenBoss</a></div><div class="ttdoc">The Dunken Boss header file. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.h:8</div></div>
 <div class="ttc" id="class_enemy_html"><div class="ttname"><a href="class_enemy.html">Enemy</a></div><div class="ttdoc">The Enemy header file. </div><div class="ttdef"><b>Definition:</b> Enemy.h:11</div></div>
-<div class="ttc" id="classdunken_boss_html_ad9ae91ab3ce0b97ee48ab90203c7e4fd"><div class="ttname"><a href="classdunken_boss.html#ad9ae91ab3ce0b97ee48ab90203c7e4fd">dunkenBoss::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">Updates the texture of the animation. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:26</div></div>
+<div class="ttc" id="classdunken_boss_html_ad9ae91ab3ce0b97ee48ab90203c7e4fd"><div class="ttname"><a href="classdunken_boss.html#ad9ae91ab3ce0b97ee48ab90203c7e4fd">dunkenBoss::update</a></div><div class="ttdeci">void update(float speedModifier) override</div><div class="ttdoc">The update method of the Dunken Boss. </div><div class="ttdef"><b>Definition:</b> dunkenBoss.cpp:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><a class="el" href="dir_7332285c53a5e35446f58f48db133fbe.html">bosses</a></li><li class="navelem"><b>dunkenBoss.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

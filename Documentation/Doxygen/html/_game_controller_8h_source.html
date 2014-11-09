@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -139,32 +139,33 @@ $(document).ready(function(){initNavTree('_game_controller_8h_source.html','');}
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    sf::RenderWindow&amp; <a class="code" href="class_game_controller.html#a993ad55478fff868c801ee7e6f4aaa2b">GameController::getWindow</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    sf::Font * GameController::getFont();</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">    Deallocates the gamecontroller.</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="class_game_controller.html#aab436961a422d078975bc7a49bdfcab7">~GameController</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_game_controller.html">GameController</a>(){};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_game_controller.html">GameController</a>(<a class="code" href="class_game_controller.html">GameController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="class_game_controller.html">GameController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> GameController::changeCursor();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    sf::RenderWindow window{ sf::VideoMode(640, 480), <span class="stringliteral">&quot;STB&quot;</span>, sf::Style::Titlebar | sf::Style::Close };</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> checkWindow();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    sf::Sprite cursorsprite;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    sf::Texture cursortex;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">float</span> fps = 100.0f;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">int</span> frames = 0;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    clock_t nextClock;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    sf::Font * font = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">bool</span> particlesEnabled;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> step();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">bool</span> stopping = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    sf::Font * <a class="code" href="class_game_controller.html#a305a4e04f9d2e6232a8a63fe1c6d317e">GameController::getFont</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">/*</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">    Deallocates the gamecontroller.</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_game_controller.html#aab436961a422d078975bc7a49bdfcab7">~GameController</a>();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <a class="code" href="class_game_controller.html">GameController</a>(){};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_game_controller.html">GameController</a>(<a class="code" href="class_game_controller.html">GameController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="class_game_controller.html">GameController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">void</span> GameController::changeCursor();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    sf::RenderWindow window{ sf::VideoMode(640, 480), <span class="stringliteral">&quot;STB&quot;</span>, sf::Style::Titlebar | sf::Style::Close };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> checkWindow();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    sf::Sprite cursorsprite;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    sf::Texture cursortex;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">float</span> fps = 100.0f;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> frames = 0;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    clock_t nextClock;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    sf::Font * font = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">bool</span> particlesEnabled;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> step();</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">bool</span> stopping = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="ttc" id="class_game_controller_html_aab436961a422d078975bc7a49bdfcab7"><div class="ttname"><a href="class_game_controller.html#aab436961a422d078975bc7a49bdfcab7">GameController::~GameController</a></div><div class="ttdeci">~GameController()</div><div class="ttdoc">The deconstructor of the gamecontroller. </div><div class="ttdef"><b>Definition:</b> GameController.cpp:95</div></div>
 <div class="ttc" id="class_game_controller_html_af365cd7a71dd76730a0bc92adc092103"><div class="ttname"><a href="class_game_controller.html#af365cd7a71dd76730a0bc92adc092103">GameController::start</a></div><div class="ttdeci">void start()</div><div class="ttdoc">The start method of the gamecontroller. </div><div class="ttdef"><b>Definition:</b> GameController.cpp:17</div></div>
 <div class="ttc" id="class_level_controller_html"><div class="ttname"><a href="class_level_controller.html">LevelController</a></div><div class="ttdef"><b>Definition:</b> LevelController.h:13</div></div>
@@ -173,13 +174,14 @@ $(document).ready(function(){initNavTree('_game_controller_8h_source.html','');}
 <div class="ttc" id="class_game_controller_html_a993ad55478fff868c801ee7e6f4aaa2b"><div class="ttname"><a href="class_game_controller.html#a993ad55478fff868c801ee7e6f4aaa2b">GameController::getWindow</a></div><div class="ttdeci">sf::RenderWindow &amp; getWindow()</div><div class="ttdoc">The getwindow method of the gamecontroller. </div><div class="ttdef"><b>Definition:</b> GameController.cpp:30</div></div>
 <div class="ttc" id="class_game_controller_html_a38f17e349f91955d10c9d8511b245e9c"><div class="ttname"><a href="class_game_controller.html#a38f17e349f91955d10c9d8511b245e9c">GameController::getInstance</a></div><div class="ttdeci">static GameController &amp; getInstance()</div><div class="ttdoc">The getInstance method of the gamecontroller. </div><div class="ttdef"><b>Definition:</b> GameController.h:27</div></div>
 <div class="ttc" id="class_game_controller_html"><div class="ttname"><a href="class_game_controller.html">GameController</a></div><div class="ttdef"><b>Definition:</b> GameController.h:16</div></div>
+<div class="ttc" id="class_game_controller_html_a305a4e04f9d2e6232a8a63fe1c6d317e"><div class="ttname"><a href="class_game_controller.html#a305a4e04f9d2e6232a8a63fe1c6d317e">GameController::getFont</a></div><div class="ttdeci">sf::Font * getFont()</div><div class="ttdoc">The getFont method of the gamecontroller. </div><div class="ttdef"><b>Definition:</b> GameController.cpp:67</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>GameController.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

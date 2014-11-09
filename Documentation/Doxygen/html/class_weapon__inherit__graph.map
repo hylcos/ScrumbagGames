@@ -1,0 +1,5 @@
+<map id="Weapon" name="Weapon">
+<area shape="rect" id="node3" href="$class_gun.html" title="The Gun header file. " alt="" coords="5,155,52,181"/>
+<area shape="rect" id="node4" href="$class_knife.html" title="The knife header file. " alt="" coords="77,155,127,181"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="The game object header file. " alt="" coords="17,5,112,32"/>
+</map>

@@ -3,24 +3,80 @@
 }
 
 
-Inherits \hyperlink{class_enemy}{Enemy}.
+The Parker Boss header file.  
 
+
+
+
+{\ttfamily \#include $<$parker\+Boss.\+h$>$}
+
+
+
+Inheritance diagram for parker\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classparker_boss__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for parker\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classparker_boss__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{classparker_boss_a1d5b19e3e4a6d0cbbfc599342ad70312}{parker\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The Parker Boss Constructor. \end{DoxyCompactList}\item 
 void \hyperlink{classparker_boss_a5f82194f8880924981fccd4bf611f324}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update method of the Parker Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The draw method of the Parker Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classparker_boss_a92a6a7944dcd26818dcfee1701e4a41b}{move} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The move method of the Parker Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}{reduce\+H\+P} (int damage) override
-\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
-\hypertarget{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}{void {\bfseries show\+Hp} ()}\label{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the Parker Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}{show\+Hp} ()
+\begin{DoxyCompactList}\small\item\em hp bar method \end{DoxyCompactList}\item 
+\hyperlink{classparker_boss_a73086045e2a5ebbd5e4827bdf19fe77d}{$\sim$parker\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the Parker Boss. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+The Parker Boss header file. 
+
+This is the header file of the Parker Boss class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classparker_boss_a1d5b19e3e4a6d0cbbfc599342ad70312}{\index{parker\+Boss@{parker\+Boss}!parker\+Boss@{parker\+Boss}}
+\index{parker\+Boss@{parker\+Boss}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{parker\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}parker\+Boss\+::parker\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classparker_boss_a1d5b19e3e4a6d0cbbfc599342ad70312}
+
+
+The Parker Boss Constructor. 
+
+Loads the images for the animation of this boss. Also sets the animation for when the boss hits the player. \hypertarget{classparker_boss_a73086045e2a5ebbd5e4827bdf19fe77d}{\index{parker\+Boss@{parker\+Boss}!````~parker\+Boss@{$\sim$parker\+Boss}}
+\index{````~parker\+Boss@{$\sim$parker\+Boss}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{$\sim$parker\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}parker\+Boss\+::$\sim$parker\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classparker_boss_a73086045e2a5ebbd5e4827bdf19fe77d}
+
+
+The deconstructor of the Parker Boss. 
+
+The default constructor of the boss 
 
 \subsection{Member Function Documentation}
 \hypertarget{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}{\index{parker\+Boss@{parker\+Boss}!draw@{draw}}
@@ -32,11 +88,11 @@ void \hyperlink{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}{reduce\+H\+P
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}
 
 
-Draw draws the current texture on the window. 
+The draw method of the Parker Boss. 
 
-Gets the current sprite and draws it on the screen given in the parameters. 
+Draws the boss when it is spawned. 
 \begin{DoxyParams}{Parameters}
-{\em window} & is the window in which the whole game is displayed \\
+{\em window} & The window in which the boss has to be spawned. \\
 \hline
 \end{DoxyParams}
 
@@ -52,11 +108,11 @@ Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a92a6a7944dcd26818dcfee1701e4a41b}
 
 
-The move method of the game object. 
+The move method of the Parker Boss. 
 
-Virtual method that will specify what happens when the game object is told to move 
+Moves the boss in the direction of the player when it is spawned. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
 \hline
 \end{DoxyParams}
 
@@ -72,18 +128,29 @@ Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}
 
 
-The reduce\+H\+P method of the enemy. 
+The reduce\+H\+P method of the Parker Boss. 
 
-Damages this enemey, if his hp reaches 0, this enemy will die. 
+Tells the Parker Boss what it should do when the boss gets hit. 
 \begin{DoxyParams}{Parameters}
-{\em damage} & The amount of damage dealt to this enemy. \\
+{\em damage} & The amount of damage dealt to the boss \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
 
-\hypertarget{classparker_boss_a5f82194f8880924981fccd4bf611f324}{\index{parker\+Boss@{parker\+Boss}!update@{update}}
+\hypertarget{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}{\index{parker\+Boss@{parker\+Boss}!show\+Hp@{show\+Hp}}
+\index{show\+Hp@{show\+Hp}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{show\+Hp}]{\setlength{\rightskip}{0pt plus 5cm}void parker\+Boss\+::show\+Hp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}
+
+
+hp bar method 
+
+Shows the hp bar of the Parker Boss, and changes it according to how much hp the Parker Boss has left. \hypertarget{classparker_boss_a5f82194f8880924981fccd4bf611f324}{\index{parker\+Boss@{parker\+Boss}!update@{update}}
 \index{update@{update}!parker\+Boss@{parker\+Boss}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void parker\+Boss\+::update (
 \begin{DoxyParamCaption}
@@ -92,11 +159,11 @@ Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Ene
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a5f82194f8880924981fccd4bf611f324}
 
 
-Updates the texture of the animation. 
+The update method of the Parker Boss. 
 
-Updates the current texture of the animation to the right one based on the time elapsed. 
+Mainly checks the timer to see if it is time to spawn the boss. When the timer ends, the boss will spawn at a random position on the map. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
 \hline
 \end{DoxyParams}
 

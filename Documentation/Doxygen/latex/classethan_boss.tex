@@ -3,24 +3,80 @@
 }
 
 
-Inherits \hyperlink{class_enemy}{Enemy}.
+The Ethan Boss header file.  
 
+
+
+
+{\ttfamily \#include $<$ethan\+Boss.\+h$>$}
+
+
+
+Inheritance diagram for ethan\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classethan_boss__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ethan\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classethan_boss__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{classethan_boss_a140b89b74eb5da000a72487d04d5cc07}{ethan\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The Ethan Boss Constructor. \end{DoxyCompactList}\item 
 void \hyperlink{classethan_boss_a6e47b12c5e718ecee5d888bcde580c1a}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update method of the Ethan Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classethan_boss_af42458496295b946615a8d53277925f5}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The draw method of the Ethan Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classethan_boss_a2797ae895a6a8954b071a181a9b425a9}{move} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The move method of the Ethan Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classethan_boss_aba2f8a6fc46aae30ab5b59b4cc714d09}{reduce\+H\+P} (int damage) override
-\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
-\hypertarget{classethan_boss_ab8d1fc5061627ce993a18af115d78b2b}{void {\bfseries show\+Hp} ()}\label{classethan_boss_ab8d1fc5061627ce993a18af115d78b2b}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the Ethan Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classethan_boss_ab8d1fc5061627ce993a18af115d78b2b}{show\+Hp} ()
+\begin{DoxyCompactList}\small\item\em hp bar method \end{DoxyCompactList}\item 
+\hyperlink{classethan_boss_a8f996ff4de55ee7842ef5a241ba0b838}{$\sim$ethan\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the Ethan Boss. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+The Ethan Boss header file. 
+
+This is the header file of the Ethan Boss class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classethan_boss_a140b89b74eb5da000a72487d04d5cc07}{\index{ethan\+Boss@{ethan\+Boss}!ethan\+Boss@{ethan\+Boss}}
+\index{ethan\+Boss@{ethan\+Boss}!ethan\+Boss@{ethan\+Boss}}
+\subsubsection[{ethan\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}ethan\+Boss\+::ethan\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classethan_boss_a140b89b74eb5da000a72487d04d5cc07}
+
+
+The Ethan Boss Constructor. 
+
+Loads the images for the animation of this boss. Also sets the animation for when the boss hits the player. \hypertarget{classethan_boss_a8f996ff4de55ee7842ef5a241ba0b838}{\index{ethan\+Boss@{ethan\+Boss}!````~ethan\+Boss@{$\sim$ethan\+Boss}}
+\index{````~ethan\+Boss@{$\sim$ethan\+Boss}!ethan\+Boss@{ethan\+Boss}}
+\subsubsection[{$\sim$ethan\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}ethan\+Boss\+::$\sim$ethan\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classethan_boss_a8f996ff4de55ee7842ef5a241ba0b838}
+
+
+The deconstructor of the Ethan Boss. 
+
+The default constructor of the boss 
 
 \subsection{Member Function Documentation}
 \hypertarget{classethan_boss_af42458496295b946615a8d53277925f5}{\index{ethan\+Boss@{ethan\+Boss}!draw@{draw}}
@@ -32,11 +88,11 @@ void \hyperlink{classethan_boss_aba2f8a6fc46aae30ab5b59b4cc714d09}{reduce\+H\+P}
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classethan_boss_af42458496295b946615a8d53277925f5}
 
 
-Draw draws the current texture on the window. 
+The draw method of the Ethan Boss. 
 
-Gets the current sprite and draws it on the screen given in the parameters. 
+Draws the boss when it is spawned. 
 \begin{DoxyParams}{Parameters}
-{\em window} & is the window in which the whole game is displayed \\
+{\em window} & The window in which the boss has to be spawned. \\
 \hline
 \end{DoxyParams}
 
@@ -52,11 +108,11 @@ Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classethan_boss_a2797ae895a6a8954b071a181a9b425a9}
 
 
-The move method of the game object. 
+The move method of the Ethan Boss. 
 
-Virtual method that will specify what happens when the game object is told to move 
+Moves the boss in the direction of the player when it is spawned. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
 \hline
 \end{DoxyParams}
 
@@ -72,18 +128,29 @@ Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classethan_boss_aba2f8a6fc46aae30ab5b59b4cc714d09}
 
 
-The reduce\+H\+P method of the enemy. 
+The reduce\+H\+P method of the Ethan Boss. 
 
-Damages this enemey, if his hp reaches 0, this enemy will die. 
+Tells the Ethan Boss what it should do when the boss gets hit. 
 \begin{DoxyParams}{Parameters}
-{\em damage} & The amount of damage dealt to this enemy. \\
+{\em damage} & The amount of damage dealt to the boss \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
 
-\hypertarget{classethan_boss_a6e47b12c5e718ecee5d888bcde580c1a}{\index{ethan\+Boss@{ethan\+Boss}!update@{update}}
+\hypertarget{classethan_boss_ab8d1fc5061627ce993a18af115d78b2b}{\index{ethan\+Boss@{ethan\+Boss}!show\+Hp@{show\+Hp}}
+\index{show\+Hp@{show\+Hp}!ethan\+Boss@{ethan\+Boss}}
+\subsubsection[{show\+Hp}]{\setlength{\rightskip}{0pt plus 5cm}void ethan\+Boss\+::show\+Hp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classethan_boss_ab8d1fc5061627ce993a18af115d78b2b}
+
+
+hp bar method 
+
+Shows the hp bar of the Ethan Boss, and changes it according to how much hp the Ethan Boss has left. \hypertarget{classethan_boss_a6e47b12c5e718ecee5d888bcde580c1a}{\index{ethan\+Boss@{ethan\+Boss}!update@{update}}
 \index{update@{update}!ethan\+Boss@{ethan\+Boss}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void ethan\+Boss\+::update (
 \begin{DoxyParamCaption}
@@ -92,11 +159,11 @@ Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Ene
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classethan_boss_a6e47b12c5e718ecee5d888bcde580c1a}
 
 
-Updates the texture of the animation. 
+The update method of the Ethan Boss. 
 
-Updates the current texture of the animation to the right one based on the time elapsed. 
+Mainly checks the timer to see if it is time to spawn the boss. When the timer ends, the boss will spawn at a random position on the map. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
 \hline
 \end{DoxyParams}
 

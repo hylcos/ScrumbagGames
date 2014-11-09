@@ -1,0 +1,84 @@
+\hypertarget{_player_8cpp}{\section{game\+Objects/\+Player.cpp File Reference}
+\label{_player_8cpp}\index{game\+Objects/\+Player.\+cpp@{game\+Objects/\+Player.\+cpp}}
+}
+{\ttfamily \#include \char`\"{}Particle.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../stdafx.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Player.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../\+Texture\+Manager.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include \char`\"{}../\+Level\+Controller.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Powerup.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Weapon\+Manager.\+h\char`\"{}}\\*
+Include dependency graph for Player.\+cpp\+:
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>sf::Keyboard::Key \hyperlink{_player_8cpp_ac28a7df773df08972d366210bc1bb3ee}{key}\\
+\>float \hyperlink{_player_8cpp_ad0da36b2558901e21e7a30f6c227a45e}{x}\\
+\>float \hyperlink{_player_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{y}\\
+\} \hyperlink{_player_8cpp_adb25f99cf93436e5f2a97b610b2a0c90}{actions} \mbox{[}$\,$\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>sf::Keyboard::Key \hyperlink{_player_8cpp_ac28a7df773df08972d366210bc1bb3ee}{key}\\
+\>int \hyperlink{_player_8cpp_afe6670bf0246ae77efdaa0de3ee83311}{weapon}\\
+\} \hyperlink{_player_8cpp_a39a1912c6d671f2b37789ae44ad790c6}{Num1} \mbox{[}$\,$\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>sf::Keyboard::Key \hyperlink{_player_8cpp_ac28a7df773df08972d366210bc1bb3ee}{key}\\
+\>int \hyperlink{_player_8cpp_afe6670bf0246ae77efdaa0de3ee83311}{weapon}\\
+\} \hyperlink{_player_8cpp_aa0b8d1fd17f8eb752007bf776f02d0d7}{Num2} \mbox{[}$\,$\mbox{]}\\
+
+\end{tabbing}\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+struct \{\\
+\>sf::Keyboard::Key \hyperlink{_player_8cpp_ac28a7df773df08972d366210bc1bb3ee}{key}\\
+\>int \hyperlink{_player_8cpp_afe6670bf0246ae77efdaa0de3ee83311}{weapon}\\
+\} \hyperlink{_player_8cpp_a1ea3aef3d3e483536395b0b947b62b05}{Num3} \mbox{[}$\,$\mbox{]}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\subsection{Variable Documentation}
+\hypertarget{_player_8cpp_adb25f99cf93436e5f2a97b610b2a0c90}{\index{Player.\+cpp@{Player.\+cpp}!actions@{actions}}
+\index{actions@{actions}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{actions}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}   actions\mbox{[}$\,$\mbox{]}}}\label{_player_8cpp_adb25f99cf93436e5f2a97b610b2a0c90}
+{\bfseries Initial value\+:}
+\begin{DoxyCode}
+= \{
+        \{ sf::Keyboard::A, -1.0, 0.0 \},
+        \{ sf::Keyboard::D, 1.0, 0.0 \},
+        \{ sf::Keyboard::W, 0.0, -1.0 \},
+        \{ sf::Keyboard::S, 0.0, 1.0 \}
+\}
+\end{DoxyCode}
+\hypertarget{_player_8cpp_ac28a7df773df08972d366210bc1bb3ee}{\index{Player.\+cpp@{Player.\+cpp}!key@{key}}
+\index{key@{key}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{key}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Keyboard\+::\+Key key}}\label{_player_8cpp_ac28a7df773df08972d366210bc1bb3ee}
+\hypertarget{_player_8cpp_a39a1912c6d671f2b37789ae44ad790c6}{\index{Player.\+cpp@{Player.\+cpp}!Num1@{Num1}}
+\index{Num1@{Num1}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{Num1}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  Num1}}\label{_player_8cpp_a39a1912c6d671f2b37789ae44ad790c6}
+\hypertarget{_player_8cpp_aa0b8d1fd17f8eb752007bf776f02d0d7}{\index{Player.\+cpp@{Player.\+cpp}!Num2@{Num2}}
+\index{Num2@{Num2}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{Num2}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  Num2}}\label{_player_8cpp_aa0b8d1fd17f8eb752007bf776f02d0d7}
+\hypertarget{_player_8cpp_a1ea3aef3d3e483536395b0b947b62b05}{\index{Player.\+cpp@{Player.\+cpp}!Num3@{Num3}}
+\index{Num3@{Num3}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{Num3}]{\setlength{\rightskip}{0pt plus 5cm}struct \{ ... \}  Num3}}\label{_player_8cpp_a1ea3aef3d3e483536395b0b947b62b05}
+\hypertarget{_player_8cpp_afe6670bf0246ae77efdaa0de3ee83311}{\index{Player.\+cpp@{Player.\+cpp}!weapon@{weapon}}
+\index{weapon@{weapon}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{weapon}]{\setlength{\rightskip}{0pt plus 5cm}int weapon}}\label{_player_8cpp_afe6670bf0246ae77efdaa0de3ee83311}
+\hypertarget{_player_8cpp_ad0da36b2558901e21e7a30f6c227a45e}{\index{Player.\+cpp@{Player.\+cpp}!x@{x}}
+\index{x@{x}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{x}]{\setlength{\rightskip}{0pt plus 5cm}float x}}\label{_player_8cpp_ad0da36b2558901e21e7a30f6c227a45e}
+\hypertarget{_player_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}{\index{Player.\+cpp@{Player.\+cpp}!y@{y}}
+\index{y@{y}!Player.\+cpp@{Player.\+cpp}}
+\subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}float y}}\label{_player_8cpp_aa4f0d3eebc3c443f9be81bf48561a217}

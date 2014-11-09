@@ -1,0 +1,4 @@
+<map id="switchWeapon" name="switchWeapon">
+<area shape="rect" id="node2" href="$class_clickable.html" title="The Clickable header file. " alt="" coords="21,80,96,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="The game object header file. " alt="" coords="11,5,106,32"/>
+</map>

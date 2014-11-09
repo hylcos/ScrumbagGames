@@ -10,10 +10,12 @@ var searchData=
   ['getcurrentanimation',['getCurrentAnimation',['../class_animation.html#afcc78d89a6cc01d6c9b8ba0753e3d83d',1,'Animation']]],
   ['getdamagelevel',['getDamageLevel',['../class_gun.html#a390b808f9094e07df029b8938749df28',1,'Gun::getDamageLevel()'],['../class_knife.html#a9a3afd5408784399fc9cc7afc33eb3cd',1,'Knife::getDamageLevel()'],['../class_weapon.html#adfa7cf4006b6089d3843081cfd46aaf2',1,'Weapon::getDamageLevel()']]],
   ['getfireratelevel',['getFirerateLevel',['../class_gun.html#a9a7483bdcb239a4039ac2100e9794956',1,'Gun::getFirerateLevel()'],['../class_knife.html#aaee97b167b530dafa85d8bead3403a10',1,'Knife::getFirerateLevel()'],['../class_weapon.html#a5ada13535926ce1445b8205f91085c39',1,'Weapon::getFirerateLevel()']]],
+  ['getfont',['getFont',['../class_game_controller.html#a305a4e04f9d2e6232a8a63fe1c6d317e',1,'GameController']]],
   ['getfps',['getFPS',['../class_game_controller.html#a54e8117f438fa872e5c1b24fd9469816',1,'GameController']]],
   ['getgameover',['getgameOver',['../class_player.html#a1d3d8988bfe2487e1ef7d82502171c8e',1,'Player']]],
   ['getgore',['getGore',['../class_particle.html#a22249cbdfd21c42b65db1ce9936202c9',1,'Particle']]],
   ['gethp',['getHp',['../class_player.html#aa6479f194f9bb44b09adaf3b04a5594d',1,'Player']]],
+  ['gethudview',['getHudView',['../class_hud_controller.html#ace2b98787960f4278d783da1cf7b37dc',1,'HudController']]],
   ['getinfo',['getInfo',['../class_gun.html#a95d46c82be65c2552f3386f561e53bfb',1,'Gun::getInfo()'],['../class_knife.html#aa0d13d7ea1113f3dbd177c65acec9e87',1,'Knife::getInfo()'],['../class_weapon.html#acbb83cac4f5426151954c6d4d5c66230',1,'Weapon::getInfo()']]],
   ['getinstance',['getInstance',['../class_game_controller.html#a38f17e349f91955d10c9d8511b245e9c',1,'GameController::getInstance()'],['../class_weapon_manager.html#a397c93681bbba0a24f285d2e699b82f3',1,'WeaponManager::getInstance()'],['../class_hud_controller.html#a9dafa97894bb74e7ada5ab5f76b886c4',1,'HudController::getInstance()'],['../class_settings_controller.html#a5f01530df4d82ba540c904cae8ed44d5',1,'SettingsController::getInstance()']]],
   ['getisreloading',['getIsReloading',['../class_gun.html#af74d11f4e7f839f4a5842557caeecd64',1,'Gun::getIsReloading()'],['../class_weapon.html#a8126dd185bfc566566d4e4d5bdfb1f1a',1,'Weapon::getIsReloading()']]],
@@ -29,7 +31,8 @@ var searchData=
   ['gettexture',['getTexture',['../class_texture_manager.html#a014fb7d59012f507cefc88cbc9ad05bc',1,'TextureManager']]],
   ['gettransform',['getTransform',['../class_bench.html#ab77f7c8625bd343add0cfa4bff48c38b',1,'Bench::getTransform()'],['../class_game_object.html#a099849f3c0c6cfb0e0957d7fb6b37809',1,'GameObject::getTransform()'],['../class_table.html#afdc573e44d9de924c991eaa36efb6c56',1,'Table::getTransform()']]],
   ['gettype',['getType',['../class_game_object.html#ade4b28552dd1f507a2b92b9b6c55ce65',1,'GameObject']]],
+  ['getweapon',['getWeapon',['../class_weapon_card.html#afe7e0c4ab0aa2fa0b3f2ef86a16cecc0',1,'WeaponCard']]],
   ['getweapons',['getWeapons',['../class_player.html#af442b7ed41244bba619d1a2ef8812123',1,'Player']]],
   ['getwindow',['getWindow',['../class_game_controller.html#a993ad55478fff868c801ee7e6f4aaa2b',1,'GameController']]],
-  ['gun',['Gun',['../class_gun.html',1,'Gun'],['../class_gun.html#a9c018f8c08161908cc4a52f97ed00e0e',1,'Gun::Gun()']]]
+  ['gun',['Gun',['../class_gun.html',1,'Gun'],['../class_gun.html#acb2c3c6a44842e8eeeb6eabde944235d',1,'Gun::Gun()']]]
 ];

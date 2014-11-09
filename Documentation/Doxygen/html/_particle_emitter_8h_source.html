@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -125,36 +125,40 @@ $(document).ready(function(){initNavTree('_particle_emitter_8h_source.html','');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle_emitter.html#aa639c76a4637bba568a407f69e1c8ebd">ParticleEmitter::setColor</a>(sf::Color color, <span class="keywordtype">int</span> a = 255);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <a class="code" href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">~ParticleEmitter</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    sf::Color particleColor;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> emitOnce = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> emit = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">bool</span> isGore = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">float</span> frequency = 30.f;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">int</span> amount = 1;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> frame = 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">float</span> speed = 20.f;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">float</span> deceleration = 0.15f;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">float</span> direction = 0.f;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">float</span> directionDeviation = 360.f;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> size = 2.f;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">float</span> rotation = 0.f;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">float</span> rotationDeviation = 360.f;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">float</span> minimumSpeed = 0.004f;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    sf::Vector2f spawnPosition{ 0, 0 };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="class_particle_manager.html">ParticleManager</a> * particleManager = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span> = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;};</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_particle_emitter.html#aa1feb698e1cb96591596b38ce595e9a1">ParticleEmitter::updateParticleManager</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">~ParticleEmitter</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    sf::Color particleColor;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">bool</span> emitOnce = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">bool</span> emit = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">bool</span> isGore = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> frequency = 30.f;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> amount = 1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> frame = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">float</span> speed = 20.f;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">float</span> deceleration = 0.15f;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">float</span> direction = 0.f;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">float</span> directionDeviation = 360.f;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">float</span> size = 2.f;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">float</span> rotation = 0.f;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">float</span> rotationDeviation = 360.f;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">float</span> minimumSpeed = 0.004f;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    sf::Vector2f spawnPosition{ 0, 0 };</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="class_particle_manager.html">ParticleManager</a> * particleManager = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span> = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
 <div class="ttc" id="class_particle_emitter_html_a59e863f0386f1de946bb5f5a2eef3358"><div class="ttname"><a href="class_particle_emitter.html#a59e863f0386f1de946bb5f5a2eef3358">ParticleEmitter::emitParticles</a></div><div class="ttdeci">void emitParticles()</div><div class="ttdoc">The emitParticles Method of ParticalEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:10</div></div>
-<div class="ttc" id="class_particle_emitter_html_a1567fd71b41c71b56ee8b72c5bca559c"><div class="ttname"><a href="class_particle_emitter.html#a1567fd71b41c71b56ee8b72c5bca559c">ParticleEmitter::update</a></div><div class="ttdeci">void update(float speedModifier)</div><div class="ttdoc">The update Method of ParticalEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:31</div></div>
+<div class="ttc" id="class_particle_emitter_html_a1567fd71b41c71b56ee8b72c5bca559c"><div class="ttname"><a href="class_particle_emitter.html#a1567fd71b41c71b56ee8b72c5bca559c">ParticleEmitter::update</a></div><div class="ttdeci">void update(float speedModifier)</div><div class="ttdoc">The update Method of ParticalEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:34</div></div>
 <div class="ttc" id="class_particle_manager_html"><div class="ttname"><a href="class_particle_manager.html">ParticleManager</a></div><div class="ttdef"><b>Definition:</b> ParticleManager.h:8</div></div>
-<div class="ttc" id="class_particle_emitter_html_aa639c76a4637bba568a407f69e1c8ebd"><div class="ttname"><a href="class_particle_emitter.html#aa639c76a4637bba568a407f69e1c8ebd">ParticleEmitter::setColor</a></div><div class="ttdeci">void setColor(int r, int g, int b, int a)</div><div class="ttdoc">The setColor Method of ParticalEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:44</div></div>
+<div class="ttc" id="class_particle_emitter_html_aa639c76a4637bba568a407f69e1c8ebd"><div class="ttname"><a href="class_particle_emitter.html#aa639c76a4637bba568a407f69e1c8ebd">ParticleEmitter::setColor</a></div><div class="ttdeci">void setColor(int r, int g, int b, int a)</div><div class="ttdoc">The setColor Method of ParticalEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:47</div></div>
+<div class="ttc" id="class_particle_emitter_html_aa1feb698e1cb96591596b38ce595e9a1"><div class="ttname"><a href="class_particle_emitter.html#aa1feb698e1cb96591596b38ce595e9a1">ParticleEmitter::updateParticleManager</a></div><div class="ttdeci">void updateParticleManager()</div><div class="ttdoc">The update Particle Manager method of the particle Emitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:59</div></div>
 <div class="ttc" id="class_particle_emitter_html_a31313702250800a4e074286b8e5d5116"><div class="ttname"><a href="class_particle_emitter.html#a31313702250800a4e074286b8e5d5116">ParticleEmitter::ParticleEmitter</a></div><div class="ttdeci">ParticleEmitter()</div><div class="ttdoc">The ParticleManager constructor. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:6</div></div>
 <div class="ttc" id="class_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">The game object header file. </div><div class="ttdef"><b>Definition:</b> GameObject.h:7</div></div>
-<div class="ttc" id="class_particle_emitter_html_a6f4952f7555ede99d74d42b30c80f3e2"><div class="ttname"><a href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">ParticleEmitter::~ParticleEmitter</a></div><div class="ttdeci">~ParticleEmitter()</div><div class="ttdoc">The deconstructor of a ParticleEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:56</div></div>
+<div class="ttc" id="class_particle_emitter_html_a6f4952f7555ede99d74d42b30c80f3e2"><div class="ttname"><a href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">ParticleEmitter::~ParticleEmitter</a></div><div class="ttdeci">~ParticleEmitter()</div><div class="ttdoc">The deconstructor of a ParticleEmitter. </div><div class="ttdef"><b>Definition:</b> ParticleEmitter.cpp:63</div></div>
 <div class="ttc" id="class_particle_emitter_html"><div class="ttname"><a href="class_particle_emitter.html">ParticleEmitter</a></div><div class="ttdef"><b>Definition:</b> ParticleEmitter.h:4</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -162,7 +166,7 @@ $(document).ready(function(){initNavTree('_particle_emitter_8h_source.html','');
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><b>ParticleEmitter.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

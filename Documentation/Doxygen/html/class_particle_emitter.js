@@ -6,6 +6,7 @@ var class_particle_emitter =
     [ "setColor", "class_particle_emitter.html#aa639c76a4637bba568a407f69e1c8ebd", null ],
     [ "setColor", "class_particle_emitter.html#ac2d2189e309f8e557b214963aeb8aef8", null ],
     [ "update", "class_particle_emitter.html#a1567fd71b41c71b56ee8b72c5bca559c", null ],
+    [ "updateParticleManager", "class_particle_emitter.html#aa1feb698e1cb96591596b38ce595e9a1", null ],
     [ "amount", "class_particle_emitter.html#ab9bbf606442bbc94056fc99739116fae", null ],
     [ "deceleration", "class_particle_emitter.html#a0659c3d423516551eb2bccabd5118d98", null ],
     [ "direction", "class_particle_emitter.html#af330001a636059db3f7fea0c0d5a0fdf", null ],

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -111,8 +111,20 @@ $(document).ready(function(){initNavTree('class_particle_emitter.html','');});
 <div class="title">ParticleEmitter Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-
-<p>Inherited by <a class="el" href="class_bullet.html">Bullet</a><code> [private]</code>, <a class="el" href="class_enemy.html">Enemy</a><code> [private]</code>, <a class="el" href="class_knife.html">Knife</a><code> [private]</code>, <a class="el" href="class_player.html">Player</a><code> [private]</code>, and <a class="el" href="class_powerup.html">Powerup</a><code> [private]</code>.</p>
+<div class="dynheader">
+Inheritance diagram for ParticleEmitter:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_particle_emitter__inherit__graph.png" border="0" usemap="#_particle_emitter_inherit__map" alt="Inheritance graph"/></div>
+<map name="_particle_emitter_inherit__map" id="_particle_emitter_inherit__map">
+<area shape="rect" id="node2" href="class_bullet.html" title="The Bullet header file. " alt="" coords="167,80,221,107"/><area shape="rect" id="node3" href="class_enemy.html" title="The Enemy header file. " alt="" coords="245,80,308,107"/><area shape="rect" id="node9" href="class_knife.html" title="The knife header file. " alt="" coords="333,80,383,107"/><area shape="rect" id="node10" href="class_player.html" title="Player" alt="" coords="407,80,466,107"/><area shape="rect" id="node11" href="class_powerup.html" title="Powerup" alt="" coords="490,80,562,107"/><area shape="rect" id="node4" href="classbobby_boss.html" title="The Bobby Boss header file. " alt="" coords="5,155,92,181"/><area shape="rect" id="node5" href="classdunken_boss.html" title="The Dunken Boss header file. " alt="" coords="116,155,211,181"/><area shape="rect" id="node6" href="classethan_boss.html" title="The Ethan Boss header file. " alt="" coords="235,155,319,181"/><area shape="rect" id="node7" href="classparker_boss.html" title="The Parker Boss header file. " alt="" coords="343,155,431,181"/><area shape="rect" id="node8" href="classzoey_boss.html" title="The Zoey Boss header file. " alt="" coords="455,155,535,181"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ParticleEmitter:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_particle_emitter__coll__graph.png" border="0" usemap="#_particle_emitter_coll__map" alt="Collaboration graph"/></div>
+<map name="_particle_emitter_coll__map" id="_particle_emitter_coll__map">
+<area shape="rect" id="node2" href="class_game_object.html" title="The game object header file. " alt="" coords="29,5,124,32"/><area shape="rect" id="node3" href="class_particle_manager.html" title="ParticleManager" alt="" coords="103,81,219,108"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -132,6 +144,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac2d2189e309f8e557b214963aeb8aef8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_particle_emitter.html#ac2d2189e309f8e557b214963aeb8aef8">setColor</a> (sf::Color color, int a=255)</td></tr>
 <tr class="memdesc:ac2d2189e309f8e557b214963aeb8aef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The setColor Method of ParticalEmitter.  <a href="#ac2d2189e309f8e557b214963aeb8aef8">More...</a><br /></td></tr>
 <tr class="separator:ac2d2189e309f8e557b214963aeb8aef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa1feb698e1cb96591596b38ce595e9a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_particle_emitter.html#aa1feb698e1cb96591596b38ce595e9a1">updateParticleManager</a> ()</td></tr>
+<tr class="memdesc:aa1feb698e1cb96591596b38ce595e9a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">The update <a class="el" href="class_particle.html">Particle</a> Manager method of the particle Emitter.  <a href="#aa1feb698e1cb96591596b38ce595e9a1">More...</a><br /></td></tr>
+<tr class="separator:aa1feb698e1cb96591596b38ce595e9a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f4952f7555ede99d74d42b30c80f3e2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6f4952f7555ede99d74d42b30c80f3e2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">~ParticleEmitter</a> ()</td></tr>
 <tr class="memdesc:a6f4952f7555ede99d74d42b30c80f3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The deconstructor of a <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>. <br /></td></tr>
@@ -321,6 +336,24 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>spawnPosition
 
 </div>
 </div>
+<a class="anchor" id="aa1feb698e1cb96591596b38ce595e9a1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ParticleEmitter::updateParticleManager </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The update <a class="el" href="class_particle.html">Particle</a> Manager method of the particle Emitter. </p>
+<p>Forces the <a class="el" href="class_particle.html">Particle</a> Emitter to update its pointer of the particle Manager. Sometimes the particle emitter would have a pointer to the particle manager of the previous level, and wont update automaticly. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>gameObjects/<a class="el" href="_particle_emitter_8h_source.html">ParticleEmitter.h</a></li>
 <li>gameObjects/ParticleEmitter.cpp</li>
@@ -331,7 +364,7 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>spawnPosition
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:21 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:19 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -119,7 +119,7 @@ $(document).ready(function(){initNavTree('class_enemy.html','');});
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>deceleration</b> (defined in <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>)</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>direction</b> (defined in <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>)</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>directionDeviation</b> (defined in <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>)</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>dmg</b> (defined in <a class="el" href="class_enemy.html">Enemy</a>)</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>dmg</b> (defined in <a class="el" href="class_enemy.html">Enemy</a>)</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_enemy.html#ad35cb50c7b041a183f12756b939a4636">draw</a>(sf::RenderWindow &amp;window) const override</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_enemy.html#a0054c724f94ef37d4e82d274d5aa6808">dunken</a></td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>emit</b> (defined in <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>)</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
@@ -144,7 +144,7 @@ $(document).ready(function(){initNavTree('class_enemy.html','');});
   <tr><td class="entry"><a class="el" href="class_enemy.html#a3e355f118dd67a0f091428b7f5af81dd">horde</a></td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>isGore</b> (defined in <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>)</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_enemy.html#ab283f79ee46f2a28756b0e796090e4f3">macho</a></td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>melee</b> (defined in <a class="el" href="class_enemy.html">Enemy</a>)</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>melee</b> (defined in <a class="el" href="class_enemy.html">Enemy</a>)</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>minimumSpeed</b> (defined in <a class="el" href="class_particle_emitter.html">ParticleEmitter</a>)</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_enemy.html#aa70fd228db393894a6cd941e067f1aad">move</a>(float speedModifier) override</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_animation.html#ad85bc33848adb3aa539f560552fa36ba">next</a>() override</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
@@ -175,21 +175,22 @@ $(document).ready(function(){initNavTree('class_enemy.html','');});
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>table</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_animation.html#afd9ad77afa13d0dc50586e0780ab6b20">toNext</a></td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>trashcan</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>type</b> (defined in <a class="el" href="class_enemy.html">Enemy</a>)</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>type</b> (defined in <a class="el" href="class_enemy.html">Enemy</a>)</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>unspecified</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_enemy.html#a5509b06f70a649c4ea9d1fb06f07cb5c">update</a>(float speedModifier) override</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>weapon</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_enemy.html#a05a3bacef0c241d5bc435d3b2cad0640">zoey</a></td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">~Animation</a>()</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">~Enemy</a>()</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="class_game_object.html#ab82dfdb656f9051c0587e6593b2dda97">~GameObject</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">~ParticleEmitter</a>()</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_particle_emitter.html#aa1feb698e1cb96591596b38ce595e9a1">updateParticleManager</a>()</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr bgcolor="#f0f0f0"><td class="entry"><b>weapon</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_enemy.html#a05a3bacef0c241d5bc435d3b2cad0640">zoey</a></td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_animation.html#a401b68793d4fbf48d481c030ee4b2a16">~Animation</a>()</td><td class="entry"><a class="el" href="class_animation.html">Animation</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_enemy.html#ac0eec4755e28c02688065f9657150ac3">~Enemy</a>()</td><td class="entry"><a class="el" href="class_enemy.html">Enemy</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_game_object.html#ab82dfdb656f9051c0587e6593b2dda97">~GameObject</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2">~ParticleEmitter</a>()</td><td class="entry"><a class="el" href="class_particle_emitter.html">ParticleEmitter</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:21 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:18 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

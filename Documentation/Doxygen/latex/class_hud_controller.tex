@@ -31,18 +31,14 @@ void \hyperlink{class_hud_controller_a9e9c4e19bdb0bc55247c96e79c5548c3}{prepare\
 \begin{DoxyCompactList}\small\item\em the prepare for next level method of the hud controller \end{DoxyCompactList}\item 
 \hyperlink{class_hud_controller_a53264716b1a602a351a7bfcebb0d4dc1}{$\sim$\+Hud\+Controller} ()
 \begin{DoxyCompactList}\small\item\em the deconstructor of the hud controller \end{DoxyCompactList}\item 
-\hypertarget{class_hud_controller_a55b2cf773dafe63e4ea80dee44520b46}{void {\bfseries update\+Timer} (float time)}\label{class_hud_controller_a55b2cf773dafe63e4ea80dee44520b46}
-
-\item 
-\hypertarget{class_hud_controller_a286572c787019d2ac71808619f51d09b}{void {\bfseries update\+Timer} (std\+::string value)}\label{class_hud_controller_a286572c787019d2ac71808619f51d09b}
-
-\item 
-\hypertarget{class_hud_controller_a42109bcccbd0e6c036d8fca3ad0c1354}{void {\bfseries load\+Hud\+Textures} ()}\label{class_hud_controller_a42109bcccbd0e6c036d8fca3ad0c1354}
-
-\item 
-\hypertarget{class_hud_controller_ace2b98787960f4278d783da1cf7b37dc}{sf\+::\+View {\bfseries get\+Hud\+View} ()}\label{class_hud_controller_ace2b98787960f4278d783da1cf7b37dc}
-
-\end{DoxyCompactItemize}
+void \hyperlink{class_hud_controller_a55b2cf773dafe63e4ea80dee44520b46}{update\+Timer} (float time)
+\begin{DoxyCompactList}\small\item\em this controlls the timer on screen en calculate how many minutes and seconds have passed \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_a286572c787019d2ac71808619f51d09b}{update\+Timer} (std\+::string value)
+\begin{DoxyCompactList}\small\item\em The method to set a string value on the timer. \end{DoxyCompactList}\item 
+void \hyperlink{class_hud_controller_a42109bcccbd0e6c036d8fca3ad0c1354}{load\+Hud\+Textures} ()
+\begin{DoxyCompactList}\small\item\em The load method for al the H\+U\+D sprites. \end{DoxyCompactList}\item 
+sf\+::\+View \hyperlink{class_hud_controller_ace2b98787960f4278d783da1cf7b37dc}{get\+Hud\+View} ()
+\begin{DoxyCompactList}\small\item\em The get method for the H\+U\+D view. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -102,6 +98,20 @@ Puts an object created by the factory under control of the game controller
 {\em object} & The object from the factory \\
 \hline
 \end{DoxyParams}
+\hypertarget{class_hud_controller_ace2b98787960f4278d783da1cf7b37dc}{\index{Hud\+Controller@{Hud\+Controller}!get\+Hud\+View@{get\+Hud\+View}}
+\index{get\+Hud\+View@{get\+Hud\+View}!Hud\+Controller@{Hud\+Controller}}
+\subsubsection[{get\+Hud\+View}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+View Hud\+Controller\+::get\+Hud\+View (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_ace2b98787960f4278d783da1cf7b37dc}
+
+
+The get method for the H\+U\+D view. 
+
+\begin{DoxyReturn}{Returns}
+get the Hud view 
+\end{DoxyReturn}
 \hypertarget{class_hud_controller_a9dafa97894bb74e7ada5ab5f76b886c4}{\index{Hud\+Controller@{Hud\+Controller}!get\+Instance@{get\+Instance}}
 \index{get\+Instance@{get\+Instance}!Hud\+Controller@{Hud\+Controller}}
 \subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Hud\+Controller}\& Hud\+Controller\+::get\+Instance (
@@ -141,7 +151,18 @@ The position of the mouse cursor.
 
 The load method of the hud controller. 
 
-This method will set all the standard values for the H\+U\+D objects. \hypertarget{class_hud_controller_a9e9c4e19bdb0bc55247c96e79c5548c3}{\index{Hud\+Controller@{Hud\+Controller}!prepare\+For\+Next\+Level@{prepare\+For\+Next\+Level}}
+This method will set all the standard values for the H\+U\+D objects. \hypertarget{class_hud_controller_a42109bcccbd0e6c036d8fca3ad0c1354}{\index{Hud\+Controller@{Hud\+Controller}!load\+Hud\+Textures@{load\+Hud\+Textures}}
+\index{load\+Hud\+Textures@{load\+Hud\+Textures}!Hud\+Controller@{Hud\+Controller}}
+\subsubsection[{load\+Hud\+Textures}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\+Controller\+::load\+Hud\+Textures (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a42109bcccbd0e6c036d8fca3ad0c1354}
+
+
+The load method for al the H\+U\+D sprites. 
+
+This method will load every texture for the H\+U\+D \hypertarget{class_hud_controller_a9e9c4e19bdb0bc55247c96e79c5548c3}{\index{Hud\+Controller@{Hud\+Controller}!prepare\+For\+Next\+Level@{prepare\+For\+Next\+Level}}
 \index{prepare\+For\+Next\+Level@{prepare\+For\+Next\+Level}!Hud\+Controller@{Hud\+Controller}}
 \subsubsection[{prepare\+For\+Next\+Level}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\+Controller\+::prepare\+For\+Next\+Level (
 \begin{DoxyParamCaption}
@@ -198,6 +219,38 @@ The step method of the H\+U\+D controller.
 This method will update every object from the H\+U\+D and draw them 
 \begin{DoxyParams}{Parameters}
 {\em window} & The window on which the objects have to be drawn \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hud_controller_a55b2cf773dafe63e4ea80dee44520b46}{\index{Hud\+Controller@{Hud\+Controller}!update\+Timer@{update\+Timer}}
+\index{update\+Timer@{update\+Timer}!Hud\+Controller@{Hud\+Controller}}
+\subsubsection[{update\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\+Controller\+::update\+Timer (
+\begin{DoxyParamCaption}
+\item[{float}]{time}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a55b2cf773dafe63e4ea80dee44520b46}
+
+
+this controlls the timer on screen en calculate how many minutes and seconds have passed 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & time that is passed \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_hud_controller_a286572c787019d2ac71808619f51d09b}{\index{Hud\+Controller@{Hud\+Controller}!update\+Timer@{update\+Timer}}
+\index{update\+Timer@{update\+Timer}!Hud\+Controller@{Hud\+Controller}}
+\subsubsection[{update\+Timer}]{\setlength{\rightskip}{0pt plus 5cm}void Hud\+Controller\+::update\+Timer (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_hud_controller_a286572c787019d2ac71808619f51d09b}
+
+
+The method to set a string value on the timer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & string you want to set on the text \\
 \hline
 \end{DoxyParams}
 

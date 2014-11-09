@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -124,29 +124,25 @@ $(document).ready(function(){initNavTree('_bench_8h_source.html','');});
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_bench.html#abb815aa9afeee6e72fa93db3d51cf1a1">Bench::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    sf::FloatRect <a class="code" href="class_bench.html#a9483349535b2a8333052993c3a7e02c9">Bench::getBounds</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    sf::Transform <a class="code" href="class_bench.html#ab77f7c8625bd343add0cfa4bff48c38b">Bench::getTransform</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    sf::Vector2u <a class="code" href="class_bench.html#af34d9a13039d25aaa2bca761513448fc">Bench::getSize</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">/*</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="comment">    Indicates how much the texture should be rotated before it is drawn on the screen.</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">    */</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">float</span> rotate;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    sf::Texture * pic;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    sf::FloatRect <a class="code" href="class_bench.html#a9483349535b2a8333052993c3a7e02c9">Bench::getBounds</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    sf::Transform <a class="code" href="class_bench.html#ab77f7c8625bd343add0cfa4bff48c38b">Bench::getTransform</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    sf::Sprite bench;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="ttc" id="class_bench_html_af34d9a13039d25aaa2bca761513448fc"><div class="ttname"><a href="class_bench.html#af34d9a13039d25aaa2bca761513448fc">Bench::getSize</a></div><div class="ttdeci">sf::Vector2u getSize() override</div><div class="ttdoc">The get size method of the game object. </div><div class="ttdef"><b>Definition:</b> Bench.cpp:31</div></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    sf::Vector2u <a class="code" href="class_bench.html#af34d9a13039d25aaa2bca761513448fc">Bench::getSize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">float</span> rotate;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    sf::Texture * pic;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    sf::Sprite bench;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="ttc" id="class_bench_html_af34d9a13039d25aaa2bca761513448fc"><div class="ttname"><a href="class_bench.html#af34d9a13039d25aaa2bca761513448fc">Bench::getSize</a></div><div class="ttdeci">sf::Vector2u getSize() override</div><div class="ttdoc">Gives the size of the bench. </div><div class="ttdef"><b>Definition:</b> Bench.cpp:31</div></div>
 <div class="ttc" id="class_bench_html_a40fc8955782e814153234daa67bc4dd5"><div class="ttname"><a href="class_bench.html#a40fc8955782e814153234daa67bc4dd5">Bench::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The Draw function of the Bench. </div><div class="ttdef"><b>Definition:</b> Bench.cpp:21</div></div>
-<div class="ttc" id="class_bench_html_ab77f7c8625bd343add0cfa4bff48c38b"><div class="ttname"><a href="class_bench.html#ab77f7c8625bd343add0cfa4bff48c38b">Bench::getTransform</a></div><div class="ttdeci">sf::Transform getTransform() override</div><div class="ttdoc">The get transform method of the game object. </div><div class="ttdef"><b>Definition:</b> Bench.cpp:28</div></div>
+<div class="ttc" id="class_bench_html_ab77f7c8625bd343add0cfa4bff48c38b"><div class="ttname"><a href="class_bench.html#ab77f7c8625bd343add0cfa4bff48c38b">Bench::getTransform</a></div><div class="ttdeci">sf::Transform getTransform() override</div><div class="ttdoc">gets the Transformation of the Bench </div><div class="ttdef"><b>Definition:</b> Bench.cpp:28</div></div>
 <div class="ttc" id="class_bench_html"><div class="ttname"><a href="class_bench.html">Bench</a></div><div class="ttdoc">The Bench header file. </div><div class="ttdef"><b>Definition:</b> Bench.h:9</div></div>
-<div class="ttc" id="class_bench_html_a9483349535b2a8333052993c3a7e02c9"><div class="ttname"><a href="class_bench.html#a9483349535b2a8333052993c3a7e02c9">Bench::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() override</div><div class="ttdoc">The get bounds method of the game object. </div><div class="ttdef"><b>Definition:</b> Bench.cpp:24</div></div>
+<div class="ttc" id="class_bench_html_a9483349535b2a8333052993c3a7e02c9"><div class="ttname"><a href="class_bench.html#a9483349535b2a8333052993c3a7e02c9">Bench::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() override</div><div class="ttdoc">gets the bounds of the Bench </div><div class="ttdef"><b>Definition:</b> Bench.cpp:24</div></div>
 <div class="ttc" id="class_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">The game object header file. </div><div class="ttdef"><b>Definition:</b> GameObject.h:7</div></div>
 <div class="ttc" id="class_bench_html_a8a9e65dde803b5f510fa533724eace75"><div class="ttname"><a href="class_bench.html#a8a9e65dde803b5f510fa533724eace75">Bench::setRotation</a></div><div class="ttdeci">void setRotation(float rotate) override</div><div class="ttdoc">setRotation sets the rotation of the Bench texture </div><div class="ttdef"><b>Definition:</b> Bench.cpp:17</div></div>
 <div class="ttc" id="class_bench_html_adb6c5dc00554246d493f9acbef4eaf51"><div class="ttname"><a href="class_bench.html#adb6c5dc00554246d493f9acbef4eaf51">Bench::Bench</a></div><div class="ttdeci">Bench()</div><div class="ttdoc">The Bench constructor. </div><div class="ttdef"><b>Definition:</b> Bench.cpp:5</div></div>
@@ -157,7 +153,7 @@ $(document).ready(function(){initNavTree('_bench_8h_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><b>Bench.h</b></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

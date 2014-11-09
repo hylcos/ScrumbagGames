@@ -3,32 +3,112 @@
 }
 
 
-Inherits \hyperlink{class_game_object}{Game\+Object}.
+The \hyperlink{class_weapon}{Weapon} Card header file.  
 
+
+
+
+{\ttfamily \#include $<$Weapon\+Card.\+h$>$}
+
+
+
+Inheritance diagram for Weapon\+Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{class_weapon_card__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Weapon\+Card\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=153pt]{class_weapon_card__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_weapon_card_aeba9686102eabee16beba92eb6ccf9d8}{{\bfseries Weapon\+Card} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)}\label{class_weapon_card_aeba9686102eabee16beba92eb6ccf9d8}
-
-\item 
+\hyperlink{class_weapon_card_ad4741d62814ccb8898b6d5530ecfe146}{Weapon\+Card} ()
+\begin{DoxyCompactList}\small\item\em The weapon card constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_weapon_card_aeba9686102eabee16beba92eb6ccf9d8}{Weapon\+Card} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)
+\begin{DoxyCompactList}\small\item\em The second constructor of the weapon card. \end{DoxyCompactList}\item 
 void \hyperlink{class_weapon_card_a160dc14db9e74b67537e74fcbf0a6e75}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update method of the weapon card. \end{DoxyCompactList}\item 
 void \hyperlink{class_weapon_card_a96b2a3317bbc9228dc22947ef3086883}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
-\hypertarget{class_weapon_card_afe7e0c4ab0aa2fa0b3f2ef86a16cecc0}{\hyperlink{class_weapon}{Weapon} $\ast$ {\bfseries get\+Weapon} ()}\label{class_weapon_card_afe7e0c4ab0aa2fa0b3f2ef86a16cecc0}
-
-\item 
-\hypertarget{class_weapon_card_a764285ce92ffbe9712ddd83a5b8a8402}{void {\bfseries set\+Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)}\label{class_weapon_card_a764285ce92ffbe9712ddd83a5b8a8402}
-
-\item 
-\hypertarget{class_weapon_card_a063b1986fe8bd4e62b55b6186b426b7d}{void {\bfseries change\+Weapon} ()}\label{class_weapon_card_a063b1986fe8bd4e62b55b6186b426b7d}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The draw method of the weapon card. \end{DoxyCompactList}\item 
+\hyperlink{class_weapon}{Weapon} $\ast$ \hyperlink{class_weapon_card_afe7e0c4ab0aa2fa0b3f2ef86a16cecc0}{get\+Weapon} ()
+\begin{DoxyCompactList}\small\item\em The get\+Weapon method of the weapon card. \end{DoxyCompactList}\item 
+void \hyperlink{class_weapon_card_a764285ce92ffbe9712ddd83a5b8a8402}{set\+Weapon} (\hyperlink{class_weapon}{Weapon} $\ast$weapon)
+\begin{DoxyCompactList}\small\item\em The set weapon method of this class. \end{DoxyCompactList}\item 
+void \hyperlink{class_weapon_card_a063b1986fe8bd4e62b55b6186b426b7d}{change\+Weapon} ()
+\begin{DoxyCompactList}\small\item\em The change weapon method of this weapon card. \end{DoxyCompactList}\item 
+\hyperlink{class_weapon_card_a8e657b50a65a34809a509e6f0a8abb26}{$\sim$\+Weapon\+Card} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the weapon card. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
+\subsection{Detailed Description}
+The \hyperlink{class_weapon}{Weapon} Card header file. 
+
+This is the header file of the weapon card class 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_weapon_card_ad4741d62814ccb8898b6d5530ecfe146}{\index{Weapon\+Card@{Weapon\+Card}!Weapon\+Card@{Weapon\+Card}}
+\index{Weapon\+Card@{Weapon\+Card}!Weapon\+Card@{Weapon\+Card}}
+\subsubsection[{Weapon\+Card}]{\setlength{\rightskip}{0pt plus 5cm}Weapon\+Card\+::\+Weapon\+Card (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_card_ad4741d62814ccb8898b6d5530ecfe146}
+
+
+The weapon card constructor. 
+
+The default constructor. \hypertarget{class_weapon_card_aeba9686102eabee16beba92eb6ccf9d8}{\index{Weapon\+Card@{Weapon\+Card}!Weapon\+Card@{Weapon\+Card}}
+\index{Weapon\+Card@{Weapon\+Card}!Weapon\+Card@{Weapon\+Card}}
+\subsubsection[{Weapon\+Card}]{\setlength{\rightskip}{0pt plus 5cm}Weapon\+Card\+::\+Weapon\+Card (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_card_aeba9686102eabee16beba92eb6ccf9d8}
+
+
+The second constructor of the weapon card. 
+
+The constructor we mainly use. This method creates the 'card' you see in the shop. It wil load in all the textures and buttons needed. 
+\begin{DoxyParams}{Parameters}
+{\em weapon} & The weapon for which the card has to be created \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_weapon_card_a8e657b50a65a34809a509e6f0a8abb26}{\index{Weapon\+Card@{Weapon\+Card}!````~Weapon\+Card@{$\sim$\+Weapon\+Card}}
+\index{````~Weapon\+Card@{$\sim$\+Weapon\+Card}!Weapon\+Card@{Weapon\+Card}}
+\subsubsection[{$\sim$\+Weapon\+Card}]{\setlength{\rightskip}{0pt plus 5cm}Weapon\+Card\+::$\sim$\+Weapon\+Card (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_card_a8e657b50a65a34809a509e6f0a8abb26}
+
+
+The deconstructor of the weapon card. 
+
+The default deconstructor 
+
 \subsection{Member Function Documentation}
-\hypertarget{class_weapon_card_a96b2a3317bbc9228dc22947ef3086883}{\index{Weapon\+Card@{Weapon\+Card}!draw@{draw}}
+\hypertarget{class_weapon_card_a063b1986fe8bd4e62b55b6186b426b7d}{\index{Weapon\+Card@{Weapon\+Card}!change\+Weapon@{change\+Weapon}}
+\index{change\+Weapon@{change\+Weapon}!Weapon\+Card@{Weapon\+Card}}
+\subsubsection[{change\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\+Card\+::change\+Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_card_a063b1986fe8bd4e62b55b6186b426b7d}
+
+
+The change weapon method of this weapon card. 
+
+Switches this card with the card of the other weapon available for it's slot in the shop. \hypertarget{class_weapon_card_a96b2a3317bbc9228dc22947ef3086883}{\index{Weapon\+Card@{Weapon\+Card}!draw@{draw}}
 \index{draw@{draw}!Weapon\+Card@{Weapon\+Card}}
 \subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\+Card\+::draw (
 \begin{DoxyParamCaption}
@@ -37,17 +117,47 @@ void \hyperlink{class_weapon_card_a96b2a3317bbc9228dc22947ef3086883}{draw} (sf\+
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_weapon_card_a96b2a3317bbc9228dc22947ef3086883}
 
 
-The draw method of the game object. 
+The draw method of the weapon card. 
 
-Virtual method that will specify what happens when the game object has to be drawn 
+This method will draw all the textures and buttons and the background. 
 \begin{DoxyParams}{Parameters}
-{\em window} & The window the game object has to be drawn in \\
+{\em window} & The window on which everything has to be drawn. \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
 
+\hypertarget{class_weapon_card_afe7e0c4ab0aa2fa0b3f2ef86a16cecc0}{\index{Weapon\+Card@{Weapon\+Card}!get\+Weapon@{get\+Weapon}}
+\index{get\+Weapon@{get\+Weapon}!Weapon\+Card@{Weapon\+Card}}
+\subsubsection[{get\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weapon} $\ast$ Weapon\+Card\+::get\+Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_card_afe7e0c4ab0aa2fa0b3f2ef86a16cecc0}
+
+
+The get\+Weapon method of the weapon card. 
+
+\begin{DoxyReturn}{Returns}
+(a pointer to) The weapon this card represents 
+\end{DoxyReturn}
+\hypertarget{class_weapon_card_a764285ce92ffbe9712ddd83a5b8a8402}{\index{Weapon\+Card@{Weapon\+Card}!set\+Weapon@{set\+Weapon}}
+\index{set\+Weapon@{set\+Weapon}!Weapon\+Card@{Weapon\+Card}}
+\subsubsection[{set\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\+Card\+::set\+Weapon (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon}
+\end{DoxyParamCaption}
+)}}\label{class_weapon_card_a764285ce92ffbe9712ddd83a5b8a8402}
+
+
+The set weapon method of this class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & The weapon this card has to represent \\
+\hline
+\end{DoxyParams}
 \hypertarget{class_weapon_card_a160dc14db9e74b67537e74fcbf0a6e75}{\index{Weapon\+Card@{Weapon\+Card}!update@{update}}
 \index{update@{update}!Weapon\+Card@{Weapon\+Card}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Weapon\+Card\+::update (
@@ -57,11 +167,11 @@ Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_weapon_card_a160dc14db9e74b67537e74fcbf0a6e75}
 
 
-The update method of the game object. 
+The update method of the weapon card. 
 
-Virtual method that will specify what happens when the game object is updated 
+This method sets all the positions of the textures and buttons on the card. It also checks if the card needs to switch with the other available card on it's slot in the shop. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & A value representing the frames per second of the game, used to correct timings. \\
 \hline
 \end{DoxyParams}
 

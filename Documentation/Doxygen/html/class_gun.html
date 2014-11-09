@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -115,14 +115,26 @@ $(document).ready(function(){initNavTree('class_gun.html','');});
  <a href="class_gun.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_gun_8h_source.html">Gun.h</a>&gt;</code></p>
-
-<p>Inherits <a class="el" href="class_weapon.html">Weapon</a>.</p>
+<div class="dynheader">
+Inheritance diagram for Gun:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gun__inherit__graph.png" border="0" usemap="#_gun_inherit__map" alt="Inheritance graph"/></div>
+<map name="_gun_inherit__map" id="_gun_inherit__map">
+<area shape="rect" id="node2" href="class_weapon.html" title="Weapon" alt="" coords="17,80,88,107"/><area shape="rect" id="node3" href="class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for Gun:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gun__coll__graph.png" border="0" usemap="#_gun_coll__map" alt="Collaboration graph"/></div>
+<map name="_gun_coll__map" id="_gun_coll__map">
+<area shape="rect" id="node2" href="class_weapon.html" title="Weapon" alt="" coords="17,80,88,107"/><area shape="rect" id="node3" href="class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/></map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9c018f8c08161908cc4a52f97ed00e0e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gun.html#a9c018f8c08161908cc4a52f97ed00e0e">Gun</a> (std::string name, float damage, float reloadSpeed, int ammo, int magazineSize, int range, short bulletSpeed, short fireRate)</td></tr>
-<tr class="memdesc:a9c018f8c08161908cc4a52f97ed00e0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor of the gun class.  <a href="#a9c018f8c08161908cc4a52f97ed00e0e">More...</a><br /></td></tr>
-<tr class="separator:a9c018f8c08161908cc4a52f97ed00e0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb2c3c6a44842e8eeeb6eabde944235d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gun.html#acb2c3c6a44842e8eeeb6eabde944235d">Gun</a> (std::string name, float damage, float reloadSpeed, int ammo, int magazineSize, short bulletSpeed, short fireRate)</td></tr>
+<tr class="memdesc:acb2c3c6a44842e8eeeb6eabde944235d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor of the gun class.  <a href="#acb2c3c6a44842e8eeeb6eabde944235d">More...</a><br /></td></tr>
+<tr class="separator:acb2c3c6a44842e8eeeb6eabde944235d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84fec52052e08f9d3d9546a873ea90e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gun.html#a84fec52052e08f9d3d9546a873ea90e8">fire</a> () override</td></tr>
 <tr class="memdesc:a84fec52052e08f9d3d9546a873ea90e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">The fire method of the gun.  <a href="#a84fec52052e08f9d3d9546a873ea90e8">More...</a><br /></td></tr>
 <tr class="separator:a84fec52052e08f9d3d9546a873ea90e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -277,7 +289,7 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
 <div class="textblock"><p>The <a class="el" href="class_gun.html" title="The Gun header file. ">Gun</a> header file. </p>
 <p>This is the header file of the gun class. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9c018f8c08161908cc4a52f97ed00e0e"></a>
+<a class="anchor" id="acb2c3c6a44842e8eeeb6eabde944235d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -314,12 +326,6 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>range</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">short&#160;</td>
           <td class="paramname"><em>bulletSpeed</em>, </td>
         </tr>
@@ -345,7 +351,6 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
     <tr><td class="paramname">reloadSpeed</td><td>The time the gun takes to reload </td></tr>
     <tr><td class="paramname">ammo</td><td>The ammount of ammunition the gun has in total </td></tr>
     <tr><td class="paramname">magazineSize</td><td>The size of one clip of the gun </td></tr>
-    <tr><td class="paramname">range</td><td>The range the bullets of this gun can travel </td></tr>
     <tr><td class="paramname">bulletSpeed</td><td>The speed with which the bullets travel </td></tr>
     <tr><td class="paramname">fireRate</td><td>The amount of frames in between two shots </td></tr>
   </table>
@@ -1015,7 +1020,7 @@ sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>position</b><
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_gun.html">Gun</a></li>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:21 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:18 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

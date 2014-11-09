@@ -12,12 +12,26 @@ The \hyperlink{class_gun}{Gun} header file.
 
 
 
-Inherits \hyperlink{class_weapon}{Weapon}.
+Inheritance diagram for Gun\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_gun__inherit__graph}
+\end{center}
+\end{figure}
 
+
+Collaboration diagram for Gun\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_gun__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_gun_a9c018f8c08161908cc4a52f97ed00e0e}{Gun} (std\+::string name, float damage, float reload\+Speed, int ammo, int magazine\+Size, int range, short bullet\+Speed, short fire\+Rate)
+\hyperlink{class_gun_acb2c3c6a44842e8eeeb6eabde944235d}{Gun} (std\+::string name, float damage, float reload\+Speed, int ammo, int magazine\+Size, short bullet\+Speed, short fire\+Rate)
 \begin{DoxyCompactList}\small\item\em The constructor of the gun class. \end{DoxyCompactList}\item 
 void \hyperlink{class_gun_a84fec52052e08f9d3d9546a873ea90e8}{fire} () override
 \begin{DoxyCompactList}\small\item\em The fire method of the gun. \end{DoxyCompactList}\item 
@@ -77,7 +91,7 @@ The \hyperlink{class_gun}{Gun} header file.
 This is the header file of the gun class. 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_gun_a9c018f8c08161908cc4a52f97ed00e0e}{\index{Gun@{Gun}!Gun@{Gun}}
+\hypertarget{class_gun_acb2c3c6a44842e8eeeb6eabde944235d}{\index{Gun@{Gun}!Gun@{Gun}}
 \index{Gun@{Gun}!Gun@{Gun}}
 \subsubsection[{Gun}]{\setlength{\rightskip}{0pt plus 5cm}Gun\+::\+Gun (
 \begin{DoxyParamCaption}
@@ -86,11 +100,10 @@ This is the header file of the gun class.
 \item[{float}]{reload\+Speed, }
 \item[{int}]{ammo, }
 \item[{int}]{magazine\+Size, }
-\item[{int}]{range, }
 \item[{short}]{bullet\+Speed, }
 \item[{short}]{fire\+Rate}
 \end{DoxyParamCaption}
-)}}\label{class_gun_a9c018f8c08161908cc4a52f97ed00e0e}
+)}}\label{class_gun_acb2c3c6a44842e8eeeb6eabde944235d}
 
 
 The constructor of the gun class. 
@@ -106,8 +119,6 @@ Initializes a gun with the given parameters
 {\em ammo} & The ammount of ammunition the gun has in total \\
 \hline
 {\em magazine\+Size} & The size of one clip of the gun \\
-\hline
-{\em range} & The range the bullets of this gun can travel \\
 \hline
 {\em bullet\+Speed} & The speed with which the bullets travel \\
 \hline

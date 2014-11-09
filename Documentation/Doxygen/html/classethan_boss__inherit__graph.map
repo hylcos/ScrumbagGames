@@ -1,0 +1,6 @@
+<map id="ethanBoss" name="ethanBoss">
+<area shape="rect" id="node2" href="$class_enemy.html" title="The Enemy header file. " alt="" coords="80,155,143,181"/>
+<area shape="rect" id="node3" href="$class_animation.html" title="Animation" alt="" coords="13,80,93,107"/>
+<area shape="rect" id="node4" href="$class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node5" href="$class_particle_emitter.html" title="ParticleEmitter" alt="" coords="117,80,225,107"/>
+</map>

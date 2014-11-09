@@ -18,8 +18,9 @@ var searchData=
   ['setspeed',['setSpeed',['../class_particle.html#ac57a8908b8ab1a1b9bb29aa02e347f56',1,'Particle']]],
   ['settextures',['setTextures',['../class_animation.html#ab63fd2f5810a27e1b61f43f19e8994c6',1,'Animation']]],
   ['settype',['setType',['../class_enemy.html#ab33e544c241dffc381b7c3614f8c0438',1,'Enemy::setType()'],['../class_powerup.html#a822d237174578c8676f8a0a0f59133ff',1,'Powerup::setType()']]],
+  ['setweapon',['setWeapon',['../class_weapon_card.html#a764285ce92ffbe9712ddd83a5b8a8402',1,'WeaponCard']]],
   ['setweapons',['setWeapons',['../class_player.html#a0fca3ee9cea38e8944663f19a0cdb27b',1,'Player']]],
-  ['showhp',['showHp',['../classbobby_boss.html#a63d3d9304aaff572a312e9662c80e226',1,'bobbyBoss']]],
+  ['showhp',['showHp',['../classbobby_boss.html#a63d3d9304aaff572a312e9662c80e226',1,'bobbyBoss::showHp()'],['../classdunken_boss.html#ad17c38732ddca5502bc07cbeee9bde44',1,'dunkenBoss::showHp()'],['../classethan_boss.html#ab8d1fc5061627ce993a18af115d78b2b',1,'ethanBoss::showHp()'],['../classparker_boss.html#a52928b2641e7da080fd27b2f9679aa26',1,'parkerBoss::showHp()'],['../classzoey_boss.html#ae70c0773e30ab34f2c12ca816eb582cd',1,'zoeyBoss::showHp()']]],
   ['start',['start',['../class_game_controller.html#af365cd7a71dd76730a0bc92adc092103',1,'GameController']]],
   ['step',['step',['../class_hud_controller.html#a6cd82988ca9221b6cb8d520a8e26b204',1,'HudController']]],
   ['stop',['stop',['../class_game_controller.html#a97872acdc39172c21e06665854656994',1,'GameController']]]

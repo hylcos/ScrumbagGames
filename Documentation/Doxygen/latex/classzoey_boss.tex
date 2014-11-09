@@ -3,24 +3,80 @@
 }
 
 
-Inherits \hyperlink{class_enemy}{Enemy}.
+The Zoey Boss header file.  
 
+
+
+
+{\ttfamily \#include $<$zoey\+Boss.\+h$>$}
+
+
+
+Inheritance diagram for zoey\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classzoey_boss__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for zoey\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classzoey_boss__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{classzoey_boss_ab5f6f2c7b863fc5e0e887884a50c625e}{zoey\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The Zoey Boss Constructor. \end{DoxyCompactList}\item 
 void \hyperlink{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update method of the Zoey Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The draw method of the Zoey Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classzoey_boss_a6c371465ec647b81299a0ffebaa8ee4c}{move} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The move method of the Zoey Boss. \end{DoxyCompactList}\item 
 void \hyperlink{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}{reduce\+H\+P} (int damage) override
-\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
-\hypertarget{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}{void {\bfseries show\+Hp} ()}\label{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the Zoey Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}{show\+Hp} ()
+\begin{DoxyCompactList}\small\item\em hp bar method \end{DoxyCompactList}\item 
+\hyperlink{classzoey_boss_a17ba0c048af2ae5347f79944a623aecd}{$\sim$zoey\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the Zoey Boss. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+The Zoey Boss header file. 
+
+This is the header file of the Zoey Boss class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classzoey_boss_ab5f6f2c7b863fc5e0e887884a50c625e}{\index{zoey\+Boss@{zoey\+Boss}!zoey\+Boss@{zoey\+Boss}}
+\index{zoey\+Boss@{zoey\+Boss}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{zoey\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}zoey\+Boss\+::zoey\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classzoey_boss_ab5f6f2c7b863fc5e0e887884a50c625e}
+
+
+The Zoey Boss Constructor. 
+
+Loads the images for the animation of this boss. Also sets the animation for when the boss hits the player. \hypertarget{classzoey_boss_a17ba0c048af2ae5347f79944a623aecd}{\index{zoey\+Boss@{zoey\+Boss}!````~zoey\+Boss@{$\sim$zoey\+Boss}}
+\index{````~zoey\+Boss@{$\sim$zoey\+Boss}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{$\sim$zoey\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}zoey\+Boss\+::$\sim$zoey\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classzoey_boss_a17ba0c048af2ae5347f79944a623aecd}
+
+
+The deconstructor of the Zoey Boss. 
+
+The default constructor of the boss 
 
 \subsection{Member Function Documentation}
 \hypertarget{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}{\index{zoey\+Boss@{zoey\+Boss}!draw@{draw}}
@@ -32,11 +88,11 @@ void \hyperlink{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}{reduce\+H\+P} 
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}
 
 
-Draw draws the current texture on the window. 
+The draw method of the Zoey Boss. 
 
-Gets the current sprite and draws it on the screen given in the parameters. 
+Draws the boss when it is spawned. 
 \begin{DoxyParams}{Parameters}
-{\em window} & is the window in which the whole game is displayed \\
+{\em window} & The window in which the boss has to be spawned. \\
 \hline
 \end{DoxyParams}
 
@@ -52,11 +108,11 @@ Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_a6c371465ec647b81299a0ffebaa8ee4c}
 
 
-The move method of the game object. 
+The move method of the Zoey Boss. 
 
-Virtual method that will specify what happens when the game object is told to move 
+Moves the boss in the direction of the player when it is spawned. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
 \hline
 \end{DoxyParams}
 
@@ -72,18 +128,29 @@ Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}
 
 
-The reduce\+H\+P method of the enemy. 
+The reduce\+H\+P method of the Zoey Boss. 
 
-Damages this enemey, if his hp reaches 0, this enemy will die. 
+Tells the Zoey Boss what it should do when the boss gets hit. 
 \begin{DoxyParams}{Parameters}
-{\em damage} & The amount of damage dealt to this enemy. \\
+{\em damage} & The amount of damage dealt to the boss \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
 
-\hypertarget{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}{\index{zoey\+Boss@{zoey\+Boss}!update@{update}}
+\hypertarget{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}{\index{zoey\+Boss@{zoey\+Boss}!show\+Hp@{show\+Hp}}
+\index{show\+Hp@{show\+Hp}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{show\+Hp}]{\setlength{\rightskip}{0pt plus 5cm}void zoey\+Boss\+::show\+Hp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}
+
+
+hp bar method 
+
+Shows the hp bar of the Zoey Boss, and changes it according to how much hp the Zoey Boss has left. \hypertarget{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}{\index{zoey\+Boss@{zoey\+Boss}!update@{update}}
 \index{update@{update}!zoey\+Boss@{zoey\+Boss}}
 \subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void zoey\+Boss\+::update (
 \begin{DoxyParamCaption}
@@ -92,11 +159,11 @@ Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Ene
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}
 
 
-Updates the texture of the animation. 
+The update method of the Zoey Boss. 
 
-Updates the current texture of the animation to the right one based on the time elapsed. 
+Mainly checks the timer to see if it is time to spawn the boss. When the timer ends, the boss will spawn at a random position on the map. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
 \hline
 \end{DoxyParams}
 

@@ -3,23 +3,31 @@
 }
 
 
-Inherits \hyperlink{class_clickable}{Clickable}.
+Inheritance diagram for Slider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_slider__inherit__graph}
+\end{center}
+\end{figure}
 
 
-
-Inherited by \hyperlink{class_music_slider}{Music\+Slider}, and \hyperlink{class_sound_slider}{Sound\+Slider}.
-
+Collaboration diagram for Slider\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_slider__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{class_slider_a5693b04af04da09cff43647283efaf6e}{draw} (sf\+::\+Render\+Window \&window) const override
 \begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
-\hypertarget{class_slider_ac1cb7218b21febfe4dffecc0055427ac}{void {\bfseries release} () override}\label{class_slider_ac1cb7218b21febfe4dffecc0055427ac}
-
-\item 
-\hypertarget{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}{void {\bfseries press} () override}\label{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}
-
-\item 
+void \hyperlink{class_slider_ac1cb7218b21febfe4dffecc0055427ac}{release} () override
+\begin{DoxyCompactList}\small\item\em The release method for the clickable class. \end{DoxyCompactList}\item 
+void \hyperlink{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}{press} () override
+\begin{DoxyCompactList}\small\item\em The press method for the clickable class. \end{DoxyCompactList}\item 
 void \hyperlink{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}{update} (float speed\+Modifier) override
 \begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
 \hypertarget{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}{virtual void {\bfseries update\+Value} (int value)}\label{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}
@@ -74,6 +82,36 @@ A rectangle indicating the bounds of the game object
 
 
 Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}{\index{Slider@{Slider}!press@{press}}
+\index{press@{press}!Slider@{Slider}}
+\subsubsection[{press}]{\setlength{\rightskip}{0pt plus 5cm}void Slider\+::press (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}
+
+
+The press method for the clickable class. 
+
+In this method there will be specified what has to happen when this game object is press. 
+
+Reimplemented from \hyperlink{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}{Clickable}.
+
+\hypertarget{class_slider_ac1cb7218b21febfe4dffecc0055427ac}{\index{Slider@{Slider}!release@{release}}
+\index{release@{release}!Slider@{Slider}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void Slider\+::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_ac1cb7218b21febfe4dffecc0055427ac}
+
+
+The release method for the clickable class. 
+
+In this method there will be specified what has to happen when this game object is released. 
+
+Reimplemented from \hyperlink{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}{Clickable}.
 
 \hypertarget{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}{\index{Slider@{Slider}!update@{update}}
 \index{update@{update}!Slider@{Slider}}

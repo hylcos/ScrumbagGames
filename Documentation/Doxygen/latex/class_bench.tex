@@ -12,8 +12,22 @@ The \hyperlink{class_bench}{Bench} header file.
 
 
 
-Inherits \hyperlink{class_game_object}{Game\+Object}.
+Inheritance diagram for Bench\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_bench__inherit__graph}
+\end{center}
+\end{figure}
 
+
+Collaboration diagram for Bench\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_bench__coll__graph}
+\end{center}
+\end{figure}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -26,11 +40,11 @@ void \hyperlink{class_bench_a8a9e65dde803b5f510fa533724eace75}{set\+Rotation} (f
 void \hyperlink{class_bench_abb815aa9afeee6e72fa93db3d51cf1a1}{update} (float speed\+Modifier) override
 \begin{DoxyCompactList}\small\item\em Updates the texture of the \hyperlink{class_bench}{Bench}. \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{class_bench_a9483349535b2a8333052993c3a7e02c9}{get\+Bounds} () override
-\begin{DoxyCompactList}\small\item\em The get bounds method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em gets the bounds of the \hyperlink{class_bench}{Bench} \end{DoxyCompactList}\item 
 sf\+::\+Transform \hyperlink{class_bench_ab77f7c8625bd343add0cfa4bff48c38b}{get\+Transform} () override
-\begin{DoxyCompactList}\small\item\em The get transform method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em gets the Transformation of the \hyperlink{class_bench}{Bench} \end{DoxyCompactList}\item 
 sf\+::\+Vector2u \hyperlink{class_bench_af34d9a13039d25aaa2bca761513448fc}{get\+Size} () override
-\begin{DoxyCompactList}\small\item\em The get size method of the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gives the size of the bench. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
@@ -83,10 +97,10 @@ Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_a9483349535b2a8333052993c3a7e02c9}
 
 
-The get bounds method of the game object. 
+gets the bounds of the \hyperlink{class_bench}{Bench} 
 
-\begin{DoxyReturn}{Returns}
-A rectangle indicating the bounds of the game object 
+Gets the bounds of the sprite and returns this. \begin{DoxyReturn}{Returns}
+the bounds of the sprite so they can be compared with the bounds of the player and see if they intersect 
 \end{DoxyReturn}
 
 
@@ -101,10 +115,10 @@ Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_af34d9a13039d25aaa2bca761513448fc}
 
 
-The get size method of the game object. 
+Gives the size of the bench. 
 
 \begin{DoxyReturn}{Returns}
-the size of the game object 
+a Vector that is the size of the bench 
 \end{DoxyReturn}
 
 
@@ -119,10 +133,10 @@ Reimplemented from \hyperlink{class_game_object_a2f771b23fa5f6c2e031b308fa3926ad
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_ab77f7c8625bd343add0cfa4bff48c38b}
 
 
-The get transform method of the game object. 
+gets the Transformation of the \hyperlink{class_bench}{Bench} 
 
-\begin{DoxyReturn}{Returns}
-The real bounds of the game object, also indicating the rotation 
+Gets the Transformation of the sprite and returns this. \begin{DoxyReturn}{Returns}
+the Transformation of the sprite so it can be calculated into the real bounds of the object 
 \end{DoxyReturn}
 
 

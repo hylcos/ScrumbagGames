@@ -1,6 +1,6 @@
 var class_gun =
 [
-    [ "Gun", "class_gun.html#a9c018f8c08161908cc4a52f97ed00e0e", null ],
+    [ "Gun", "class_gun.html#acb2c3c6a44842e8eeeb6eabde944235d", null ],
     [ "~Gun", "class_gun.html#af107f78d608720fef712c14b148afcdd", null ],
     [ "doubleDamage", "class_gun.html#a62ab15432407b2396c86d35264ea8a5b", null ],
     [ "draw", "class_gun.html#a9f9c687cb43472691c14af52f508553a", null ],

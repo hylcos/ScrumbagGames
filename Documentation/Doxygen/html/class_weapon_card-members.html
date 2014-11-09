@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td style="padding-left: 0.5em;">
    <div id="projectname">Shoot The Bully
-   &#160;<span id="projectnumber">1.01</span>
+   &#160;<span id="projectnumber">1.02</span>
    </div>
   </td>
  </tr>
@@ -69,7 +69,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul class="tablist">
       <li><a href="annotated.html"><span>Class&#160;List</span></a></li>
       <li><a href="classes.html"><span>Class&#160;Index</span></a></li>
-      <li><a href="hierarchy.html"><span>Class&#160;Hierarchy</span></a></li>
+      <li><a href="inherits.html"><span>Class&#160;Hierarchy</span></a></li>
       <li><a href="functions.html"><span>Class&#160;Members</span></a></li>
     </ul>
   </div>
@@ -111,7 +111,7 @@ $(document).ready(function(){initNavTree('class_weapon_card.html','');});
 <p>This is the complete list of members for <a class="el" href="class_weapon_card.html">WeaponCard</a>, including all inherited members.</p>
 <table class="directory">
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>bench</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>changeWeapon</b>() (defined in <a class="el" href="class_weapon_card.html">WeaponCard</a>)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_weapon_card.html#a063b1986fe8bd4e62b55b6186b426b7d">changeWeapon</a>()</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_weapon_card.html#a96b2a3317bbc9228dc22947ef3086883">draw</a>(sf::RenderWindow &amp;window) const override</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>enemy</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_object.html#a8aa723c1cff01c9f4d33f14f89fd13c0">GameObject</a>(gameObjectType type=unspecified)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
@@ -122,7 +122,7 @@ $(document).ready(function(){initNavTree('class_weapon_card.html','');});
   <tr><td class="entry"><a class="el" href="class_game_object.html#a2f771b23fa5f6c2e031b308fa3926ada">getSize</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_object.html#a099849f3c0c6cfb0e0957d7fb6b37809">getTransform</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="class_game_object.html#ade4b28552dd1f507a2b92b9b6c55ce65">getType</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>getWeapon</b>() (defined in <a class="el" href="class_weapon_card.html">WeaponCard</a>)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_weapon_card.html#afe7e0c4ab0aa2fa0b3f2ef86a16cecc0">getWeapon</a>()</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_game_object.html#a5929b9837b72ea7d82fda6c5719dd348">move</a>(float speedModifier)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_object.html#a9c6a1cca4f64b9de43035c644b06ed6b">next</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>particle</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
@@ -133,22 +133,22 @@ $(document).ready(function(){initNavTree('class_weapon_card.html','');});
   <tr class="even"><td class="entry"><a class="el" href="class_game_object.html#a0f411667e5177a08ba7fdb3487bfbb13">setPosition</a>(sf::Vector2f position)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_game_object.html#ac97158dbbf3f822668ab9497de63a773">setRandomness</a>(sf::Uint8 terrorLevel)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_game_object.html#a32562ecd2f833271b606d86a926d82b8">setRotation</a>(float rotate)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>setWeapon</b>(Weapon *weapon) (defined in <a class="el" href="class_weapon_card.html">WeaponCard</a>)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_weapon_card.html#a764285ce92ffbe9712ddd83a5b8a8402">setWeapon</a>(Weapon *weapon)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>table</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>trashcan</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>type</b> (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">protected</span></td></tr>
   <tr bgcolor="#f0f0f0"><td class="entry"><b>unspecified</b> enum value (defined in <a class="el" href="class_game_object.html">GameObject</a>)</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="class_weapon_card.html#a160dc14db9e74b67537e74fcbf0a6e75">update</a>(float speedModifier) override</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0"><td class="entry"><b>WeaponCard</b>() (defined in <a class="el" href="class_weapon_card.html">WeaponCard</a>)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>WeaponCard</b>(Weapon *weapon) (defined in <a class="el" href="class_weapon_card.html">WeaponCard</a>)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="class_weapon_card.html#ad4741d62814ccb8898b6d5530ecfe146">WeaponCard</a>()</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_weapon_card.html#aeba9686102eabee16beba92eb6ccf9d8">WeaponCard</a>(Weapon *weapon)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="class_game_object.html#ab82dfdb656f9051c0587e6593b2dda97">~GameObject</a>()</td><td class="entry"><a class="el" href="class_game_object.html">GameObject</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr bgcolor="#f0f0f0" class="even"><td class="entry"><b>~WeaponCard</b>() (defined in <a class="el" href="class_weapon_card.html">WeaponCard</a>)</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="class_weapon_card.html#a8e657b50a65a34809a509e6f0a8abb26">~WeaponCard</a>()</td><td class="entry"><a class="el" href="class_weapon_card.html">WeaponCard</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Nov 8 2014 21:38:22 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 00:34:19 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

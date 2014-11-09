@@ -1,0 +1,4 @@
+<map id="gameObjects/menu/shop" name="gameObjects/menu/shop">
+<area shape="rect" id="node1" href="dir_eb7a852b6258e757bad35a2bb1669697.html" title="shop" alt="" coords="27,52,99,100"/>
+<area shape="rect" id="clust1" href="dir_da2b87729fa5bc028d3e0fd094d555fd.html" title="menu" alt="" coords="16,16,109,111"/>
+</map>
