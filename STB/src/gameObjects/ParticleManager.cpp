@@ -24,7 +24,7 @@ void ParticleManager::update(float speedModifier) {
 	ParticlesToAdd.clear();
 
 	for (Particle * p : ParticlesToRemove){
-		removeAllObjects(p);
+		ParticleManager::removeAllObjects(p);
 	}
 	ParticlesToRemove.clear();
 	for (Particle * p : Particles){

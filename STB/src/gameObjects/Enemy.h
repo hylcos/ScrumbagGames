@@ -124,14 +124,13 @@ public:
 	~Enemy();
 
 
-
-
-private:
+protected:
+	int dmg = 0;
 	Initializer & type = average;
-
 	sf::Sprite melee;
 
-	int dmg = 0;
+private:
+
 	float hitCooldown = 0;
 	bool drawMelee;
 	sf::Sprite curSprite;

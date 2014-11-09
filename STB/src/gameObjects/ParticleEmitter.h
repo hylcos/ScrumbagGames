@@ -41,6 +41,13 @@ public:
 	*/
 	void ParticleEmitter::setColor(sf::Color color, int a = 255);
 
+	//! The update Particle Manager method of the particle Emitter.
+	/*!
+	Forces the Particle Emitter to update its pointer of the particle Manager.
+	Sometimes the particle emitter would have a pointer to the particle manager of the previous level, and wont update automaticly.
+	*/
+	void ParticleEmitter::updateParticleManager();
+
 	//! The deconstructor of a ParticleEmitter
 	/*!
 
