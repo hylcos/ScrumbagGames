@@ -20,11 +20,10 @@ public:
 	@param reloadSpeed The time the gun takes to reload
 	@param ammo The ammount of ammunition the gun has in total
 	@param magazineSize The size of one clip of the gun
-	@param range The range the bullets of this gun can travel
 	@param bulletSpeed The speed with which the bullets travel
 	@param fireRate The amount of frames in between two shots
 	*/
-	Gun::Gun(std::string name,float damage, float reloadSpeed,int ammo,int magazineSize,int range, short bulletSpeed,short fireRate);
+	Gun::Gun(std::string name,float damage, float reloadSpeed,int ammo,int magazineSize, short bulletSpeed,short fireRate);
 
 	//! The fire method of the gun
 	/*!
@@ -115,7 +114,7 @@ private:
 	std::string name;
 	bool doubleDamageEnabled = false;
 	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;
-	int magazineSize, range, ammo, currentMagazine, startAmmo;
+	int magazineSize, ammo, currentMagazine, startAmmo; 
 	float damage, fireRate, oldDamage;
 	short bulletSpeed;
 	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;
