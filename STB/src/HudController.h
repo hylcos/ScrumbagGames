@@ -84,13 +84,30 @@ public:
 	*/
 	~HudController(){};
 
+	//! this controlls the timer on screen en calculate how many minutes and seconds have passed
+	/*!
+	@param The time that is passed
+	*/
 	void HudController::updateTimer(float time);
 
+	//! The method to set a string value on the timer
+	/*!
+	@param the string you want to set on the text
+	*/
 	void HudController::updateTimer(std::string value);
 
+	//! The load method for al the HUD sprites
+	/*!
+	This method will load every texture for the HUD
+	*/
 	void HudController::loadHudTextures();
 
+	//! The get method for the HUD view
+	/*!
+	@return  get the Hud view
+	*/
 	sf::View HudController::getHudView();
+
 private:
 	HudController() {};
 	HudController(HudController const&);
