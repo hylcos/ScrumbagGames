@@ -92,6 +92,13 @@
     <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\gameObjects\menu\Shop.h" />
+    <ClInclude Include="src\gameObjects\bosses\bobbyBoss.h" />
+    <ClInclude Include="src\gameObjects\bosses\ethanBoss.h" />
+    <ClInclude Include="src\gameObjects\bosses\parkerBoss.h" />
+    <ClInclude Include="src\gameObjects\bosses\zoeyBoss.h" />
+    <ClInclude Include="src\gameObjects\menu\NextRound.h" />
+    <ClInclude Include="src\gameObjects\menu\ShopCard.h" />
     <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h" />
     <ClInclude Include="src\gameObjects\menu\MusicSlider.h" />
     <ClInclude Include="src\gameObjects\menu\Slider.h" />
@@ -136,8 +143,20 @@
     <ClInclude Include="src\stdafx.h" />
     <ClInclude Include="src\targetver.h" />
     <ClInclude Include="src\TextureManager.h" />
+    <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h" />
+    <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h" />
+    <ClInclude Include="src\gameObjects\menu\shop\switchWeapon.h" />
+    <ClInclude Include="src\gameObjects\menu\TutorialScreen.h" />
+    <ClInclude Include="src\gameObjects\menu\Tutorial.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\gameObjects\menu\Shop.cpp" />
+    <ClCompile Include="src\gameObjects\bosses\bobbyBoss.cpp" />
+    <ClCompile Include="src\gameObjects\bosses\ethanBoss.cpp" />
+    <ClCompile Include="src\gameObjects\bosses\parkerBoss.cpp" />
+    <ClCompile Include="src\gameObjects\bosses\zoeyBoss.cpp" />
+    <ClCompile Include="src\gameObjects\menu\NextRound.cpp" />
+    <ClCompile Include="src\gameObjects\menu\ShopCard.cpp" />
     <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp" />
     <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp" />
     <ClCompile Include="src\gameObjects\menu\Slider.cpp" />
@@ -185,13 +204,24 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="src\TextureManager.cpp" />
+    <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp" />
+    <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp" />
+    <ClCompile Include="src\gameObjects\menu\shop\switchWeapon.cpp" />
+    <ClCompile Include="src\gameObjects\menu\TutorialScreen.cpp" />
+    <ClCompile Include="src\gameObjects\menu\Tutorial.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Images\GameLogo.pdn" />
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
+    <None Include="Resources\Levels\levelFive.level" />
+    <None Include="Resources\Levels\levelFour.level" />
+    <None Include="Resources\Levels\levelThree.level" />
     <None Include="Resources\Levels\levelTwo.level" />
+    <None Include="Resources\Levels\logo.level" />
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
+    <None Include="Resources\Levels\shop.level" />
+    <None Include="Resources\Levels\tutorial.level" />
     <None Include="Resources\Sounds\dagger.ogg" />
     <None Include="Resources\Sounds\intro.ogg" />
     <None Include="Resources\Sounds\Ouch_1.ogg" />
@@ -217,9 +247,10 @@
     <Image Include="Resources\Images\HUDObjecten\AmmoBar.png" />
     <Image Include="Resources\Images\HUDObjecten\BuffsBar.png" />
     <Image Include="Resources\Images\HUDObjecten\ExtraWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\GameOver.png" />
     <Image Include="Resources\Images\HUDObjecten\HUDdesign.png" />
     <Image Include="Resources\Images\HUDObjecten\HealthBar.png" />
-    <Image Include="Resources\Images\HUDObjecten\knifeWeapon.png" />
+    <Image Include="Resources\Images\HUDObjecten\daggerWeapon.png" />
     <Image Include="Resources\Images\HUDObjecten\pistolWeapon.png" />
     <Image Include="Resources\Images\HUDObjecten\rifleWeapon.png" />
     <Image Include="Resources\Images\HUDObjecten\shotgunWeapon.png" />
@@ -246,9 +277,27 @@
     <Image Include="Resources\Images\menuObjecten\ResumeButton.png" />
     <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png" />
     <Image Include="Resources\Images\menuObjecten\ScrollBar.png" />
+    <Image Include="Resources\Images\menuObjecten\SwitchWeaponButton.png" />
+    <Image Include="Resources\Images\menuObjecten\TutorialButton.png" />
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png" />
+    <Image Include="Resources\Images\menuObjecten\UpgradeButton.png" />
+    <Image Include="Resources\Images\menuObjecten\WeaponCardBackGround.png" />
     <Image Include="Resources\Images\PauseMenuOverlay.png" />
     <Image Include="Resources\Images\Sprites\Bench.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\1.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\2.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\3.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\4.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\melee.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\1.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\2.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\3.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\4.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\1.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\2.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\3.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\4.png" />
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\melee.png" />
     <Image Include="Resources\Images\Sprites\Crosshair.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Average\1.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Average\2.png" />
@@ -266,6 +315,12 @@
     <Image Include="Resources\Images\Sprites\Enemies\Fat\4.png" />
     <Image Include="Resources\Images\Sprites\Enemies\Fat\melee.png" />
     <Image Include="Resources\Images\menuObjecten\PlayButton.png" />
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\1.png" />
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\2.png" />
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\3.png" />
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\4.png" />
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\melee.png" />
+    <Image Include="Resources\Images\Sprites\money.png" />
     <Image Include="Resources\Images\Sprites\Player-1.png" />
     <Image Include="Resources\Images\Sprites\Player-2.png" />
     <Image Include="Resources\Images\Sprites\Players\Player-1.png" />

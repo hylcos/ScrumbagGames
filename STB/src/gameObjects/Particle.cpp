@@ -6,7 +6,7 @@
 
 Particle::Particle(sf::Vector2f pos)
 {
-	GameObject::position = pos;
+     position = pos;
 }
 
 void Particle::setColor(sf::Color color){

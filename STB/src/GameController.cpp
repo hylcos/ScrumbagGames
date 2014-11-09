@@ -16,7 +16,8 @@ void GameController::stop(){
 
 void GameController::start(){
 	SoundController::getInstance().load();
-	LevelController::getInstance().startLevel(LevelController::getInstance().MENU_MAIN);
+	LevelController::getInstance().startLevel(LevelController::getInstance().SPLASH);
+	changeCursor();
 	while (!stopping){
 		step();
 	}
@@ -39,23 +40,22 @@ void GameController::changeCursor(){
 	cursorsprite.setTexture(cursortex);
 	cursorsprite.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)));
 	window.draw(cursorsprite);
-	
 }
 
 void GameController::step(){
 	checkWindow();
 	LevelController::getInstance().step(fps, window);
 	HudController::getInstance().step(window);
-	changeCursor();
+	cursorsprite.setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)));
+	window.draw(cursorsprite);
 	window.display();
 	
 	
 	frames++;
 
 	if (clock() > nextClock){
-		nextClock = clock() + CLOCKS_PER_SEC / 3;
-		fps = fps / 3 * 2 + (float)frames;
-
+		nextClock = clock() + CLOCKS_PER_SEC / 30;
+		fps = fps / 3 * 2 + (float)frames*10;
 #ifdef DEBUG//Defined in GameController.h
 		std::cout << fps << "\n";
 #endif

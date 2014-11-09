@@ -7,8 +7,9 @@ class SoundController
 public:
 	static SoundController& getInstance()
 	{
-		static SoundController    instance;
-		instance.load();
+		static SoundController    instance;// Guaranteed to be destroyed.
+		instance.load(); 
+		// Instantiated on first use.
 		return instance;
 	}
 
@@ -31,7 +32,7 @@ public:
 
 	~SoundController();
 
-	std::map <  std::string, sf::Music* > SoundController::map;
+	std::map <  std::string, sf::Music* > map;
 private:
 	SoundController() {};
 	SoundController(SoundController const&) = delete;

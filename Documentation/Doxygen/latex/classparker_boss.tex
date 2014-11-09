@@ -1,0 +1,111 @@
+\hypertarget{classparker_boss}{\section{parker\+Boss Class Reference}
+\label{classparker_boss}\index{parker\+Boss@{parker\+Boss}}
+}
+
+
+Inherits \hyperlink{class_enemy}{Enemy}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classparker_boss_a5f82194f8880924981fccd4bf611f324}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+void \hyperlink{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+void \hyperlink{classparker_boss_a92a6a7944dcd26818dcfee1701e4a41b}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}{reduce\+H\+P} (int damage) override
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
+\hypertarget{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}{void {\bfseries show\+Hp} ()}\label{classparker_boss_a52928b2641e7da080fd27b2f9679aa26}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}{\index{parker\+Boss@{parker\+Boss}!draw@{draw}}
+\index{draw@{draw}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void parker\+Boss\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}
+
+
+Draw draws the current texture on the window. 
+
+Gets the current sprite and draws it on the screen given in the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em window} & is the window in which the whole game is displayed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{Animation}.
+
+\hypertarget{classparker_boss_a92a6a7944dcd26818dcfee1701e4a41b}{\index{parker\+Boss@{parker\+Boss}!move@{move}}
+\index{move@{move}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void parker\+Boss\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a92a6a7944dcd26818dcfee1701e4a41b}
+
+
+The move method of the game object. 
+
+Virtual method that will specify what happens when the game object is told to move 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{Animation}.
+
+\hypertarget{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}{\index{parker\+Boss@{parker\+Boss}!reduce\+H\+P@{reduce\+H\+P}}
+\index{reduce\+H\+P@{reduce\+H\+P}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{reduce\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void parker\+Boss\+::reduce\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}
+
+
+The reduce\+H\+P method of the enemy. 
+
+Damages this enemey, if his hp reaches 0, this enemy will die. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage dealt to this enemy. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
+
+\hypertarget{classparker_boss_a5f82194f8880924981fccd4bf611f324}{\index{parker\+Boss@{parker\+Boss}!update@{update}}
+\index{update@{update}!parker\+Boss@{parker\+Boss}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void parker\+Boss\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classparker_boss_a5f82194f8880924981fccd4bf611f324}
+
+
+Updates the texture of the animation. 
+
+Updates the current texture of the animation to the right one based on the time elapsed. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/bosses/parker\+Boss.\+h\item 
+game\+Objects/bosses/parker\+Boss.\+cpp\end{DoxyCompactItemize}

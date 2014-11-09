@@ -1,0 +1,166 @@
+\hypertarget{class_bullet}{\section{Bullet Class Reference}
+\label{class_bullet}\index{Bullet@{Bullet}}
+}
+
+
+The \hyperlink{class_bullet}{Bullet} header file.  
+
+
+
+
+{\ttfamily \#include $<$Bullet.\+h$>$}
+
+
+
+Inherits \hyperlink{class_game_object}{Game\+Object}, and \hyperlink{class_particle_emitter}{Particle\+Emitter}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bullet_a181d413f4a8195bc42fce2b5a77f9bd0}{Bullet} (std\+::string imagename, float rotation, short bullet\+Speed, int damage, sf\+::\+Vector2f position)
+\begin{DoxyCompactList}\small\item\em The constructor of the bullet. \end{DoxyCompactList}\item 
+void \hyperlink{class_bullet_acfcfcf7146d04ad78520292c55ca6eee}{update} (float speedmodifer) override
+\begin{DoxyCompactList}\small\item\em The update function of the bullet. \end{DoxyCompactList}\item 
+void \hyperlink{class_bullet_ac1d4f701d0eb4a2ff0eb30c68ce545da}{move} (float speedmodifier) override
+\begin{DoxyCompactList}\small\item\em The Move function of the bullet. \end{DoxyCompactList}\item 
+void \hyperlink{class_bullet_a196f55015a331416e3f406d8d2065f36}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em Draws the bullet. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_bullet_ac713e5b80340e69140494df3451c4be6}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em gives the bounds of the \hyperlink{class_bullet}{Bullet}. \end{DoxyCompactList}\item 
+\hyperlink{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}{$\sim$\+Bullet} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the \hyperlink{class_bullet}{Bullet} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_bullet}{Bullet} header file. 
+
+This is the header file of the bullet class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bullet_a181d413f4a8195bc42fce2b5a77f9bd0}{\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\index{Bullet@{Bullet}!Bullet@{Bullet}}
+\subsubsection[{Bullet}]{\setlength{\rightskip}{0pt plus 5cm}Bullet\+::\+Bullet (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{imagename, }
+\item[{float}]{rotation, }
+\item[{short}]{bullet\+Speed, }
+\item[{int}]{damage, }
+\item[{sf\+::\+Vector2f}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_bullet_a181d413f4a8195bc42fce2b5a77f9bd0}
+
+
+The constructor of the bullet. 
+
+The constructor mainly sets all the attributes of the bullet. 
+\begin{DoxyParams}{Parameters}
+{\em imagename} & The name the texture has in our directories. \\
+\hline
+{\em rotation} & The amount the bullet should be rotated (the direction from the player to the mouse pointer). \\
+\hline
+{\em bullet\+Speed} & The speed of the bullet depending on what weapon the bullet is shot with. \\
+\hline
+{\em damage} & The damage the bullet deals when it hits a bully. \\
+\hline
+{\em postion} & Where the bullet is spawned on the screen. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}{\index{Bullet@{Bullet}!````~Bullet@{$\sim$\+Bullet}}
+\index{````~Bullet@{$\sim$\+Bullet}!Bullet@{Bullet}}
+\subsubsection[{$\sim$\+Bullet}]{\setlength{\rightskip}{0pt plus 5cm}Bullet\+::$\sim$\+Bullet (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bullet_aaeb5cb41d7db89f49007b08b41f1bfcf}
+
+
+The destructor of the \hyperlink{class_bullet}{Bullet} class. 
+
+Destroys the \hyperlink{class_bullet}{Bullet}. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bullet_a196f55015a331416e3f406d8d2065f36}{\index{Bullet@{Bullet}!draw@{draw}}
+\index{draw@{draw}!Bullet@{Bullet}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Bullet\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bullet_a196f55015a331416e3f406d8d2065f36}
+
+
+Draws the bullet. 
+
+This method draws the sprite of the bullet on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window the sprite should be drawn on. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_bullet_ac713e5b80340e69140494df3451c4be6}{\index{Bullet@{Bullet}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Bullet@{Bullet}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Bullet\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bullet_ac713e5b80340e69140494df3451c4be6}
+
+
+gives the bounds of the \hyperlink{class_bullet}{Bullet}. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of the bullet based on the current position and rotation. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_bullet_ac1d4f701d0eb4a2ff0eb30c68ce545da}{\index{Bullet@{Bullet}!move@{move}}
+\index{move@{move}!Bullet@{Bullet}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Bullet\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speedmodifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bullet_ac1d4f701d0eb4a2ff0eb30c68ce545da}
+
+
+The Move function of the bullet. 
+
+This method calculates the new position of the bullet based on the previous position and the speed of the bullet. It also checks if the bullet is out of the screen, and if it is the bullet will be deleted. 
+\begin{DoxyParams}{Parameters}
+{\em speedmodifier} & Isn't really used but is here because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a5929b9837b72ea7d82fda6c5719dd348}{Game\+Object}.
+
+\hypertarget{class_bullet_acfcfcf7146d04ad78520292c55ca6eee}{\index{Bullet@{Bullet}!update@{update}}
+\index{update@{update}!Bullet@{Bullet}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Bullet\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speedmodifer}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bullet_acfcfcf7146d04ad78520292c55ca6eee}
+
+
+The update function of the bullet. 
+
+Checks if the bullet touches an enemy, and if so, reduces the hp of the bully and deletes itself. 
+\begin{DoxyParams}{Parameters}
+{\em speedmodifier} & Isn't really used but is here because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Bullet.\+h\item 
+game\+Objects/Bullet.\+cpp\end{DoxyCompactItemize}

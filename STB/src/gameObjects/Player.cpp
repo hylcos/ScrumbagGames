@@ -29,13 +29,13 @@ Animation{ player }
 	ParticleEmitter::deceleration = 0.15f;
 	ParticleEmitter::directionDeviation = 180.f;
 	ParticleEmitter::size = 3.f;
-
+	gameOver = false;
 	WeaponManager::getInstance().load();
 	Animation::setTextures(*TextureManager::getInstance().getTexture("Sprites/Players/Player-1.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-2.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-3.png"),
 		*TextureManager::getInstance().getTexture("Sprites/Players/Player-4.png"));
-	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().sniper, WeaponManager::getInstance().rifle);
+	setWeapons(WeaponManager::getInstance().dagger, WeaponManager::getInstance().pistol, WeaponManager::getInstance().shotgun);
 
 }
 
@@ -44,11 +44,14 @@ void Player::reduceHP(int damage){
 		SoundController::getInstance().playMusic("Ouch_" + std::to_string(rand() % 2 + 1));
 		hp -= damage;
 		if (hp <= 0){
-			LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
+			gameOver = true;
+			gameOverTimer = 500;
 		}
 	}
 }
-
+bool Player::getgameOver(){
+	return gameOver;
+}
 void Player::update(float speedModifier) {
 	Animation::update(speedModifier);
 	selectedWeapons[curWeapon]->setRotation(rotation);
@@ -60,14 +63,21 @@ void Player::update(float speedModifier) {
 		selectedWeapons[curWeapon]->reload();
 
 	for (auto & choice : weaponchoice)
-		if (sf::Keyboard::isKeyPressed(choice.key))
+		if (sf::Keyboard::isKeyPressed(choice.key)){
 			curWeapon = choice.weapon;
-
+		}
+	gameOverTimer -= speedModifier;
 	doubleSpeedTimer -= speedModifier;
 	if (doubleSpeedTimer <= 0)
 		speed = 3;
 	if (invincibleTimer <= 0)
 		invincible = false;
+	if (gameOverTimer <= 0 && gameOver){
+		gameOver = false;
+		LevelController::getInstance().goToNextLevel(&LevelController::getInstance().MENU_MAIN);
+
+	}
+	LevelController::getInstance().setZoom(selectedWeapons[curWeapon]->getName() == "sniper"?1.5f:1.f);
 	selectedWeapons[curWeapon]->update(speedModifier);
 
 	ParticleEmitter::update(speedModifier);
@@ -75,7 +85,7 @@ void Player::update(float speedModifier) {
 
 void Player::move(float speedModifier){
 	framesTillNextParticle++;
-	sf::Vector2f newPos{ 0, 0 }, reservePos{ 0, 0 };
+	sf::Vector2f newPos{ 0, 0 }, reservePos{ position };
 
 	for (auto & action : actions){
 		if (sf::Keyboard::isKeyPressed(action.key)){
@@ -84,6 +94,95 @@ void Player::move(float speedModifier){
 		}
 	}
 	emit = false;
+	{//Calculate newpos
+		if (newPos == sf::Vector2f{ 0, 0 }){
+			return;
+		}
+		float dir = atan2(newPos.y, newPos.x);
+		newPos.x = (cos(dir) * speedModifier * speed);
+		newPos.y = (sin(dir) * speedModifier * speed);
+	}
+	position += newPos;
+	curSprite.setPosition(position);
+	{//Calculate all collisions
+		//Calculate collisions with trashcans
+		for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+			if (obj->getType() != GameObject::gameObjectType::trashcan){
+				continue;
+			}
+			if (32 > sqrt(pow(obj->getPosition().x - position.x, 2) + pow(obj->getPosition().y - position.y, 2))){
+				//If the distance is smaller than 32, collide with bin
+				position = reservePos;
+				return;
+			}
+		}
+
+		bool collidesWithBench = false;
+		if (!isOnTable){
+			//Calculate collision with benches
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::bench){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					collidesWithBench = true;
+				}
+			}
+		}
+
+		if (!isOnTable && collidesWithBench){//set isOnTable if colliding with both a table and a bench.
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::table){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					isOnTable = true;
+				}
+			}
+		}
+
+		if (isOnTable){//Reset isOnTable if not on a table
+			isOnTable = false;
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::table){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					isOnTable = true;
+				}
+			}
+		}
+
+		if (!isOnTable){//Stop moving if not on a table but colliding with one.
+			for (GameObject * obj : LevelController::getInstance().getGameObjects()){
+				if (obj->getType() != GameObject::gameObjectType::table){
+					continue;
+				}
+				if (Collision::collision(this, obj)){
+					position = reservePos;
+					return;
+				}
+			}
+		}
+	}
+
+	if (((position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16))){
+		position = reservePos;
+	}
+	if (position != reservePos){
+		emit = true;
+		toNextWalkSound += speedModifier;
+		toNext += speedModifier;
+		if (toNextWalkSound >= 20){
+			walkSound++;
+			if (walkSound == 9){
+				walkSound = 1;
+			}
+			SoundController::getInstance().playMusic("walk_" + std::to_string(rand() % 8 + 1));
+			toNextWalkSound -= 20;
+		}
+	}
+	/*
 	if (newPos != sf::Vector2f{ 0, 0 }){
 		emit = true;
 		bool isOnBench = false;
@@ -120,11 +219,11 @@ void Player::move(float speedModifier){
 					collided = true;
 				}
 				else {
-					/*if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
+					if (Collision::dist2(Collision::getClosestPoint(obj, this), newPos) < closestTableDistance){
 						closestCollisionPoint = Collision::getClosestPoint(obj, this);
 						closestTableDistance = Collision::dist2(closestCollisionPoint, newPos);
 						closestTable = obj;
-					}*/
+					}
 					isWalkeble = false;
 				}
 			}
@@ -155,11 +254,11 @@ void Player::move(float speedModifier){
 
 		if (!isWalkeble){
 			position = reservePos;
-			emit = false;/*
+			emit = false;
 			float dirToPoint = atan2(closestCollisionPoint.y - position.y, closestCollisionPoint.x - position.x) * 180 / PI;
 			float playerDir = dir * 180 / PI;
 			float newDir = playerDir;
-			if (playerDir == dirToPoint){
+			if (playerDir == dirToPoint || playerDir > fmodf(dirToPoint + 90,360.f) || playerDir < fmodf(dirToPoint - 90 + 360,360.f)){
 				goto exit;
 			}
 			if (playerDir < dirToPoint){
@@ -190,17 +289,19 @@ void Player::move(float speedModifier){
 				position = reservePos;
 				emit = false;
 			}
-			*/
 		}
-	//exit:
-
+		exit:
+		if (((position.x < 32 + 16 || position.x > 1248 - 16 || position.y < 32 + 6 || position.y > 934 - 16))){
+			position = reservePos;
+		}
 		toNextWalkSound += speedModifier;
 		toNext += speedModifier;
 	}
 
-
+	*/
 
 }
+
 void Player::draw(sf::RenderWindow & window) const {
 	Animation::draw(window);
 	selectedWeapons[curWeapon]->draw(window);
@@ -217,13 +318,24 @@ void Player::setWeapons(Weapon * weapon1, Weapon * weapon2, Weapon * weapon3){
 Weapon * Player::getSelectedWeapon(){
 	return selectedWeapons[curWeapon];
 }
+
+Weapon * Player::getWeapons(int value){
+	return selectedWeapons[value-1];
+}
 int Player::getHp(){
 	return hp;
 }
-
-float Player::getAmmo(){
-	return getSelectedWeapon()->getAmmo();
+void Player::addMoney(int money){
+	this->money += money;
 }
+
+void Player::setMoney(int money){
+	this->money = money;
+}
+int Player::getMoney(){
+	return money;
+}
+
 void Player::doubleSpeed(){
 	doubleSpeedTimer = 300;
 	speed = 5;
@@ -235,6 +347,12 @@ void Player::fullHealth(){
 sf::Vector2u Player::getSize(){
 
 	return sf::Vector2u{ static_cast<unsigned int>(getBounds().width), static_cast<unsigned int>(getBounds().height) };
+}
+void Player::setNextRound(bool value){
+	nextRound = value;
+}
+bool Player::getNextRound(){
+	return nextRound;
 }
 Player::~Player()
 {

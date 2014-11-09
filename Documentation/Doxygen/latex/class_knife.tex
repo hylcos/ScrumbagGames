@@ -1,0 +1,308 @@
+\hypertarget{class_knife}{\section{Knife Class Reference}
+\label{class_knife}\index{Knife@{Knife}}
+}
+
+
+The knife header file.  
+
+
+
+
+{\ttfamily \#include $<$Knife.\+h$>$}
+
+
+
+Inherits \hyperlink{class_weapon}{Weapon}, and \hyperlink{class_particle_emitter}{Particle\+Emitter}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_knife_a4556bddf2c8705c79f192157ad98e42b}{Knife} (std\+::string name, float damage, short attack\+Speed, int range)
+\begin{DoxyCompactList}\small\item\em The constructor of the knife. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_af90e68f00a874b1bc75a1bc91b8c84d8}{fire} ()
+\begin{DoxyCompactList}\small\item\em The fire method of the knife. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_ac861c5829858e00f82cbfdddb4a7d0b4}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the knife. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_a747c0cc2dcc81df06f63cc4259ed3556}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the knife. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_a3a6345197e3a146c311e28145a257665}{set\+Rotation} (float rotation)
+\begin{DoxyCompactList}\small\item\em The set rotation method of the knife. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_knife_a45e5c10b9b6aa04b0ef71fbbf25269d4}{get\+Name} () override
+\begin{DoxyCompactList}\small\item\em The get\+Name method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
+int \hyperlink{class_knife_a9a3afd5408784399fc9cc7afc33eb3cd}{get\+Damage\+Level} () override
+\begin{DoxyCompactList}\small\item\em The get\+Damage\+Level method of weapon. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_ad4a30cd292cabb9dd1d2638f893040b8}{upgrade\+Damage} () override
+\begin{DoxyCompactList}\small\item\em The upgrade\+Damage method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
+int \hyperlink{class_knife_aaee97b167b530dafa85d8bead3403a10}{get\+Firerate\+Level} () override
+\begin{DoxyCompactList}\small\item\em The get\+Firerate\+Level method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_a9c89877c20a19190103f8b5da013efb5}{upgrade\+Fire\+Rate} () override
+\begin{DoxyCompactList}\small\item\em The upgrade\+Fire\+Rate method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_ad33b6b16ba209474ef0211317fce057b}{reset} () override
+\begin{DoxyCompactList}\small\item\em The reset method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
+void \hyperlink{class_knife_aa32f6d087a7451a319c640652006a528}{double\+Damage} () override
+\begin{DoxyCompactList}\small\item\em The double\+Damage method of \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_knife_aa0d13d7ea1113f3dbd177c65acec9e87}{get\+Info} () override
+\begin{DoxyCompactList}\small\item\em The get\+Info method of weapon. \end{DoxyCompactList}\item 
+\hyperlink{class_knife_aba6d0d191765285bb5993a6c2f02046e}{$\sim$\+Knife} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the \hyperlink{class_knife}{Knife}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The knife header file. 
+
+This is the header file of the knife class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_knife_a4556bddf2c8705c79f192157ad98e42b}{\index{Knife@{Knife}!Knife@{Knife}}
+\index{Knife@{Knife}!Knife@{Knife}}
+\subsubsection[{Knife}]{\setlength{\rightskip}{0pt plus 5cm}Knife\+::\+Knife (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{name, }
+\item[{float}]{damage, }
+\item[{short}]{attack\+Speed, }
+\item[{int}]{range}
+\end{DoxyParamCaption}
+)}}\label{class_knife_a4556bddf2c8705c79f192157ad98e42b}
+
+
+The constructor of the knife. 
+
+Initializes the melee weapon based on the given parametes 
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the weapon \\
+\hline
+{\em damage} & The amount of damage the weapon deals \\
+\hline
+{\em attack\+Speed} & The amount of frames in between two attacks \\
+\hline
+{\em range} & The range the melee weapon can reach \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_knife_aba6d0d191765285bb5993a6c2f02046e}{\index{Knife@{Knife}!````~Knife@{$\sim$\+Knife}}
+\index{````~Knife@{$\sim$\+Knife}!Knife@{Knife}}
+\subsubsection[{$\sim$\+Knife}]{\setlength{\rightskip}{0pt plus 5cm}Knife\+::$\sim$\+Knife (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_knife_aba6d0d191765285bb5993a6c2f02046e}
+
+
+The deconstructor of the \hyperlink{class_knife}{Knife}. 
+
+Deallocates the \hyperlink{class_knife}{Knife} class. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_knife_aa32f6d087a7451a319c640652006a528}{\index{Knife@{Knife}!double\+Damage@{double\+Damage}}
+\index{double\+Damage@{double\+Damage}!Knife@{Knife}}
+\subsubsection[{double\+Damage}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::double\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_aa32f6d087a7451a319c640652006a528}
+
+
+The double\+Damage method of \hyperlink{class_knife}{Knife}. 
+
+when the powerup Double\+Damage is picked up and doubles the damage for a amount of time 
+
+Reimplemented from \hyperlink{class_weapon_a4e416a0635f930a322529af55b69e5ef}{Weapon}.
+
+\hypertarget{class_knife_a747c0cc2dcc81df06f63cc4259ed3556}{\index{Knife@{Knife}!draw@{draw}}
+\index{draw@{draw}!Knife@{Knife}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a747c0cc2dcc81df06f63cc4259ed3556}
+
+
+The draw method of the knife. 
+
+draws the knife based on its position and rotation 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window on which the knife has to be drawn \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_weapon_acb2e13733d27dec0a15845c359bf68a6}{Weapon}.
+
+\hypertarget{class_knife_af90e68f00a874b1bc75a1bc91b8c84d8}{\index{Knife@{Knife}!fire@{fire}}
+\index{fire@{fire}!Knife@{Knife}}
+\subsubsection[{fire}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::fire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_knife_af90e68f00a874b1bc75a1bc91b8c84d8}
+
+
+The fire method of the knife. 
+
+Causes the player to attack with his melee weapon. 
+
+Reimplemented from \hyperlink{class_weapon_af6f8ab97e28fd4778f97c96c78fd02f4}{Weapon}.
+
+\hypertarget{class_knife_a9a3afd5408784399fc9cc7afc33eb3cd}{\index{Knife@{Knife}!get\+Damage\+Level@{get\+Damage\+Level}}
+\index{get\+Damage\+Level@{get\+Damage\+Level}!Knife@{Knife}}
+\subsubsection[{get\+Damage\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int Knife\+::get\+Damage\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a9a3afd5408784399fc9cc7afc33eb3cd}
+
+
+The get\+Damage\+Level method of weapon. 
+
+Method that will return the current upgrade level for the damage of the weapon \begin{DoxyReturn}{Returns}
+current Damage\+Level 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_adfa7cf4006b6089d3843081cfd46aaf2}{Weapon}.
+
+\hypertarget{class_knife_aaee97b167b530dafa85d8bead3403a10}{\index{Knife@{Knife}!get\+Firerate\+Level@{get\+Firerate\+Level}}
+\index{get\+Firerate\+Level@{get\+Firerate\+Level}!Knife@{Knife}}
+\subsubsection[{get\+Firerate\+Level}]{\setlength{\rightskip}{0pt plus 5cm}int Knife\+::get\+Firerate\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_aaee97b167b530dafa85d8bead3403a10}
+
+
+The get\+Firerate\+Level method of \hyperlink{class_knife}{Knife}. 
+
+will return the current upgrade level for the Fire Rate of the \hyperlink{class_knife}{Knife} \begin{DoxyReturn}{Returns}
+current Fire Rate Level 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a5ada13535926ce1445b8205f91085c39}{Weapon}.
+
+\hypertarget{class_knife_aa0d13d7ea1113f3dbd177c65acec9e87}{\index{Knife@{Knife}!get\+Info@{get\+Info}}
+\index{get\+Info@{get\+Info}!Knife@{Knife}}
+\subsubsection[{get\+Info}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Knife\+::get\+Info (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_aa0d13d7ea1113f3dbd177c65acec9e87}
+
+
+The get\+Info method of weapon. 
+
+returns a string with all the info about a \hyperlink{class_knife}{Knife} \begin{DoxyReturn}{Returns}
+the info about the \hyperlink{class_knife}{Knife} 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_acbb83cac4f5426151954c6d4d5c66230}{Weapon}.
+
+\hypertarget{class_knife_a45e5c10b9b6aa04b0ef71fbbf25269d4}{\index{Knife@{Knife}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Knife@{Knife}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Knife\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a45e5c10b9b6aa04b0ef71fbbf25269d4}
+
+
+The get\+Name method of \hyperlink{class_knife}{Knife}. 
+
+\begin{DoxyReturn}{Returns}
+returns the name of the \hyperlink{class_knife}{Knife} 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_weapon_a0cc1adfac060d480dbb6d10b96de0a0d}{Weapon}.
+
+\hypertarget{class_knife_ad33b6b16ba209474ef0211317fce057b}{\index{Knife@{Knife}!reset@{reset}}
+\index{reset@{reset}!Knife@{Knife}}
+\subsubsection[{reset}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::reset (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_ad33b6b16ba209474ef0211317fce057b}
+
+
+The reset method of \hyperlink{class_knife}{Knife}. 
+
+Will reset the damage and Fire\+Rate too there normale state 
+
+Reimplemented from \hyperlink{class_weapon_a126b2f1436460fafa591687b04c6b06a}{Weapon}.
+
+\hypertarget{class_knife_a3a6345197e3a146c311e28145a257665}{\index{Knife@{Knife}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Knife@{Knife}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_knife_a3a6345197e3a146c311e28145a257665}
+
+
+The set rotation method of the knife. 
+
+Sets the rotation of the knife 
+\begin{DoxyParams}{Parameters}
+{\em rotation} & the value the knife's rotation should be set to \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a32562ecd2f833271b606d86a926d82b8}{Game\+Object}.
+
+\hypertarget{class_knife_ac861c5829858e00f82cbfdddb4a7d0b4}{\index{Knife@{Knife}!update@{update}}
+\index{update@{update}!Knife@{Knife}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_ac861c5829858e00f82cbfdddb4a7d0b4}
+
+
+The update method of the knife. 
+
+updates the melee weapon's cooldown and position 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & a modifier for the timings based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+\hypertarget{class_knife_ad4a30cd292cabb9dd1d2638f893040b8}{\index{Knife@{Knife}!upgrade\+Damage@{upgrade\+Damage}}
+\index{upgrade\+Damage@{upgrade\+Damage}!Knife@{Knife}}
+\subsubsection[{upgrade\+Damage}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::upgrade\+Damage (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_ad4a30cd292cabb9dd1d2638f893040b8}
+
+
+The upgrade\+Damage method of \hyperlink{class_knife}{Knife}. 
+
+Will upgrade the current Damage 
+
+Reimplemented from \hyperlink{class_weapon_a9419b6f263f0b78e0665678c9a14973a}{Weapon}.
+
+\hypertarget{class_knife_a9c89877c20a19190103f8b5da013efb5}{\index{Knife@{Knife}!upgrade\+Fire\+Rate@{upgrade\+Fire\+Rate}}
+\index{upgrade\+Fire\+Rate@{upgrade\+Fire\+Rate}!Knife@{Knife}}
+\subsubsection[{upgrade\+Fire\+Rate}]{\setlength{\rightskip}{0pt plus 5cm}void Knife\+::upgrade\+Fire\+Rate (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_knife_a9c89877c20a19190103f8b5da013efb5}
+
+
+The upgrade\+Fire\+Rate method of \hyperlink{class_knife}{Knife}. 
+
+Will upgrade the current Fire Rate 
+
+Reimplemented from \hyperlink{class_weapon_aedc0a69ed6da65caf70e8ff2d81b1271}{Weapon}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Knife.\+h\item 
+game\+Objects/Knife.\+cpp\end{DoxyCompactItemize}

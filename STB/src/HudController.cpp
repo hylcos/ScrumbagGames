@@ -3,6 +3,7 @@
 #include "LevelController.h"
 #include "TextureManager.h"
 #include "GameController.h"
+#include <algorithm>
 
 void HudController::addObject(GameObject * object){
 	gameObjectToAdd.push_back(object);
@@ -33,7 +34,7 @@ void HudController::loadHudTextures(){
 	swordtex = *TextureManager::getInstance().getTexture("HUDObjecten/swordWeapon.png");
 	swordsprite.setTexture(swordtex);
 
-	knifetex = *TextureManager::getInstance().getTexture("HUDObjecten/knifeWeapon.png");
+	knifetex = *TextureManager::getInstance().getTexture("HUDObjecten/daggerWeapon.png");
 	knifesprite.setTexture(knifetex);
 
 	shotguntex = *TextureManager::getInstance().getTexture("HUDObjecten/shotgunWeapon.png");
@@ -62,6 +63,9 @@ void HudController::load()
 		return;
 	}
 	isLoaded = true;
+
+	hudView.setCenter(static_cast<sf::Vector2f>(GameController::getInstance().getWindow().getSize()) / 2.0f);
+	hudView.setSize(static_cast<sf::Vector2f>(GameController::getInstance().getWindow().getSize()));
 	
 	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
     ammotext.setFont(font);
@@ -74,6 +78,12 @@ void HudController::load()
 	timetext.setColor(sf::Color(255, 20, 20));
 	timetext.setPosition(278, 18);
 	timetext.setString("00:00");
+
+	moneytext.setFont(font);
+	moneytext.setCharacterSize(15);
+	moneytext.setColor(sf::Color::Yellow);
+	moneytext.setPosition(35, 400);
+	moneytext.setString("Money: 0");
 
 	knifesprite.setPosition(sf::Vector2f(568, 431));
 	riflesprite.setPosition(sf::Vector2f(568, 429));
@@ -100,14 +110,18 @@ void HudController::load()
 
 }
 
+sf::View HudController::getHudView(){
+	return hudView;
+}
+
 void HudController::step(sf::RenderWindow & window){
 	float speedModifier = 60 / GameController::getInstance().getFPS();
-	sf::View hudView;
-	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
-	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
 
 	window.setView(hudView);
-
+	for (GameObject* obj : gameObjectToAdd){
+		gameObjects.push_back(obj);
+	}
+	gameObjectToAdd.clear();
 
 	for (GameObject* obj : gameObjects){
 		obj->update(speedModifier);
@@ -122,10 +136,18 @@ void HudController::step(sf::RenderWindow & window){
 	}
 
 	if (LevelController::getInstance().getPlayer() != nullptr){
-		healthForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()* 1.5) , 15));
-		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 28));
-		ammotext.setString(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmoString());
+		healthForeGround.setSize(sf::Vector2f(static_cast<float>(std::max(0.0,LevelController::getInstance().getPlayer()->getHp()* 1.5)) , 15));
+		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmo()), 28));
+		if (LevelController::getInstance().getPlayer()->getSelectedWeapon()->getIsReloading()){
+			ammotext.setCharacterSize(12);
+			ammotext.setString("Reloading");
+		}
+		else{
+			ammotext.setCharacterSize(20);
+			ammotext.setString(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmoString());
+		}
 		
+		moneytext.setString("Money: " + std::to_string(LevelController::getInstance().getPlayer()->getMoney()));
 		std::string weaponname = LevelController::getInstance().getPlayer()->getSelectedWeapon()->getName();
 		if (weaponname == "dagger")	{
 			window.draw(knifesprite);
@@ -145,7 +167,7 @@ void HudController::step(sf::RenderWindow & window){
 		if (weaponname == "shotgun")	{
 			window.draw(shotgunsprite);
 		}
-	
+		
 		window.draw(ammosprite);
 		window.draw(healthsprite);
 		window.draw(healthForeGround);
@@ -153,6 +175,7 @@ void HudController::step(sf::RenderWindow & window){
 		window.draw(timesprite);
 		window.draw(ammotext);
 		window.draw(timetext);
+		window.draw(moneytext);
 	}
 	else {
 		healthForeGround.setSize(sf::Vector2f(150, 15));

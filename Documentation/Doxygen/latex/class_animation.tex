@@ -1,0 +1,261 @@
+\hypertarget{class_animation}{\section{Animation Class Reference}
+\label{class_animation}\index{Animation@{Animation}}
+}
+
+
+Inherits \hyperlink{class_game_object}{Game\+Object}.
+
+
+
+Inherited by \hyperlink{class_enemy}{Enemy}, and \hyperlink{class_player}{Player}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_animation_a9bea96e39c72451d91d8c33f48ef194c}{Animation} (\hyperlink{class_game_object_ad5092169e581fb0772e01026882ea0c8}{game\+Object\+Type} type=unspecified)
+\begin{DoxyCompactList}\small\item\em The Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_ab63fd2f5810a27e1b61f43f19e8994c6}{set\+Textures} (sf\+::\+Texture \&tex1, sf\+::\+Texture \&tex2=$\ast$N\+U\+L, sf\+::\+Texture \&tex3=$\ast$N\+U\+L, sf\+::\+Texture \&tex4=$\ast$N\+U\+L, sf\+::\+Texture \&tex5=$\ast$N\+U\+L, sf\+::\+Texture \&tex6=$\ast$N\+U\+L, sf\+::\+Texture \&tex7=$\ast$N\+U\+L, sf\+::\+Texture \&tex8=$\ast$N\+U\+L)
+\begin{DoxyCompactList}\small\item\em Set\+Textures sets the textures used in this animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_ad85bc33848adb3aa539f560552fa36ba}{next} () override
+\begin{DoxyCompactList}\small\item\em Sets the current texture to the next one. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{class_animation_a539ba77ceb4c5e3677ac16a364afc627}{set\+Rotation} (float \hyperlink{class_animation_a5c68dd5bc1004cf064ff0c2d3aad9abb}{rotation}) override
+\begin{DoxyCompactList}\small\item\em set\+Rotation sets the rotation of the animation. \end{DoxyCompactList}\item 
+sf\+::\+Sprite $\ast$ \hyperlink{class_animation_afcc78d89a6cc01d6c9b8ba0753e3d83d}{get\+Current\+Animation} ()
+\begin{DoxyCompactList}\small\item\em get\+Current\+Animation returns the current sprite. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_animation_a7fbae20a3e33a7388da42da937016c25}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em Get\+Bounds gives the bounds of the animation. \end{DoxyCompactList}\item 
+\hyperlink{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{$\sim$\+Animation} ()
+\begin{DoxyCompactList}\small\item\em The destructor of the animation object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_animation_a5c68dd5bc1004cf064ff0c2d3aad9abb}{rotation} = 0.\+0
+\begin{DoxyCompactList}\small\item\em The rotation of the texture. \end{DoxyCompactList}\item 
+float \hyperlink{class_animation_afd9ad77afa13d0dc50586e0780ab6b20}{to\+Next} = 0.\+0
+\begin{DoxyCompactList}\small\item\em How much time has elapsed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_animation_a9bea96e39c72451d91d8c33f48ef194c}{\index{Animation@{Animation}!Animation@{Animation}}
+\index{Animation@{Animation}!Animation@{Animation}}
+\subsubsection[{Animation}]{\setlength{\rightskip}{0pt plus 5cm}Animation\+::\+Animation (
+\begin{DoxyParamCaption}
+\item[{{\bf game\+Object\+Type}}]{type = {\ttfamily unspecified}}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a9bea96e39c72451d91d8c33f48ef194c}
+
+
+The Constructor. 
+
+Just a default constructor, does nothing in particular. \hypertarget{class_animation_a401b68793d4fbf48d481c030ee4b2a16}{\index{Animation@{Animation}!````~Animation@{$\sim$\+Animation}}
+\index{````~Animation@{$\sim$\+Animation}!Animation@{Animation}}
+\subsubsection[{$\sim$\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}Animation\+::$\sim$\+Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_a401b68793d4fbf48d481c030ee4b2a16}
+
+
+The destructor of the animation object. 
+
+Deletes the animation when it is no longer needed. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_animation_a08a39c329c9c63d8569a1fd103542dda}{\index{Animation@{Animation}!draw@{draw}}
+\index{draw@{draw}!Animation@{Animation}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_animation_a08a39c329c9c63d8569a1fd103542dda}
+
+
+Draw draws the current texture on the window. 
+
+Gets the current sprite and draws it on the screen given in the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em window} & is the window in which the whole game is displayed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+
+
+Reimplemented in \hyperlink{class_enemy_ad35cb50c7b041a183f12756b939a4636}{Enemy}, \hyperlink{class_player_a5e0147aee1248db63417987b9a203a9a}{Player}, \hyperlink{classbobby_boss_a168f9c10b7ed7b371518a5d13a145221}{bobby\+Boss}, \hyperlink{classdunken_boss_a5b2bf5b73f34e1970fd47985a2671f86}{dunken\+Boss}, \hyperlink{classethan_boss_af42458496295b946615a8d53277925f5}{ethan\+Boss}, \hyperlink{classparker_boss_a58e7adcdd65c22eeaff3ef4185722417}{parker\+Boss}, and \hyperlink{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}{zoey\+Boss}.
+
+\hypertarget{class_animation_a7fbae20a3e33a7388da42da937016c25}{\index{Animation@{Animation}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Animation@{Animation}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Animation\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_animation_a7fbae20a3e33a7388da42da937016c25}
+
+
+Get\+Bounds gives the bounds of the animation. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of the animation in its current state. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_animation_afcc78d89a6cc01d6c9b8ba0753e3d83d}{\index{Animation@{Animation}!get\+Current\+Animation@{get\+Current\+Animation}}
+\index{get\+Current\+Animation@{get\+Current\+Animation}!Animation@{Animation}}
+\subsubsection[{get\+Current\+Animation}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Sprite $\ast$ Animation\+::get\+Current\+Animation (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_animation_afcc78d89a6cc01d6c9b8ba0753e3d83d}
+
+
+get\+Current\+Animation returns the current sprite. 
+
+\begin{DoxyReturn}{Returns}
+The current sprite that would be drawn on the screen. 
+\end{DoxyReturn}
+\hypertarget{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{\index{Animation@{Animation}!move@{move}}
+\index{move@{move}!Animation@{Animation}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_animation_a677d0633c20bcd49eab9513e1d47e20a}
+
+
+The move method of the game object. 
+
+Virtual method that will specify what happens when the game object is told to move 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a5929b9837b72ea7d82fda6c5719dd348}{Game\+Object}.
+
+
+
+Reimplemented in \hyperlink{class_enemy_aa70fd228db393894a6cd941e067f1aad}{Enemy}, \hyperlink{classbobby_boss_aafebea4f0d69a0f84dc1f8af980cf93f}{bobby\+Boss}, \hyperlink{class_player_a79a7509b3cde94c77b79247fa46b13dd}{Player}, \hyperlink{classdunken_boss_a298c2278b70343f32cc44ab0bb52ef77}{dunken\+Boss}, \hyperlink{classethan_boss_a2797ae895a6a8954b071a181a9b425a9}{ethan\+Boss}, \hyperlink{classparker_boss_a92a6a7944dcd26818dcfee1701e4a41b}{parker\+Boss}, and \hyperlink{classzoey_boss_a6c371465ec647b81299a0ffebaa8ee4c}{zoey\+Boss}.
+
+\hypertarget{class_animation_ad85bc33848adb3aa539f560552fa36ba}{\index{Animation@{Animation}!next@{next}}
+\index{next@{next}!Animation@{Animation}}
+\subsubsection[{next}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::next (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_animation_ad85bc33848adb3aa539f560552fa36ba}
+
+
+Sets the current texture to the next one. 
+
+First this method checks if the current texture is the last one, if it is it will set the first texture from the array to the current one. If it isn't, it will set the next texture from the array to the current one. 
+
+Reimplemented from \hyperlink{class_game_object_a9c6a1cca4f64b9de43035c644b06ed6b}{Game\+Object}.
+
+\hypertarget{class_animation_a539ba77ceb4c5e3677ac16a364afc627}{\index{Animation@{Animation}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Animation@{Animation}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_animation_a539ba77ceb4c5e3677ac16a364afc627}
+
+
+set\+Rotation sets the rotation of the animation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotation} & the amount to which the local variable rotation should be set. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a32562ecd2f833271b606d86a926d82b8}{Game\+Object}.
+
+
+
+Reimplemented in \hyperlink{class_player_af81c4b00747424065dae4984f4f6c57e}{Player}.
+
+\hypertarget{class_animation_ab63fd2f5810a27e1b61f43f19e8994c6}{\index{Animation@{Animation}!set\+Textures@{set\+Textures}}
+\index{set\+Textures@{set\+Textures}!Animation@{Animation}}
+\subsubsection[{set\+Textures}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::set\+Textures (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Texture \&}]{tex1, }
+\item[{sf\+::\+Texture \&}]{tex2 = {\ttfamily $\ast$NUL}, }
+\item[{sf\+::\+Texture \&}]{tex3 = {\ttfamily $\ast$NUL}, }
+\item[{sf\+::\+Texture \&}]{tex4 = {\ttfamily $\ast$NUL}, }
+\item[{sf\+::\+Texture \&}]{tex5 = {\ttfamily $\ast$NUL}, }
+\item[{sf\+::\+Texture \&}]{tex6 = {\ttfamily $\ast$NUL}, }
+\item[{sf\+::\+Texture \&}]{tex7 = {\ttfamily $\ast$NUL}, }
+\item[{sf\+::\+Texture \&}]{tex8 = {\ttfamily $\ast$NUL}}
+\end{DoxyParamCaption}
+)}}\label{class_animation_ab63fd2f5810a27e1b61f43f19e8994c6}
+
+
+Set\+Textures sets the textures used in this animation. 
+
+Set the textures that have to be used in this animation. The textures will be place in sequential order. Max. 8 textures. 
+\begin{DoxyParams}{Parameters}
+{\em tex1} & the first texture where the animation starts. \\
+\hline
+{\em tex2-\/tex8} & all the other textures of which the animation consists. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{\index{Animation@{Animation}!update@{update}}
+\index{update@{update}!Animation@{Animation}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Animation\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_animation_ae17ebf5f4b47801e460eb63342d858e8}
+
+
+Updates the texture of the animation. 
+
+Updates the current texture of the animation to the right one based on the time elapsed. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+Reimplemented in \hyperlink{class_enemy_a5509b06f70a649c4ea9d1fb06f07cb5c}{Enemy}, \hyperlink{class_player_a70e7b6ef62c5b8080e454edcb15cacc8}{Player}, \hyperlink{classbobby_boss_a1ba19c55017f2fb3f0b1679d82095d78}{bobby\+Boss}, \hyperlink{classdunken_boss_ad9ae91ab3ce0b97ee48ab90203c7e4fd}{dunken\+Boss}, \hyperlink{classethan_boss_a6e47b12c5e718ecee5d888bcde580c1a}{ethan\+Boss}, \hyperlink{classparker_boss_a5f82194f8880924981fccd4bf611f324}{parker\+Boss}, and \hyperlink{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}{zoey\+Boss}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_animation_a5c68dd5bc1004cf064ff0c2d3aad9abb}{\index{Animation@{Animation}!rotation@{rotation}}
+\index{rotation@{rotation}!Animation@{Animation}}
+\subsubsection[{rotation}]{\setlength{\rightskip}{0pt plus 5cm}float Animation\+::rotation = 0.\+0\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_animation_a5c68dd5bc1004cf064ff0c2d3aad9abb}
+
+
+The rotation of the texture. 
+
+Indicates how much the animation should be rotated. \hypertarget{class_animation_afd9ad77afa13d0dc50586e0780ab6b20}{\index{Animation@{Animation}!to\+Next@{to\+Next}}
+\index{to\+Next@{to\+Next}!Animation@{Animation}}
+\subsubsection[{to\+Next}]{\setlength{\rightskip}{0pt plus 5cm}float Animation\+::to\+Next = 0.\+0\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_animation_afd9ad77afa13d0dc50586e0780ab6b20}
+
+
+How much time has elapsed. 
+
+If enough time has elapsed the next texture should be drawn, the time elapsed is indicated by the to\+Next integer. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Animation.\+h\item 
+game\+Objects/Animation.\+cpp\end{DoxyCompactItemize}

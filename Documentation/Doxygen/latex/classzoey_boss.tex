@@ -1,0 +1,111 @@
+\hypertarget{classzoey_boss}{\section{zoey\+Boss Class Reference}
+\label{classzoey_boss}\index{zoey\+Boss@{zoey\+Boss}}
+}
+
+
+Inherits \hyperlink{class_enemy}{Enemy}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the texture of the animation. \end{DoxyCompactList}\item 
+void \hyperlink{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em Draw draws the current texture on the window. \end{DoxyCompactList}\item 
+void \hyperlink{classzoey_boss_a6c371465ec647b81299a0ffebaa8ee4c}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the game object. \end{DoxyCompactList}\item 
+void \hyperlink{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}{reduce\+H\+P} (int damage) override
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
+\hypertarget{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}{void {\bfseries show\+Hp} ()}\label{classzoey_boss_ae70c0773e30ab34f2c12ca816eb582cd}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}{\index{zoey\+Boss@{zoey\+Boss}!draw@{draw}}
+\index{draw@{draw}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void zoey\+Boss\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_afbf4886e5a325c17a0366b631d274e19}
+
+
+Draw draws the current texture on the window. 
+
+Gets the current sprite and draws it on the screen given in the parameters. 
+\begin{DoxyParams}{Parameters}
+{\em window} & is the window in which the whole game is displayed \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{Animation}.
+
+\hypertarget{classzoey_boss_a6c371465ec647b81299a0ffebaa8ee4c}{\index{zoey\+Boss@{zoey\+Boss}!move@{move}}
+\index{move@{move}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void zoey\+Boss\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_a6c371465ec647b81299a0ffebaa8ee4c}
+
+
+The move method of the game object. 
+
+Virtual method that will specify what happens when the game object is told to move 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{Animation}.
+
+\hypertarget{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}{\index{zoey\+Boss@{zoey\+Boss}!reduce\+H\+P@{reduce\+H\+P}}
+\index{reduce\+H\+P@{reduce\+H\+P}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{reduce\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void zoey\+Boss\+::reduce\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}
+
+
+The reduce\+H\+P method of the enemy. 
+
+Damages this enemey, if his hp reaches 0, this enemy will die. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage dealt to this enemy. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
+
+\hypertarget{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}{\index{zoey\+Boss@{zoey\+Boss}!update@{update}}
+\index{update@{update}!zoey\+Boss@{zoey\+Boss}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void zoey\+Boss\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classzoey_boss_aa712b8f9050e3851cb0133927acd3f54}
+
+
+Updates the texture of the animation. 
+
+Updates the current texture of the animation to the right one based on the time elapsed. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & isn't really used in this method, but is there because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/bosses/zoey\+Boss.\+h\item 
+game\+Objects/bosses/zoey\+Boss.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,161 @@
+\hypertarget{class_particle_emitter}{\section{Particle\+Emitter Class Reference}
+\label{class_particle_emitter}\index{Particle\+Emitter@{Particle\+Emitter}}
+}
+
+
+Inherited by \hyperlink{class_bullet}{Bullet}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_enemy}{Enemy}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_knife}{Knife}{\ttfamily  \mbox{[}private\mbox{]}}, \hyperlink{class_player}{Player}{\ttfamily  \mbox{[}private\mbox{]}}, and \hyperlink{class_powerup}{Powerup}{\ttfamily  \mbox{[}private\mbox{]}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_emitter_a31313702250800a4e074286b8e5d5116}{\hyperlink{class_particle_emitter_a31313702250800a4e074286b8e5d5116}{Particle\+Emitter} ()}\label{class_particle_emitter_a31313702250800a4e074286b8e5d5116}
+
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_particle_manager}{Particle\+Manager} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_emitter_a59e863f0386f1de946bb5f5a2eef3358}{emit\+Particles} ()
+\begin{DoxyCompactList}\small\item\em The emit\+Particles Method of Partical\+Emitter. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_emitter_a1567fd71b41c71b56ee8b72c5bca559c}{update} (float speed\+Modifier)
+\begin{DoxyCompactList}\small\item\em The update Method of Partical\+Emitter. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_emitter_aa639c76a4637bba568a407f69e1c8ebd}{set\+Color} (int r, int g, int b, int a)
+\begin{DoxyCompactList}\small\item\em The set\+Color Method of Partical\+Emitter. \end{DoxyCompactList}\item 
+void \hyperlink{class_particle_emitter_ac2d2189e309f8e557b214963aeb8aef8}{set\+Color} (sf\+::\+Color color, int a=255)
+\begin{DoxyCompactList}\small\item\em The set\+Color Method of Partical\+Emitter. \end{DoxyCompactList}\item 
+\hypertarget{class_particle_emitter_a6f4952f7555ede99d74d42b30c80f3e2}{\hyperlink{class_particle_emitter_a6f4952f7555ede99d74d42b30c80f3e2}{$\sim$\+Particle\+Emitter} ()}\label{class_particle_emitter_a6f4952f7555ede99d74d42b30c80f3e2}
+
+\begin{DoxyCompactList}\small\item\em The deconstructor of a \hyperlink{class_particle_emitter}{Particle\+Emitter}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_particle_emitter_ac5bd01ffba334b3475c723438ebbb0d9}{sf\+::\+Color {\bfseries particle\+Color}}\label{class_particle_emitter_ac5bd01ffba334b3475c723438ebbb0d9}
+
+\item 
+\hypertarget{class_particle_emitter_a4bfdf1026500e45025d7d847079449ac}{bool {\bfseries emit\+Once} = false}\label{class_particle_emitter_a4bfdf1026500e45025d7d847079449ac}
+
+\item 
+\hypertarget{class_particle_emitter_adad6aa5f4e12833ec208463a471cc72f}{bool {\bfseries emit} = false}\label{class_particle_emitter_adad6aa5f4e12833ec208463a471cc72f}
+
+\item 
+\hypertarget{class_particle_emitter_a0bfdd28a5fb6be6d310f4afe19d5bb69}{bool {\bfseries is\+Gore} = false}\label{class_particle_emitter_a0bfdd28a5fb6be6d310f4afe19d5bb69}
+
+\item 
+\hypertarget{class_particle_emitter_af32de038d2b86f175da7a7cf6d35f94e}{float {\bfseries frequency} = 30.f}\label{class_particle_emitter_af32de038d2b86f175da7a7cf6d35f94e}
+
+\item 
+\hypertarget{class_particle_emitter_ab9bbf606442bbc94056fc99739116fae}{int {\bfseries amount} = 1}\label{class_particle_emitter_ab9bbf606442bbc94056fc99739116fae}
+
+\item 
+\hypertarget{class_particle_emitter_a09c7892513030cf727dd44dea28f5785}{int {\bfseries frame} = 0}\label{class_particle_emitter_a09c7892513030cf727dd44dea28f5785}
+
+\item 
+\hypertarget{class_particle_emitter_a0f6f30a9cfd1b9b6ed033793ed8c5f4e}{float {\bfseries speed} = 20.f}\label{class_particle_emitter_a0f6f30a9cfd1b9b6ed033793ed8c5f4e}
+
+\item 
+\hypertarget{class_particle_emitter_a0659c3d423516551eb2bccabd5118d98}{float {\bfseries deceleration} = 0.\+15f}\label{class_particle_emitter_a0659c3d423516551eb2bccabd5118d98}
+
+\item 
+\hypertarget{class_particle_emitter_af330001a636059db3f7fea0c0d5a0fdf}{float {\bfseries direction} = 0.f}\label{class_particle_emitter_af330001a636059db3f7fea0c0d5a0fdf}
+
+\item 
+\hypertarget{class_particle_emitter_ab5cee07d425137bc979058bed2fc7b91}{float {\bfseries direction\+Deviation} = 360.f}\label{class_particle_emitter_ab5cee07d425137bc979058bed2fc7b91}
+
+\item 
+\hypertarget{class_particle_emitter_a36dcead124ad38150b8f21feda7115d8}{float {\bfseries size} = 2.f}\label{class_particle_emitter_a36dcead124ad38150b8f21feda7115d8}
+
+\item 
+\hypertarget{class_particle_emitter_aef5ed3707677d9fdf0e411276a8be6ab}{float {\bfseries rotation} = 0.f}\label{class_particle_emitter_aef5ed3707677d9fdf0e411276a8be6ab}
+
+\item 
+\hypertarget{class_particle_emitter_a2ccd7416ae393bace934fe2b415f64cf}{float {\bfseries rotation\+Deviation} = 360.f}\label{class_particle_emitter_a2ccd7416ae393bace934fe2b415f64cf}
+
+\item 
+\hypertarget{class_particle_emitter_a6618d5435d8fe332e26656c20aecb7a6}{float {\bfseries minimum\+Speed} = 0.\+004f}\label{class_particle_emitter_a6618d5435d8fe332e26656c20aecb7a6}
+
+\item 
+\hypertarget{class_particle_emitter_ae43520e60f9102c9626f110090830ae1}{sf\+::\+Vector2f {\bfseries spawn\+Position} \{ 0, 0 \}}\label{class_particle_emitter_ae43520e60f9102c9626f110090830ae1}
+
+\item 
+\hypertarget{class_particle_emitter_ac89ef51ef2739ef7bc39461b6d4e3d17}{\hyperlink{class_particle_manager}{Particle\+Manager} $\ast$ {\bfseries particle\+Manager} = nullptr}\label{class_particle_emitter_ac89ef51ef2739ef7bc39461b6d4e3d17}
+
+\item 
+\hypertarget{class_particle_emitter_a558c0bd0ad1193482111782f488cadb2}{\hyperlink{class_game_object}{Game\+Object} $\ast$ {\bfseries object} = nullptr}\label{class_particle_emitter_a558c0bd0ad1193482111782f488cadb2}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_particle_emitter_a59e863f0386f1de946bb5f5a2eef3358}{\index{Particle\+Emitter@{Particle\+Emitter}!emit\+Particles@{emit\+Particles}}
+\index{emit\+Particles@{emit\+Particles}!Particle\+Emitter@{Particle\+Emitter}}
+\subsubsection[{emit\+Particles}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Emitter\+::emit\+Particles (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_particle_emitter_a59e863f0386f1de946bb5f5a2eef3358}
+
+
+The emit\+Particles Method of Partical\+Emitter. 
+
+Spawns a given Amount of Particals and sets all there Attributes \hypertarget{class_particle_emitter_aa639c76a4637bba568a407f69e1c8ebd}{\index{Particle\+Emitter@{Particle\+Emitter}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Particle\+Emitter@{Particle\+Emitter}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Emitter\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{int}]{r, }
+\item[{int}]{g, }
+\item[{int}]{b, }
+\item[{int}]{a}
+\end{DoxyParamCaption}
+)}}\label{class_particle_emitter_aa639c76a4637bba568a407f69e1c8ebd}
+
+
+The set\+Color Method of Partical\+Emitter. 
+
+sets the color of the particals that have to been spawned 
+\begin{DoxyParams}{Parameters}
+{\em r} & How much Red \\
+\hline
+{\em g} & How much Green \\
+\hline
+{\em b} & How much Blue \\
+\hline
+{\em a} & How much the Opacity is \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_particle_emitter_ac2d2189e309f8e557b214963aeb8aef8}{\index{Particle\+Emitter@{Particle\+Emitter}!set\+Color@{set\+Color}}
+\index{set\+Color@{set\+Color}!Particle\+Emitter@{Particle\+Emitter}}
+\subsubsection[{set\+Color}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Emitter\+::set\+Color (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Color}]{color, }
+\item[{int}]{a = {\ttfamily 255}}
+\end{DoxyParamCaption}
+)}}\label{class_particle_emitter_ac2d2189e309f8e557b214963aeb8aef8}
+
+
+The set\+Color Method of Partical\+Emitter. 
+
+sets the color of the particals that have to been spawned 
+\begin{DoxyParams}{Parameters}
+{\em color} & the base Color of the Particals \\
+\hline
+{\em a} & How much the Opacity is \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_particle_emitter_a1567fd71b41c71b56ee8b72c5bca559c}{\index{Particle\+Emitter@{Particle\+Emitter}!update@{update}}
+\index{update@{update}!Particle\+Emitter@{Particle\+Emitter}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Particle\+Emitter\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)}}\label{class_particle_emitter_a1567fd71b41c71b56ee8b72c5bca559c}
+
+
+The update Method of Partical\+Emitter. 
+
+Gets the Partical\+Manager is called for the first time If the number of past frames is more or equal then the spawnrate of the Partical\+Emmiter there will spawn a new bunch of Particals 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & the speed of the game \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Particle\+Emitter.\+h\item 
+game\+Objects/Particle\+Emitter.\+cpp\end{DoxyCompactItemize}

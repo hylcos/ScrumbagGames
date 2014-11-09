@@ -67,25 +67,36 @@ void Enemy::reduceHP(int damage){
 
 
 		LevelController::getInstance().removeObject(this);
-	
-		if (rand() % 7 == 1){
-			Powerup* pu = new Powerup(sf::Vector2f{position});
-			int i = rand() % 4 + 1;
-			switch (i){
-			case 1:	
-				pu->setType(&pu->puSprint); 
-				std::cout << "SPRINT \n"; break;
-			case 2: 
-				pu->setType(&pu->puFullHealth); 
-				std::cout << "FULLHealth \n"; break;
-			case 3:
-				pu->setType(&pu->puAmmoUp); 
-				std::cout << "Ammo up (2 magazines)\n"; break;
-			case 4:	
-				pu->setType(&pu->BAB); 
-				std::cout << "BIGG ASS BOMBUH\n"; break;
+		if (rand() % 2 == 1){
+			if (rand() % 3 == 1){
+				Powerup* pu = new Powerup(sf::Vector2f{ position });
+				int i = rand() % 5 + 1;
+				
+				switch (i){
+				case 1:
+					pu->setType(&pu->puFullHealth);
+					std::cout << "FULLHealth \n"; break;
+				case 2:
+					pu->setType(&pu->puDoubleDamage);
+					std::cout << "DOuble Damage \n"; break;
+				case 3:
+					pu->setType(&pu->puSprint);
+					std::cout << "SPRINT \n"; break;
+				case 4:
+					pu->setType(&pu->puAmmoUp);
+					std::cout << "Ammo up (2 magazines)\n"; break;
+				case 5:
+					pu->setType(&pu->BAB);
+					std::cout << "BIGG ASS BOMBUH\n"; break;
+				}
+				LevelController::getInstance().addObject(pu);
 			}
-			LevelController::getInstance().addObject(pu); 
+		}
+		else {
+			Powerup* pu = new Powerup(sf::Vector2f{ position });
+			pu->setType(&pu->Money);
+			std::cout << "Money NBitches";
+			LevelController::getInstance().addObject(pu);
 		}
 	}
 }

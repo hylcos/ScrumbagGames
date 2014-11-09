@@ -1,11 +1,13 @@
 #pragma once
 #include "GameController.h"
+#include "TextureManager.h"
 #include "gameObjects\ParticleManager.h"
 #include "Factory.h"
 #include "gameObjects\Player.h"
 #include <SFML\Graphics.hpp>
 #include <unordered_set>
 #include "gameObjects\menu\Resume.h"
+#include "gameObjects\menu\Shop.h"
 #define PI 3.14159265358979323846f
 class GameController;
 class LevelController
@@ -21,6 +23,7 @@ public:
 	class Initializer{
 	public:
 		Initializer(std::string name);
+		Initializer();
 		std::string name;
 	};
 
@@ -28,10 +31,19 @@ public:
 	void LevelController::startLevel(LevelController::Initializer initializer);
 
 	LevelController::Initializer LEVEL_ONE{ "Resources/Levels/levelOne.level" };
+	LevelController::Initializer LEVEL_TWO{ "Resources/Levels/levelTwo.level" };
+	LevelController::Initializer LEVEL_THREE{ "Resources/Levels/levelThree.level" };
+	LevelController::Initializer LEVEL_FOUR{ "Resources/Levels/levelFour.level" };
+	LevelController::Initializer LEVEL_FIVE{ "Resources/Levels/levelFive.level" };
+
 	LevelController::Initializer MENU_MAIN{ "Resources/Levels/mainMenu.level" };
 	LevelController::Initializer MENU_OPTIONS{ "Resources/Levels/optionsMenu.level" };
-	LevelController::Initializer LEVEL_TWO{ "Resources/Levels/levelTwo.level" };
+	LevelController::Initializer SHOP{ "Resources/Levels/shop.level" };
+	LevelController::Initializer TUTORIAL{ "Resources/Levels/tutorial.level" };
 
+	LevelController::Initializer SPLASH{ "Resources/Levels/logo.level" };
+	void LevelController::setZoom(float f);
+	
 	//add GameObject
 	//
 	//This function will put a new GameObject under the control of the GameController.
@@ -55,7 +67,10 @@ public:
 	void LevelController::setPaused();
 	void LevelController::step(float fps, sf::RenderWindow & window);
 
+	void LevelController::reset();
+
 	Player * LevelController::getPlayer();
+	Player * LevelController::getPlayer2();
 
 	ParticleManager * LevelController::getParticleManager();
 
@@ -63,11 +78,15 @@ public:
 
 	const std::vector< GameObject* > LevelController::getGameObjects();
 
+	void LevelController::goToNextRound();
+
+	int curLevel = 0;
 private:
 	LevelController() {};
 	LevelController(LevelController const&) = delete;
 	void operator=(GameController const&) = delete;
 
+	void LevelController::spawnEnemies(float speedModifier);
 	void LevelController::load();
 	bool isLoaded = false;
 	bool paused = false;
@@ -84,21 +103,29 @@ private:
 	sf::Texture background;
 	sf::Texture backgroundOverlay;
 	sf::Texture pauseOverlay;
+	sf::Texture gameOverTexture;
 
+	sf::Sprite gameOverSprite;
 	sf::Sprite pauseSprite;
 	sf::Sprite backgroundSprite;
 	sf::Sprite backgroundSpriteOverlay;
 
 	sf::Uint8 terrorLevel = 255;
 
+	float targetZoom = 1.f;
+	float curZoom = 1.f;
+
 	std::vector< GameObject* > gameObjects, gameObjectToAdd;
 	std::unordered_set<GameObject*> gameObjectToRemove;
 	float enemySpawnTime;
 	float timeToNextEnemySpawn=0;
+	float gameOverTimer = 0.f;
 	sf::Vector2f enemyPosition{0, 0};
 	MainMenu backToMenu;
+	Shop goToShop;
 	Play restart;
 	Resume resume;
 	Player * player = nullptr;
+	Player player2 ;
 	ParticleManager * particleManager = nullptr;
 };

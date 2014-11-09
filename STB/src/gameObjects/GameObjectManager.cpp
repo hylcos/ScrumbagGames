@@ -32,6 +32,18 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	if (string == "Dunken"){
 		return new dunkenBoss();
 	}
+	if (string == "Ethan"){
+		return new ethanBoss();
+	}
+	if (string == "Zoey"){
+		return new zoeyBoss();
+	}
+	if (string == "Parker"){
+		return new parkerBoss();
+	}
+	if (string == "Bobby"){
+		return new bobbyBoss();
+	}
 	if (string == "ParticleManager"){
 		return new ParticleManager();
 	}
@@ -61,6 +73,18 @@ GameObject * GameObjectManager::createObjectFromName(std::string string){
 	}
 	if (string == "menu/SoundSlider"){
 		return new SoundSlider();
+	}
+	if (string == "menu/ShopCard"){
+		return new ShopCard();
+	}
+	if (string == "menu/NextRound"){
+		return new NextRound();
+	}
+	if (string == "menu/TutorialScreen"){
+		return new TutorialScreen();
+	}
+	if (string == "menu/Tutorial"){
+		return new Tutorial();
 	}
 	if (string == ""){
 		throw endOfFile();

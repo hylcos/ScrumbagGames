@@ -1,0 +1,176 @@
+\hypertarget{class_bench}{\section{Bench Class Reference}
+\label{class_bench}\index{Bench@{Bench}}
+}
+
+
+The \hyperlink{class_bench}{Bench} header file.  
+
+
+
+
+{\ttfamily \#include $<$Bench.\+h$>$}
+
+
+
+Inherits \hyperlink{class_game_object}{Game\+Object}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_bench_adb6c5dc00554246d493f9acbef4eaf51}{Bench} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_bench}{Bench} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_bench_a40fc8955782e814153234daa67bc4dd5}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The Draw function of the \hyperlink{class_bench}{Bench}. \end{DoxyCompactList}\item 
+void \hyperlink{class_bench_a8a9e65dde803b5f510fa533724eace75}{set\+Rotation} (float rotate) override
+\begin{DoxyCompactList}\small\item\em set\+Rotation sets the rotation of the \hyperlink{class_bench}{Bench} texture \end{DoxyCompactList}\item 
+void \hyperlink{class_bench_abb815aa9afeee6e72fa93db3d51cf1a1}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the texture of the \hyperlink{class_bench}{Bench}. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_bench_a9483349535b2a8333052993c3a7e02c9}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the game object. \end{DoxyCompactList}\item 
+sf\+::\+Transform \hyperlink{class_bench_ab77f7c8625bd343add0cfa4bff48c38b}{get\+Transform} () override
+\begin{DoxyCompactList}\small\item\em The get transform method of the game object. \end{DoxyCompactList}\item 
+sf\+::\+Vector2u \hyperlink{class_bench_af34d9a13039d25aaa2bca761513448fc}{get\+Size} () override
+\begin{DoxyCompactList}\small\item\em The get size method of the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_bench}{Bench} header file. 
+
+This is the header file of the bench class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bench_adb6c5dc00554246d493f9acbef4eaf51}{\index{Bench@{Bench}!Bench@{Bench}}
+\index{Bench@{Bench}!Bench@{Bench}}
+\subsubsection[{Bench}]{\setlength{\rightskip}{0pt plus 5cm}Bench\+::\+Bench (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_bench_adb6c5dc00554246d493f9acbef4eaf51}
+
+
+The \hyperlink{class_bench}{Bench} constructor. 
+
+The constructor of bench gets the needed texture from the texture manager. It also sets the origin of the sprite to the middle of the texture. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bench_a40fc8955782e814153234daa67bc4dd5}{\index{Bench@{Bench}!draw@{draw}}
+\index{draw@{draw}!Bench@{Bench}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Bench\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_a40fc8955782e814153234daa67bc4dd5}
+
+
+The Draw function of the \hyperlink{class_bench}{Bench}. 
+
+Draws the current sprite of the bench on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em window} & the screen on which the bench should be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_bench_a9483349535b2a8333052993c3a7e02c9}{\index{Bench@{Bench}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Bench@{Bench}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Bench\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_a9483349535b2a8333052993c3a7e02c9}
+
+
+The get bounds method of the game object. 
+
+\begin{DoxyReturn}{Returns}
+A rectangle indicating the bounds of the game object 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_bench_af34d9a13039d25aaa2bca761513448fc}{\index{Bench@{Bench}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Bench@{Bench}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2u Bench\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_af34d9a13039d25aaa2bca761513448fc}
+
+
+The get size method of the game object. 
+
+\begin{DoxyReturn}{Returns}
+the size of the game object 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_a2f771b23fa5f6c2e031b308fa3926ada}{Game\+Object}.
+
+\hypertarget{class_bench_ab77f7c8625bd343add0cfa4bff48c38b}{\index{Bench@{Bench}!get\+Transform@{get\+Transform}}
+\index{get\+Transform@{get\+Transform}!Bench@{Bench}}
+\subsubsection[{get\+Transform}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Transform Bench\+::get\+Transform (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_ab77f7c8625bd343add0cfa4bff48c38b}
+
+
+The get transform method of the game object. 
+
+\begin{DoxyReturn}{Returns}
+The real bounds of the game object, also indicating the rotation 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_a099849f3c0c6cfb0e0957d7fb6b37809}{Game\+Object}.
+
+\hypertarget{class_bench_a8a9e65dde803b5f510fa533724eace75}{\index{Bench@{Bench}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Bench@{Bench}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Bench\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rotate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_a8a9e65dde803b5f510fa533724eace75}
+
+
+set\+Rotation sets the rotation of the \hyperlink{class_bench}{Bench} texture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotate} & The amount with which the \hyperlink{class_bench}{Bench} texture should be rotated. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a32562ecd2f833271b606d86a926d82b8}{Game\+Object}.
+
+\hypertarget{class_bench_abb815aa9afeee6e72fa93db3d51cf1a1}{\index{Bench@{Bench}!update@{update}}
+\index{update@{update}!Bench@{Bench}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Bench\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_bench_abb815aa9afeee6e72fa93db3d51cf1a1}
+
+
+Updates the texture of the \hyperlink{class_bench}{Bench}. 
+
+Updates the position of the bench. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & isn't really used but is here because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Bench.\+h\item 
+game\+Objects/Bench.\+cpp\end{DoxyCompactItemize}

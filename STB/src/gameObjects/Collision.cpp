@@ -63,7 +63,7 @@ float Collision::distToSegment(Line line, sf::Vector2f point){
 bool Collision::collision(GameObject * circle, GameObject * square)
 {
 	sf::FloatRect rect = square->getBounds();
-	float maxDist = circle->getSize().x / 2.0f;
+	float maxDist = std::max(circle->getSize().x,circle->getSize().y) / 2.0f;
 	sf::Vector2f circleOrigin = circle->getPosition();
 
 	sf::Transform transform = square->getTransform();

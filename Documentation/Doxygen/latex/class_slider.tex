@@ -1,0 +1,103 @@
+\hypertarget{class_slider}{\section{Slider Class Reference}
+\label{class_slider}\index{Slider@{Slider}}
+}
+
+
+Inherits \hyperlink{class_clickable}{Clickable}.
+
+
+
+Inherited by \hyperlink{class_music_slider}{Music\+Slider}, and \hyperlink{class_sound_slider}{Sound\+Slider}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_slider_a5693b04af04da09cff43647283efaf6e}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
+\hypertarget{class_slider_ac1cb7218b21febfe4dffecc0055427ac}{void {\bfseries release} () override}\label{class_slider_ac1cb7218b21febfe4dffecc0055427ac}
+
+\item 
+\hypertarget{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}{void {\bfseries press} () override}\label{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}
+
+\item 
+void \hyperlink{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+\hypertarget{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}{virtual void {\bfseries update\+Value} (int value)}\label{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}
+
+\item 
+sf\+::\+Float\+Rect \hyperlink{class_slider_a3ca5a06f3165d1bce77408f367abba50}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_slider_a79e7ed51de2c2d9a70940fc40afa644c}{int {\bfseries value}}\label{class_slider_a79e7ed51de2c2d9a70940fc40afa644c}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_slider_a5693b04af04da09cff43647283efaf6e}{\index{Slider@{Slider}!draw@{draw}}
+\index{draw@{draw}!Slider@{Slider}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Slider\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a5693b04af04da09cff43647283efaf6e}
+
+
+The draw method of the game object. 
+
+Virtual method that will specify what happens when the game object has to be drawn 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window the game object has to be drawn in \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_slider_a3ca5a06f3165d1bce77408f367abba50}{\index{Slider@{Slider}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Slider@{Slider}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Slider\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a3ca5a06f3165d1bce77408f367abba50}
+
+
+The get bounds method of the game object. 
+
+\begin{DoxyReturn}{Returns}
+A rectangle indicating the bounds of the game object 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}{\index{Slider@{Slider}!update@{update}}
+\index{update@{update}!Slider@{Slider}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Slider\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}
+
+
+The update method of the game object. 
+
+Virtual method that will specify what happens when the game object is updated 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game based on the framerate \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/Slider.\+h\item 
+game\+Objects/menu/Slider.\+cpp\end{DoxyCompactItemize}
