@@ -46,22 +46,9 @@ public:
 
 
 private:
-	//! The rotate amount of the texture.
-	/*
-	Indicates how much the texture should be rotated before it is drawn on the screen.
-	*/
+
 	float rotate;
-
-	//! The texture used for the Trashcan.
-	/*!
-	The pointer to the texture of the Trashcan.
-	*/
 	sf::Texture * pic;
-
-	//! The sprite of the Trashcan.
-	/*!
-	The sprite used to drawn the Trashcan on the screen.
-	*/
 	sf::Sprite trashcan;
 };
 

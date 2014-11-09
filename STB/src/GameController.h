@@ -55,6 +55,10 @@ public:
 	*/
 	sf::RenderWindow& GameController::getWindow();
 
+	//! The getFont method of the gamecontroller
+	/*!
+	@return The current font that is used for text
+	*/
 	sf::Font * GameController::getFont();
 
 	//! The deconstructor of the gamecontroller
