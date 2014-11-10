@@ -1,0 +1,246 @@
+\hypertarget{class_enemy}{\section{Enemy Class Reference}
+\label{class_enemy}\index{Enemy@{Enemy}}
+}
+
+
+The \hyperlink{class_enemy}{Enemy} header file.  
+
+
+
+
+{\ttfamily \#include $<$Enemy.\+h$>$}
+
+
+
+Inheritance diagram for Enemy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_enemy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Enemy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_enemy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_enemy_a94f30d348b6d2840fd71675472ba38dd}{Enemy} ()
+\begin{DoxyCompactList}\small\item\em The constructor for the enemy class. \end{DoxyCompactList}\item 
+\hyperlink{class_enemy_a46078d479d4ca128752f2676fb2f5321}{Enemy} (Initializer initializer)
+\begin{DoxyCompactList}\small\item\em The constructor for the enemy based of of an initializer. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{reduce\+H\+P} (int damage)
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the enemy. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_a5509b06f70a649c4ea9d1fb06f07cb5c}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the enemy class. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_ad35cb50c7b041a183f12756b939a4636}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the enemy. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_aa70fd228db393894a6cd941e067f1aad}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em the move method of the enemy. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_ab33e544c241dffc381b7c3614f8c0438}{set\+Type} (Initializer initializer)
+\begin{DoxyCompactList}\small\item\em the set\+Type method of the enemy \end{DoxyCompactList}\item 
+\hyperlink{class_enemy_ac0eec4755e28c02688065f9657150ac3}{$\sim$\+Enemy} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the enemy class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_enemy_a04fde836189e93751a4be45bc86b3ca9}{Initializer \hyperlink{class_enemy_a04fde836189e93751a4be45bc86b3ca9}{average} \{ \char`\"{}Average\char`\"{}, 0.\+9f, 100, true, 20, 60 \}}\label{class_enemy_a04fde836189e93751a4be45bc86b3ca9}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the avarage bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a0654bcd2d0ddb4ac579e5430a5482a10}{Initializer \hyperlink{class_enemy_a0654bcd2d0ddb4ac579e5430a5482a10}{fat} \{ \char`\"{}Fat\char`\"{}, 0.\+7f, 300, true, 20, 60 \}}\label{class_enemy_a0654bcd2d0ddb4ac579e5430a5482a10}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the fat bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a16c06a75f59967cbd0533aebdcce676c}{Initializer \hyperlink{class_enemy_a16c06a75f59967cbd0533aebdcce676c}{cheerleader} \{ \char`\"{}Cheerleader\char`\"{}, 1.\+3f, 50, true, 20, 100 \}}\label{class_enemy_a16c06a75f59967cbd0533aebdcce676c}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the cheerleader bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a3e355f118dd67a0f091428b7f5af81dd}{Initializer \hyperlink{class_enemy_a3e355f118dd67a0f091428b7f5af81dd}{horde} \{ \char`\"{}Horde\char`\"{}, 0.\+7f, 70, true, 20, 70 \}}\label{class_enemy_a3e355f118dd67a0f091428b7f5af81dd}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the horde bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_ab283f79ee46f2a28756b0e796090e4f3}{Initializer \hyperlink{class_enemy_ab283f79ee46f2a28756b0e796090e4f3}{macho} \{ \char`\"{}Macho\char`\"{}, 0.\+8f, 100, true, 40, 30 \}}\label{class_enemy_ab283f79ee46f2a28756b0e796090e4f3}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the macho bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a0054c724f94ef37d4e82d274d5aa6808}{Initializer \hyperlink{class_enemy_a0054c724f94ef37d4e82d274d5aa6808}{dunken} \{ \char`\"{}Dunken\char`\"{}, 1.\+2f, 1500, true, 65, 60 \}}\label{class_enemy_a0054c724f94ef37d4e82d274d5aa6808}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the dunken boss bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_ae1c2e8a37b9d60c81a670c30bf523576}{Initializer \hyperlink{class_enemy_ae1c2e8a37b9d60c81a670c30bf523576}{ethan} \{ \char`\"{}Ethan\char`\"{}, 1.\+3f, 1000, true, 50, 60 \}}\label{class_enemy_ae1c2e8a37b9d60c81a670c30bf523576}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the ethan boss bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a05a3bacef0c241d5bc435d3b2cad0640}{Initializer \hyperlink{class_enemy_a05a3bacef0c241d5bc435d3b2cad0640}{zoey} \{ \char`\"{}Zoey\char`\"{}, 1.\+8f, 750, true, 25, 60 \}}\label{class_enemy_a05a3bacef0c241d5bc435d3b2cad0640}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the zoey boss bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a661e8dd9770b13638cb18572abf84ab3}{Initializer \hyperlink{class_enemy_a661e8dd9770b13638cb18572abf84ab3}{parker} \{ \char`\"{}Parker\char`\"{}, 1.\+5f, 800, true, 35, 60 \}}\label{class_enemy_a661e8dd9770b13638cb18572abf84ab3}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the zoey boss bully. \end{DoxyCompactList}\item 
+\hypertarget{class_enemy_a8a6d90afa0b9b58c11dd63487cea981e}{Initializer \hyperlink{class_enemy_a8a6d90afa0b9b58c11dd63487cea981e}{bobby} \{ \char`\"{}Bobby\char`\"{}, 1.\+4f, 2000, true, 55, 60 \}}\label{class_enemy_a8a6d90afa0b9b58c11dd63487cea981e}
+
+\begin{DoxyCompactList}\small\item\em The standard values for the zoey boss bully. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_enemy_a85a697ad4c3f3a63426343b6a04ce1ff}{int {\bfseries dmg} = 0}\label{class_enemy_a85a697ad4c3f3a63426343b6a04ce1ff}
+
+\item 
+\hypertarget{class_enemy_a21730c5b7ad828421d90d21059b2b390}{Initializer \& {\bfseries type} = \hyperlink{class_enemy_a04fde836189e93751a4be45bc86b3ca9}{average}}\label{class_enemy_a21730c5b7ad828421d90d21059b2b390}
+
+\item 
+\hypertarget{class_enemy_a46927134f52fb6552f02412207402699}{sf\+::\+Sprite {\bfseries melee}}\label{class_enemy_a46927134f52fb6552f02412207402699}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_enemy}{Enemy} header file. 
+
+This is the header file of the enemy class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_enemy_a94f30d348b6d2840fd71675472ba38dd}{\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\subsubsection[{Enemy}]{\setlength{\rightskip}{0pt plus 5cm}Enemy\+::\+Enemy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_enemy_a94f30d348b6d2840fd71675472ba38dd}
+
+
+The constructor for the enemy class. 
+
+Almost the default constructor. It also calls the animation constructor, to initialize an enemy as an animation. \hypertarget{class_enemy_a46078d479d4ca128752f2676fb2f5321}{\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\subsubsection[{Enemy}]{\setlength{\rightskip}{0pt plus 5cm}Enemy\+::\+Enemy (
+\begin{DoxyParamCaption}
+\item[{Initializer}]{initializer}
+\end{DoxyParamCaption}
+)}}\label{class_enemy_a46078d479d4ca128752f2676fb2f5321}
+
+
+The constructor for the enemy based of of an initializer. 
+
+Initialize an enemy based on all the values of the given initializer. 
+\begin{DoxyParams}{Parameters}
+{\em initializer} & An object containing all the values for the specified enemy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_enemy_ac0eec4755e28c02688065f9657150ac3}{\index{Enemy@{Enemy}!````~Enemy@{$\sim$\+Enemy}}
+\index{````~Enemy@{$\sim$\+Enemy}!Enemy@{Enemy}}
+\subsubsection[{$\sim$\+Enemy}]{\setlength{\rightskip}{0pt plus 5cm}Enemy\+::$\sim$\+Enemy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_enemy_ac0eec4755e28c02688065f9657150ac3}
+
+
+The deconstructor of the enemy class. 
+
+Deallocates the enemy. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_enemy_ad35cb50c7b041a183f12756b939a4636}{\index{Enemy@{Enemy}!draw@{draw}}
+\index{draw@{draw}!Enemy@{Enemy}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Enemy\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_enemy_ad35cb50c7b041a183f12756b939a4636}
+
+
+The draw method of the enemy. 
+
+Calls the draw function of the animation, to draw the right frame. Also checks if this enemy is attacking to see if it is needed to draw the attacking animation. 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window on which everything has to be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{Animation}.
+
+\hypertarget{class_enemy_aa70fd228db393894a6cd941e067f1aad}{\index{Enemy@{Enemy}!move@{move}}
+\index{move@{move}!Enemy@{Enemy}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Enemy\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_enemy_aa70fd228db393894a6cd941e067f1aad}
+
+
+the move method of the enemy. 
+
+calculates the direction for the enemy to move towards the player. Also checks if the enemy is close to the player. If it is, it keeps its distance. This way the enemy doesn't move through the player. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & changes the speed of the enemy based on the framerate of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{Animation}.
+
+\hypertarget{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{\index{Enemy@{Enemy}!reduce\+H\+P@{reduce\+H\+P}}
+\index{reduce\+H\+P@{reduce\+H\+P}!Enemy@{Enemy}}
+\subsubsection[{reduce\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void Enemy\+::reduce\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_enemy_a5545e77e51c4c03309a02eba5573ff73}
+
+
+The reduce\+H\+P method of the enemy. 
+
+Damages this enemey, if his hp reaches 0, this enemy will die. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage dealt to this enemy. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{classbobby_boss_aae5b4a01ca776533c8a43a5a91d78af8}{bobby\+Boss}, \hyperlink{classdunken_boss_a5bf9bfb79d92656ad08995cf0fca13f0}{dunken\+Boss}, \hyperlink{classethan_boss_aba2f8a6fc46aae30ab5b59b4cc714d09}{ethan\+Boss}, \hyperlink{classparker_boss_a8ada14e4fa55fe77c905ed28f07c650e}{parker\+Boss}, and \hyperlink{classzoey_boss_a19ddca3c55bb7b4b21aef462bd5d814c}{zoey\+Boss}.
+
+\hypertarget{class_enemy_ab33e544c241dffc381b7c3614f8c0438}{\index{Enemy@{Enemy}!set\+Type@{set\+Type}}
+\index{set\+Type@{set\+Type}!Enemy@{Enemy}}
+\subsubsection[{set\+Type}]{\setlength{\rightskip}{0pt plus 5cm}void Enemy\+::set\+Type (
+\begin{DoxyParamCaption}
+\item[{Initializer}]{initializer}
+\end{DoxyParamCaption}
+)}}\label{class_enemy_ab33e544c241dffc381b7c3614f8c0438}
+
+
+the set\+Type method of the enemy 
+
+sets the values of this enemy to all the values of the initializer. Also loads the animation frames for the specified type of enemy. 
+\begin{DoxyParams}{Parameters}
+{\em initializer} & An object containing all the values for the specified enemy. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_enemy_a5509b06f70a649c4ea9d1fb06f07cb5c}{\index{Enemy@{Enemy}!update@{update}}
+\index{update@{update}!Enemy@{Enemy}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Enemy\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_enemy_a5509b06f70a649c4ea9d1fb06f07cb5c}
+
+
+The update method of the enemy class. 
+
+Sets the direction of the enemy based on the players position. Also checks if the player is in range to perform an attack, and checks if the attack isn't on cooldown. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & changes the speed of the enemy based on the framerate of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Enemy.\+h\item 
+game\+Objects/Enemy.\+cpp\end{DoxyCompactItemize}

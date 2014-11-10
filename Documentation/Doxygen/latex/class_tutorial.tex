@@ -1,0 +1,156 @@
+\hypertarget{class_tutorial}{\section{Tutorial Class Reference}
+\label{class_tutorial}\index{Tutorial@{Tutorial}}
+}
+
+
+The tutorial header file.  
+
+
+
+
+{\ttfamily \#include $<$Tutorial.\+h$>$}
+
+
+
+Inheritance diagram for Tutorial\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_tutorial__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tutorial\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_tutorial__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tutorial_ad7c4fc0559170fee4a60b9f67ceb3333}{Tutorial} ()
+\begin{DoxyCompactList}\small\item\em the constructor of the tutorial butotn \end{DoxyCompactList}\item 
+void \hyperlink{class_tutorial_aeaa7fe8ebcd65dc23ca2df5c73ba5a48}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the tutorail. \end{DoxyCompactList}\item 
+void \hyperlink{class_tutorial_a3bb07b16d7b980d6f7027482b5d88704}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the tutorial. \end{DoxyCompactList}\item 
+void \hyperlink{class_tutorial_a8d000f10154e7a04cf000bf83ad472b9}{click} () override
+\begin{DoxyCompactList}\small\item\em The click method of the tutorial button. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_tutorial_a500c307eac5babe342bc8dd105e281a6}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the tutorial button. \end{DoxyCompactList}\item 
+\hyperlink{class_tutorial_a6a7f12f75952c7d801c12aed8179f510}{$\sim$\+Tutorial} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the tutorial button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The tutorial header file. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tutorial_ad7c4fc0559170fee4a60b9f67ceb3333}{\index{Tutorial@{Tutorial}!Tutorial@{Tutorial}}
+\index{Tutorial@{Tutorial}!Tutorial@{Tutorial}}
+\subsubsection[{Tutorial}]{\setlength{\rightskip}{0pt plus 5cm}Tutorial\+::\+Tutorial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tutorial_ad7c4fc0559170fee4a60b9f67ceb3333}
+
+
+the constructor of the tutorial butotn 
+
+This constructor will get the texture for the button, and set its origin \hypertarget{class_tutorial_a6a7f12f75952c7d801c12aed8179f510}{\index{Tutorial@{Tutorial}!````~Tutorial@{$\sim$\+Tutorial}}
+\index{````~Tutorial@{$\sim$\+Tutorial}!Tutorial@{Tutorial}}
+\subsubsection[{$\sim$\+Tutorial}]{\setlength{\rightskip}{0pt plus 5cm}Tutorial\+::$\sim$\+Tutorial (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tutorial_a6a7f12f75952c7d801c12aed8179f510}
+
+
+The deconstructor of the tutorial button. 
+
+The defaul deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tutorial_a8d000f10154e7a04cf000bf83ad472b9}{\index{Tutorial@{Tutorial}!click@{click}}
+\index{click@{click}!Tutorial@{Tutorial}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void Tutorial\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_tutorial_a8d000f10154e7a04cf000bf83ad472b9}
+
+
+The click method of the tutorial button. 
+
+This method specifies what will happen when the tutorial button is clicked. 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{class_tutorial_a3bb07b16d7b980d6f7027482b5d88704}{\index{Tutorial@{Tutorial}!draw@{draw}}
+\index{draw@{draw}!Tutorial@{Tutorial}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Tutorial\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_tutorial_a3bb07b16d7b980d6f7027482b5d88704}
+
+
+The draw method of the tutorial. 
+
+The draw method will draw te button on the screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & The screen the button has to be drawn on. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_tutorial_a500c307eac5babe342bc8dd105e281a6}{\index{Tutorial@{Tutorial}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Tutorial@{Tutorial}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Tutorial\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_tutorial_a500c307eac5babe342bc8dd105e281a6}
+
+
+The get bounds method of the tutorial button. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of the tutorial button, used to check if the player has clicked on this button. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_tutorial_aeaa7fe8ebcd65dc23ca2df5c73ba5a48}{\index{Tutorial@{Tutorial}!update@{update}}
+\index{update@{update}!Tutorial@{Tutorial}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Tutorial\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_tutorial_aeaa7fe8ebcd65dc23ca2df5c73ba5a48}
+
+
+The update method of the tutorail. 
+
+The update method will only update the position of the button, and set its sprite. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & A value that represents the speed of the game based on the frames per second. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/Tutorial.\+h\item 
+game\+Objects/menu/Tutorial.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,384 @@
+\hypertarget{class_player}{\section{Player Class Reference}
+\label{class_player}\index{Player@{Player}}
+}
+
+
+Inheritance diagram for Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{class_player__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_player__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{Player} ()
+\begin{DoxyCompactList}\small\item\em Constructor method for \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a79a7509b3cde94c77b79247fa46b13dd}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The Move method for \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a70e7b6ef62c5b8080e454edcb15cacc8}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The Move method for \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a5e0147aee1248db63417987b9a203a9a}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The Draw method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_af81c4b00747424065dae4984f4f6c57e}{set\+Rotation} (float rotation) override
+\begin{DoxyCompactList}\small\item\em The set\+Rotation method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_aa6479f194f9bb44b09adaf3b04a5594d}{get\+Hp} ()
+\begin{DoxyCompactList}\small\item\em The get\+Hp method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_ae03528c4ade65b66ed097a2b622d59a5}{reduce\+H\+P} (int damage)
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a0f592e3e7e589f40dc5144d1d58283f2}{add\+Money} (int money)
+\begin{DoxyCompactList}\small\item\em The add\+Money method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a6e78f6a0e2e73323bf200a9e1c2e0ac6}{set\+Money} (int money)
+\begin{DoxyCompactList}\small\item\em The set\+Money method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+int \hyperlink{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}{get\+Money} ()
+\begin{DoxyCompactList}\small\item\em The get\+Money method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a7429c38bfd16ded1b2a11af1b0673ba3}{set\+Next\+Round} (bool value)
+\begin{DoxyCompactList}\small\item\em The set\+Next\+Round method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_player_ad0c154bef16fa0c1c3e4c6efb124d420}{get\+Next\+Round} ()
+\begin{DoxyCompactList}\small\item\em The get\+Next\+Round method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a0fca3ee9cea38e8944663f19a0cdb27b}{set\+Weapons} (\hyperlink{class_weapon}{Weapon} $\ast$weapon1, \hyperlink{class_weapon}{Weapon} $\ast$weapon2, \hyperlink{class_weapon}{Weapon} $\ast$weapon3)
+\begin{DoxyCompactList}\small\item\em The set\+Weapons method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+\hyperlink{class_weapon}{Weapon} $\ast$ \hyperlink{class_player_ab087a0124f92c63e91cc846db9b82b76}{get\+Selected\+Weapon} ()
+\begin{DoxyCompactList}\small\item\em The get\+Selected\+Weapon method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+\hyperlink{class_weapon}{Weapon} $\ast$ \hyperlink{class_player_af442b7ed41244bba619d1a2ef8812123}{get\+Weapons} (int value)
+\begin{DoxyCompactList}\small\item\em The get\+Weapons method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+sf\+::\+Vector2u \hyperlink{class_player_a9b815bbbc9cb8332549acc10d03c7c0b}{get\+Size} () override
+\begin{DoxyCompactList}\small\item\em gets the Size of the \hyperlink{class_table}{Table} \end{DoxyCompactList}\item 
+bool \hyperlink{class_player_a1d3d8988bfe2487e1ef7d82502171c8e}{getgame\+Over} ()
+\begin{DoxyCompactList}\small\item\em The getgame\+Over method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a8e4910c81921d28b35878db4395b1f47}{double\+Speed} ()
+\begin{DoxyCompactList}\small\item\em The double\+Speed method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_a807069673b66d211110c018998456d3e}{full\+Health} ()
+\begin{DoxyCompactList}\small\item\em The full\+Health method of the \hyperlink{class_player}{Player}. \end{DoxyCompactList}\item 
+\hypertarget{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{\hyperlink{class_player_a749d2c00e1fe0f5c2746f7505a58c062}{$\sim$\+Player} ()}\label{class_player_a749d2c00e1fe0f5c2746f7505a58c062}
+
+\begin{DoxyCompactList}\small\item\em The deconstructor of a \hyperlink{class_player}{Player}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}{\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\subsubsection[{Player}]{\setlength{\rightskip}{0pt plus 5cm}Player\+::\+Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_affe0cc3cb714f6deb4e62f0c0d3f1fd8}
+
+
+Constructor method for \hyperlink{class_player}{Player}. 
+
+The constructor of \hyperlink{class_player}{Player} gets the needed textures from the texture manager. And sets the \hyperlink{class_animation}{Animation} with these Textures. It sets the begins weapons for the player, which are the Dagger,Pistol,Shotgun And Configures the Particals that have to spawn when the player walks 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_player_a0f592e3e7e589f40dc5144d1d58283f2}{\index{Player@{Player}!add\+Money@{add\+Money}}
+\index{add\+Money@{add\+Money}!Player@{Player}}
+\subsubsection[{add\+Money}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::add\+Money (
+\begin{DoxyParamCaption}
+\item[{int}]{money}
+\end{DoxyParamCaption}
+)}}\label{class_player_a0f592e3e7e589f40dc5144d1d58283f2}
+
+
+The add\+Money method of the \hyperlink{class_player}{Player}. 
+
+couts up the current money 
+\begin{DoxyParams}{Parameters}
+{\em the} & number of Money that needs to be added \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a8e4910c81921d28b35878db4395b1f47}{\index{Player@{Player}!double\+Speed@{double\+Speed}}
+\index{double\+Speed@{double\+Speed}!Player@{Player}}
+\subsubsection[{double\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::double\+Speed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a8e4910c81921d28b35878db4395b1f47}
+
+
+The double\+Speed method of the \hyperlink{class_player}{Player}. 
+
+Sets the speed of player to 5 and sets a timer to indicate when the \hyperlink{class_powerup}{Powerup} has to stop \hypertarget{class_player_a5e0147aee1248db63417987b9a203a9a}{\index{Player@{Player}!draw@{draw}}
+\index{draw@{draw}!Player@{Player}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_player_a5e0147aee1248db63417987b9a203a9a}
+
+
+The Draw method of the \hyperlink{class_player}{Player}. 
+
+Draws the current sprite of the \hyperlink{class_player}{Player} and the selected weapon on the Screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & the screen on which the \hyperlink{class_player}{Player} and selected weapon should be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{Animation}.
+
+\hypertarget{class_player_a807069673b66d211110c018998456d3e}{\index{Player@{Player}!full\+Health@{full\+Health}}
+\index{full\+Health@{full\+Health}!Player@{Player}}
+\subsubsection[{full\+Health}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::full\+Health (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a807069673b66d211110c018998456d3e}
+
+
+The full\+Health method of the \hyperlink{class_player}{Player}. 
+
+sets the Hp of the \hyperlink{class_player}{Player} to 100 \hypertarget{class_player_a1d3d8988bfe2487e1ef7d82502171c8e}{\index{Player@{Player}!getgame\+Over@{getgame\+Over}}
+\index{getgame\+Over@{getgame\+Over}!Player@{Player}}
+\subsubsection[{getgame\+Over}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::getgame\+Over (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_a1d3d8988bfe2487e1ef7d82502171c8e}
+
+
+The getgame\+Over method of the \hyperlink{class_player}{Player}. 
+
+\begin{DoxyReturn}{Returns}
+true\+: if H\+P $<$= 0, false\+: if H\+P $>$ 0 
+\end{DoxyReturn}
+\hypertarget{class_player_aa6479f194f9bb44b09adaf3b04a5594d}{\index{Player@{Player}!get\+Hp@{get\+Hp}}
+\index{get\+Hp@{get\+Hp}!Player@{Player}}
+\subsubsection[{get\+Hp}]{\setlength{\rightskip}{0pt plus 5cm}int Player\+::get\+Hp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_aa6479f194f9bb44b09adaf3b04a5594d}
+
+
+The get\+Hp method of the \hyperlink{class_player}{Player}. 
+
+\begin{DoxyReturn}{Returns}
+the current H\+P of the player 
+\end{DoxyReturn}
+\hypertarget{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}{\index{Player@{Player}!get\+Money@{get\+Money}}
+\index{get\+Money@{get\+Money}!Player@{Player}}
+\subsubsection[{get\+Money}]{\setlength{\rightskip}{0pt plus 5cm}int Player\+::get\+Money (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_ac45154df7c4eb2d1d58255c3ff1c55dd}
+
+
+The get\+Money method of the \hyperlink{class_player}{Player}. 
+
+\begin{DoxyReturn}{Returns}
+the current Money the \hyperlink{class_player}{Player} has 
+\end{DoxyReturn}
+\hypertarget{class_player_ad0c154bef16fa0c1c3e4c6efb124d420}{\index{Player@{Player}!get\+Next\+Round@{get\+Next\+Round}}
+\index{get\+Next\+Round@{get\+Next\+Round}!Player@{Player}}
+\subsubsection[{get\+Next\+Round}]{\setlength{\rightskip}{0pt plus 5cm}bool Player\+::get\+Next\+Round (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_ad0c154bef16fa0c1c3e4c6efb124d420}
+
+
+The get\+Next\+Round method of the \hyperlink{class_player}{Player}. 
+
+\begin{DoxyReturn}{Returns}
+true\+: if Round completed, false\+: if Round isn't complete 
+\end{DoxyReturn}
+\hypertarget{class_player_ab087a0124f92c63e91cc846db9b82b76}{\index{Player@{Player}!get\+Selected\+Weapon@{get\+Selected\+Weapon}}
+\index{get\+Selected\+Weapon@{get\+Selected\+Weapon}!Player@{Player}}
+\subsubsection[{get\+Selected\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weapon} $\ast$ Player\+::get\+Selected\+Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_ab087a0124f92c63e91cc846db9b82b76}
+
+
+The get\+Selected\+Weapon method of the \hyperlink{class_player}{Player}. 
+
+\begin{DoxyReturn}{Returns}
+the \hyperlink{class_weapon}{Weapon} which is selected at this current moment 
+\end{DoxyReturn}
+\hypertarget{class_player_a9b815bbbc9cb8332549acc10d03c7c0b}{\index{Player@{Player}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Player@{Player}}
+\subsubsection[{get\+Size}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Vector2u Player\+::get\+Size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_player_a9b815bbbc9cb8332549acc10d03c7c0b}
+
+
+gets the Size of the \hyperlink{class_table}{Table} 
+
+Gets the size of the sprite and returns this. \begin{DoxyReturn}{Returns}
+the size of the sprite so they can be compared with different objects 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_a2f771b23fa5f6c2e031b308fa3926ada}{Game\+Object}.
+
+\hypertarget{class_player_af442b7ed41244bba619d1a2ef8812123}{\index{Player@{Player}!get\+Weapons@{get\+Weapons}}
+\index{get\+Weapons@{get\+Weapons}!Player@{Player}}
+\subsubsection[{get\+Weapons}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Weapon} $\ast$ Player\+::get\+Weapons (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_player_af442b7ed41244bba619d1a2ef8812123}
+
+
+The get\+Weapons method of the \hyperlink{class_player}{Player}. 
+
+Return one of the selected weapons 
+\begin{DoxyParams}{Parameters}
+{\em value} & the number of which of the three weapons has to be returned \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the \hyperlink{class_weapon}{Weapon} which corresponds with the given value 
+\end{DoxyReturn}
+\hypertarget{class_player_a79a7509b3cde94c77b79247fa46b13dd}{\index{Player@{Player}!move@{move}}
+\index{move@{move}!Player@{Player}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_player_a79a7509b3cde94c77b79247fa46b13dd}
+
+
+The Move method for \hyperlink{class_player}{Player}. 
+
+Checks for every button in the Action struct if it is being pressed if so it's added to the new Position. Then there will be checks if the player actually can walk in that direction. If there isn't anything in that direction where the player can't walk through. If that isn't the case the New Position whill be the new Position 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & the frame rate on which the speed of the player must be calculated on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{Animation}.
+
+\hypertarget{class_player_ae03528c4ade65b66ed097a2b622d59a5}{\index{Player@{Player}!reduce\+H\+P@{reduce\+H\+P}}
+\index{reduce\+H\+P@{reduce\+H\+P}!Player@{Player}}
+\subsubsection[{reduce\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::reduce\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)}}\label{class_player_ae03528c4ade65b66ed097a2b622d59a5}
+
+
+The reduce\+H\+P method of the \hyperlink{class_player}{Player}. 
+
+reduces the current Hp and checks if the player is dead 
+\begin{DoxyParams}{Parameters}
+{\em the} & number of damage that has to be taken of the H\+P \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a6e78f6a0e2e73323bf200a9e1c2e0ac6}{\index{Player@{Player}!set\+Money@{set\+Money}}
+\index{set\+Money@{set\+Money}!Player@{Player}}
+\subsubsection[{set\+Money}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Money (
+\begin{DoxyParamCaption}
+\item[{int}]{money}
+\end{DoxyParamCaption}
+)}}\label{class_player_a6e78f6a0e2e73323bf200a9e1c2e0ac6}
+
+
+The set\+Money method of the \hyperlink{class_player}{Player}. 
+
+sets the current Money to a new Value 
+\begin{DoxyParams}{Parameters}
+{\em the} & number of Money that the current moeny has to been set to \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a7429c38bfd16ded1b2a11af1b0673ba3}{\index{Player@{Player}!set\+Next\+Round@{set\+Next\+Round}}
+\index{set\+Next\+Round@{set\+Next\+Round}!Player@{Player}}
+\subsubsection[{set\+Next\+Round}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Next\+Round (
+\begin{DoxyParamCaption}
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_player_a7429c38bfd16ded1b2a11af1b0673ba3}
+
+
+The set\+Next\+Round method of the \hyperlink{class_player}{Player}. 
+
+sets if the player has defeated the boss and the Go\+To\+Next\+Round Screen has to fade in 
+\begin{DoxyParams}{Parameters}
+{\em value} & true\+: if Round completed, false\+: if Round isn't complete \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_af81c4b00747424065dae4984f4f6c57e}{\index{Player@{Player}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Player@{Player}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rotation}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_player_af81c4b00747424065dae4984f4f6c57e}
+
+
+The set\+Rotation method of the \hyperlink{class_player}{Player}. 
+
+Sets the new Rotation of the player and \hyperlink{class_animation}{Animation} 
+\begin{DoxyParams}{Parameters}
+{\em rotation} & the new rotation for the player, weapons and animation \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a539ba77ceb4c5e3677ac16a364afc627}{Animation}.
+
+\hypertarget{class_player_a0fca3ee9cea38e8944663f19a0cdb27b}{\index{Player@{Player}!set\+Weapons@{set\+Weapons}}
+\index{set\+Weapons@{set\+Weapons}!Player@{Player}}
+\subsubsection[{set\+Weapons}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::set\+Weapons (
+\begin{DoxyParamCaption}
+\item[{{\bf Weapon} $\ast$}]{weapon1, }
+\item[{{\bf Weapon} $\ast$}]{weapon2, }
+\item[{{\bf Weapon} $\ast$}]{weapon3}
+\end{DoxyParamCaption}
+)}}\label{class_player_a0fca3ee9cea38e8944663f19a0cdb27b}
+
+
+The set\+Weapons method of the \hyperlink{class_player}{Player}. 
+
+Sets the new Weapons for the player 
+\begin{DoxyParams}{Parameters}
+{\em weapon1} & First \hyperlink{class_weapon}{Weapon} \\
+\hline
+{\em weapon2} & Second \hyperlink{class_weapon}{Weapon} \\
+\hline
+{\em weapon3} & Third \hyperlink{class_weapon}{Weapon} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_a70e7b6ef62c5b8080e454edcb15cacc8}{\index{Player@{Player}!update@{update}}
+\index{update@{update}!Player@{Player}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Player\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_player_a70e7b6ef62c5b8080e454edcb15cacc8}
+
+
+The Move method for \hyperlink{class_player}{Player}. 
+
+Calls \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation\+::update}, that will set the position and rotation and counts down to the new frame sets the new position and Rotation of the selected gun Also Checks if any button is pressed that will reload, fire or change a \hyperlink{class_weapon}{Weapon} It Also will keep track of all the different powerups, when there time exceeds 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & the frame rate on which the time for the powerups must be calculated on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Player.\+h\item 
+game\+Objects/Player.\+cpp\end{DoxyCompactItemize}

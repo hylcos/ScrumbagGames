@@ -1,0 +1,158 @@
+\hypertarget{class_play}{\section{Play Class Reference}
+\label{class_play}\index{Play@{Play}}
+}
+
+
+The play header file.  
+
+
+
+
+{\ttfamily \#include $<$play.\+h$>$}
+
+
+
+Inheritance diagram for Play\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_play__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Play\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_play__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_play_a0088438837d29378e35a2beed04e64df}{Play} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the play button. \end{DoxyCompactList}\item 
+void \hyperlink{class_play_ae8b65105669a71c09901aae7b7e6f764}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the play button. \end{DoxyCompactList}\item 
+void \hyperlink{class_play_a7c37c48004f8c4a6753d4cac96767e3f}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the play button. \end{DoxyCompactList}\item 
+void \hyperlink{class_play_abacc901bd17776b87850e333d82f3de3}{click} () override
+\begin{DoxyCompactList}\small\item\em The click method of the button. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_play_a84476fc81a6431c85098d31f243a2cd8}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the play button. \end{DoxyCompactList}\item 
+\hyperlink{class_play_a6f7dd4d097454caef2e81fa94fe739d5}{$\sim$\+Play} ()
+\begin{DoxyCompactList}\small\item\em The play button deconstructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The play header file. 
+
+This is the header file of the play butotn 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_play_a0088438837d29378e35a2beed04e64df}{\index{Play@{Play}!Play@{Play}}
+\index{Play@{Play}!Play@{Play}}
+\subsubsection[{Play}]{\setlength{\rightskip}{0pt plus 5cm}Play\+::\+Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_play_a0088438837d29378e35a2beed04e64df}
+
+
+The constructor of the play button. 
+
+The constructor loads the required texture and sets the origin of the button \hypertarget{class_play_a6f7dd4d097454caef2e81fa94fe739d5}{\index{Play@{Play}!````~Play@{$\sim$\+Play}}
+\index{````~Play@{$\sim$\+Play}!Play@{Play}}
+\subsubsection[{$\sim$\+Play}]{\setlength{\rightskip}{0pt plus 5cm}Play\+::$\sim$\+Play (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_play_a6f7dd4d097454caef2e81fa94fe739d5}
+
+
+The play button deconstructor. 
+
+A defaul deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_play_abacc901bd17776b87850e333d82f3de3}{\index{Play@{Play}!click@{click}}
+\index{click@{click}!Play@{Play}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void Play\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_play_abacc901bd17776b87850e333d82f3de3}
+
+
+The click method of the button. 
+
+This method specifies what happens when the user clicks on this button 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{class_play_a7c37c48004f8c4a6753d4cac96767e3f}{\index{Play@{Play}!draw@{draw}}
+\index{draw@{draw}!Play@{Play}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Play\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_play_a7c37c48004f8c4a6753d4cac96767e3f}
+
+
+The draw method of the play button. 
+
+This method will draw the button on the window 
+\begin{DoxyParams}{Parameters}
+{\em window} & Which window the button has to be drawn on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_play_a84476fc81a6431c85098d31f243a2cd8}{\index{Play@{Play}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Play@{Play}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Play\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_play_a84476fc81a6431c85098d31f243a2cd8}
+
+
+The get bounds method of the play button. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of this particular button. Used to check if the user clicked on this button. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_play_ae8b65105669a71c09901aae7b7e6f764}{\index{Play@{Play}!update@{update}}
+\index{update@{update}!Play@{Play}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Play\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_play_ae8b65105669a71c09901aae7b7e6f764}
+
+
+The update method of the play button. 
+
+The update method will update the position and the sprite for the play button 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & A value used to indicate the current speed of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/play.\+h\item 
+game\+Objects/menu/play.\+cpp\end{DoxyCompactItemize}

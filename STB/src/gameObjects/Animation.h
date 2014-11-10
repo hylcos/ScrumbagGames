@@ -79,22 +79,8 @@ public:
 	*/
 	~Animation();
 private:
-	//! The Array with textures.
-	/*!
-	In this array all the different textures that are used for the animation are saved.
-	*/
 	sf::Texture  tex[8];
-
-	//! The current sprite.
-	/*!
-	The sprite is what is drawn on the screen.
-	*/
 	sf::Sprite curSprite;
-
-	//! The current texture drawn on the screen.
-	/*!
-	Indicates which texture from the array is currently used.
-	*/
 	int current = 0;
 protected:
 	//! The rotation of the texture.

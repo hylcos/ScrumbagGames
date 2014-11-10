@@ -1,0 +1,28 @@
+var class_particle_emitter =
+[
+    [ "ParticleEmitter", "class_particle_emitter.html#a31313702250800a4e074286b8e5d5116", null ],
+    [ "~ParticleEmitter", "class_particle_emitter.html#a6f4952f7555ede99d74d42b30c80f3e2", null ],
+    [ "emitParticles", "class_particle_emitter.html#a59e863f0386f1de946bb5f5a2eef3358", null ],
+    [ "setColor", "class_particle_emitter.html#aa639c76a4637bba568a407f69e1c8ebd", null ],
+    [ "setColor", "class_particle_emitter.html#ac2d2189e309f8e557b214963aeb8aef8", null ],
+    [ "update", "class_particle_emitter.html#a1567fd71b41c71b56ee8b72c5bca559c", null ],
+    [ "updateParticleManager", "class_particle_emitter.html#aa1feb698e1cb96591596b38ce595e9a1", null ],
+    [ "amount", "class_particle_emitter.html#ab9bbf606442bbc94056fc99739116fae", null ],
+    [ "deceleration", "class_particle_emitter.html#a0659c3d423516551eb2bccabd5118d98", null ],
+    [ "direction", "class_particle_emitter.html#af330001a636059db3f7fea0c0d5a0fdf", null ],
+    [ "directionDeviation", "class_particle_emitter.html#ab5cee07d425137bc979058bed2fc7b91", null ],
+    [ "emit", "class_particle_emitter.html#adad6aa5f4e12833ec208463a471cc72f", null ],
+    [ "emitOnce", "class_particle_emitter.html#a4bfdf1026500e45025d7d847079449ac", null ],
+    [ "frame", "class_particle_emitter.html#a09c7892513030cf727dd44dea28f5785", null ],
+    [ "frequency", "class_particle_emitter.html#af32de038d2b86f175da7a7cf6d35f94e", null ],
+    [ "isGore", "class_particle_emitter.html#a0bfdd28a5fb6be6d310f4afe19d5bb69", null ],
+    [ "minimumSpeed", "class_particle_emitter.html#a6618d5435d8fe332e26656c20aecb7a6", null ],
+    [ "object", "class_particle_emitter.html#a558c0bd0ad1193482111782f488cadb2", null ],
+    [ "particleColor", "class_particle_emitter.html#ac5bd01ffba334b3475c723438ebbb0d9", null ],
+    [ "particleManager", "class_particle_emitter.html#ac89ef51ef2739ef7bc39461b6d4e3d17", null ],
+    [ "rotation", "class_particle_emitter.html#aef5ed3707677d9fdf0e411276a8be6ab", null ],
+    [ "rotationDeviation", "class_particle_emitter.html#a2ccd7416ae393bace934fe2b415f64cf", null ],
+    [ "size", "class_particle_emitter.html#a36dcead124ad38150b8f21feda7115d8", null ],
+    [ "spawnPosition", "class_particle_emitter.html#ae43520e60f9102c9626f110090830ae1", null ],
+    [ "speed", "class_particle_emitter.html#a0f6f30a9cfd1b9b6ed033793ed8c5f4e", null ]
+];

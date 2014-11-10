@@ -20,11 +20,10 @@ public:
 	@param reloadSpeed The time the gun takes to reload
 	@param ammo The ammount of ammunition the gun has in total
 	@param magazineSize The size of one clip of the gun
-	@param range The range the bullets of this gun can travel
 	@param bulletSpeed The speed with which the bullets travel
 	@param fireRate The amount of frames in between two shots
 	*/
-	Gun::Gun(std::string name,int damage, float reloadSpeed,int ammo,int magazineSize,int range, short bulletSpeed,short fireRate);
+	Gun::Gun(std::string name,float damage, float reloadSpeed,int ammo,int magazineSize, short bulletSpeed,short fireRate);
 
 	//! The fire method of the gun
 	/*!
@@ -80,19 +79,44 @@ public:
 	*/
 	void Gun::upgradeFireRate(short amount);
 
+
+	int Gun::getDamageLevel() override;
+	void Gun::upgradeDamage() override;
+
+	int Gun::getFirerateLevel() override;
+	void Gun::upgradeFireRate() override;
+
+	int Gun::getReloadSpeedLevel() override;
+	void Gun::upgradeReloadSpeed() override;
+
+	std::string Gun::getInfo() override;
+	
+	void Gun::doubleDamage();
+	std::string Gun::getAmmoString() override;
+	std::string Gun::getName() override;
+	Gun Gun::getWeapon();
+	void Gun::setAmmo(int amount);
+	bool Gun::getIsReloading() override;
+
+	void Gun::reset() override;
+	void Gun::resetAmmo() override;
+
 	//! The deconstructor of the gun
 	/*!
 	Deallocates the gun class.
 	*/
 	Gun::~Gun();
-
 private:
+	float doubleDamageTimer;
+	bool isReloading = false;
 	sf::Sprite sprite;
 	sf::Texture tex;
 	std::string name;
-
-	int damage, magazineSize, range,ammo,currentMagazine;
-	short bulletSpeed,fireRate;
+	bool doubleDamageEnabled = false;
+	int damageLevel = 0, fireRateLevel = 0, reloadSpeedLevel = 0;
+	int magazineSize, ammo, currentMagazine, startAmmo; 
+	float damage, fireRate, oldDamage;
+	short bulletSpeed;
 	float reloadSpeed,rotation,shootCoolDown,reloadCoolDown;
 };
 

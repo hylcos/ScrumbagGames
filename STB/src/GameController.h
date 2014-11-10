@@ -9,7 +9,7 @@ This is the header file of the gamecontroller class.
 #include "LevelController.h"
 #include "HudController.h"
 
-#define DEBUG
+//#define DEBUG
 
 class LevelController;
 
@@ -17,7 +17,7 @@ class GameController
 {
 public:
 
-	//!The getInsatnce method of the gamecontroller
+	//!The getInstance method of the gamecontroller
 	/*!
 	This method makes sure there is only 1 instance of the gamecontroller at a time.
 	This way, every time an external class uses a gamecontroller, it uses a gamecontroller
@@ -55,6 +55,10 @@ public:
 	*/
 	sf::RenderWindow& GameController::getWindow();
 
+	//! The getFont method of the gamecontroller
+	/*!
+	@return The current font that is used for text
+	*/
 	sf::Font * GameController::getFont();
 
 	//! The deconstructor of the gamecontroller
@@ -76,6 +80,7 @@ private:
 	int frames = 0;
 	clock_t nextClock;
 	sf::Font * font = nullptr;
+	bool particlesEnabled;
 
 	void step();
 	bool stopping = false;

@@ -1,0 +1,8 @@
+<map id="WeaponManager" name="WeaponManager">
+<area shape="rect" id="node2" href="$class_knife.html" title="The knife header file. " alt="" coords="93,247,143,273"/>
+<area shape="rect" id="node3" href="$class_weapon.html" title="Weapon" alt="" coords="5,171,76,197"/>
+<area shape="rect" id="node7" href="$class_gun.html" title="The Gun header file. " alt="" coords="17,247,64,273"/>
+<area shape="rect" id="node4" href="$class_game_object.html" title="The game object header file. " alt="" coords="55,5,149,32"/>
+<area shape="rect" id="node5" href="$class_particle_emitter.html" title="ParticleEmitter" alt="" coords="100,171,208,197"/>
+<area shape="rect" id="node6" href="$class_particle_manager.html" title="ParticleManager" alt="" coords="167,81,283,108"/>
+</map>

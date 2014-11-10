@@ -1,53 +1,86 @@
 #include "../stdafx.h"
 #include "Powerup.h"
 #include "../LevelController.h"
+#include "Player.h"
 
 Powerup::Types::Types(Powerups type, void(Powerup::*action)()) :
 type{ type },
 action{ action }
-{}
+{
+
+}
+
 
 void Powerup::Types::executeAction(Powerup & powerup){
-	Player* player = LevelController::getInstance().getPlayer();
 	(powerup.*action)();
 }
 
-Powerup::Powerup(sf::Vector2f position, int pwr):
+Powerup::Powerup(sf::Vector2f position):
 GameObject{ gameObjectType::powerup }
 {
-
 	sprite.setPosition(position);
-	if (!pwr)
-		pwr = rand() % last;
-	power = static_cast<Powerups>(pwr);
 	tex = *TextureManager::getInstance().getTexture("Sprites/Powerup.png");
 	sprite.setTexture(tex);
+	sprite.setOrigin(tex.getSize().x / 2.f, tex.getSize().y / 2.f);
+	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
+	poweruptext.setFont(font);
+	poweruptext.setCharacterSize(20);
+	poweruptext.setColor(sf::Color::Yellow);
 
 }
 
 Powerup* Powerup::setType(Powerup::Types* type){
 	this->type = type;
+	if (type == &Money){
+		tex = *TextureManager::getInstance().getTexture("Sprites/money.png");
+	}
 	return this;
+}
+
+void Powerup::setNumber(int& number){
+	powerupnumber = number;
 }
 
 void Powerup::update(float speedModifier){
 	sf::Vector2f diff = sprite.getPosition() - LevelController::getInstance().getPlayer()->getPosition();
 	float dist = sqrt(pow(diff.x, 2) + pow(diff.y, 2));
-	if (dist < 32){
-		type->executeAction(*this);
-		LevelController::getInstance().removeObject(this);
+	poweruptext.setPosition(LevelController::getInstance().getPlayer()->getPosition().x, LevelController::getInstance().getPlayer()->getPosition().y - 100);
+	if (dist < 32 && !isLoaded){
+		type->executeAction(* this);
+		std::cout << "PRINT";
+		showtextTimer = 300;
+		if (type != &Money){
+			poweruptext.setString(PowerupNames[powerupnumber-1]);
+			poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
+		}
+		else{
+			poweruptext.setString("Money + " + std::to_string(moneyAmount));
+			poweruptext.setOrigin(poweruptext.getLocalBounds().width / 2, poweruptext.getLocalBounds().top);
+		}
+		isLoaded = true;
+		
+	}
+	if (isLoaded){
+		showtextTimer -= speedModifier;
+		poweruptext.setColor(sf::Color::Color(255, 255, 0, sf::Uint8(std::min(255.f,showtextTimer))));
+		if (showtextTimer <= 0){
+			poweruptext.setString("");
+			LevelController::getInstance().removeObject(this);
+		}
+	}
+	
+
+}
+
+void Powerup::draw(sf::RenderWindow & window) const {
+	if (!isLoaded){
+		window.draw(sprite);
+	}
+	else {
+		window.draw(poweruptext);
 	}
 }
 
-sf::FloatRect Powerup::getBounds() {
-	return sprite.getGlobalBounds();
-}
-void Powerup::draw(sf::RenderWindow & window) const {
-	window.draw(sprite);
-}
-Powerups Powerup::getPowerup(){
-	return power;
-}
 
 void Powerup::pufDoubleSpeed(){
 	LevelController::getInstance().getPlayer()->doubleSpeed();
@@ -55,12 +88,47 @@ void Powerup::pufDoubleSpeed(){
 void Powerup::pufFullHealth(){
 	LevelController::getInstance().getPlayer()->fullHealth();
 }
+void Powerup::pufDoubleDamage(){
+	LevelController::getInstance().getPlayer()->getSelectedWeapon()->doubleDamage();
+}
+void Powerup::pufAmmoUp(){
+	LevelController::getInstance().getPlayer()->getSelectedWeapon()->setAmmo(2);
+}
 void Powerup::pufBAB(){
+	ParticleEmitter::amount = 120;
+	ParticleEmitter::object = LevelController::getInstance().getPlayer();
+	ParticleEmitter::speed = 50.f;
+	ParticleEmitter::deceleration = 0.1f;
+	ParticleEmitter::direction = rotation;
+	ParticleEmitter::directionDeviation = 180.f;
+	ParticleEmitter::size = 18.f;
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::setColor(sf::Color::Yellow, 120);
+	ParticleEmitter::update(0.f);
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::setColor(sf::Color::Red, 120);
+	ParticleEmitter::update(0.f);
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::setColor(sf::Color::Yellow, 120);
+	ParticleEmitter::update(0.f);
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::setColor(sf::Color::Black, 120);
+	ParticleEmitter::update(0.f);
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::setColor(sf::Color::Red, 120);
+	ParticleEmitter::update(0.f);
+	ParticleEmitter::emitOnce = true;
+	ParticleEmitter::setColor(sf::Color::Yellow, 120);
+	ParticleEmitter::update(0.f);
 	for (GameObject * obj : LevelController::getInstance().getGameObjects()){
 		if (dynamic_cast<Enemy *>(obj) != 0){
 			dynamic_cast<Enemy *>(obj)->reduceHP(1000);
 		}
 	}
+}
+void Powerup::addMoney(){
+	moneyAmount = rand() % 26 + 25;
+	LevelController::getInstance().getPlayer()->addMoney(moneyAmount);
 }
 
 Powerup::~Powerup(){

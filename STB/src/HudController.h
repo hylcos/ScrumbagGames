@@ -52,7 +52,7 @@ public:
 	@param object The pointer to the start of the object vector
 	*/
 	void HudController::removeAllObjects(GameObject * object);
-
+	
 	//! The load method of the hud controller
 	/*!
 	This method will set all the standard values for the HUD objects.
@@ -84,16 +84,43 @@ public:
 	*/
 	~HudController(){};
 
+	//! this controlls the timer on screen en calculate how many minutes and seconds have passed
+	/*!
+	@param The time that is passed
+	*/
+	void HudController::updateTimer(float time);
+
+	//! The method to set a string value on the timer
+	/*!
+	@param the string you want to set on the text
+	*/
+	void HudController::updateTimer(std::string value);
+
+	//! The load method for al the HUD sprites
+	/*!
+	This method will load every texture for the HUD
+	*/
+	void HudController::loadHudTextures();
+
+	//! The get method for the HUD view
+	/*!
+	@return  get the Hud view
+	*/
+	sf::View HudController::getHudView();
+
 private:
 	HudController() {};
 	HudController(HudController const&);
 	void operator=(HudController const&);
 
+	sf::View hudView;
+	sf::Font font;
+	sf::Text ammotext, timetext, moneytext;
+	sf::Sprite healthsprite, ammosprite, timesprite, buffssprite, riflesprite, pistolsprite, knifesprite, swordsprite, snipersprite, shotgunsprite;
+	sf::Texture healthtex, ammotex, timetex, buffstex, rifletex, pistoltex, knifetex, swordtex, snipertex, shotguntex;
 	bool isLoaded = false;
-
-	sf::RectangleShape HPBackGround, HPForeGround;
-	sf::RectangleShape ammoBackGround, ammoForeGround;
-	sf::RectangleShape background;
+	void HudController::draw(sf::RenderWindow & window) const;
+	sf::RectangleShape healthForeGround, ammoForeGround;
 
 	std::vector< GameObject* > gameObjects, gameObjectToAdd;
 	std::unordered_set<GameObject*> gameObjectToRemove;

@@ -8,9 +8,6 @@ struct rectangle {
 };
 
 class Collision {
-public:
-	static bool Collision::collision(GameObject * square, GameObject * circle);
-
 private:
 
 	struct Line{
@@ -18,10 +15,18 @@ private:
 	};
 	static float Collision::distToSegment(Line line, sf::Vector2f point);
 	static float Collision::dist2(sf::Vector2f p1, sf::Vector2f p2);
+	static sf::Vector2f Collision::getClosestPoint(Line line, sf::Vector2f P);
+	static sf::Vector2f Collision::getClosestPoint(GameObject * square, GameObject * circle);
+public:
+	//! collision method of Collision
+	/*!
+	This function gets to parameters and compares there globalBounds. Checks if they're intersecting
+	@param circle first object
+	@param square second Object
+	@return true = intresect , false = aren't intersecting
+	*/
+	static bool Collision::collision(GameObject * circle, GameObject * square);
 	
-	/*static void  Collision::project(sf::Vector2f& axis, rectangle* _rectangle, float &min, float &max);
-	static void  Collision::normalize(sf::Vector2f& vector);
-	static float Collision::dot(sf::Vector2f& vector1, sf::Vector2f& vector2);
-	static float Collision::distance(float minA, float maxA, float minB, float maxB);*/
+
 };
 

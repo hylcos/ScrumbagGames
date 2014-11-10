@@ -1,0 +1,187 @@
+\hypertarget{class_checkbox}{\section{Checkbox Class Reference}
+\label{class_checkbox}\index{Checkbox@{Checkbox}}
+}
+
+
+The \hyperlink{class_checkbox}{Checkbox} header file.  
+
+
+
+
+{\ttfamily \#include $<$Checkbox.\+h$>$}
+
+
+
+Inheritance diagram for Checkbox\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_checkbox__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Checkbox\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_checkbox__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_checkbox_aa4caea91de8ef9ace8e299dec3bd2c37}{Checkbox} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the checkbox class. \end{DoxyCompactList}\item 
+void \hyperlink{class_checkbox_a423af543a19a9e27b01c9c38566303c6}{init} ()
+\begin{DoxyCompactList}\small\item\em The initializer of the checkbox. \end{DoxyCompactList}\item 
+void \hyperlink{class_checkbox_af8103187e6df3f44b010a098d7473b55}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the checkbox. \end{DoxyCompactList}\item 
+void \hyperlink{class_checkbox_a25403400f03b749091737bcba7457d17}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the checkbox. \end{DoxyCompactList}\item 
+void \hyperlink{class_checkbox_a851b633a864cd4f3c99b235268238f42}{click} () override
+\begin{DoxyCompactList}\small\item\em The click method of the checkbox. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_checkbox_a90c0dacd03f2f51257e3c3a5c44b5978}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the checkbox. \end{DoxyCompactList}\item 
+\hyperlink{class_checkbox_a828c1436e32c8be0d9d395286d8e6bfe}{$\sim$\+Checkbox} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the checkbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_checkbox_a550af3091f22e2d47b02fe01ee4ab5e6}{virtual void {\bfseries toggle} (bool checked)}\label{class_checkbox_a550af3091f22e2d47b02fe01ee4ab5e6}
+
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_checkbox_af0c8ae1515f799f5513fbd93f60857e7}{bool {\bfseries checked}}\label{class_checkbox_af0c8ae1515f799f5513fbd93f60857e7}
+
+\item 
+\hypertarget{class_checkbox_a9e7ee7ac07a9c9b876b382d2db8eef2b}{sf\+::\+Text {\bfseries text}}\label{class_checkbox_a9e7ee7ac07a9c9b876b382d2db8eef2b}
+
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_checkbox}{Checkbox} header file. 
+
+This is the header file of the checkbox class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_checkbox_aa4caea91de8ef9ace8e299dec3bd2c37}{\index{Checkbox@{Checkbox}!Checkbox@{Checkbox}}
+\index{Checkbox@{Checkbox}!Checkbox@{Checkbox}}
+\subsubsection[{Checkbox}]{\setlength{\rightskip}{0pt plus 5cm}Checkbox\+::\+Checkbox (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_checkbox_aa4caea91de8ef9ace8e299dec3bd2c37}
+
+
+The constructor of the checkbox class. 
+
+Just a default constructor \hypertarget{class_checkbox_a828c1436e32c8be0d9d395286d8e6bfe}{\index{Checkbox@{Checkbox}!````~Checkbox@{$\sim$\+Checkbox}}
+\index{````~Checkbox@{$\sim$\+Checkbox}!Checkbox@{Checkbox}}
+\subsubsection[{$\sim$\+Checkbox}]{\setlength{\rightskip}{0pt plus 5cm}Checkbox\+::$\sim$\+Checkbox (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_checkbox_a828c1436e32c8be0d9d395286d8e6bfe}
+
+
+The deconstructor of the checkbox. 
+
+The default deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_checkbox_a851b633a864cd4f3c99b235268238f42}{\index{Checkbox@{Checkbox}!click@{click}}
+\index{click@{click}!Checkbox@{Checkbox}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void Checkbox\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_checkbox_a851b633a864cd4f3c99b235268238f42}
+
+
+The click method of the checkbox. 
+
+Changes the state of the checkbox when its clicked 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{class_checkbox_a25403400f03b749091737bcba7457d17}{\index{Checkbox@{Checkbox}!draw@{draw}}
+\index{draw@{draw}!Checkbox@{Checkbox}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Checkbox\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_checkbox_a25403400f03b749091737bcba7457d17}
+
+
+The draw method of the checkbox. 
+
+Draws the checkbox with its correct sprite on the screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & The screen on which it should be drawn \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_checkbox_a90c0dacd03f2f51257e3c3a5c44b5978}{\index{Checkbox@{Checkbox}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Checkbox@{Checkbox}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Checkbox\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_checkbox_a90c0dacd03f2f51257e3c3a5c44b5978}
+
+
+The get bounds method of the checkbox. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of the checkbox. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_checkbox_a423af543a19a9e27b01c9c38566303c6}{\index{Checkbox@{Checkbox}!init@{init}}
+\index{init@{init}!Checkbox@{Checkbox}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}void Checkbox\+::init (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_checkbox_a423af543a19a9e27b01c9c38566303c6}
+
+
+The initializer of the checkbox. 
+
+Loads the images used for the checkbox \hypertarget{class_checkbox_af8103187e6df3f44b010a098d7473b55}{\index{Checkbox@{Checkbox}!update@{update}}
+\index{update@{update}!Checkbox@{Checkbox}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Checkbox\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_checkbox_af8103187e6df3f44b010a098d7473b55}
+
+
+The update method of the checkbox. 
+
+Updates the sprite of the checkbox. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & A modifier for the timings based on the amount of frames per second of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/Checkbox.\+h\item 
+game\+Objects/menu/Checkbox.\+cpp\end{DoxyCompactItemize}

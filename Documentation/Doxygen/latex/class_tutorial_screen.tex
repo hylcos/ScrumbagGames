@@ -1,0 +1,121 @@
+\hypertarget{class_tutorial_screen}{\section{Tutorial\+Screen Class Reference}
+\label{class_tutorial_screen}\index{Tutorial\+Screen@{Tutorial\+Screen}}
+}
+
+
+The tutorial screen header file.  
+
+
+
+
+{\ttfamily \#include $<$Tutorial\+Screen.\+h$>$}
+
+
+
+Inheritance diagram for Tutorial\+Screen\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_tutorial_screen__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Tutorial\+Screen\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=159pt]{class_tutorial_screen__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_tutorial_screen_aac021bc44c667dbe7145ce5f6f707639}{Tutorial\+Screen} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the tutorial screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_tutorial_screen_a67f9d997c5702c3ee032d7070d6363ec}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the tutorial screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_tutorial_screen_aba6b13f389e90bc94ab3409b9687ffd6}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the tutorial screen. \end{DoxyCompactList}\item 
+\hyperlink{class_tutorial_screen_ae76e9faca1ea1c38cb8526a244f42199}{$\sim$\+Tutorial\+Screen} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the tutorial screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The tutorial screen header file. 
+
+This is the header file of the tutorial screen 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_tutorial_screen_aac021bc44c667dbe7145ce5f6f707639}{\index{Tutorial\+Screen@{Tutorial\+Screen}!Tutorial\+Screen@{Tutorial\+Screen}}
+\index{Tutorial\+Screen@{Tutorial\+Screen}!Tutorial\+Screen@{Tutorial\+Screen}}
+\subsubsection[{Tutorial\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}Tutorial\+Screen\+::\+Tutorial\+Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tutorial_screen_aac021bc44c667dbe7145ce5f6f707639}
+
+
+The constructor of the tutorial screen. 
+
+This method will load in the storyline and the controls of our game. When the player is in the tutorial screen he will be able to read all of this \hypertarget{class_tutorial_screen_ae76e9faca1ea1c38cb8526a244f42199}{\index{Tutorial\+Screen@{Tutorial\+Screen}!````~Tutorial\+Screen@{$\sim$\+Tutorial\+Screen}}
+\index{````~Tutorial\+Screen@{$\sim$\+Tutorial\+Screen}!Tutorial\+Screen@{Tutorial\+Screen}}
+\subsubsection[{$\sim$\+Tutorial\+Screen}]{\setlength{\rightskip}{0pt plus 5cm}Tutorial\+Screen\+::$\sim$\+Tutorial\+Screen (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tutorial_screen_ae76e9faca1ea1c38cb8526a244f42199}
+
+
+The deconstructor of the tutorial screen. 
+
+The defaul deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_tutorial_screen_aba6b13f389e90bc94ab3409b9687ffd6}{\index{Tutorial\+Screen@{Tutorial\+Screen}!draw@{draw}}
+\index{draw@{draw}!Tutorial\+Screen@{Tutorial\+Screen}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Tutorial\+Screen\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_tutorial_screen_aba6b13f389e90bc94ab3409b9687ffd6}
+
+
+The draw method of the tutorial screen. 
+
+This method will draw all the text on the screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & The screen on which the text has to be drawn \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_tutorial_screen_a67f9d997c5702c3ee032d7070d6363ec}{\index{Tutorial\+Screen@{Tutorial\+Screen}!update@{update}}
+\index{update@{update}!Tutorial\+Screen@{Tutorial\+Screen}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Tutorial\+Screen\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_tutorial_screen_a67f9d997c5702c3ee032d7070d6363ec}
+
+
+The update method of the tutorial screen. 
+
+Only sets the positions off all the items in this screen 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & A value representing the current speed of the game, based on the frames per second. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/Tutorial\+Screen.\+h\item 
+game\+Objects/menu/Tutorial\+Screen.\+cpp\end{DoxyCompactItemize}

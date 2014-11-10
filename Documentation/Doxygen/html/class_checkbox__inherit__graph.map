@@ -1,0 +1,7 @@
+<map id="Checkbox" name="Checkbox">
+<area shape="rect" id="node4" href="$class_toggle_gore.html" title="The toggle gore header file. " alt="" coords="5,229,93,256"/>
+<area shape="rect" id="node5" href="$class_toggle_music.html" title="The toggle music header file. " alt="" coords="118,229,213,256"/>
+<area shape="rect" id="node6" href="$class_toggle_sound.html" title="The togglesound header file. " alt="" coords="237,229,334,256"/>
+<area shape="rect" id="node2" href="$class_clickable.html" title="The Clickable header file. " alt="" coords="128,80,203,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="The game object header file. " alt="" coords="118,5,213,32"/>
+</map>

@@ -1,0 +1,158 @@
+\hypertarget{class_shop}{\section{Shop Class Reference}
+\label{class_shop}\index{Shop@{Shop}}
+}
+
+
+The shop header file.  
+
+
+
+
+{\ttfamily \#include $<$Shop.\+h$>$}
+
+
+
+Inheritance diagram for Shop\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_shop__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Shop\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_shop__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_shop_a579ed9f949f7db3f90c22dfe10b25797}{Shop} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the shop button. \end{DoxyCompactList}\item 
+void \hyperlink{class_shop_a80125375c97c1028281e9458885ac0f0}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the shop. \end{DoxyCompactList}\item 
+void \hyperlink{class_shop_af20c1357f7b387c9de1a769f247301cc}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the shop button class. \end{DoxyCompactList}\item 
+void \hyperlink{class_shop_aa2e219f5db2af725434b94194d34c4a0}{click} () override
+\begin{DoxyCompactList}\small\item\em The click method of the shop button class. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_shop_a09ad28db42d7a8d4ac98065ad8b32e07}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the shop button class. \end{DoxyCompactList}\item 
+\hyperlink{class_shop_a36bf69bdc0da1b7258acc63a5fe89d40}{$\sim$\+Shop} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the shop button. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The shop header file. 
+
+This is the header file of the shop button class 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_shop_a579ed9f949f7db3f90c22dfe10b25797}{\index{Shop@{Shop}!Shop@{Shop}}
+\index{Shop@{Shop}!Shop@{Shop}}
+\subsubsection[{Shop}]{\setlength{\rightskip}{0pt plus 5cm}Shop\+::\+Shop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_shop_a579ed9f949f7db3f90c22dfe10b25797}
+
+
+The constructor of the shop button. 
+
+The constructor will load in the textures used by this button and set its origin. \hypertarget{class_shop_a36bf69bdc0da1b7258acc63a5fe89d40}{\index{Shop@{Shop}!````~Shop@{$\sim$\+Shop}}
+\index{````~Shop@{$\sim$\+Shop}!Shop@{Shop}}
+\subsubsection[{$\sim$\+Shop}]{\setlength{\rightskip}{0pt plus 5cm}Shop\+::$\sim$\+Shop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_shop_a36bf69bdc0da1b7258acc63a5fe89d40}
+
+
+The deconstructor of the shop button. 
+
+A default deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_shop_aa2e219f5db2af725434b94194d34c4a0}{\index{Shop@{Shop}!click@{click}}
+\index{click@{click}!Shop@{Shop}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void Shop\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_shop_aa2e219f5db2af725434b94194d34c4a0}
+
+
+The click method of the shop button class. 
+
+This method specifies what happens when the user clicks on the shop button. 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{class_shop_af20c1357f7b387c9de1a769f247301cc}{\index{Shop@{Shop}!draw@{draw}}
+\index{draw@{draw}!Shop@{Shop}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Shop\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_shop_af20c1357f7b387c9de1a769f247301cc}
+
+
+The draw method of the shop button class. 
+
+This method will draw the button on the screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window on which the button has to be drawn \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_shop_a09ad28db42d7a8d4ac98065ad8b32e07}{\index{Shop@{Shop}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Shop@{Shop}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Shop\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_shop_a09ad28db42d7a8d4ac98065ad8b32e07}
+
+
+The get bounds method of the shop button class. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of this particular button. Used to check if the users click was on this button. 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_shop_a80125375c97c1028281e9458885ac0f0}{\index{Shop@{Shop}!update@{update}}
+\index{update@{update}!Shop@{Shop}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Shop\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_shop_a80125375c97c1028281e9458885ac0f0}
+
+
+The update method of the shop. 
+
+The update method will set the position of the shop button 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & A value representing the speed of the game, based on the frames per second \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/Shop.\+h\item 
+game\+Objects/menu/Shop.\+cpp\end{DoxyCompactItemize}

@@ -6,9 +6,10 @@ This is the header file of the enemy class.
 #include "Animation.h"
 #include "../TextureManager.h"
 #include <SFML\Graphics.hpp>
+#include "ParticleEmitter.h"
 
 class Enemy :
-	public Animation
+	public Animation, ParticleEmitter
 {
 private:
 	class Initializer{
@@ -48,7 +49,7 @@ public:
 	Damages this enemey, if his hp reaches 0, this enemy will die.
 	@param damage The amount of damage dealt to this enemy.
 	*/
-	void Enemy::reduceHP(int damage);
+	virtual void Enemy::reduceHP(int damage);
 
 	//! The update method of the enemy class
 	/*!
@@ -102,7 +103,19 @@ public:
 
 
 	//! The standard values for the dunken boss bully.
-	Initializer dunken{ "Boss Dunken", 0.9f, 1500, true, 20, 60 };
+	Initializer dunken{ "Dunken", 1.2f, 1500, true, 65, 60 };
+
+	//! The standard values for the ethan boss bully.
+	Initializer ethan{ "Ethan", 1.3f, 1000, true, 50, 60 };
+
+	//! The standard values for the zoey boss bully.
+	Initializer zoey{ "Zoey", 1.8f, 750, true, 25, 60 };
+
+	//! The standard values for the zoey boss bully.
+	Initializer parker{ "Parker", 1.5f, 800, true, 35, 60 };
+
+	//! The standard values for the zoey boss bully.
+	Initializer bobby{ "Bobby", 1.4f, 2000, true, 55, 60 };
 	
 	//! The deconstructor of the enemy class.
 	/*!
@@ -110,12 +123,17 @@ public:
 	*/
 	~Enemy();
 
-private:
-	float hitCooldown = 0;
+
+protected:
 	int dmg = 0;
-	bool drawMelee;
 	Initializer & type = average;
-	sf::Sprite curSprite,melee;
+	sf::Sprite melee;
+
+private:
+
+	float hitCooldown = 0;
+	bool drawMelee;
+	sf::Sprite curSprite;
 	sf::Texture tex;
 };
 

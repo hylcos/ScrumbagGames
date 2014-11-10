@@ -1,0 +1,5 @@
+<map id="Knife" name="Knife">
+<area shape="rect" id="node2" href="$class_weapon.html" title="Weapon" alt="" coords="17,80,88,107"/>
+<area shape="rect" id="node3" href="$class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node4" href="$class_particle_emitter.html" title="ParticleEmitter" alt="" coords="112,80,220,107"/>
+</map>

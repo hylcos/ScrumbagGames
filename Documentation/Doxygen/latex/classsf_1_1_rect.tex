@@ -1,0 +1,336 @@
+\hypertarget{classsf_1_1_rect}{\section{sf\+:\+:Rect$<$ T $>$ Class Template Reference}
+\label{classsf_1_1_rect}\index{sf\+::\+Rect$<$ T $>$@{sf\+::\+Rect$<$ T $>$}}
+}
+
+
+Utility class for manipulating 2\+D axis aligned rectangles.  
+
+
+
+
+{\ttfamily \#include $<$Rect.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classsf_1_1_rect_a0f87ebaef9722a6222fd2e04ce8efb37}{Rect} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_rect_a15cdbc5a1aed3a8fc7be1bd5004f19f9}{Rect} (T rect\+Left, T rect\+Top, T rect\+Width, T rect\+Height)
+\begin{DoxyCompactList}\small\item\em Construct the rectangle from its coordinates. \end{DoxyCompactList}\item 
+\hyperlink{classsf_1_1_rect_a27fdf85caa6d12caeeff78913cc59936}{Rect} (const \hyperlink{classsf_1_1_vector2}{Vector2}$<$ T $>$ \&position, const \hyperlink{classsf_1_1_vector2}{Vector2}$<$ T $>$ \&size)
+\begin{DoxyCompactList}\small\item\em Construct the rectangle from position and size. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\hyperlink{classsf_1_1_rect_a6fff2bb7e93677839461a66bc2957de0}{Rect} (const \hyperlink{classsf_1_1_rect}{Rect}$<$ U $>$ \&\hyperlink{structrectangle}{rectangle})
+\begin{DoxyCompactList}\small\item\em Construct the rectangle from another type of rectangle. \end{DoxyCompactList}\item 
+bool \hyperlink{classsf_1_1_rect_aa8a5364c84de6dd5299f833b54e31ef1}{contains} (T x, T y) const 
+\begin{DoxyCompactList}\small\item\em Check if a point is inside the rectangle's area. \end{DoxyCompactList}\item 
+bool \hyperlink{classsf_1_1_rect_a24163acdb9b2987c0ea55c201e270d41}{contains} (const \hyperlink{classsf_1_1_vector2}{Vector2}$<$ T $>$ \&point) const 
+\begin{DoxyCompactList}\small\item\em Check if a point is inside the rectangle's area. \end{DoxyCompactList}\item 
+bool \hyperlink{classsf_1_1_rect_a566740c8f58e01bb052266f47e7e1011}{intersects} (const \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&\hyperlink{structrectangle}{rectangle}) const 
+\begin{DoxyCompactList}\small\item\em Check the intersection between two rectangles. \end{DoxyCompactList}\item 
+bool \hyperlink{classsf_1_1_rect_a5f1874792b04c7e221bb786b31f5836e}{intersects} (const \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&\hyperlink{structrectangle}{rectangle}, \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&intersection) const 
+\begin{DoxyCompactList}\small\item\em Check the intersection between two rectangles. \end{DoxyCompactList}\item 
+\hypertarget{classsf_1_1_rect_a53956cee21c818a3355429e3662fe384}{{\footnotesize template$<$typename T $>$ }\\{\bfseries Rect} (T rect\+Left, T rect\+Top, T rect\+Width, T rect\+Height)}\label{classsf_1_1_rect_a53956cee21c818a3355429e3662fe384}
+
+\item 
+\hypertarget{classsf_1_1_rect_a7e0ea3f83003ac89b11fd45d581059cc}{{\footnotesize template$<$typename T $>$ }\\{\bfseries Rect} (const \hyperlink{classsf_1_1_vector2}{Vector2}$<$ T $>$ \&position, const \hyperlink{classsf_1_1_vector2}{Vector2}$<$ T $>$ \&size)}\label{classsf_1_1_rect_a7e0ea3f83003ac89b11fd45d581059cc}
+
+\item 
+\hypertarget{classsf_1_1_rect_a6fff2bb7e93677839461a66bc2957de0}{{\footnotesize template$<$typename U $>$ }\\{\bfseries Rect} (const \hyperlink{classsf_1_1_rect}{Rect}$<$ U $>$ \&\hyperlink{structrectangle}{rectangle})}\label{classsf_1_1_rect_a6fff2bb7e93677839461a66bc2957de0}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classsf_1_1_rect_aa49960fa465103d9cb7069ceb25c7c32}{T \hyperlink{classsf_1_1_rect_aa49960fa465103d9cb7069ceb25c7c32}{left}}\label{classsf_1_1_rect_aa49960fa465103d9cb7069ceb25c7c32}
+
+\begin{DoxyCompactList}\small\item\em Left coordinate of the rectangle. \end{DoxyCompactList}\item 
+\hypertarget{classsf_1_1_rect_abd3d3a2d0ad211ef0082bd0aa1a5c0e3}{T \hyperlink{classsf_1_1_rect_abd3d3a2d0ad211ef0082bd0aa1a5c0e3}{top}}\label{classsf_1_1_rect_abd3d3a2d0ad211ef0082bd0aa1a5c0e3}
+
+\begin{DoxyCompactList}\small\item\em Top coordinate of the rectangle. \end{DoxyCompactList}\item 
+\hypertarget{classsf_1_1_rect_a4dd5b9d4333bebbc51bd309298fd500f}{T \hyperlink{classsf_1_1_rect_a4dd5b9d4333bebbc51bd309298fd500f}{width}}\label{classsf_1_1_rect_a4dd5b9d4333bebbc51bd309298fd500f}
+
+\begin{DoxyCompactList}\small\item\em Width of the rectangle. \end{DoxyCompactList}\item 
+\hypertarget{classsf_1_1_rect_a6fa0fc7de1636d78cae1a1b54eef95cd}{T \hyperlink{classsf_1_1_rect_a6fa0fc7de1636d78cae1a1b54eef95cd}{height}}\label{classsf_1_1_rect_a6fa0fc7de1636d78cae1a1b54eef95cd}
+
+\begin{DoxyCompactList}\small\item\em Height of the rectangle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Related Functions}
+(Note that these are not member functions.) \begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classsf_1_1_rect_ab3488b5dbd0e587c4d7cb80605affc46}{operator==} (const \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&\hyperlink{classsf_1_1_rect_aa49960fa465103d9cb7069ceb25c7c32}{left}, const \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator ==. \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{classsf_1_1_rect_a03fc4c105687b7d0f07b6b4ed4b45581}{operator!=} (const \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&\hyperlink{classsf_1_1_rect_aa49960fa465103d9cb7069ceb25c7c32}{left}, const \hyperlink{classsf_1_1_rect}{Rect}$<$ T $>$ \&right)
+\begin{DoxyCompactList}\small\item\em Overload of binary operator !=. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class sf\+::\+Rect$<$ T $>$}
+
+Utility class for manipulating 2\+D axis aligned rectangles. 
+
+A rectangle is defined by its top-\/left corner and its size. It is a very simple class defined for convenience, so its member variables (left, top, width and height) are public and can be accessed directly, just like the vector classes (\hyperlink{classsf_1_1_vector2}{Vector2} and \hyperlink{classsf_1_1_vector3}{Vector3}).
+
+To keep things simple, \hyperlink{classsf_1_1_rect}{sf\+::\+Rect} doesn't define functions to emulate the properties that are not directly members (such as right, bottom, center, etc.), it rather only provides intersection functions.
+
+\hyperlink{classsf_1_1_rect}{sf\+::\+Rect} uses the usual rules for its boundaries\+: \begin{DoxyItemize}
+\item The left and top edges are included in the rectangle's area \item The right (left + width) and bottom (top + height) edges are excluded from the rectangle's area\end{DoxyItemize}
+This means that sf\+::\+Int\+Rect(0, 0, 1, 1) and sf\+::\+Int\+Rect(1, 1, 1, 1) don't intersect.
+
+\hyperlink{classsf_1_1_rect}{sf\+::\+Rect} is a template and may be used with any numeric type, but for simplicity the instanciations used by S\+F\+M\+L are typedefed\+: \begin{DoxyItemize}
+\item sf\+::\+Rect$<$int$>$ is sf\+::\+Int\+Rect \item sf\+::\+Rect$<$float$>$ is sf\+::\+Float\+Rect\end{DoxyItemize}
+So that you don't have to care about the template syntax.
+
+Usage example\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Define a rectangle, located at (0, 0) with a size of 20x5}
+\hyperlink{classsf_1_1_rect}{sf::IntRect} r1(0, 0, 20, 5);
+
+\textcolor{comment}{// Define another rectangle, located at (4, 2) with a size of 18x10}
+\hyperlink{classsf_1_1_vector2}{sf::Vector2i} position(4, 2);
+\hyperlink{classsf_1_1_vector2}{sf::Vector2i} size(18, 10);
+\hyperlink{classsf_1_1_rect}{sf::IntRect} r2(position, size);
+
+\textcolor{comment}{// Test intersections with the point (3, 1)}
+\textcolor{keywordtype}{bool} b1 = r1.contains(3, 1); \textcolor{comment}{// true}
+\textcolor{keywordtype}{bool} b2 = r2.contains(3, 1); \textcolor{comment}{// false}
+
+\textcolor{comment}{// Test the intersection between r1 and r2}
+\hyperlink{classsf_1_1_rect}{sf::IntRect} result;
+\textcolor{keywordtype}{bool} b3 = r1.\hyperlink{classsf_1_1_rect_a566740c8f58e01bb052266f47e7e1011}{intersects}(r2, result); \textcolor{comment}{// true}
+\textcolor{comment}{// result == (4, 2, 16, 3)}
+\end{DoxyCode}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classsf_1_1_rect_a0f87ebaef9722a6222fd2e04ce8efb37}{\index{sf\+::\+Rect@{sf\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{Rect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf sf\+::\+Rect}$<$ T $>$\+::{\bf Rect} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_rect_a0f87ebaef9722a6222fd2e04ce8efb37}
+
+
+Default constructor. 
+
+Creates an empty rectangle (it is equivalent to calling Rect(0, 0, 0, 0)). \hypertarget{classsf_1_1_rect_a15cdbc5a1aed3a8fc7be1bd5004f19f9}{\index{sf\+::\+Rect@{sf\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{Rect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf sf\+::\+Rect}$<$ T $>$\+::{\bf Rect} (
+\begin{DoxyParamCaption}
+\item[{T}]{rect\+Left, }
+\item[{T}]{rect\+Top, }
+\item[{T}]{rect\+Width, }
+\item[{T}]{rect\+Height}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_rect_a15cdbc5a1aed3a8fc7be1bd5004f19f9}
+
+
+Construct the rectangle from its coordinates. 
+
+Be careful, the last two parameters are the width and height, not the right and bottom coordinates!
+
+
+\begin{DoxyParams}{Parameters}
+{\em rect\+Left} & Left coordinate of the rectangle \\
+\hline
+{\em rect\+Top} & Top coordinate of the rectangle \\
+\hline
+{\em rect\+Width} & Width of the rectangle \\
+\hline
+{\em rect\+Height} & Height of the rectangle \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsf_1_1_rect_a27fdf85caa6d12caeeff78913cc59936}{\index{sf\+::\+Rect@{sf\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{Rect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf sf\+::\+Rect}$<$ T $>$\+::{\bf Rect} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2}$<$ T $>$ \&}]{position, }
+\item[{const {\bf Vector2}$<$ T $>$ \&}]{size}
+\end{DoxyParamCaption}
+)}}\label{classsf_1_1_rect_a27fdf85caa6d12caeeff78913cc59936}
+
+
+Construct the rectangle from position and size. 
+
+Be careful, the last parameter is the size, not the bottom-\/right corner!
+
+
+\begin{DoxyParams}{Parameters}
+{\em position} & Position of the top-\/left corner of the rectangle \\
+\hline
+{\em size} & Size of the rectangle \\
+\hline
+\end{DoxyParams}
+\hypertarget{classsf_1_1_rect_a6fff2bb7e93677839461a66bc2957de0}{\index{sf\+::\+Rect@{sf\+::\+Rect}!Rect@{Rect}}
+\index{Rect@{Rect}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{Rect}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ template$<$typename U $>$ {\bf sf\+::\+Rect}$<$ T $>$\+::{\bf Rect} (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect}$<$ U $>$ \&}]{rectangle}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [explicit]}}}\label{classsf_1_1_rect_a6fff2bb7e93677839461a66bc2957de0}
+
+
+Construct the rectangle from another type of rectangle. 
+
+This constructor doesn't replace the copy constructor, it's called only when U != T. A call to this constructor will fail to compile if U is not convertible to T.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & Rectangle to convert \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classsf_1_1_rect_aa8a5364c84de6dd5299f833b54e31ef1}{\index{sf\+::\+Rect@{sf\+::\+Rect}!contains@{contains}}
+\index{contains@{contains}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf sf\+::\+Rect}$<$ T $>$\+::contains (
+\begin{DoxyParamCaption}
+\item[{T}]{x, }
+\item[{T}]{y}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_rect_aa8a5364c84de6dd5299f833b54e31ef1}
+
+
+Check if a point is inside the rectangle's area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & X coordinate of the point to test \\
+\hline
+{\em y} & Y coordinate of the point to test\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is inside, false otherwise
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classsf_1_1_rect_a566740c8f58e01bb052266f47e7e1011}{intersects} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_rect_a24163acdb9b2987c0ea55c201e270d41}{\index{sf\+::\+Rect@{sf\+::\+Rect}!contains@{contains}}
+\index{contains@{contains}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf sf\+::\+Rect}$<$ T $>$\+::contains (
+\begin{DoxyParamCaption}
+\item[{const {\bf Vector2}$<$ T $>$ \&}]{point}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_rect_a24163acdb9b2987c0ea55c201e270d41}
+
+
+Check if a point is inside the rectangle's area. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em point} & Point to test\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the point is inside, false otherwise
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classsf_1_1_rect_a566740c8f58e01bb052266f47e7e1011}{intersects} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_rect_a566740c8f58e01bb052266f47e7e1011}{\index{sf\+::\+Rect@{sf\+::\+Rect}!intersects@{intersects}}
+\index{intersects@{intersects}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{intersects}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf sf\+::\+Rect}$<$ T $>$\+::intersects (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect}$<$ T $>$ \&}]{rectangle}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_rect_a566740c8f58e01bb052266f47e7e1011}
+
+
+Check the intersection between two rectangles. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & Rectangle to test\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if rectangles overlap, false otherwise
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classsf_1_1_rect_aa8a5364c84de6dd5299f833b54e31ef1}{contains} 
+\end{DoxySeeAlso}
+\hypertarget{classsf_1_1_rect_a5f1874792b04c7e221bb786b31f5836e}{\index{sf\+::\+Rect@{sf\+::\+Rect}!intersects@{intersects}}
+\index{intersects@{intersects}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{intersects}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf sf\+::\+Rect}$<$ T $>$\+::intersects (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect}$<$ T $>$ \&}]{rectangle, }
+\item[{{\bf Rect}$<$ T $>$ \&}]{intersection}
+\end{DoxyParamCaption}
+) const}}\label{classsf_1_1_rect_a5f1874792b04c7e221bb786b31f5836e}
+
+
+Check the intersection between two rectangles. 
+
+This overload returns the overlapped rectangle in the {\itshape intersection} parameter.
+
+
+\begin{DoxyParams}{Parameters}
+{\em rectangle} & Rectangle to test \\
+\hline
+{\em intersection} & Rectangle to be filled with the intersection\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if rectangles overlap, false otherwise
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{classsf_1_1_rect_aa8a5364c84de6dd5299f833b54e31ef1}{contains} 
+\end{DoxySeeAlso}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{classsf_1_1_rect_a03fc4c105687b7d0f07b6b4ed4b45581}{\index{sf\+::\+Rect@{sf\+::\+Rect}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Rect}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}}\label{classsf_1_1_rect_a03fc4c105687b7d0f07b6b4ed4b45581}
+
+
+Overload of binary operator !=. 
+
+This operator compares strict difference between two rectangles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a rectangle) \\
+\hline
+{\em right} & Right operand (a rectangle)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape left} is not equal to {\itshape right} 
+\end{DoxyReturn}
+\hypertarget{classsf_1_1_rect_ab3488b5dbd0e587c4d7cb80605affc46}{\index{sf\+::\+Rect@{sf\+::\+Rect}!operator==@{operator==}}
+\index{operator==@{operator==}!sf\+::\+Rect@{sf\+::\+Rect}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf Rect}$<$ T $>$ \&}]{left, }
+\item[{const {\bf Rect}$<$ T $>$ \&}]{right}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [related]}}}\label{classsf_1_1_rect_ab3488b5dbd0e587c4d7cb80605affc46}
+
+
+Overload of binary operator ==. 
+
+This operator compares strict equality between two rectangles.
+
+
+\begin{DoxyParams}{Parameters}
+{\em left} & Left operand (a rectangle) \\
+\hline
+{\em right} & Right operand (a rectangle)\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if {\itshape left} is equal to {\itshape right} 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+S\+T\+B/deps/\+S\+F\+M\+L/include/\+S\+F\+M\+L/\+Graphics/Rect.\+hpp\item 
+S\+T\+B/deps/\+S\+F\+M\+L/include/\+S\+F\+M\+L/\+Graphics/Rect.\+inl\end{DoxyCompactItemize}

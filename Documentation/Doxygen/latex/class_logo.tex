@@ -1,0 +1,97 @@
+\hypertarget{class_logo}{\section{Logo Class Reference}
+\label{class_logo}\index{Logo@{Logo}}
+}
+
+
+Inheritance diagram for Logo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_logo__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Logo\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_logo__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_logo_a9d2597f741dbf6721950dfe3a57a3f59}{Logo} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_logo}{Logo} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_logo_a3c7f6eb9479e2594652d2a2f60c77e21}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the sprite of the \hyperlink{class_logo}{Logo}. \end{DoxyCompactList}\item 
+void \hyperlink{class_logo_a11888dba8385829c49384acbd488d339}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_logo}{Logo} function of the \hyperlink{class_logo}{Logo}. \end{DoxyCompactList}\item 
+\hypertarget{class_logo_a16149bd55a57a52f38fe63ddeb5e1e1e}{\hyperlink{class_logo_a16149bd55a57a52f38fe63ddeb5e1e1e}{$\sim$\+Logo} ()}\label{class_logo_a16149bd55a57a52f38fe63ddeb5e1e1e}
+
+\begin{DoxyCompactList}\small\item\em The deconstructor of a \hyperlink{class_particle_manager}{Particle\+Manager}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_logo_a9d2597f741dbf6721950dfe3a57a3f59}{\index{Logo@{Logo}!Logo@{Logo}}
+\index{Logo@{Logo}!Logo@{Logo}}
+\subsubsection[{Logo}]{\setlength{\rightskip}{0pt plus 5cm}Logo\+::\+Logo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_logo_a9d2597f741dbf6721950dfe3a57a3f59}
+
+
+The \hyperlink{class_logo}{Logo} constructor. 
+
+The constructor of \hyperlink{class_logo}{Logo} gets the needed texture from the texture manager. It also sets the origin of the sprite to the middle of the texture. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_logo_a11888dba8385829c49384acbd488d339}{\index{Logo@{Logo}!draw@{draw}}
+\index{draw@{draw}!Logo@{Logo}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Logo\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_logo_a11888dba8385829c49384acbd488d339}
+
+
+The \hyperlink{class_logo}{Logo} function of the \hyperlink{class_logo}{Logo}. 
+
+Draws the current sprite of the \hyperlink{class_logo}{Logo} on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em window} & the screen on which the \hyperlink{class_logo}{Logo} should be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_logo_a3c7f6eb9479e2594652d2a2f60c77e21}{\index{Logo@{Logo}!update@{update}}
+\index{update@{update}!Logo@{Logo}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Logo\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_logo_a3c7f6eb9479e2594652d2a2f60c77e21}
+
+
+Updates the sprite of the \hyperlink{class_logo}{Logo}. 
+
+Updates the position of the \hyperlink{class_logo}{Logo} and counts time down for the splash screen 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & The speed of the game, so it is equal on every pc \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Logo.\+h\item 
+game\+Objects/Logo.\+cpp\end{DoxyCompactItemize}

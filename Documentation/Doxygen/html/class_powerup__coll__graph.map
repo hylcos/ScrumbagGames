@@ -1,0 +1,6 @@
+<map id="Powerup" name="Powerup">
+<area shape="rect" id="node2" href="$class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/>
+<area shape="rect" id="node3" href="$class_particle_emitter.html" title="ParticleEmitter" alt="" coords="29,171,137,197"/>
+<area shape="rect" id="node4" href="$class_particle_manager.html" title="ParticleManager" alt="" coords="117,81,233,108"/>
+<area shape="rect" id="node5" href="$class_powerup_1_1_types.html" title="The Types class. " alt="" coords="162,171,277,197"/>
+</map>

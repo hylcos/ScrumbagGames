@@ -1,33 +1,158 @@
-\hypertarget{class_sound_controller}{\section{Sound\-Controller Class Reference}
-\label{class_sound_controller}\index{Sound\-Controller@{Sound\-Controller}}
+\hypertarget{class_sound_controller}{\section{Sound\+Controller Class Reference}
+\label{class_sound_controller}\index{Sound\+Controller@{Sound\+Controller}}
 }
+
+
+The sound controller header file.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Controller.\+h$>$}
+
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_sound_controller_a9df9f5c7b8ffdbffc79cc65acf677f54}{void {\bfseries play\-Music} (const char $\ast$file)}\label{class_sound_controller_a9df9f5c7b8ffdbffc79cc65acf677f54}
-
-\item 
-\hypertarget{class_sound_controller_a9815a4b5aa7df20c7780e66fd86a8e54}{void {\bfseries step} ()}\label{class_sound_controller_a9815a4b5aa7df20c7780e66fd86a8e54}
-
-\item 
-\hypertarget{class_sound_controller_ad9640d15b2e9b32829d051b59ae5de9d}{void {\bfseries set\-Background\-Music} (bool enabled)}\label{class_sound_controller_ad9640d15b2e9b32829d051b59ae5de9d}
-
-\end{DoxyCompactItemize}
+void \hyperlink{class_sound_controller_a6fe6f4192a2664969c9b71616060e440}{load} ()
+\begin{DoxyCompactList}\small\item\em The load method of the sound controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_sound_controller_aa13c7b3735163a1f4c259c9d357ec510}{play\+Music} (const std\+::string file)
+\begin{DoxyCompactList}\small\item\em T\+He play music method of the sound controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_sound_controller_ad9640d15b2e9b32829d051b59ae5de9d}{set\+Background\+Music} (bool enabled)
+\begin{DoxyCompactList}\small\item\em the set background music method of the sound controller \end{DoxyCompactList}\item 
+void \hyperlink{class_sound_controller_a7df7bc23543a4567aae652b064b19c73}{set\+Background\+Music\+Volume} (int value)
+\begin{DoxyCompactList}\small\item\em the set background music volume method of the sound controller \end{DoxyCompactList}\item 
+void \hyperlink{class_sound_controller_ac2553758c376ca9e2b38f0f1a071bba7}{set\+Sound\+Volume} (int value)
+\begin{DoxyCompactList}\small\item\em The set sound volume method of the sound controller. \end{DoxyCompactList}\item 
+\hyperlink{class_sound_controller_ac1d1f3fedeb2463d763254cbb314ba92}{$\sim$\+Sound\+Controller} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the sound controller class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_sound_controller_a167ca29530994a8483b090ff044ee49a}{static \hyperlink{class_sound_controller}{Sound\-Controller} \& {\bfseries get\-Instance} ()}\label{class_sound_controller_a167ca29530994a8483b090ff044ee49a}
-
+static \hyperlink{class_sound_controller}{Sound\+Controller} \& \hyperlink{class_sound_controller_a167ca29530994a8483b090ff044ee49a}{get\+Instance} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_sound_controller_afff78ac7ad87e197d22e956efd9da7fc}{const char $\ast$ {\bfseries I\-N\-T\-R\-O} = \char`\"{}Resources/Sounds/intro.\-ogg\char`\"{}}\label{class_sound_controller_afff78ac7ad87e197d22e956efd9da7fc}
+\hypertarget{class_sound_controller_afff78ac7ad87e197d22e956efd9da7fc}{const char $\ast$ \hyperlink{class_sound_controller_afff78ac7ad87e197d22e956efd9da7fc}{I\+N\+T\+R\+O} = \char`\"{}Resources/Sounds/intro.\+ogg\char`\"{}}\label{class_sound_controller_afff78ac7ad87e197d22e956efd9da7fc}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The file placement of the intro music. \end{DoxyCompactList}\item 
+\hypertarget{class_sound_controller_a611eafe07f5f5a46a9a4f472ec2b588e}{const char $\ast$ \hyperlink{class_sound_controller_a611eafe07f5f5a46a9a4f472ec2b588e}{O\+U\+T\+R\+O} = \char`\"{}Resources/Sounds/outro.\+ogg\char`\"{}}\label{class_sound_controller_a611eafe07f5f5a46a9a4f472ec2b588e}
+
+\begin{DoxyCompactList}\small\item\em The file placement of the outro music. \end{DoxyCompactList}\item 
+\hypertarget{class_sound_controller_a14d67f50bd484514058427f7a083101a}{std\+::map$<$ std\+::string, \\*
+sf\+::\+Music $\ast$ $>$ \hyperlink{class_sound_controller_a14d67f50bd484514058427f7a083101a}{map}}\label{class_sound_controller_a14d67f50bd484514058427f7a083101a}
+
+\begin{DoxyCompactList}\small\item\em A map saving the name of a song, and a pointer to the sound file. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\subsection{Detailed Description}
+The sound controller header file. 
+
+The header file of the sound controller 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_sound_controller_ac1d1f3fedeb2463d763254cbb314ba92}{\index{Sound\+Controller@{Sound\+Controller}!````~Sound\+Controller@{$\sim$\+Sound\+Controller}}
+\index{````~Sound\+Controller@{$\sim$\+Sound\+Controller}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{$\sim$\+Sound\+Controller}]{\setlength{\rightskip}{0pt plus 5cm}Sound\+Controller\+::$\sim$\+Sound\+Controller (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_sound_controller_ac1d1f3fedeb2463d763254cbb314ba92}
+
+
+The deconstructor of the sound controller class. 
+
+A default deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_sound_controller_a167ca29530994a8483b090ff044ee49a}{\index{Sound\+Controller@{Sound\+Controller}!get\+Instance@{get\+Instance}}
+\index{get\+Instance@{get\+Instance}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{get\+Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Sound\+Controller}\& Sound\+Controller\+::get\+Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}}\label{class_sound_controller_a167ca29530994a8483b090ff044ee49a}
+\begin{DoxyReturn}{Returns}
+a reference to the instance of the sound controller 
+\end{DoxyReturn}
+\hypertarget{class_sound_controller_a6fe6f4192a2664969c9b71616060e440}{\index{Sound\+Controller@{Sound\+Controller}!load@{load}}
+\index{load@{load}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{load}]{\setlength{\rightskip}{0pt plus 5cm}void Sound\+Controller\+::load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_sound_controller_a6fe6f4192a2664969c9b71616060e440}
+
+
+The load method of the sound controller. 
+
+Loads the song from the given file location and sets its volume to the volume saved in the settings. \hypertarget{class_sound_controller_aa13c7b3735163a1f4c259c9d357ec510}{\index{Sound\+Controller@{Sound\+Controller}!play\+Music@{play\+Music}}
+\index{play\+Music@{play\+Music}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{play\+Music}]{\setlength{\rightskip}{0pt plus 5cm}void Sound\+Controller\+::play\+Music (
+\begin{DoxyParamCaption}
+\item[{const std\+::string}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_sound_controller_aa13c7b3735163a1f4c259c9d357ec510}
+
+
+T\+He play music method of the sound controller. 
+
+This method will play the selected music 
+\begin{DoxyParams}{Parameters}
+{\em file} & The music that should be played. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sound_controller_ad9640d15b2e9b32829d051b59ae5de9d}{\index{Sound\+Controller@{Sound\+Controller}!set\+Background\+Music@{set\+Background\+Music}}
+\index{set\+Background\+Music@{set\+Background\+Music}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{set\+Background\+Music}]{\setlength{\rightskip}{0pt plus 5cm}void Sound\+Controller\+::set\+Background\+Music (
+\begin{DoxyParamCaption}
+\item[{bool}]{enabled}
+\end{DoxyParamCaption}
+)}}\label{class_sound_controller_ad9640d15b2e9b32829d051b59ae5de9d}
+
+
+the set background music method of the sound controller 
+
+This method will set the background music on or off 
+\begin{DoxyParams}{Parameters}
+{\em enabled} & Wether or not the background music should be enabled \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sound_controller_a7df7bc23543a4567aae652b064b19c73}{\index{Sound\+Controller@{Sound\+Controller}!set\+Background\+Music\+Volume@{set\+Background\+Music\+Volume}}
+\index{set\+Background\+Music\+Volume@{set\+Background\+Music\+Volume}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{set\+Background\+Music\+Volume}]{\setlength{\rightskip}{0pt plus 5cm}void Sound\+Controller\+::set\+Background\+Music\+Volume (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_sound_controller_a7df7bc23543a4567aae652b064b19c73}
+
+
+the set background music volume method of the sound controller 
+
+This method will set the volume of the background music that is playing 
+\begin{DoxyParams}{Parameters}
+{\em value} & The level of sound of the background music \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_sound_controller_ac2553758c376ca9e2b38f0f1a071bba7}{\index{Sound\+Controller@{Sound\+Controller}!set\+Sound\+Volume@{set\+Sound\+Volume}}
+\index{set\+Sound\+Volume@{set\+Sound\+Volume}!Sound\+Controller@{Sound\+Controller}}
+\subsubsection[{set\+Sound\+Volume}]{\setlength{\rightskip}{0pt plus 5cm}void Sound\+Controller\+::set\+Sound\+Volume (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_sound_controller_ac2553758c376ca9e2b38f0f1a071bba7}
+
+
+The set sound volume method of the sound controller. 
+
+This method will set the volume level of all the other sounds in the game 
+\begin{DoxyParams}{Parameters}
+{\em value} & The level that the volume of the sounds should be set to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Sound\-Controller.\-h\item 
-Sound\-Controller.\-cpp\end{DoxyCompactItemize}
+Sound\+Controller.\+h\item 
+Sound\+Controller.\+cpp\end{DoxyCompactItemize}

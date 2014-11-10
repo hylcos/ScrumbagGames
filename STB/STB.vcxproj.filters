@@ -23,7 +23,7 @@
   <ItemGroup>
     <Text Include="ReadMe.txt" />
     <Text Include="Idea.txt" />
-    <Text Include="Resources\Levels\init.level" />
+    <Text Include="Resources\Levels\levelOne.level" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\GameController.h">
@@ -35,16 +35,10 @@
     <ClInclude Include="src\targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\InputController.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\SoundController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="src\gameObjects\Circle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\gameObjects\Logo.h">
@@ -104,9 +98,6 @@
     <ClInclude Include="src\gameObjects\Knife.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\gameObjects\WeaponManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="src\gameObjects\Collision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -122,6 +113,84 @@
     <ClInclude Include="src\gameObjects\menu\ToggleMusic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\Resume.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\Particle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\ParticleManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\ParticleEmitter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SettingsController.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\ToggleSound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\ToggleGore.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\Slider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\Trashcan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\bosses\dunkenBoss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\Trashcan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\SoundSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\MusicSlider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\WeaponManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\ShopCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\NextRound.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\shop\WeaponCard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\shop\Upgrade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\shop\switchWeapon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\bosses\ethanBoss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\bosses\zoeyBoss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\bosses\parkerBoss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\bosses\bobbyBoss.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\TutorialScreen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\Tutorial.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gameObjects\menu\Shop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\GameController.cpp">
@@ -133,16 +202,10 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\InputController.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\SoundController.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="src\gameObjects\Circle.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\gameObjects\Logo.cpp">
@@ -220,6 +283,81 @@
     <ClCompile Include="src\gameObjects\menu\ToggleMusic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\Resume.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Particle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\ParticleManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\ParticleEmitter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SettingsController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\ToggleSound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\ToggleGore.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\Slider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Trashcan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\bosses\dunkenBoss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\Trashcan.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\SoundSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\MusicSlider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\ShopCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\NextRound.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\shop\WeaponCard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\shop\Upgrade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\shop\switchWeapon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\bosses\ethanBoss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\bosses\zoeyBoss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\bosses\parkerBoss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\bosses\bobbyBoss.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\TutorialScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\Tutorial.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gameObjects\menu\Shop.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sounds\intro.ogg" />
@@ -227,6 +365,29 @@
     <None Include="Resources\Images\Sprites\PlayButton.pdn" />
     <None Include="Resources\Levels\mainMenu.level" />
     <None Include="Resources\Levels\optionsMenu.level" />
+    <None Include="Resources\Sounds\sniper.ogg" />
+    <None Include="Resources\Sounds\pistol.ogg" />
+    <None Include="Resources\Sounds\rifle.ogg" />
+    <None Include="Resources\Sounds\shotgun.ogg" />
+    <None Include="Resources\Sounds\outro.ogg" />
+    <None Include="Resources\Sounds\Ouch_1.ogg" />
+    <None Include="Resources\Sounds\Ouch_2.ogg" />
+    <None Include="Resources\Sounds\walk_8.ogg" />
+    <None Include="Resources\Sounds\walk_2.ogg" />
+    <None Include="Resources\Sounds\walk_3.ogg" />
+    <None Include="Resources\Sounds\walk_4.ogg" />
+    <None Include="Resources\Sounds\walk_5.ogg" />
+    <None Include="Resources\Sounds\walk_6.ogg" />
+    <None Include="Resources\Sounds\walk_7.ogg" />
+    <None Include="Resources\Sounds\walk_1.ogg" />
+    <None Include="Resources\Sounds\dagger.ogg" />
+    <None Include="Resources\Levels\levelTwo.level" />
+    <None Include="Resources\Levels\shop.level" />
+    <None Include="Resources\Levels\levelThree.level" />
+    <None Include="Resources\Levels\levelFour.level" />
+    <None Include="Resources\Levels\levelFive.level" />
+    <None Include="Resources\Levels\tutorial.level" />
+    <None Include="Resources\Levels\logo.level" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Images\Background.jpg">
@@ -373,9 +534,6 @@
     <Image Include="Resources\Images\menuObjecten\MenuBackgroundTab.png">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="Resources\Images\menuObjecten\UncheckedOption.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -410,6 +568,162 @@
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Images\menuObjecten\BackButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\AmmoBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\BuffsBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\ExtraWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\HUDdesign.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\HealthBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\Timer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\PauseMenuOverlay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Table2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Table3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\AmmoBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\BuffsBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\ExtraWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\HUDdesign.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\HealthBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\Timer.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\PauseMenuOverlay.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\pistolWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\rifleWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\shotgunWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\sniperWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\swordWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ResumeButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ScrollButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\SlideBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ScrollButton(for_sound-music).png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\ScrollBar.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Enemies\Macho\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Dunken\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Ethan\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\2.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\4.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\Bosses\Zoey\melee.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\daggerWeapon.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\WeaponCardBackGround.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\UpgradeButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\SwitchWeaponButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\Sprites\money.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\menuObjecten\TutorialButton.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Images\HUDObjecten\GameOver.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

@@ -18,8 +18,11 @@ public:
 		player,
 		table,
 		bench,
+		trashcan,
 		powerup,
-		weapon
+		weapon,
+		particle,
+		particleManager
 	};
 
 	//! The standard constructor of the gameobject

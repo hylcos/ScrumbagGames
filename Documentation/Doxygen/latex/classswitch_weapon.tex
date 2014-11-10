@@ -1,0 +1,174 @@
+\hypertarget{classswitch_weapon}{\section{switch\+Weapon Class Reference}
+\label{classswitch_weapon}\index{switch\+Weapon@{switch\+Weapon}}
+}
+
+
+The switch weapon header file.  
+
+
+
+
+{\ttfamily \#include $<$switch\+Weapon.\+h$>$}
+
+
+
+Inheritance diagram for switch\+Weapon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classswitch_weapon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for switch\+Weapon\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{classswitch_weapon__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classswitch_weapon_a28db13e2cf535856e6df546ff8275b69}{switch\+Weapon} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the switch weapon class. \end{DoxyCompactList}\item 
+void \hyperlink{classswitch_weapon_a63fe71ba783dce920b6180efb2258735}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the switch weapon class. \end{DoxyCompactList}\item 
+void \hyperlink{classswitch_weapon_a1974ebf68ea94cfeabfb2bc8b3a97b37}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the switch weapon class. \end{DoxyCompactList}\item 
+void \hyperlink{classswitch_weapon_a8b848f4f3d33cadf233c693861164f29}{click} () override
+\begin{DoxyCompactList}\small\item\em the click method of the switch weapon class \end{DoxyCompactList}\item 
+bool \hyperlink{classswitch_weapon_a12cbca1c7d8c181293ecb53b64c88a1b}{is\+Clicked} ()
+\begin{DoxyCompactList}\small\item\em The is clicked method of the switch weapon class. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{classswitch_weapon_ab6fb2ee5b59c1cfd6130eb5fd51f39ee}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em the get bounds method of the switch weapon button \end{DoxyCompactList}\item 
+\hyperlink{classswitch_weapon_a69056567f015667649a4f91984f55032}{$\sim$switch\+Weapon} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the switch weapon class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The switch weapon header file. 
+
+This is the header file of the switch weapon button class 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classswitch_weapon_a28db13e2cf535856e6df546ff8275b69}{\index{switch\+Weapon@{switch\+Weapon}!switch\+Weapon@{switch\+Weapon}}
+\index{switch\+Weapon@{switch\+Weapon}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{switch\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}switch\+Weapon\+::switch\+Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classswitch_weapon_a28db13e2cf535856e6df546ff8275b69}
+
+
+The constructor of the switch weapon class. 
+
+The constructor will get the texture of the button. \hypertarget{classswitch_weapon_a69056567f015667649a4f91984f55032}{\index{switch\+Weapon@{switch\+Weapon}!````~switch\+Weapon@{$\sim$switch\+Weapon}}
+\index{````~switch\+Weapon@{$\sim$switch\+Weapon}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{$\sim$switch\+Weapon}]{\setlength{\rightskip}{0pt plus 5cm}switch\+Weapon\+::$\sim$switch\+Weapon (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classswitch_weapon_a69056567f015667649a4f91984f55032}
+
+
+The deconstructor of the switch weapon class. 
+
+The default deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{classswitch_weapon_a8b848f4f3d33cadf233c693861164f29}{\index{switch\+Weapon@{switch\+Weapon}!click@{click}}
+\index{click@{click}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void switch\+Weapon\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classswitch_weapon_a8b848f4f3d33cadf233c693861164f29}
+
+
+the click method of the switch weapon class 
+
+This method will specify what should happen if this button is pressed. 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{classswitch_weapon_a1974ebf68ea94cfeabfb2bc8b3a97b37}{\index{switch\+Weapon@{switch\+Weapon}!draw@{draw}}
+\index{draw@{draw}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void switch\+Weapon\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classswitch_weapon_a1974ebf68ea94cfeabfb2bc8b3a97b37}
+
+
+The draw method of the switch weapon class. 
+
+This method will draw the texture on the screen 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window it has to be drawn on \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{classswitch_weapon_ab6fb2ee5b59c1cfd6130eb5fd51f39ee}{\index{switch\+Weapon@{switch\+Weapon}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect switch\+Weapon\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classswitch_weapon_ab6fb2ee5b59c1cfd6130eb5fd51f39ee}
+
+
+the get bounds method of the switch weapon button 
+
+\begin{DoxyReturn}{Returns}
+the bounds of this button, used to check if the player has clicked on this button 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{classswitch_weapon_a12cbca1c7d8c181293ecb53b64c88a1b}{\index{switch\+Weapon@{switch\+Weapon}!is\+Clicked@{is\+Clicked}}
+\index{is\+Clicked@{is\+Clicked}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{is\+Clicked}]{\setlength{\rightskip}{0pt plus 5cm}bool switch\+Weapon\+::is\+Clicked (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classswitch_weapon_a12cbca1c7d8c181293ecb53b64c88a1b}
+
+
+The is clicked method of the switch weapon class. 
+
+\begin{DoxyReturn}{Returns}
+a boolean representing the state of this button 
+\end{DoxyReturn}
+\hypertarget{classswitch_weapon_a63fe71ba783dce920b6180efb2258735}{\index{switch\+Weapon@{switch\+Weapon}!update@{update}}
+\index{update@{update}!switch\+Weapon@{switch\+Weapon}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void switch\+Weapon\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classswitch_weapon_a63fe71ba783dce920b6180efb2258735}
+
+
+The update method of the switch weapon class. 
+
+This method will correct the position of this button, and call the update of the clickable class. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & a value in our game used to indicate the gamespeed, based on the frames per second \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/shop/switch\+Weapon.\+h\item 
+game\+Objects/menu/shop/switch\+Weapon.\+cpp\end{DoxyCompactItemize}

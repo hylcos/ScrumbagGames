@@ -1,0 +1,19 @@
+<map id="Clickable" name="Clickable">
+<area shape="rect" id="node3" href="$class_checkbox.html" title="The Checkbox header file. " alt="" coords="125,155,205,181"/>
+<area shape="rect" id="node7" href="$class_main_menu.html" title="MainMenu" alt="" coords="229,155,312,181"/>
+<area shape="rect" id="node8" href="$class_next_round.html" title="NextRound" alt="" coords="337,155,423,181"/>
+<area shape="rect" id="node9" href="$class_options.html" title="The header file of the options button. " alt="" coords="448,155,515,181"/>
+<area shape="rect" id="node10" href="$class_play.html" title="The play header file. " alt="" coords="539,155,587,181"/>
+<area shape="rect" id="node11" href="$class_resume.html" title="The resume header file. " alt="" coords="611,155,682,181"/>
+<area shape="rect" id="node12" href="$class_shop.html" title="The shop header file. " alt="" coords="706,155,758,181"/>
+<area shape="rect" id="node13" href="$class_slider.html" title="The slider header file. " alt="" coords="782,155,837,181"/>
+<area shape="rect" id="node16" href="$classswitch_weapon.html" title="The switch weapon header file. " alt="" coords="861,155,968,181"/>
+<area shape="rect" id="node17" href="$class_tutorial.html" title="The tutorial header file. " alt="" coords="992,155,1056,181"/>
+<area shape="rect" id="node18" href="$class_upgrade.html" title="Upgrade" alt="" coords="1081,155,1151,181"/>
+<area shape="rect" id="node2" href="$class_game_object.html" title="The game object header file. " alt="" coords="599,5,694,32"/>
+<area shape="rect" id="node4" href="$class_toggle_gore.html" title="The toggle gore header file. " alt="" coords="5,229,93,256"/>
+<area shape="rect" id="node5" href="$class_toggle_music.html" title="The toggle music header file. " alt="" coords="118,229,213,256"/>
+<area shape="rect" id="node6" href="$class_toggle_sound.html" title="The togglesound header file. " alt="" coords="237,229,334,256"/>
+<area shape="rect" id="node14" href="$class_music_slider.html" title="MusicSlider" alt="" coords="705,229,796,256"/>
+<area shape="rect" id="node15" href="$class_sound_slider.html" title="The sound slider header file. " alt="" coords="821,229,913,256"/>
+</map>

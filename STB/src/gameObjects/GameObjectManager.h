@@ -4,19 +4,32 @@ This is the header file of the game object manager class.
 */
 #pragma once
 #include "GameObject.h"
-#include "Circle.h"
+#include "ParticleManager.h"
 #include "Logo.h"
 #include "Player.h"
 #include <string>
 #include "Table.h"
 #include "Bench.h"
+#include "Trashcan.h"
 #include "Enemy.h"
 #include "menu\play.h"
 #include "menu\Options.h"
 #include "menu\MainMenu.h"
 #include "menu\Checkbox.h"
 #include "menu\ToggleMusic.h"
-
+#include "menu\ToggleSound.h"
+#include "menu\ToggleGore.h"
+#include "menu\MusicSlider.h"
+#include "menu\SoundSlider.h"
+#include "bosses/dunkenBoss.h"
+#include "bosses/ethanBoss.h"
+#include "bosses/zoeyBoss.h"
+#include "bosses/parkerBoss.h"
+#include "bosses/bobbyBoss.h"
+#include "menu/ShopCard.h"
+#include "menu/NextRound.h"
+#include "menu/TutorialScreen.h"
+#include "menu/Tutorial.h"
 class GameObjectManager
 {
 public:

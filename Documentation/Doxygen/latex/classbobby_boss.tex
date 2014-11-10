@@ -1,0 +1,178 @@
+\hypertarget{classbobby_boss}{\section{bobby\+Boss Class Reference}
+\label{classbobby_boss}\index{bobby\+Boss@{bobby\+Boss}}
+}
+
+
+The Bobby Boss header file.  
+
+
+
+
+{\ttfamily \#include $<$bobby\+Boss.\+h$>$}
+
+
+
+Inheritance diagram for bobby\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classbobby_boss__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bobby\+Boss\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classbobby_boss__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbobby_boss_ad9b35f38432e4b8944e315cceb5035fe}{bobby\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The Bobby Boss Constructor. \end{DoxyCompactList}\item 
+void \hyperlink{classbobby_boss_a1ba19c55017f2fb3f0b1679d82095d78}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the Bobby Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classbobby_boss_a168f9c10b7ed7b371518a5d13a145221}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the Bobby Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classbobby_boss_aafebea4f0d69a0f84dc1f8af980cf93f}{move} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The move method of the Bobby Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classbobby_boss_aae5b4a01ca776533c8a43a5a91d78af8}{reduce\+H\+P} (int damage) override
+\begin{DoxyCompactList}\small\item\em The reduce\+H\+P method of the Bobby Boss. \end{DoxyCompactList}\item 
+void \hyperlink{classbobby_boss_a63d3d9304aaff572a312e9662c80e226}{show\+Hp} ()
+\begin{DoxyCompactList}\small\item\em hp bar method \end{DoxyCompactList}\item 
+\hyperlink{classbobby_boss_a0bd41165ae0caf0af259eb705f2f9b24}{$\sim$bobby\+Boss} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the Bobby Boss. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The Bobby Boss header file. 
+
+This is the header file of the Bobby Boss class. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbobby_boss_ad9b35f38432e4b8944e315cceb5035fe}{\index{bobby\+Boss@{bobby\+Boss}!bobby\+Boss@{bobby\+Boss}}
+\index{bobby\+Boss@{bobby\+Boss}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{bobby\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}bobby\+Boss\+::bobby\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbobby_boss_ad9b35f38432e4b8944e315cceb5035fe}
+
+
+The Bobby Boss Constructor. 
+
+Loads the images for the animation of this boss. Also sets the animation for when the boss hits the player. \hypertarget{classbobby_boss_a0bd41165ae0caf0af259eb705f2f9b24}{\index{bobby\+Boss@{bobby\+Boss}!````~bobby\+Boss@{$\sim$bobby\+Boss}}
+\index{````~bobby\+Boss@{$\sim$bobby\+Boss}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{$\sim$bobby\+Boss}]{\setlength{\rightskip}{0pt plus 5cm}bobby\+Boss\+::$\sim$bobby\+Boss (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbobby_boss_a0bd41165ae0caf0af259eb705f2f9b24}
+
+
+The deconstructor of the Bobby Boss. 
+
+The default constructor of the boss 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbobby_boss_a168f9c10b7ed7b371518a5d13a145221}{\index{bobby\+Boss@{bobby\+Boss}!draw@{draw}}
+\index{draw@{draw}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void bobby\+Boss\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classbobby_boss_a168f9c10b7ed7b371518a5d13a145221}
+
+
+The draw method of the Bobby Boss. 
+
+Draws the boss when it is spawned. 
+\begin{DoxyParams}{Parameters}
+{\em window} & The window in which the boss has to be spawned. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a08a39c329c9c63d8569a1fd103542dda}{Animation}.
+
+\hypertarget{classbobby_boss_aafebea4f0d69a0f84dc1f8af980cf93f}{\index{bobby\+Boss@{bobby\+Boss}!move@{move}}
+\index{move@{move}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{move}]{\setlength{\rightskip}{0pt plus 5cm}void bobby\+Boss\+::move (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classbobby_boss_aafebea4f0d69a0f84dc1f8af980cf93f}
+
+
+The move method of the Bobby Boss. 
+
+Moves the boss in the direction of the player when it is spawned. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_a677d0633c20bcd49eab9513e1d47e20a}{Animation}.
+
+\hypertarget{classbobby_boss_aae5b4a01ca776533c8a43a5a91d78af8}{\index{bobby\+Boss@{bobby\+Boss}!reduce\+H\+P@{reduce\+H\+P}}
+\index{reduce\+H\+P@{reduce\+H\+P}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{reduce\+H\+P}]{\setlength{\rightskip}{0pt plus 5cm}void bobby\+Boss\+::reduce\+H\+P (
+\begin{DoxyParamCaption}
+\item[{int}]{damage}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classbobby_boss_aae5b4a01ca776533c8a43a5a91d78af8}
+
+
+The reduce\+H\+P method of the Bobby Boss. 
+
+Tells the Bobby Boss what it should do when the boss gets hit. 
+\begin{DoxyParams}{Parameters}
+{\em damage} & The amount of damage dealt to the boss \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_enemy_a5545e77e51c4c03309a02eba5573ff73}{Enemy}.
+
+\hypertarget{classbobby_boss_a63d3d9304aaff572a312e9662c80e226}{\index{bobby\+Boss@{bobby\+Boss}!show\+Hp@{show\+Hp}}
+\index{show\+Hp@{show\+Hp}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{show\+Hp}]{\setlength{\rightskip}{0pt plus 5cm}void bobby\+Boss\+::show\+Hp (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classbobby_boss_a63d3d9304aaff572a312e9662c80e226}
+
+
+hp bar method 
+
+Shows the hp bar of the Bobby Boss, and changes it according to how much hp the Bobby Boss has left. \hypertarget{classbobby_boss_a1ba19c55017f2fb3f0b1679d82095d78}{\index{bobby\+Boss@{bobby\+Boss}!update@{update}}
+\index{update@{update}!bobby\+Boss@{bobby\+Boss}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void bobby\+Boss\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{classbobby_boss_a1ba19c55017f2fb3f0b1679d82095d78}
+
+
+The update method of the Bobby Boss. 
+
+Mainly checks the timer to see if it is time to spawn the boss. When the timer ends, the boss will spawn at a random position on the map. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & a modifier for anything using time, based on the amount of frames of the game. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_animation_ae17ebf5f4b47801e460eb63342d858e8}{Animation}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/bosses/bobby\+Boss.\+h\item 
+game\+Objects/bosses/bobby\+Boss.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,158 @@
+\hypertarget{class_options}{\section{Options Class Reference}
+\label{class_options}\index{Options@{Options}}
+}
+
+
+The header file of the options button.  
+
+
+
+
+{\ttfamily \#include $<$Options.\+h$>$}
+
+
+
+Inheritance diagram for Options\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_options__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Options\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_options__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_options_ab72fb640172a6109e34c8a5366563753}{Options} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the options button. \end{DoxyCompactList}\item 
+void \hyperlink{class_options_aa331e18456d83724b67f94a0827118c4}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em The update method of the options button. \end{DoxyCompactList}\item 
+void \hyperlink{class_options_a9d6bba8e3a427aefa9bad26552e43484}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The draw method of the options button. \end{DoxyCompactList}\item 
+void \hyperlink{class_options_a99920558b09b82026ee06100535db6e3}{click} () override
+\begin{DoxyCompactList}\small\item\em The click method of the options button. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_options_aaea653aa6c981685e1ee5fff6bddb661}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em The get bounds method of the options button. \end{DoxyCompactList}\item 
+\hyperlink{class_options_a86ddb85b183f8b58af5481f30a42fa92}{$\sim$\+Options} ()
+\begin{DoxyCompactList}\small\item\em The options button deconstructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+The header file of the options button. 
+
+This is the header file of the options button in the menus. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_options_ab72fb640172a6109e34c8a5366563753}{\index{Options@{Options}!Options@{Options}}
+\index{Options@{Options}!Options@{Options}}
+\subsubsection[{Options}]{\setlength{\rightskip}{0pt plus 5cm}Options\+::\+Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_options_ab72fb640172a6109e34c8a5366563753}
+
+
+The constructor of the options button. 
+
+The construcotr will load in the texture and set the origin of the button \hypertarget{class_options_a86ddb85b183f8b58af5481f30a42fa92}{\index{Options@{Options}!````~Options@{$\sim$\+Options}}
+\index{````~Options@{$\sim$\+Options}!Options@{Options}}
+\subsubsection[{$\sim$\+Options}]{\setlength{\rightskip}{0pt plus 5cm}Options\+::$\sim$\+Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_options_a86ddb85b183f8b58af5481f30a42fa92}
+
+
+The options button deconstructor. 
+
+A default deconstructor 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_options_a99920558b09b82026ee06100535db6e3}{\index{Options@{Options}!click@{click}}
+\index{click@{click}!Options@{Options}}
+\subsubsection[{click}]{\setlength{\rightskip}{0pt plus 5cm}void Options\+::click (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_options_a99920558b09b82026ee06100535db6e3}
+
+
+The click method of the options button. 
+
+This method specifies what should happen when the user clicks on this button. 
+
+Reimplemented from \hyperlink{class_clickable_a1f99a456a892196f3fa9b6e380e7ac7a}{Clickable}.
+
+\hypertarget{class_options_a9d6bba8e3a427aefa9bad26552e43484}{\index{Options@{Options}!draw@{draw}}
+\index{draw@{draw}!Options@{Options}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Options\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_options_a9d6bba8e3a427aefa9bad26552e43484}
+
+
+The draw method of the options button. 
+
+This method will draw the button in the window 
+\begin{DoxyParams}{Parameters}
+{\em window} & Which window the button has to be drawn in \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_options_aaea653aa6c981685e1ee5fff6bddb661}{\index{Options@{Options}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Options@{Options}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Options\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_options_aaea653aa6c981685e1ee5fff6bddb661}
+
+
+The get bounds method of the options button. 
+
+\begin{DoxyReturn}{Returns}
+The bounds of this button. Used to check if the user has clicked on this button 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_options_aa331e18456d83724b67f94a0827118c4}{\index{Options@{Options}!update@{update}}
+\index{update@{update}!Options@{Options}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Options\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_options_aa331e18456d83724b67f94a0827118c4}
+
+
+The update method of the options button. 
+
+This method will update the position and sprite of the options butotn 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & A value used in our game to indicate its current speed. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/menu/Options.\+h\item 
+game\+Objects/menu/Options.\+cpp\end{DoxyCompactItemize}

@@ -2,6 +2,8 @@
 #include "HudController.h"
 #include "LevelController.h"
 #include "TextureManager.h"
+#include "GameController.h"
+#include <algorithm>
 
 void HudController::addObject(GameObject * object){
 	gameObjectToAdd.push_back(object);
@@ -22,37 +24,104 @@ void HudController::removeAllObjects(GameObject * object){
 		gameObjects.erase(position);
 }
 
+void HudController::loadHudTextures(){
+	rifletex = *TextureManager::getInstance().getTexture("HUDObjecten/rifleWeapon.png");
+	riflesprite.setTexture(rifletex);
+
+	pistoltex = *TextureManager::getInstance().getTexture("HUDObjecten/pistolWeapon.png");
+	pistolsprite.setTexture(pistoltex);
+
+	swordtex = *TextureManager::getInstance().getTexture("HUDObjecten/swordWeapon.png");
+	swordsprite.setTexture(swordtex);
+
+	knifetex = *TextureManager::getInstance().getTexture("HUDObjecten/daggerWeapon.png");
+	knifesprite.setTexture(knifetex);
+
+	shotguntex = *TextureManager::getInstance().getTexture("HUDObjecten/shotgunWeapon.png");
+	shotgunsprite.setTexture(shotguntex);
+
+	snipertex = *TextureManager::getInstance().getTexture("HUDObjecten/sniperWeapon.png");
+	snipersprite.setTexture(snipertex);
+
+	healthtex = *TextureManager::getInstance().getTexture("HUDObjecten/HealthBar.png");
+	healthsprite.setTexture(healthtex);
+
+	ammotex = *TextureManager::getInstance().getTexture("HUDObjecten/AmmoBar.png");
+	ammosprite.setTexture(ammotex);
+
+	timetex = *TextureManager::getInstance().getTexture("HUDObjecten/Timer.png");
+	timesprite.setTexture(timetex);
+	
+	
+
+	buffstex = *TextureManager::getInstance().getTexture("HUDObjecten/BuffsBar.png");
+	buffssprite.setTexture(buffstex);
+}
 void HudController::load()
 {
 	if (isLoaded){
 		return;
 	}
 	isLoaded = true;
-	HPBackGround.setFillColor(sf::Color::Black);
-	HPBackGround.setSize(sf::Vector2f(100, 15));
-	HPBackGround.setPosition(sf::Vector2f(60, 457.5));
 
-	HPForeGround.setFillColor(sf::Color::Red);
-	HPForeGround.setPosition(sf::Vector2f(60, 457.5));
+	hudView.setCenter(static_cast<sf::Vector2f>(GameController::getInstance().getWindow().getSize()) / 2.0f);
+	hudView.setSize(static_cast<sf::Vector2f>(GameController::getInstance().getWindow().getSize()));
+	
+	font.loadFromFile("Resources/Fonts/Coalition_v2.ttf");
+    ammotext.setFont(font);
+	ammotext.setCharacterSize(20);
+	ammotext.setColor(sf::Color::Yellow);
+	ammotext.setPosition(456, 431);
 
-	ammoBackGround.setFillColor(sf::Color::Black);
-	ammoBackGround.setSize(sf::Vector2f(100, 15));
-	ammoBackGround.setPosition(sf::Vector2f(300, 457.5));
+	timetext.setFont(font);
+	timetext.setCharacterSize(20);
+	timetext.setColor(sf::Color(255, 20, 20));
+	timetext.setPosition(278, 18);
+	timetext.setString("00:00");
 
-	ammoForeGround.setFillColor(sf::Color::Yellow);
-	ammoForeGround.setPosition(sf::Vector2f(300, 457.5));
+	moneytext.setFont(font);
+	moneytext.setCharacterSize(15);
+	moneytext.setColor(sf::Color::Yellow);
+	moneytext.setPosition(35, 400);
+	moneytext.setString("Money: 0");
 
-	background.setFillColor(sf::Color::White);
-	background.setSize(sf::Vector2f(140, 25));
+	knifesprite.setPosition(sf::Vector2f(568, 431));
+	riflesprite.setPosition(sf::Vector2f(568, 429));
+	snipersprite.setPosition(sf::Vector2f(568, 429));
+	pistolsprite.setPosition(sf::Vector2f(568, 429));
+	swordsprite.setPosition(sf::Vector2f(568, 429));
+	snipersprite.setPosition(sf::Vector2f(568, 429));
+	shotgunsprite.setPosition(sf::Vector2f(568, 429));
+
+	loadHudTextures();
+
+	timesprite.setOrigin(timetex.getSize().x / 2.0f, timetex.getSize().y / 2.0f);
+
+	timesprite.setPosition(sf::Vector2f(320,30));
+	healthsprite.setPosition(sf::Vector2f(20, 405));
+	ammosprite.setPosition(sf::Vector2f(444, 410));
+
+	
+	ammoForeGround.setPosition(sf::Vector2f(455, 431));
+	healthForeGround.setPosition(sf::Vector2f(35, 440));
+
+	healthForeGround.setFillColor(sf::Color::Red);
+	ammoForeGround.setFillColor(sf::Color(23, 92, 6));
+
 }
+
+sf::View HudController::getHudView(){
+	return hudView;
+}
+
 void HudController::step(sf::RenderWindow & window){
 	float speedModifier = 60 / GameController::getInstance().getFPS();
-	sf::View hudView;
-	hudView.setCenter(static_cast<sf::Vector2f>(window.getSize()) / 2.0f);
-	hudView.setSize(static_cast<sf::Vector2f>(window.getSize()));
-	//hudView.setCenter(sf::Vector2f(0.0f, 0.0f));
-	window.setView(hudView);
 
+	window.setView(hudView);
+	for (GameObject* obj : gameObjectToAdd){
+		gameObjects.push_back(obj);
+	}
+	gameObjectToAdd.clear();
 
 	for (GameObject* obj : gameObjects){
 		obj->update(speedModifier);
@@ -65,23 +134,54 @@ void HudController::step(sf::RenderWindow & window){
 	for (GameObject* obj : gameObjects){
 		obj->draw(window);
 	}
+
 	if (LevelController::getInstance().getPlayer() != nullptr){
-		HPForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getHp()), 15));
-		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getAmmo()), 15));
+		healthForeGround.setSize(sf::Vector2f(static_cast<float>(std::max(0.0,LevelController::getInstance().getPlayer()->getHp()* 1.5)) , 15));
+		ammoForeGround.setSize(sf::Vector2f(static_cast<float>(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmo()), 28));
+		if (LevelController::getInstance().getPlayer()->getSelectedWeapon()->getIsReloading()){
+			ammotext.setCharacterSize(12);
+			ammotext.setString("Reloading");
+		}
+		else{
+			ammotext.setCharacterSize(20);
+			ammotext.setString(LevelController::getInstance().getPlayer()->getSelectedWeapon()->getAmmoString());
+		}
+		
+		moneytext.setString("Money: " + std::to_string(LevelController::getInstance().getPlayer()->getMoney()));
+		std::string weaponname = LevelController::getInstance().getPlayer()->getSelectedWeapon()->getName();
+		if (weaponname == "dagger")	{
+			window.draw(knifesprite);
+		}
+		if (weaponname == "rifle")	{
+			window.draw(riflesprite);
+		}	
+		if (weaponname == "sniper")	{
+			window.draw(snipersprite);
+		}
+		if (weaponname == "sword")	{
+			window.draw(swordsprite);
+		}	
+		if (weaponname == "pistol")	{
+			window.draw(pistolsprite);
+		}
+		if (weaponname == "shotgun")	{
+			window.draw(shotgunsprite);
+		}
+		
+		window.draw(ammosprite);
+		window.draw(healthsprite);
+		window.draw(healthForeGround);
+		window.draw(ammoForeGround);
+		window.draw(timesprite);
+		window.draw(ammotext);
+		window.draw(timetext);
+		window.draw(moneytext);
 	}
 	else {
-		HPForeGround.setSize(sf::Vector2f(100, 15));
-		ammoForeGround.setSize(sf::Vector2f(100, 15));
+		healthForeGround.setSize(sf::Vector2f(150, 15));
+		ammoForeGround.setSize(sf::Vector2f(100, 28));
 	}
 
-	background.setPosition(sf::Vector2f(40, 455));
-	window.draw(background);
-	background.setPosition(sf::Vector2f(280, 455));
-	window.draw(background);
-	window.draw(HPBackGround);
-	window.draw(HPForeGround);
-	window.draw(ammoBackGround);
-	window.draw(ammoForeGround);
 }
 void HudController::prepareForNextLevel(){
 	gameObjects.clear();
@@ -89,4 +189,14 @@ void HudController::prepareForNextLevel(){
 
 sf::Vector2f HudController::getMousePos(){
 	return sf::Vector2f(sf::Mouse::getPosition(GameController::getInstance().getWindow())) - sf::Vector2f(GameController::getInstance().getWindow().getSize().x / 2.0f, GameController::getInstance().getWindow().getSize().y / 2.0f)+sf::Vector2f{ 320, 240 };
+}
+void HudController::updateTimer(float time){
+	int minutes =  (int) floor(time / 3600);
+	int seconds = (int)floor((time / 60));
+	seconds %= 60;
+	timetext.setString("0" + std::to_string(minutes) + ":" + (seconds >= 10 ? (std::to_string(seconds)) : "0" + (std::to_string(seconds))));
+}
+
+void HudController::updateTimer(std::string value){
+	timetext.setString(value);
 }

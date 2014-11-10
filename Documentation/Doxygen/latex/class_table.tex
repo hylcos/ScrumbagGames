@@ -1,0 +1,156 @@
+\hypertarget{class_table}{\section{Table Class Reference}
+\label{class_table}\index{Table@{Table}}
+}
+
+
+Inheritance diagram for Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_table__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Table\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_table__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_table_a049f2e06391781ae255c6698869c4ad1}{Table} ()
+\begin{DoxyCompactList}\small\item\em The \hyperlink{class_table}{Table} constructor. \end{DoxyCompactList}\item 
+void \hyperlink{class_table_af11162bb18173237925aef067ab07e87}{draw} (sf\+::\+Render\+Window \&window) const override
+\begin{DoxyCompactList}\small\item\em The Draw function of the \hyperlink{class_table}{Table}. \end{DoxyCompactList}\item 
+void \hyperlink{class_table_ae331c0377b28ee3c21b3d70b969841e2}{set\+Rotation} (float rotate) override
+\begin{DoxyCompactList}\small\item\em set\+Rotation sets the rotation of the \hyperlink{class_table}{Table} texture \end{DoxyCompactList}\item 
+void \hyperlink{class_table_af37e903447fa51718b7ad49dd2d4dbc3}{update} (float speed\+Modifier) override
+\begin{DoxyCompactList}\small\item\em Updates the sprite of the \hyperlink{class_table}{Table}. \end{DoxyCompactList}\item 
+sf\+::\+Float\+Rect \hyperlink{class_table_a4b3e8a7218a1095cf3ab7da58fb7f977}{get\+Bounds} () override
+\begin{DoxyCompactList}\small\item\em gets the bounds of the \hyperlink{class_table}{Table} \end{DoxyCompactList}\item 
+sf\+::\+Transform \hyperlink{class_table_afdc573e44d9de924c991eaa36efb6c56}{get\+Transform} () override
+\begin{DoxyCompactList}\small\item\em gets the Transformation of the \hyperlink{class_table}{Table} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_table_a049f2e06391781ae255c6698869c4ad1}{\index{Table@{Table}!Table@{Table}}
+\index{Table@{Table}!Table@{Table}}
+\subsubsection[{Table}]{\setlength{\rightskip}{0pt plus 5cm}Table\+::\+Table (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_table_a049f2e06391781ae255c6698869c4ad1}
+
+
+The \hyperlink{class_table}{Table} constructor. 
+
+The constructor of \hyperlink{class_table}{Table} gets the needed texture from the texture manager. It also sets the origin of the sprite to the middle of the texture. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_table_af11162bb18173237925aef067ab07e87}{\index{Table@{Table}!draw@{draw}}
+\index{draw@{draw}!Table@{Table}}
+\subsubsection[{draw}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+::draw (
+\begin{DoxyParamCaption}
+\item[{sf\+::\+Render\+Window \&}]{window}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_table_af11162bb18173237925aef067ab07e87}
+
+
+The Draw function of the \hyperlink{class_table}{Table}. 
+
+Draws the current sprite of the \hyperlink{class_table}{Table} on the screen. 
+\begin{DoxyParams}{Parameters}
+{\em window} & the screen on which the \hyperlink{class_table}{Table} should be drawn. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c340}{Game\+Object}.
+
+\hypertarget{class_table_a4b3e8a7218a1095cf3ab7da58fb7f977}{\index{Table@{Table}!get\+Bounds@{get\+Bounds}}
+\index{get\+Bounds@{get\+Bounds}!Table@{Table}}
+\subsubsection[{get\+Bounds}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Float\+Rect Table\+::get\+Bounds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_table_a4b3e8a7218a1095cf3ab7da58fb7f977}
+
+
+gets the bounds of the \hyperlink{class_table}{Table} 
+
+Gets the bounds of the sprite and returns this. \begin{DoxyReturn}{Returns}
+the bounds of the sprite so they can be compared with the bounds of the player and see if they intersect 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc6}{Game\+Object}.
+
+\hypertarget{class_table_afdc573e44d9de924c991eaa36efb6c56}{\index{Table@{Table}!get\+Transform@{get\+Transform}}
+\index{get\+Transform@{get\+Transform}!Table@{Table}}
+\subsubsection[{get\+Transform}]{\setlength{\rightskip}{0pt plus 5cm}sf\+::\+Transform Table\+::get\+Transform (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_table_afdc573e44d9de924c991eaa36efb6c56}
+
+
+gets the Transformation of the \hyperlink{class_table}{Table} 
+
+Gets the Transformation of the sprite and returns this. \begin{DoxyReturn}{Returns}
+the Transformation of the sprite so it can be calculated into the real bounds of the object 
+\end{DoxyReturn}
+
+
+Reimplemented from \hyperlink{class_game_object_a099849f3c0c6cfb0e0957d7fb6b37809}{Game\+Object}.
+
+\hypertarget{class_table_ae331c0377b28ee3c21b3d70b969841e2}{\index{Table@{Table}!set\+Rotation@{set\+Rotation}}
+\index{set\+Rotation@{set\+Rotation}!Table@{Table}}
+\subsubsection[{set\+Rotation}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+::set\+Rotation (
+\begin{DoxyParamCaption}
+\item[{float}]{rotate}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_table_ae331c0377b28ee3c21b3d70b969841e2}
+
+
+set\+Rotation sets the rotation of the \hyperlink{class_table}{Table} texture 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotate} & The amount with which the \hyperlink{class_table}{Table} texture should be rotated. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_a32562ecd2f833271b606d86a926d82b8}{Game\+Object}.
+
+\hypertarget{class_table_af37e903447fa51718b7ad49dd2d4dbc3}{\index{Table@{Table}!update@{update}}
+\index{update@{update}!Table@{Table}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void Table\+::update (
+\begin{DoxyParamCaption}
+\item[{float}]{speed\+Modifier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_table_af37e903447fa51718b7ad49dd2d4dbc3}
+
+
+Updates the sprite of the \hyperlink{class_table}{Table}. 
+
+Updates the position of the \hyperlink{class_table}{Table}. 
+\begin{DoxyParams}{Parameters}
+{\em speed\+Modifier} & isn't really used but is here because of the override. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+game\+Objects/Table.\+h\item 
+game\+Objects/Table.\+cpp\end{DoxyCompactItemize}
