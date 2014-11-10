@@ -11,19 +11,6 @@
 		, ammoUp
 		, BAB
 		, Money
-		//, invincibility
-		//, instaKill
-		//, doubleReloadSpeed
-		//, slowMotion
-		//, miniGun
-		//, sniperVision
-		//, frenzy
-		//, clone
-		//, flamethrower
-		//, doubleSpawn
-		//, fog
-		//, jam
-		//, blind
 		, last
 	};
 	static const char* PowerupNames[last] = {
