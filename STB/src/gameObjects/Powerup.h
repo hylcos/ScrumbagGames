@@ -154,7 +154,7 @@ public:
 
 	//! The deconstructor  of a Powerup
 	/*!
-
+	The defaul deconstructor
 	*/
 	~Powerup();
 
