@@ -114,19 +114,55 @@ $(document).ready(function(){initNavTree('class_collision.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a15e1a40debf5b3649a52acc6a66ba5f3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a15e1a40debf5b3649a52acc6a66ba5f3"></a>
-static bool&#160;</td><td class="memItemRight" valign="bottom"><b>collision</b> (<a class="el" href="class_game_object.html">GameObject</a> *circle, <a class="el" href="class_game_object.html">GameObject</a> *square)</td></tr>
+<tr class="memitem:a15e1a40debf5b3649a52acc6a66ba5f3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_collision.html#a15e1a40debf5b3649a52acc6a66ba5f3">collision</a> (<a class="el" href="class_game_object.html">GameObject</a> *circle, <a class="el" href="class_game_object.html">GameObject</a> *square)</td></tr>
+<tr class="memdesc:a15e1a40debf5b3649a52acc6a66ba5f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">collision method of <a class="el" href="class_collision.html">Collision</a>  <a href="#a15e1a40debf5b3649a52acc6a66ba5f3">More...</a><br /></td></tr>
 <tr class="separator:a15e1a40debf5b3649a52acc6a66ba5f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc64e25069ade32fedd95facc8d9d5ff"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc64e25069ade32fedd95facc8d9d5ff"></a>
-static float&#160;</td><td class="memItemRight" valign="bottom"><b>dist2</b> (sf::Vector2f p1, sf::Vector2f p2)</td></tr>
-<tr class="separator:acc64e25069ade32fedd95facc8d9d5ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2abd6765b06f0b4ac4a4e8c64df91d1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2abd6765b06f0b4ac4a4e8c64df91d1"></a>
-static sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>getClosestPoint</b> (Line line, sf::Vector2f P)</td></tr>
-<tr class="separator:ac2abd6765b06f0b4ac4a4e8c64df91d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a673e7d6d943e407332745ec4ac510a0f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a673e7d6d943e407332745ec4ac510a0f"></a>
-static sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>getClosestPoint</b> (<a class="el" href="class_game_object.html">GameObject</a> *square, <a class="el" href="class_game_object.html">GameObject</a> *circle)</td></tr>
-<tr class="separator:a673e7d6d943e407332745ec4ac510a0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a15e1a40debf5b3649a52acc6a66ba5f3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Collision::collision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>circle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_game_object.html">GameObject</a> *&#160;</td>
+          <td class="paramname"><em>square</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>collision method of <a class="el" href="class_collision.html">Collision</a> </p>
+<p>This function gets to parameters and compares there globalBounds. Checks if they're intersecting </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">circle</td><td>first object </td></tr>
+    <tr><td class="paramname">square</td><td>second Object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true = intresect , false = aren't intersecting </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>gameObjects/<a class="el" href="_collision_8h_source.html">Collision.h</a></li>
 <li>gameObjects/Collision.cpp</li>
@@ -137,7 +173,7 @@ static sf::Vector2f&#160;</td><td class="memItemRight" valign="bottom"><b>getClo
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_collision.html">Collision</a></li>
-    <li class="footer">Generated on Mon Nov 10 2014 00:34:18 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 02:16:10 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

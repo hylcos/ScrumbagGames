@@ -1,10 +1,19 @@
 \hypertarget{class_settings_controller}{\section{Settings\+Controller Class Reference}
 \label{class_settings_controller}\index{Settings\+Controller@{Settings\+Controller}}
 }
+
+
+The settings controller header file.  
+
+
+
+
+{\ttfamily \#include $<$Settings\+Controller.\+h$>$}
+
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}{enum {\bfseries setting} \{ \\*
+\hypertarget{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}{enum \hyperlink{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}{setting} \{ \\*
 {\bfseries background\+Music}, 
 {\bfseries sounds}, 
 {\bfseries gore}, 
@@ -13,25 +22,27 @@
 {\bfseries sound\+Volume}
  \}}\label{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}
 
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em an enum stating what settings are available to set by this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_settings_controller_a5fa15bf7c80e861b82bd82e0a56b6556}{int {\bfseries get\+Setting} (setting set)}\label{class_settings_controller_a5fa15bf7c80e861b82bd82e0a56b6556}
-
-\item 
-\hypertarget{class_settings_controller_ac02e8998adc861f887dc72c4d682b4ae}{void {\bfseries set\+Setting} (setting set, int value)}\label{class_settings_controller_ac02e8998adc861f887dc72c4d682b4ae}
-
-\item 
-\hypertarget{class_settings_controller_a71259292684df0732543ec3ea23ce61f}{void {\bfseries set\+Setting} (setting set, bool value)}\label{class_settings_controller_a71259292684df0732543ec3ea23ce61f}
-
-\end{DoxyCompactItemize}
+int \hyperlink{class_settings_controller_a5fa15bf7c80e861b82bd82e0a56b6556}{get\+Setting} (\hyperlink{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}{setting} set)
+\begin{DoxyCompactList}\small\item\em The get setting method of the setting controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_controller_ac02e8998adc861f887dc72c4d682b4ae}{set\+Setting} (\hyperlink{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}{setting} set, int value)
+\begin{DoxyCompactList}\small\item\em The set setting method of the settings controller. \end{DoxyCompactList}\item 
+void \hyperlink{class_settings_controller_a71259292684df0732543ec3ea23ce61f}{set\+Setting} (\hyperlink{class_settings_controller_a757d865f9b5d8fa3f4d96048d698e03c}{setting} set, bool value)
+\begin{DoxyCompactList}\small\item\em The second set setting method of the settings controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static \hyperlink{class_settings_controller}{Settings\+Controller} \& \hyperlink{class_settings_controller_a5f01530df4d82ba540c904cae8ed44d5}{get\+Instance} ()
 \begin{DoxyCompactList}\small\item\em The get\+Instance method of the \hyperlink{class_settings_controller}{Settings\+Controller}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+The settings controller header file. 
+
+This is the header file of the settings controller class 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_settings_controller_a5f01530df4d82ba540c904cae8ed44d5}{\index{Settings\+Controller@{Settings\+Controller}!get\+Instance@{get\+Instance}}
@@ -48,6 +59,63 @@ The get\+Instance method of the \hyperlink{class_settings_controller}{Settings\+
 This method makes sure there is only 1 instance of the gamecontroller at a time. This way, every time an external class uses a \hyperlink{class_settings_controller}{Settings\+Controller}, it uses a \hyperlink{class_settings_controller}{Settings\+Controller} with the same attributes as every other class. \begin{DoxyReturn}{Returns}
 The instance of the gamecontroller 
 \end{DoxyReturn}
+\hypertarget{class_settings_controller_a5fa15bf7c80e861b82bd82e0a56b6556}{\index{Settings\+Controller@{Settings\+Controller}!get\+Setting@{get\+Setting}}
+\index{get\+Setting@{get\+Setting}!Settings\+Controller@{Settings\+Controller}}
+\subsubsection[{get\+Setting}]{\setlength{\rightskip}{0pt plus 5cm}int Settings\+Controller\+::get\+Setting (
+\begin{DoxyParamCaption}
+\item[{{\bf setting}}]{set}
+\end{DoxyParamCaption}
+)}}\label{class_settings_controller_a5fa15bf7c80e861b82bd82e0a56b6556}
+
+
+The get setting method of the setting controller. 
+
+returns the value of the setting asked by its caller 
+\begin{DoxyParams}{Parameters}
+{\em set} & What setting the controller wants to know the value of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the Value of this particular setting 
+\end{DoxyReturn}
+\hypertarget{class_settings_controller_ac02e8998adc861f887dc72c4d682b4ae}{\index{Settings\+Controller@{Settings\+Controller}!set\+Setting@{set\+Setting}}
+\index{set\+Setting@{set\+Setting}!Settings\+Controller@{Settings\+Controller}}
+\subsubsection[{set\+Setting}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\+Controller\+::set\+Setting (
+\begin{DoxyParamCaption}
+\item[{{\bf setting}}]{set, }
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_settings_controller_ac02e8998adc861f887dc72c4d682b4ae}
+
+
+The set setting method of the settings controller. 
+
+sets the value of a certain setting 
+\begin{DoxyParams}{Parameters}
+{\em set} & What setting has to be set \\
+\hline
+{\em value} & The value that setting has to be set to. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_settings_controller_a71259292684df0732543ec3ea23ce61f}{\index{Settings\+Controller@{Settings\+Controller}!set\+Setting@{set\+Setting}}
+\index{set\+Setting@{set\+Setting}!Settings\+Controller@{Settings\+Controller}}
+\subsubsection[{set\+Setting}]{\setlength{\rightskip}{0pt plus 5cm}void Settings\+Controller\+::set\+Setting (
+\begin{DoxyParamCaption}
+\item[{{\bf setting}}]{set, }
+\item[{bool}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_settings_controller_a71259292684df0732543ec3ea23ce61f}
+
+
+The second set setting method of the settings controller. 
+
+Sets the value of a specified setting 
+\begin{DoxyParams}{Parameters}
+{\em set} & Which setting has to be set \\
+\hline
+{\em value} & If the setting has to be set to true or false. \\
+\hline
+\end{DoxyParams}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

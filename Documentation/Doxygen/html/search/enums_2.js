@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['types',['types',['../class_upgrade.html#a5834f56fecec704c0c9a25158bd09b0b',1,'Upgrade']]]
+  ['setting',['setting',['../class_settings_controller.html#a757d865f9b5d8fa3f4d96048d698e03c',1,'SettingsController']]]
 ];

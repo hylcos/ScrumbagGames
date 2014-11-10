@@ -96,6 +96,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions_l.html#index_l"><span>l</span></a></li>
       <li><a href="functions_m.html#index_m"><span>m</span></a></li>
       <li><a href="functions_n.html#index_n"><span>n</span></a></li>
+      <li><a href="functions_o.html#index_o"><span>o</span></a></li>
       <li><a href="functions_p.html#index_p"><span>p</span></a></li>
       <li><a href="functions_r.html#index_r"><span>r</span></a></li>
       <li class="current"><a href="functions_s.html#index_s"><span>s</span></a></li>
@@ -146,9 +147,15 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 : <a class="el" href="class_gun.html#a32ff9325061ddab247a5d726d8f98207">Gun</a>
 , <a class="el" href="class_weapon.html#a06ca67c2d2f869c6a4fc7208d4ad56b5">Weapon</a>
 </li>
+<li>setBackgroundMusic()
+: <a class="el" href="class_sound_controller.html#ad9640d15b2e9b32829d051b59ae5de9d">SoundController</a>
+</li>
+<li>setBackgroundMusicVolume()
+: <a class="el" href="class_sound_controller.html#a7df7bc23543a4567aae652b064b19c73">SoundController</a>
+</li>
 <li>setColor()
 : <a class="el" href="class_particle.html#ad7dcfb0c3c1b11d35d321b7918bd546f">Particle</a>
-, <a class="el" href="class_particle_emitter.html#aa639c76a4637bba568a407f69e1c8ebd">ParticleEmitter</a>
+, <a class="el" href="class_particle_emitter.html#ac2d2189e309f8e557b214963aeb8aef8">ParticleEmitter</a>
 </li>
 <li>setDeceleration()
 : <a class="el" href="class_particle.html#a87a76728e3b91795c52beb9257e7e9df">Particle</a>
@@ -158,6 +165,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>setGore()
 : <a class="el" href="class_particle.html#a88d3824351cadeda57b752a6bc14d175">Particle</a>
+</li>
+<li>setMainView()
+: <a class="el" href="class_level_controller.html#a18cdb3e6d6f3d6e9dde4de2c21bc99cf">LevelController</a>
 </li>
 <li>setMinimumSpeed()
 : <a class="el" href="class_particle.html#aed19fba4d00acaa104bf1030c99b99e9">Particle</a>
@@ -173,6 +183,9 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 </li>
 <li>setOnHud()
 : <a class="el" href="class_clickable.html#a28eaa099f0a3230d7a140a1690b64036">Clickable</a>
+</li>
+<li>setPaused()
+: <a class="el" href="class_level_controller.html#a57e12d591397a1ab9c2641abf2b5fa9d">LevelController</a>
 </li>
 <li>setPosition()
 : <a class="el" href="class_game_object.html#a0f411667e5177a08ba7fdb3487bfbb13">GameObject</a>
@@ -191,14 +204,23 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="class_table.html#ae331c0377b28ee3c21b3d70b969841e2">Table</a>
 , <a class="el" href="class_trashcan.html#abd57bce536a5bdabc9121836d8f78e6d">Trashcan</a>
 </li>
+<li>setSetting()
+: <a class="el" href="class_settings_controller.html#a71259292684df0732543ec3ea23ce61f">SettingsController</a>
+</li>
 <li>setSize()
 : <a class="el" href="class_particle.html#a9cbcb7c7f4b1f1d11033a9eea16bae2c">Particle</a>
+</li>
+<li>setSoundVolume()
+: <a class="el" href="class_sound_controller.html#ac2553758c376ca9e2b38f0f1a071bba7">SoundController</a>
 </li>
 <li>setSpeed()
 : <a class="el" href="class_particle.html#ac57a8908b8ab1a1b9bb29aa02e347f56">Particle</a>
 </li>
 <li>setTextures()
 : <a class="el" href="class_animation.html#ab63fd2f5810a27e1b61f43f19e8994c6">Animation</a>
+</li>
+<li>setting
+: <a class="el" href="class_settings_controller.html#a757d865f9b5d8fa3f4d96048d698e03c">SettingsController</a>
 </li>
 <li>setType()
 : <a class="el" href="class_enemy.html#ab33e544c241dffc381b7c3614f8c0438">Enemy</a>
@@ -210,6 +232,18 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <li>setWeapons()
 : <a class="el" href="class_player.html#a0fca3ee9cea38e8944663f19a0cdb27b">Player</a>
 </li>
+<li>setZoom()
+: <a class="el" href="class_level_controller.html#a1235128f78023483b022bab8e2b0125c">LevelController</a>
+</li>
+<li>SHOP
+: <a class="el" href="class_level_controller.html#a3cc829ed89f8a4fad54369bcdb10e985">LevelController</a>
+</li>
+<li>Shop()
+: <a class="el" href="class_shop.html#a579ed9f949f7db3f90c22dfe10b25797">Shop</a>
+</li>
+<li>ShopCard()
+: <a class="el" href="class_shop_card.html#a2e832905840eb1fe14c9d3ae31acd4a4">ShopCard</a>
+</li>
 <li>shotgun
 : <a class="el" href="class_weapon_manager.html#abbd732d9ef93c6c3dd084191b22094bd">WeaponManager</a>
 </li>
@@ -220,17 +254,33 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 , <a class="el" href="classparker_boss.html#a52928b2641e7da080fd27b2f9679aa26">parkerBoss</a>
 , <a class="el" href="classzoey_boss.html#ae70c0773e30ab34f2c12ca816eb582cd">zoeyBoss</a>
 </li>
+<li>Slider()
+: <a class="el" href="class_slider.html#a535033fada8e25ef7291d2a52e6e437b">Slider</a>
+</li>
 <li>sniper
 : <a class="el" href="class_weapon_manager.html#aec3cb2dcbab3df14dbdad8fad0344493">WeaponManager</a>
+</li>
+<li>SoundSlider()
+: <a class="el" href="class_sound_slider.html#a080590debc9b54293f7b0d9ac2375614">SoundSlider</a>
+</li>
+<li>SPLASH
+: <a class="el" href="class_level_controller.html#a74aa85b7436b80624576389e3b826aca">LevelController</a>
 </li>
 <li>start()
 : <a class="el" href="class_game_controller.html#af365cd7a71dd76730a0bc92adc092103">GameController</a>
 </li>
+<li>startLevel()
+: <a class="el" href="class_level_controller.html#a0b8f10e66f7b97615c92340e10f77a07">LevelController</a>
+</li>
 <li>step()
 : <a class="el" href="class_hud_controller.html#a6cd82988ca9221b6cb8d520a8e26b204">HudController</a>
+, <a class="el" href="class_level_controller.html#acc3a82f2de457b3cb3863c5bb49a909c">LevelController</a>
 </li>
 <li>stop()
 : <a class="el" href="class_game_controller.html#a97872acdc39172c21e06665854656994">GameController</a>
+</li>
+<li>switchWeapon()
+: <a class="el" href="classswitch_weapon.html#a28db13e2cf535856e6df546ff8275b69">switchWeapon</a>
 </li>
 <li>sword
 : <a class="el" href="class_weapon_manager.html#aed3158ed3033cc4edb359153c9554e60">WeaponManager</a>
@@ -241,7 +291,7 @@ $(document).ready(function(){initNavTree('functions_s.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Nov 10 2014 00:34:20 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 02:16:12 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

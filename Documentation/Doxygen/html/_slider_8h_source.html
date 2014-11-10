@@ -104,41 +104,60 @@ $(document).ready(function(){initNavTree('_slider_8h_source.html','');});
 <div class="title">Slider.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;..\Clickable.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="class_slider.html">    3</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_slider.html">Slider</a> :</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_clickable.html">Clickable</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="class_slider.html">Slider</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slider.html#a5693b04af04da09cff43647283efaf6e">Slider::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slider.html#ac1cb7218b21febfe4dffecc0055427ac">Slider::release</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slider.html#a39223f6d54b6a517dea6cd842d34ecd7">Slider::press</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_clickable.html#a57d5d78289d710b078ddfe61000f0dbd">Slider::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Slider::updateValue(<span class="keywordtype">int</span> value);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    sf::FloatRect <a class="code" href="class_slider.html#a3ca5a06f3165d1bce77408f367abba50">Slider::getBounds</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    ~<a class="code" href="class_slider.html">Slider</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> value;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">bool</span> selected = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    sf::Sprite spriteScrollButton, spriteScrollBar;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="ttc" id="class_slider_html_a3ca5a06f3165d1bce77408f367abba50"><div class="ttname"><a href="class_slider.html#a3ca5a06f3165d1bce77408f367abba50">Slider::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() override</div><div class="ttdoc">The get bounds method of the game object. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:39</div></div>
-<div class="ttc" id="class_slider_html"><div class="ttname"><a href="class_slider.html">Slider</a></div><div class="ttdef"><b>Definition:</b> Slider.h:3</div></div>
-<div class="ttc" id="class_slider_html_ac1cb7218b21febfe4dffecc0055427ac"><div class="ttname"><a href="class_slider.html#ac1cb7218b21febfe4dffecc0055427ac">Slider::release</a></div><div class="ttdeci">void release() override</div><div class="ttdoc">The release method for the clickable class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:27</div></div>
-<div class="ttc" id="class_slider_html_a5693b04af04da09cff43647283efaf6e"><div class="ttname"><a href="class_slider.html#a5693b04af04da09cff43647283efaf6e">Slider::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the game object. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:48</div></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;..\Clickable.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_slider.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_slider.html">Slider</a> :</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_clickable.html">Clickable</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_slider.html#a535033fada8e25ef7291d2a52e6e437b">Slider</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slider.html#a5693b04af04da09cff43647283efaf6e">Slider::draw</a>(sf::RenderWindow &amp; window) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slider.html#ac1cb7218b21febfe4dffecc0055427ac">Slider::release</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_slider.html#a39223f6d54b6a517dea6cd842d34ecd7">Slider::press</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_clickable.html#a57d5d78289d710b078ddfe61000f0dbd">Slider::update</a>(<span class="keywordtype">float</span> speedModifier) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_slider.html#a5275d7ee0fa30d49b01a5f3ec376bcbe">Slider::updateValue</a>(<span class="keywordtype">int</span> value);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    sf::FloatRect <a class="code" href="class_slider.html#a3ca5a06f3165d1bce77408f367abba50">Slider::getBounds</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="class_slider.html#aaca12abbe07a83f925d66339aa332028">~Slider</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> value;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">bool</span> selected = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    sf::Sprite spriteScrollButton, spriteScrollBar;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="ttc" id="class_slider_html_a3ca5a06f3165d1bce77408f367abba50"><div class="ttname"><a href="class_slider.html#a3ca5a06f3165d1bce77408f367abba50">Slider::getBounds</a></div><div class="ttdeci">sf::FloatRect getBounds() override</div><div class="ttdoc">The get bounds method of the slider class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:39</div></div>
+<div class="ttc" id="class_slider_html"><div class="ttname"><a href="class_slider.html">Slider</a></div><div class="ttdoc">The slider header file. </div><div class="ttdef"><b>Definition:</b> Slider.h:7</div></div>
+<div class="ttc" id="class_slider_html_a535033fada8e25ef7291d2a52e6e437b"><div class="ttname"><a href="class_slider.html#a535033fada8e25ef7291d2a52e6e437b">Slider::Slider</a></div><div class="ttdeci">Slider()</div><div class="ttdoc">The constructor of the slider class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:9</div></div>
+<div class="ttc" id="class_slider_html_a5275d7ee0fa30d49b01a5f3ec376bcbe"><div class="ttname"><a href="class_slider.html#a5275d7ee0fa30d49b01a5f3ec376bcbe">Slider::updateValue</a></div><div class="ttdeci">virtual void updateValue(int value)</div><div class="ttdoc">the update value method of the slider class </div><div class="ttdef"><b>Definition:</b> Slider.cpp:44</div></div>
+<div class="ttc" id="class_slider_html_ac1cb7218b21febfe4dffecc0055427ac"><div class="ttname"><a href="class_slider.html#ac1cb7218b21febfe4dffecc0055427ac">Slider::release</a></div><div class="ttdeci">void release() override</div><div class="ttdoc">The release method of the slider class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:27</div></div>
+<div class="ttc" id="class_slider_html_aaca12abbe07a83f925d66339aa332028"><div class="ttname"><a href="class_slider.html#aaca12abbe07a83f925d66339aa332028">Slider::~Slider</a></div><div class="ttdeci">~Slider()</div><div class="ttdoc">The deconstructor of the slider class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:53</div></div>
+<div class="ttc" id="class_slider_html_a5693b04af04da09cff43647283efaf6e"><div class="ttname"><a href="class_slider.html#a5693b04af04da09cff43647283efaf6e">Slider::draw</a></div><div class="ttdeci">void draw(sf::RenderWindow &amp;window) const override</div><div class="ttdoc">The draw method of the slider class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:48</div></div>
 <div class="ttc" id="class_clickable_html_a57d5d78289d710b078ddfe61000f0dbd"><div class="ttname"><a href="class_clickable.html#a57d5d78289d710b078ddfe61000f0dbd">Clickable::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">The update method for the clickable class. </div><div class="ttdef"><b>Definition:</b> Clickable.cpp:15</div></div>
 <div class="ttc" id="class_clickable_html"><div class="ttname"><a href="class_clickable.html">Clickable</a></div><div class="ttdoc">The Clickable header file. </div><div class="ttdef"><b>Definition:</b> Clickable.h:9</div></div>
-<div class="ttc" id="class_slider_html_a39223f6d54b6a517dea6cd842d34ecd7"><div class="ttname"><a href="class_slider.html#a39223f6d54b6a517dea6cd842d34ecd7">Slider::press</a></div><div class="ttdeci">void press() override</div><div class="ttdoc">The press method for the clickable class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:35</div></div>
+<div class="ttc" id="class_slider_html_a39223f6d54b6a517dea6cd842d34ecd7"><div class="ttname"><a href="class_slider.html#a39223f6d54b6a517dea6cd842d34ecd7">Slider::press</a></div><div class="ttdeci">void press() override</div><div class="ttdoc">The press method of the slider class. </div><div class="ttdef"><b>Definition:</b> Slider.cpp:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_7ea47908f92776705f55163b0cb78b51.html">gameObjects</a></li><li class="navelem"><a class="el" href="dir_da2b87729fa5bc028d3e0fd094d555fd.html">menu</a></li><li class="navelem"><b>Slider.h</b></li>
-    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 02:16:09 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

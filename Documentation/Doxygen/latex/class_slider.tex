@@ -3,7 +3,17 @@
 }
 
 
-Inheritance diagram for Slider\+:\nopagebreak
+The slider header file.  
+
+
+
+
+{\ttfamily \#include $<$Slider.\+h$>$}
+
+
+
+Inheritance diagram for Slider\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -22,19 +32,22 @@ Collaboration diagram for Slider\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_slider_a535033fada8e25ef7291d2a52e6e437b}{Slider} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the slider class. \end{DoxyCompactList}\item 
 void \hyperlink{class_slider_a5693b04af04da09cff43647283efaf6e}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The draw method of the slider class. \end{DoxyCompactList}\item 
 void \hyperlink{class_slider_ac1cb7218b21febfe4dffecc0055427ac}{release} () override
-\begin{DoxyCompactList}\small\item\em The release method for the clickable class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The release method of the slider class. \end{DoxyCompactList}\item 
 void \hyperlink{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}{press} () override
-\begin{DoxyCompactList}\small\item\em The press method for the clickable class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The press method of the slider class. \end{DoxyCompactList}\item 
 void \hyperlink{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
-\hypertarget{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}{virtual void {\bfseries update\+Value} (int value)}\label{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}
-
-\item 
+\begin{DoxyCompactList}\small\item\em The update method of the slider class. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}{update\+Value} (int value)
+\begin{DoxyCompactList}\small\item\em the update value method of the slider class \end{DoxyCompactList}\item 
 sf\+::\+Float\+Rect \hyperlink{class_slider_a3ca5a06f3165d1bce77408f367abba50}{get\+Bounds} () override
-\begin{DoxyCompactList}\small\item\em The get bounds method of the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The get bounds method of the slider class. \end{DoxyCompactList}\item 
+\hyperlink{class_slider_aaca12abbe07a83f925d66339aa332028}{$\sim$\+Slider} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the slider class. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -43,6 +56,36 @@ sf\+::\+Float\+Rect \hyperlink{class_slider_a3ca5a06f3165d1bce77408f367abba50}{g
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+The slider header file. 
+
+This is the header file of the slider class 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_slider_a535033fada8e25ef7291d2a52e6e437b}{\index{Slider@{Slider}!Slider@{Slider}}
+\index{Slider@{Slider}!Slider@{Slider}}
+\subsubsection[{Slider}]{\setlength{\rightskip}{0pt plus 5cm}Slider\+::\+Slider (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_slider_a535033fada8e25ef7291d2a52e6e437b}
+
+
+The constructor of the slider class. 
+
+The slider will load the textures of both the slider bar and the slider itself \hypertarget{class_slider_aaca12abbe07a83f925d66339aa332028}{\index{Slider@{Slider}!````~Slider@{$\sim$\+Slider}}
+\index{````~Slider@{$\sim$\+Slider}!Slider@{Slider}}
+\subsubsection[{$\sim$\+Slider}]{\setlength{\rightskip}{0pt plus 5cm}Slider\+::$\sim$\+Slider (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_slider_aaca12abbe07a83f925d66339aa332028}
+
+
+The deconstructor of the slider class. 
+
+A default deconstructor 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_slider_a5693b04af04da09cff43647283efaf6e}{\index{Slider@{Slider}!draw@{draw}}
@@ -54,11 +97,11 @@ sf\+::\+Float\+Rect \hyperlink{class_slider_a3ca5a06f3165d1bce77408f367abba50}{g
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a5693b04af04da09cff43647283efaf6e}
 
 
-The draw method of the game object. 
+The draw method of the slider class. 
 
-Virtual method that will specify what happens when the game object has to be drawn 
+The draw method will draw everything on the screen. This includes the bar and the slider at its curren position 
 \begin{DoxyParams}{Parameters}
-{\em window} & The window the game object has to be drawn in \\
+{\em window} & The window everything has to be drawn on \\
 \hline
 \end{DoxyParams}
 
@@ -74,10 +117,10 @@ Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a3ca5a06f3165d1bce77408f367abba50}
 
 
-The get bounds method of the game object. 
+The get bounds method of the slider class. 
 
 \begin{DoxyReturn}{Returns}
-A rectangle indicating the bounds of the game object 
+The bounds of the slider 
 \end{DoxyReturn}
 
 
@@ -92,9 +135,9 @@ Reimplemented from \hyperlink{class_game_object_ab82f4f320038769dc98a972340c15fc
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a39223f6d54b6a517dea6cd842d34ecd7}
 
 
-The press method for the clickable class. 
+The press method of the slider class. 
 
-In this method there will be specified what has to happen when this game object is press. 
+Specifies what should happen when the user presses the slider 
 
 Reimplemented from \hyperlink{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}{Clickable}.
 
@@ -107,9 +150,9 @@ Reimplemented from \hyperlink{class_clickable_a0bfd41ac944b05899a34a5ab3ed531c4}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_ac1cb7218b21febfe4dffecc0055427ac}
 
 
-The release method for the clickable class. 
+The release method of the slider class. 
 
-In this method there will be specified what has to happen when this game object is released. 
+Specifies what should happen when the user releases the slider at a specific position 
 
 Reimplemented from \hyperlink{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}{Clickable}.
 
@@ -122,16 +165,36 @@ Reimplemented from \hyperlink{class_clickable_a385ffbb3aae2b3528e183440b7ac37dc}
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_slider_a762b3a7ca00a3a665a1aeceba2e54fac}
 
 
-The update method of the game object. 
+The update method of the slider class. 
 
-Virtual method that will specify what happens when the game object is updated 
+Updates the position of the slider according to the mouse of the user, if this slider is selected 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & A value representing the speed of the game, based on the frames per second. \\
 \hline
 \end{DoxyParams}
 
 
 Reimplemented from \hyperlink{class_game_object_acf6423054877d1344b6e0b1f4e740df5}{Game\+Object}.
+
+\hypertarget{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}{\index{Slider@{Slider}!update\+Value@{update\+Value}}
+\index{update\+Value@{update\+Value}!Slider@{Slider}}
+\subsubsection[{update\+Value}]{\setlength{\rightskip}{0pt plus 5cm}void Slider\+::update\+Value (
+\begin{DoxyParamCaption}
+\item[{int}]{value}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_slider_a5275d7ee0fa30d49b01a5f3ec376bcbe}
+
+
+the update value method of the slider class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Updates the internal value to this given paramater \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \hyperlink{class_sound_slider_ab459445dc7b47e61079a8e6d453909f9}{Sound\+Slider}, and \hyperlink{class_music_slider_ab4f10b03814686c9f57c9e63b516791c}{Music\+Slider}.
 
 
 

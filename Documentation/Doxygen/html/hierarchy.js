@@ -21,7 +21,6 @@ var hierarchy =
       ] ],
       [ "Bench", "class_bench.html", null ],
       [ "Bullet", "class_bullet.html", null ],
-      [ "Circle", "class_circle.html", null ],
       [ "Clickable", "class_clickable.html", [
         [ "Checkbox", "class_checkbox.html", [
           [ "ToggleGore", "class_toggle_gore.html", null ],
@@ -59,7 +58,6 @@ var hierarchy =
     [ "GameObjectManager", "class_game_object_manager.html", null ],
     [ "HudController", "class_hud_controller.html", null ],
     [ "LevelController::Initializer", "class_level_controller_1_1_initializer.html", null ],
-    [ "InputController", "class_input_controller.html", null ],
     [ "LevelController", "class_level_controller.html", null ],
     [ "ParticleEmitter", "class_particle_emitter.html", [
       [ "Bullet", "class_bullet.html", null ],

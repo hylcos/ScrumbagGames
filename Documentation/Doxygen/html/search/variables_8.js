@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['parker',['parker',['../class_enemy.html#a661e8dd9770b13638cb18572abf84ab3',1,'Enemy']]],
-  ['pistol',['pistol',['../class_weapon_manager.html#a0b44e6bfd98a88d8a234290dc187dcdd',1,'WeaponManager']]],
-  ['puammoup',['puAmmoUp',['../class_powerup.html#a15d145a4d703bbba47e0d6b5fef7400c',1,'Powerup']]],
-  ['pudoubledamage',['puDoubleDamage',['../class_powerup.html#a52fd9b68996a23859c8860d099d43d67',1,'Powerup']]],
-  ['pufullhealth',['puFullHealth',['../class_powerup.html#aa562b2b543c57e47a71be554f39791ae',1,'Powerup']]],
-  ['pusprint',['puSprint',['../class_powerup.html#aeba52eeaf267195025040c3be62ee45f',1,'Powerup']]]
+  ['level_5ffive',['LEVEL_FIVE',['../class_level_controller.html#a634c5a8bde652242d217999ddc743e6d',1,'LevelController']]],
+  ['level_5ffour',['LEVEL_FOUR',['../class_level_controller.html#af795ecf4216b61bcb8068ec80d2a2246',1,'LevelController']]],
+  ['level_5fone',['LEVEL_ONE',['../class_level_controller.html#aed3a20ba260b3562516561bc065fd3de',1,'LevelController']]],
+  ['level_5fthree',['LEVEL_THREE',['../class_level_controller.html#a0d73c813ab9ed413b8821c19d03e4b2e',1,'LevelController']]],
+  ['level_5ftwo',['LEVEL_TWO',['../class_level_controller.html#a83feeec328501b067d422301c5b5cea6',1,'LevelController']]]
 ];

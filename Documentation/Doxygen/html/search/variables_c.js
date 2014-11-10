@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zoey',['zoey',['../class_enemy.html#a05a3bacef0c241d5bc435d3b2cad0640',1,'Enemy']]]
+  ['rifle',['rifle',['../class_weapon_manager.html#a4dd7fad16e730b78d2fd6209328de5f2',1,'WeaponManager']]],
+  ['rotation',['rotation',['../class_animation.html#a5c68dd5bc1004cf064ff0c2d3aad9abb',1,'Animation']]]
 ];

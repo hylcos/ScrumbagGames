@@ -3,6 +3,15 @@
 }
 
 
+The shop card header file.  
+
+
+
+
+{\ttfamily \#include $<$Shop\+Card.\+h$>$}
+
+
+
 Inheritance diagram for Shop\+Card\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -22,12 +31,46 @@ Collaboration diagram for Shop\+Card\+:\nopagebreak
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\hyperlink{class_shop_card_a2e832905840eb1fe14c9d3ae31acd4a4}{Shop\+Card} ()
+\begin{DoxyCompactList}\small\item\em The constructor of the shop card class. \end{DoxyCompactList}\item 
 void \hyperlink{class_shop_card_a3f71274bdfc6c739969439975a3f0711}{update} (float speed\+Modifier) override
-\begin{DoxyCompactList}\small\item\em The update method of the game object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em The update method of the shop card. \end{DoxyCompactList}\item 
 void \hyperlink{class_shop_card_a8ff8f3f75dbdc8c44b93950e538f80e6}{draw} (sf\+::\+Render\+Window \&window) const override
-\begin{DoxyCompactList}\small\item\em The draw method of the game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The drawn method of the shop card. \end{DoxyCompactList}\item 
+\hyperlink{class_shop_card_ae70e1f7e2d1881472dac28965ab9b7ed}{$\sim$\+Shop\+Card} ()
+\begin{DoxyCompactList}\small\item\em The deconstructor of the shop card. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
+
+\subsection{Detailed Description}
+The shop card header file. 
+
+This is the header filde of the shop card. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_shop_card_a2e832905840eb1fe14c9d3ae31acd4a4}{\index{Shop\+Card@{Shop\+Card}!Shop\+Card@{Shop\+Card}}
+\index{Shop\+Card@{Shop\+Card}!Shop\+Card@{Shop\+Card}}
+\subsubsection[{Shop\+Card}]{\setlength{\rightskip}{0pt plus 5cm}Shop\+Card\+::\+Shop\+Card (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_shop_card_a2e832905840eb1fe14c9d3ae31acd4a4}
+
+
+The constructor of the shop card class. 
+
+The constructor will load in all the buttons and text used to create a shop card. The shop card is what you see in the shop, consisting of all the upgrade buttons and statistics of a weapon. \hypertarget{class_shop_card_ae70e1f7e2d1881472dac28965ab9b7ed}{\index{Shop\+Card@{Shop\+Card}!````~Shop\+Card@{$\sim$\+Shop\+Card}}
+\index{````~Shop\+Card@{$\sim$\+Shop\+Card}!Shop\+Card@{Shop\+Card}}
+\subsubsection[{$\sim$\+Shop\+Card}]{\setlength{\rightskip}{0pt plus 5cm}Shop\+Card\+::$\sim$\+Shop\+Card (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_shop_card_ae70e1f7e2d1881472dac28965ab9b7ed}
+
+
+The deconstructor of the shop card. 
+
+A default deconstructor 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_shop_card_a8ff8f3f75dbdc8c44b93950e538f80e6}{\index{Shop\+Card@{Shop\+Card}!draw@{draw}}
@@ -39,11 +82,11 @@ void \hyperlink{class_shop_card_a8ff8f3f75dbdc8c44b93950e538f80e6}{draw} (sf\+::
 ) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_shop_card_a8ff8f3f75dbdc8c44b93950e538f80e6}
 
 
-The draw method of the game object. 
+The drawn method of the shop card. 
 
-Virtual method that will specify what happens when the game object has to be drawn 
+
 \begin{DoxyParams}{Parameters}
-{\em window} & The window the game object has to be drawn in \\
+{\em window} & The window on which the buttons and text have to be drawn. \\
 \hline
 \end{DoxyParams}
 
@@ -59,11 +102,11 @@ Reimplemented from \hyperlink{class_game_object_ae6e4f8704ff32dbd42990ba63954c34
 )\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}}\label{class_shop_card_a3f71274bdfc6c739969439975a3f0711}
 
 
-The update method of the game object. 
+The update method of the shop card. 
 
-Virtual method that will specify what happens when the game object is updated 
+The update method will set all the positions of the components of the shop card. 
 \begin{DoxyParams}{Parameters}
-{\em speed\+Modifier} & The speed of the game based on the framerate \\
+{\em speed\+Modifier} & A value representing the speed of the game, based on the frames per second. \\
 \hline
 \end{DoxyParams}
 

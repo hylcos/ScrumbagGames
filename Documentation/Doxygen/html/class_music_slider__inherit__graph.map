@@ -1,5 +1,5 @@
 <map id="MusicSlider" name="MusicSlider">
-<area shape="rect" id="node2" href="$class_slider.html" title="Slider" alt="" coords="25,155,80,181"/>
+<area shape="rect" id="node2" href="$class_slider.html" title="The slider header file. " alt="" coords="25,155,80,181"/>
 <area shape="rect" id="node3" href="$class_clickable.html" title="The Clickable header file. " alt="" coords="15,80,90,107"/>
 <area shape="rect" id="node4" href="$class_game_object.html" title="The game object header file. " alt="" coords="5,5,100,32"/>
 </map>

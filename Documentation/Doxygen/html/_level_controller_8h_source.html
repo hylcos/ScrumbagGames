@@ -104,154 +104,214 @@ $(document).ready(function(){initNavTree('_level_controller_8h_source.html','');
 <div class="title">LevelController.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;GameController.h&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;TextureManager.h&quot;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;gameObjects\ParticleManager.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Factory.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;gameObjects\Player.h&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;SFML\Graphics.hpp&gt;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;gameObjects\menu\Resume.h&quot;</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;gameObjects\menu\Shop.h&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#define PI 3.14159265358979323846f</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="class_game_controller.html">GameController</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_level_controller.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_level_controller.html">LevelController</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">static</span> <a class="code" href="class_level_controller.html">LevelController</a>&amp; getInstance()</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_level_controller.html">LevelController</a>    instance;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        instance.load();</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> instance;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;GameController.h&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;TextureManager.h&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;gameObjects\ParticleManager.h&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;Factory.h&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;gameObjects\Player.h&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;SFML\Graphics.hpp&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;unordered_set&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;gameObjects\menu\Resume.h&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;gameObjects\menu\Shop.h&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#define PI 3.14159265358979323846f</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">class </span><a class="code" href="class_game_controller.html">GameController</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_level_controller.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_level_controller.html">LevelController</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_level_controller_1_1_initializer.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_level_controller_1_1_initializer.html">Initializer</a>{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_level_controller_1_1_initializer.html">Initializer</a>(std::string name);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="class_level_controller_1_1_initializer.html">Initializer</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        std::string name;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    };</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> LevelController::goToNextLevel(<a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> * initializer);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">void</span> LevelController::startLevel(<a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> initializer);</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_level_controller.html#aff1d9aba9f9fb043e644cc4c01869b7f">   26</a></span>&#160;    <span class="keyword">static</span> <a class="code" href="class_level_controller.html">LevelController</a>&amp; <a class="code" href="class_level_controller.html#aff1d9aba9f9fb043e644cc4c01869b7f">getInstance</a>()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">static</span> <a class="code" href="class_level_controller.html">LevelController</a>    instance;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        instance.load();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> instance;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> LEVEL_ONE{ <span class="stringliteral">&quot;Resources/Levels/levelOne.level&quot;</span> };</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> LEVEL_TWO{ <span class="stringliteral">&quot;Resources/Levels/levelTwo.level&quot;</span> };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> LEVEL_THREE{ <span class="stringliteral">&quot;Resources/Levels/levelThree.level&quot;</span> };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> LEVEL_FOUR{ <span class="stringliteral">&quot;Resources/Levels/levelFour.level&quot;</span> };</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> LEVEL_FIVE{ <span class="stringliteral">&quot;Resources/Levels/levelFive.level&quot;</span> };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> MENU_MAIN{ <span class="stringliteral">&quot;Resources/Levels/mainMenu.level&quot;</span> };</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> MENU_OPTIONS{ <span class="stringliteral">&quot;Resources/Levels/optionsMenu.level&quot;</span> };</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> SHOP{ <span class="stringliteral">&quot;Resources/Levels/shop.level&quot;</span> };</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> TUTORIAL{ <span class="stringliteral">&quot;Resources/Levels/tutorial.level&quot;</span> };</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> SPLASH{ <span class="stringliteral">&quot;Resources/Levels/logo.level&quot;</span> };</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> LevelController::setZoom(<span class="keywordtype">float</span> f);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//add GameObject</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">//This function will put a new GameObject under the control of the GameController.</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> LevelController::addObject(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> LevelController::addObjectFromFactory(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">//remove GameObject</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//This function will remove a GameObject under the control of the GameController, and DESTROY the GameObject in question.</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> LevelController::removeObject(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_level_controller_1_1_initializer.html">   34</a></span>&#160;    <span class="keyword">class </span><a class="code" href="class_level_controller_1_1_initializer.html">Initializer</a>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <a class="code" href="class_level_controller_1_1_initializer.html">Initializer</a>(std::string name);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="class_level_controller_1_1_initializer.html">Initializer</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        std::string name;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    };</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a9cb1f95fee01739d9658801dfebb43b1">LevelController::goToNextLevel</a>(<a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> * initializer);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a0b8f10e66f7b97615c92340e10f77a07">LevelController::startLevel</a>(<a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> initializer);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_level_controller.html#aed3a20ba260b3562516561bc065fd3de">   56</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#aed3a20ba260b3562516561bc065fd3de">LEVEL_ONE</a>{ <span class="stringliteral">&quot;Resources/Levels/levelOne.level&quot;</span> };</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> LevelController::removeAllObjects(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="comment">//Move the main view</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> LevelController::moveMainView(sf::Vector2f pos);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">void</span> LevelController::moveMainView(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">//Set the main view position</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">void</span> LevelController::setMainView(sf::Vector2f pos);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> LevelController::setMainView(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="class_level_controller.html#a83feeec328501b067d422301c5b5cea6">   59</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#a83feeec328501b067d422301c5b5cea6">LEVEL_TWO</a>{ <span class="stringliteral">&quot;Resources/Levels/levelTwo.level&quot;</span> };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_level_controller.html#a0d73c813ab9ed413b8821c19d03e4b2e">   62</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#a0d73c813ab9ed413b8821c19d03e4b2e">LEVEL_THREE</a>{ <span class="stringliteral">&quot;Resources/Levels/levelThree.level&quot;</span> };</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="class_level_controller.html#af795ecf4216b61bcb8068ec80d2a2246">   65</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#af795ecf4216b61bcb8068ec80d2a2246">LEVEL_FOUR</a>{ <span class="stringliteral">&quot;Resources/Levels/levelFour.level&quot;</span> };</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> LevelController::setPaused();</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> LevelController::step(<span class="keywordtype">float</span> fps, sf::RenderWindow &amp; window);</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="class_level_controller.html#a634c5a8bde652242d217999ddc743e6d">   68</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#a634c5a8bde652242d217999ddc743e6d">LEVEL_FIVE</a>{ <span class="stringliteral">&quot;Resources/Levels/levelFive.level&quot;</span> };</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> LevelController::reset();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="class_player.html">Player</a> * LevelController::getPlayer();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="class_player.html">Player</a> * LevelController::getPlayer2();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="class_particle_manager.html">ParticleManager</a> * LevelController::getParticleManager();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    sf::Vector2f LevelController::getMousePos();</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_level_controller.html#ad4835322127c6b5d093be8f8ea1735bd">   71</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#ad4835322127c6b5d093be8f8ea1735bd">MENU_MAIN</a>{ <span class="stringliteral">&quot;Resources/Levels/mainMenu.level&quot;</span> };</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="class_level_controller.html#a062b3091693fbfeb9140431659899ad7">   74</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#a062b3091693fbfeb9140431659899ad7">MENU_OPTIONS</a>{ <span class="stringliteral">&quot;Resources/Levels/optionsMenu.level&quot;</span> };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="class_level_controller.html#a3cc829ed89f8a4fad54369bcdb10e985">   77</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#a3cc829ed89f8a4fad54369bcdb10e985">SHOP</a>{ <span class="stringliteral">&quot;Resources/Levels/shop.level&quot;</span> };</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">const</span> std::vector&lt; GameObject* &gt; LevelController::getGameObjects();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> LevelController::goToNextRound();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> curLevel = 0;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <a class="code" href="class_level_controller.html">LevelController</a>() {};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <a class="code" href="class_level_controller.html">LevelController</a>(<a class="code" href="class_level_controller.html">LevelController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="class_game_controller.html">GameController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> LevelController::spawnEnemies(<span class="keywordtype">float</span> speedModifier);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> LevelController::load();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">bool</span> isLoaded = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">bool</span> paused = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">bool</span> pausedPressed = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> LevelController::stopLevel();</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    sf::View mainView;</div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_level_controller.html#ab0acb0362eba763e16c89d694f97d7f7">   80</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#ab0acb0362eba763e16c89d694f97d7f7">TUTORIAL</a>{ <span class="stringliteral">&quot;Resources/Levels/tutorial.level&quot;</span> };</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="class_level_controller.html#a74aa85b7436b80624576389e3b826aca">   83</a></span>&#160;    <a class="code" href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a> <a class="code" href="class_level_controller.html#a74aa85b7436b80624576389e3b826aca">SPLASH</a>{ <span class="stringliteral">&quot;Resources/Levels/logo.level&quot;</span> };</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a1235128f78023483b022bab8e2b0125c">LevelController::setZoom</a>(<span class="keywordtype">float</span> f);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a230987fb618cc9949974a4f4b994bbc1">LevelController::addObject</a>(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    Initializer* nextLevel = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    sf::Vector2f viewMovement{ 0, 0 };</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    sf::Texture background;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    sf::Texture backgroundOverlay;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    sf::Texture pauseOverlay;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    sf::Texture gameOverTexture;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#afd60c294955bc06dafac9f5ea146c53d">LevelController::addObjectFromFactory</a>(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    sf::Sprite gameOverSprite;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    sf::Sprite pauseSprite;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    sf::Sprite backgroundSprite;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    sf::Sprite backgroundSpriteOverlay;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#ad8894683730d484c0ba359c0ee88b219">LevelController::removeObject</a>(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    sf::Uint8 terrorLevel = 255;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keywordtype">float</span> targetZoom = 1.f;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">float</span> curZoom = 1.f;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    std::vector&lt; GameObject* &gt; gameObjects, gameObjectToAdd;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    std::unordered_set&lt;GameObject*&gt; gameObjectToRemove;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    <span class="keywordtype">float</span> enemySpawnTime;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">float</span> timeToNextEnemySpawn=0;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordtype">float</span> gameOverTimer = 0.f;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    sf::Vector2f enemyPosition{0, 0};</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="class_main_menu.html">MainMenu</a> backToMenu;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <a class="code" href="class_shop.html">Shop</a> goToShop;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <a class="code" href="class_play.html">Play</a> restart;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <a class="code" href="class_resume.html">Resume</a> resume;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <a class="code" href="class_player.html">Player</a> * player = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <a class="code" href="class_player.html">Player</a> player2 ;</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <a class="code" href="class_particle_manager.html">ParticleManager</a> * particleManager = <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;};</div>
-<div class="ttc" id="class_level_controller_1_1_initializer_html"><div class="ttname"><a href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a></div><div class="ttdef"><b>Definition:</b> LevelController.h:23</div></div>
-<div class="ttc" id="class_level_controller_html"><div class="ttname"><a href="class_level_controller.html">LevelController</a></div><div class="ttdef"><b>Definition:</b> LevelController.h:13</div></div>
-<div class="ttc" id="class_shop_html"><div class="ttname"><a href="class_shop.html">Shop</a></div><div class="ttdef"><b>Definition:</b> Shop.h:5</div></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a3f33f48f2476ad4a68ad5880ea02db22">LevelController::removeAllObjects</a>(<a class="code" href="class_game_object.html">GameObject</a> * <span class="keywordtype">object</span>);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#abd5d6b2ae138b8e086e890fddf46ccef">LevelController::moveMainView</a>(sf::Vector2f pos);</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#abd5d6b2ae138b8e086e890fddf46ccef">LevelController::moveMainView</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a18cdb3e6d6f3d6e9dde4de2c21bc99cf">LevelController::setMainView</a>(sf::Vector2f pos);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a18cdb3e6d6f3d6e9dde4de2c21bc99cf">LevelController::setMainView</a>(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a57e12d591397a1ab9c2641abf2b5fa9d">LevelController::setPaused</a>();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#acc3a82f2de457b3cb3863c5bb49a909c">LevelController::step</a>(<span class="keywordtype">float</span> fps, sf::RenderWindow &amp; window);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a5d7b9ef50353a7d1e357632180ce75e5">LevelController::reset</a>();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <a class="code" href="class_player.html">Player</a> * <a class="code" href="class_level_controller.html#a203ded80ef03720a9e9069d54e500689">LevelController::getPlayer</a>();</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <a class="code" href="class_player.html">Player</a> * <a class="code" href="class_level_controller.html#a327a14ec720c334f0f6c92ae3ad33924">LevelController::getPlayer2</a>();</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <a class="code" href="class_particle_manager.html">ParticleManager</a> * <a class="code" href="class_level_controller.html#a8e3f9f2081f00f3e1ade44eb7e8c24ad">LevelController::getParticleManager</a>();</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    sf::Vector2f <a class="code" href="class_level_controller.html#ac08e5cb1592d8e7378253732e9989801">LevelController::getMousePos</a>();</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    <span class="keyword">const</span> std::vector&lt; GameObject* &gt; <a class="code" href="class_level_controller.html#a331dc36b48234e99d07a6db68e700297">LevelController::getGameObjects</a>();</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_level_controller.html#a77c7be37cbb30dc3ff6574c053562260">LevelController::goToNextRound</a>();</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="class_level_controller.html#a0ad1fce1b2965afaa83df3c5a8905e5b">  207</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_level_controller.html#a0ad1fce1b2965afaa83df3c5a8905e5b">curLevel</a> = 0;</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="class_level_controller.html">LevelController</a>() {};</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <a class="code" href="class_level_controller.html">LevelController</a>(<a class="code" href="class_level_controller.html">LevelController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">void</span> operator=(<a class="code" href="class_game_controller.html">GameController</a> <span class="keyword">const</span>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;    <span class="keywordtype">void</span> LevelController::spawnEnemies(<span class="keywordtype">float</span> speedModifier);</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordtype">void</span> LevelController::load();</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">bool</span> isLoaded = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">bool</span> paused = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">bool</span> pausedPressed = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">void</span> LevelController::stopLevel();</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    sf::View mainView;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    Initializer* nextLevel = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    sf::Vector2f viewMovement{ 0, 0 };</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    sf::Texture background;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    sf::Texture backgroundOverlay;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    sf::Texture pauseOverlay;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    sf::Texture gameOverTexture;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    sf::Sprite gameOverSprite;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    sf::Sprite pauseSprite;</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    sf::Sprite backgroundSprite;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    sf::Sprite backgroundSpriteOverlay;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    sf::Uint8 terrorLevel = 255;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <span class="keywordtype">float</span> targetZoom = 1.f;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keywordtype">float</span> curZoom = 1.f;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    std::vector&lt; GameObject* &gt; gameObjects, gameObjectToAdd;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    std::unordered_set&lt;GameObject*&gt; gameObjectToRemove;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">float</span> enemySpawnTime;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="keywordtype">float</span> timeToNextEnemySpawn=0;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">float</span> gameOverTimer = 0.f;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    sf::Vector2f enemyPosition{0, 0};</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="class_main_menu.html">MainMenu</a> backToMenu;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <a class="code" href="class_shop.html">Shop</a> goToShop;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <a class="code" href="class_play.html">Play</a> restart;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <a class="code" href="class_resume.html">Resume</a> resume;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="class_player.html">Player</a> * player = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <a class="code" href="class_player.html">Player</a> player2 ;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <a class="code" href="class_particle_manager.html">ParticleManager</a> * particleManager = <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;};</div>
+<div class="ttc" id="class_level_controller_html_a57e12d591397a1ab9c2641abf2b5fa9d"><div class="ttname"><a href="class_level_controller.html#a57e12d591397a1ab9c2641abf2b5fa9d">LevelController::setPaused</a></div><div class="ttdeci">void setPaused()</div><div class="ttdoc">The set paused method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:343</div></div>
+<div class="ttc" id="class_level_controller_html_a8e3f9f2081f00f3e1ade44eb7e8c24ad"><div class="ttname"><a href="class_level_controller.html#a8e3f9f2081f00f3e1ade44eb7e8c24ad">LevelController::getParticleManager</a></div><div class="ttdeci">ParticleManager * getParticleManager()</div><div class="ttdoc">The get particle manager method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:339</div></div>
+<div class="ttc" id="class_level_controller_html_a0ad1fce1b2965afaa83df3c5a8905e5b"><div class="ttname"><a href="class_level_controller.html#a0ad1fce1b2965afaa83df3c5a8905e5b">LevelController::curLevel</a></div><div class="ttdeci">int curLevel</div><div class="ttdoc">an integer indicating the current level of the game. </div><div class="ttdef"><b>Definition:</b> LevelController.h:207</div></div>
+<div class="ttc" id="class_level_controller_1_1_initializer_html"><div class="ttname"><a href="class_level_controller_1_1_initializer.html">LevelController::Initializer</a></div><div class="ttdoc">The initializer is used to initialize some variables in advance. </div><div class="ttdef"><b>Definition:</b> LevelController.h:34</div></div>
+<div class="ttc" id="class_level_controller_html"><div class="ttname"><a href="class_level_controller.html">LevelController</a></div><div class="ttdef"><b>Definition:</b> LevelController.h:17</div></div>
+<div class="ttc" id="class_level_controller_html_ad4835322127c6b5d093be8f8ea1735bd"><div class="ttname"><a href="class_level_controller.html#ad4835322127c6b5d093be8f8ea1735bd">LevelController::MENU_MAIN</a></div><div class="ttdeci">LevelController::Initializer MENU_MAIN</div><div class="ttdoc">The location of the file containing the main menu. </div><div class="ttdef"><b>Definition:</b> LevelController.h:71</div></div>
+<div class="ttc" id="class_level_controller_html_a83feeec328501b067d422301c5b5cea6"><div class="ttname"><a href="class_level_controller.html#a83feeec328501b067d422301c5b5cea6">LevelController::LEVEL_TWO</a></div><div class="ttdeci">LevelController::Initializer LEVEL_TWO</div><div class="ttdoc">The location of the level two file. </div><div class="ttdef"><b>Definition:</b> LevelController.h:59</div></div>
+<div class="ttc" id="class_level_controller_html_a9cb1f95fee01739d9658801dfebb43b1"><div class="ttname"><a href="class_level_controller.html#a9cb1f95fee01739d9658801dfebb43b1">LevelController::goToNextLevel</a></div><div class="ttdeci">void goToNextLevel(LevelController::Initializer *initializer)</div><div class="ttdoc">The go to next level method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:56</div></div>
+<div class="ttc" id="class_shop_html"><div class="ttname"><a href="class_shop.html">Shop</a></div><div class="ttdoc">The shop header file. </div><div class="ttdef"><b>Definition:</b> Shop.h:9</div></div>
 <div class="ttc" id="class_particle_manager_html"><div class="ttname"><a href="class_particle_manager.html">ParticleManager</a></div><div class="ttdef"><b>Definition:</b> ParticleManager.h:8</div></div>
+<div class="ttc" id="class_level_controller_html_a331dc36b48234e99d07a6db68e700297"><div class="ttname"><a href="class_level_controller.html#a331dc36b48234e99d07a6db68e700297">LevelController::getGameObjects</a></div><div class="ttdeci">const std::vector&lt; GameObject * &gt; getGameObjects()</div><div class="ttdoc">The get game objects method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:294</div></div>
+<div class="ttc" id="class_level_controller_html_a3cc829ed89f8a4fad54369bcdb10e985"><div class="ttname"><a href="class_level_controller.html#a3cc829ed89f8a4fad54369bcdb10e985">LevelController::SHOP</a></div><div class="ttdeci">LevelController::Initializer SHOP</div><div class="ttdoc">The location of the file containing the shop level. </div><div class="ttdef"><b>Definition:</b> LevelController.h:77</div></div>
+<div class="ttc" id="class_level_controller_html_a0d73c813ab9ed413b8821c19d03e4b2e"><div class="ttname"><a href="class_level_controller.html#a0d73c813ab9ed413b8821c19d03e4b2e">LevelController::LEVEL_THREE</a></div><div class="ttdeci">LevelController::Initializer LEVEL_THREE</div><div class="ttdoc">The location of the level three file. </div><div class="ttdef"><b>Definition:</b> LevelController.h:62</div></div>
+<div class="ttc" id="class_level_controller_html_af795ecf4216b61bcb8068ec80d2a2246"><div class="ttname"><a href="class_level_controller.html#af795ecf4216b61bcb8068ec80d2a2246">LevelController::LEVEL_FOUR</a></div><div class="ttdeci">LevelController::Initializer LEVEL_FOUR</div><div class="ttdoc">The location of the level four file. </div><div class="ttdef"><b>Definition:</b> LevelController.h:65</div></div>
+<div class="ttc" id="class_level_controller_html_a062b3091693fbfeb9140431659899ad7"><div class="ttname"><a href="class_level_controller.html#a062b3091693fbfeb9140431659899ad7">LevelController::MENU_OPTIONS</a></div><div class="ttdeci">LevelController::Initializer MENU_OPTIONS</div><div class="ttdoc">The location of the file containing the options menu. </div><div class="ttdef"><b>Definition:</b> LevelController.h:74</div></div>
+<div class="ttc" id="class_level_controller_html_a0b8f10e66f7b97615c92340e10f77a07"><div class="ttname"><a href="class_level_controller.html#a0b8f10e66f7b97615c92340e10f77a07">LevelController::startLevel</a></div><div class="ttdeci">void startLevel(LevelController::Initializer initializer)</div><div class="ttdoc">The start level method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:60</div></div>
 <div class="ttc" id="class_game_object_html"><div class="ttname"><a href="class_game_object.html">GameObject</a></div><div class="ttdoc">The game object header file. </div><div class="ttdef"><b>Definition:</b> GameObject.h:7</div></div>
-<div class="ttc" id="class_resume_html"><div class="ttname"><a href="class_resume.html">Resume</a></div><div class="ttdef"><b>Definition:</b> Resume.h:3</div></div>
+<div class="ttc" id="class_level_controller_html_a3f33f48f2476ad4a68ad5880ea02db22"><div class="ttname"><a href="class_level_controller.html#a3f33f48f2476ad4a68ad5880ea02db22">LevelController::removeAllObjects</a></div><div class="ttdeci">void removeAllObjects(GameObject *object)</div><div class="ttdoc">The remove all objects method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:322</div></div>
+<div class="ttc" id="class_level_controller_html_aff1d9aba9f9fb043e644cc4c01869b7f"><div class="ttname"><a href="class_level_controller.html#aff1d9aba9f9fb043e644cc4c01869b7f">LevelController::getInstance</a></div><div class="ttdeci">static LevelController &amp; getInstance()</div><div class="ttdoc">The get instance method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.h:26</div></div>
+<div class="ttc" id="class_level_controller_html_a1235128f78023483b022bab8e2b0125c"><div class="ttname"><a href="class_level_controller.html#a1235128f78023483b022bab8e2b0125c">LevelController::setZoom</a></div><div class="ttdeci">void setZoom(float f)</div><div class="ttdoc">The set zoom method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:52</div></div>
+<div class="ttc" id="class_resume_html"><div class="ttname"><a href="class_resume.html">Resume</a></div><div class="ttdoc">The resume header file. </div><div class="ttdef"><b>Definition:</b> Resume.h:7</div></div>
+<div class="ttc" id="class_level_controller_html_a74aa85b7436b80624576389e3b826aca"><div class="ttname"><a href="class_level_controller.html#a74aa85b7436b80624576389e3b826aca">LevelController::SPLASH</a></div><div class="ttdeci">LevelController::Initializer SPLASH</div><div class="ttdoc">The location of the file containing the splash art. </div><div class="ttdef"><b>Definition:</b> LevelController.h:83</div></div>
+<div class="ttc" id="class_level_controller_html_ac08e5cb1592d8e7378253732e9989801"><div class="ttname"><a href="class_level_controller.html#ac08e5cb1592d8e7378253732e9989801">LevelController::getMousePos</a></div><div class="ttdeci">sf::Vector2f getMousePos()</div><div class="ttdoc">The get mouse position method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:290</div></div>
+<div class="ttc" id="class_level_controller_html_abd5d6b2ae138b8e086e890fddf46ccef"><div class="ttname"><a href="class_level_controller.html#abd5d6b2ae138b8e086e890fddf46ccef">LevelController::moveMainView</a></div><div class="ttdeci">void moveMainView(sf::Vector2f pos)</div><div class="ttdoc">The move main view method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:298</div></div>
+<div class="ttc" id="class_level_controller_html_a634c5a8bde652242d217999ddc743e6d"><div class="ttname"><a href="class_level_controller.html#a634c5a8bde652242d217999ddc743e6d">LevelController::LEVEL_FIVE</a></div><div class="ttdeci">LevelController::Initializer LEVEL_FIVE</div><div class="ttdoc">The location of the level five file. </div><div class="ttdef"><b>Definition:</b> LevelController.h:68</div></div>
+<div class="ttc" id="class_level_controller_html_a203ded80ef03720a9e9069d54e500689"><div class="ttname"><a href="class_level_controller.html#a203ded80ef03720a9e9069d54e500689">LevelController::getPlayer</a></div><div class="ttdeci">Player * getPlayer()</div><div class="ttdoc">The get player method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:332</div></div>
+<div class="ttc" id="class_level_controller_html_ab0acb0362eba763e16c89d694f97d7f7"><div class="ttname"><a href="class_level_controller.html#ab0acb0362eba763e16c89d694f97d7f7">LevelController::TUTORIAL</a></div><div class="ttdeci">LevelController::Initializer TUTORIAL</div><div class="ttdoc">The location of the file containing the tutorial level. </div><div class="ttdef"><b>Definition:</b> LevelController.h:80</div></div>
+<div class="ttc" id="class_level_controller_html_a5d7b9ef50353a7d1e357632180ce75e5"><div class="ttname"><a href="class_level_controller.html#a5d7b9ef50353a7d1e357632180ce75e5">LevelController::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">The reset method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:356</div></div>
+<div class="ttc" id="class_level_controller_html_a77c7be37cbb30dc3ff6574c053562260"><div class="ttname"><a href="class_level_controller.html#a77c7be37cbb30dc3ff6574c053562260">LevelController::goToNextRound</a></div><div class="ttdeci">void goToNextRound()</div><div class="ttdoc">The go to next round method. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:346</div></div>
 <div class="ttc" id="class_main_menu_html"><div class="ttname"><a href="class_main_menu.html">MainMenu</a></div><div class="ttdef"><b>Definition:</b> MainMenu.h:3</div></div>
+<div class="ttc" id="class_level_controller_html_ad8894683730d484c0ba359c0ee88b219"><div class="ttname"><a href="class_level_controller.html#ad8894683730d484c0ba359c0ee88b219">LevelController::removeObject</a></div><div class="ttdeci">void removeObject(GameObject *object)</div><div class="ttdoc">The remove object method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:319</div></div>
 <div class="ttc" id="class_game_controller_html"><div class="ttname"><a href="class_game_controller.html">GameController</a></div><div class="ttdef"><b>Definition:</b> GameController.h:16</div></div>
+<div class="ttc" id="class_level_controller_html_a18cdb3e6d6f3d6e9dde4de2c21bc99cf"><div class="ttname"><a href="class_level_controller.html#a18cdb3e6d6f3d6e9dde4de2c21bc99cf">LevelController::setMainView</a></div><div class="ttdeci">void setMainView(sf::Vector2f pos)</div><div class="ttdoc">The setMain view method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:305</div></div>
 <div class="ttc" id="class_player_html"><div class="ttname"><a href="class_player.html">Player</a></div><div class="ttdef"><b>Definition:</b> Player.h:9</div></div>
-<div class="ttc" id="class_play_html"><div class="ttname"><a href="class_play.html">Play</a></div><div class="ttdef"><b>Definition:</b> play.h:5</div></div>
+<div class="ttc" id="class_level_controller_html_afd60c294955bc06dafac9f5ea146c53d"><div class="ttname"><a href="class_level_controller.html#afd60c294955bc06dafac9f5ea146c53d">LevelController::addObjectFromFactory</a></div><div class="ttdeci">void addObjectFromFactory(GameObject *object)</div><div class="ttdoc">The add object from factory method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:316</div></div>
+<div class="ttc" id="class_play_html"><div class="ttname"><a href="class_play.html">Play</a></div><div class="ttdoc">The play header file. </div><div class="ttdef"><b>Definition:</b> play.h:9</div></div>
+<div class="ttc" id="class_level_controller_html_a327a14ec720c334f0f6c92ae3ad33924"><div class="ttname"><a href="class_level_controller.html#a327a14ec720c334f0f6c92ae3ad33924">LevelController::getPlayer2</a></div><div class="ttdeci">Player * getPlayer2()</div><div class="ttdoc">The second get player method. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:335</div></div>
+<div class="ttc" id="class_level_controller_html_a230987fb618cc9949974a4f4b994bbc1"><div class="ttname"><a href="class_level_controller.html#a230987fb618cc9949974a4f4b994bbc1">LevelController::addObject</a></div><div class="ttdeci">void addObject(GameObject *object)</div><div class="ttdoc">The add Object method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:313</div></div>
+<div class="ttc" id="class_level_controller_html_acc3a82f2de457b3cb3863c5bb49a909c"><div class="ttname"><a href="class_level_controller.html#acc3a82f2de457b3cb3863c5bb49a909c">LevelController::step</a></div><div class="ttdeci">void step(float fps, sf::RenderWindow &amp;window)</div><div class="ttdoc">The step method of the level controller. </div><div class="ttdef"><b>Definition:</b> LevelController.cpp:125</div></div>
+<div class="ttc" id="class_level_controller_html_aed3a20ba260b3562516561bc065fd3de"><div class="ttname"><a href="class_level_controller.html#aed3a20ba260b3562516561bc065fd3de">LevelController::LEVEL_ONE</a></div><div class="ttdeci">LevelController::Initializer LEVEL_ONE</div><div class="ttdoc">The location of the level one file. </div><div class="ttdef"><b>Definition:</b> LevelController.h:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><b>LevelController.h</b></li>
-    <li class="footer">Generated on Mon Nov 10 2014 00:34:17 for Shoot The Bully by
+    <li class="footer">Generated on Mon Nov 10 2014 02:16:09 for Shoot The Bully by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
