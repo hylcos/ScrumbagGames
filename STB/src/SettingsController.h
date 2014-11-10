@@ -1,3 +1,7 @@
+//! The settings controller header file
+/*!
+This is the header file of the settings controller class
+*/
 #pragma once
 #include <string>
 #include <SFML/Graphics.hpp>
@@ -32,6 +36,7 @@ public:
 		return instance;
 	}
 
+	//! an enum stating what settings are available to set by this controller.
 	enum setting{
 		backgroundMusic,
 		sounds,
@@ -39,8 +44,29 @@ public:
 		backgroundMusicVolume,
 		soundVolume
 	};
+
+	//! The get setting method of the setting controller
+	/*!
+	returns the value of the setting asked by its caller
+	@param set What setting the controller wants to know the value of.
+	@return the Value of this particular setting
+	*/
 	int SettingsController::getSetting(setting set);
+
+	//! The set setting method of the settings controller
+	/*!
+	sets the value of a certain setting
+	@param set What setting has to be set
+	@param value The value that setting has to be set to.
+	*/
 	void SettingsController::setSetting(setting set, int value); 
+
+	//! The second set setting method of the settings controller.
+	/*!
+	Sets the value of a specified setting
+	@param set Which setting has to be set
+	@param value If the setting has to be set to true or false.
+	*/
 	void SettingsController::setSetting(setting set, bool value);
 };
 
